@@ -1,0 +1,518 @@
+{
+  "#comment": "Dino Zomboss 3.0",
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "LevelNumber": 52,
+        "LoadDefaultMusic": false,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(ZombossIntro@LevelModules)",
+          "RTID(ConveyorBelt@CurrentLevel)",
+          "RTID(ZombossBattle@CurrentLevel)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)"
+        ],
+        "MusicType": "MiniGame_A",
+        "WrittenBy":"SansGrinder",
+				"NameMultiLanguage":{
+					"en":"Jurassic Marsh Mash: Day 10",
+					"zh":"侏罗纪沼泽的泥潭：第10天"
+				},
+        "StageModule": "RTID(DinoStage@LevelModules)",
+        "VictoryModule": "RTID(ZombossVictoryOutro@LevelModules)"
+      }
+    },
+    {
+      "aliases": [
+        "ConveyorBelt"
+      ],
+      "objclass": "ConveyorSeedBankProperties",
+      "objdata": {
+        "DropDelayConditions": [
+          {
+            "Delay": 3,
+            "MaxPackets": 0
+          }
+        ],
+        "InitialPlantList": [
+          {
+            "MaxCount": 8,
+            "MaxCountCooldownSeconds": 20,
+            "MaxWeightFactor": 0,
+            "MinCount": 2,
+            "MinWeightFactor": 2,
+            "PlantType": "explodeonut",
+            "Weight": 10
+          },
+          {
+            "MaxCount": 8,
+            "MaxCountCooldownSeconds": 20,
+            "MaxWeightFactor": 0,
+            "MinCount": 2,
+            "MinWeightFactor": 2,
+            "PlantType": "coldsnapdragon",
+            "Weight": 10
+          },
+          {
+            "MaxCount": 8,
+            "MaxCountCooldownSeconds": 20,
+            "MaxWeightFactor": 0,
+            "MinCount": 2,
+            "MinWeightFactor": 2,
+            "PlantType": "guacodile",
+            "Weight": 15
+          },
+          {
+            "MaxCount": 1,
+            "MaxCountCooldownSeconds": 10,
+            "MaxWeightFactor": 0,
+            "MinCount": 1,
+            "MinWeightFactor": 5,
+            "PlantType": "perfumeshroom",
+            "Weight": 3
+          },
+          {
+            "MaxCount": 12,
+            "MaxCountCooldownSeconds": 20,
+            "MaxWeightFactor": 0,
+            "MinCount": 2,
+            "MinWeightFactor": 2,
+            "PlantType": "parsnip",
+            "Weight": 25
+          }
+        ],
+        "SpeedConditions": [
+          {
+            "MaxPackets": 0,
+            "Speed": 100
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "ZombossBattle"
+      ],
+      "objclass": "ZombossBattleModuleProperties",
+      "objdata": {
+        "ReservedColumnCount": 3,
+        "ZombossDeathColumn": 5,
+        "ZombossDeathRow": 3,
+        "ZombossMechType": "zombossmech_dino3",
+        "ZombossSpawnGridPosition": {
+          "mX": 6,
+          "mY": 3
+        }
+      }
+    },
+    {
+			"objclass":"ZombieType",
+			"aliases":[
+				"dino_gargantuar"
+			],
+			"objdata":{
+				"Properties":"RTID(dino_gargantuar@CurrentLevel)",
+				"ZombieBasedOn":"dino_gargantuar"
+			}
+		},
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "dino_gargantuar"
+      ],
+      "objdata": {
+        "CannotBeEnlightenedBySolarSage": true,
+        "ZombieSort": "Gargantuar",
+        "CannotBeGrabbedByPtero": true,
+        "CannotChangeLaneByPowerToss": true,
+        "CannotBeFlickedByPowerToss": true,
+        "CannotBeDraggedByTangleKelp": true,
+        "CannotBeTossedByCitron": true,
+        "CannotBeSwallowedByChomper": true,
+        "CannotCarryPlantfoodsInWaves": true,
+        "SmashDamage": 1500,
+        "WalkSPS": 0.25,
+        "EatDPS": 100,
+        "Toughness": 5400,
+        "LivesInDeepWater": true,
+        "NormalDeathWhenMowed": true,
+        "WavePointCost": 1800,
+        "Weight": 3000,
+        "ImpType": "dino_imp_veteran",
+        "HitRect": "RTID(GargantuarHitRect@RectangleProps)",
+        "AttackRect": "RTID(GargantuarAttackRect@RectangleProps)",
+        "StartingArmors": [
+          "dino_armor3"
+        ]
+      }
+    },
+    {
+			"objclass":"ZombieType",
+			"aliases":[
+				"dino_imp_veteran"
+			],
+			"objdata":{
+				"Properties":"RTID(dino_imp_veteran@CurrentLevel)",
+				"ZombieBasedOn":"dino_imp"
+			}
+		},
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "dino_imp_veteran"
+      ],
+      "objdata": {
+        "KilledByShrinkingViolet": true,
+        "CannotBeGrabbedByPtero": true,
+        "ZombieSort": "Normal",
+        "IgnoredInWaves": true,
+        "WalkSPS": 0.5,
+        "EatDPS": 700,
+        "Toughness": 514,
+        "WavePointCost": 150,
+        "Weight": 1000,
+        "HitRect": "RTID(ImpHitRect@RectangleProps)",
+        "AttackRect": "RTID(ImpAttackRect@RectangleProps)",
+        "StartingArmors": [
+          "dino_armor1"
+        ]
+      }
+    },
+    {
+			"objclass":"ZombieType",
+			"aliases":[
+				"zombossmech_dino3"
+			],
+			"objdata":{
+				"Properties":"RTID(zombossmech_dino3@CurrentLevel)",
+				"ZombieBasedOn":"zombossmech_dino2"
+			}
+		},
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombossmech_dino3"
+      ],
+      "objdata": {
+        "MissileType": "zomboss_missile_dino",
+        "CannotBeEnlightenedBySolarSage": true,
+        "IdleColumn": 6,
+        "ImmuneToSweetPotato": true,
+        "ImmuneToShrinkingViolet": true,
+        "ZombieSort": "Zomboss",
+        "IgnoredBySnapPea": true,
+        "CannotBeGrabbedByPtero": true,
+        "CannotBeDetectedByPowerToss": true,
+        "CannotBeDraggedByTangleKelp": true,
+        "CannotBeTossedByCitron": true,
+        "CannotBeDetectedBySapfling": true,
+        "CannotBeSwallowedByChomper": true,
+        "ChiliStunDurationMult": 0,
+        "CannotCarryPlantfoodsInWaves": true,
+        "FoeEatDamageReflectPct": 2.5,
+        "LivesInDeepWater": true,
+        "WalkSPS": 0.185,
+        "EatDPS": 100,
+        "Toughness": 190,
+        "ImmuneToGarlic": true,
+        "WavePointCost": 100,
+        "Weight": 0,
+        "HitRect": "RTID(ZombossMechHitRect@RectangleProps)",
+        "AttackRect": "RTID(ZombossMechAttackRect@RectangleProps)",
+        "ZombossMechLevel": 1,
+        "ZombossStages": [
+          {
+            "AnimRateModifier": 1.2,
+            "ChilledDurationFromFrozen": 7,
+            "DamageIndexFull": 0,
+            "DamageIndexHalf": 1,
+            "HitPoints": 15000,
+            "MaxIdleTime": 2,
+            "MinIdleTime": 1.5,
+            "StunDamageScale": 1.25,
+            "StunStaggerBackMovement": 1,
+            "StunStaggerBackTime": 0.4,
+            "StunTime": 2,
+            "Actions": [
+              {
+                "actionName": "walk",
+                "weight": 30,
+                "repeatMax": 1,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              },
+              {
+                "actionName": "summon",
+                "weight": 18,
+                "repeatMax": 1,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 2000,
+                  "pointMax": 2800,
+                  "zombieList": [
+                    "dino_bully_veteran",
+                    "dino_armor3",
+                    "dino_armor4"
+                  ]
+                }
+              },
+              {
+                "actionName": "summon",
+                "weight": 15,
+                "repeatMax": 1,
+                "repeatMin": 1,
+                "summonProps": {
+                  "columnOffset": 1,
+                  "dinoType": "raptor",
+                  "pointMin": 1600,
+                  "pointMax": 2000,
+                  "zombieList": [
+                    "dino_armor4",
+                    "dino_bully_veteran",
+                    "dino_imp_veteran"
+                  ]
+                }
+              },
+              {
+                "actionName": "shoot",
+                "weight": 15,
+                "repeatMax": 1,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              },
+              {
+                "actionName": "rush",
+                "weight": 15,
+                "repeatMax": 1,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              }
+            ],
+            "MissileCount": {
+              "Min": 3,
+              "Max": 3
+            }
+          },
+          {
+            "AnimRateModifier": 1.5,
+            "ChilledDurationFromFrozen": 7,
+            "DamageIndexFull": 2,
+            "DamageIndexHalf": 3,
+            "HitPoints": 20000,
+            "MaxIdleTime": 1.5,
+            "MinIdleTime": 1,
+            "StunDamageScale": 1.25,
+            "StunStaggerBackMovement": 1,
+            "StunStaggerBackTime": 0.4,
+            "StunTime": 1.5,
+            "Actions": [
+              {
+                "actionName": "shoot",
+                "weight": 20,
+                "repeatMax": 1,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              },
+              {
+                "actionName": "walk",
+                "weight": 30,
+                "repeatMax": 1,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              },
+              {
+                "actionName": "summon",
+                "weight": 18,
+                "repeatMax": 1,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 3500,
+                  "pointMax": 3800,
+                  "zombieList": [
+                    "dino_gargantuar",
+                    "dino_armor4",
+                    "dino_armor3",
+                    "dino_bully_veteran"
+                  ]
+                }
+              },
+              {
+                "actionName": "summon",
+                "weight": 15,
+                "repeatMax": 1,
+                "repeatMin": 1,
+                "summonProps": {
+                  "columnOffset": 1,
+                  "dinoType": "tyranno",
+                  "pointMin": 3001,
+                  "pointMax": 4200,
+                  "zombieList": [
+                    "dino_bully_veteran",
+                    "dino_armor4",
+                    "dino_gargantuar"
+                  ]
+                }
+              },
+              {
+                "actionName": "rush",
+                "weight": 15,
+                "repeatMax": 1,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              }
+            ],
+            "MissileCount": {
+              "Min": 3,
+              "Max": 5
+            }
+          },
+          {
+            "AnimRateModifier": 1.8,
+            "ChilledDurationFromFrozen": 10,
+            "DamageIndexFull": 5,
+            "DamageIndexHalf": 6,
+            "HitPoints": 25000,
+            "MaxIdleTime": 1.5,
+            "MinIdleTime": 0.75,
+            "StunDamageScale": 1.25,
+            "StunStaggerBackMovement": 1,
+            "StunStaggerBackTime": 0.4,
+            "StunTime": 2,
+            "Actions": [
+              {
+                "actionName": "walk",
+                "weight": 50,
+                "repeatMax": 1,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              },
+              {
+                "actionName": "summon",
+                "weight": 18,
+                "repeatMax": 1,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 4500,
+                  "pointMax": 5200,
+                  "zombieList": [
+                    "dino_gargantuar",
+                    "dino_armor4",
+                    "dino_bully_veteran"
+                  ]
+                }
+              },
+              {
+                "actionName": "summon",
+                "weight": 13,
+                "repeatMax": 1,
+                "repeatMin": 1,
+                "summonProps": {
+                  "columnOffset": 3,
+                  "dinoType": "ankylo",
+                  "pointMin": 2500,
+                  "pointMax": 2500,
+                  "zombieList": [
+                    "dino_bully_veteran",
+                    "dino_gargantuar"
+                  ]
+                }
+              },
+              {
+                "actionName": "summon",
+                "weight": 12,
+                "repeatMax": 1,
+                "repeatMin": 1,
+                "summonProps": {
+                  "columnOffset": 1,
+                  "dinoType": "tyranno",
+                  "pointMin": 4800,
+                  "pointMax": 5100,
+                  "zombieList": [
+                    "dino_bully_veteran",
+                    "dino_armor4",
+                    "dino_gargantuar"
+                  ]
+                }
+              },
+              {
+                "actionName": "shoot",
+                "weight": 15,
+                "repeatMax": 2,
+                "repeatMin": 2,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              },
+              {
+                "actionName": "rush",
+                "weight": 15,
+                "repeatMax": 2,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              }
+            ],
+            "MissileCount": {
+              "Min": 6,
+              "Max": 7
+            }
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "Waves": []
+      }
+    }
+  ],
+  "version": 1
+}
