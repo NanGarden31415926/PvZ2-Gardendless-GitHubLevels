@@ -1,0 +1,355 @@
+{
+    "#comment": "Pirate 45",
+    "objects": [
+        {
+            "objclass": "LevelDefinition",
+            "objdata": {
+                "Description": "[PLAYERS_TRIP_TO_PIRATE_SHIP]",
+                "LevelNumber": 45,
+                "Loot": "RTID(DefaultLoot@LevelModules)",
+                "Modules": [
+                    "RTID(ZombossIntro@LevelModules)",
+                    "RTID(ConveyorBelt@CurrentLevel)",
+                    "RTID(ZombossBattle@CurrentLevel)",
+                    "RTID(PiratePlanks@CurrentLevel)",
+                    "RTID(DefaultZombieWinCondition@LevelModules)",
+                    "RTID(NewWaves@CurrentLevel)"
+                ],
+                "WrittenBy": "砹化钫FrAt",
+                "NameMultiLanguage": {
+                    "en": "Epic Quest:Pirate Seas Skirmish!",
+                    "zh": "史诗任务：海盗港湾的掠夺！"
+                },
+                "NormalPresentTable": "egypt_normal_01",
+                "ShinyPresentTable": "egypt_shiny_01",
+                "StageModule": "RTID(PirateStage@LevelModules)"
+            }
+        },
+        {
+            "aliases": [
+                "PiratePlanks"
+            ],
+            "objclass": "PiratePlankProperties",
+            "objdata": {
+                "PlankRows": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "zombossmech_pirate3"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(zombossmech_pirate3@CurrentLevel)",
+                "ZombieBasedOn": "zombossmech_pirate"
+            }
+        },
+		{
+			"aliases": [
+				"zombossmech_pirate3"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotBeEnlightenedBySolarSage": true,
+				"ImmuneToSweetPotato": true,
+				"ImmuneToShrinkingViolet": true,
+				"ZombieSort": "Zomboss",
+				"IgnoredBySnapPea": true,
+				"CannotBeGrabbedByPtero": true,
+				"CannotBeDetectedByPowerToss": true,
+				"CannotBeDraggedByTangleKelp": true,
+				"CannotBeTossedByCitron": true,
+				"CannotBeDetectedBySapfling": true,
+				"CannotBeSwallowedByChomper": true,
+				"ChiliStunDurationMult": 0,
+				"CannotCarryPlantfoodsInWaves": true,
+				"FoeEatDamageReflectPct": 0.25,
+				"LivesInDeepWater": true,
+				"WalkSPS": 0.185,
+				"EatDPS": 100,
+				"Toughness": 190,
+				"ImmuneToGarlic": true,
+				"WavePointCost": 100,
+				"Weight": 0,
+				"HitRect": "RTID(ZombossMechHitRect@RectangleProps)",
+				"AttackRect": "RTID(ZombossMechAttackRect@RectangleProps)",
+				"ZombossMechLevel": 0,
+				"ZombossStages": [
+					{
+						"Actions": [
+							{
+								"actionName": "walk",
+								"summonProps": {
+									"zombieList": [],
+									"pointMin": 1000,
+									"pointMax": 2000
+								},
+								"weight": 3,
+								"repeatMax": 1,
+								"repeatMin": 1
+							},
+							{
+								"actionName": "shoot",
+								"summonProps": {
+									"zombieList": [],
+									"pointMin": 1000,
+									"pointMax": 2000
+								},
+								"weight": 7,
+								"repeatMax": 1,
+								"repeatMin": 1
+							},
+							{
+								"actionName": "summon",
+								"summonProps": {
+									"zombieList": [
+										"pirate_armor2",
+										"pirate_armor4",
+										"pelican",
+										"pirate_captain",
+										"pirate_gargantuar"
+									],
+									"plantfoodchance": 0.08,
+									"pointMin": 3600,
+									"pointMax": 4800
+								},
+								"weight": 25,
+								"repeatMax": 4,
+								"repeatMin": 3
+							}
+						],
+						"AnimRateModifier": 1,
+						"ChilledDurationFromFrozen": 10,
+						"DamageIndexFull": 0,
+						"DamageIndexHalf": 0,
+						"HitPoints": 13500,
+						"MaxIdleTime": 1,
+						"MinIdleTime": 0.5,
+						"StunDamageScale": 1.5,
+						"StunStaggerBackMovement": 1,
+						"StunStaggerBackTime": 0.4,
+						"StunTime": 4
+					},
+					{
+						"Actions": [
+							{
+								"actionName": "walk",
+								"summonProps": {
+									"zombieList": [],
+									"pointMin": 1000,
+									"pointMax": 2000
+								},
+								"weight": 2,
+								"repeatMax": 1,
+								"repeatMin": 1
+							},
+							{
+								"actionName": "shoot",
+								"summonProps": {
+									"zombieList": [],
+									"pointMin": 1000,
+									"pointMax": 2000
+								},
+								"weight": 7,
+								"repeatMax": 2,
+								"repeatMin": 2
+							},
+							{
+								"actionName": "summon",
+								"summonProps": {
+									"zombieList": [
+										"pirate_armor4",
+										"pirate_captain",
+										"barrelroller",
+										"pelican",
+										"pirate_gargantuar"
+									],
+									"plantfoodchance": 0.15,
+									"pointMin": 6500,
+									"pointMax": 8200
+								},
+								"weight": 32,
+								"repeatMax": 6,
+								"repeatMin": 4
+							},
+							{
+								"actionName": "rush",
+								"summonProps": {
+									"zombieList": [],
+									"pointMin": 1000,
+									"pointMax": 2000
+								},
+								"weight": 8,
+								"repeatMax": 2,
+								"repeatMin": 1
+							}
+						],
+						"AnimRateModifier": 1.1,
+						"ChilledDurationFromFrozen": 10,
+						"DamageIndexFull": 3,
+						"DamageIndexHalf": 3,
+						"HitPoints": 37500,
+						"MaxIdleTime": 1,
+						"MinIdleTime": 0.5,
+						"StunDamageScale": 1.5,
+						"StunStaggerBackMovement": 1,
+						"StunStaggerBackTime": 0.4,
+						"StunTime": 4
+					},
+					{
+						"Actions": [
+							{
+								"actionName": "summon",
+								"summonProps": {
+									"zombieList": [
+										"pirate_armor4",
+										"pirate_gargantuar",
+										"barrelroller"
+									],
+									"plantfoodchance": 0.2,
+									"pointMin": 8600,
+									"pointMax": 10000
+								},
+								"weight": 35,
+								"repeatMax": 3,
+								"repeatMin": 2
+							},
+							{
+								"actionName": "shoot",
+								"summonProps": {
+									"zombieList": [],
+									"pointMin": 1000,
+									"pointMax": 2000
+								},
+								"weight": 5,
+								"repeatMax": 4,
+								"repeatMin": 3
+							},
+							{
+								"actionName": "rush",
+								"summonProps": {
+									"zombieList": [],
+									"pointMin": 1000,
+									"pointMax": 2000
+								},
+								"weight": 8,
+								"repeatMax": 2,
+								"repeatMin": 2
+							}
+						],
+						"AnimRateModifier": 1.25,
+						"ChilledDurationFromFrozen": 10,
+						"DamageIndexFull": 6,
+						"DamageIndexHalf": 6,
+						"HitPoints": 164000,
+						"MaxIdleTime": 0.5,
+						"MinIdleTime": 0.2,
+						"StunDamageScale": 1.5,
+						"StunStaggerBackMovement": 1,
+						"StunStaggerBackTime": 0.4,
+						"StunTime": 2
+					}
+				]
+			}
+		},
+        {
+            "aliases": [
+                "ZombossBattle"
+            ],
+            "objclass": "ZombossBattleModuleProperties",
+            "objdata": {
+                "ReservedColumnCount": 2,
+                "ZombossMechType": "zombossmech_pirate3",
+                "ZombossDeathRow": 3,
+                "ZombossDeathColumn": 5,
+                "ZombossSpawnGridPosition": {
+                    "mX": 6,
+                    "mY": 3
+                }
+            }
+        },
+        {
+            "aliases": [
+                "ConveyorBelt"
+            ],
+            "objclass": "ConveyorSeedBankProperties",
+            "objdata": {
+                "DropDelayConditions": [
+                    {
+                        "Delay": 3,
+                        "MaxPackets": 0
+                    },
+                    {
+                        "Delay": 4,
+                        "MaxPackets": 2
+                    },
+                    {
+                        "Delay": 6,
+                        "MaxPackets": 4
+                    },
+                    {
+                        "Delay": 8,
+                        "MaxPackets": 8
+                    }
+                ],
+                "InitialPlantList": [
+                    {
+                        "MaxCount": 1,
+                        "MaxWeightFactor": 0,
+                        "PlantType": "bloominghearts",
+                        "Weight": 5
+                    },
+                    {
+                        "MaxCount": 2,
+                        "MaxWeightFactor": 0,
+                        "PlantType": "sweetpotato",
+                        "Weight": 30
+                    },
+                    {
+                        "MaxCount": 8,
+                        "MaxWeightFactor": 0.6,
+                        "PlantType": "wasabiwhip",
+                        "Weight": 25
+                    },
+                    {
+                        "MaxCount": 4,
+                        "MaxWeightFactor": 0,
+                        "PlantType": "chardguard",
+                        "Weight": 18
+                    }
+                ],
+                "SpeedConditions": [
+                    {
+                        "MaxPackets": 0,
+                        "Speed": 100
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "NewWaves"
+            ],
+            "objclass": "WaveManagerModuleProperties",
+            "objdata": {
+                "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+            }
+        },
+        {
+            "aliases": [
+                "WaveManagerProps"
+            ],
+            "objclass": "WaveManagerProperties",
+            "objdata": {
+                "Waves": []
+            }
+        }
+    ],
+    "version": 1
+}
