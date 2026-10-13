@@ -1,0 +1,981 @@
+{
+  "#comment": "Iceage Zomboss 3",
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "[PLAYERS_TRIP_TO_ICEAGE]",
+        "LevelNumber": 50,
+        "FlickPowerupRightEdgeOffset": -205,
+        "SuppressSunSpawn":false,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(IceageZombossIntro@LevelModules)",
+          "RTID(ConveyorBelt@CurrentLevel)",
+          "RTID(ZombossBattle@CurrentLevel)",
+          "RTID(EliteTrog@CurrentLevel)",
+          "RTID(EliteFlag@CurrentLevel)",
+          "RTID(EliteHunter@CurrentLevel)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)"
+        ],
+        "MusicType": "MiniGame_A",
+        "WrittenBy":"SansGrinder",
+				"NameMultiLanguage":{
+					"en":"Epic Quest: Frostbite Caves Catastrophe!",
+					"zh":"史诗任务：极寒冰窟的劫难！"
+				},
+        "StageModule": "RTID(IceageVeteranStage@LevelModules)",
+        "VictoryModule": "RTID(ZombossVictoryOutro@LevelModules)",
+        "LoadDefaultMusic": false
+      }
+    },
+    {
+			"aliases":[
+				"EliteTrog"
+			],
+			"objclass":"LevelSchedulerProps",
+			"objdata":{
+				"TimeBeforeFirst":{
+					"Max":180,
+					"Min":180
+				},
+				"TimeBetween":{
+					"Max":520,
+					"Min":520
+				},
+				"Repeat":{
+					"Max":999,
+					"Min":999
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+          "RTID(trog@CurrentLevel)"
+				]
+			}
+		},
+    {
+			"aliases":[
+				"EliteFlag"
+			],
+			"objclass":"LevelSchedulerProps",
+			"objdata":{
+				"TimeBeforeFirst":{
+					"Max":300,
+					"Min":300
+				},
+				"TimeBetween":{
+					"Max":520,
+					"Min":520
+				},
+				"Repeat":{
+					"Max":999,
+					"Min":999
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+          "RTID(flag@CurrentLevel)"
+				]
+			}
+		},
+    {
+			"aliases":[
+				"EliteHunter"
+			],
+			"objclass":"LevelSchedulerProps",
+			"objdata":{
+				"TimeBeforeFirst":{
+					"Max":520,
+					"Min":520
+				},
+				"TimeBetween":{
+					"Max":480,
+					"Min":480
+				},
+				"Repeat":{
+					"Max":999,
+					"Min":999
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+          "RTID(hunter@CurrentLevel)"
+				]
+			}
+		},
+    {
+			"aliases":[
+				"trog"
+			],
+			"objclass":"SpawnZombiesJitteredWaveActionProps",
+			"objdata":{
+				"Zombies":[
+					{
+						"Type":"RTID(iceage_troglobite_veteran@CurrentLevel)",
+						"Row":"3"
+					},
+					{
+						"Type":"RTID(iceage_troglobite@ZombieTypes)",
+						"Row":"1"
+					},
+					{
+						"Type":"RTID(iceage_troglobite@ZombieTypes)",
+						"Row":"2"
+					},
+					{
+						"Type":"RTID(iceage_troglobite@ZombieTypes)",
+						"Row":"4"
+					},
+					{
+						"Type":"RTID(iceage_troglobite@ZombieTypes)",
+						"Row":"5"
+					}
+				]
+			}
+		},
+    {
+			"aliases":[
+				"flag"
+			],
+			"objclass":"SpawnZombiesJitteredWaveActionProps",
+			"objdata":{
+				"Zombies":[
+					{
+						"Type":"RTID(iceage_flag_veteran_veteran@CurrentLevel)",
+						"Row":"3"
+					},
+					{
+						"Type":"RTID(iceage_flag_veteran@ZombieTypes)",
+						"Row":"1"
+					},
+					{
+						"Type":"RTID(iceage_flag_veteran@ZombieTypes)",
+						"Row":"2"
+					},
+					{
+						"Type":"RTID(iceage_flag_veteran@ZombieTypes)",
+						"Row":"4"
+					},
+					{
+						"Type":"RTID(iceage_flag_veteran@ZombieTypes)",
+						"Row":"5"
+					},
+          {
+						"Row":"1",
+            "Column": 8,
+            "Style": "snowstorm",
+						"Type":"RTID(iceage_gargantuar@ZombieTypes)"
+					},
+					{
+						"Row":"2",
+            "Column": 8,
+            "Style": "snowstorm",
+						"Type":"RTID(iceage_gargantuar@ZombieTypes)"
+					},
+					{
+						"Row":"3",
+            "Column": 8,
+            "Style": "snowstorm",
+						"Type":"RTID(iceage_gargantuar@ZombieTypes)"
+					},
+					{
+						"Row":"4",
+            "Column": 8,
+            "Style": "snowstorm",
+						"Type":"RTID(iceage_gargantuar@ZombieTypes)"
+					},
+          {
+						"Row":"5",
+            "Column": 8,
+            "Style": "snowstorm",
+						"Type":"RTID(iceage_gargantuar@ZombieTypes)"
+					},
+          {
+						"Row":"1",
+            "Column": 7,
+            "Style": "snowstorm",
+						"Type":"RTID(iceage_gargantuar@ZombieTypes)"
+					},
+					{
+						"Row":"2",
+            "Column": 7,
+            "Style": "snowstorm",
+						"Type":"RTID(iceage_gargantuar@ZombieTypes)"
+					},
+					{
+						"Row":"3",
+            "Column": 7,
+            "Style": "snowstorm",
+						"Type":"RTID(iceage_gargantuar@ZombieTypes)"
+					},
+					{
+						"Row":"4",
+            "Column": 7,
+            "Style": "snowstorm",
+						"Type":"RTID(iceage_gargantuar@ZombieTypes)"
+					},
+          {
+						"Row":"5",
+            "Column": 7,
+            "Style": "snowstorm",
+						"Type":"RTID(iceage_gargantuar@ZombieTypes)"
+					}
+				]
+			}
+		},
+    {
+			"aliases":[
+				"hunter"
+			],
+			"objclass":"SpawnZombiesJitteredWaveActionProps",
+			"objdata":{
+				"Zombies":[
+					{
+						"Type":"RTID(iceage_hunter_veteran@CurrentLevel)",
+						"Row":"3"
+					},
+					{
+						"Type":"RTID(iceage_hunter@ZombieTypes)",
+						"Row":"1"
+					},
+					{
+						"Type":"RTID(iceage_hunter@ZombieTypes)",
+						"Row":"2"
+					},
+					{
+						"Type":"RTID(iceage_hunter@ZombieTypes)",
+						"Row":"4"
+					},
+					{
+						"Type":"RTID(iceage_hunter@ZombieTypes)",
+						"Row":"5"
+					}
+				]
+			}
+		},
+    {
+			"objclass":"ZombieType",
+			"aliases":[
+				"iceage_flag_veteran_veteran"
+			],
+			"objdata":{
+				"Properties":"RTID(iceage_flag_veteran_veteran@CurrentLevel)",
+				"ZombieBasedOn":"iceage_flag_veteran"
+			}
+		},
+    {
+			"objclass":"ZombieProperties",
+			"aliases":[
+				"iceage_flag_veteran_veteran"
+			],
+			"objdata":{
+        "IgnoredByThymeWarp": true,
+        "CannotBeCarriedByFanStorm": true,
+        "CannotBeGummedByGumnut": true,
+				"SpawnedScale":1.5,
+				"KnockBackDistanceScale":0,
+				"CannotBeKnockedBackByProjectiles":true,
+				"CannotBeEnlightenedBySolarSage":true,
+				"ImmuneToSweetPotato":true,
+				"ImmuneToShrinkingViolet":true,
+				"ZombieSort":"Zomboss",
+				"IgnoredBySnapPea":true,
+				"CannotBeGrabbedByPtero":true,
+				"CannotBeDetectedByPowerToss":true,
+				"CannotBeDraggedByTangleKelp":true,
+				"CannotBeTossedByCitron":true,
+				"CannotBeDetectedBySapfling":true,
+				"CannotBeSwallowedByChomper":true,
+				"ChiliStunDurationMult":0,
+				"CannotCarryPlantfoodsInWaves":true,
+				"LivesInDeepWater":true,
+				"FoeEatDamageReflectPct":1.5,
+				"ImmuneToGarlic":true,
+				"ChillInsteadOfFreeze":true,
+				"WalkSPS": 0.2,
+				"EatDPS":4000,
+				"Toughness":2800,
+				"WavePointCost":900,
+				"IgnoredInWaves":true,
+				"CannotChangeLaneByPowerToss":true,
+				"CannotBeFlickedByPowerToss":true,
+				"NormalDeathWhenMowed":true,
+				"Weight":3500,
+        "HitRect": "RTID(CommonHitRect@RectangleProps)",
+        "AttackRect": "RTID(CommonAttackRect@RectangleProps)",
+        "StartingArmors": [
+          "iceage_armor4"
+        ]
+			}
+		},
+		{
+			"objclass":"ZombieType",
+			"aliases":[
+				"iceage_troglobite_veteran"
+			],
+			"objdata":{
+				"Properties":"RTID(iceage_troglobite_veteran@CurrentLevel)",
+				"ZombieBasedOn":"iceage_troglobite_veteran"
+			}
+		},
+		{
+			"objclass":"ZombieProperties",
+			"aliases":[
+				"iceage_troglobite_veteran"
+			],
+			"objdata":{
+        "IgnoredByThymeWarp": true,
+        "CannotBeCarriedByFanStorm": true,
+        "CannotBeGummedByGumnut": true,
+				"SpawnedScale":1.5,
+				"KnockBackDistanceScale":0,
+				"CannotBeKnockedBackByProjectiles":true,
+				"CannotBeEnlightenedBySolarSage":true,
+				"ImmuneToSweetPotato":true,
+				"ImmuneToShrinkingViolet":true,
+				"ZombieSort":"Zomboss",
+				"IgnoredBySnapPea":true,
+				"CannotBeGrabbedByPtero":true,
+				"CannotBeDetectedByPowerToss":true,
+				"CannotBeDraggedByTangleKelp":true,
+				"CannotBeTossedByCitron":true,
+				"CannotBeDetectedBySapfling":true,
+				"CannotBeSwallowedByChomper":true,
+				"ChiliStunDurationMult":0,
+				"CannotCarryPlantfoodsInWaves":true,
+				"LivesInDeepWater":true,
+				"FoeEatDamageReflectPct":1.5,
+				"ImmuneToGarlic":true,
+				"ChillInsteadOfFreeze":true,
+				"NumberOfIceblocksToSpawnWith":6,
+				"WalkSPS":0.05,
+				"EatDPS":1500,
+				"Toughness":17000,
+				"WavePointCost":900,
+				"IgnoredInWaves":true,
+				"CannotChangeLaneByPowerToss":true,
+				"CannotBeFlickedByPowerToss":true,
+				"NormalDeathWhenMowed":true,
+				"Weight":3500,
+				"HitRect":"RTID(BullyHitRect@RectangleProps)",
+				"AttackRect":"RTID(BullyAttackRect@RectangleProps)",
+				"ImpTypes":[
+					"iceage_gargantuar"
+				]
+			}
+		},
+		{
+			"objclass":"ZombieType",
+			"aliases":[
+				"iceage_hunter_veteran"
+			],
+			"objdata":{
+				"Properties":"RTID(iceage_hunter_veteran@CurrentLevel)",
+				"ZombieBasedOn":"iceage_hunter_veteran"
+			}
+		},
+		{
+			"objclass":"ZombieProperties",
+			"aliases":[
+				"iceage_hunter_veteran"
+			],
+			"objdata":{
+        "IgnoredByThymeWarp": true,
+        "CannotBeCarriedByFanStorm": true,
+        "CannotBeGummedByGumnut": true,
+				"KnockBackDistanceScale":0,
+				"CannotBeKnockedBackByProjectiles":true,
+				"CannotBeEnlightenedBySolarSage":true,
+				"ImmuneToSweetPotato":true,
+				"ImmuneToShrinkingViolet":true,
+				"ZombieSort":"Zomboss",
+				"IgnoredBySnapPea":true,
+				"CannotBeGrabbedByPtero":true,
+				"CannotBeDetectedByPowerToss":true,
+				"CannotBeDraggedByTangleKelp":true,
+				"CannotBeTossedByCitron":true,
+				"CannotBeDetectedBySapfling":true,
+				"CannotBeSwallowedByChomper":true,
+				"ChiliStunDurationMult":0,
+				"CannotCarryPlantfoodsInWaves":true,
+				"LivesInDeepWater":true,
+				"FoeEatDamageReflectPct":1.5,
+				"ImmuneToGarlic":true,
+				"SpawnedScale":1.5,
+				"SnowballType":"hurtz",
+				"ChillInsteadOfFreeze":true,
+				"IgnoredInWaves":true,
+				"CannotChangeLaneByPowerToss":true,
+				"CannotBeFlickedByPowerToss":true,
+				"NormalDeathWhenMowed":true,
+				"WalkSPS":0.05,
+				"EatDPS":1500,
+				"Toughness":12000,
+				"LobInterval":5,
+				"LobIntervalAdditional":0,
+				"WavePointCost":700,
+				"Weight":3500,
+				"HitRect":"RTID(CommonHitRect@RectangleProps)",
+				"AttackRect":"RTID(CommonAttackRect@RectangleProps)"
+			}
+		},
+		{
+			"objclass":"ProjectileType",
+			"aliases":[
+				"hurtz"
+			],
+			"objdata":{
+				"ProjectileBasedOn":"powerup_snow",
+				"Props":"RTID(hurtz@CurrentLevel)"
+			}
+		},
+		{
+			"objclass":"ProjectileProperties",
+			"aliases":[
+				"hurtz"
+			],
+			"objdata":{
+				"Damage":1000,
+				"ChillDuration":5,
+				"IceBlockLevel":5,
+				"SplashDamage":[
+					{
+						"Damage":500,
+						"ChillDuration":5,
+						"Range":{
+							"w":3,
+							"h":3
+						}
+					}
+				],
+				"Size":{
+					"w":18,
+					"h":18
+				}
+			}
+		},
+    {
+      "aliases": [
+        "ConveyorBelt"
+      ],
+      "objclass": "ConveyorSeedBankProperties",
+      "objdata": {
+        "DropDelayConditions": [
+          {
+            "Delay": 2.5,
+            "MaxPackets": 0
+          }
+        ],
+        "InitialPlantList": [
+          {
+            "MaxCount": 5,
+            "MaxWeightFactor": 0,
+            "PlantType": "citron",
+            "Weight": 10
+          },
+          {
+            "MaxCount": 2,
+            "MaxWeightFactor": 0,
+            "PlantType": "hotpotato",
+            "Weight": 15
+          },
+          {
+            "MaxCount": 5,
+            "MaxWeightFactor": 0.4,
+            "PlantType": "darkmatterdragonfruit",
+            "Weight": 20
+          },
+          {
+            "MaxCount": 5,
+            "MaxWeightFactor": 0,
+            "PlantType": "moonflower",
+            "Weight": 15
+          },
+          {
+            "MaxCount": 1,
+            "MaxWeightFactor": 0,
+            "PlantType": "doomshroom",
+            "Weight": 2
+          },
+          {
+            "MaxCount": 1,
+            "MaxWeightFactor": 0,
+            "PlantType": "noctarine",
+            "Weight": 5
+          },
+          {
+            "MaxCount": 1,
+            "MaxWeightFactor": 0,
+            "PlantType": "cranjelly",
+            "Weight": 5
+          }
+        ],
+        "SpeedConditions": [
+          {
+            "MaxPackets": 0,
+            "Speed": 100
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "ZombossBattle"
+      ],
+      "objclass": "ZombossBattleModuleProperties",
+      "objdata": {
+        "ReservedColumnCount": 3,
+        "ZombossDeathColumn": 5,
+        "ZombossDeathRow": 3,
+        "ZombossMechType": "zombossmech_iceage3",
+        "ZombossSpawnGridPosition": {
+          "mX": 6,
+          "mY": 3
+        }
+      }
+    },
+    {
+			"objclass":"ZombieType",
+			"aliases":[
+				"iceage_gargantuar_mimic"
+			],
+			"objdata":{
+				"ZombieRedirection":[
+					{
+						"Type":"iceage_gargantuar_custom",
+						"Weight":1
+					}
+				]
+			}
+		},
+    {
+			"objclass":"ZombieType",
+			"aliases":[
+				"iceage_gargantuar_custom"
+			],
+			"objdata":{
+				"Properties":"RTID(iceage_gargantuar_custom@CurrentLevel)",
+				"ZombieBasedOn":"iceage_gargantuar"
+			}
+		},
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "iceage_gargantuar_custom"
+      ],
+      "objdata": {
+        "CannotBeEnlightenedBySolarSage": true,
+        "ZombieSort": "Normal",
+        "CannotBeGrabbedByPtero": true,
+        "CannotChangeLaneByPowerToss": true,
+        "CannotBeFlickedByPowerToss": true,
+        "CannotBeDraggedByTangleKelp": true,
+        "CannotBeTossedByCitron": true,
+        "ChillInsteadOfFreeze": true,
+        "CannotBeSwallowedByChomper": true,
+        "CannotCarryPlantfoodsInWaves": true,
+        "HealthPercentThrowImp0": 0.8,
+        "HealthPercentThrowImp1": 0.6,
+        "HealthPercentThrowImp2": 0.4,
+        "ChanceToReverseImp": 0.25,
+        "SmashDamage": 1500,
+        "WalkSPS": 0.24,
+        "EatDPS": 100,
+        "Toughness": 3600,
+        "LivesInDeepWater": true,
+        "NormalDeathWhenMowed": true,
+        "WavePointCost": 1500,
+        "Weight": 3000,
+        "ImpType": "iceage_imp",
+        "HitRect": "RTID(GargantuarHitRect@RectangleProps)",
+        "AttackRect": "RTID(GargantuarAttackRect@RectangleProps)"
+      }
+    },
+    {
+			"objclass":"ZombieType",
+			"aliases":[
+				"zombossmech_iceage3"
+			],
+			"objdata":{
+				"Properties":"RTID(zombossmech_iceage3@CurrentLevel)",
+				"ZombieBasedOn":"zombossmech_iceage2"
+			}
+		},
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombossmech_iceage3"
+      ],
+      "objdata": {
+        "MissileType": "zomboss_missile_iceage",
+        "CannotBeEnlightenedBySolarSage": true,
+        "ImmuneToSweetPotato": true,
+        "ImmuneToShrinkingViolet": true,
+        "ZombieSort": "Zomboss",
+        "IgnoredBySnapPea": true,
+        "CannotBeGrabbedByPtero": true,
+        "CannotBeDetectedByPowerToss": true,
+        "CannotBeDraggedByTangleKelp": true,
+        "CannotBeTossedByCitron": true,
+        "CannotBeDetectedBySapfling": true,
+        "CannotBeSwallowedByChomper": true,
+        "ChiliStunDurationMult": 0,
+        "CannotCarryPlantfoodsInWaves": true,
+        "LivesInDeepWater": true,
+        "FoeEatDamageReflectPct": 3,
+        "WalkSPS": 0.185,
+        "EatDPS": 100,
+        "Toughness": 190,
+        "ImmuneToGarlic": true,
+        "WavePointCost": 100,
+        "Weight": 0,
+        "HitRect": "RTID(IceageZombossMechHitRect@RectangleProps)",
+        "AttackRect": "RTID(IceageZombossMechAttackRect@RectangleProps)",
+        "ZombossMechLevel": 1,
+        "GlacierToughness": 5000,
+        "ZombossStages": [
+          {
+            "AnimRateModifier": 1.25,
+            "ChilledDurationFromFrozen": 10,
+            "DamageIndexFull": 0,
+            "DamageIndexHalf": 2,
+            "HitPoints": 17000,
+            "MaxIdleTime": 2.5,
+            "MinIdleTime": 2.5,
+            "StunDamageScale": 1.5,
+            "StunStaggerBackMovement": 1,
+            "StunStaggerBackTime": 0.4,
+            "StunTime": 2.5,
+            "Actions": [
+              {
+                "actionName": "rush",
+                "weight": 6,
+                "repeatMax": 2,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              },
+              {
+                "actionName": "summon",
+                "weight": 7,
+                "repeatMax": 1,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              },
+              {
+                "actionName": "shoot",
+                "weight": 3,
+                "repeatMax": 2,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              }
+            ]
+          },
+          {
+            "AnimRateModifier": 1.25,
+            "ChilledDurationFromFrozen": 10,
+            "DamageIndexFull": 3,
+            "DamageIndexHalf": 4,
+            "HitPoints": 26000,
+            "MaxIdleTime": 2,
+            "MinIdleTime": 2,
+            "StunDamageScale": 1.5,
+            "StunStaggerBackMovement": 1,
+            "StunStaggerBackTime": 0.4,
+            "StunTime": 3,
+            "Actions": [
+              {
+                "actionName": "rush",
+                "weight": 3,
+                "repeatMax": 2,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              },
+              {
+                "actionName": "summon",
+                "weight": 10,
+                "repeatMax": 1,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              },
+              {
+                "actionName": "shoot",
+                "weight": 6,
+                "repeatMax": 2,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              }
+            ]
+          },
+          {
+            "AnimRateModifier": 2,
+            "ChilledDurationFromFrozen": 10,
+            "DamageIndexFull": 5,
+            "DamageIndexHalf": 6,
+            "HitPoints": 35000,
+            "MaxIdleTime": 1.5,
+            "MinIdleTime": 1.5,
+            "StunDamageScale": 2.5,
+            "StunStaggerBackMovement": 1,
+            "StunStaggerBackTime": 0.4,
+            "StunTime": 4.5,
+            "Actions": [
+              {
+                "actionName": "rush",
+                "weight": 3,
+                "repeatMax": 2,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              },
+              {
+                "actionName": "summon",
+                "weight": 5,
+                "repeatMax": 1,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              },
+              {
+                "actionName": "shoot",
+                "weight": 6,
+                "repeatMax": 2,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              }
+            ]
+          }
+        ],
+        "GlacierBlockZombieList": [
+          [
+            "iceage",
+            "iceage_imp",
+            "iceage_weasel"
+          ],
+          [
+            "iceage",
+            "iceage_imp",
+            "iceage_weasel"
+          ],
+          [
+            "iceage",
+            "iceage_imp",
+            "iceage_weasel"
+          ],
+          [
+            "iceage_armor3",
+            "iceage_armor2",
+            "iceage_weaselhoarder",
+            "iceage_armor1"
+          ],
+          [
+            "iceage_armor3",
+            "iceage_armor2",
+            "iceage_weaselhoarder"
+          ],
+          [
+            "iceage_armor4",
+            "iceage_armor3",
+            "iceage_weaselhoarder"
+          ],
+          [
+            "iceage_armor4",
+            "iceage_armor3",
+            "iceage_gargantuar_mimic",
+            "iceage_weaselhoarder"
+          ],
+          [
+            "iceage_armor4",
+            "iceage_armor3",
+            "iceage_gargantuar_mimic"
+          ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "GlacierModule"
+      ],
+      "#comment": "Zombie Spawn Weights by Row From Left",
+      "objclass": "GlacierModuleProperties",
+      "objdata": {
+        "ZombieSpawnData": [
+          {
+            "Entries": [
+              {
+                "TypeName": "iceage_weasel",
+                "Weight": 3
+              },
+              {
+                "TypeName": "iceage",
+                "Weight": 1
+              }
+            ]
+          },
+          {
+            "Entries": [
+              {
+                "TypeName": "",
+                "Weight": 0
+              },
+              {
+                "TypeName": "iceage_armor2",
+                "Weight": 3
+              },
+              {
+                "TypeName": "iceage_armor3",
+                "Weight": 5
+              },
+              {
+                "TypeName": "iceage_armor1",
+                "Weight": 1
+              },
+              {
+                "TypeName": "iceage_weaselhoarder",
+                "Weight": 3
+              }
+            ]
+          },
+          {
+            "Entries": [
+              {
+                "TypeName": "",
+                "Weight": 0
+              },
+              {
+                "TypeName": "iceage_armor3",
+                "Weight": 3
+              },
+              {
+                "TypeName": "iceage_armor2",
+                "Weight": 3
+              },
+              {
+                "TypeName": "iceage_weaselhoarder",
+                "Weight": 3
+              }
+            ]
+          },
+          {
+            "Entries": [
+              {
+                "TypeName": "",
+                "Weight": 0
+              },
+              {
+                "TypeName": "iceage_armor4",
+                "Weight": 2
+              },
+              {
+                "TypeName": "iceage_armor3",
+                "Weight": 5
+              },
+              {
+                "TypeName": "iceage_weaselhoarder",
+                "Weight": 1
+              }
+            ]
+          },
+          {
+            "Entries": [
+              {
+                "TypeName": "",
+                "Weight": 0
+              },
+              {
+                "TypeName": "iceage_armor4",
+                "Weight": 2
+              },
+              {
+                "TypeName": "iceage_armor3",
+                "Weight": 6
+              },
+              {
+                "TypeName": "iceage_gargantuar",
+                "Weight": 2
+              },
+              {
+                "TypeName": "iceage_weaselhoarder",
+                "Weight": 1
+              }
+            ]
+          },
+          {
+            "Entries": [
+              {
+                "TypeName": "",
+                "Weight": 0
+              },
+              {
+                "TypeName": "iceage_armor3",
+                "Weight": 4
+              },
+              {
+                "TypeName": "iceage_armor4",
+                "Weight": 3
+              },
+              {
+                "TypeName": "iceage_gargantuar",
+                "Weight": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "Waves": []
+      }
+    }
+  ],
+  "version": 1
+}
