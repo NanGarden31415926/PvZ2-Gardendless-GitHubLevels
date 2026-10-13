@@ -1,0 +1,534 @@
+{
+  "#comment": "拓展魔头！",
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "[PLAYERS_TRIP_TO_KONGFU]",
+        "LevelNumber": 68,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(ZombossIntro@LevelModules)",
+          "RTID(KongfuRack@CurrentLevel)",
+          "RTID(ConveyorBelt@CurrentLevel)",
+          "RTID(ZombossBattle@CurrentLevel)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)"
+        ],
+        "MusicType": "MiniGame_A",
+        "WrittenBy":"SansGrinder",
+				"NameMultiLanguage":{
+					"en":"Epic Quest: Kongfu Temple Trials!",
+					"zh":"史诗任务：武林寺庙的试炼！"
+				},
+        "StageModule": "RTID(KongfuBossStage@LevelModules)",
+        "LoadDefaultMusic": false
+      }
+    },
+    {
+      "aliases": [
+        "ZombossBattle"
+      ],
+      "objclass": "ZombossBattleModuleProperties",
+      "objdata": {
+        "UseKongfuBossMusic": true,
+        "ReservedColumnCount": 3,
+        "ZombossMechType": "kongfu_boss_explode2",
+        "ZombossDeathRow": 3,
+        "ZombossDeathColumn": 5,
+        "ZombossSpawnGridPosition": {
+          "mX": 6,
+          "mY": 3
+        }
+      }
+    },
+    {
+      "aliases": [
+        "ConveyorBelt"
+      ],
+      "objclass": "ConveyorSeedBankProperties",
+      "objdata": {
+        "DropDelayConditions": [
+          {
+            "Delay": 2,
+            "MaxPackets": 0
+          }
+        ],
+        "InitialPlantList": [
+          {
+            "MaxCount": 5,
+            "MaxWeightFactor": 0,
+            "PlantType": "poisonpeashooter",
+            "Weight": 15
+          },
+          {
+            "MaxCount": 5,
+            "MaxWeightFactor": 0.2,
+            "PlantType": "jalapeno",
+            "Weight": 20
+          },
+          {
+            "MaxCount": 2,
+            "MaxWeightFactor": 0.1,
+            "MinCount": 1,
+            "MinWeightFactor": 2,
+            "PlantType": "cherry_bomb",
+            "Weight": 10
+          },
+          {
+            "MaxCount": 10,
+            "MaxWeightFactor": 0.1,
+            "MinCount": 5,
+            "MinWeightFactor": 2,
+            "PlantType": "coconutcannon",
+            "Weight": 45
+          },
+          {
+            "MaxCount": 5,
+            "MaxWeightFactor": 0,
+            "MinCount": 2,
+            "MinWeightFactor": 2,
+            "PlantType": "lychee",
+            "ForceBoosted": true,
+            "Weight": 15
+          },
+          {
+            "MaxCount": 1,
+            "MaxWeightFactor": 0.1,
+            "PlantType": "concealmint",
+            "Weight": 7
+          },
+          {
+            "MaxCount": 3,
+            "MaxWeightFactor": 0.1,
+            "PlantType": "grapeshot",
+            "Weight": 10
+          }
+        ],
+        "SpeedConditions": [
+          {
+            "MaxPackets": 0,
+            "Speed": 100
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "Waves": []
+      }
+    },
+    {
+      "aliases": [
+        "KongfuRack"
+      ],
+      "objclass": "GravestoneProperties",
+      "objdata": {
+        "ForceSpawnData": [
+          {
+            "GridX": 3,
+            "GridY": 0,
+            "TypeName": "kongfu_rack_helmet"
+          },
+          {
+            "GridX": 3,
+            "GridY": 1,
+            "TypeName": "kongfu_rack_torch"
+          },
+          {
+            "GridX": 3,
+            "GridY": 2,
+            "TypeName": "kongfu_rack_flag"
+          },
+          {
+            "GridX": 3,
+            "GridY": 3,
+            "TypeName": "kongfu_rack_torch"
+          },
+          {
+            "GridX": 3,
+            "GridY": 4,
+            "TypeName": "kongfu_rack_helmet"
+          }
+        ]
+      }
+    },
+    {
+			"aliases": [
+				"kongfu_boss_explode2"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"Properties": "RTID(kongfu_boss_explode2@CurrentLevel)",
+				"ZombieBasedOn": "kongfu_boss_explode"
+			}
+		},
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "kongfu_boss_explode2"
+      ],
+      "objdata": {
+        "MissileType": "kongfu_boss_explode_bomb",
+        "CannotBeEnlightenedBySolarSage": true,
+        "ImmuneToSweetPotato": true,
+        "ImmuneToShrinkingViolet": true,
+        "ZombieSort": "Zomboss",
+        "IgnoredBySnapPea": true,
+        "CannotBeGrabbedByPtero": true,
+        "CannotBeDetectedByPowerToss": true,
+        "CannotBeDraggedByTangleKelp": true,
+        "CannotBeTossedByCitron": true,
+        "CannotBeDetectedBySapfling": true,
+        "CannotBeSwallowedByChomper": true,
+        "ChiliStunDurationMult": 0,
+        "CannotCarryPlantfoodsInWaves": true,
+        "FoeEatDamageReflectPct": 2.5,
+        "LivesInDeepWater": true,
+        "WalkSPS": 0.185,
+        "EatDPS": 100,
+        "Toughness": 190,
+        "ImmuneToGarlic": true,
+        "WavePointCost": 100,
+        "Weight": 0,
+        "HitRect": "RTID(GargantuarHitRect@RectangleProps)",
+        "AttackRect": "RTID(GargantuarHitRect@RectangleProps)",
+        "ZombossMechLevel": 0,
+        "SummonColumn": 6,
+        "ZombossStages": [
+          {
+            "AnimRateModifier": 1.1,
+            "ChilledDurationFromFrozen": 10,
+            "DamageIndexFull": 0,
+            "DamageIndexHalf": 0,
+            "HitPoints": 26000,
+            "MaxIdleTime": 2.5,
+            "MinIdleTime": 1.5,
+            "StunDamageScale": 1.25,
+            "StunStaggerBackMovement": 1,
+            "StunStaggerBackTime": 0.4,
+            "StunTime": 1.5,
+            "Actions": [
+              {
+                "actionName": "jump",
+                "weight": 5,
+                "repeatMax": 1,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              },
+              {
+                "actionName": "rush",
+                "weight": 3,
+                "repeatMax": 1,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              },
+              {
+                "actionName": "summon",
+                "weight": 5,
+                "repeatMax": 2,
+                "repeatMin": 2,
+                "summonProps": {
+                  "pointMin": 3200,
+                  "pointMax": 3400,
+                  "plantfoodchance": 0.2,
+                  "zombieList": [
+                    "kongfu_armor1",
+                    "kongfu_armor2",
+                    "kongfu_armor3",
+                    "kongfu_armor4",
+                    "kongfu_torch",
+                    "kongfu_hammer",
+                    "kongfu_drink"
+                  ]
+                }
+              },
+              {
+                "actionName": "shoot",
+                "weight": 10,
+                "repeatMax": 1,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              },
+              {
+                "actionName": "imps",
+                "weight": 10,
+                "repeatMax": 1,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              }
+            ],
+            "BombCount": {
+              "Min": 3,
+              "Max": 5
+            },
+            "ThrewImpCount": {
+              "Min": 6,
+              "Max": 7
+            },
+            "ThrewImpColumn": {
+              "Min": 3,
+              "Max": 4
+            },
+            "RocketImpCount": {
+              "Min": 6,
+              "Max": 7
+            }
+          },
+          {
+            "AnimRateModifier": 1.25,
+            "ChilledDurationFromFrozen": 10,
+            "DamageIndexFull": 3,
+            "DamageIndexHalf": 3,
+            "HitPoints": 28000,
+            "MaxIdleTime": 1.5,
+            "MinIdleTime": 0.5,
+            "StunDamageScale": 1.25,
+            "StunStaggerBackMovement": 1,
+            "StunStaggerBackTime": 0.4,
+            "StunTime": 2.5,
+            "Actions": [
+              {
+                "actionName": "jump",
+                "weight": 5,
+                "repeatMax": 1,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              },
+              {
+                "actionName": "summon",
+                "weight": 20,
+                "repeatMax": 3,
+                "repeatMin": 2,
+                "summonProps": {
+                  "pointMin": 4001,
+                  "pointMax": 6001,
+                  "plantfoodchance": 0.2,
+                  "zombieList": [
+                    "kongfu_armor2",
+                    "kongfu_armor4",
+                    "kongfu_bronze_strong",
+                    "kongfu_chi",
+                    "kongfu_bomb",
+                    "kongfu_gong"
+                  ]
+                }
+              },
+              {
+                "actionName": "shoot",
+                "weight": 7,
+                "repeatMax": 2,
+                "repeatMin": 2,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              },
+              {
+                "actionName": "rush",
+                "weight": 2,
+                "repeatMax": 1,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              },
+              {
+                "actionName": "imps",
+                "weight": 3,
+                "repeatMax": 1,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              }
+            ],
+            "BombCount": {
+              "Min": 4,
+              "Max": 5
+            },
+            "ThrewImpCount": {
+              "Min": 8,
+              "Max": 10
+            },
+            "ThrewImpColumn": {
+              "Min": 4,
+              "Max": 5
+            },
+            "RocketImpCount": {
+              "Min": 7,
+              "Max": 12
+            }
+          },
+          {
+            "AnimRateModifier": 1.5,
+            "ChilledDurationFromFrozen": 10,
+            "DamageIndexFull": 6,
+            "DamageIndexHalf": 6,
+            "HitPoints": 21000,
+            "MaxIdleTime": 0.75,
+            "MinIdleTime": 0.5,
+            "StunDamageScale": 1.5,
+            "StunStaggerBackMovement": 1,
+            "StunStaggerBackTime": 0.4,
+            "StunTime": 2,
+            "Actions": [
+              {
+                "actionName": "jump",
+                "weight": 10,
+                "repeatMax": 1,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              },
+              {
+                "actionName": "summon",
+                "weight": 25,
+                "repeatMax": 3,
+                "repeatMin": 2,
+                "summonProps": {
+                  "pointMin": 6001,
+                  "pointMax": 7000,
+                  "plantfoodchance": 0.1,
+                  "zombieList": [
+                    "kongfu_gong",
+                    "kongfu_drink_veteran",
+                    "kongfu_chi",
+                    "kongfu_armor4",
+                    "kongfu_bronze_strong"
+                  ]
+                }
+              },
+              {
+                "actionName": "rush",
+                "weight": 4,
+                "repeatMax": 1,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              },
+              {
+                "actionName": "shoot",
+                "weight": 16,
+                "repeatMax": 2,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              },
+              {
+                "actionName": "imps",
+                "weight": 3,
+                "repeatMax": 1,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              }
+            ],
+            "BombCount": {
+              "Min": 5,
+              "Max": 7
+            },
+            "ThrewImpCount": {
+              "Min": 12,
+              "Max": 17
+            },
+            "ThrewImpColumn": {
+              "Min": 4,
+              "Max": 5
+            },
+            "RocketImpCount": {
+              "Min": 13,
+              "Max": 23
+            }
+          }
+        ]
+      }
+    },
+    {
+			"objclass":"ZombieType",
+			"aliases":[
+				"kongfu_drink_veteran"
+			],
+			"objdata":{
+				"Properties":"RTID(kongfu_drink_veteran@CurrentLevel)",
+				"ZombieBasedOn":"kongfu_drink"
+			}
+		},
+		{
+			"objclass":"ZombieProperties",
+			"aliases":[
+				"kongfu_drink_veteran"
+			],
+			"objdata":{
+				"SpawnedScale":1.05,
+				"ArmDroppingHealthPct":0.05,
+				"DrinkHealthPct":1,
+				"DrinkingDamageMult":0.00002,
+				"DrunkDamageMult":0.05,
+				"DrunkEatingDamageScale":15,
+				"DrunkWalkingSpeedScale":3,
+				"WalkSPS":0.25,
+				"EatDPS":300,
+				"Toughness":648,
+				"WavePointCost":1500,
+				"Weight":3000,
+				"HitRect":"RTID(CommonHitRect@RectangleProps)",
+				"AttackRect":"RTID(CommonAttackRect@RectangleProps)",
+				"StartingArmors":[
+					"kongfu_armor3"
+				]
+			}
+		}
+  ],
+  "version": 1
+}
