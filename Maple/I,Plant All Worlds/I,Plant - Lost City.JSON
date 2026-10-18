@@ -1,0 +1,365 @@
+{
+  "#comment": "Pirate Challenge Laststand C",
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "[PLAYERS_TRIP_TO_LOSTCITY]",
+        "LevelNumber": 3,
+        "FirstIntroNarrative": "IP_3_Intro",
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(StandardIntro@LevelModules)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(ModPlants@CurrentLevel)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(LastStand@CurrentLevel)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(LevelScheduler@CurrentLevel)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(InitialZombiePlacement@CurrentLevel)"
+        ],
+        "MusicType": "MiniGame_B",
+        "WrittenBy": "枫楼清秋月",
+        "NameMultiLanguage": {
+            "en": "I,Plant - Lost City",
+            "zh": "我是植物 - 遗落古城 "
+        },
+        "StageModule": "RTID(LostCityNightStage@LevelModules)"
+      }
+    },
+    {
+            "objclass": "NarrativeProperties",
+            "aliases": [
+                "IP_3_Intro"
+            ],
+            "objdata": {
+                "AutoAdvance": true,
+                "DelayBetweenLines": 2.5,
+                "Flow": [
+                    {
+                        "Character": "winnie",
+                        "Action": "NPC_ENTER",
+                        "Delay": 0.5
+                    },
+                    {
+                        "Character": "winnie",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "In this level,tents from the Imp Porter Zombie will only summon Conehead Adventures.",
+                            "zh": "在本关中，搬运工小鬼生成的帐篷将只会召唤路障僵尸。"
+                        }
+                    },
+                    {
+                        "Character": "winnie",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "A Parasol Zombie will appear in lane 1 when the attack starts.",
+                            "zh": "攻势开始时会有一只洋伞僵尸出现在一路。"
+                        }
+                    }
+                ]
+            }
+        },
+    {
+      "aliases": [
+        "ModPlants"
+      ],
+      "objclass": "PlantModifierProperties",
+      "objdata": {
+        "SuppressParticle": true,
+        "List": [
+          {
+             "Type": "melonpult",
+             "NewObjdata": {
+                 "ThrowInterval": 2.7,
+                 "ThrowIntervalAdditional": 0.01
+             }
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "tent"
+      ],
+      "objclass": "TombstoneType",
+      "objdata": {
+        "Properties": "RTID(tent@CurrentLevel)",
+        "TombstoneBasedOn": "tent"
+      }
+    },
+    {
+      "aliases": [
+        "tent"
+      ],
+      "objclass": "TombstoneProperties",
+      "objdata": {
+        "Toughness": 700,
+        "Flying": false,
+        "HotPotatoMeltable": false,
+        "GraveBusterPlantable": false,
+        "HitRect": "RTID(BackpackRect@RectangleProps)",
+        "SummonInterval": {
+          "Max": 10,
+          "Min": 10
+        },
+        "SummonnedZombies": [
+          {
+            "Weight": 1,
+            "Type": "lostcity_armor1"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "ChallengeModule"
+      ],
+      "objclass": "StarChallengeModuleProperties",
+      "objdata": {
+        "Challenges": [
+          [
+            "RTID(BeatTheLevel@CurrentLevel)"
+          ]
+        ],
+        "ChallengesAlwaysAvailable": true
+      }
+    },
+    {
+      "aliases": [
+        "LevelScheduler"
+      ],
+      "objclass": "LevelSchedulerProps",
+      "objdata": {
+        "TimeBeforeFirst": {
+          "Max": 0.01,
+          "Min": 0.01
+        },
+        "TimeBetween": {
+          "Max": 30,
+          "Min": 30
+        },
+        "Repeat": {
+          "Max": 1,
+          "Min": 1
+        },
+        "RewardWhenEnded": false,
+        "SuppressRewardState": false,
+        "Events": [
+          "RTID(SchedulerDone@CurrentLevel)"
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "SchedulerDone"
+      ],
+      "objclass": "WaveSchedulerProps",
+      "objdata": {
+        "TimeBeforeFirst": {
+          "Max": 125,
+          "Min": 125
+        },
+        "TimeBetween": {
+          "Max": 1,
+          "Min": 1
+        },
+        "Repeat": {
+          "Max": 1,
+          "Min": 1
+        },
+        "RewardWhenEnded": false,
+        "SuppressRewardState": false,
+        "Events": [
+          "RTID(done@CurrentLevel)"
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "done"
+      ],
+      "objclass": "TutorialLabelProperties",
+      "objdata": {
+        "String": "",
+        "StringMultiLanguage": {
+          "en": "The 3-Star Challenge Failed!",
+          "zh": "三星挑战失败！"
+        },
+        "LifeSpan": 10
+      }
+    },
+    {
+      "aliases": [
+        "BeatTheLevel"
+      ],
+      "objclass": "StarChallengeBeatTheLevelProps",
+      "objdata": {
+        "DescriptionsMultilanguage": [
+          {
+            "en": "Finish the level by using the most urgent time to achieve the 3-Star Challenge",
+            "zh": "用最短时间完成关卡以完成三星挑战"
+          },
+          {
+            "en": "Avoiding from using the sun shovel for better experience",
+            "zh": "避免使用阳光铲以获得更佳游戏体验"
+          }
+        ]
+      }
+    },
+    {
+			"aliases": [
+				"lostcity_impporter"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"Properties": "RTID(lostcity_impporter@CurrentLevel)",
+				"ZombieBasedOn": "lostcity_impporter"
+			}
+		},
+    {
+			"aliases": [
+				"lostcity_impporter"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"KilledByShrinkingViolet": true,
+				"CannotBeGrabbedByPtero": true,
+				"WalkSPS": 0.185,
+				"EatDPS": 100,
+				"Toughness": 350,
+				"WavePointCost": 450,
+				"Weight": 3000,
+				"HitRect": "RTID(ImpHitRect@RectangleProps)",
+				"AttackRect": "RTID(ImpAttackRect@RectangleProps)"
+			}
+		},
+    {
+      "aliases": [
+        "LastStand"
+      ],
+      "objclass": "LastStandMinigameProperties",
+      "objdata": {
+        "SuppressObjectiveTip": true,
+        "StartingPlantfood": 0,
+        "StartingSun": 1000
+      }
+    },
+    {
+      "aliases": [
+        "InitialZombiePlacement"
+      ],
+      "objclass": "InitialZombieProperties",
+      "objdata": {
+        "InitialZombiePlacements": [
+          {
+            "GridX": 8,
+            "GridY": 1,
+            "TypeName": "lostcity_impporter"
+          },
+          {
+            "GridX": 8,
+            "GridY": 2,
+            "TypeName": "lostcity_armor1"
+          },
+          {
+            "GridX": 8,
+            "GridY": 3,
+            "TypeName": "lostcity_armor2"
+          },
+          {
+            "GridX": 8,
+            "GridY": 4,
+            "TypeName": "lostcity_gargantuar"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "SuppressObjectiveTip": true,
+        "PresetPlantList": [
+          {
+            "Level": -1,
+            "PlantType": "melonpult"
+          },
+          {
+            "Level": -1,
+            "PlantType": "kernelpult"
+          },
+          {
+            "Level": -1,
+            "PlantType": "goldleaf"
+          }
+        ],
+        "SelectionMethod": "preset"
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "ManualStartup": true,
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },      
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 1,
+        "WaveCount": 1,
+        "SuppressFlagZombie": true,
+        "WaveSpendingPointIncrement": 0,
+        "WaveSpendingPoints": 200,
+        "Waves": [
+          [ 
+            "RTID(Wave1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)"
+          ]
+        ],
+        "ZombieCountdownFirstWaveSecs": 0.001  
+      }
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Row": "1",
+            "Type": "RTID(lostcity_jane@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          
+        ]
+      }
+    }
+  ],
+  "version": 1
+}

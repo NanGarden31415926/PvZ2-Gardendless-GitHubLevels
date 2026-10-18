@@ -1,0 +1,399 @@
+{
+  "#comment": "Pirate Challenge Laststand C",
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "[PLAYERS_TRIP_TO_DINO]",
+        "LevelNumber": 5,
+        "FirstIntroNarrative": "IP_5_Intro",
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(StandardIntro@LevelModules)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(ModPlants@CurrentLevel)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(LastStand@CurrentLevel)",
+          "RTID(LevelScheduler@CurrentLevel)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(InitialZombiePlacement@CurrentLevel)"
+        ],
+        "MusicType": "MiniGame_B",
+        "WrittenBy": "枫楼清秋月",
+        "NameMultiLanguage": {
+            "en": "I,Plant - Jurassic Marsh",
+            "zh": "我是植物 - 侏罗纪沼泽"
+        },
+        "StageModule": "RTID(DinoStage@LevelModules)"
+      }
+    },
+    {
+            "objclass": "NarrativeProperties",
+            "aliases": [
+                "IP_5_Intro"
+            ],
+            "objdata": {
+                "AutoAdvance": true,
+                "DelayBetweenLines": 2.5,
+                "Flow": [
+                    {
+                        "Character": "winnie",
+                        "Action": "NPC_ENTER",
+                        "Delay": 0.5
+                    },
+                    {
+                        "Character": "winnie",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "In this level,Raptor,Ptero,Tyranno,and Ankylo will be respectively spawned in lanes 1 through 4 when the attack starts.",
+                            "zh": "在本关中，攻势开始后一到四路将会分别生成迅猛龙、翼龙、霸王龙、甲龙。"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+      "aliases": [
+        "ModPlants"
+      ],
+      "objclass": "PlantModifierProperties",
+      "objdata": {
+        "SuppressParticle": true,
+        "List": [
+          {
+             "Type": "splitpea",
+             "NewObjdata": {
+                 "Cooldown": 0.01
+             }
+          },
+          {
+             "Type": "peanut",
+             "NewObjdata": {
+                 "ShootIntervalAdditional": 0.01
+             }
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "ChallengeModule"
+      ],
+      "objclass": "StarChallengeModuleProperties",
+      "objdata": {
+        "Challenges": [
+          [
+            "RTID(BeatTheLevel@CurrentLevel)"
+          ]
+        ],
+        "ChallengesAlwaysAvailable": true
+      }
+    },
+    {
+      "aliases": [
+        "BeatTheLevel"
+      ],
+      "objclass": "StarChallengeBeatTheLevelProps",
+      "objdata": {
+        "DescriptionsMultilanguage": [
+          {
+            "en": "Finish the level by using the most urgent time to achieve the 3-Star Challenge",
+            "zh": "用最短时间完成关卡以完成三星挑战"
+          },
+          {
+            "en": "Avoiding from using the sun shovel for better experience",
+            "zh": "避免使用阳光铲以获得更佳游戏体验"
+          }    
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "LastStand"
+      ],
+      "objclass": "LastStandMinigameProperties",
+      "objdata": {
+        "SuppressObjectiveTip": true,
+        "StartingPlantfood": 0,
+        "StartingSun": 1325
+      }
+    },
+    {
+      "aliases": [
+        "InitialZombiePlacement"
+      ],
+      "objclass": "InitialZombieProperties",
+      "objdata": {
+        "InitialZombiePlacements": [
+          {
+            "GridX": 7,
+            "GridY": 0,
+            "TypeName": "dino_armor1"
+          },
+          {
+            "GridX": 8,
+            "GridY": 0,
+            "TypeName": "dino_armor3"
+          },
+          {
+            "GridX": 4,
+            "GridY": 1,
+            "TypeName": "dino_armor3"
+          },
+          {
+            "GridX": 5,
+            "GridY": 1,
+            "TypeName": "dino"
+          },
+          {
+            "GridX": 6,
+            "GridY": 1,
+            "TypeName": "dino"
+          },
+          {
+            "GridX": 7,
+            "GridY": 1,
+            "TypeName": "dino"
+          },
+          {
+            "GridX": 8,
+            "GridY": 2,
+            "TypeName": "dino"
+          },
+          {
+            "GridX": 7,
+            "GridY": 2,
+            "TypeName": "dino"
+          },
+          {
+            "GridX": 8,
+            "GridY": 3,
+            "TypeName": "dino_armor2"
+          },
+          {
+            "GridX": 8,
+            "GridY": 4,
+            "TypeName": "dino_bully_veteran"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "SuppressObjectiveTip": true,
+        "PresetPlantList": [
+          {
+            "Level": -1,
+            "PlantType": "splitpea"
+          },
+          {
+            "Level": -1,
+            "PlantType": "peanut"
+          },
+          {
+            "Level": -1,
+            "PlantType": "stunion"
+          }
+        ],
+        "SelectionMethod": "preset"
+      }
+    },
+    
+    {
+      "aliases": [
+        "LevelScheduler"
+      ],
+      "objclass": "LevelSchedulerProps",
+      "objdata": {
+        "TimeBeforeFirst": {
+          "Max": 0.01,
+          "Min": 0.01
+        },
+        "TimeBetween": {
+          "Max": 30,
+          "Min": 30
+        },
+        "Repeat": {
+          "Max": 1,
+          "Min": 1
+        },
+        "RewardWhenEnded": false,
+        "SuppressRewardState": false,
+        "Events": [
+			    "RTID(SchedulerWave1@CurrentLevel)",
+          "RTID(SchedulerDone@CurrentLevel)"
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "SchedulerWave1"
+      ],
+      "objclass": "WaveSchedulerProps",
+      "objdata": {
+        "TimeBeforeFirst": {
+          "Max": 0.01,
+          "Min": 1
+        },
+        "TimeBetween": {
+          "Max": 0.01,
+          "Min": 1
+        },
+        "Repeat": {
+          "Max": 1,
+          "Min": 1
+        },
+        "RewardWhenEnded": false,
+        "SuppressRewardState": false,
+        "Events": [
+          "RTID(Wave1@CurrentLevel)",
+          "RTID(Wave1DinoTimeEvent0@CurrentLevel)",
+          "RTID(Wave1DinoTimeEvent1@CurrentLevel)",
+          "RTID(Wave1DinoTimeEvent2@CurrentLevel)",
+          "RTID(Wave1DinoTimeEvent3@CurrentLevel)"
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "SchedulerDone"
+      ],
+      "objclass": "WaveSchedulerProps",
+      "objdata": {
+        "TimeBeforeFirst": {
+          "Max": 55,
+          "Min": 55
+        },
+        "TimeBetween": {
+          "Max": 1,
+          "Min": 1
+        },
+        "Repeat": {
+          "Max": 1,
+          "Min": 1
+        },
+        "RewardWhenEnded": false,
+        "SuppressRewardState": false,
+        "Events": [
+          "RTID(done@CurrentLevel)"
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "done"
+      ],
+      "objclass": "TutorialLabelProperties",
+      "objdata": {
+        "String": "",
+        "StringMultiLanguage": {
+          "en": "The 3-Star Challenge Failed!",
+          "zh": "三星挑战失败！"
+        },
+        "LifeSpan": 10
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "ManualStartup": true,
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },      
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+      "FlagWaveInterval": 1,
+      "WaveCount": 1,
+      "SuppressFlagZombie": true,
+      "WaveSpendingPointIncrement": 0,
+      "WaveSpendingPoints": 200,  
+        "Waves": [
+          [ 
+            "RTID(Wave1@CurrentLevel)"
+          ]
+        ],
+        "ZombieCountdownFirstWaveSecs": 0.01 
+      }
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave1DinoTimeEvent0"
+      ],
+      "objclass": "DinoWaveActionProps",
+      "objdata": {
+        "DinoRow": 0,
+        "DinoType": "raptor",
+        "DinoWaveDuration": 2
+      }
+    },
+    {
+      "aliases": [
+        "Wave1DinoTimeEvent1"
+      ],
+      "objclass": "DinoWaveActionProps",
+      "objdata": {
+        "DinoRow": 1,
+        "DinoType": "ptero",
+        "DinoWaveDuration": 2
+      }
+    },
+    {
+      "aliases": [
+        "Wave1DinoTimeEvent2"
+      ],
+      "objclass": "DinoWaveActionProps",
+      "objdata": {
+        "DinoRow": 2,
+        "DinoType": "tyranno",
+        "DinoWaveDuration": 2
+      }
+    },
+    {
+      "aliases": [
+        "Wave1DinoTimeEvent3"
+      ],
+      "objclass": "DinoWaveActionProps",
+      "objdata": {
+        "DinoRow": 3,
+        "DinoType": "ankylo",
+        "DinoWaveDuration": 2
+      }
+    },
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+        ]
+      }
+    }
+  ],
+  "version": 1
+}
