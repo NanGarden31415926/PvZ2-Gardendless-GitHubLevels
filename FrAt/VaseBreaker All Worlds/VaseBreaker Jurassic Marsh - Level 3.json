@@ -1,0 +1,170 @@
+{
+    "#comment": "",
+    "objects": [
+        {
+            "objclass": "LevelDefinition",
+            "objdata": {
+                "Loot": "RTID(DefaultLoot@LevelModules)",
+                "IsVasebreaker": true,
+                "Modules": [
+                    "RTID(LevelOfTheDayModule@CurrentLevel)",
+                    "RTID(DefaultZombieWinCondition@LevelModules)",
+                    "RTID(ZombiesDeadWinCon@LevelModules)",
+                    "RTID(VaseBreakerArcade@LevelModules)",
+                    "RTID(VaseBreakerProps@.)",
+                    "RTID(DinoSpawnEvent@CurrentLevel)"
+                ],
+                "MusicType": "MiniGame_B",
+                "Name": "VaseBreaker Jurassic Marsh - Level 3",
+                "StageModule": "RTID(DinoStage@LevelModules)"
+            }
+        },
+        {
+            "aliases": [
+                "DinoSpawnEvent"
+            ],
+            "objclass": "LevelSchedulerProps",
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Max": 0.1,
+                    "Min": 0.1
+                },
+                "TimeBetween": {
+                    "Max": 0,
+                    "Min": 0
+                },
+                "Repeat": {
+                    "Max": 1,
+                    "Min": 1
+                },
+                "RewardWhenEnded": false,
+                "SuppressRewardState": false,
+                "Events": [
+                    "RTID(Tyranno0@CurrentLevel)",
+                    "RTID(Tyranno1@CurrentLevel)",
+                    "RTID(Tyranno2@CurrentLevel)",
+                    "RTID(Tyranno3@CurrentLevel)",
+                    "RTID(Tyranno4@CurrentLevel)"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Tyranno0"
+            ],
+            "objclass": "DinoWaveActionProps",
+            "objdata": {
+                "DinoType": "tyranno_t",
+                "DinoRow": 0
+            }
+        },
+        {
+            "aliases": [
+                "Tyranno1"
+            ],
+            "objclass": "DinoWaveActionProps",
+            "objdata": {
+                "DinoType": "tyranno_t",
+                "DinoRow": 1
+            }
+        },
+        {
+            "aliases": [
+                "Tyranno2"
+            ],
+            "objclass": "DinoWaveActionProps",
+            "objdata": {
+                "DinoType": "tyranno_t",
+                "DinoRow": 2
+            }
+        },
+        {
+            "aliases": [
+                "Tyranno3"
+            ],
+            "objclass": "DinoWaveActionProps",
+            "objdata": {
+                "DinoType": "tyranno_t",
+                "DinoRow": 3
+            }
+        },
+        {
+            "aliases": [
+                "Tyranno4"
+            ],
+            "objclass": "DinoWaveActionProps",
+            "objdata": {
+                "DinoType": "tyranno_t",
+                "DinoRow": 4
+            }
+        },
+		{
+			"aliases": [
+				"tyranno_t"
+			],
+			"objclass": "DinosaurType",
+			"objdata": {
+				"Properties": "RTID(tyranno_p@CurrentLevel)",
+				"DinosaurBasedOn": "tyranno"
+			}
+		},
+		{
+			"aliases": [
+				"tyranno_p"
+			],
+			"objclass": "DinosaurProperties",
+			"objdata": {
+				"LivesInDeepWater": false,
+				"MaxWonderingTime": 999999999999,
+				"HitRect": "RTID(DinoPteroHitRect@RectangleProps)",
+				"AttackRect": "RTID(DinoPteroAttackRect@RectangleProps)",
+				"MaxRoaringTime": 999999999999,
+				"MaxBitingTime": 5,
+				"IdleColumn": 6
+			}
+		},
+        {
+            "objclass": "VaseBreakerPresetProperties",
+            "aliases": [
+                "VaseBreakerProps"
+            ],
+            "objdata": {
+                "MinColumnIndex": 2,
+                "MaxColumnIndex": 8,
+                "Vases": [
+                    {
+                        "ZombieTypeName": "dino_armor2",
+                        "Count": 4
+                    },
+                    {
+                        "ZombieTypeName": "dino_armor4",
+                        "Count": 6
+                    },
+                    {
+                        "ZombieTypeName": "dino_bully",
+                        "Count": 4
+                    },
+                    {
+                        "ZombieTypeName": "dino_bully_veteran",
+                        "Count": 8
+                    },
+                    {
+                        "ZombieTypeName": "dino_gargantuar",
+                        "Count": 5
+                    },
+                    {
+                        "PlantTypeName": "explodeonut",
+                        "Count": 4
+                    },
+                    {
+                        "PlantTypeName": "grapeshot",
+                        "Count": 4
+                    }
+                ],
+                "NumColoredPlantVases": 5,
+                "NumColoredZombieVases": 0
+            }
+        }
+    ],
+    "version": 1
+}

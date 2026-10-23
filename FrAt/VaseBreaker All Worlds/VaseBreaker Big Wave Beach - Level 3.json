@@ -1,0 +1,83 @@
+{
+    "#comment": "PvZ2 Vasebreaker level 1",
+    "version": 1,
+    "objects": [
+        {
+            "objclass": "LevelDefinition",
+            "objdata": {
+                "LevelNumber": 1,
+                "Name": "VaseBreaker Big Wave Beach - Level 3",
+                "IsVasebreaker": true,
+                "LevelPowerupSet": "LevelPowerupsVasebreaker",
+                "Description": "",
+                "StageModule": "RTID(BeachStage@LevelModules)",
+                "Loot": "RTID(DefaultLoot@LevelModules)",
+                "FirstRewardParam": "big_moneybag",
+				"MusicType": "MiniGame_B",
+                "Modules": [
+                    "RTID(VaseBreakerArcade@LevelModules)",
+                    "RTID(VaseBreakerProps@.)",
+                    "RTID(ZombiesDeadWinCon@LevelModules)",
+                    "RTID(DefaultZombieWinCondition@LevelModules)",
+                    "RTID(Tide@CurrentLevel)"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Tide"
+            ],
+            "objclass": "TideProperties",
+            "objdata": {
+                "StartingWaveLocation": 9
+            }
+        },
+        {
+            "objclass": "VaseBreakerPresetProperties",
+            "aliases": [
+                "VaseBreakerProps"
+            ],
+            "objdata": {
+                "MinColumnIndex": 2,
+                "MaxColumnIndex": 7,
+                "GridSquareExcludelist": [],
+                "Vases": [
+                    {
+                        "ZombieTypeName": "beach_fem_armor1",
+                        "Count": 5
+                    },
+                    {
+                        "ZombieTypeName": "beach_octopus",
+                        "Count": 2
+                    },
+                    {
+                        "ZombieTypeName": "beach",
+                        "Count": 4
+                    },
+                    {
+                        "ZombieTypeName": "beach_fisherman",
+                        "Count": 4
+                    },
+                    {
+                        "PlantTypeName": "lilypad",
+                        "Count": 6
+                    },
+                    {
+                        "PlantTypeName": "ghostpepper",
+                        "Count": 4
+                    },
+                    {
+                        "PlantTypeName": "chomper",
+                        "Count": 4
+                    },
+                    {
+                        "CollectableTypeName": "plantfood",
+                        "Count": 1
+                    }
+                ],
+                "NumColoredPlantVases": 1,
+                "NumColoredZombieVases": 0
+            }
+        }
+    ]
+}

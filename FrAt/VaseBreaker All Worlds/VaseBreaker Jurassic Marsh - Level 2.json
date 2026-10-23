@@ -1,0 +1,203 @@
+{
+    "#comment": "",
+    "objects": [
+        {
+            "objclass": "LevelDefinition",
+            "objdata": {
+                "Loot": "RTID(DefaultLoot@LevelModules)",
+                "IsVasebreaker": true,
+                "Modules": [
+                    "RTID(LevelOfTheDayModule@CurrentLevel)",
+                    "RTID(DefaultZombieWinCondition@LevelModules)",
+                    "RTID(ZombiesDeadWinCon@LevelModules)",
+                    "RTID(VaseBreakerArcade@LevelModules)",
+                    "RTID(VaseBreakerProps@.)",
+                    "RTID(DinoSpawnEvent@CurrentLevel)"
+                ],
+                "MusicType": "MiniGame_B",
+                "Name": "VaseBreaker Jurassic Marsh - Level 2",
+                "StageModule": "RTID(DinoStage@LevelModules)"
+            }
+        },
+        {
+            "aliases": [
+                "DinoSpawnEvent"
+            ],
+            "objclass": "LevelSchedulerProps",
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Max": 0.1,
+                    "Min": 0.1
+                },
+                "TimeBetween": {
+                    "Max": 0,
+                    "Min": 0
+                },
+                "Repeat": {
+                    "Max": 1,
+                    "Min": 1
+                },
+                "RewardWhenEnded": false,
+                "SuppressRewardState": false,
+                "Events": [
+                    "RTID(Stego0@CurrentLevel)",
+                    "RTID(Ankylo1@CurrentLevel)",
+                    "RTID(Stego2@CurrentLevel)",
+                    "RTID(Ankylo3@CurrentLevel)",
+                    "RTID(Stego4@CurrentLevel)"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Stego0"
+            ],
+            "objclass": "DinoWaveActionProps",
+            "objdata": {
+                "DinoType": "stego_t",
+                "DinoRow": 0
+            }
+        },
+        {
+            "aliases": [
+                "Ankylo1"
+            ],
+            "objclass": "DinoWaveActionProps",
+            "objdata": {
+                "DinoType": "ankylo_t",
+                "DinoRow": 1
+            }
+        },
+        {
+            "aliases": [
+                "Stego2"
+            ],
+            "objclass": "DinoWaveActionProps",
+            "objdata": {
+                "DinoType": "stego_t",
+                "DinoRow": 2
+            }
+        },
+        {
+            "aliases": [
+                "Ankylo3"
+            ],
+            "objclass": "DinoWaveActionProps",
+            "objdata": {
+                "DinoType": "ankylo_t",
+                "DinoRow": 3
+            }
+        },
+        {
+            "aliases": [
+                "Stego4"
+            ],
+            "objclass": "DinoWaveActionProps",
+            "objdata": {
+                "DinoType": "stego_t",
+                "DinoRow": 4
+            }
+        },
+		{
+			"aliases": [
+				"stego_t"
+			],
+			"objclass": "DinosaurType",
+			"objdata": {
+				"Properties": "RTID(stego_p@CurrentLevel)",
+				"DinosaurBasedOn": "stego"
+			}
+		},
+		{
+			"aliases": [
+				"stego_p"
+			],
+			"objclass": "DinosaurProperties",
+			"objdata": {
+				"LivesInDeepWater": true,
+				"MaxWonderingTime": 999999999999,
+				"HitRect": "RTID(CommonHitRect@RectangleProps)",
+				"AttackRect": "RTID(DinoRaptorAttackRect@RectangleProps)",
+				"MaxThrowingTime": 3,
+				"MaxZombiesToSitOnce": 3,
+				"IdleColumn": 6.5,
+				"DirectDamage": 2700,
+				"SplashDamage": 200,
+				"ThrowColumn": {
+					"Min": 3,
+					"Max": 4
+				}
+			}
+		},
+		{
+			"aliases": [
+				"ankylo_t"
+			],
+			"objclass": "DinosaurType",
+			"objdata": {
+				"Properties": "RTID(ankylo_p@CurrentLevel)",
+				"DinosaurBasedOn": "ankylo"
+			}
+		},
+		{
+			"aliases": [
+				"ankylo_p"
+			],
+			"objclass": "DinosaurProperties",
+			"objdata": {
+				"LivesInDeepWater": false,
+				"MaxWonderingTime": 999999999999,
+				"HitRect": "RTID(DinoPteroHitRect@RectangleProps)",
+				"ZombiesToThrow": 5,
+				"IdleColumn": 8.8,
+				"ThrowColumn": {
+					"Min": 1.8,
+					"Max": 2.3
+				}
+			}
+		},
+        {
+            "objclass": "VaseBreakerPresetProperties",
+            "aliases": [
+                "VaseBreakerProps"
+            ],
+            "objdata": {
+                "MinColumnIndex": 3,
+                "MaxColumnIndex": 8,
+                "Vases": [
+                    {
+                        "ZombieTypeName": "dino",
+                        "Count": 4
+                    },
+                    {
+                        "ZombieTypeName": "dino_armor1",
+                        "Count": 4
+                    },
+                    {
+                        "ZombieTypeName": "dino_armor2",
+                        "Count": 4
+                    },
+                    {
+                        "ZombieTypeName": "dino_armor3",
+                        "Count": 6
+                    },
+                    {
+                        "ZombieTypeName": "dino_bully",
+                        "Count": 5
+                    },
+                    {
+                        "PlantTypeName": "coldsnapdragon",
+                        "Count": 5
+                    },
+                    {
+                        "PlantTypeName": "primalpotatomine",
+                        "Count": 2
+                    }
+                ],
+                "NumColoredPlantVases": 3,
+                "NumColoredZombieVases": 0
+            }
+        }
+    ],
+    "version": 1
+}
