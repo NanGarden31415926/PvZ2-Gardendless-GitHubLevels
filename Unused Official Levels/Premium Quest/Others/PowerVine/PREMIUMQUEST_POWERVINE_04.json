@@ -1,0 +1,380 @@
+{
+	"#comment": "PowerVine EQ4",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "[PREMIUM_PLANT_QUEST_LOD_DESC]",
+				"ForceToWorldMap": true,
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"Modules": [ "RTID(StandardIntro@LevelModules)", "RTID(LevelEscalationModule@CurrentLevel)", "RTID(FrontLawnMowers@LevelModules)", "RTID(NewWaves@CurrentLevel)", "RTID(DefaultZombieWinCondition@LevelModules)", "RTID(Gravestones@CurrentLevel)", "RTID(ConveyorBelt@CurrentLevel)", "RTID(ZombiesDeadWinCon@LevelModules)", "RTID(Rails@CurrentLevel)", "RTID(ChallengeModule@CurrentLevel)", "RTID(ProtectThePlant@CurrentLevel)" ],
+				"Name": "[PREMIUM_PLANT_QUEST_LOD_NAME]",
+				"NormalPresentTable": "egypt_normal_01",
+				"RepeatPlayForceToWorldMap": true,
+				"ShinyPresentTable": "egypt_shiny_01",
+				"StageModule": "RTID(FrontLawnStage@LevelModules)"
+			}
+		}, {
+			"aliases": [ "Gravestones" ],
+			"objclass": "GravestoneProperties",
+			"objdata": {}
+		}, {
+			"aliases": [ "NewWaves" ],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {
+				"DynamicZombies": [ {}, {}, {}, {}, {}, {}, {} ]
+			}
+		}, {
+			"aliases": [ "ConveyorBelt" ],
+			"objclass": "ConveyorSeedBankProperties",
+			"objdata": {
+				"DropDelayConditions": [ {
+						"Delay": 3,
+						"MaxPackets": 0
+					}, {
+						"Delay": 6,
+						"MaxPackets": 2
+					}, {
+						"Delay": 9,
+						"MaxPackets": 4
+					}, {
+						"Delay": 12,
+						"MaxPackets": 8
+					} ],
+				"InitialPlantList": [ {
+						"Level": 10,
+						"MaxCount": 8,
+						"MaxCountCooldownSeconds": 10,
+						"MaxWeightFactor": 0,
+						"MinCount": 5,
+						"MinWeightFactor": 5,
+						"PlantType": "powervine",
+						"Weight": 30
+					} ],
+				"SpeedConditions": [ {
+						"MaxPackets": 0,
+						"Speed": 100
+					} ]
+			}
+		}, {
+			"aliases": [ "ChallengeModule" ],
+			"objclass": "StarChallengeModuleProperties",
+			"objdata": {
+				"Challenges": [ [ "RTID(BeatTheLevel@CurrentLevel)" ] ],
+				"ChallengesAlwaysAvailable": true
+			}
+		}, {
+			"aliases": [ "BeatTheLevel" ],
+			"objclass": "StarChallengeBeatTheLevelProps",
+			"objdata": {
+				"Description": "[STARCHALLENGE_PROTECT_THE_PLANT]",
+				"DescriptiveName": "[STARCHALLENGE_PROTECT_THE_PLANT_NAME]"
+			}
+		}, {
+			"aliases": [ "ProtectThePlant" ],
+			"objclass": "ProtectThePlantChallengeProperties",
+			"objdata": {
+				"MustProtectCount": 5,
+				"Plants": [ {
+						"GridX": 4,
+						"GridY": 1,
+						"PlantType": "pumpkin"
+					}, {
+						"GridX": 4,
+						"GridY": 3,
+						"PlantType": "pumpkin"
+					}, {
+						"GridX": 2,
+						"GridY": 0,
+						"PlantType": "pumpkin"
+					}, {
+						"GridX": 2,
+						"GridY": 2,
+						"PlantType": "pumpkin"
+					}, {
+						"GridX": 2,
+						"GridY": 4,
+						"PlantType": "pumpkin"
+					} ]
+			}
+		}, {
+			"aliases": [ "Rails" ],
+			"objclass": "RailcartProperties",
+			"objdata": {
+				"RailcartType": "railcart_cowboy",
+				"Railcarts": [ {
+						"Column": 0,
+						"Row": 2
+					}, {
+						"Column": 1,
+						"Row": 1
+					}, {
+						"Column": 3,
+						"Row": 3
+					} ],
+				"Rails": [ {
+						"Column": 0,
+						"RowEnd": 4,
+						"RowStart": 0
+					}, {
+						"Column": 1,
+						"RowEnd": 4,
+						"RowStart": 0
+					}, {
+						"Column": 3,
+						"RowEnd": 4,
+						"RowStart": 0
+					} ]
+			}
+		}, {
+			"aliases": [ "LevelEscalationModule" ],
+			"objclass": "LevelEscalationModuleProperties",
+			"objdata": {
+				"FlagCount": 4,
+				"PlantfoodToSpawnCount": 5,
+				"PointIncrementPerWave": 50,
+				"StartingPoints": 100,
+				"WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)",
+				"WavesPerFlag": 4,
+				"ZombiePool": [ "RTID(dark_juggler@ZombieTypes)", "RTID(roman_shield_triad@ZombieTypes)", "RTID(explorer@ZombieTypes)", "RTID(roman@ZombieTypes)", "RTID(roman_armor1@ZombieTypes)", "RTID(roman_armor2@ZombieTypes)", "RTID(roman_armor3@ZombieTypes)", "RTID(roman_armor4@ZombieTypes)" ]
+			}
+		}, {
+			"aliases": [ "WaveManagerProps" ],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"FlagWaveInterval": 4,
+				"WaveCount": 16,
+				"WaveSpendingPointIncrement": 25,
+				"WaveSpendingPoints": 200,
+				"Waves": [ [ "RTID(Wave1@CurrentLevel)" ], [ "RTID(Wave2@CurrentLevel)" ], [ "RTID(Wave3@CurrentLevel)", "RTID(Wave3ModConveyor0@CurrentLevel)" ], [ "RTID(Wave4@CurrentLevel)" ], [ "RTID(Wave5@CurrentLevel)" ], [ "RTID(Wave6@CurrentLevel)", "RTID(Wave6ModConveyor0@CurrentLevel)" ], [ "RTID(Wave7@CurrentLevel)" ], [ "RTID(Wave8@CurrentLevel)", "RTID(Wave8ModConveyor0@CurrentLevel)" ], [ "RTID(Wave9@CurrentLevel)" ], [ "RTID(Wave10@CurrentLevel)" ], [ "RTID(Wave11@CurrentLevel)" ], [ "RTID(Wave12@CurrentLevel)" ], [ "RTID(Wave13@CurrentLevel)" ], [ "RTID(Wave14@CurrentLevel)" ], [ "RTID(Wave15@CurrentLevel)" ], [ "RTID(Wave16@CurrentLevel)" ] ]
+			}
+		}, {
+			"aliases": [ "Wave1" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Type": "RTID(roman@ZombieTypes)"
+					}, {
+						"Type": "RTID(roman@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave2" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave3" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Type": "RTID(roman_armor1@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave4" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Type": "RTID(roman_armor2@ZombieTypes)"
+					}, {
+						"Type": "RTID(roman_armor2@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave5" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave6" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Type": "RTID(modern_balloon@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(roman_healer@ZombieTypes)"
+					}, {
+						"Type": "RTID(modern_balloon@ZombieTypes)"
+					}, {
+						"Type": "RTID(roman_medusa@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave7" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave8" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Type": "RTID(roman@ZombieTypes)"
+					}, {
+						"Type": "RTID(roman@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave9" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(roman_healer@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(roman_healer@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Type": "RTID(roman_gargantuar@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave10" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(roman_medusa@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(roman_medusa@ZombieTypes)"
+					}, {
+						"Type": "RTID(modern_balloon@ZombieTypes)"
+					}, {
+						"Type": "RTID(modern_balloon@ZombieTypes)"
+					}, {
+						"Type": "RTID(modern_balloon@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave11" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Type": "RTID(roman_gargantuar@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave12" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Type": "RTID(roman_gargantuar@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave13" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Type": "RTID(roman_gargantuar@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave14" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Type": "RTID(roman_gargantuar@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave15" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Type": "RTID(roman_gargantuar@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave16" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Type": "RTID(roman_gargantuar@ZombieTypes)"
+					}, {
+						"Type": "RTID(roman_gargantuar@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave3ModConveyor0" ],
+			"objclass": "ModifyConveyorWaveActionProps",
+			"objdata": {
+				"Add": [ {
+						"MaxCount": 7,
+						"MaxCountCooldownSeconds": 10,
+						"MaxWeightFactor": 0,
+						"MinCount": 5,
+						"MinWeightFactor": 2,
+						"Type": "RTID(sporeshroom@PlantTypes)",
+						"Weight": 10
+					} ],
+				"Remove": []
+			}
+		}, {
+			"aliases": [ "Wave6ModConveyor0" ],
+			"objclass": "ModifyConveyorWaveActionProps",
+			"objdata": {
+				"Add": [ {
+						"MaxCount": 8,
+						"MaxCountCooldownSeconds": 10,
+						"MaxWeightFactor": 0,
+						"MinCount": 5,
+						"MinWeightFactor": 2,
+						"Type": "RTID(bonkchoy@PlantTypes)",
+						"Weight": 20
+					} ],
+				"Remove": []
+			}
+		}, {
+			"aliases": [ "Wave8ModConveyor0" ],
+			"objclass": "ModifyConveyorWaveActionProps",
+			"objdata": {
+				"Add": [ {
+						"MaxDelivered": 2,
+						"MinCount": 2,
+						"MinWeightFactor": 5,
+						"Type": "RTID(powerplant@PlantTypes)",
+						"Weight": 20
+					}, {
+						"MaxCount": 1,
+						"MaxCountCooldownSeconds": 10,
+						"MaxWeightFactor": 0,
+						"MinCount": 1,
+						"MinWeightFactor": 2,
+						"Type": "RTID(gumnut@PlantTypes)",
+						"Weight": 15
+					} ],
+				"Remove": []
+			}
+		} ],
+	"version": 1
+}

@@ -1,0 +1,593 @@
+{
+  "#comment": "2009_1",
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "<PLAYERNAME>'s Frontyard",
+        "LevelNumber": 7,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(StandardIntro@LevelModules)",
+          "RTID(DefaultSunDropper@LevelModules)",
+          "RTID(ModPlantsDay@CurrentLevel)",
+          "RTID(ModernMowers@LevelModules)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(NewWaves@CurrentLevel)"
+        ],
+        "MusicType": "MiniGame_A",
+        "Name": "The Errors ACT1-Day<LEVELNUMBER>",
+        "WrittenBy": "莱池_余垛",
+        "StageModule": "RTID(FrontLawnStage@LevelModules)"
+      }
+    },
+    {
+      "aliases": [
+        "ModPlantsDay"
+      ],
+      "objclass": "PlantModifierProperties",
+      "objdata": {
+        "HidePlantfood": true,
+        "SuppressParticle": true,
+        "List": [
+          {
+            "Type": "sunshroom",
+            "NewObjdata": {
+              "GrowTime0_1": 119,
+              "GrowTime1_2": 119,
+              "ProduceInterval": 23.5,
+              "ProduceIntervalAdditional": 1.5
+            }
+          },
+          {
+            "Type": "snowpea",
+            "NewObjdata": {
+              "ChanceToFreeze": 0
+            }
+          },
+          {
+            "Type": "chomper",
+            "NewObjdata": {
+              "ChewTimePerZombie": 34,
+              "MaxContainZombieCount": 1
+            }
+          },
+          {
+            "Type": "puffshroom",
+            "NewObjdata": {
+              "LifeSpan": 5
+            }
+          },
+          {
+            "Type": "fumeshroom",
+            "NewObjdata": {
+              "DetectDistance": 1.5,
+              "ShootDistance": 5.5
+            }
+          },
+          {
+            "Type": "scaredyshroom",
+            "NewObjdata": {
+              "KnockbackChance": 0,
+              "ShootInterval": 5.4,
+              "ShootIntervalAdditional": 0.6
+            }
+          },
+          {
+            "Type": "hypnoshroom",
+            "NewObjdata": {
+              "HypnoedZombieDamageScale": 4
+            }
+          },
+          {
+            "Type": "magnetshroom",
+            "NewObjdata": {
+              "RestTime": 10000
+            }
+          },
+          {
+            "Type": "glaciershroom",
+            "NewObjdata": {
+              "FreezeDuration": 1,
+              "ChillDuration": 1,
+              "ChillDurationAmbience": 1,
+              "EatFreezeDuration": 1,
+              "EatChillDuration": 1,
+              "EatFreezeInterval": 1
+            }
+          },
+          {
+            "Type": "doomshroom",
+            "NewObjdata": {
+              "SunCost": 125,
+              "Damage": 180
+            }
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "SunDropper"
+      ],
+      "objclass": "SunDropperProperties",
+      "objdata": {
+        "InitialSunDropDelay": 5,
+        "SunCountdownBase": 5,
+        "SunCountdownIncreasePerSun": 1,
+        "SunCountdownMax": 9.5,
+        "SunCountdownRange": 0.5,
+        "Value": 25
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "UnlockAll": true,
+        "OverrideSeedSlotsCount": 4,
+        "PlantIncludeList": [
+          "peashooter",
+          "sunflower",
+          "wallnut",
+          "cherry_bomb",
+          "potatomine",
+          "snowpea",
+          "chomper"
+        ],
+        "SelectionMethod": "chooser"
+      }
+    },
+    {
+      "aliases": [
+        "error_tutorial_imp"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(error_tutorial_imp@CurrentLevel)",
+        "ZombieBasedOn": "tutorial_imp"
+      }
+    },
+    {
+      "aliases": [
+        "error_tutorial_imp"
+      ],
+      "objclass": "ZombieProperties",
+      "objdata": {
+        "ZombieSort": "Normal",
+        "CannotBeTossedByCitron": false,
+        "IgnoredInWaves": false,
+        "WalkSPS": 0.30,
+        "EatDPS": 200,
+        "Toughness": 50,
+        "StartingArmors": [
+          "modern_armor1"
+        ],
+        "HitRect": "RTID(ImpHitRect@RectangleProps)",
+        "AttackRect": "RTID(ImpAttackRect@RectangleProps)"
+      }
+    },
+    {
+      "aliases": [
+        "error_tutorial_imp_armor2"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(error_tutorial_imp_armor2@CurrentLevel)",
+        "ZombieBasedOn": "tutorial_imp"
+      }
+    },
+    {
+      "aliases": [
+        "error_tutorial_imp_armor2"
+      ],
+      "objclass": "ZombieProperties",
+      "objdata": {
+        "ZombieSort": "Normal",
+        "CannotBeTossedByCitron": false,
+        "IgnoredInWaves": false,
+        "WalkSPS": 0.30,
+        "EatDPS": 200,
+        "Toughness": 50,
+        "StartingArmors": [
+          "modern_armor2"
+        ],
+        "HitRect": "RTID(ImpHitRect@RectangleProps)",
+        "AttackRect": "RTID(ImpAttackRect@RectangleProps)"
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 7,
+        "WaveCount": 14,
+        "WaveSpendingPointIncrement": 50,
+        "WaveSpendingPoints": 100,
+        "Waves": [
+          [
+            "RTID(Wave1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave11@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave12@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave13@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave14@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(error_tutorial_imp@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(error_tutorial_imp_armor2@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(error_tutorial_imp_armor2@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_tutorial_imp@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(error_tutorial_imp_armor2@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(error_tutorial_imp_armor2@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_tutorial_imp@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_tutorial_imp@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(error_tutorial_imp_armor2@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_tutorial_imp_armor2@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_tutorial_imp@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave7"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(error_tutorial_imp_armor2@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_tutorial_imp_armor2@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_tutorial_imp_armor2@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_tutorial_imp@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_tutorial_imp@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_tutorial_imp@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_tutorial_imp@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_tutorial_imp@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_tutorial_imp@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_tutorial_imp@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_tutorial_imp@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_tutorial_imp@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave8"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(error_tutorial_imp_armor2@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_tutorial_imp_armor2@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_tutorial_imp@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_tutorial_imp@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave9"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(error_tutorial_imp_armor2@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_tutorial_imp_armor2@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_tutorial_imp@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_tutorial_imp@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave10"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(error_tutorial_imp_armor2@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_tutorial_imp_armor2@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_tutorial_imp_armor2@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_tutorial_imp@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave11"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(error_tutorial_imp_armor2@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_tutorial_imp_armor2@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_tutorial_imp_armor2@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave12"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(error_tutorial_imp_armor2@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_tutorial_imp_armor2@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_tutorial_imp@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_tutorial_imp@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave13"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(error_tutorial_imp_armor2@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_tutorial_imp_armor2@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_tutorial_imp_armor2@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_tutorial_imp@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_tutorial_imp@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave14"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(error_tutorial_imp_armor2@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_tutorial_imp_armor2@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_tutorial_imp_armor2@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_tutorial_imp_armor2@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_tutorial_imp_armor2@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_tutorial_imp_armor2@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_tutorial_imp@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_tutorial_imp@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_tutorial_imp@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_tutorial_imp@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_tutorial_imp@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_tutorial_imp@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_tutorial_imp@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_tutorial_imp@CurrentLevel)"
+          }
+        ]
+      }
+    }
+  ],
+  "version": 1
+}

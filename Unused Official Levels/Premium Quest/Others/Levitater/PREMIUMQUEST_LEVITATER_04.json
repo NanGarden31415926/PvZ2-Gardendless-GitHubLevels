@@ -1,0 +1,231 @@
+{
+	"#comment": "Premium Quest - Cold Snap Dragon",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "[PREMIUM_PLANT_QUEST_LOD_DESC]",
+				"ForceToWorldMap": true,
+				"LevelPowerupSet": "LevelPowerupsDisabled",
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"Modules": [ "RTID(StandardIntro@LevelModules)", "RTID(DefaultSunDropper@LevelModules)", "RTID(LevelEscalationModule@CurrentLevel)", "RTID(FrontLawnMowers@LevelModules)", "RTID(NewWaves@CurrentLevel)", "RTID(DefaultZombieWinCondition@LevelModules)", "RTID(SeedBank@CurrentLevel)", "RTID(Gravestones@CurrentLevel)", "RTID(ZombiesDeadWinCon@LevelModules)", "RTID(FrozenPlantPlacement@CurrentLevel)" ],
+				"Name": "[PREMIUM_PLANT_QUEST_LOD_NAME]",
+				"NormalPresentTable": "egypt_normal_01",
+				"RepeatPlayForceToWorldMap": true,
+				"ShinyPresentTable": "egypt_shiny_01",
+				"StageModule": "RTID(FrontLawnStage@LevelModules)",
+				"StartingSun": 350,
+				"SuppressPlantfoodPurchase": true
+			}
+		}, {
+			"aliases": [ "FrozenPlantPlacement" ],
+			"objclass": "InitialPlantProperties",
+			"objdata": {
+				"InitialPlantPlacements": [ {
+						"Condition": "icecubed",
+						"GridX": 0,
+						"GridY": 2,
+						"Level": "-1",
+						"TypeName": "levitater"
+					} ]
+			}
+		}, {
+			"aliases": [ "SeedBank" ],
+			"objclass": "SeedBankProperties",
+			"objdata": {
+				"PresetPlantList": [ {
+						"Level": -1,
+						"PlantType": "levitater"
+					}, {
+						"Level": -1,
+						"PlantType": "enchantmint"
+					} ],
+				"SelectionMethod": "chooser"
+			}
+		}, {
+			"aliases": [ "NewWaves" ],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {}
+		}, {
+			"aliases": [ "LevelEscalationModule" ],
+			"objclass": "LevelEscalationModuleProperties",
+			"objdata": {
+				"FlagCount": 1,
+				"PlantfoodToSpawnCount": 0,
+				"PointIncrementPerWave": 50,
+				"StartingPoints": 25,
+				"WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)",
+				"WavesPerFlag": 9,
+				"ZombiePool": [ "RTID(cowboy@ZombieTypes)", "RTID(cowboy_armor1@ZombieTypes)", "RTID(cowboy_armor2@ZombieTypes)" ]
+			}
+		}, {
+			"aliases": [ "Gravestones" ],
+			"objclass": "GravestoneProperties",
+			"objdata": {
+				"ForceSpawnData": [ {
+						"GridX": 0,
+						"GridY": 0
+					}, {
+						"GridX": 8,
+						"GridY": 0
+					}, {
+						"GridX": 3,
+						"GridY": 0
+					}, {
+						"GridX": 4,
+						"GridY": 0
+					}, {
+						"GridX": 6,
+						"GridY": 0
+					}, {
+						"GridX": 0,
+						"GridY": 1
+					}, {
+						"GridX": 8,
+						"GridY": 1
+					}, {
+						"GridX": 3,
+						"GridY": 1
+					}, {
+						"GridX": 6,
+						"GridY": 1
+					}, {
+						"GridX": 8,
+						"GridY": 2
+					}, {
+						"GridX": 3,
+						"GridY": 2
+					}, {
+						"GridX": 4,
+						"GridY": 2
+					}, {
+						"GridX": 6,
+						"GridY": 2
+					}, {
+						"GridX": 0,
+						"GridY": 3
+					}, {
+						"GridX": 8,
+						"GridY": 3
+					}, {
+						"GridX": 3,
+						"GridY": 3
+					}, {
+						"GridX": 6,
+						"GridY": 3
+					}, {
+						"GridX": 7,
+						"GridY": 4
+					}, {
+						"GridX": 0,
+						"GridY": 4
+					}, {
+						"GridX": 1,
+						"GridY": 4
+					}, {
+						"GridX": 3,
+						"GridY": 4
+					}, {
+						"GridX": 4,
+						"GridY": 4
+					} ]
+			}
+		}, {
+			"aliases": [ "WaveManagerProps" ],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"FlagWaveInterval": 9,
+				"MaxNextWaveHealthPercentage": 0.9,
+				"MinNextWaveHealthPercentage": 0.8,
+				"WaveCount": 9,
+				"Waves": [ [ "RTID(Wave1@CurrentLevel)" ], [ "RTID(Wave2@CurrentLevel)" ], [ "RTID(Wave3@CurrentLevel)" ], [ "RTID(Wave4@CurrentLevel)" ], [ "RTID(Wave5@CurrentLevel)" ], [ "RTID(Wave6@CurrentLevel)" ], [ "RTID(Wave7@CurrentLevel)" ], [ "RTID(Wave8@CurrentLevel)" ], [ "RTID(Wave9@CurrentLevel)" ] ]
+			}
+		}, {
+			"aliases": [ "Wave1" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(cowboy@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave2" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Type": "RTID(cowboy@ZombieTypes)"
+					}, {
+						"Type": "RTID(west_bull@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave3" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Type": "RTID(cowboy@ZombieTypes)"
+					}, {
+						"Type": "RTID(cowboy_gargantuar@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave4" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Type": "RTID(west_bull@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave5" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Type": "RTID(cowboy_gargantuar@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave6" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Type": "RTID(west_bull@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave7" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Type": "RTID(cowboy_gargantuar@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave8" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 2,
+				"Zombies": [ {
+						"Type": "RTID(west_bull@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave9" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Type": "RTID(cowboy_gargantuar@ZombieTypes)"
+					}, {
+						"Type": "RTID(cowboy_gargantuar@ZombieTypes)"
+					} ]
+			}
+		} ],
+	"version": 1
+}

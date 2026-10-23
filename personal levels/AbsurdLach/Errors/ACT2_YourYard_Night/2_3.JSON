@@ -1,0 +1,684 @@
+{
+  "#comment": "2009_1",
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "<PLAYERNAME>'s Frontyard",
+        "LevelNumber": 3,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(StandardIntro@LevelModules)",
+          "RTID(ModPlantsNight@CurrentLevel)",
+          "RTID(ModernMowers@LevelModules)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(Gravestones@CurrentLevel)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(Camera@CurrentLevel)",
+          "RTID(NewWaves@CurrentLevel)"
+        ],
+        "Name": "The Errors ACT2-Night<LEVELNUMBER>",
+        "WrittenBy": "莱池_余垛",
+        "StageModule": "RTID(FrontLawnStage@LevelModules)"
+      }
+    },
+    {
+      "aliases": [
+        "Camera"
+      ],
+      "objclass": "LawnCameraProps",
+      "objdata": {
+        "MaterialProps": {
+          "//": "Better delete this property if not used",
+          "MultColor": {
+            "r": 75,
+            "g": 100,
+            "b": 150
+          },
+          "AddColor": {
+            "r": -10,
+            "g": -5,
+            "b": 5
+          },
+          "Chill": 0,
+          "Gold": 0.2,
+          "Saturation": 0
+        },
+        "DontClear": false,
+        "//": "Dont change it yet.",
+        "OrthoHeight": 320,
+        "Offset": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "aliases": [
+        "Gravestones"
+      ],
+      "objclass": "GravestoneProperties",
+      "objdata": {
+        "GravestoneCount": 7,
+        "SpawnColumnEnd": 8,
+        "SpawnColumnStart": 6
+      }
+    },
+    {
+      "aliases": [
+        "ModPlantsNight"
+      ],
+      "objclass": "PlantModifierProperties",
+      "objdata": {
+        "HidePlantfood": true,
+        "SuppressParticle": true,
+        "List": [
+          {
+            "Type": "sunshroom",
+            "NewObjdata": {
+              "SunValueList": [
+                25,
+                50,
+                75
+              ],
+              "ProduceCountdownStart": 5,
+              "ProduceCountdownStartAdditional": 1
+            }
+          },
+          {
+            "Type": "snowpea",
+            "NewObjdata": {
+              "ChanceToFreeze": 0
+            }
+          },
+          {
+            "Type": "chomper",
+            "NewObjdata": {
+              "ChewTimePerZombie": 34,
+              "MaxContainZombieCount": 1
+            }
+          },
+          {
+            "Type": "scaredyshroom",
+            "NewObjdata": {
+              "KnockbackChance": 0
+            }
+          },
+          {
+            "Type": "doomshroom",
+            "NewObjdata": {
+              "SunCost": 125
+            }
+          },
+          {
+            "Type": "torchwood",
+            "NewObjdata": {
+              "Toughness": 300,
+              "DeathDamage": 50,
+              "Damage": 1,
+              "DeathFireDuration": 1,
+              "PlantfoodDuration": 1
+            }
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "UnlockAll": true,
+        "OverrideSeedSlotsCount": 5,
+        "PlantIncludeList": [
+          "peashooter",
+          "sunflower",
+          "wallnut",
+          "cherry_bomb",
+          "potatomine",
+          "snowpea",
+          "chomper",
+          "lilypad",
+          "tanglekelp",
+          "repeater",
+          "puffshroom",
+          "sunshroom",
+          "cabbagepult"
+        ],
+        "SelectionMethod": "chooser"
+      }
+    },
+    {
+      "aliases": [
+        "error_tutorial_imp"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(error_tutorial_imp@CurrentLevel)",
+        "ZombieBasedOn": "tutorial_imp"
+      }
+    },
+    {
+      "aliases": [
+        "error_tutorial_imp"
+      ],
+      "objclass": "ZombieProperties",
+      "objdata": {
+        "ZombieSort": "Normal",
+        "CannotBeTossedByCitron": false,
+        "IgnoredInWaves": false,
+        "WalkSPS": 0.3,
+        "EatDPS": 200,
+        "Toughness": 50,
+        "StartingArmors": [
+          "modern_armor1"
+        ],
+        "WavePointCost": 200,
+        "Weight": 3000,
+        "HitRect": "RTID(ImpHitRect@RectangleProps)",
+        "AttackRect": "RTID(ImpAttackRect@RectangleProps)"
+      }
+    },
+    {
+      "aliases": [
+        "error_tutorial_imp_armor2"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(error_tutorial_imp_armor2@CurrentLevel)",
+        "ZombieBasedOn": "tutorial_imp"
+      }
+    },
+    {
+      "aliases": [
+        "error_tutorial_imp_armor2"
+      ],
+      "objclass": "ZombieProperties",
+      "objdata": {
+        "ZombieSort": "Normal",
+        "CannotBeTossedByCitron": false,
+        "IgnoredInWaves": false,
+        "WalkSPS": 0.3,
+        "EatDPS": 200,
+        "Toughness": 50,
+        "StartingArmors": [
+          "modern_armor2"
+        ],
+        "WavePointCost": 400,
+        "Weight": 4000,
+        "HitRect": "RTID(ImpHitRect@RectangleProps)",
+        "AttackRect": "RTID(ImpAttackRect@RectangleProps)"
+      }
+    },
+    {
+      "aliases": [
+        "error_tutorial_imp_armor4"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(error_tutorial_imp_armor4@CurrentLevel)",
+        "ZombieBasedOn": "tutorial_imp"
+      }
+    },
+    {
+      "aliases": [
+        "error_tutorial_imp_armor4"
+      ],
+      "objclass": "ZombieProperties",
+      "objdata": {
+        "ZombieSort": "Normal",
+        "CannotBeTossedByCitron": false,
+        "IgnoredInWaves": false,
+        "WalkSPS": 0.3,
+        "EatDPS": 200,
+        "Toughness": 50,
+        "StartingArmors": [
+          "modern_armor4"
+        ],
+        "WavePointCost": 700,
+        "Weight": 4000,
+        "HitRect": "RTID(ImpHitRect@RectangleProps)",
+        "AttackRect": "RTID(ImpAttackRect@RectangleProps)"
+      }
+    },
+    {
+      "aliases": [
+        "base_gargantuar"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(tutorial_gargantuar@ZombieTypes)",
+        "ZombieBasedOn": "tutorial_gargantuar"
+      }
+    },
+    {
+      "aliases": [
+        "base_gargantuar"
+      ],
+      "objclass": "ZombieProperties",
+      "objdata": {
+        "LivesInDeepWater": false,
+        "ZombieSort": "Gargantuar",
+        "CannotBeDraggedByTangleKelp": true,
+        "CannotBeTossedByCitron": true,
+        "CannotBeSwallowedByChomper": true,
+        "CannotCarryPlantfoodsInWaves": true,
+        "SmashDamage": 1500,
+        "WalkSPS": 0.24,
+        "EatDPS": 100,
+        "Toughness": 3600,
+        "NormalDeathWhenMowed": true,
+        "WavePointCost": 1500,
+        "Weight": 3000,
+        "HitRect": "RTID(GargantuarHitRect@RectangleProps)",
+        "AttackRect": "RTID(GargantuarAttackRect@RectangleProps)"
+      }
+    },
+    {
+      "aliases": [
+        "error_newspaper"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(newspaper@CurrentLevel)",
+        "ZombieBasedOn": "modern_newspaper"
+      }
+    },
+    {
+      "aliases": [
+        "newspaper"
+      ],
+      "objclass": "ZombieProperties",
+      "objdata": {
+        "ChooseToSpawnOnDeepWaterRows": false,
+        "CannotBeTossedByCitron": false,
+        "WalkSPS": 0.22,
+        "EatDPS": 100,
+        "Toughness": 190,
+        "EnragedDamageScale": 2,
+        "EnragedSpeedScale": 2,
+        "NewspaperHealth": 300,
+        "WavePointCost": 700,
+        "Weight": 4000,
+        "HitRect": "RTID(CommonHitRect@RectangleProps)",
+        "AttackRect": "RTID(CommonAttackRect@RectangleProps)"
+      }
+    },
+    {
+      "aliases": [
+        "error_excavator_armor1"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(excavator@CurrentLevel)",
+        "ZombieBasedOn": "lostcity_excavator"
+      }
+    },
+    {
+      "aliases": [
+        "excavator"
+      ],
+      "objclass": "ZombieProperties",
+      "objdata": {
+        "CannotBeTossedByCitron": false,
+        "ShovelDamage": 150,
+        "WalkSPS": 0.185,
+        "EatDPS": 100,
+        "Toughness": 40,
+        "StartingArmors": [
+          "modern_armor1"
+        ],
+        "WavePointCost": 300,
+        "Weight": 3000,
+        "HitRect": "RTID(CommonHitRect@RectangleProps)",
+        "AttackRect": "RTID(CommonHitRect@RectangleProps)",
+        "HitRectWithShovel": "RTID(LostcityExcavatorWithShovelHitRect@RectangleProps)",
+        "AttackRectWithShovel": "RTID(LostcityExcavatorWithShovelAttackRect@RectangleProps)"
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 6,
+        "WaveCount": 18,
+        "WaveSpendingPointIncrement": 50,
+        "WaveSpendingPoints": 100,
+        "Waves": [
+          [
+            "RTID(Wave1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)",
+            "RTID(Wave6Spown@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave11@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave12@CurrentLevel)",
+            "RTID(Wave6Spown@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(error_excavator_armor1@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(error_newspapper@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(error_excavator_armor1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_tutorial_imp_armor2@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_newspaper@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_newspaper@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave7"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(error_newspapper@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_tutorial_imp@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave8"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(error_tutorial_imp_armor2@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_newspapper@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_excavator_armor1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave9"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(error_excavator_armor1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave10"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(error_newspaper@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_excavator_armor1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave11"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(error_tutorial_imp_armor4@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(error_excavator_armor1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave12"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(error_tutorial_imp_armor2@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_newspaper@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(tutorial_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(error_excavator_armor1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6Spown"
+      ],
+      "objclass": "SpawnZombiesFromGridItemSpawnerProps",
+      "objdata": {
+        "AdditionalPlantfood": "0",
+        "GridTypes": [
+          "RTID(gravestone@GridItemTypes)"
+        ],
+        "WaveStartMessage": "",
+        "ZombieSpawnWaitTime": "1",
+        "Zombies": [
+          {
+            "Type": "RTID(error_tutorial_imp_armor2@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_tutorial_imp@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(error_newspapper@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(error_newspapper@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_armor2@ZombieTypes)"
+          }
+        ]
+      }
+    }
+  ],
+  "version": 1
+}

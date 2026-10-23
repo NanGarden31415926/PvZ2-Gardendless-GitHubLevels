@@ -1,0 +1,428 @@
+{
+    "#comment": "bowling",
+    "objects": [
+        {
+            "objclass": "LevelDefinition",
+            "objdata": {
+                "DescriptionMultiLanguage": {
+                    "en": "This Is Description",
+                    "zh": "介四描述"
+                },
+                "ForceToWorldMap": true,
+                "GameOverDialogShowBrain": false,
+                "Loot": "RTID(DefaultLoot@LevelModules)",
+                "Modules": [
+                    "RTID(StandardIntro@LevelModules)",
+                    "RTID(DefaultSunDropper@LevelModules)",
+                    "RTID(ZombiesDeadWinCon@LevelModules)",
+                    "RTID(SeedBank@CurrentLevel)",
+                    "RTID(ChallengeModule@CurrentLevel)",
+                    "RTID(ModPlants@CurrentLevel)",
+                    "RTID(PiratePlanks@CurrentLevel)",
+                    "RTID(DefaultZombieWinCondition@LevelModules)",
+                    "RTID(LevelEscalationModule@CurrentLevel)"
+                ],
+                "NameMultiLanguage": {
+                    "en": "bowling",
+                    "zh": "保龄"
+                },
+                "WrittenBy": "莱池_余垛",
+                "StageModule": "RTID(PirateStage@LevelModules)"
+            }
+        },
+        {
+            "aliases": [
+                "PiratePlanks"
+            ],
+            "objclass": "PiratePlankProperties",
+            "objdata": {
+                "PlankRows": [
+                    1,
+                    2,
+                    3
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "bowling_primal_wallnut_0"
+            ],
+            "objclass": "ProjectileType",
+            "objdata": {
+                "ProjectileBasedOn": "bowling_primal_wallnut",
+                "Props": "RTID(bowling_primal_wallnut_0@CurrentLevel)"
+            }
+        },
+        {
+            "aliases": [
+                "bowling_primal_wallnut_0"
+            ],
+            "objclass": "ProjectileProperties",
+            "objdata": {
+                "Damage": 300,
+                "Size": {
+                    "w": 50,
+                    "h": 50
+                },
+                "KnockbackDistance": 1,
+                "ShakesScreenOnImpact": false,
+                "CannotBeReversedByJester": true
+            }
+        },
+        {
+            "aliases": [
+                "bowling_infinut_0"
+            ],
+            "objclass": "ProjectileType",
+            "objdata": {
+                "ProjectileBasedOn": "bowling_infinut",
+                "Props": "RTID(bowling_infinut_0@CurrentLevel)"
+            }
+        },
+        {
+            "aliases": [
+                "bowling_infinut_0"
+            ],
+            "objclass": "ProjectileProperties",
+            "objdata": {
+                "Damage": 300,
+                "Size": {
+                    "w": 50,
+                    "h": 50
+                },
+                "ShakesScreenOnImpact": false,
+                "CannotBeReversedByJester": true
+            }
+        },
+        {
+            "aliases": [
+                "bowling2_0"
+            ],
+            "objclass": "ProjectileType",
+            "objdata": {
+                "ProjectileBasedOn": "bowling2",
+                "Props": "RTID(bowling2_0@CurrentLevel)"
+            }
+        },
+        {
+            "aliases": [
+                "bowling2_0"
+            ],
+            "objclass": "ProjectileProperties",
+            "objdata": {
+                "Damage": 150,
+                "Size": {
+                    "w": 30,
+                    "h": 30
+                }
+            }
+        },
+        {
+            "aliases": [
+                "bowling_wallnut_0"
+            ],
+            "objclass": "ProjectileType",
+            "objdata": {
+                "ProjectileBasedOn": "bowling_wallnut",
+                "Props": "RTID(bowling_wallnut_0@CurrentLevel)"
+            }
+        },
+        {
+            "aliases": [
+                "bowling_wallnut_0"
+            ],
+            "objclass": "ProjectileProperties",
+            "objdata": {
+                "Damage": 300,
+                "Size": {
+                    "w": 50,
+                    "h": 50
+                },
+                "ShakesScreenOnImpact": false,
+                "CannotBeReversedByJester": true
+            }
+        },
+        {
+            "aliases": [
+                "ModPlants"
+            ],
+            "objclass": "PlantModifierProperties",
+            "objdata": {
+                "HidePlantfood": true,
+                "SuppressParticle": true,
+                "List": [
+                    {
+                        "Type": "tool_projectile_bowling_wallnut",
+                        "NewObjdata": {
+                            "Cooldown": 10,
+                            "CooldownFrom": 1,
+                            "SunCost": 100,
+                            "BeghouledCost": 1000,
+                            "Toughness": 1,
+                            "Family": "Nope",
+                            "StartingHeight": 0,
+                            "SpeedX": 4,
+                            "ProjectileType": "bowling_wallnut_0",
+                            "ImmuneToIceblock": true
+                        }
+                    },
+                    {
+                        "Type": "tool_projectile_bowlingbulb3",
+                        "NewObjdata": {
+                            "Cooldown": 5,
+                            "CooldownFrom": 1,
+                            "SunCost": 75,
+                            "BeghouledCost": 1000,
+                            "Toughness": 1,
+                            "Family": "Nope",
+                            "ProjectileType": "bowling2_0",
+                            "StartingHeight": 30,
+                            "ImmuneToIceblock": true
+                        }
+                    },
+                    {
+                        "Type": "tool_projectile_bowling_holonut",
+                        "NewObjdata": {
+                            "Cooldown": 20,
+                            "CooldownFrom": 1,
+                            "SunCost": 150,
+                            "BeghouledCost": 1000,
+                            "Toughness": 1,
+                            "Family": "Nope",
+                            "StartingHeight": 0,
+                            "SpeedX": 4,
+                            "ProjectileType": "bowling_infinut_0",
+                            "ImmuneToIceblock": true
+                        }
+                    },
+                    {
+                        "Type": "tool_projectile_bowling_explodeonut",
+                        "NewObjdata": {
+                            "Cooldown": 35,
+                            "CooldownFrom": 1,
+                            "SunCost": 200,
+                            "BeghouledCost": 1000,
+                            "Toughness": 1,
+                            "Family": "Nope",
+                            "StartingHeight": 0,
+                            "SpeedX": 4,
+                            "ProjectileType": "bowling_explode_o_nut",
+                            "ImmuneToIceblock": true
+                        }
+                    },
+                    {
+                        "Type": "tool_projectile_bowling_primalwallnut",
+                        "NewObjdata": {
+                            "Cooldown": 20,
+                            "CooldownFrom": 1,
+                            "SunCost": 150,
+                            "BeghouledCost": 1000,
+                            "Toughness": 1,
+                            "Family": "Nope",
+                            "StartingHeight": 0,
+                            "SpeedX": 4,
+                            "ProjectileType": "bowling_primal_wallnut_0",
+                            "ImmuneToIceblock": true
+                        }
+                    },
+                    {
+                        "Type": "tool_projectile_bowling_tallnut",
+                        "NewObjdata": {
+                            "Cooldown": 60,
+                            "CooldownFrom": 1,
+                            "SunCost": 200,
+                            "BeghouledCost": 1000,
+                            "Toughness": 1,
+                            "Family": "Nope",
+                            "StartingHeight": 0,
+                            "SpeedX": 3.5,
+                            "ProjectileType": "bowling_tallnut",
+                            "ImmuneToIceblock": true
+                        }
+                    },
+                    {
+                        "Type": "tool_projectile_bowlingbulb_iceburg",
+                        "NewObjdata": {
+                            "Cooldown": 20,
+                            "CooldownFrom": 1,
+                            "SunCost": 25,
+                            "BeghouledCost": 1000,
+                            "Toughness": 1,
+                            "ProjectileType": "bowling_iceberg",
+                            "Family": "Nope",
+                            "StartingHeight": 30,
+                            "ImmuneToIceblock": true
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "SeedBank"
+            ],
+            "objclass": "SeedBankProperties",
+            "objdata": {
+                "PresetPlantList": [
+                    {
+                        "Level": -1,
+                        "PlantType": "sunflower"
+                    },
+                    {
+                        "Level": -1,
+                        "PlantType": "tool_projectile_bowling_wallnut"
+                    },
+                    {
+                        "Level": -1,
+                        "PlantType": "tool_projectile_bowling_explodeonut"
+                    },
+                    {
+                        "Level": -1,
+                        "PlantType": "tool_projectile_bowling_holonut"
+                    },
+                    {
+                        "Level": -1,
+                        "PlantType": "tool_projectile_bowling_primalwallnut"
+                    },
+                    {
+                        "Level": -1,
+                        "PlantType": "tool_projectile_bowlingbulb_iceburg"
+                    },
+                    {
+                        "Level": -1,
+                        "PlantType": "tool_projectile_bowling_tallnut"
+                    },
+                    {
+                        "Level": -1,
+                        "PlantType": "tool_projectile_bowlingbulb3"
+                    }
+                ],
+                "SelectionMethod": "preset"
+            }
+        },
+        {
+            "aliases": [
+                "ChallengeModule"
+            ],
+            "objclass": "StarChallengeModuleProperties",
+            "objdata": {
+                "Challenges": [
+                    [
+                        "RTID(BeatTheLevel@CurrentLevel)"
+                    ]
+                ],
+                "ChallengesAlwaysAvailable": true
+            }
+        },
+        {
+            "aliases": [
+                "BeatTheLevel"
+            ],
+            "objclass": "StarChallengeBeatTheLevelProps",
+            "objdata": {
+                "DescriptionsMultilanguage": [
+                    {
+                        "en": "bowling",
+                        "zh": "保龄球"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "LevelEscalationModule"
+            ],
+            "objclass": "LevelEscalationModuleProperties",
+            "objdata": {
+                "PlantfoodToSpawnCount": 0,
+                "PointIncrementPerWave": 300,
+                "StartingPoints": 400,
+                "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)",
+                "ZombiePool": [
+                    "RTID(tutorial@ZombieTypes)",
+                    "RTID(tutorial_armor1@ZombieTypes)",
+                    "RTID(tutorial_armor2@ZombieTypes)",
+                    "RTID(seagull@ZombieTypes)",
+                    "RTID(pelican@ZombieTypes)",
+                    "RTID(tutorial_gargantuar@ZombieTypes)"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "NewWaves"
+            ],
+            "objclass": "WaveManagerModuleProperties",
+            "objdata": {}
+        },
+        {
+            "aliases": [
+                "WaveManagerProps"
+            ],
+            "objclass": "WaveManagerProperties",
+            "objdata": {
+                "FlagWaveInterval": 6,
+                "WaveCount": 18,
+                "WaveSpendingPointIncrement": 100,
+                "WaveSpendingPoints": 100,
+                "Waves": [
+                    [
+                        "RTID(Wave1@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave2@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave3@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave4@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave5@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave6@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave7@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave8@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave9@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave10@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave11@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave12@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave13@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave14@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave15@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave16@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave17@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave18@CurrentLevel)"
+                    ]
+                ]
+            }
+        }
+    ],
+    "version": 1
+}

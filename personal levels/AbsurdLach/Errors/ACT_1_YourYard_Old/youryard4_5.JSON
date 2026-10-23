@@ -1,0 +1,232 @@
+{
+  "#comment": "2009_8",
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "2009-3",
+        "LevelNumber": 1,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(ModPlantsNight@CurrentLevel)",
+          "RTID(ModernMowers@LevelModules)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(ZombossBattle@CurrentLevel)",
+          "RTID(NewWaves@CurrentLevel)"
+        ],
+        "Name": "<PLAYERNAME>'s Backyard-Night5",
+        "WrittenBy": "莱池_余垛",
+        "NormalPresentTable": "future_normal_01",
+        "ShinyPresentTable": "future_shiny_01",
+        "StartingSun": 500,
+        "VictoryModule": "RTID(ZombossVictoryOutro@LevelModules)",
+        "StageModule": "RTID(EightiesTutorialStage@LevelModules)"
+      }
+    },
+    {
+      "aliases": [
+        "ModPlantsNight"
+      ],
+      "objclass": "PlantModifierProperties",
+      "objdata": {
+        "HidePlantfood": true,
+        "SuppressParticle": true,
+        "List": [
+          {
+            "Type": "sunflower",
+            "NewObjdata": {
+              "SunValue": 25,
+              "PlantfoodTime": 6,
+              "ProduceInterval": 23.5,
+              "ProduceIntervalAdditional": 1.5
+            }
+          },
+          {
+            "Type": "twinsunflower",
+            "NewObjdata": {
+              "SunValue": 50,
+              "PlantfoodTime": 6,
+              "ProduceInterval": 23.5,
+              "ProduceIntervalAdditional": 1.5
+            }
+          },
+          {
+            "Type": "sunshroom",
+            "NewObjdata": {
+              "SunValueList": [
+                5,
+                15,
+                25
+              ],
+              "PlantfoodTime": 9,
+              "GrowTime0_1": 0,
+              "GrowTime1_2": 59,
+              "ProduceCountdownStart": 5,
+              "ProduceCountdownStartAdditional": 1
+            }
+          },
+          {
+            "Type": "snowpea",
+            "NewObjdata": {
+              "ChanceToFreeze": 0
+            }
+          },
+          {
+            "Type": "chomper",
+            "NewObjdata": {
+              "MaxContainZombieCount": 1
+            }
+          },
+          {
+            "Type": "puffshroom",
+            "NewObjdata": {
+              "LifeSpan": 240
+            }
+          },
+          {
+            "Type": "scaredyshroom",
+            "NewObjdata": {
+              "KnockbackChance": 0
+            }
+          },
+          {
+            "Type": "doomshroom",
+            "NewObjdata": {
+              "SunCost": 125
+            }
+          },
+          {
+            "Type": "gloomshroom",
+            "NewObjdata": {
+              "DPSPlantfood": 500
+            }
+          },
+          {
+            "Type": "moonflower",
+            "NewObjdata": {
+              "SunValueList": [
+                25,
+                25,
+                25,
+                50
+              ],
+              "ProduceCountdownStart": 15,
+              "ProduceCountdownStartAdditional": 10
+            }
+          },
+          {
+            "Type": "torchwood",
+            "NewObjdata": {
+              "Toughness": 300,
+              "DeathDamage": 50,
+              "Damage": 1,
+              "DeathFireDuration": 1,
+              "PlantfoodDuration": 1
+            }
+          },
+          {
+            "Type": "cactus",
+            "NewObjdata": {
+              "PierceCount": 2,
+              "PierceCountAdditional": 2
+            }
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "SunDropper"
+      ],
+      "objclass": "SunDropperProperties",
+      "objdata": {
+        "InitialSunDropDelay": 5,
+        "SunCountdownBase": 5,
+        "SunCountdownIncreasePerSun": 1,
+        "SunCountdownMax": 9.5,
+        "SunCountdownRange": 0.5,
+        "Value": 25
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "UnlockAll": true,
+        "OverrideSeedSlotsCount": 8,
+        "PlantExcludeList": [
+          "marigold_yellow",
+          "marigold_green"
+        ],
+        "PlantIncludeList": [
+          "peashooter",
+          "sunflower",
+          "wallnut",
+          "potatomine",
+          "marigold_yellow",
+          "cherry_bomb",
+          "snowpea",
+          "chomper",
+          "repeater",
+          "marigold_green",
+          "puffshroom",
+          "sunshroom",
+          "fumeshroom",
+          "hypnoshroom",
+          "gravebuster",
+          "lilypad",
+          "tanglekelp",
+          "squash",
+          "jalapeno",
+          "torchwood",
+          "starfruit",
+          "magnetshroom",
+          "blover",
+          "pumpkin",
+          "cactus"
+        ],
+        "SelectionMethod": "chooser"
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [],
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "ZombossBattle"
+      ],
+      "objclass": "ZombossBattleModuleProperties",
+      "objdata": {
+        "ReservedColumnCount": 2,
+        "ZombossMechType": "zombossmech_future",
+        "ZombossDeathRow": 3,
+        "ZombossDeathColumn": 5,
+        "ZombossSpawnGridPosition": {
+          "mX": 6,
+          "mY": 3
+        }
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "Waves": []
+      }
+    }
+  ],
+  "version": 1
+}

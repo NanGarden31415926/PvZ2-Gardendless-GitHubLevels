@@ -1,0 +1,722 @@
+{
+    "#comment": "我们的防线如雪花般消逝",
+    "objects": [
+        {
+            "objclass": "LevelDefinition",
+            "objdata": {
+                "DescriptionMultiLanguage": {
+                    "en": "This Is Description",
+                    "zh": "介四描述"
+                },
+                "ForceToWorldMap": true,
+                "GameOverDialogShowBrain": false,
+                "Loot": "RTID(DefaultLoot@LevelModules)",
+                "Modules": [
+                    "RTID(StandardIntro@LevelModules)",
+                    "RTID(DefaultSunDropper@LevelModules)",
+                    "RTID(ZombiesDeadWinCon@LevelModules)",
+                    "RTID(SeedBank@CurrentLevel)",
+                    "RTID(ChallengeModule@CurrentLevel)",
+                    "RTID(ModPlants@CurrentLevel)",
+                    "RTID(DefaultZombieWinCondition@LevelModules)",
+                    "RTID(LevelEscalationModule@CurrentLevel)"
+                ],
+                "NameMultiLanguage": {
+                    "en": "FIRE!!",
+                    "zh": "开火！！"
+                },
+                "WrittenBy": "莱池_余垛",
+                "StageModule": "RTID(ModernStage@LevelModules)"
+            }
+        },
+        {
+            "aliases": [
+                "projectile2"
+            ],
+            "objclass": "ProjectileType",
+            "objdata": {
+                "ProjectileRedirection": [
+                    {
+                        "Type": "melon",
+                        "Weight": 3
+                    },
+                    {
+                        "Type": "pepper",
+                        "Weight": 7
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "chi"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(chi@CurrentLevel)",
+                "ZombieBasedOn": "abbot_chi"
+            }
+        },
+        {
+            "aliases": [
+                "chi"
+            ],
+            "objclass": "ZombieProperties",
+            "objdata": {
+                "CannotBeGrabbedByPtero": true,
+                "CannotBeTossedByCitron": false,
+                "PlantablePlants": [
+                    "solarsage",
+                    "cherry_bomb"
+                ],
+                "StartingArmors": [
+                    "kongfu_armor2"
+                ],
+                "CannotCarryPlantfoodsInWaves": true,
+                "WalkSPS": 0.185,
+                "EatDPS": 100,
+                "TimeBeforeFirst": 24,
+                "TimeBetween": 24,
+                "Toughness": 1100,
+                "ImmuneToGarlic": true,
+                "WavePointCost": 700,
+                "Weight": 2500,
+                "ChiType": "projectile5",
+                "HitRect": "RTID(CommonHitRect@RectangleProps)",
+                "AttackRect": "RTID(CommonAttackRect@RectangleProps)"
+            }
+        },
+        {
+            "aliases": [
+                "octopus"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(octopus@CurrentLevel)",
+                "ZombieBasedOn": "beach_octopus"
+            }
+        },
+        {
+            "aliases": [
+                "octopus"
+            ],
+            "objclass": "ZombieProperties",
+            "objdata": {
+                "OctopusType": "projectile4",
+                "CannotBeTossedByCitron": false,
+                "TimeBeforeFirst": 3,
+                "TimeBeforeFirstAdditional": 1,
+                "TimeBetween": 5,
+                "StartingArmors": [
+                    "beach_armor2"
+                ],
+                "TimeBetweenAdditional": 1,
+                "LivesInDeepWater": true,
+                "WalkSPS": 0.12,
+                "EatDPS": 100,
+                "Toughness": 910,
+                "WavePointCost": 600,
+                "Weight": 2000,
+                "HitRect": "RTID(BullyHitRect@RectangleProps)",
+                "AttackRect": "RTID(BullyAttackRect@RectangleProps)"
+            }
+        },
+        {
+            "aliases": [
+                "hunter"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(hunter@CurrentLevel)",
+                "ZombieBasedOn": "iceage_hunter"
+            }
+        },
+        {
+            "aliases": [
+                "hunter"
+            ],
+            "objclass": "ZombieProperties",
+            "objdata": {
+                "CannotBeTossedByCitron": false,
+                "ChillInsteadOfFreeze": true,
+                "WalkSPS": 0.12,
+                "EatDPS": 100,
+                "Toughness": 190,
+                "StartingArmors": [
+                    "iceage_armor2"
+                ],
+                "FarAttackRange": 6,
+                "SnowballsPerBarrage": 8,
+                "WavePointCost": 300,
+                "Weight": 1500,
+                "SnowballType": "projectile2",
+                "HitRect": "RTID(CommonHitRect@RectangleProps)",
+                "AttackRect": "RTID(CommonAttackRect@RectangleProps)"
+            }
+        },
+        {
+            "aliases": [
+                "projectile0"
+            ],
+            "objclass": "ProjectileType",
+            "objdata": {
+                "ProjectileRedirection": [
+                    {
+                        "Type": "pea_flame_yellow",
+                        "Weight": 9
+                    },
+                    {
+                        "Type": "projectile1",
+                        "Weight": 1
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "projectile1"
+            ],
+            "objclass": "ProjectileType",
+            "objdata": {
+                "ProjectileBasedOn": "pea_sky",
+                "Props": "RTID(projectile1@CurrentLevel)"
+            }
+        },
+        {
+            "aliases": [
+                "projectile1"
+            ],
+            "objclass": "ProjectileProperties",
+            "objdata": {
+                "Damage": 60,
+                "StunDuration": 2,
+                "KnockbackDistance": 0.25,
+                "Size": {
+                    "w": 16,
+                    "h": 16
+                }
+            }
+        },
+        {
+            "aliases": [
+                "projectile3"
+            ],
+            "objclass": "ProjectileType",
+            "objdata": {
+                "ProjectileBasedOn": "meteor",
+                "Props": "RTID(projectile3@CurrentLevel)"
+            }
+        },
+        {
+            "aliases": [
+                "projectile3"
+            ],
+            "objclass": "ProjectileProperties",
+            "objdata": {
+                "Damage": 40,
+                "SplashDamage": [
+                    {
+                        "Damage": 20,
+                        "Range": {
+                            "w": 3,
+                            "h": 1
+                        }
+                    }
+                ],
+                "TileLiquid": {
+                    "Type": "moltenpool",
+                    "Duration": 3
+                },
+                "SuppressArmorImpactSound": true,
+                "SuppressZombieImpactSound": true,
+                "Size": {
+                    "w": 7,
+                    "h": 7
+                },
+                "DamageType": "fire",
+                "ShakesScreenOnImpact": false,
+                "CannotBeReversedByJester": false,
+                "WarmsOnImpact": true
+            }
+        },
+        {
+            "aliases": [
+                "projectile4"
+            ],
+            "objclass": "ProjectileType",
+            "objdata": {
+                "ProjectileBasedOn": "coconut",
+                "Props": "RTID(projectile4@CurrentLevel)"
+            }
+        },
+        {
+            "aliases": [
+                "projectile4"
+            ],
+            "objclass": "ProjectileProperties",
+            "objdata": {
+                "Damage": 1400,
+                "SplashDamage": [
+                    {
+                        "Damage": 100,
+                        "Range": {
+                            "w": 3,
+                            "h": 3
+                        }
+                    }
+                ],
+                "Size": {
+                    "w": 16,
+                    "h": 16
+                }
+            }
+        },
+        {
+            "aliases": [
+                "projectile5"
+            ],
+            "objclass": "ProjectileType",
+            "objdata": {
+                "ProjectileBasedOn": "abbot_chi",
+                "Props": "RTID(projectile5@CurrentLevel)"
+            }
+        },
+        {
+            "aliases": [
+                "projectile5"
+            ],
+            "objclass": "ProjectileProperties",
+            "objdata": {
+                "Damage": 4000,
+                "SplashDamage": [
+                    {
+                        "Damage": 3000,
+                        "Range": {
+                            "w": 5,
+                            "h": 3
+                        }
+                    }
+                ],
+                "Size": {
+                    "w": 16,
+                    "h": 16
+                },
+                "DamageType": "fire"
+            }
+        },
+        {
+            "aliases": [
+                "projectile6"
+            ],
+            "objclass": "ProjectileType",
+            "objdata": {
+                "ProjectileBasedOn": "banana",
+                "Props": "RTID(projectile6@CurrentLevel)"
+            }
+        },
+        {
+            "aliases": [
+                "projectile6"
+            ],
+            "objclass": "ProjectileProperties",
+            "objdata": {
+                "Damage": 2000,
+                "SplashDamage": [
+                    {
+                        "Damage": 2000,
+                        "Range": {
+                            "w": 1,
+                            "h": 1
+                        }
+                    },
+                    {
+                        "Damage": 600,
+                        "Range": {
+                            "w": 3,
+                            "h": 3
+                        }
+                    }
+                ],
+                "Size": {
+                    "w": 16,
+                    "h": 16
+                }
+            }
+        },
+        {
+            "aliases": [
+                "ModPlants"
+            ],
+            "objclass": "PlantModifierProperties",
+            "objdata": {
+                "HidePlantfood": true,
+                "SuppressParticle": true,
+                "List": [
+                    {
+                        "Type": "umbrellaleaf",
+                        "NewObjdata": {
+                            "Cooldown": 40,
+                            "CooldownFrom": 0.5,
+                            "SunCost": 200,
+                            "BeghouledCost": 1000,
+                            "Toughness": 300,
+                            "Family": "Defence"
+                        }
+                    },
+                    {
+                        "Type": "pepperpult",
+                        "NewObjdata": {
+                            "CabbageType": "projectile3",
+                            "CabbageTypePlantfood": "projectile3",
+                            "ThrowInterval": 3.8,
+                            "ThrowIntervalAdditional": 0.2,
+                            "Cooldown": 20,
+                            "CooldownFrom": 1,
+                            "SunCost": 300,
+                            "BeghouledCost": 2000,
+                            "Toughness": 300,
+                            "Family": "Fire",
+                            "ImmuneToIceblock": true
+                        }
+                    },
+                    {
+                        "Type": "banana",
+                        "NewObjdata": {
+                            "BananaType": "projectile6",
+                            "RestTime": 20,
+                            "Cooldown": 30,
+                            "CooldownFrom": 0.5,
+                            "SunCost": 800,
+                            "BeghouledCost": 2000,
+                            "Toughness": 300,
+                            "Family": "Lobber"
+                        }
+                    },
+                    {
+                        "Type": "repeater",
+                        "NewObjdata": {
+                            "ShootInterval": 1.35,
+                            "ShootIntervalAdditional": 0.15,
+                            "PeaType": "projectile0",
+                            "PeaTypePlantfood": "projectile0",
+                            "PeaTypeMega": "pea_mega",
+                            "PlantfoodPeaCount": 90,
+                            "Cooldown": 15,
+                            "CooldownFrom": 1,
+                            "SunCost": 400,
+                            "BeghouledCost": 2000,
+                            "Toughness": 300,
+                            "Family": "Peashooter"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "SeedBank"
+            ],
+            "objclass": "SeedBankProperties",
+            "objdata": {
+                "PresetPlantList": [
+                    {
+                        "Level": -1,
+                        "PlantType": "sunflower"
+                    },
+                    {
+                        "Level": -1,
+                        "PlantType": "repeater"
+                    },
+                    {
+                        "Level": -1,
+                        "PlantType": "kernelpult"
+                    },
+                    {
+                        "Level": -1,
+                        "PlantType": "pepperpult"
+                    },
+                    {
+                        "Level": -1,
+                        "PlantType": "banana"
+                    },
+                    {
+                        "Level": -1,
+                        "PlantType": "wallnut"
+                    }
+                ],
+                "SelectionMethod": "preset"
+            }
+        },
+        {
+            "aliases": [
+                "ChallengeModule"
+            ],
+            "objclass": "StarChallengeModuleProperties",
+            "objdata": {
+                "Challenges": [
+                    [
+                        "RTID(BeatTheLevel@CurrentLevel)"
+                    ]
+                ],
+                "ChallengesAlwaysAvailable": true
+            }
+        },
+        {
+            "aliases": [
+                "BeatTheLevel"
+            ],
+            "objclass": "StarChallengeBeatTheLevelProps",
+            "objdata": {
+                "DescriptionsMultilanguage": [
+                    {
+                        "en": "This Level Is Demonstration",
+                        "zh": "介是演示"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "LevelEscalationModule"
+            ],
+            "objclass": "LevelEscalationModuleProperties",
+            "objdata": {
+                "PlantfoodToSpawnCount": 4,
+                "PointIncrementPerWave": 200,
+                "StartingPoints": 200,
+                "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)",
+                "ZombiePool": [
+                    "RTID(hunter@CurrentLevel)",
+                    "RTID(octopus@CurrentLevel)",
+                    "RTID(tutorial_gargantuar@ZombieTypes)"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "NewWaves"
+            ],
+            "objclass": "WaveManagerModuleProperties",
+            "objdata": {}
+        },
+        {
+            "aliases": [
+                "WaveManagerProps"
+            ],
+            "objclass": "WaveManagerProperties",
+            "objdata": {
+                "FlagWaveInterval": 4,
+                "WaveCount": 12,
+                "WaveSpendingPointIncrement": 100,
+                "WaveSpendingPoints": 100,
+                "Waves": [
+                    [
+                        "RTID(Wave1@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave2@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave3@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave4@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave5@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave6@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave7@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave8@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave9@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave10@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave11@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave12@CurrentLevel)"
+                    ]
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave1"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "2",
+                        "Type": "RTID(hunter@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave2"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "1",
+                        "Type": "RTID(hunter@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave3"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "4",
+                        "Type": "RTID(hunter@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave4"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "5",
+                        "Type": "RTID(hunter@CurrentLevel)"
+                    },
+                    {
+                        "Row": "3",
+                        "Type": "RTID(octopus@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave5"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "4",
+                        "Type": "RTID(octopus@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave6"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "2",
+                        "Type": "RTID(octopus@CurrentLevel)"
+                    },
+                    {
+                        "Row": "4",
+                        "Type": "RTID(chi@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave7"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "1",
+                        "Type": "RTID(octopus@CurrentLevel)"
+                    },
+                    {
+                        "Row": "4",
+                        "Type": "RTID(octopus@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave8"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "2",
+                        "Type": "RTID(octopus@CurrentLevel)"
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(octopus@CurrentLevel)"
+                    },
+                    {
+                        "Row": "1",
+                        "Type": "RTID(chi@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave10"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "2",
+                        "Type": "RTID(tutorial_gargantuar@ZombieTypes)"
+                    },
+                    {
+                        "Row": "2",
+                        "Type": "RTID(chi@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave12"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "3",
+                        "Type": "RTID(tutorial_gargantuar@ZombieTypes)"
+                    },
+                    {
+                        "Row": "3",
+                        "Type": "RTID(chi@CurrentLevel)"
+                    }
+                ]
+            }
+        }
+    ],
+    "version": 1
+}

@@ -1,0 +1,229 @@
+{
+	"#comment": "Level Of The Day Default",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "[PLAYERS_TRIP_TO_LOD]",
+				"FirstIntroNarrative": "PVINE_EQ",
+				"ForceToWorldMap": true,
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"Modules": [ "RTID(StandardIntro@LevelModules)", "RTID(LevelEscalationModule@CurrentLevel)", "RTID(FrontLawnMowers@LevelModules)", "RTID(NewWaves@CurrentLevel)", "RTID(DefaultZombieWinCondition@LevelModules)", "RTID(Gravestones@CurrentLevel)", "RTID(ConveyorBelt@CurrentLevel)", "RTID(ZombiesDeadWinCon@LevelModules)" ],
+				"Name": "[PREMIUM_PLANT_QUEST_LOD_NAME]",
+				"NormalPresentTable": "egypt_normal_01",
+				"RepeatPlayForceToWorldMap": true,
+				"ShinyPresentTable": "egypt_shiny_01",
+				"StageModule": "RTID(FrontLawnStage@LevelModules)"
+			}
+		}, {
+			"aliases": [ "WaveManagerProps" ],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"MaxNextWaveHealthPercentage": 0.9,
+				"MinNextWaveHealthPercentage": 0.8,
+				"Waves": [ [ "RTID(Wave1@CurrentLevel)", "RTID(Wave1ModConveyor0@CurrentLevel)" ], [ "RTID(Wave2@CurrentLevel)" ], [ "RTID(Wave3@CurrentLevel)" ], [ "RTID(Wave4@CurrentLevel)", "RTID(Wave4ModConveyor0@CurrentLevel)" ], [ "RTID(Wave5@CurrentLevel)" ], [ "RTID(Wave6@CurrentLevel)", "RTID(Wave6ModConveyor0@CurrentLevel)" ], [ "RTID(Wave7@CurrentLevel)" ], [ "RTID(Wave8@CurrentLevel)" ], [ "RTID(Wave9@CurrentLevel)" ] ]
+			}
+		}, {
+			"aliases": [ "Wave1" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Type": "RTID(cowboy@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave2" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Type": "RTID(cowboy@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave3" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Type": "RTID(cowboy@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave4" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Type": "RTID(cowboy@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave5" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Type": "RTID(cowboy@ZombieTypes)"
+					}, {
+						"Type": "RTID(zcorp_fem@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave6" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Type": "RTID(cowboy@ZombieTypes)"
+					}, {
+						"Type": "RTID(zcorp_fem@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave7" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Type": "RTID(zcorp_fem@ZombieTypes)"
+					}, {
+						"Type": "RTID(cowboy@ZombieTypes)"
+					}, {
+						"Type": "RTID(zcorp_consultant@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave8" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Type": "RTID(zcorp_fem@ZombieTypes)"
+					}, {
+						"Type": "RTID(cowboy@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave9" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Type": "RTID(zcorp_fem@ZombieTypes)"
+					}, {
+						"Type": "RTID(cowboy@ZombieTypes)"
+					}, {
+						"Type": "RTID(zcorp_consultant@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Gravestones" ],
+			"objclass": "GravestoneProperties",
+			"objdata": {
+				"ForceSpawnData": [ {
+						"GridX": 6,
+						"GridY": 0
+					}, {
+						"GridX": 7,
+						"GridY": 1
+					}, {
+						"GridX": 6,
+						"GridY": 2
+					}, {
+						"GridX": 8,
+						"GridY": 3
+					}, {
+						"GridX": 6,
+						"GridY": 4
+					}, {
+						"GridX": 5,
+						"GridY": 0
+					}, {
+						"GridX": 5,
+						"GridY": 1
+					}, {
+						"GridX": 5,
+						"GridY": 2
+					}, {
+						"GridX": 5,
+						"GridY": 3
+					}, {
+						"GridX": 5,
+						"GridY": 4
+					} ]
+			}
+		}, {
+			"aliases": [ "LevelEscalationModule" ],
+			"objclass": "LevelEscalationModuleProperties",
+			"objdata": {
+				"FlagCount": 3,
+				"PlantfoodToSpawnCount": 3,
+				"PointIncrementPerWave": 200,
+				"StartingPoints": 200,
+				"WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)",
+				"WavesPerFlag": 3,
+				"ZombiePool": [ "RTID(pirate@ZombieTypes)", "RTID(pirate_armor1@ZombieTypes)", "RTID(pirate_armor2@ZombieTypes)", "RTID(pharaoh@ZombieTypes)" ]
+			}
+		}, {
+			"aliases": [ "NewWaves" ],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {}
+		}, {
+			"aliases": [ "ConveyorBelt" ],
+			"objclass": "ConveyorSeedBankProperties",
+			"objdata": {
+				"DropDelayConditions": [ {
+						"Delay": 3,
+						"MaxPackets": 0
+					}, {
+						"Delay": 6,
+						"MaxPackets": 2
+					}, {
+						"Delay": 9,
+						"MaxPackets": 4
+					}, {
+						"Delay": 12,
+						"MaxPackets": 8
+					} ],
+				"InitialPlantList": [ {
+						"PlantType": "peashooter",
+						"Weight": 100
+					} ],
+				"SpeedConditions": [ {
+						"MaxPackets": 0,
+						"Speed": 100
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave4ModConveyor0" ],
+			"objclass": "ModifyConveyorWaveActionProps",
+			"objdata": {
+				"Add": [ {
+						"MaxCount": 5,
+						"MaxWeightFactor": 0,
+						"Type": "RTID(repeater@PlantTypes)",
+						"Weight": 200
+					} ],
+				"Remove": []
+			}
+		}, {
+			"aliases": [ "Wave6ModConveyor0" ],
+			"objclass": "ModifyConveyorWaveActionProps",
+			"objdata": {
+				"Add": [ {
+						"MaxCount": 5,
+						"MaxWeightFactor": 0,
+						"Type": "RTID(threepeater@PlantTypes)",
+						"Weight": 300
+					} ],
+				"Remove": []
+			}
+		}, {
+			"aliases": [ "Wave1ModConveyor0" ],
+			"objclass": "ModifyConveyorWaveActionProps",
+			"objdata": {
+				"Add": [ {
+						"Type": "RTID(pvine@PlantTypes)",
+						"Weight": 150
+					} ],
+				"Remove": []
+			}
+		} ],
+	"version": 1
+}

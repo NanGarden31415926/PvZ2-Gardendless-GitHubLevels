@@ -1,0 +1,308 @@
+{
+	"#comment": "Premium Quest - Buttercup1",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "[PREMIUM_PLANT_QUEST_LOD_DESC]",
+				"DraperPromo": "",
+				"ForceToWorldMap": true,
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"Modules": [ "RTID(StandardIntro@LevelModules)", "RTID(DefaultSunDropper@LevelModules)", "RTID(LevelEscalationModule@CurrentLevel)", "RTID(FrontLawnMowers@LevelModules)", "RTID(NewWaves@CurrentLevel)", "RTID(ChallengeModule@CurrentLevel)", "RTID(DefaultZombieWinCondition@LevelModules)", "RTID(Gravestones@CurrentLevel)", "RTID(GoldTiles@CurrentLevel)", "RTID(FrozenPlantPlacement@CurrentLevel)", "RTID(SeedBank@CurrentLevel)", "RTID(ZombiesDeadWinCon@LevelModules)", "RTID(ProtectThePlant@CurrentLevel)" ],
+				"Name": "[PREMIUM_PLANT_QUEST_LOD_NAME]",
+				"NormalPresentTable": "egypt_normal_01",
+				"RepeatPlayForceToWorldMap": true,
+				"ShinyPresentTable": "egypt_shiny_01",
+				"StageModule": "RTID(FrontLawnStage@LevelModules)",
+				"StartingSun": 300
+			}
+		}, {
+			"aliases": [ "ChallengeModule" ],
+			"objclass": "StarChallengeModuleProperties",
+			"objdata": {
+				"Challenges": [ [ "RTID(BeatTheLevel@CurrentLevel)" ] ],
+				"ChallengesAlwaysAvailable": true
+			}
+		}, {
+			"aliases": [ "BeatTheLevel" ],
+			"objclass": "StarChallengeBeatTheLevelProps",
+			"objdata": {
+				"Description": "[STARCHALLENGE_PROTECT_THE_PLANT]",
+				"DescriptiveName": "[STARCHALLENGE_PROTECT_THE_PLANT_NAME]"
+			}
+		}, {
+			"aliases": [ "ProtectThePlant" ],
+			"objclass": "ProtectThePlantChallengeProperties",
+			"objdata": {
+				"MustProtectCount": 2,
+				"Plants": [ {
+						"GridX": 0,
+						"GridY": 1,
+						"PlantType": "primalpotatomine"
+					}, {
+						"GridX": 0,
+						"GridY": 3,
+						"PlantType": "primalpotatomine"
+					} ]
+			}
+		}, {
+			"aliases": [ "FrozenPlantPlacement" ],
+			"objclass": "InitialPlantProperties",
+			"objdata": {
+				"InitialPlantPlacements": [ {
+						"GridX": 1,
+						"GridY": 1,
+						"Level": "-1",
+						"TypeName": "buttercup"
+					}, {
+						"GridX": 2,
+						"GridY": 1,
+						"Level": "-1",
+						"TypeName": "buttercup"
+					}, {
+						"GridX": 3,
+						"GridY": 1,
+						"Level": "-1",
+						"TypeName": "buttercup"
+					}, {
+						"GridX": 4,
+						"GridY": 1,
+						"Level": "-1",
+						"TypeName": "buttercup"
+					}, {
+						"GridX": 5,
+						"GridY": 1,
+						"Level": "-1",
+						"TypeName": "buttercup"
+					}, {
+						"GridX": 6,
+						"GridY": 1,
+						"Level": "-1",
+						"TypeName": "buttercup"
+					}, {
+						"GridX": 7,
+						"GridY": 1,
+						"Level": "-1",
+						"TypeName": "buttercup"
+					}, {
+						"GridX": 8,
+						"GridY": 1,
+						"Level": "-1",
+						"TypeName": "buttercup"
+					}, {
+						"GridX": 1,
+						"GridY": 3,
+						"Level": "-1",
+						"TypeName": "buttercup"
+					}, {
+						"GridX": 2,
+						"GridY": 3,
+						"Level": "-1",
+						"TypeName": "buttercup"
+					}, {
+						"GridX": 3,
+						"GridY": 3,
+						"Level": "-1",
+						"TypeName": "buttercup"
+					}, {
+						"GridX": 4,
+						"GridY": 3,
+						"Level": "-1",
+						"TypeName": "buttercup"
+					}, {
+						"GridX": 5,
+						"GridY": 3,
+						"Level": "-1",
+						"TypeName": "buttercup"
+					}, {
+						"GridX": 6,
+						"GridY": 3,
+						"Level": "-1",
+						"TypeName": "buttercup"
+					}, {
+						"GridX": 7,
+						"GridY": 3,
+						"Level": "-1",
+						"TypeName": "buttercup"
+					}, {
+						"GridX": 8,
+						"GridY": 3,
+						"Level": "-1",
+						"TypeName": "buttercup"
+					} ]
+			}
+		}, {
+			"aliases": [ "SeedBank" ],
+			"objclass": "SeedBankProperties",
+			"objdata": {
+				"PlantExcludeList": [],
+				"PresetPlantList": [ {
+						"Level": -1,
+						"PlantType": "buttercup"
+					} ],
+				"SelectionMethod": "chooser"
+			}
+		}, {
+			"aliases": [ "GoldTiles" ],
+			"objclass": "InitialGridItemProperties",
+			"objdata": {}
+		}, {
+			"aliases": [ "LevelEscalationModule" ],
+			"objclass": "LevelEscalationModuleProperties",
+			"objdata": {
+				"FlagCount": 3,
+				"PlantfoodToSpawnCount": 0,
+				"PointIncrementPerWave": 150,
+				"StartingPoints": 50,
+				"WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)",
+				"WavesPerFlag": 3,
+				"ZombiePool": [ "RTID(future@ZombieTypes)", "RTID(future_armor1@ZombieTypes)", "RTID(future_jetpack@ZombieTypes)" ]
+			}
+		}, {
+			"aliases": [ "WaveManagerProps" ],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"MaxNextWaveHealthPercentage": 0.9,
+				"MinNextWaveHealthPercentage": 0.8,
+				"Waves": [ [ "RTID(Wave1@CurrentLevel)" ], [ "RTID(Wave2@CurrentLevel)" ], [ "RTID(Wave3@CurrentLevel)", "RTID(Wave3SpiderRainEvent0@CurrentLevel)" ], [ "RTID(Wave4@CurrentLevel)" ], [ "RTID(Wave5@CurrentLevel)" ], [ "RTID(Wave6@CurrentLevel)" ], [ "RTID(Wave7@CurrentLevel)" ], [ "RTID(Wave8@CurrentLevel)" ], [ "RTID(Wave9@CurrentLevel)" ] ]
+			}
+		}, {
+			"aliases": [ "Wave1" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(eighties_gargantuar@ZombieTypes)"
+					}, {
+						"Type": "RTID(future@ZombieTypes)"
+					}, {
+						"Type": "RTID(future@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave2" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Row": "4",
+						"Type": "RTID(eighties_gargantuar@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave3" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(eighties_gargantuar@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave4" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "4",
+						"Type": "RTID(eighties_gargantuar@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave5" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(eighties_gargantuar@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_armor1@ZombieTypes)"
+					}, {
+						"Type": "RTID(disco_mech@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave6" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Row": "4",
+						"Type": "RTID(eighties_gargantuar@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave7" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(eighties_gargantuar@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_armor2@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave8" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Row": "4",
+						"Type": "RTID(eighties_gargantuar@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_armor2@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_armor2@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave9" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(eighties_gargantuar@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Gravestones" ],
+			"objclass": "GravestoneProperties",
+			"objdata": {}
+		}, {
+			"aliases": [ "NewWaves" ],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {}
+		}, {
+			"aliases": [ "Wave3SpiderRainEvent0" ],
+			"objclass": "SpiderRainZombieSpawnerProps",
+			"objdata": {
+				"ColumnEnd": "8",
+				"ColumnStart": "4",
+				"GroupSize": 3,
+				"SpiderCount": "4",
+				"SpiderZombieName": "future_imp",
+				"TimeBeforeFullSpawn": "1",
+				"TimeBetweenGroups": "0.2",
+				"WaveStartMessage": "[WARNING_SPIDERRAIN]",
+				"ZombieFallTime": "1.5"
+			}
+		} ],
+	"version": 1
+}

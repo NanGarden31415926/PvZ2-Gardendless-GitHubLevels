@@ -1,0 +1,587 @@
+{
+  "#comment": "2009_1",
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "<PLAYERNAME>'s Frontyard",
+        "LevelNumber": 11,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(StandardIntro@LevelModules)",
+          "RTID(ModPlantsNight@CurrentLevel)",
+          "RTID(ModernMowers@LevelModules)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(LevelEscalationModule@CurrentLevel)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(Gravestones@CurrentLevel)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(Camera@CurrentLevel)",
+          "RTID(Potholepuddle@CurrentLevel)"
+        ],
+        "Name": "The Errors ACT2-Night<LEVELNUMBER>",
+        "WrittenBy": "莱池_余垛",
+        "StageModule": "RTID(FrontLawnStage@LevelModules)"
+      }
+    },
+    {
+      "aliases": [
+        "Camera"
+      ],
+      "objclass": "LawnCameraProps",
+      "objdata": {
+        "MaterialProps": {
+          "//": "Better delete this property if not used",
+          "MultColor": {
+            "r": 75,
+            "g": 100,
+            "b": 150
+          },
+          "AddColor": {
+            "r": -10,
+            "g": -5,
+            "b": 5
+          },
+          "Chill": 0,
+          "Gold": 0.2,
+          "Saturation": 0
+        },
+        "DontClear": false,
+        "//": "Dont change it yet.",
+        "OrthoHeight": 320,
+        "Offset": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "aliases": [
+        "Potholepuddle"
+      ],
+      "objclass": "InitialGridItemProperties",
+      "objdata": {
+        "InitialGridItemMatrixes": [
+          {
+            "GridMatrix": [
+              "000000000",
+              "000000000",
+              "001111111",
+              "111111100",
+              "000000000"
+            ],
+            "TypeName": "potholepuddle"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Gravestones"
+      ],
+      "objclass": "GravestoneProperties",
+      "objdata": {
+        "GravestoneCount": 7,
+        "SpawnColumnEnd": 9,
+        "SpawnColumnStart": 6
+      }
+    },
+    {
+      "aliases": [
+        "ModPlantsNight"
+      ],
+      "objclass": "PlantModifierProperties",
+      "objdata": {
+        "HidePlantfood": true,
+        "SuppressParticle": true,
+        "List": [
+          {
+            "Type": "sunshroom",
+            "NewObjdata": {
+              "SunValueList": [
+                25,
+                50,
+                75
+              ],
+              "ProduceCountdownStart": 5,
+              "ProduceCountdownStartAdditional": 1
+            }
+          },
+          {
+            "Type": "snowpea",
+            "NewObjdata": {
+              "ChanceToFreeze": 0
+            }
+          },
+          {
+            "Type": "chomper",
+            "NewObjdata": {
+              "ChewTimePerZombie": 34,
+              "MaxContainZombieCount": 1
+            }
+          },
+          {
+            "Type": "scaredyshroom",
+            "NewObjdata": {
+              "KnockbackChance": 0
+            }
+          },
+          {
+            "Type": "doomshroom",
+            "NewObjdata": {
+              "SunCost": 125
+            }
+          },
+          {
+            "Type": "torchwood",
+            "NewObjdata": {
+              "Toughness": 300,
+              "DeathDamage": 50,
+              "Damage": 1,
+              "DeathFireDuration": 1,
+              "PlantfoodDuration": 1
+            }
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "UnlockAll": true,
+        "OverrideSeedSlotsCount": 7,
+        "PlantIncludeList": [
+          "peashooter",
+          "sunflower",
+          "wallnut",
+          "cherry_bomb",
+          "potatomine",
+          "snowpea",
+          "chomper",
+          "lilypad",
+          "tanglekelp",
+          "repeater",
+          "puffshroom",
+          "sunshroom",
+          "cabbagepult",
+          "kernelpult",
+          "fumeshroom",
+          "gravebuster",
+          "magnetshroom",
+          "hypnoshroom",
+          "spikeweed",
+          "jalapeno"
+        ],
+        "SelectionMethod": "chooser"
+      }
+    },
+    {
+      "aliases": [
+        "error_tutorial_imp"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(error_tutorial_imp@CurrentLevel)",
+        "ZombieBasedOn": "tutorial_imp"
+      }
+    },
+    {
+      "aliases": [
+        "error_tutorial_imp"
+      ],
+      "objclass": "ZombieProperties",
+      "objdata": {
+        "ZombieSort": "Normal",
+        "CannotBeTossedByCitron": false,
+        "IgnoredInWaves": false,
+        "WalkSPS": 0.3,
+        "EatDPS": 200,
+        "Toughness": 50,
+        "StartingArmors": [
+          "modern_armor1"
+        ],
+        "WavePointCost": 200,
+        "Weight": 3000,
+        "HitRect": "RTID(ImpHitRect@RectangleProps)",
+        "AttackRect": "RTID(ImpAttackRect@RectangleProps)"
+      }
+    },
+    {
+      "aliases": [
+        "error_tutorial_imp_armor2"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(error_tutorial_imp_armor2@CurrentLevel)",
+        "ZombieBasedOn": "tutorial_imp"
+      }
+    },
+    {
+      "aliases": [
+        "error_tutorial_imp_armor2"
+      ],
+      "objclass": "ZombieProperties",
+      "objdata": {
+        "ZombieSort": "Normal",
+        "CannotBeTossedByCitron": false,
+        "IgnoredInWaves": false,
+        "WalkSPS": 0.3,
+        "EatDPS": 200,
+        "Toughness": 50,
+        "StartingArmors": [
+          "modern_armor2"
+        ],
+        "WavePointCost": 400,
+        "Weight": 4000,
+        "HitRect": "RTID(ImpHitRect@RectangleProps)",
+        "AttackRect": "RTID(ImpAttackRect@RectangleProps)"
+      }
+    },
+    {
+      "aliases": [
+        "error_tutorial_imp_armor4"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(error_tutorial_imp_armor4@CurrentLevel)",
+        "ZombieBasedOn": "tutorial_imp"
+      }
+    },
+    {
+      "aliases": [
+        "error_tutorial_imp_armor4"
+      ],
+      "objclass": "ZombieProperties",
+      "objdata": {
+        "ZombieSort": "Normal",
+        "CannotBeTossedByCitron": false,
+        "IgnoredInWaves": false,
+        "WalkSPS": 0.3,
+        "EatDPS": 200,
+        "Toughness": 50,
+        "StartingArmors": [
+          "modern_armor4"
+        ],
+        "WavePointCost": 700,
+        "Weight": 4000,
+        "HitRect": "RTID(ImpHitRect@RectangleProps)",
+        "AttackRect": "RTID(ImpAttackRect@RectangleProps)"
+      }
+    },
+    {
+      "aliases": [
+        "error_newspaper"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(newspaper@CurrentLevel)",
+        "ZombieBasedOn": "modern_newspaper"
+      }
+    },
+    {
+      "aliases": [
+        "newspaper"
+      ],
+      "objclass": "ZombieProperties",
+      "objdata": {
+        "ChooseToSpawnOnDeepWaterRows": false,
+        "LivesInDeepWater": false,
+        "CannotBeTossedByCitron": false,
+        "WalkSPS": 0.22,
+        "EatDPS": 100,
+        "Toughness": 190,
+        "EnragedDamageScale": 2,
+        "EnragedSpeedScale": 2,
+        "NewspaperHealth": 300,
+        "WavePointCost": 700,
+        "Weight": 4000,
+        "HitRect": "RTID(CommonHitRect@RectangleProps)",
+        "AttackRect": "RTID(CommonAttackRect@RectangleProps)"
+      }
+    },
+    {
+      "aliases": [
+        "error_excavator_armor1"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(excavator@CurrentLevel)",
+        "ZombieBasedOn": "lostcity_excavator"
+      }
+    },
+    {
+      "aliases": [
+        "excavator"
+      ],
+      "objclass": "ZombieProperties",
+      "objdata": {
+        "CannotBeTossedByCitron": false,
+        "ShovelDamage": 150,
+        "WalkSPS": 0.185,
+        "EatDPS": 100,
+        "Toughness": 40,
+        "StartingArmors": [
+          "modern_armor1"
+        ],
+        "WavePointCost": 300,
+        "Weight": 3000,
+        "HitRect": "RTID(CommonHitRect@RectangleProps)",
+        "AttackRect": "RTID(CommonHitRect@RectangleProps)",
+        "HitRectWithShovel": "RTID(LostcityExcavatorWithShovelHitRect@RectangleProps)",
+        "AttackRectWithShovel": "RTID(LostcityExcavatorWithShovelAttackRect@RectangleProps)"
+      }
+    },
+    {
+      "aliases": [
+        "error_excavator_armor2"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(excavator_armor2@CurrentLevel)",
+        "ZombieBasedOn": "lostcity_excavator"
+      }
+    },
+    {
+      "aliases": [
+        "excavator_armor2"
+      ],
+      "objclass": "ZombieProperties",
+      "objdata": {
+        "CannotBeTossedByCitron": false,
+        "ShovelDamage": 150,
+        "WalkSPS": 0.185,
+        "EatDPS": 100,
+        "Toughness": 40,
+        "StartingArmors": [
+          "modern_armor2"
+        ],
+        "WavePointCost": 500,
+        "Weight": 4000,
+        "HitRect": "RTID(CommonHitRect@RectangleProps)",
+        "AttackRect": "RTID(CommonHitRect@RectangleProps)",
+        "HitRectWithShovel": "RTID(LostcityExcavatorWithShovelHitRect@RectangleProps)",
+        "AttackRectWithShovel": "RTID(LostcityExcavatorWithShovelAttackRect@RectangleProps)"
+      }
+    },
+    {
+      "aliases": [
+        "error_allstar"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(error_allstar@CurrentLevel)",
+        "ZombieBasedOn": "modern_allstar"
+      }
+    },
+    {
+      "aliases": [
+        "error_allstar"
+      ],
+      "objclass": "ZombieProperties",
+      "objdata": {
+        "CannotBeTossedByCitron": false,
+        "SmashDamage": 1500,
+        "WalkSPS": 0.185,
+        "EatDPS": 300,
+        "Toughness": 350,
+        "RunningSpeedScale": 7,
+        "StartingArmors": [
+          "dark_armor3"
+        ],
+        "WavePointCost": 800,
+        "Weight": 3500,
+        "HitRect": "RTID(BullyHitRect@RectangleProps)",
+        "AttackRect": "RTID(BullyAttackRect@RectangleProps)"
+      }
+    },
+    {
+      "aliases": [
+        "error_zomboni"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(zomboni@CurrentLevel)",
+        "ZombieBasedOn": "zomboni"
+      }
+    },
+    {
+      "aliases": [
+        "zomboni"
+      ],
+      "objclass": "ZombieProperties",
+      "objdata": {
+        "CannotBeDraggedByTangleKelp": true,
+        "CannotBeTossedByCitron": true,
+        "CannotBeSwallowedByChomper": true,
+        "WalkSPS": 0.2,
+        "EatDPS": 1000,
+        "Toughness": 1100,
+        "ChooseToSpawnOnDeepWaterRows": false,
+        "LivesInDeepWater": false,
+        "NormalDeathWhenMowed": true,
+        "ChiliStunDurationMult": 0,
+        "ImmuneToGarlic": true,
+        "WavePointCost": 700,
+        "Weight": 3000,
+        "HitRect": "RTID(ZomboniHitRect@RectangleProps)",
+        "AttackRect": "RTID(ZomboniAttackRect@RectangleProps)"
+      }
+    },
+    {
+      "aliases": [
+        "LevelEscalationModule"
+      ],
+      "objclass": "LevelEscalationModuleProperties",
+      "objdata": {
+        "PlantfoodToSpawnCount": 0,
+        "PointIncrementPerWave": 150,
+        "StartingPoints": 100,
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)",
+        "ZombiePool": [
+          "RTID(tutorial@ZombieTypes)",
+          "RTID(tutorial_armor1@ZombieTypes)",
+          "RTID(tutorial_armor2@ZombieTypes)",
+          "RTID(lostcity_jane@ZombieTypes)",
+          "RTID(error_excavator_armor2@CurrentLevel)",
+          "RTID(error_excavator_armor1@CurrentLevel)",
+          "RTID(error_tutorial_imp@CurrentLevel)",
+          "RTID(error_tutorial_imp_armor2@CurrentLevel)",
+          "RTID(error_newspaper@CurrentLevel)",
+          "RTID(error_allstar@CurrentLevel)",
+          "RTID(error_zomboni@CurrentLevel)",
+          "RTID(tutorial_gargantuar@ZombieTypes)",
+          "RTID(duckytube@ZombieTypes)",
+          "RTID(duckytube_armor1@ZombieTypes)",
+          "RTID(duckytube_armor2@ZombieTypes)",
+          "RTID(beach_snorkel@ZombieTypes)"
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {}
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 6,
+        "WaveCount": 18,
+        "WaveSpendingPointIncrement": 50,
+        "WaveSpendingPoints": 100,
+        "Waves": [
+          [
+            "RTID(Wave1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)",
+            "RTID(Wave6Spown@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave11@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave12@CurrentLevel)",
+            "RTID(Wave6Spown@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave13@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave14@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave15@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave16@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave17@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave18@CurrentLevel)",
+            "RTID(Wave6Spown@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6Spown"
+      ],
+      "objclass": "SpawnZombiesFromGridItemSpawnerProps",
+      "objdata": {
+        "AdditionalPlantfood": "0",
+        "GridTypes": [
+          "RTID(gravestone@GridItemTypes)"
+        ],
+        "WaveStartMessage": "",
+        "ZombieSpawnWaitTime": "1",
+        "Zombies": [
+          {
+            "Type": "RTID(duckytube@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(duckytube@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(duckytube_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(duckytube_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(duckytube_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(duckytube_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(duckytube_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(duckytube_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(duckytube_armor2@ZombieTypes)"
+          }
+        ]
+      }
+    }
+  ],
+  "version": 1
+}

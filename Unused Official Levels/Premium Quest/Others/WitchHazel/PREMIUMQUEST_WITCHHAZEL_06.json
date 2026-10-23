@@ -1,0 +1,454 @@
+{
+	"#comment": "LOD template level. Delete unnecessary Modules (e.g. Challenge, Frozen)",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "[PREMIUM_PLANT_QUEST_LOD_DESC]",
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"Modules": [ "RTID(StandardIntro@LevelModules)", "RTID(LevelEscalationModule@CurrentLevel)", "RTID(EightiesMowers@LevelModules)", "RTID(NewWaves@CurrentLevel)", "RTID(DefaultZombieWinCondition@LevelModules)", "RTID(Gravestones@CurrentLevel)", "RTID(ConveyorBelt@CurrentLevel)", "RTID(ZombiesDeadWinCon@LevelModules)" ],
+				"Name": "[PREMIUM_PLANT_QUEST_LOD_NAME]",
+				"NormalPresentTable": "egypt_normal_01",
+				"ShinyPresentTable": "egypt_shiny_01",
+				"ForceToWorldMap": true,
+				"RepeatPlayForceToWorldMap": true,
+				"StageModule": "RTID(EightiesStage@LevelModules)",
+				"SuppressSunSpawn": true
+			}
+		}, {
+			"aliases": [ "LevelEscalationModule" ],
+			"objclass": "LevelEscalationModuleProperties",
+			"objdata": {
+				"FlagCount": 3,
+				"PlantfoodToSpawnCount": 3,
+				"PointIncrementPerWave": 10,
+				"StartingPoints": 100,
+				"WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)",
+				"WavesPerFlag": 4,
+				"ZombiePool": [ "RTID(chicken_farmer@ZombieTypes)", "RTID(pharaoh@ZombieTypes)", "RTID(iceage_weaselhoarder@ZombieTypes)", "RTID(eighties_breakdancer@ZombieTypes)", "RTID(camel_twohump@ZombieTypes)", "RTID(modern_superfanimp@ZombieTypes)", "RTID(future_armor2@ZombieTypes)", "RTID(future_armor1@ZombieTypes)", "RTID(modern_allstar@ZombieTypes)", "RTID(future@ZombieTypes)" ]
+			}
+		}, {
+			"aliases": [ "WaveManagerProps" ],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"FlagWaveInterval": 4,
+				"LevelJam": "jam_rap",
+				"WaveCount": 12,
+				"WaveSpendingPointIncrement": 200,
+				"WaveSpendingPoints": 200,
+				"Waves": [ [ "RTID(Wave1@CurrentLevel)" ], [ "RTID(Wave2@CurrentLevel)" ], [ "RTID(Wave3@CurrentLevel)", "RTID(Wave3ModConveyor0@CurrentLevel)" ], [ "RTID(Wave4@CurrentLevel)", "RTID(Wave4SpiderRainEvent0@CurrentLevel)" ], [ "RTID(Wave5@CurrentLevel)" ], [ "RTID(Wave6@CurrentLevel)" ], [ "RTID(Wave7@CurrentLevel)", "RTID(Wave7ModConveyor0@CurrentLevel)" ], [ "RTID(Wave8@CurrentLevel)", "RTID(Wave8SpiderRainEvent0@CurrentLevel)" ], [ "RTID(Wave9@CurrentLevel)" ], [ "RTID(Wave10@CurrentLevel)" ], [ "RTID(Wave11@CurrentLevel)" ], [ "RTID(Wave12@CurrentLevel)", "RTID(Wave12SpiderRainEvent0@CurrentLevel)" ] ]
+			}
+		}, {
+			"aliases": [ "Wave1" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "3",
+						"Type": "RTID(modern_superfanimp@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(modern_superfanimp@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave2" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Type": "RTID(future@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(camel_twohump@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(camel_twohump@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave3" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Type": "RTID(chicken_farmer@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(camel_twohump@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave4" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"NotificationEvents": [ "jam_rap" ],
+				"Zombies": [ {
+						"Row": "4",
+						"Type": "RTID(modern_superfanimp@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(modern_superfanimp@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(eighties_breakdancer@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(eighties_breakdancer@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(chicken_farmer@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(chicken_farmer@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pharaoh@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave5" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "5",
+						"Type": "RTID(future_armor1@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(modern_superfanimp@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(future_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(future_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(camel_twohump@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave6" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"NotificationEvents": [ "jam_metal" ],
+				"Zombies": [ {
+						"Row": "4",
+						"Type": "RTID(future@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(future@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_armor2@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Type": "RTID(pharaoh@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave7" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "4",
+						"Type": "RTID(chicken_farmer@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(chicken_farmer@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(camel_twohump@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(camel_twohump@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave8" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"NotificationEvents": [ "jam_rap" ],
+				"Zombies": [ {
+						"Type": "RTID(future@ZombieTypes)"
+					}, {
+						"Type": "RTID(future@ZombieTypes)"
+					}, {
+						"Type": "RTID(future@ZombieTypes)"
+					}, {
+						"Type": "RTID(future_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(modern_superfanimp@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(modern_allstar@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pharaoh@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pharaoh@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(eighties_breakdancer@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(eighties_breakdancer@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave9" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "5",
+						"Type": "RTID(camel_twohump@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(camel_twohump@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(camel_twohump@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(camel_twohump@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(future_armor1@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(future@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(future@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(future@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(eighties_breakdancer@ZombieTypes)"
+					}, {
+						"Type": "RTID(pharaoh@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave10" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"NotificationEvents": [ "jam_metal" ],
+				"Zombies": [ {
+						"Type": "RTID(chicken_farmer@ZombieTypes)"
+					}, {
+						"Type": "RTID(chicken_farmer@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pharaoh@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pharaoh@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(pharaoh@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave11" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "4",
+						"Type": "RTID(modern_superfanimp@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(modern_allstar@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(modern_superfanimp@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(modern_allstar@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave12" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"NotificationEvents": [ "jam_rap" ],
+				"Zombies": [ {
+						"Row": "5",
+						"Type": "RTID(pharaoh@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pharaoh@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pharaoh@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pharaoh@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(pharaoh@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(modern_allstar@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(modern_allstar@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(modern_allstar@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(eighties_breakdancer@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(eighties_breakdancer@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(eighties_breakdancer@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(eighties_breakdancer@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(eighties_breakdancer@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Gravestones" ],
+			"objclass": "GravestoneProperties",
+			"objdata": {}
+		}, {
+			"aliases": [ "NewWaves" ],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {
+				"DynamicZombies": [ {}, {}, {}, {}, {}, {}, {} ]
+			}
+		}, {
+			"aliases": [ "ConveyorBelt" ],
+			"objclass": "ConveyorSeedBankProperties",
+			"objdata": {
+				"DropDelayConditions": [ {
+						"Delay": 3,
+						"MaxPackets": 0
+					}, {
+						"Delay": 6,
+						"MaxPackets": 2
+					}, {
+						"Delay": 9,
+						"MaxPackets": 4
+					}, {
+						"Delay": 12,
+						"MaxPackets": 8
+					} ],
+				"InitialPlantList": [ {
+						"PlantType": "bloomerang",
+						"Weight": 30
+					}, {
+						"PlantType": "peashooter",
+						"Weight": 70
+					} ],
+				"SpeedConditions": [ {
+						"MaxPackets": 0,
+						"Speed": 100
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave7ModConveyor0" ],
+			"objclass": "ModifyConveyorWaveActionProps",
+			"objdata": {
+				"Add": [ {
+						"Type": "RTID(lightningreed@PlantTypes)",
+						"Weight": 40
+					}, {
+						"MaxCount": 5,
+						"MaxWeightFactor": 0,
+						"Type": "RTID(witchhazel@PlantTypes)",
+						"Weight": 80
+					} ],
+				"Remove": [ {
+						"Type": "RTID(bloomerang@PlantTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave8SpiderRainEvent0" ],
+			"objclass": "SpiderRainZombieSpawnerProps",
+			"objdata": {
+				"ColumnEnd": "8",
+				"ColumnStart": 4,
+				"GroupSize": "2",
+				"SpiderCount": 6,
+				"SpiderZombieName": "future_imp",
+				"TimeBeforeFullSpawn": 1,
+				"TimeBetweenGroups": 0.3,
+				"WaveStartMessage": "[WARNING_SPIDERRAIN]",
+				"ZombieFallTime": 1.5
+			}
+		}, {
+			"aliases": [ "Wave4SpiderRainEvent0" ],
+			"objclass": "SpiderRainZombieSpawnerProps",
+			"objdata": {
+				"ColumnEnd": "8",
+				"ColumnStart": 4,
+				"GroupSize": 2,
+				"SpiderCount": 6,
+				"SpiderZombieName": "future_imp",
+				"TimeBeforeFullSpawn": "1",
+				"TimeBetweenGroups": 0.23,
+				"WaveStartMessage": "[WARNING_SPIDERRAIN]",
+				"ZombieFallTime": 1.5
+			}
+		}, {
+			"aliases": [ "Wave12SpiderRainEvent0" ],
+			"objclass": "SpiderRainZombieSpawnerProps",
+			"objdata": {
+				"ColumnEnd": "8",
+				"ColumnStart": 4,
+				"GroupSize": "2",
+				"SpiderCount": 6,
+				"SpiderZombieName": "future_imp",
+				"TimeBeforeFullSpawn": "1",
+				"TimeBetweenGroups": 0.3,
+				"WaveStartMessage": "[WARNING_SPIDERRAIN]",
+				"ZombieFallTime": "1.5"
+			}
+		}, {
+			"aliases": [ "Wave3ModConveyor0" ],
+			"objclass": "ModifyConveyorWaveActionProps",
+			"objdata": {
+				"Add": [ {
+						"Type": "RTID(peapod@PlantTypes)",
+						"Weight": 50
+					} ],
+				"Remove": [ {
+						"Type": "RTID(peashooter@PlantTypes)"
+					} ]
+			}
+		} ],
+	"version": 1
+}

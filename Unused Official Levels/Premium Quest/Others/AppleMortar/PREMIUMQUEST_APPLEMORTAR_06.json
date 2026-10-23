@@ -1,0 +1,336 @@
+{
+	"#comment": "LOD template level. Delete unnecessary Modules (e.g. Challenge, Frozen)",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "[PREMIUM_PLANT_QUEST_LOD_DESC]",
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"Modules": [ "RTID(StandardIntro@LevelModules)", "RTID(LevelEscalationModule@CurrentLevel)", "RTID(FrontLawnMowers@LevelModules)", "RTID(NewWaves@CurrentLevel)", "RTID(DefaultZombieWinCondition@LevelModules)", "RTID(Gravestones@CurrentLevel)", "RTID(ConveyorBelt@CurrentLevel)", "RTID(ZombiesDeadWinCon@LevelModules)" ],
+				"Name": "[PREMIUM_PLANT_QUEST_LOD_NAME]",
+				"NormalPresentTable": "egypt_normal_01",
+				"ShinyPresentTable": "egypt_shiny_01",
+				"ForceToWorldMap": true,
+				"RepeatPlayForceToWorldMap": true,
+				"StageModule": "RTID(FrontLawnStage@LevelModules)"
+			}
+		}, {
+			"aliases": [ "LevelEscalationModule" ],
+			"objclass": "LevelEscalationModuleProperties",
+			"objdata": {
+				"FlagCount": 3,
+				"PlantfoodToSpawnCount": 3,
+				"PointIncrementPerWave": 10,
+				"StartingPoints": 100,
+				"WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)",
+				"WavesPerFlag": 4,
+				"ZombiePool": [ "RTID(disco_mech@ZombieTypes)", "RTID(future_protector@ZombieTypes)", "RTID(mech_cone@ZombieTypes)", "RTID(future_gargantuar@ZombieTypes)", "RTID(dino_imp@ZombieTypes)", "RTID(future_jetpack@ZombieTypes)", "RTID(dino_gargantuar@ZombieTypes)", "RTID(football_mech@ZombieTypes)", "RTID(iceage_imp@ZombieTypes)", "RTID(iceage_troglobite_1block@ZombieTypes)", "RTID(tutorial_armor2@ZombieTypes)", "RTID(future_imp@ZombieTypes)", "RTID(iceage_troglobite_2block@ZombieTypes)", "RTID(iceage_hunter@ZombieTypes)", "RTID(iceage_gargantuar@ZombieTypes)", "RTID(iceage_dodo@ZombieTypes)", "RTID(iceage_weaselhoarder@ZombieTypes)" ]
+			}
+		}, {
+			"aliases": [ "WaveManagerProps" ],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"FlagWaveInterval": 4,
+				"WaveCount": 12,
+				"WaveSpendingPointIncrement": 200,
+				"WaveSpendingPoints": 100,
+				"Waves": [ [ "RTID(Wave1@CurrentLevel)" ], [ "RTID(Wave2@CurrentLevel)" ], [ "RTID(Wave3@CurrentLevel)", "RTID(Wave3ModConveyor0@CurrentLevel)" ], [ "RTID(Wave4@CurrentLevel)" ], [ "RTID(Wave5@CurrentLevel)" ], [ "RTID(Wave6@CurrentLevel)", "RTID(Wave6ModConveyor0@CurrentLevel)" ], [ "RTID(Wave7@CurrentLevel)", "RTID(Wave7PortalsEvent0@CurrentLevel)" ], [ "RTID(Wave8@CurrentLevel)" ], [ "RTID(Wave9@CurrentLevel)", "RTID(Wave9PortalsEvent0@CurrentLevel)" ], [ "RTID(Wave10@CurrentLevel)" ], [ "RTID(Wave11@CurrentLevel)" ], [ "RTID(Wave12@CurrentLevel)" ] ]
+			}
+		}, {
+			"aliases": [ "Wave1" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Type": "RTID(dino_imp@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave2" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Type": "RTID(future_imp@ZombieTypes)"
+					}, {
+						"Type": "RTID(dino_imp@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_imp@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave3" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Row": "4",
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave4" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "3",
+						"Type": "RTID(mech_cone@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(dino_imp@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave5" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(future_protector@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(iceage_troglobite_1block@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave6" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "5",
+						"Type": "RTID(future_protector@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave7" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_troglobite_2block@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(dino_imp@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave8" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(disco_mech@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(dino_imp@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(dino_imp@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(future_protector@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_troglobite_2block@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(dino_imp@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(dino_imp@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(disco_mech@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(dino_imp@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave9" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(iceage_troglobite_2block@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(tutorial_armor2@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(tutorial_armor2@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave10" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Row": "4",
+						"Type": "RTID(iceage_gargantuar@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave11" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "3",
+						"Type": "RTID(dino_gargantuar@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave12" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(future_protector@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(future_gargantuar@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(football_mech@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(future_jetpack@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(dino_imp@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave7PortalsEvent0" ],
+			"objclass": "SpawnModernPortalsWaveActionProps",
+			"objdata": {
+				"PortalColumn": 8,
+				"PortalRow": 1,
+				"PortalType": "future",
+				"SpawnEffectAnimID": "",
+				"SpawnSoundID": ""
+			}
+		}, {
+			"aliases": [ "Wave9PortalsEvent0" ],
+			"objclass": "SpawnModernPortalsWaveActionProps",
+			"objdata": {
+				"PortalColumn": "5",
+				"PortalRow": "2",
+				"PortalType": "dino",
+				"SpawnEffectAnimID": "",
+				"SpawnSoundID": ""
+			}
+		}, {
+			"aliases": [ "Gravestones" ],
+			"objclass": "GravestoneProperties",
+			"objdata": {}
+		}, {
+			"aliases": [ "NewWaves" ],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {
+				"DynamicZombies": [ {}, {}, {}, {}, {}, {}, {} ]
+			}
+		}, {
+			"aliases": [ "ConveyorBelt" ],
+			"objclass": "ConveyorSeedBankProperties",
+			"objdata": {
+				"DropDelayConditions": [ {
+						"Delay": 3,
+						"MaxPackets": 0
+					}, {
+						"Delay": 6,
+						"MaxPackets": 2
+					}, {
+						"Delay": 9,
+						"MaxPackets": 4
+					}, {
+						"Delay": 12,
+						"MaxPackets": 8
+					} ],
+				"InitialPlantList": [ {
+						"PlantType": "peashooter",
+						"Weight": 5
+					}, {
+						"PlantType": "spikeweed",
+						"Weight": 10
+					} ],
+				"SpeedConditions": [ {
+						"MaxPackets": 0,
+						"Speed": 100
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave3ModConveyor0" ],
+			"objclass": "ModifyConveyorWaveActionProps",
+			"objdata": {
+				"Add": [ {
+						"Type": "RTID(applemortar@PlantTypes)",
+						"Weight": 2
+					} ],
+				"Remove": []
+			}
+		}, {
+			"aliases": [ "Wave6ModConveyor0" ],
+			"objclass": "ModifyConveyorWaveActionProps",
+			"objdata": {
+				"Add": [ {
+						"Type": "RTID(empea@PlantTypes)",
+						"Weight": 1
+					} ],
+				"Remove": []
+			}
+		} ],
+	"version": 1
+}

@@ -1,0 +1,228 @@
+{
+	"#comment": "Premium Quest - Cold Snap Dragon",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "[PREMIUM_PLANT_QUEST_LOD_DESC]",
+				"ForceToWorldMap": true,
+				"LevelPowerupSet": "LevelPowerupsDisabled",
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"Modules": [ "RTID(StandardIntro@LevelModules)", "RTID(FastSunDropper@LevelModules)", "RTID(LevelEscalationModule@CurrentLevel)", "RTID(FrontLawnMowers@LevelModules)", "RTID(NewWaves@CurrentLevel)", "RTID(DefaultZombieWinCondition@LevelModules)", "RTID(SeedBank@CurrentLevel)", "RTID(ZombiesDeadWinCon@LevelModules)", "RTID(FrozenPlantPlacement@CurrentLevel)" ],
+				"Name": "[PREMIUM_PLANT_QUEST_LOD_NAME]",
+				"NormalPresentTable": "egypt_normal_01",
+				"RepeatPlayForceToWorldMap": true,
+				"ShinyPresentTable": "egypt_shiny_01",
+				"StageModule": "RTID(FrontLawnStage@LevelModules)",
+				"StartingSun": 500,
+				"SuppressPlantfoodPurchase": true
+			}
+		}, {
+			"aliases": [ "FrozenPlantPlacement" ],
+			"objclass": "InitialPlantProperties",
+			"objdata": {
+				"InitialPlantPlacements": [ {
+						"GridX": 2,
+						"GridY": 2,
+						"Level": "-1",
+						"TypeName": "magnetshroom"
+					}, {
+						"GridX": 3,
+						"GridY": 2,
+						"Level": "-1",
+						"TypeName": "homingthistle"
+					}, {
+						"GridX": 4,
+						"GridY": 2,
+						"Level": "-1",
+						"TypeName": "magnetshroom"
+					} ]
+			}
+		}, {
+			"aliases": [ "SeedBank" ],
+			"objclass": "SeedBankProperties",
+			"objdata": {
+				"PresetPlantList": [ {
+						"Level": -1,
+						"PlantType": "magnetshroom"
+					}, {
+						"Level": -1,
+						"PlantType": "homingthistle"
+					} ],
+				"SelectionMethod": "chooser"
+			}
+		}, {
+			"aliases": [ "NewWaves" ],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {}
+		}, {
+			"aliases": [ "LevelEscalationModule" ],
+			"objclass": "LevelEscalationModuleProperties",
+			"objdata": {
+				"FlagCount": 1,
+				"PlantfoodToSpawnCount": 0,
+				"PointIncrementPerWave": 200,
+				"StartingPoints": 100,
+				"WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)",
+				"WavesPerFlag": 9,
+				"ZombiePool": [ "RTID(eighties_punk@ZombieTypes)" ]
+			}
+		}, {
+			"aliases": [ "WaveManagerProps" ],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"FlagWaveInterval": 9,
+				"MaxNextWaveHealthPercentage": 0.9,
+				"MinNextWaveHealthPercentage": 0.8,
+				"WaveCount": 9,
+				"Waves": [ [ "RTID(Wave1@CurrentLevel)" ], [ "RTID(Wave2@CurrentLevel)" ], [ "RTID(Wave3@CurrentLevel)" ], [ "RTID(Wave4@CurrentLevel)" ], [ "RTID(Wave5@CurrentLevel)" ], [ "RTID(Wave6@CurrentLevel)" ], [ "RTID(Wave7@CurrentLevel)" ], [ "RTID(Wave8@CurrentLevel)" ], [ "RTID(Wave9@CurrentLevel)" ] ]
+			}
+		}, {
+			"aliases": [ "Wave1" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Type": "RTID(eighties_armor2@ZombieTypes)"
+					}, {
+						"Type": "RTID(eighties_armor2@ZombieTypes)"
+					}, {
+						"Type": "RTID(eighties_punk@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave2" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Type": "RTID(eighties_punk@ZombieTypes)"
+					}, {
+						"Type": "RTID(eighties_armor2@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave3" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Type": "RTID(eighties_armor2@ZombieTypes)"
+					}, {
+						"Type": "RTID(eighties_armor2@ZombieTypes)"
+					}, {
+						"Type": "RTID(eighties_punk@ZombieTypes)"
+					}, {
+						"Type": "RTID(eighties_punk@ZombieTypes)"
+					}, {
+						"Type": "RTID(eighties_armor2@ZombieTypes)"
+					}, {
+						"Type": "RTID(eighties_armor2@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave4" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Type": "RTID(eighties_punk@ZombieTypes)"
+					}, {
+						"Type": "RTID(eighties_armor2@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave5" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Type": "RTID(eighties_armor2@ZombieTypes)"
+					}, {
+						"Type": "RTID(eighties_punk@ZombieTypes)"
+					}, {
+						"Type": "RTID(eighties_armor2@ZombieTypes)"
+					}, {
+						"Type": "RTID(eighties_punk@ZombieTypes)"
+					}, {
+						"Type": "RTID(eighties_punk@ZombieTypes)"
+					}, {
+						"Type": "RTID(eighties_armor2@ZombieTypes)"
+					}, {
+						"Type": "RTID(eighties_punk@ZombieTypes)"
+					}, {
+						"Type": "RTID(eighties_punk@ZombieTypes)"
+					}, {
+						"Type": "RTID(eighties_armor2@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave6" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Type": "RTID(eighties_gargantuar@ZombieTypes)"
+					}, {
+						"Type": "RTID(eighties_punk@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave7" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Type": "RTID(eighties_armor2@ZombieTypes)"
+					}, {
+						"Type": "RTID(eighties_armor2@ZombieTypes)"
+					}, {
+						"Type": "RTID(eighties_punk@ZombieTypes)"
+					}, {
+						"Type": "RTID(eighties_armor2@ZombieTypes)"
+					}, {
+						"Type": "RTID(eighties_punk@ZombieTypes)"
+					}, {
+						"Type": "RTID(eighties_punk@ZombieTypes)"
+					}, {
+						"Type": "RTID(eighties_punk@ZombieTypes)"
+					}, {
+						"Type": "RTID(eighties_armor2@ZombieTypes)"
+					}, {
+						"Type": "RTID(eighties_punk@ZombieTypes)"
+					}, {
+						"Type": "RTID(eighties_punk@ZombieTypes)"
+					}, {
+						"Type": "RTID(eighties_punk@ZombieTypes)"
+					}, {
+						"Type": "RTID(eighties_armor2@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave8" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Type": "RTID(eighties_punk@ZombieTypes)"
+					}, {
+						"Type": "RTID(eighties_armor2@ZombieTypes)"
+					}, {
+						"Type": "RTID(eighties_punk@ZombieTypes)"
+					}, {
+						"Type": "RTID(eighties_armor2@ZombieTypes)"
+					}, {
+						"Type": "RTID(eighties_punk@ZombieTypes)"
+					}, {
+						"Type": "RTID(eighties_armor2@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave9" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Type": "RTID(eighties_gargantuar@ZombieTypes)"
+					} ]
+			}
+		} ],
+	"version": 1
+}

@@ -1,0 +1,111 @@
+{
+  "#comment": "Cowboy Zomboss",
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "[PLAYERS_TRIP_TO_WEST]",
+        "FirstIntroNarrative": "COWBOY_INTRO_ZOMBOSS",
+        "FirstOutroNarrative": "COWBOY_OUTRO_ZOMBOSS",
+        "FirstRewardType": "pinata",
+        "FirstRewardParam": "spine_cowboy",
+        "ForceToWorldMap": true,
+        "LevelNumber": 25,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(ZombossIntro@LevelModules)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(DefaultSunDropper@LevelModules)",
+          "RTID(ZombossBattle@CurrentLevel)",
+          "RTID(CowboyRails@CurrentLevel)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)"
+        ],
+        "MusicType": "MiniGame_A",
+        "Name": "West",
+        "NormalPresentTable": "cowboy_normal_01",
+        "RepeatPlayForceToWorldMap": true,
+        "ShinyPresentTable": "cowboy_shiny_01",
+        "StageModule": "RTID(WestStage@LevelModules)",
+        "VictoryModule": "RTID(ZombossVictoryOutro@LevelModules)",
+        "LoadDefaultMusic": false
+      }
+    },
+    {
+      "aliases": [
+        "CowboyRails"
+      ],
+      "objclass": "RailcartProperties",
+      "objdata": {
+        "RailcartType": "railcart_cowboy",
+        "Railcarts": [
+          {
+            "Column": 1,
+            "Row": 1
+          },
+          {
+            "Column": 3,
+            "Row": 3
+          }
+        ],
+        "Rails": [
+          {
+            "Column": 1,
+            "RowEnd": 4,
+            "RowStart": 0
+          },
+          {
+            "Column": 3,
+            "RowEnd": 4,
+            "RowStart": 0
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "PlantExcludeList": [],
+        "SelectionMethod": "chooser"
+      }
+    },
+    {
+      "aliases": [
+        "ZombossBattle"
+      ],
+      "objclass": "ZombossBattleModuleProperties",
+      "objdata": {
+        "ReservedColumnCount": 2,
+        "ZombossDeathColumn": 5,
+        "ZombossDeathRow": 3,
+        "ZombossMechType": "zombossmech_cowboy",
+        "ZombossSpawnGridPosition": {
+          "mX": 6,
+          "mY": 3
+        }
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "Waves": []
+      }
+    }
+  ],
+  "version": 1
+}

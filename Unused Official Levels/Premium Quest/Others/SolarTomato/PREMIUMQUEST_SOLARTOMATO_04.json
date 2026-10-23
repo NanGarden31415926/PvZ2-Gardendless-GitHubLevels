@@ -1,0 +1,253 @@
+{
+	"#comment": "LOD 155 - Toadstool",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "[PREMIUM_PLANT_QUEST_LOD_DESC]",
+				"DraperPromo": "toadstool",
+				"ForceToWorldMap": true,
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"Modules": [ "RTID(StandardIntro@LevelModules)", "RTID(LevelEscalationModule@CurrentLevel)", "RTID(FrontLawnMowers@LevelModules)", "RTID(NewWaves@CurrentLevel)", "RTID(SeedBank@CurrentLevel)", "RTID(DefaultSunDropper@LevelModules)", "RTID(FrozenPlantPlacement@CurrentLevel)", "RTID(DefaultZombieWinCondition@LevelModules)", "RTID(ZombiesDeadWinCon@LevelModules)" ],
+				"Name": "[PREMIUM_PLANT_QUEST_LOD_NAME]",
+				"NormalPresentTable": "egypt_normal_01",
+				"RepeatPlayForceToWorldMap": true,
+				"ShinyPresentTable": "egypt_shiny_01",
+				"StageModule": "RTID(FrontLawnStage@LevelModules)"
+			}
+		}, {
+			"aliases": [ "FrozenPlantPlacement" ],
+			"objclass": "InitialPlantProperties",
+			"objdata": {
+				"InitialPlantPlacements": [ {
+						"GridX": 0,
+						"GridY": 1,
+						"TypeName": "primalsunflower"
+					}, {
+						"GridX": 0,
+						"GridY": 3,
+						"TypeName": "primalsunflower"
+					} ]
+			}
+		}, {
+			"aliases": [ "SeedBank" ],
+			"objclass": "SeedBankProperties",
+			"objdata": {
+				"PresetPlantList": [ {
+						"Level": -1,
+						"PlantType": "solartomato"
+					}, {
+						"Level": -1,
+						"PlantType": "pepperpult"
+					}, {
+						"Level": -1,
+						"PlantType": "melonpult"
+					}, {
+						"Level": -1,
+						"PlantType": "stunion"
+					}, {
+						"Level": -1,
+						"PlantType": "hotpotato"
+					} ],
+				"SelectionMethod": "preset"
+			}
+		}, {
+			"aliases": [ "LevelEscalationModule" ],
+			"objclass": "LevelEscalationModuleProperties",
+			"objdata": {
+				"FlagCount": 2,
+				"PlantfoodToSpawnCount": 0,
+				"PointIncrementPerWave": 0,
+				"StartingPoints": 0,
+				"WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)",
+				"WavesPerFlag": 4,
+				"ZombiePool": []
+			}
+		}, {
+			"aliases": [ "WaveManagerProps" ],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"FlagWaveInterval": 4,
+				"MaxNextWaveHealthPercentage": 0.9,
+				"MinNextWaveHealthPercentage": 0.8,
+				"WaveCount": 8,
+				"Waves": [ [ "RTID(Wave1@CurrentLevel)" ], [ "RTID(Wave2@CurrentLevel)" ], [ "RTID(Wave3@CurrentLevel)" ], [ "RTID(Wave4@CurrentLevel)" ], [ "RTID(Wave5@CurrentLevel)" ], [ "RTID(Wave6@CurrentLevel)" ], [ "RTID(Wave7@CurrentLevel)" ], [ "RTID(Wave8@CurrentLevel)" ] ]
+			}
+		}, {
+			"aliases": [ "Wave1" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(iceage_imp@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_imp@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(iceage_imp@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(iceage_imp@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave2" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Row": "3",
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_troglobite_2block@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(iceage@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave3" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "5",
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_imp@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_imp@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave4" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Row": "4",
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_imp@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave5" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Row": "3",
+						"Type": "RTID(iceage_troglobite_2block@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_imp@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_imp@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(iceage_imp@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_troglobite_2block@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave6" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(iceage_imp@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(iceage_imp@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_imp@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_imp@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_dodo@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave7" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Row": "3",
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_troglobite_2block@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_gargantuar@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_troglobite_2block@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave8" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(iceage_troglobite_2block@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(iceage_troglobite_2block@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(iceage_gargantuar@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(iceage_troglobite_2block@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_hunter@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(iceage_troglobite_2block@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "NewWaves" ],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {}
+		} ],
+	"version": 1
+}

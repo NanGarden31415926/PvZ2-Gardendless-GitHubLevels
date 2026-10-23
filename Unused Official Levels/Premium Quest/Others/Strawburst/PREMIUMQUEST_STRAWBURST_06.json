@@ -1,0 +1,266 @@
+{
+	"#comment": "Level Of The Day Test 1",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "[PREMIUM_PLANT_QUEST_LOD_DESC]",
+				"FirstIntroNarrative": "STRAWBURST_LOD",
+				"ForceToWorldMap": true,
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"Modules": [ "RTID(StandardIntro@LevelModules)", "RTID(LevelEscalationModule@CurrentLevel)", "RTID(FrontLawnMowers@LevelModules)", "RTID(NewWaves@CurrentLevel)", "RTID(DefaultZombieWinCondition@LevelModules)", "RTID(Gravestones@CurrentLevel)", "RTID(ConveyorBelt@CurrentLevel)", "RTID(ZombiesDeadWinCon@LevelModules)" ],
+				"Name": "[PREMIUM_PLANT_QUEST_LOD_NAME]",
+				"NormalPresentTable": "egypt_normal_01",
+				"RepeatPlayForceToWorldMap": true,
+				"ShinyPresentTable": "egypt_shiny_01",
+				"StageModule": "RTID(FrontLawnStage@LevelModules)"
+			}
+		}, {
+			"aliases": [ "WaveManagerProps" ],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"FlagWaveInterval": 3,
+				"MaxNextWaveHealthPercentage": 0.9,
+				"MinNextWaveHealthPercentage": 0.8,
+				"WaveCount": 9,
+				"WaveSpendingPointIncrement": 450,
+				"WaveSpendingPoints": 300,
+				"Waves": [ [ "RTID(Wave1@CurrentLevel)" ], [ "RTID(Wave2@CurrentLevel)" ], [ "RTID(Wave3@CurrentLevel)" ], [ "RTID(Wave4@CurrentLevel)" ], [ "RTID(Wave5@CurrentLevel)" ], [ "RTID(Wave6@CurrentLevel)" ], [ "RTID(Wave7@CurrentLevel)" ], [ "RTID(Wave8@CurrentLevel)" ], [ "RTID(Wave9@CurrentLevel)" ] ]
+			}
+		}, {
+			"aliases": [ "Wave1" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Type": "RTID(tutorial@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave2" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Type": "RTID(tutorial@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave3" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(dark_king@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(dark_king@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave4" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Row": "5",
+						"Type": "RTID(tomb_raiser@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(tomb_raiser@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(tomb_raiser@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave5" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Type": "RTID(tutorial@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave6" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Row": "4",
+						"Type": "RTID(dark_king@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(dark_king@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave7" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "4",
+						"Type": "RTID(tomb_raiser@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(tomb_raiser@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave8" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Type": "RTID(tutorial@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave9" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(dark_king@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(dark_king@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(dark_king@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "LevelEscalationModule" ],
+			"objclass": "LevelEscalationModuleProperties",
+			"objdata": {
+				"FlagCount": 3,
+				"PlantfoodToSpawnCount": 0,
+				"PointIncrementPerWave": 300,
+				"StartingPoints": 250,
+				"WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)",
+				"WavesPerFlag": 3,
+				"ZombiePool": [ "RTID(dark_armor1@ZombieTypes)", "RTID(dark_armor2@ZombieTypes)", "RTID(tutorial_armor2@ZombieTypes)", "RTID(dark_juggler@ZombieTypes)" ]
+			}
+		}, {
+			"aliases": [ "Gravestones" ],
+			"objclass": "GravestoneProperties",
+			"objdata": {
+				"ForceSpawnData": [ {
+						"GridX": 7,
+						"GridY": 0
+					}, {
+						"GridX": 3,
+						"GridY": 0
+					}, {
+						"GridX": 4,
+						"GridY": 0
+					}, {
+						"GridX": 5,
+						"GridY": 0
+					}, {
+						"GridX": 6,
+						"GridY": 0
+					}, {
+						"GridX": 8,
+						"GridY": 1
+					}, {
+						"GridX": 3,
+						"GridY": 1
+					}, {
+						"GridX": 4,
+						"GridY": 1
+					}, {
+						"GridX": 6,
+						"GridY": 1
+					}, {
+						"GridX": 3,
+						"GridY": 2
+					}, {
+						"GridX": 4,
+						"GridY": 2
+					}, {
+						"GridX": 5,
+						"GridY": 2
+					}, {
+						"GridX": 6,
+						"GridY": 2
+					}, {
+						"GridX": 7,
+						"GridY": 2
+					}, {
+						"GridX": 8,
+						"GridY": 3
+					}, {
+						"GridX": 3,
+						"GridY": 3
+					}, {
+						"GridX": 4,
+						"GridY": 3
+					}, {
+						"GridX": 6,
+						"GridY": 3
+					}, {
+						"GridX": 7,
+						"GridY": 4
+					}, {
+						"GridX": 3,
+						"GridY": 4
+					}, {
+						"GridX": 4,
+						"GridY": 4
+					}, {
+						"GridX": 5,
+						"GridY": 4
+					}, {
+						"GridX": 6,
+						"GridY": 4
+					} ]
+			}
+		}, {
+			"aliases": [ "NewWaves" ],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {}
+		}, {
+			"aliases": [ "ConveyorBelt" ],
+			"objclass": "ConveyorSeedBankProperties",
+			"objdata": {
+				"DropDelayConditions": [ {
+						"Delay": 3,
+						"MaxPackets": 0
+					}, {
+						"Delay": 6,
+						"MaxPackets": 2
+					}, {
+						"Delay": 9,
+						"MaxPackets": 4
+					}, {
+						"Delay": 12,
+						"MaxPackets": 8
+					} ],
+				"InitialPlantList": [ {
+						"MaxCount": 10,
+						"MaxWeightFactor": 0,
+						"MinCount": 4,
+						"MinWeightFactor": 3,
+						"PlantType": "kernelpult",
+						"Weight": 10
+					}, {
+						"MaxCount": 10,
+						"MaxWeightFactor": 0.5,
+						"PlantType": "strawburst",
+						"Weight": 5
+					}, {
+						"MaxCount": 5,
+						"MaxWeightFactor": 0,
+						"PlantType": "wallnut",
+						"Weight": 20
+					} ],
+				"SpeedConditions": [ {
+						"MaxPackets": 0,
+						"Speed": 100
+					} ]
+			}
+		} ],
+	"version": 1
+}

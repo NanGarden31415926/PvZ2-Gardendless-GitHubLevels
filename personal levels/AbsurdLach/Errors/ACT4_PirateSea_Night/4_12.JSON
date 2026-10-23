@@ -1,0 +1,444 @@
+{
+  "#comment": "2009_1",
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "[PLAYERS_TRIP_TO_PIRATE_SHIP]",
+        "LevelNumber": 12,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(StandardIntro@LevelModules)",
+          "RTID(ModPlantsNight@CurrentLevel)",
+          "RTID(PirateMowers@LevelModules)",
+          "RTID(PiratePlanks@CurrentLevel)",
+          "RTID(ConveyorBelt@CurrentLevel)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(LevelEscalationModule@CurrentLevel)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)"
+        ],
+        "Name": "The Errors ACT4-Night<LEVELNUMBER>",
+        "MusicType": "MiniGame_A",
+        "WrittenBy": "莱池_余垛",
+        "StageModule": "RTID(PirateStage@LevelModules)"
+      }
+    },
+    {
+      "aliases": [
+        "PiratePlanks"
+      ],
+      "objclass": "PiratePlankProperties",
+      "objdata": {
+        "PlankRows": [
+          2,
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "ModPlantsNight"
+      ],
+      "objclass": "PlantModifierProperties",
+      "objdata": {
+        "HidePlantfood": true,
+        "SuppressParticle": true,
+        "List": [
+          {
+            "Type": "sunshroom",
+            "NewObjdata": {
+              "SunValueList": [
+                25,
+                50,
+                75
+              ],
+              "ProduceInterval": 23.5,
+              "ProduceIntervalAdditional": 1.5
+            }
+          },
+          {
+            "Type": "snowpea",
+            "NewObjdata": {
+              "ChanceToFreeze": 0
+            }
+          },
+          {
+            "Type": "chomper",
+            "NewObjdata": {
+              "ChewTimePerZombie": 34,
+              "MaxContainZombieCount": 1
+            }
+          },
+          {
+            "Type": "scaredyshroom",
+            "NewObjdata": {
+              "KnockbackChance": 0
+            }
+          },
+          {
+            "Type": "doomshroom",
+            "NewObjdata": {
+              "SunCost": 125
+            }
+          },
+          {
+            "Type": "torchwood",
+            "NewObjdata": {
+              "Toughness": 300,
+              "DeathDamage": 50,
+              "Damage": 1,
+              "DeathFireDuration": 1,
+              "PlantfoodDuration": 1
+            }
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "ConveyorBelt"
+      ],
+      "objclass": "ConveyorSeedBankProperties",
+      "objdata": {
+        "DropDelayConditions": [
+          {
+            "Delay": 3,
+            "MaxPackets": 0
+          },
+          {
+            "Delay": 6,
+            "MaxPackets": 2
+          },
+          {
+            "Delay": 9,
+            "MaxPackets": 4
+          },
+          {
+            "Delay": 12,
+            "MaxPackets": 8
+          }
+        ],
+        "InitialPlantList": [
+          {
+            "PlantType": "spikerock",
+            "Weight": 5
+          },
+          {
+            "MaxCount": 5,
+            "MaxWeightFactor": 0,
+            "PlantType": "wallnut",
+            "Weight": 12
+          },
+          {
+            "MaxCount": 10,
+            "MaxWeightFactor": 0,
+            "MinCount": 5,
+            "MinWeightFactor": 2,
+            "PlantType": "snapdragon",
+            "Weight": 15
+          },
+          {
+            "MaxCount": 10,
+            "MaxWeightFactor": 0,
+            "PlantType": "kernelpult",
+            "Weight": 10
+          },
+          {
+            "MaxCount": 5,
+            "MaxWeightFactor": 0,
+            "PlantType": "coconutcannon",
+            "Weight": 8
+          },
+          {
+            "PlantType": "springbean",
+            "Weight": 4
+          },
+          {
+            "PlantType": "cherry_bomb",
+            "Weight": 4
+          }
+        ],
+        "SpeedConditions": [
+          {
+            "MaxPackets": 0,
+            "Speed": 100
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "swashbuckler0"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(swashbuckler0@CurrentLevel)",
+        "ZombieBasedOn": "swashbuckler"
+      }
+    },
+    {
+      "aliases": [
+        "swashbuckler0"
+      ],
+      "objclass": "ZombieProperties",
+      "objdata": {
+        "ChooseToSpawnOnNonDeckRows": true,
+        "CannotBeTossedByCitron": false,
+        "WalkSPS": 0.185,
+        "EatDPS": 100,
+        "Toughness": -1,
+        "ChanceToFallIntoSea": 0,
+        "LandingColumns": [
+          3
+        ],
+        "WavePointCost": 450,
+        "Weight": 4000,
+        "StartingArmors": [
+          "dino_armor1"
+        ],
+        "HitRect": "RTID(CommonHitRect@RectangleProps)",
+        "AttackRect": "RTID(CommonAttackRect@RectangleProps)"
+      }
+    },
+    {
+      "aliases": [
+        "error_swashbuckler"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(swashbuckler@CurrentLevel)",
+        "ZombieBasedOn": "swashbuckler"
+      }
+    },
+    {
+      "aliases": [
+        "swashbuckler"
+      ],
+      "objclass": "ZombieProperties",
+      "objdata": {
+        "ChooseToSpawnOnNonDeckRows": true,
+        "CannotBeTossedByCitron": false,
+        "WalkSPS": 0.185,
+        "EatDPS": 100,
+        "Toughness": 190,
+        "ChanceToFallIntoSea": 0.05,
+        "LandingColumns": [
+          4
+        ],
+        "WavePointCost": 200,
+        "Weight": 2000,
+        "HitRect": "RTID(CommonHitRect@RectangleProps)",
+        "AttackRect": "RTID(CommonAttackRect@RectangleProps)"
+      }
+    },
+    {
+      "aliases": [
+        "error_swashbuckler_armor1"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(swashbuckler_armor1@CurrentLevel)",
+        "ZombieBasedOn": "swashbuckler"
+      }
+    },
+    {
+      "aliases": [
+        "swashbuckler_armor1"
+      ],
+      "objclass": "ZombieProperties",
+      "objdata": {
+        "ChooseToSpawnOnNonDeckRows": true,
+        "CannotBeTossedByCitron": false,
+        "WalkSPS": 0.185,
+        "EatDPS": 100,
+        "Toughness": 190,
+        "ChanceToFallIntoSea": 0.05,
+        "LandingColumns": [
+          4
+        ],
+        "WavePointCost": 300,
+        "Weight": 3000,
+        "StartingArmors": [
+          "pirate_armor1"
+        ],
+        "HitRect": "RTID(CommonHitRect@RectangleProps)",
+        "AttackRect": "RTID(CommonAttackRect@RectangleProps)"
+      }
+    },
+    {
+      "aliases": [
+        "error_swashbuckler_armor2"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(swashbuckler_armor2@CurrentLevel)",
+        "ZombieBasedOn": "swashbuckler"
+      }
+    },
+    {
+      "aliases": [
+        "swashbuckler_armor2"
+      ],
+      "objclass": "ZombieProperties",
+      "objdata": {
+        "ChooseToSpawnOnNonDeckRows": true,
+        "CannotBeTossedByCitron": false,
+        "WalkSPS": 0.185,
+        "EatDPS": 100,
+        "Toughness": 190,
+        "ChanceToFallIntoSea": 0.05,
+        "LandingColumns": [
+          4
+        ],
+        "WavePointCost": 500,
+        "Weight": 4000,
+        "StartingArmors": [
+          "pirate_armor2"
+        ],
+        "HitRect": "RTID(CommonHitRect@RectangleProps)",
+        "AttackRect": "RTID(CommonAttackRect@RectangleProps)"
+      }
+    },
+    {
+      "aliases": [
+        "error_swashbuckler_armor4"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(swashbuckler_armor4@CurrentLevel)",
+        "ZombieBasedOn": "swashbuckler"
+      }
+    },
+    {
+      "aliases": [
+        "swashbuckler_armor4"
+      ],
+      "objclass": "ZombieProperties",
+      "objdata": {
+        "ChooseToSpawnOnNonDeckRows": true,
+        "CannotBeTossedByCitron": false,
+        "WalkSPS": 0.185,
+        "EatDPS": 100,
+        "Toughness": 190,
+        "ChanceToFallIntoSea": 0.05,
+        "LandingColumns": [
+          4
+        ],
+        "WavePointCost": 700,
+        "Weight": 4000,
+        "StartingArmors": [
+          "pirate_armor4"
+        ],
+        "HitRect": "RTID(CommonHitRect@RectangleProps)",
+        "AttackRect": "RTID(CommonAttackRect@RectangleProps)"
+      }
+    },
+    {
+      "aliases": [
+        "LevelEscalationModule"
+      ],
+      "objclass": "LevelEscalationModuleProperties",
+      "objdata": {
+        "PlantfoodToSpawnCount": 6,
+        "PointIncrementPerWave": 200,
+        "StartingPoints": 100,
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)",
+        "ZombiePool": [
+          "RTID(pirate@ZombieTypes)",
+          "RTID(pirate_armor1@ZombieTypes)",
+          "RTID(pirate_armor2@ZombieTypes)",
+          "RTID(pirate_armor4@ZombieTypes)",
+          "RTID(pirate_gargantuar@ZombieTypes)",
+          "RTID(swashbuckler0@CurrentLevel)",
+          "RTID(error_swashbuckler@CurrentLevel)",
+          "RTID(error_swashbuckler_armor1@CurrentLevel)",
+          "RTID(error_swashbuckler_armor2@CurrentLevel)",
+          "RTID(error_swashbuckler_armor4@CurrentLevel)",
+          "RTID(barrelroller@ZombieTypes)",
+          "RTID(cannon@ZombieTypes)",
+          "RTID(seagull@ZombieTypes)",
+          "RTID(pirate_captain@ZombieTypes)",
+          "RTID(pelican@ZombieTypes)"
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {}
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 6,
+        "WaveCount": 12,
+        "WaveSpendingPointIncrement": 50,
+        "WaveSpendingPoints": 100,
+        "Waves": [
+          [
+            "RTID(Wave1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave11@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave12@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave11@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave12@CurrentLevel)"
+          ]
+        ]
+      }
+    }
+  ],
+  "version": 1
+}

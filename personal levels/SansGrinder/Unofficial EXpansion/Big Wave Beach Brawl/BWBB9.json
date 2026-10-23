@@ -1,0 +1,1075 @@
+{
+    "#comment": "Beach 51",
+    "objects": [
+        {
+            "objclass": "LevelDefinition",
+            "objdata": {
+                "Description": "[PLAYERS_TRIP_TO_BEACH]",
+                "FirstRewardParam": "moneybag",
+                "FirstRewardType": "collectable",
+                "LevelNumber": 51,
+                "Loot": "RTID(DefaultLoot@LevelModules)",
+                "Modules": [
+                    "RTID(StandardIntro@LevelModules)",
+                    "RTID(ZombiesDeadWinCon@LevelModules)",
+                    "RTID(DefaultZombieWinCondition@LevelModules)",
+                    "RTID(NewWaves@CurrentLevel)",
+                    "RTID(SeedBank@CurrentLevel)",
+                    "RTID(ChallengeModule@CurrentLevel)",
+                    "RTID(ProtectThePlant@CurrentLevel)",
+                    "RTID(Rails@CurrentLevel)",
+                    "RTID(Tide@CurrentLevel)",
+                    "RTID(InitialPlantPlacement@CurrentLevel)"
+                ],
+                "Name": "[BEACH_LEVEL_NAME]",
+                "WrittenBy": "砹化钫FrAt",
+                "NameMultiLanguage": {
+                    "en": "Big Wave Beach Brawl: Day 9",
+                    "zh": "巨浪沙滩的争斗：第9天"
+                },
+                "StageModule": "RTID(BeachStage@LevelModules)",
+                "MusicType": "MiniGame_B"
+            }
+        },
+        {
+            "aliases": [
+                "beach_fisherman_t"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(beach_fisherman_p@CurrentLevel)",
+                "ZombieBasedOn": "beach_fisherman"
+            }
+        },
+        {
+            "aliases": [
+                "beach_fisherman_p"
+            ],
+            "objclass": "ZombieProperties",
+            "objdata": {
+                "CannotBeHypnotizedByProjectiles": true,
+                "CannotBeGrabbedByPtero": true,
+                "PlantablePlants": [
+                    "tanglekelp",
+                    "ghostpepper",
+                    "solarsage",
+                    "guacodile"
+                ],
+                "DelayBeforeReeling": 0.3,
+                "DelayBetweenCasting": 2.5,
+                "CannotCarryPlantfoodsInWaves": true,
+                "LivesInDeepWater": true,
+                "WalkSPS": 0.185,
+                "EatDPS": 100,
+                "Toughness": 1000,
+                "ImmuneToGarlic": true,
+                "WavePointCost": 700,
+                "Weight": 2500,
+                "HitRect": "RTID(CommonHitRect_p1@CurrentLevel)",
+                "AttackRect": "RTID(CommonAttackRect@RectangleProps)"
+            }
+        },
+        {
+            "aliases": [
+                "CommonHitRect_p1"
+            ],
+            "objclass": "RectangleProps",
+            "objdata": {
+                "Values": {
+                    "x": -48,
+                    "y": 38,
+                    "w": 96,
+                    "h": 96
+                }
+            }
+        },
+        {
+            "aliases": [
+                "beach_octopus_t"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(beach_octopus_p@CurrentLevel)",
+                "ZombieBasedOn": "beach_octopus"
+            }
+        },
+        {
+            "aliases": [
+                "beach_octopus_p"
+            ],
+            "objclass": "ZombieProperties",
+            "objdata": {
+                "OctopusType": "octopus",
+                "TimeBeforeFirst": 7,
+                "TimeBeforeFirstAdditional": 2,
+                "TimeBetween": 11,
+                "TimeBetweenAdditional": 3,
+                "LivesInDeepWater": true,
+                "WalkSPS": 0.01,
+                "EatDPS": 100,
+                "Toughness": 910,
+                "WavePointCost": 900,
+                "Weight": 3500,
+                "HitRect": "RTID(CommonHitRect_p2@CurrentLevel)",
+                "AttackRect": "RTID(BullyAttackRect@RectangleProps)"
+            }
+        },
+        {
+            "aliases": [
+                "CommonHitRect_p2"
+            ],
+            "objclass": "RectangleProps",
+            "objdata": {
+                "Values": {
+                    "x": 48,
+                    "y": 38,
+                    "w": 96,
+                    "h": 96
+                }
+            }
+        },
+        {
+            "aliases": [
+                "planttarget_squid"
+            ],
+            "objclass": "TombstoneType",
+            "objdata": {
+                "Properties": "RTID(planttarget_squid@CurrentLevel)",
+                "TombstoneBasedOn": "planttarget_squid"
+            }
+        },
+        {
+            "aliases": [
+                "planttarget_squid"
+            ],
+            "objclass": "TombstoneProperties",
+            "objdata": {
+                "Toughness": 400,
+                "Flying": false,
+                "HotPotatoMeltable": true,
+                "GraveBusterPlantable": false,
+                "HitRect": "RTID(TombstoneRect@RectangleProps)"
+            }
+        },
+        {
+            "aliases": [
+                "Tide"
+            ],
+            "objclass": "TideProperties",
+            "objdata": {
+                "StartingWaveLocation": 1
+            }
+        },
+        {
+            "aliases": [
+                "Rails"
+            ],
+            "objclass": "RailcartProperties",
+            "objdata": {
+                "RailcartType": "railcart_beach",
+                "Railcarts": [
+                    {
+                        "Column": 4,
+                        "Row": 2
+                    }
+                ],
+                "Rails": [
+                    {
+                        "Column": 1,
+                        "RowEnd": 4,
+                        "RowStart": 0
+                    },
+                    {
+                        "Column": 2,
+                        "RowEnd": 4,
+                        "RowStart": 0
+                    },
+                    {
+                        "Column": 3,
+                        "RowEnd": 4,
+                        "RowStart": 0
+                    },
+                    {
+                        "Column": 4,
+                        "RowEnd": 4,
+                        "RowStart": 0
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "ProtectThePlant"
+            ],
+            "objclass": "ProtectThePlantChallengeProperties",
+            "objdata": {
+                "MustProtectCount": 1,
+                "Plants": [
+                    {
+                        "GridX": 4,
+                        "GridY": 2,
+                        "PlantType": "pineapple"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "InitialPlantPlacement"
+            ],
+            "objclass": "InitialPlantProperties",
+            "objdata": {
+                "InitialPlantPlacements": [
+                    {
+                        "GridX": 0,
+                        "GridY": 0,
+                        "TypeName": "guacodile"
+                    },
+                    {
+                        "GridX": 0,
+                        "GridY": 1,
+                        "TypeName": "guacodile"
+                    },
+                    {
+                        "GridX": 0,
+                        "GridY": 2,
+                        "TypeName": "guacodile"
+                    },
+                    {
+                        "GridX": 0,
+                        "GridY": 3,
+                        "TypeName": "guacodile"
+                    },
+                    {
+                        "GridX": 0,
+                        "GridY": 4,
+                        "TypeName": "guacodile"
+                    },
+                    {
+                        "GridX": 7,
+                        "GridY": 0,
+                        "TypeName": "spikerock"
+                    },
+                    {
+                        "GridX": 7,
+                        "GridY": 1,
+                        "TypeName": "spikerock"
+                    },
+                    {
+                        "GridX": 7,
+                        "GridY": 2,
+                        "TypeName": "spikerock"
+                    },
+                    {
+                        "GridX": 7,
+                        "GridY": 3,
+                        "TypeName": "spikerock"
+                    },
+                    {
+                        "GridX": 7,
+                        "GridY": 4,
+                        "TypeName": "spikerock"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "SeedBank"
+            ],
+            "objclass": "SeedBankProperties",
+            "objdata": {
+                "PresetPlantList": [
+                    {
+                        "Level": -1,
+                        "PlantType": "hotpotato"
+                    }
+                ],
+                "SelectionMethod": "preset"
+            }
+        },
+        {
+            "aliases": [
+                "NewWaves"
+            ],
+            "objclass": "WaveManagerModuleProperties",
+            "objdata": {
+                "DynamicZombies": [
+                    {
+                        "PointIncrementPerWave": -45,
+                        "StartingPoints": -200,
+                        "StartingWave": 3,
+                        "ZombiePool": [
+                            "RTID(beach_armor1@ZombieTypes)",
+                            "RTID(beach_fem_armor1@ZombieTypes)"
+                        ]
+                    },
+                    {
+                        "PointIncrementPerWave": -30,
+                        "StartingPoints": -200,
+                        "StartingWave": 4,
+                        "ZombiePool": [
+                            "RTID(beach_armor1@ZombieTypes)",
+                            "RTID(beach_fem_armor1@ZombieTypes)"
+                        ]
+                    },
+                    {
+                        "PointIncrementPerWave": -20,
+                        "StartingPoints": -200,
+                        "StartingWave": 5,
+                        "ZombiePool": [
+                            "RTID(beach_armor1@ZombieTypes)",
+                            "RTID(beach_fem_armor1@ZombieTypes)"
+                        ]
+                    },
+                    {},
+                    {
+                        "PointIncrementPerWave": 2,
+                        "StartingPoints": 20,
+                        "StartingWave": 5,
+                        "ZombiePool": [
+                            "RTID(beach_armor1@ZombieTypes)",
+                            "RTID(beach_fem_armor1@ZombieTypes)"
+                        ]
+                    },
+                    {
+                        "PointIncrementPerWave": 4,
+                        "StartingPoints": 40,
+                        "StartingWave": 4,
+                        "ZombiePool": [
+                            "RTID(beach_armor1@ZombieTypes)",
+                            "RTID(beach_fem_armor1@ZombieTypes)"
+                        ]
+                    },
+                    {
+                        "PointIncrementPerWave": 8,
+                        "StartingPoints": 60,
+                        "StartingWave": 3,
+                        "ZombiePool": [
+                            "RTID(beach_armor1@ZombieTypes)",
+                            "RTID(beach_fem_armor1@ZombieTypes)"
+                        ]
+                    }
+                ],
+                "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+            }
+        },
+        {
+            "aliases": [
+                "WaveManagerProps"
+            ],
+            "objclass": "WaveManagerProperties",
+            "objdata": {
+                "ZombieCountdownFirstWaveSecs": 1,
+                "MaxNextWaveHealthPercentage": 0.45,
+                "MinNextWaveHealthPercentage": 0.45,
+                "FlagWaveInterval": 3,
+                "WaveCount": 9,
+                "FlagWaveVeteranOverrideTypes": [
+                    0,
+                    0,
+                    0
+                ],
+                "Waves": [
+                    [
+                        "RTID(Wave1@CurrentLevel)",
+                        "RTID(Wave1add@CurrentLevel)",
+                        "RTID(TidalChange0@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave2@CurrentLevel)",
+                        "RTID(Wave2add1@CurrentLevel)",
+                        "RTID(Wave2add2@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave3@CurrentLevel)",
+                        "RTID(Wave3add1@CurrentLevel)",
+                        "RTID(Wave3add2@CurrentLevel)",
+                        "RTID(TidalChange0@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave4@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave5@CurrentLevel)",
+                        "RTID(TidalChange0@CurrentLevel)",
+                        "RTID(Wave5add@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave6@CurrentLevel)",
+                        "RTID(Wave6add@CurrentLevel)",
+                        "RTID(TidalChange0@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave7@CurrentLevel)",
+                        "RTID(Wave7add@CurrentLevel)",
+                        "RTID(TidalChange0@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave8@CurrentLevel)",
+                        "RTID(Wave8add@CurrentLevel)",
+                        "RTID(TidalChange0@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave9@CurrentLevel)",
+                        "RTID(Wave9add1@CurrentLevel)",
+                        "RTID(Wave9add2@CurrentLevel)"
+                    ]
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "TidalChange0"
+            ],
+            "objclass": "TidalChangeWaveActionProps",
+            "objdata": {
+                "TidalChange": {
+                    "ChangeAmount": 0,
+                    "ChangeType": "absolute"
+                }
+            }
+        },
+        {
+            "aliases": [
+                "TidalChange1"
+            ],
+            "objclass": "TidalChangeWaveActionProps",
+            "objdata": {
+                "TidalChange": {
+                    "ChangeAmount": 1,
+                    "ChangeType": "absolute"
+                }
+            }
+        },
+        {
+            "aliases": [
+                "TidalChange9"
+            ],
+            "objclass": "TidalChangeWaveActionProps",
+            "objdata": {
+                "TidalChange": {
+                    "ChangeAmount": 9,
+                    "ChangeType": "absolute"
+                }
+            }
+        },
+        {
+            "aliases": [
+                "Wave1"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "WaveStartMessage": "[WARNING_LOW_TIDE]",
+                "Zombies": [
+                    {
+                        "Row": "3",
+                        "Type": "RTID(beach_fisherman_t@CurrentLevel)"
+                    },
+                    {
+                        "Row": "3",
+                        "Column": "9",
+                        "Type": "RTID(beach_armor1@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave1add"
+            ],
+            "objclass": "WaveSchedulerProps",
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Max": 3,
+                    "Min": 3
+                },
+                "TimeBetween": {
+                    "Max": 5,
+                    "Min": 5
+                },
+                "Repeat": {
+                    "Max": 1,
+                    "Min": 1
+                },
+                "Events": [
+                    "RTID(TidalChange1@CurrentLevel)"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave2"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "4",
+                        "Type": "RTID(beach_fisherman_t@CurrentLevel)"
+                    }
+                ],
+                "MustKillAllToNextWave": true
+            }
+        },
+        {
+            "aliases": [
+                "Wave2add1"
+            ],
+            "objclass": "WaveSchedulerProps",
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Max": 3,
+                    "Min": 3
+                },
+                "TimeBetween": {
+                    "Max": 5,
+                    "Min": 5
+                },
+                "Repeat": {
+                    "Max": 1,
+                    "Min": 1
+                },
+                "Events": [
+                    "RTID(Wave2addProp@CurrentLevel)",
+                    "RTID(TidalChange0@CurrentLevel)"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave2addProp"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "WaveStartMessage": "[WARNING_LOW_TIDE]",
+                "Zombies": [
+                    {
+                        "Row": "2",
+                        "Type": "RTID(beach_fisherman_t@CurrentLevel)"
+                    },
+                    {
+                        "Row": "2",
+                        "Column": "9",
+                        "Type": "RTID(beach_armor1@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave2add2"
+            ],
+            "objclass": "WaveSchedulerProps",
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Max": 6,
+                    "Min": 6
+                },
+                "TimeBetween": {
+                    "Max": 5,
+                    "Min": 5
+                },
+                "Repeat": {
+                    "Max": 1,
+                    "Min": 1
+                },
+                "Events": [
+                    "RTID(TidalChange1@CurrentLevel)"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave3"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "WaveStartMessage": "[WARNING_LOW_TIDE]",
+                "Zombies": [
+                    {
+                        "Row": "1",
+                        "Type": "RTID(beach_fisherman_t@CurrentLevel)"
+                    },
+                    {
+                        "Row": "1",
+                        "Column": "9",
+                        "Type": "RTID(beach_fem_armor1@ZombieTypes)"
+                    }
+                ],
+                "MustKillAllToNextWave": true
+            }
+        },
+        {
+            "aliases": [
+                "Wave3add1"
+            ],
+            "objclass": "WaveSchedulerProps",
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Max": 3,
+                    "Min": 3
+                },
+                "TimeBetween": {
+                    "Max": 4,
+                    "Min": 4
+                },
+                "Repeat": {
+                    "Max": 2,
+                    "Min": 2
+                },
+                "Events": [
+                    "RTID(Wave3addProp@CurrentLevel)"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave3addProp"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(beach_fisherman_t@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave3add2"
+            ],
+            "objclass": "WaveSchedulerProps",
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Max": 6,
+                    "Min": 6
+                },
+                "TimeBetween": {
+                    "Max": 4,
+                    "Min": 4
+                },
+                "Repeat": {
+                    "Max": 1,
+                    "Min": 1
+                },
+                "Events": [
+                    "RTID(TidalChange1@CurrentLevel)"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave4"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "2",
+                        "Type": "RTID(beach_fisherman_t@CurrentLevel)"
+                    },
+                    {
+                        "Row": "???",
+                        "Column": "7",
+                        "Type": "RTID(beach_octopus_t@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave5"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "WaveStartMessage": "[WARNING_LOW_TIDE]",
+                "Zombies": [
+                    {
+                        "Row": "1",
+                        "Column": "7",
+                        "Type": "RTID(beach_octopus_t@CurrentLevel)"
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(beach_fisherman_t@CurrentLevel)"
+                    },
+                    {
+                        "Row": "5",
+                        "Column": "9",
+                        "Type": "RTID(beach_armor1@ZombieTypes)"
+                    }
+                ],
+                "MustKillAllToNextWave": true
+            }
+        },
+        {
+            "aliases": [
+                "Wave5add"
+            ],
+            "objclass": "WaveSchedulerProps",
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Max": 3,
+                    "Min": 3
+                },
+                "TimeBetween": {
+                    "Max": 5,
+                    "Min": 5
+                },
+                "Repeat": {
+                    "Max": 1,
+                    "Min": 1
+                },
+                "Events": [
+                    "RTID(Wave5addProp@CurrentLevel)",
+                    "RTID(TidalChange1@CurrentLevel)"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave5addProp"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "3",
+                        "Type": "RTID(beach_fisherman_t@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave6"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "WaveStartMessage": "[WARNING_LOW_TIDE]",
+                "Zombies": [
+                    {
+                        "Row": "2",
+                        "Column": "7",
+                        "Type": "RTID(beach_octopus_t@CurrentLevel)"
+                    },
+                    {
+                        "Row": "1",
+                        "Type": "RTID(beach_fisherman_t@CurrentLevel)"
+                    },
+                    {
+                        "Row": "4",
+                        "Type": "RTID(beach_fisherman_t@CurrentLevel)"
+                    },
+                    {
+                        "Row": "4",
+                        "Column": "9",
+                        "Type": "RTID(beach_fem_armor1@ZombieTypes)"
+                    }
+                ],
+                "MustKillAllToNextWave": true
+            }
+        },
+        {
+            "aliases": [
+                "Wave6add"
+            ],
+            "objclass": "WaveSchedulerProps",
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Max": 3,
+                    "Min": 3
+                },
+                "TimeBetween": {
+                    "Max": 4,
+                    "Min": 4
+                },
+                "Repeat": {
+                    "Max": 2,
+                    "Min": 2
+                },
+                "Events": [
+                    "RTID(Wave6addProp@CurrentLevel)",
+                    "RTID(TidalChange1@CurrentLevel)"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave6addProp"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(beach_fisherman_t@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave7"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "WaveStartMessage": "[WARNING_LOW_TIDE]",
+                "Zombies": [
+                    {
+                        "Row": "5",
+                        "Column": "7",
+                        "Type": "RTID(beach_octopus_t@CurrentLevel)"
+                    },
+                    {
+                        "Row": "2",
+                        "Type": "RTID(beach_fisherman_t@CurrentLevel)"
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(beach_fisherman_t@CurrentLevel)"
+                    },
+                    {
+                        "Row": "5",
+                        "Column": "9",
+                        "Type": "RTID(beach_fem_armor1@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave7add"
+            ],
+            "objclass": "WaveSchedulerProps",
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Max": 3,
+                    "Min": 3
+                },
+                "TimeBetween": {
+                    "Max": 4,
+                    "Min": 4
+                },
+                "Repeat": {
+                    "Max": 1,
+                    "Min": 1
+                },
+                "Events": [
+                    "RTID(Wave7addProp@CurrentLevel)",
+                    "RTID(TidalChange1@CurrentLevel)"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave7addProp"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(beach_fisherman_t@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave8"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "WaveStartMessage": "[WARNING_LOW_TIDE]",
+                "Zombies": [
+                    {
+                        "Row": "3",
+                        "Column": "7",
+                        "Type": "RTID(beach_octopus_t@CurrentLevel)"
+                    },
+                    {
+                        "Row": "5",
+                        "Column": "7",
+                        "Type": "RTID(beach_octopus_t@CurrentLevel)"
+                    },
+                    {
+                        "Row": "1",
+                        "Type": "RTID(beach_fisherman_t@CurrentLevel)"
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(beach_fisherman_t@CurrentLevel)"
+                    },
+                    {
+                        "Row": "5",
+                        "Column": "9",
+                        "Type": "RTID(beach_armor1@ZombieTypes)"
+                    }
+                ],
+                "MustKillAllToNextWave": true
+            }
+        },
+        {
+            "aliases": [
+                "Wave8add"
+            ],
+            "objclass": "WaveSchedulerProps",
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Max": 3,
+                    "Min": 3
+                },
+                "TimeBetween": {
+                    "Max": 4,
+                    "Min": 4
+                },
+                "Repeat": {
+                    "Max": 1,
+                    "Min": 1
+                },
+                "Events": [
+                    "RTID(Wave8addProp@CurrentLevel)",
+                    "RTID(TidalChange1@CurrentLevel)"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave8addProp"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(beach_fisherman_t@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave9"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "WaveStartMessage": "[WARNING_LOW_TIDE]",
+                "Zombies": [
+                    {
+                        "Row": "4",
+                        "Column": "7",
+                        "Type": "RTID(beach_octopus_t@CurrentLevel)"
+                    },
+                    {
+                        "Row": "2",
+                        "Type": "RTID(beach_fisherman_t@CurrentLevel)"
+                    },
+                    {
+                        "Row": "3",
+                        "Type": "RTID(beach_fisherman_t@CurrentLevel)"
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(beach_fisherman_t@CurrentLevel)"
+                    },
+                    {
+                        "Row": "2",
+                        "Column": "9",
+                        "Type": "RTID(beach_fem_armor1@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave9add1"
+            ],
+            "objclass": "WaveSchedulerProps",
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Max": 3,
+                    "Min": 3
+                },
+                "TimeBetween": {
+                    "Max": 4,
+                    "Min": 4
+                },
+                "Repeat": {
+                    "Max": 3,
+                    "Min": 3
+                },
+                "Events": [
+                    "RTID(Wave9addProp1@CurrentLevel)"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave9addProp1"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(beach_fisherman_t@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave9add2"
+            ],
+            "objclass": "WaveSchedulerProps",
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Max": 15,
+                    "Min": 15
+                },
+                "TimeBetween": {
+                    "Max": 4,
+                    "Min": 4
+                },
+                "Repeat": {
+                    "Max": 1,
+                    "Min": 1
+                },
+                "Events": [
+                    "RTID(TidalChange9@CurrentLevel)",
+                    "RTID(Wave9addProp2@CurrentLevel)"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave9addProp2"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(beach_surfer_veteran@ZombieTypes)",
+                        "Row": "1"
+                    },
+                    {
+                        "Type": "RTID(beach_surfer_veteran@ZombieTypes)",
+                        "Row": "2"
+                    },
+                    {
+                        "Type": "RTID(beach_surfer_veteran@ZombieTypes)",
+                        "Row": "3"
+                    },
+                    {
+                        "Type": "RTID(beach_surfer_veteran@ZombieTypes)",
+                        "Row": "4"
+                    },
+                    {
+                        "Type": "RTID(beach_surfer_veteran@ZombieTypes)",
+                        "Row": "5"
+                    }
+                ]
+            }
+        }
+    ],
+    "version": 1
+}

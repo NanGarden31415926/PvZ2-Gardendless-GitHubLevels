@@ -1,0 +1,428 @@
+{
+    "#comment": "回溯",
+    "objects": [
+        {
+            "objclass": "LevelDefinition",
+            "objdata": {
+                "DescriptionMultiLanguage": {
+                    "en": "This Is Description",
+                    "zh": "介四描述"
+                },
+                "ForceToWorldMap": true,
+                "GameOverDialogShowBrain": false,
+                "Loot": "RTID(DefaultLoot@LevelModules)",
+                "Modules": [
+                    "RTID(DefaultSunDropper@LevelModules)",
+                    "RTID(StandardIntro@LevelModules)",
+                    "RTID(ZombiesDeadWinCon@LevelModules)",
+                    "RTID(ChallengeModule@CurrentLevel)",
+                    "RTID(SeedBank@CurrentLevel)",
+                    "RTID(LevelEscalationModule@CurrentLevel)",
+                    "RTID(DefaultZombieWinCondition@LevelModules)"
+                ],
+                "MusicType": "MiniGame_B",
+                "NameMultiLanguage": {
+                    "en": "building",
+                    "zh": "building"
+                },
+                "WrittenBy": "莱池_余垛",
+                "StageModule": "RTID(TutorialStage@LevelModules)"
+            }
+        },
+        {
+            "aliases": [
+                "ChallengeModule"
+            ],
+            "objclass": "StarChallengeModuleProperties",
+            "objdata": {
+                "Challenges": [
+                    [
+                        "RTID(BeatTheLevel@CurrentLevel)"
+                    ]
+                ],
+                "ChallengesAlwaysAvailable": true
+            }
+        },
+        {
+            "aliases": [
+                "BeatTheLevel"
+            ],
+            "objclass": "StarChallengeBeatTheLevelProps",
+            "objdata": {
+                "DescriptionsMultilanguage": [
+                    {
+                        "en": "This Level Is Demonstration",
+                        "zh": "介是演示"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "thesunflower"
+            ],
+            "objclass": "PlantType",
+            "objdata": {
+                "PlantBasedOn": "seedling",
+                "Properties": "RTID(sunflowerprop@CurrentLevel)",
+                "ShiftedPlantFeatures": {
+                    "ID": 1,
+                    "NAME": {
+                        "en": "Sunflower",
+                        "zh": "向日葵"
+                    },
+                    "_CARDSPRITENAME": "sunflower",
+                    "CODENAME": "sunflower",
+                    "TYPE": [
+                        "plant",
+                        "sunProducer"
+                    ],
+                    "COSTUME": 8,
+                    "OBTAINWORLD": "homeless",
+                    "ZENGARDEN": {
+                        "PlantPlace": "dirt"
+                    },
+                    "BOOST": 2,
+                    "ALMANAC": "RTID(sunflower@PlantAlmanac)",
+                    "PROPS": "RTID(sunflower@PlantProps)",
+                    "RES": {
+                        "Disabled": "Sunflower"
+                    }
+                }
+            }
+        },
+        {
+            "aliases": [
+                "sunflowerprop"
+            ],
+            "objclass": "PlantProperties",
+            "objdata": {
+                "Cooldown": 5,
+                "CooldownFrom": 0,
+                "SunCost": 50,
+                "BeghouledCost": 2000,
+                "Toughness": 300,
+                "Family": "Sun",
+                "Explode0Damage": 0,
+                "Explode0SeedlingCount": 0,
+                "Explode1Damage": 0,
+                "Explode1SeedlingCount": 0,
+                "GrowUpType": "sunflower",
+                "GrowingTime": 5,
+                "ExplodeProjectileType": "atombomb",
+                "SeedlingType": "seedling",
+                "PlantfoodCallingType": [
+                    "atombomb",
+                    "seedling"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "therepeater"
+            ],
+            "objclass": "PlantType",
+            "objdata": {
+                "PlantBasedOn": "seedling",
+                "Properties": "RTID(repeaterprop@CurrentLevel)",
+                "ShiftedPlantFeatures": {
+                    "ID": 8,
+                    "NAME": {
+                        "en": "Repeater",
+                        "zh": "双重射手"
+                    },
+                    "_CARDSPRITENAME": "repeater",
+                    "CODENAME": "repeater",
+                    "TYPE": [
+                        "plant"
+                    ],
+                    "COSTUME": 9,
+                    "OBTAINWORLD": "homeless",
+                    "ZENGARDEN": {
+                        "PlantPlace": "dirt"
+                    },
+                    "BOOST": 2,
+                    "ALMANAC": "RTID(repeater@PlantAlmanac)",
+                    "PROPS": "RTID(repeater@PlantProps)",
+                    "RES": {
+                        "Disabled": "Repeater"
+                    }
+                }
+            }
+        },
+        {
+            "aliases": [
+                "repeaterprop"
+            ],
+            "objclass": "PlantProperties",
+            "objdata": {
+                "Cooldown": 5,
+                "CooldownFrom": 0.75,
+                "SunCost": 200,
+                "BeghouledCost": 2000,
+                "Toughness": 300,
+                "Family": "Sun",
+                "Explode0Damage": 0,
+                "Explode0SeedlingCount": 0,
+                "Explode1Damage": 0,
+                "Explode1SeedlingCount": 0,
+                "GrowUpType": "repeater",
+                "GrowingTime": 10,
+                "ExplodeProjectileType": "atombomb",
+                "SeedlingType": "seedling",
+                "PlantfoodCallingType": [
+                    "atombomb",
+                    "seedling"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "thewallnut"
+            ],
+            "objclass": "PlantType",
+            "objdata": {
+                "PlantBasedOn": "seedling",
+                "Properties": "RTID(wallnutprop@CurrentLevel)",
+                "ShiftedPlantFeatures": {
+                    "ID": 2,
+                    "NAME": {
+                        "en": "Wall-nut",
+                        "zh": "坚果墙"
+                    },
+                    "_CARDSPRITENAME": "wallnut",
+                    "CODENAME": "wallnut",
+                    "TYPE": [
+                        "plant"
+                    ],
+                    "COSTUME": 9,
+                    "OBTAINWORLD": "homeless",
+                    "ZENGARDEN": {
+                        "PlantPlace": "dirt"
+                    },
+                    "BOOST": 2,
+                    "ALMANAC": "RTID(wallnut@PlantAlmanac)",
+                    "PROPS": "RTID(wallnut@PlantProps)",
+                    "RES": {
+                        "Disabled": "Wallnut"
+                    }
+                }
+            }
+        },
+        {
+            "aliases": [
+                "wallnutprop"
+            ],
+            "objclass": "PlantProperties",
+            "objdata": {
+                "Cooldown": 20,
+                "CooldownFrom": 0.5,
+                "SunCost": 50,
+                "BeghouledCost": 2000,
+                "Toughness": 300,
+                "Family": "Sun",
+                "Explode0Damage": 0,
+                "Explode0SeedlingCount": 0,
+                "Explode1Damage": 0,
+                "Explode1SeedlingCount": 0,
+                "GrowUpType": "wallnut",
+                "GrowingTime": 7,
+                "ExplodeProjectileType": "atombomb",
+                "SeedlingType": "seedling",
+                "PlantfoodCallingType": [
+                    "atombomb",
+                    "seedling"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "thebanana"
+            ],
+            "objclass": "PlantType",
+            "objdata": {
+                "PlantBasedOn": "seedling",
+                "Properties": "RTID(bananaprop@CurrentLevel)",
+                "ShiftedPlantFeatures": {
+                    "ID": 43,
+                    "NAME": {
+                        "en": "Banana Launcher",
+                        "zh": "香蕉火箭炮"
+                    },
+                    "_CARDSPRITENAME": "banana",
+                    "CODENAME": "banana",
+                    "TYPE": [
+                        "plant"
+                    ],
+                    "OBTAINWORLD": "homeless",
+                    "ZENGARDEN": {
+                        "PlantPlace": "dirt"
+                    },
+                    "BOOST": 2,
+                    "COSTUME": 1,
+                    "ALMANAC": "RTID(bananaAlmanac@CurrentLevel)",
+                    "PROPS": "RTID(banana@PlantProps)",
+                    "RES": {
+                        "Disabled": "BananaLauncher"
+                    }
+                }
+            }
+        },
+        {
+            "aliases": [
+                "bananaAlmanac"
+            ],
+            "objclass": "PlantAlmanacProperties",
+            "objdata": {
+                "Introduction": {
+                    "en": "图鉴",
+                    "zh": "图鉴"
+                },
+                "BriefIntroduction": {
+                    "en": "Click on banana, then a tile, to launch explosive banana",
+                    "zh": "点击后，选择一格发射爆炸香蕉子弹"
+                }
+            }
+        },
+        {
+            "aliases": [
+                "bananaprop"
+            ],
+            "objclass": "PlantProperties",
+            "objdata": {
+                "Cooldown": 5,
+                "CooldownFrom": 1,
+                "SunCost": 500,
+                "BeghouledCost": 2000,
+                "Toughness": 300,
+                "Family": "Sun",
+                "Explode0Damage": 0,
+                "Explode0SeedlingCount": 0,
+                "Explode1Damage": 0,
+                "Explode1SeedlingCount": 0,
+                "GrowUpType": "banana",
+                "GrowingTime": 15,
+                "ExplodeProjectileType": "atombomb",
+                "SeedlingType": "seedling",
+                "PlantfoodCallingType": [
+                    "atombomb",
+                    "seedling"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "SeedBank"
+            ],
+            "objclass": "SeedBankProperties",
+            "objdata": {
+                "PresetPlantList": [
+                    {
+                        "Level": -1,
+                        "PlantType": "thesunflower"
+                    },
+                    {
+                        "Level": -1,
+                        "PlantType": "therepeater"
+                    },
+                    {
+                        "Level": -1,
+                        "PlantType": "thewallnut"
+                    },
+                    {
+                        "Level": -1,
+                        "PlantType": "thebanana"
+                    }
+                ],
+                "UnlockAll": true,
+                "OverrideSeedSlotsCount": 4,
+                "SelectionMethod": "preset"
+            }
+        },
+        {
+            "aliases": [
+                "LevelEscalationModule"
+            ],
+            "objclass": "LevelEscalationModuleProperties",
+            "objdata": {
+                "PlantfoodToSpawnCount": 3,
+                "PointIncrementPerWave": 100,
+                "StartingPoints": 100,
+                "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)",
+                "ZombiePool": [
+                    "RTID(tutorial@ZombieTypes)",
+                    "RTID(tutorial_armor1@ZombieTypes)",
+                    "RTID(tutorial_armor2@ZombieTypes)",
+                    "RTID(tutorial_gargantuar@ZombieTypes)"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "WaveManagerProps"
+            ],
+            "objclass": "WaveManagerProperties",
+            "objdata": {
+                "FlagWaveInterval": 8,
+                "WaveCount": 16,
+                "LevelJamList": [
+                    "jam_punk",
+                    "jam_8bit"
+                ],
+                "WaveSpendingPointIncrement": 100,
+                "WaveSpendingPoints": 100,
+                "Waves": [
+                    [
+                        "RTID(Wave1@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave2@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave3@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave4@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave5@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave6@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave7@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave8@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave9@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave10@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave11@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave12@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave13@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave14@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave15@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave16@CurrentLevel)"
+                    ]
+                ]
+            }
+        }
+    ],
+    "version": 1
+}

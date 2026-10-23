@@ -1,0 +1,756 @@
+{
+    "#comment": "2009_1",
+    "objects": [
+        {
+            "objclass": "LevelDefinition",
+            "objdata": {
+                "Description": "<PLAYERNAME>'s Frontyard",
+                "LevelNumber": 12,
+                "Loot": "RTID(DefaultLoot@LevelModules)",
+                "Modules": [
+                    "RTID(StandardIntro@LevelModules)",
+                    "RTID(ModPlantsNight@CurrentLevel)",
+                    "RTID(ModernMowers@LevelModules)",
+                    "RTID(DefaultZombieWinCondition@LevelModules)",
+                    "RTID(LevelEscalationModule@CurrentLevel)",
+                    "RTID(ZombiesDeadWinCon@LevelModules)",
+                    "RTID(SeedBank@CurrentLevel)",
+                    "RTID(NewWaves@CurrentLevel)",
+                    "RTID(ZombossBattle@CurrentLevel)",
+                    "RTID(Camera@CurrentLevel)"
+                ],
+                "Name": "The Errors ACT2-Night<LEVELNUMBER>",
+                "WrittenBy": "莱池_余垛",
+                "StageModule": "RTID(ModernStage@LevelModules)"
+            }
+        },
+        {
+            "aliases": [
+                "ZombossBattle"
+            ],
+            "objclass": "ZombossBattleModuleProperties",
+            "objdata": {
+                "ReservedColumnCount": 3,
+                "ZombossDeathColumn": 5,
+                "ZombossDeathRow": 3,
+                "ZombossMechType": "the_zombossmech",
+                "ZombossSpawnGridPosition": {
+                    "mX": 6,
+                    "mY": 3
+                }
+            }
+        },
+        {
+            "aliases": [
+                "the_zombossmech"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(the_zombossmechprop@CurrentLevel)",
+                "ZombieBasedOn": "zombossmech_future"
+            }
+        },
+        {
+            "aliases": [
+                "the_zombossmechprop"
+            ],
+            "objclass": "ZombieProperties",
+            "objdata": {
+                "MissileType": "zomboss_missile_future",
+                "CannotBeEnlightenedBySolarSage": true,
+                "ImmuneToSweetPotato": true,
+                "ImmuneToShrinkingViolet": true,
+                "ZombieSort": "Zomboss",
+                "CannotBeGrabbedByPtero": true,
+                "CannotBeDetectedByPowerToss": true,
+                "CannotBeDraggedByTangleKelp": true,
+                "CannotBeTossedByCitron": true,
+                "CannotBeDetectedBySapfling": true,
+                "CannotBeSwallowedByChomper": true,
+                "ChiliStunDurationMult": 0,
+                "CannotCarryPlantfoodsInWaves": true,
+                "FoeEatDamageReflectPct": 0.5,
+                "LivesInDeepWater": true,
+                "WalkSPS": 0.185,
+                "EatDPS": 100,
+                "Toughness": 190,
+                "ImmuneToGarlic": true,
+                "WavePointCost": 100,
+                "Weight": 0,
+                "HitRect": "RTID(ZombossMechHitRect@RectangleProps)",
+                "AttackRect": "RTID(ZombossMechAttackRect@RectangleProps)",
+                "ZombossMechLevel": 0,
+                "ZombossStages": [
+                    {
+                        "Actions": [
+                            {
+                                "actionName": "walk",
+                                "summonProps": {
+                                    "zombieList": [],
+                                    "pointMin": 1000,
+                                    "pointMax": 2000
+                                },
+                                "weight": 5,
+                                "repeatMax": 3,
+                                "repeatMin": 2
+                            },
+                            {
+                                "actionName": "summon",
+                                "summonProps": {
+                                    "zombieList": [
+                                        "tutorial",
+                                        "tutorial_armor1",
+                                        "tutorial_armor2"
+                                    ],
+                                    "pointMin": 200,
+                                    "pointMax": 400,
+                                    "plantfoodchance": 0
+                                },
+                                "weight": 12,
+                                "repeatMax": 1,
+                                "repeatMin": 1,
+                                "plantfoodchance": 0
+                            }
+                        ],
+                        "AnimRateModifier": 1,
+                        "ChilledDurationFromFrozen": 10,
+                        "DamageIndexFull": 0,
+                        "DamageIndexHalf": 0,
+                        "HitPoints": 3000,
+                        "MaxIdleTime": 6,
+                        "MinIdleTime": 4,
+                        "StunDamageScale": 1.25,
+                        "StunStaggerBackMovement": 1,
+                        "StunStaggerBackTime": 0.4,
+                        "StunTime": 3
+                    },
+                    {
+                        "Actions": [
+                            {
+                                "actionName": "walk",
+                                "summonProps": {
+                                    "zombieList": [],
+                                    "pointMin": 1000,
+                                    "pointMax": 2000
+                                },
+                                "weight": 5,
+                                "repeatMax": 3,
+                                "repeatMin": 2
+                            },
+                            {
+                                "actionName": "summon",
+                                "summonProps": {
+                                    "zombieList": [
+                                        "tutorial",
+                                        "tutorial_armor1",
+                                        "tutorial_armor2"
+                                    ],
+                                    "pointMin": 600,
+                                    "pointMax": 800,
+                                    "plantfoodchance": 0
+                                },
+                                "weight": 12,
+                                "repeatMax": 2,
+                                "repeatMin": 1,
+                                "plantfoodchance": 0
+                            }
+                        ],
+                        "AnimRateModifier": 1,
+                        "ChilledDurationFromFrozen": 10,
+                        "DamageIndexFull": 0,
+                        "DamageIndexHalf": 0,
+                        "HitPoints": 5000,
+                        "MaxIdleTime": 4,
+                        "MinIdleTime": 3,
+                        "StunDamageScale": 1.25,
+                        "StunStaggerBackMovement": 1,
+                        "StunStaggerBackTime": 0.4,
+                        "StunTime": 3
+                    },
+                    {
+                        "Actions": [
+                            {
+                                "actionName": "summon",
+                                "summonProps": {
+                                    "zombieList": [
+                                        "error_tutorial_imp",
+                                        "error_tutorial_imp_armor2",
+                                        "error_newspaper"
+                                    ],
+                                    "pointMin": 1000,
+                                    "pointMax": 1500,
+                                    "plantfoodchance": 0
+                                },
+                                "weight": 14,
+                                "repeatMax": 1,
+                                "repeatMin": 1,
+                                "plantfoodchance": 0
+                            },
+                            {
+                                "actionName": "walk",
+                                "summonProps": {
+                                    "zombieList": [],
+                                    "pointMin": 1000,
+                                    "pointMax": 2000
+                                },
+                                "weight": 3,
+                                "repeatMax": 1,
+                                "repeatMin": 1
+                            },
+                            {
+                                "actionName": "shoot",
+                                "summonProps": {
+                                    "zombieList": [],
+                                    "pointMin": 1000,
+                                    "pointMax": 2000
+                                },
+                                "weight": 4,
+                                "repeatMax": 2,
+                                "repeatMin": 1
+                            }
+                        ],
+                        "AnimRateModifier": 1.1,
+                        "ChilledDurationFromFrozen": 10,
+                        "DamageIndexFull": 3,
+                        "DamageIndexHalf": 3,
+                        "HitPoints": 7000,
+                        "MaxIdleTime": 3,
+                        "MinIdleTime": 2,
+                        "StunDamageScale": 1.25,
+                        "StunStaggerBackMovement": 1,
+                        "StunStaggerBackTime": 0.4,
+                        "StunTime": 2.5
+                    },
+                    {
+                        "Actions": [
+                            {
+                                "actionName": "walk",
+                                "summonProps": {
+                                    "zombieList": [],
+                                    "pointMin": 1000,
+                                    "pointMax": 2000
+                                },
+                                "weight": 3,
+                                "repeatMax": 2,
+                                "repeatMin": 3
+                            },
+                            {
+                                "actionName": "summon",
+                                "summonProps": {
+                                    "zombieList": [
+                                        "error_zomboni",
+                                        "lostcity_jane",
+                                        "error_excavator_armor2",
+                                        "error_allstar",
+                                        "tutorial_gargantuar"
+                                    ],
+                                    "pointMin": 1500,
+                                    "pointMax": 1750,
+                                    "plantfoodchance": 0
+                                },
+                                "weight": 12,
+                                "repeatMax": 1,
+                                "repeatMin": 1,
+                                "plantfoodchance": 0
+                            },
+                            {
+                                "actionName": "shoot",
+                                "summonProps": {
+                                    "zombieList": [],
+                                    "pointMin": 1000,
+                                    "pointMax": 2000
+                                },
+                                "weight": 6,
+                                "repeatMax": 2,
+                                "repeatMin": 2
+                            },
+                            {
+                                "actionName": "rush",
+                                "summonProps": {
+                                    "zombieList": [],
+                                    "pointMin": 1000,
+                                    "pointMax": 2000
+                                },
+                                "weight": 4,
+                                "repeatMax": 1,
+                                "repeatMin": 1
+                            }
+                        ],
+                        "AnimRateModifier": 1.25,
+                        "ChilledDurationFromFrozen": 10,
+                        "DamageIndexFull": 6,
+                        "DamageIndexHalf": 6,
+                        "HitPoints": 11000,
+                        "MaxIdleTime": 2,
+                        "MinIdleTime": 1,
+                        "StunDamageScale": 1.25,
+                        "StunStaggerBackMovement": 1,
+                        "StunStaggerBackTime": 0.4,
+                        "StunTime": 2
+                    },
+                    {
+                        "Actions": [
+                            {
+                                "actionName": "walk",
+                                "summonProps": {
+                                    "zombieList": [],
+                                    "pointMin": 1000,
+                                    "pointMax": 2000
+                                },
+                                "weight": 3,
+                                "repeatMax": 2,
+                                "repeatMin": 3
+                            },
+                            {
+                                "actionName": "summon",
+                                "summonProps": {
+                                    "zombieList": [
+                                        "error_zomboni",
+                                        "lostcity_jane",
+                                        "error_excavator_armor2",
+                                        "error_allstar",
+                                        "tutorial_gargantuar"
+                                    ],
+                                    "pointMin": 2000,
+                                    "pointMax": 2250,
+                                    "plantfoodchance": 0
+                                },
+                                "weight": 12,
+                                "repeatMax": 2,
+                                "repeatMin": 2,
+                                "plantfoodchance": 0
+                            },
+                            {
+                                "actionName": "shoot",
+                                "summonProps": {
+                                    "zombieList": [],
+                                    "pointMin": 1000,
+                                    "pointMax": 2000
+                                },
+                                "weight": 6,
+                                "repeatMax": 4,
+                                "repeatMin": 2
+                            },
+                            {
+                                "actionName": "rush",
+                                "summonProps": {
+                                    "zombieList": [],
+                                    "pointMin": 1000,
+                                    "pointMax": 2000
+                                },
+                                "weight": 12,
+                                "repeatMax": 1,
+                                "repeatMin": 1
+                            }
+                        ],
+                        "AnimRateModifier": 1.25,
+                        "ChilledDurationFromFrozen": 10,
+                        "DamageIndexFull": 6,
+                        "DamageIndexHalf": 6,
+                        "HitPoints": 14000,
+                        "MaxIdleTime": 2,
+                        "MinIdleTime": 1,
+                        "StunDamageScale": 1.25,
+                        "StunStaggerBackMovement": 1,
+                        "StunStaggerBackTime": 0.4,
+                        "StunTime": 2
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Camera"
+            ],
+            "objclass": "LawnCameraProps",
+            "objdata": {
+                "MaterialProps": {
+                    "//": "Better delete this property if not used",
+                    "MultColor": {
+                        "r": 255,
+                        "g": 75,
+                        "b": 75
+                    },
+                    "AddColor": {
+                        "r": 10,
+                        "g": -5,
+                        "b": -5
+                    },
+                    "Chill": 0,
+                    "Gold": 0,
+                    "Saturation": -0.3
+                },
+                "DontClear": false,
+                "//": "Dont change it yet.",
+                "OrthoHeight": 320,
+                "Offset": {
+                    "x": 0,
+                    "y": 0
+                }
+            }
+        },
+        {
+            "aliases": [
+                "Gravestones"
+            ],
+            "objclass": "GravestoneProperties",
+            "objdata": {
+                "GravestoneCount": 7,
+                "SpawnColumnEnd": 9,
+                "SpawnColumnStart": 6
+            }
+        },
+        {
+            "aliases": [
+                "ModPlantsNight"
+            ],
+            "objclass": "PlantModifierProperties",
+            "objdata": {
+                "HidePlantfood": true,
+                "SuppressParticle": true,
+                "List": [
+                    {
+                        "Type": "sunshroom",
+                        "NewObjdata": {
+                            "SunValueList": [
+                                25,
+                                50,
+                                75
+                            ],
+                            "ProduceCountdownStart": 5,
+                            "ProduceCountdownStartAdditional": 1
+                        }
+                    },
+                    {
+                        "Type": "snowpea",
+                        "NewObjdata": {
+                            "ChanceToFreeze": 0
+                        }
+                    },
+                    {
+                        "Type": "chomper",
+                        "NewObjdata": {
+                            "ChewTimePerZombie": 34,
+                            "MaxContainZombieCount": 1
+                        }
+                    },
+                    {
+                        "Type": "scaredyshroom",
+                        "NewObjdata": {
+                            "KnockbackChance": 0
+                        }
+                    },
+                    {
+                        "Type": "doomshroom",
+                        "NewObjdata": {
+                            "SunCost": 125
+                        }
+                    },
+                    {
+                        "Type": "torchwood",
+                        "NewObjdata": {
+                            "Toughness": 300,
+                            "DeathDamage": 50,
+                            "Damage": 1,
+                            "DeathFireDuration": 1,
+                            "PlantfoodDuration": 1
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "SeedBank"
+            ],
+            "objclass": "SeedBankProperties",
+            "objdata": {
+                "UnlockAll": true,
+                "OverrideSeedSlotsCount": 7,
+                "PlantIncludeList": [
+                    "peashooter",
+                    "sunflower",
+                    "wallnut",
+                    "cherry_bomb",
+                    "potatomine",
+                    "snowpea",
+                    "chomper",
+                    "lilypad",
+                    "tanglekelp",
+                    "repeater",
+                    "puffshroom",
+                    "sunshroom",
+                    "cabbagepult",
+                    "kernelpult",
+                    "fumeshroom",
+                    "gravebuster",
+                    "magnetshroom",
+                    "hypnoshroom",
+                    "spikeweed",
+                    "jalapeno"
+                ],
+                "SelectionMethod": "chooser"
+            }
+        },
+        {
+            "aliases": [
+                "error_tutorial_imp"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(error_tutorial_imp@CurrentLevel)",
+                "ZombieBasedOn": "tutorial_imp"
+            }
+        },
+        {
+            "aliases": [
+                "error_tutorial_imp"
+            ],
+            "objclass": "ZombieProperties",
+            "objdata": {
+                "ZombieSort": "Normal",
+                "CannotBeTossedByCitron": false,
+                "IgnoredInWaves": false,
+                "WalkSPS": 0.3,
+                "EatDPS": 200,
+                "Toughness": 50,
+                "StartingArmors": [
+                    "modern_armor1"
+                ],
+                "WavePointCost": 200,
+                "Weight": 3000,
+                "HitRect": "RTID(ImpHitRect@RectangleProps)",
+                "AttackRect": "RTID(ImpAttackRect@RectangleProps)"
+            }
+        },
+        {
+            "aliases": [
+                "error_tutorial_imp_armor2"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(error_tutorial_imp_armor2@CurrentLevel)",
+                "ZombieBasedOn": "tutorial_imp"
+            }
+        },
+        {
+            "aliases": [
+                "error_tutorial_imp_armor2"
+            ],
+            "objclass": "ZombieProperties",
+            "objdata": {
+                "ZombieSort": "Normal",
+                "CannotBeTossedByCitron": false,
+                "IgnoredInWaves": false,
+                "WalkSPS": 0.3,
+                "EatDPS": 200,
+                "Toughness": 50,
+                "StartingArmors": [
+                    "modern_armor2"
+                ],
+                "WavePointCost": 400,
+                "Weight": 4000,
+                "HitRect": "RTID(ImpHitRect@RectangleProps)",
+                "AttackRect": "RTID(ImpAttackRect@RectangleProps)"
+            }
+        },
+        {
+            "aliases": [
+                "error_tutorial_imp_armor4"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(error_tutorial_imp_armor4@CurrentLevel)",
+                "ZombieBasedOn": "tutorial_imp"
+            }
+        },
+        {
+            "aliases": [
+                "error_tutorial_imp_armor4"
+            ],
+            "objclass": "ZombieProperties",
+            "objdata": {
+                "ZombieSort": "Normal",
+                "CannotBeTossedByCitron": false,
+                "IgnoredInWaves": false,
+                "WalkSPS": 0.3,
+                "EatDPS": 200,
+                "Toughness": 50,
+                "StartingArmors": [
+                    "modern_armor4"
+                ],
+                "WavePointCost": 700,
+                "Weight": 4000,
+                "HitRect": "RTID(ImpHitRect@RectangleProps)",
+                "AttackRect": "RTID(ImpAttackRect@RectangleProps)"
+            }
+        },
+        {
+            "aliases": [
+                "error_newspaper"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(newspaper@CurrentLevel)",
+                "ZombieBasedOn": "modern_newspaper"
+            }
+        },
+        {
+            "aliases": [
+                "newspaper"
+            ],
+            "objclass": "ZombieProperties",
+            "objdata": {
+                "ChooseToSpawnOnDeepWaterRows": false,
+                "LivesInDeepWater": false,
+                "CannotBeTossedByCitron": false,
+                "WalkSPS": 0.22,
+                "EatDPS": 100,
+                "Toughness": 190,
+                "EnragedDamageScale": 2,
+                "EnragedSpeedScale": 2,
+                "NewspaperHealth": 300,
+                "WavePointCost": 700,
+                "Weight": 4000,
+                "HitRect": "RTID(CommonHitRect@RectangleProps)",
+                "AttackRect": "RTID(CommonAttackRect@RectangleProps)"
+            }
+        },
+        {
+            "aliases": [
+                "error_excavator_armor1"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(excavator@CurrentLevel)",
+                "ZombieBasedOn": "lostcity_excavator"
+            }
+        },
+        {
+            "aliases": [
+                "excavator"
+            ],
+            "objclass": "ZombieProperties",
+            "objdata": {
+                "CannotBeTossedByCitron": false,
+                "ShovelDamage": 150,
+                "WalkSPS": 0.185,
+                "EatDPS": 100,
+                "Toughness": 40,
+                "StartingArmors": [
+                    "modern_armor1"
+                ],
+                "WavePointCost": 300,
+                "Weight": 3000,
+                "HitRect": "RTID(CommonHitRect@RectangleProps)",
+                "AttackRect": "RTID(CommonHitRect@RectangleProps)",
+                "HitRectWithShovel": "RTID(LostcityExcavatorWithShovelHitRect@RectangleProps)",
+                "AttackRectWithShovel": "RTID(LostcityExcavatorWithShovelAttackRect@RectangleProps)"
+            }
+        },
+        {
+            "aliases": [
+                "error_excavator_armor2"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(excavator_armor2@CurrentLevel)",
+                "ZombieBasedOn": "lostcity_excavator"
+            }
+        },
+        {
+            "aliases": [
+                "excavator_armor2"
+            ],
+            "objclass": "ZombieProperties",
+            "objdata": {
+                "CannotBeTossedByCitron": false,
+                "ShovelDamage": 150,
+                "WalkSPS": 0.185,
+                "EatDPS": 100,
+                "Toughness": 40,
+                "StartingArmors": [
+                    "modern_armor2"
+                ],
+                "WavePointCost": 500,
+                "Weight": 4000,
+                "HitRect": "RTID(CommonHitRect@RectangleProps)",
+                "AttackRect": "RTID(CommonHitRect@RectangleProps)",
+                "HitRectWithShovel": "RTID(LostcityExcavatorWithShovelHitRect@RectangleProps)",
+                "AttackRectWithShovel": "RTID(LostcityExcavatorWithShovelAttackRect@RectangleProps)"
+            }
+        },
+        {
+            "aliases": [
+                "error_allstar"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(error_allstar@CurrentLevel)",
+                "ZombieBasedOn": "modern_allstar"
+            }
+        },
+        {
+            "aliases": [
+                "error_allstar"
+            ],
+            "objclass": "ZombieProperties",
+            "objdata": {
+                "CannotBeTossedByCitron": false,
+                "SmashDamage": 1500,
+                "WalkSPS": 0.185,
+                "EatDPS": 300,
+                "Toughness": 350,
+                "RunningSpeedScale": 7,
+                "StartingArmors": [
+                    "dark_armor3"
+                ],
+                "WavePointCost": 800,
+                "Weight": 3500,
+                "HitRect": "RTID(BullyHitRect@RectangleProps)",
+                "AttackRect": "RTID(BullyAttackRect@RectangleProps)"
+            }
+        },
+        {
+            "aliases": [
+                "error_zomboni"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(zomboni@CurrentLevel)",
+                "ZombieBasedOn": "zomboni"
+            }
+        },
+        {
+            "aliases": [
+                "zomboni"
+            ],
+            "objclass": "ZombieProperties",
+            "objdata": {
+                "CannotBeDraggedByTangleKelp": true,
+                "CannotBeTossedByCitron": true,
+                "CannotBeSwallowedByChomper": true,
+                "WalkSPS": 0.2,
+                "EatDPS": 1000,
+                "Toughness": 1100,
+                "ChooseToSpawnOnDeepWaterRows": false,
+                "LivesInDeepWater": false,
+                "NormalDeathWhenMowed": true,
+                "ChiliStunDurationMult": 0,
+                "ImmuneToGarlic": true,
+                "WavePointCost": 700,
+                "Weight": 3000,
+                "HitRect": "RTID(ZomboniHitRect@RectangleProps)",
+                "AttackRect": "RTID(ZomboniAttackRect@RectangleProps)"
+            }
+        },
+        {
+            "aliases": [
+                "NewWaves"
+            ],
+            "objclass": "WaveManagerModuleProperties",
+            "objdata": {}
+        }
+    ],
+    "version": 1
+}

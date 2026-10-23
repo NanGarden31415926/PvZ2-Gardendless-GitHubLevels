@@ -1,0 +1,154 @@
+{
+  "#comment": "Lostcity Zomboss",
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "[PLAYERS_TRIP_TO_LOSTCITY]",
+        "FirstIntroNarrative": "LOSTCITY_INTRO_ZOMBOSS",
+        "FirstOutroNarrative": "LOSTCITY_OUTRO_ZOMBOSS",
+        "FirstRewardType": "pinata",
+        "FirstRewardParam": "spine_lostcity",
+        "ForceToWorldMap": true,
+        "LevelNumber": 25,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(ZombossIntro@LevelModules)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(ZombossBattle@CurrentLevel)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(DefaultSunDropper@LevelModules)",
+          "RTID(LostCityTrapTileGroups@CurrentLevel)",
+          "RTID(NewWaves@CurrentLevel)"
+        ],
+        "MusicType": "MiniGame_A",
+        "Name": "Lostcity",
+        "NormalPresentTable": "lostcity_normal_01",
+        "RepeatPlayForceToWorldMap": true,
+        "ShinyPresentTable": "lostcity_shiny_01",
+        "StageModule": "RTID(LostCityStage@LevelModules)",
+        "VictoryModule": "RTID(ZombossVictoryOutro@LevelModules)",
+        "LoadDefaultMusic": false
+      }
+    },
+    {
+      "aliases": [
+        "LostCityTrapTileGroups"
+      ],
+      "objclass": "TrapTileProperties",
+      "objdata": {
+        "TrapTiles": [
+          {
+            "Group": "boulder_forward",
+            "Location": {
+              "mX": 0,
+              "mY": 0
+            },
+            "RecoverDelay": 30
+          },
+          {
+            "Group": "boulder_forward",
+            "Location": {
+              "mX": 0,
+              "mY": 4
+            },
+            "RecoverDelay": 30
+          },
+          {
+            "Group": "boulder_forward",
+            "Location": {
+              "mX": 2,
+              "mY": 2
+            },
+            "RecoverDelay": 30
+          },
+          {
+            "Group": "flame",
+            "Location": {
+              "mX": 8,
+              "mY": 0
+            },
+            "RecoverDelay": 1
+          },
+          {
+            "Group": "flame",
+            "Location": {
+              "mX": 8,
+              "mY": 1
+            },
+            "RecoverDelay": 1
+          },
+          {
+            "Group": "flame",
+            "Location": {
+              "mX": 8,
+              "mY": 2
+            },
+            "RecoverDelay": 1
+          },
+          {
+            "Group": "flame",
+            "Location": {
+              "mX": 8,
+              "mY": 3
+            },
+            "RecoverDelay": 1
+          },
+          {
+            "Group": "flame",
+            "Location": {
+              "mX": 8,
+              "mY": 4
+            },
+            "RecoverDelay": 1
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "PlantExcludeList": [],
+        "SelectionMethod": "chooser"
+      }
+    },
+    {
+      "aliases": [
+        "ZombossBattle"
+      ],
+      "objclass": "ZombossBattleModuleProperties",
+      "objdata": {
+        "ReservedColumnCount": 2,
+        "ZombossDeathColumn": 5,
+        "ZombossDeathRow": 3,
+        "ZombossMechType": "zombossmech_lostcity",
+        "ZombossSpawnGridPosition": {
+          "mX": 6,
+          "mY": 3
+        }
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "Waves": []
+      }
+    }
+  ],
+  "version": 1
+}

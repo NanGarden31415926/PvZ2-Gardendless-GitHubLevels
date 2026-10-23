@@ -1,0 +1,373 @@
+{
+	"#comment": "",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "[PREMIUM_PLANT_QUEST_LOD_DESC]",
+				"ForceToWorldMap": true,
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"Modules": [ "RTID(StandardIntro@LevelModules)", "RTID(LevelEscalationModule@CurrentLevel)", "RTID(FrontLawnMowers@LevelModules)", "RTID(NewWaves@CurrentLevel)", "RTID(DefaultZombieWinCondition@LevelModules)", "RTID(Gravestones@CurrentLevel)", "RTID(ConveyorBelt@CurrentLevel)", "RTID(ZombiesDeadWinCon@LevelModules)", "RTID(FrozenPlantPlacement@CurrentLevel)" ],
+				"Name": "[PREMIUM_PLANT_QUEST_LOD_NAME]",
+				"NormalPresentTable": "egypt_normal_01",
+				"RepeatPlayForceToWorldMap": true,
+				"ShinyPresentTable": "egypt_shiny_01",
+				"StageModule": "RTID(FrontLawnStage@LevelModules)",
+				"SuppressSunSpawn": true
+			}
+		}, {
+			"aliases": [ "FrozenPlantPlacement" ],
+			"objclass": "InitialPlantProperties",
+			"objdata": {}
+		}, {
+			"aliases": [ "LevelEscalationModule" ],
+			"objclass": "LevelEscalationModuleProperties",
+			"objdata": {
+				"FlagCount": 2,
+				"PlantfoodToSpawnCount": 3,
+				"PointIncrementPerWave": 225,
+				"StartingPoints": 100,
+				"WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)",
+				"WavesPerFlag": 6,
+				"ZombiePool": [ "RTID(dino_armor2@ZombieTypes)", "RTID(dino_armor3@ZombieTypes)" ]
+			}
+		}, {
+			"aliases": [ "WaveManagerProps" ],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"FlagWaveInterval": 6,
+				"MaxNextWaveHealthPercentage": 0.9,
+				"MinNextWaveHealthPercentage": 0.8,
+				"WaveCount": 12,
+				"WaveSpendingPointIncrement": 200,
+				"WaveSpendingPoints": 200,
+				"Waves": [ [ "RTID(Wave1@CurrentLevel)" ], [ "RTID(Wave2@CurrentLevel)" ], [ "RTID(Wave3@CurrentLevel)" ], [ "RTID(Wave4@CurrentLevel)", "RTID(Wave4ModConveyor0@CurrentLevel)" ], [ "RTID(Wave5@CurrentLevel)", "RTID(Wave5ModConveyor0@CurrentLevel)" ], [ "RTID(Wave6@CurrentLevel)" ], [ "RTID(Wave7@CurrentLevel)" ], [ "RTID(Wave8@CurrentLevel)" ], [ "RTID(Wave9@CurrentLevel)" ], [ "RTID(Wave10@CurrentLevel)" ], [ "RTID(Wave11@CurrentLevel)" ], [ "RTID(Wave12@CurrentLevel)" ] ]
+			}
+		}, {
+			"aliases": [ "Wave1" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "4",
+						"Type": "RTID(dino_armor1@ZombieTypes)"
+					}, {
+						"Type": "RTID(dino@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave2" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(dino_armor1@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(dino_armor1@ZombieTypes)"
+					}, {
+						"Type": "RTID(dino@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave3" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Row": "3",
+						"Type": "RTID(dino_bully@ZombieTypes)"
+					}, {
+						"Type": "RTID(dino_armor1@ZombieTypes)"
+					}, {
+						"Type": "RTID(dino@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave4" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "5",
+						"Type": "RTID(mech_cone@ZombieTypes)"
+					}, {
+						"Type": "RTID(dino_armor1@ZombieTypes)"
+					}, {
+						"Type": "RTID(dino@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave5" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "3",
+						"Type": "RTID(prospector@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(dino_bully@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(prospector@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(prospector@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave6" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "4",
+						"Type": "RTID(prospector@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(dino_bully@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate_captain@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(pirate_captain@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(dino@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(dino@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(mech_cone@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(mech_cone@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave7" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Type": "RTID(prospector@ZombieTypes)"
+					}, {
+						"Type": "RTID(prospector@ZombieTypes)"
+					}, {
+						"Type": "RTID(dino@ZombieTypes)"
+					}, {
+						"Type": "RTID(dino_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(dino_bully@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(dino_bully@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave8" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Type": "RTID(dino_bully@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(mech_cone@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(prospector@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(dino_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(dino_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave9" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(mech_cone@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pirate_captain@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(dino_bully@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(dino_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Gravestones" ],
+			"objclass": "GravestoneProperties",
+			"objdata": {}
+		}, {
+			"aliases": [ "NewWaves" ],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {
+				"DynamicZombies": [ {}, {}, {}, {}, {}, {}, {} ]
+			}
+		}, {
+			"aliases": [ "ConveyorBelt" ],
+			"objclass": "ConveyorSeedBankProperties",
+			"objdata": {
+				"DropDelayConditions": [ {
+						"Delay": 3,
+						"MaxPackets": 0
+					}, {
+						"Delay": 6,
+						"MaxPackets": 2
+					}, {
+						"Delay": 9,
+						"MaxPackets": 4
+					}, {
+						"Delay": 12,
+						"MaxPackets": 8
+					} ],
+				"InitialPlantList": [ {
+						"MaxCount": 5,
+						"MaxCountCooldownSeconds": 10,
+						"MaxWeightFactor": 0.1,
+						"MinCount": 4,
+						"MinWeightFactor": 2,
+						"PlantType": "spikeweed",
+						"Weight": 20
+					}, {
+						"MaxCount": 4,
+						"MaxCountCooldownSeconds": 10,
+						"MaxWeightFactor": 0.25,
+						"MinCount": 4,
+						"MinWeightFactor": 2,
+						"PlantType": "moonflower",
+						"Weight": 35
+					}, {
+						"MaxCount": 10,
+						"MaxCountCooldownSeconds": 10,
+						"MaxWeightFactor": 0.1,
+						"MinCount": 5,
+						"MinWeightFactor": 3,
+						"PlantType": "murkadamia",
+						"Weight": 45
+					}, {
+						"MaxCount": 8,
+						"MaxCountCooldownSeconds": 10,
+						"MaxWeightFactor": 0,
+						"MinCount": 3,
+						"MinWeightFactor": 2,
+						"PlantType": "shadowpeashooter",
+						"Weight": 30
+					} ],
+				"SpeedConditions": [ {
+						"MaxPackets": 0,
+						"Speed": 100
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave10" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Type": "RTID(prospector@ZombieTypes)"
+					}, {
+						"Type": "RTID(prospector@ZombieTypes)"
+					}, {
+						"Type": "RTID(prospector@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(pirate_captain@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(pirate_captain@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(pirate_captain@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave11" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Type": "RTID(dino_armor1@ZombieTypes)"
+					}, {
+						"Type": "RTID(dino@ZombieTypes)"
+					}, {
+						"Type": "RTID(dino_bully@ZombieTypes)"
+					}, {
+						"Type": "RTID(pirate_captain@ZombieTypes)"
+					}, {
+						"Type": "RTID(pirate_captain@ZombieTypes)"
+					}, {
+						"Type": "RTID(mech_cone@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave12" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(mech_cone@ZombieTypes)"
+					}, {
+						"Type": "RTID(roman_gargantuar@ZombieTypes)"
+					}, {
+						"Type": "RTID(dino_armor1@ZombieTypes)"
+					}, {
+						"Type": "RTID(prospector@ZombieTypes)"
+					}, {
+						"Type": "RTID(pirate_captain@ZombieTypes)"
+					}, {
+						"Type": "RTID(dino_armor1@ZombieTypes)"
+					}, {
+						"Type": "RTID(pirate_captain@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(dino_bully@ZombieTypes)"
+					}, {
+						"Type": "RTID(prospector@ZombieTypes)"
+					}, {
+						"Type": "RTID(dino_bully@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(mech_cone@ZombieTypes)"
+					}, {
+						"Type": "RTID(dino_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave4ModConveyor0" ],
+			"objclass": "ModifyConveyorWaveActionProps",
+			"objdata": {
+				"Add": [ {
+						"MaxCount": 1,
+						"MaxCountCooldownSeconds": 25,
+						"MaxDelivered": 4,
+						"MaxWeightFactor": 0,
+						"MinCount": 1,
+						"MinWeightFactor": 2,
+						"Type": "RTID(concealmint@PlantTypes)",
+						"Weight": 50
+					} ],
+				"Remove": []
+			}
+		}, {
+			"aliases": [ "Wave5ModConveyor0" ],
+			"objclass": "ModifyConveyorWaveActionProps",
+			"objdata": {
+				"Add": [ {
+						"MaxCount": 3,
+						"MaxCountCooldownSeconds": 10,
+						"MaxWeightFactor": 0.25,
+						"MinCount": 1,
+						"MinWeightFactor": 2,
+						"Type": "RTID(applemortar@PlantTypes)",
+						"Weight": 30
+					} ],
+				"Remove": []
+			}
+		} ],
+	"version": 1
+}

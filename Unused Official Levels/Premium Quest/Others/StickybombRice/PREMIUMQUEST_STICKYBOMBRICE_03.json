@@ -1,0 +1,450 @@
+{
+	"#comment": "LOD template level. Delete unnecessary Modules (e.g. Challenge, Frozen)",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "[PREMIUM_PLANT_QUEST_LOD_DESC]",
+				"ForceToWorldMap": true,
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"Modules": [ "RTID(FrontLawnMowers@LevelModules)", "RTID(NewWaves@CurrentLevel)", "RTID(DefaultZombieWinCondition@LevelModules)", "RTID(SeedBank@CurrentLevel)", "RTID(LastStand@CurrentLevel)", "RTID(SliderPlacement@CurrentLevel)", "RTID(ChallengeModule@CurrentLevel)", "RTID(Rails@CurrentLevel)", "RTID(ZombiesDeadWinCon@LevelModules)" ],
+				"Name": "[PREMIUM_PLANT_QUEST_LOD_NAME]",
+				"NormalPresentTable": "egypt_normal_01",
+				"RepeatPlayForceToWorldMap": true,
+				"ShinyPresentTable": "egypt_shiny_01",
+				"StageModule": "RTID(FrontLawnStage@LevelModules)"
+			}
+		}, {
+			"aliases": [ "ChallengeModule" ],
+			"objclass": "StarChallengeModuleProperties",
+			"objdata": {
+				"Challenges": [ [ "RTID(BeatTheLevel@CurrentLevel)" ] ],
+				"ChallengesAlwaysAvailable": true
+			}
+		}, {
+			"aliases": [ "BeatTheLevel" ],
+			"objclass": "StarChallengeBeatTheLevelProps",
+			"objdata": {
+				"Description": "[STARCHALLENGE_LASTSTAND_MINIGAME]",
+				"DescriptiveName": "[STARCHALLENGE_LASTSTAND_MINIGAME_NAME]"
+			}
+		}, {
+			"aliases": [ "LastStand" ],
+			"objclass": "LastStandMinigameProperties",
+			"objdata": {
+				"StartingPlantfood": 1,
+				"StartingSun": 2250
+			}
+		}, {
+			"aliases": [ "SeedBank" ],
+			"objclass": "SeedBankProperties",
+			"objdata": {
+				"ExcludeListSunProducers": true,
+				"PlantExcludeList": [ "imppear", "puffshroom", "toadstool", "goldleaf", "stallia", "blover", "spearmint", "peppermint", "appeasemint", "enforcemint", "concealmint", "filamint", "wintermint", "bombardmint", "armamint", "ailmint", "reinforcemint", "containmint", "enchantmint" ],
+				"PresetPlantList": [ {
+						"Level": -1,
+						"PlantType": "stickybombrice"
+					}, {
+						"Level": -1,
+						"PlantType": "pumpkin"
+					}, {
+						"Level": -1,
+						"PlantType": "wasabiwhip"
+					}, {
+						"Level": -1,
+						"PlantType": "powerlily"
+					} ],
+				"SelectionMethod": "preset"
+			}
+		}, {
+			"aliases": [ "NewWaves" ],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {
+				"DynamicZombies": [ {}, {}, {}, {
+						"PointIncrementPerWave": 30,
+						"StartingPoints": 100,
+						"StartingWave": 0,
+						"ZombiePool": [ "RTID(prospector@ZombieTypes)" ]
+					}, {}, {}, {} ],
+				"ManualStartup": true,
+				"WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+			}
+		}, {
+			"aliases": [ "SliderPlacement" ],
+			"objclass": "InitialGridItemProperties",
+			"objdata": {
+				"InitialGridItemPlacements": [ {
+						"GridX": 3,
+						"GridY": 0,
+						"TypeName": "slider_down"
+					}, {
+						"GridX": 7,
+						"GridY": 1,
+						"TypeName": "slider_up"
+					}, {
+						"GridX": 8,
+						"GridY": 3,
+						"TypeName": "slider_down"
+					}, {
+						"GridX": 2,
+						"GridY": 4,
+						"TypeName": "slider_up"
+					} ]
+			}
+		}, {
+			"aliases": [ "Rails" ],
+			"objclass": "RailcartProperties",
+			"objdata": {
+				"RailcartType": "railcart_cowboy",
+				"Railcarts": [ {
+						"Column": 0,
+						"Row": 3
+					} ],
+				"Rails": [ {
+						"Column": 0,
+						"RowEnd": 4,
+						"RowStart": 0
+					} ]
+			}
+		}, {
+			"aliases": [ "WaveManagerProps" ],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"FlagWaveInterval": 4,
+				"WaveCount": 12,
+				"WaveSpendingPointIncrement": 200,
+				"WaveSpendingPoints": 100,
+				"Waves": [ [ "RTID(Wave1@CurrentLevel)" ], [ "RTID(Wave2@CurrentLevel)" ], [ "RTID(Wave3@CurrentLevel)" ], [ "RTID(Wave4@CurrentLevel)", "RTID(Wave4PortalsEvent0@CurrentLevel)" ], [ "RTID(Wave5@CurrentLevel)" ], [ "RTID(Wave6@CurrentLevel)" ], [ "RTID(Wave7@CurrentLevel)" ], [ "RTID(Wave8@CurrentLevel)", "RTID(Wave8PortalsEvent0@CurrentLevel)" ], [ "RTID(Wave9@CurrentLevel)" ], [ "RTID(Wave10@CurrentLevel)" ], [ "RTID(Wave11@CurrentLevel)", "RTID(Wave11PortalsEvent0@CurrentLevel)" ], [ "RTID(Wave12@CurrentLevel)" ] ]
+			}
+		}, {
+			"aliases": [ "Wave1" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(beach_fem_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(future@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave2" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "4",
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(future@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave3" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(explorer@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(beach_fem_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave4" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(future@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(explorer@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(beach_fem_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(beach_fem_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(future@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave5" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(explorer@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(explorer@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(beach_fem_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(beach_fem_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave6" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Row": "5",
+						"Type": "RTID(explorer@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(future@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(future@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(future@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(future@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(future@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(beach_fem_armor1@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(beach_fem_armor1@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave7" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "3",
+						"Type": "RTID(future@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(beach_fem_armor1@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(beach_fem_armor1@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave8" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(beach_fem_armor1@ZombieTypes)"
+					}, {
+						"Type": "RTID(future@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(beach_fem_armor1@ZombieTypes)"
+					}, {
+						"Type": "RTID(beach_fem_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(modern_newspaper@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(modern_newspaper@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					}, {
+						"Type": "RTID(future@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					}, {
+						"Type": "RTID(beach_fem_armor1@ZombieTypes)"
+					}, {
+						"Type": "RTID(future@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave9" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(future@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(future@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(future@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(beach_fem_armor1@ZombieTypes)"
+					}, {
+						"Type": "RTID(future@ZombieTypes)"
+					}, {
+						"Type": "RTID(future@ZombieTypes)"
+					}, {
+						"Type": "RTID(future@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(future@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave10" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Type": "RTID(future@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(modern_newspaper@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					}, {
+						"Type": "RTID(future@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(beach_fem_armor1@ZombieTypes)"
+					}, {
+						"Type": "RTID(future@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(explorer@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					}, {
+						"Type": "RTID(future@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave11" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Row": "2",
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(modern_newspaper@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(explorer@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(mummy_armor2@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave12" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(future_armor4@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(future_armor4@ZombieTypes)"
+					}, {
+						"Type": "RTID(future@ZombieTypes)"
+					}, {
+						"Type": "RTID(beach_fem_armor1@ZombieTypes)"
+					}, {
+						"Type": "RTID(future@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(future_armor4@ZombieTypes)"
+					}, {
+						"Type": "RTID(beach_fem_armor1@ZombieTypes)"
+					}, {
+						"Type": "RTID(beach_fem_armor1@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(future_armor4@ZombieTypes)"
+					}, {
+						"Type": "RTID(future@ZombieTypes)"
+					}, {
+						"Type": "RTID(beach_fem_armor1@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(explorer@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(explorer@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave4PortalsEvent0" ],
+			"objclass": "SpawnModernPortalsWaveActionProps",
+			"objdata": {
+				"PortalColumn": 4,
+				"PortalRow": 3,
+				"PortalType": "rome",
+				"SpawnEffectAnimID": "",
+				"SpawnSoundID": ""
+			}
+		}, {
+			"aliases": [ "Wave8PortalsEvent0" ],
+			"objclass": "SpawnModernPortalsWaveActionProps",
+			"objdata": {
+				"PortalColumn": 4,
+				"PortalRow": 1,
+				"PortalType": "rome",
+				"SpawnEffectAnimID": "",
+				"SpawnSoundID": ""
+			}
+		}, {
+			"aliases": [ "Wave11PortalsEvent0" ],
+			"objclass": "SpawnModernPortalsWaveActionProps",
+			"objdata": {
+				"PortalColumn": 4,
+				"PortalRow": 2,
+				"PortalType": "rome",
+				"SpawnEffectAnimID": "",
+				"SpawnSoundID": ""
+			}
+		} ],
+	"version": 1
+}

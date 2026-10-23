@@ -1,0 +1,505 @@
+{
+	"#comment": "LOD template level. Delete unnecessary Modules (e.g. Challenge, Frozen)",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "[PREMIUM_PLANT_QUEST_LOD_DESC]",
+				"ForceToWorldMap": true,
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"Modules": [ "RTID(StandardIntro@LevelModules)", "RTID(DefaultSunDropper@LevelModules)", "RTID(LevelEscalationModule@CurrentLevel)", "RTID(FrontLawnMowers@LevelModules)", "RTID(NewWaves@CurrentLevel)", "RTID(DefaultZombieWinCondition@LevelModules)", "RTID(SeedBank@CurrentLevel)", "RTID(FutureLinkedTileGroups@CurrentLevel)", "RTID(FrozenPlantPlacement@CurrentLevel)", "RTID(ZombiesDeadWinCon@LevelModules)" ],
+				"Name": "[PREMIUM_PLANT_QUEST_LOD_NAME]",
+				"NormalPresentTable": "egypt_normal_01",
+				"RepeatPlayForceToWorldMap": true,
+				"ShinyPresentTable": "egypt_shiny_01",
+				"StageModule": "RTID(FrontLawnStage@LevelModules)"
+			}
+		}, {
+			"aliases": [ "LevelEscalationModule" ],
+			"objclass": "LevelEscalationModuleProperties",
+			"objdata": {
+				"FlagCount": 2,
+				"PlantfoodToSpawnCount": 0,
+				"PointIncrementPerWave": 225,
+				"StartingPoints": 50,
+				"WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)",
+				"WavesPerFlag": 3,
+				"ZombiePool": [ "RTID(tutorial@ZombieTypes)", "RTID(future_armor2@ZombieTypes)", "RTID(iceage_armor3@ZombieTypes)", "RTID(pirate_armor4@ZombieTypes)", "RTID(dino_armor1@ZombieTypes)" ]
+			}
+		}, {
+			"aliases": [ "FrozenPlantPlacement" ],
+			"objclass": "InitialPlantProperties",
+			"objdata": {
+				"InitialPlantPlacements": [ {
+						"GridX": 0,
+						"GridY": 0,
+						"Level": "-1",
+						"TypeName": "twinsunflower"
+					}, {
+						"GridX": 0,
+						"GridY": 4,
+						"Level": "-1",
+						"TypeName": "twinsunflower"
+					} ]
+			}
+		}, {
+			"aliases": [ "FutureLinkedTileGroups" ],
+			"objclass": "PowerTileProperties",
+			"objdata": {
+				"LinkedTiles": [ {
+						"Group": "alpha",
+						"Location": {
+							"mX": 0,
+							"mY": 0
+						},
+						"PropagationDelay": 1.5
+					}, {
+						"Group": "alpha",
+						"Location": {
+							"mX": 0,
+							"mY": 1
+						},
+						"PropagationDelay": 1.5
+					}, {
+						"Group": "alpha",
+						"Location": {
+							"mX": 0,
+							"mY": 2
+						},
+						"PropagationDelay": 1.5
+					}, {
+						"Group": "alpha",
+						"Location": {
+							"mX": 0,
+							"mY": 3
+						},
+						"PropagationDelay": 1.5
+					}, {
+						"Group": "alpha",
+						"Location": {
+							"mX": 0,
+							"mY": 4
+						},
+						"PropagationDelay": 1.5
+					} ]
+			}
+		}, {
+			"aliases": [ "NewWaves" ],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {
+				"DynamicZombies": [ {}, {}, {}, {}, {}, {}, {} ]
+			}
+		}, {
+			"aliases": [ "SeedBank" ],
+			"objclass": "SeedBankProperties",
+			"objdata": {
+				"PlantExcludeList": [ "spearmint", "appeasemint", "filamint", "reinforcemint", "bombardmint", "concealmint", "containmint", "ailmint", "peppermint", "wintermint", "enchantmint", "armamint", "enforcemint", "enlightenmint" ],
+				"PresetPlantList": [ {
+						"Level": 10,
+						"PlantType": "blastberry"
+					} ],
+				"SelectionMethod": "chooser"
+			}
+		}, {
+			"aliases": [ "WaveManagerProps" ],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"FlagWaveInterval": 3,
+				"WaveCount": 15,
+				"WaveSpendingPointIncrement": 250,
+				"WaveSpendingPoints": 100,
+				"Waves": [ [ "RTID(Wave1@CurrentLevel)" ], [ "RTID(Wave2@CurrentLevel)" ], [ "RTID(Wave3@CurrentLevel)" ], [ "RTID(Wave4@CurrentLevel)" ], [ "RTID(Wave5@CurrentLevel)", "RTID(Wave5StormEvent0@CurrentLevel)" ], [ "RTID(Wave6@CurrentLevel)" ], [ "RTID(Wave7@CurrentLevel)" ], [ "RTID(Wave8@CurrentLevel)" ], [ "RTID(Wave9@CurrentLevel)", "RTID(Wave9StormEvent0@CurrentLevel)" ], [ "RTID(Wave10@CurrentLevel)" ], [ "RTID(Wave11@CurrentLevel)" ], [ "RTID(Wave12@CurrentLevel)", "RTID(Wave12StormEvent0@CurrentLevel)" ], [ "RTID(Wave13@CurrentLevel)" ], [ "RTID(Wave14@CurrentLevel)", "RTID(Wave14StormEvent0@CurrentLevel)" ], [ "RTID(Wave15@CurrentLevel)", "RTID(Wave15StormEvent0@CurrentLevel)" ] ]
+			}
+		}, {
+			"aliases": [ "Wave1" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Type": "RTID(ra@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave2" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Type": "RTID(barrelroller@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave3" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Type": "RTID(barrelroller@ZombieTypes)"
+					}, {
+						"Type": "RTID(barrelroller@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(ra@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(ra@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(ra@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(ra@ZombieTypes)"
+					}, {
+						"Type": "RTID(ra@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave4" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 2,
+				"Zombies": [ {
+						"Type": "RTID(barrelroller@ZombieTypes)"
+					}, {
+						"Type": "RTID(barrelroller@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave5" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "4",
+						"Type": "RTID(ra@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(ra@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave6" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Row": "1",
+						"Type": "RTID(dark_wizard@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(ra@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(barrelroller@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(west_bull@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(barrelroller@ZombieTypes)"
+					}, {
+						"Type": "RTID(pirate_gargantuar@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave7" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Type": "RTID(west_bull@ZombieTypes)"
+					}, {
+						"Type": "RTID(ra@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(beach_surfer@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(beach_surfer@ZombieTypes)"
+					}, {
+						"Type": "RTID(barrelroller@ZombieTypes)"
+					}, {
+						"Type": "RTID(barrelroller@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave8" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Type": "RTID(beach_surfer@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(lostcity_crystalskull@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(dark_wizard@ZombieTypes)"
+					}, {
+						"Type": "RTID(west_bull_veteran@ZombieTypes)"
+					}, {
+						"Type": "RTID(barrelroller@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave9" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "4",
+						"Type": "RTID(pirate_captain@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(pirate_captain@ZombieTypes)"
+					}, {
+						"Type": "RTID(west_bull_veteran@ZombieTypes)"
+					}, {
+						"Type": "RTID(west_bull@ZombieTypes)"
+					}, {
+						"Type": "RTID(barrelroller@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(lostcity_crystalskull@ZombieTypes)"
+					}, {
+						"Type": "RTID(dark_wizard@ZombieTypes)"
+					}, {
+						"Type": "RTID(beach_surfer@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave10" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "5",
+						"Type": "RTID(beach_surfer@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(ra@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(beach_surfer@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(dark_wizard@ZombieTypes)"
+					}, {
+						"Type": "RTID(west_bull@ZombieTypes)"
+					}, {
+						"Type": "RTID(pirate_captain@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave11" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [ {
+						"Row": "5",
+						"Type": "RTID(lostcity_crystalskull@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(lostcity_crystalskull@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(lostcity_crystalskull@ZombieTypes)"
+					}, {
+						"Type": "RTID(west_bull@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(lostcity_crystalskull@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(lostcity_crystalskull@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave12" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Type": "RTID(barrelroller@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(barrelroller@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(barrelroller@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(barrelroller@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(barrelroller@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(barrelroller@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(dark_wizard@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(dark_wizard@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(lostcity_crystalskull@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(west_bull@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(lostcity_crystalskull@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave5StormEvent0" ],
+			"objclass": "StormZombieSpawnerProps",
+			"objdata": {
+				"ColumnEnd": 7,
+				"ColumnStart": 5,
+				"GroupSize": 3,
+				"TimeBetweenGroups": "3",
+				"Type": "snowstorm",
+				"Zombies": [ {
+						"Type": "RTID(beach_surfer@ZombieTypes)"
+					}, {
+						"Type": "RTID(beach_surfer@ZombieTypes)"
+					}, {
+						"Type": "RTID(beach_surfer@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave13" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "5",
+						"Type": "RTID(west_bull_veteran@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(west_bull_veteran@ZombieTypes)"
+					}, {
+						"Type": "RTID(lostcity_crystalskull@ZombieTypes)"
+					}, {
+						"Type": "RTID(lostcity_crystalskull@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave14" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Type": "RTID(barrelroller@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave14StormEvent0" ],
+			"objclass": "StormZombieSpawnerProps",
+			"objdata": {
+				"ColumnEnd": 6,
+				"ColumnStart": 5,
+				"GroupSize": 5,
+				"TimeBetweenGroups": "3",
+				"Type": "snowstorm",
+				"Zombies": [ {
+						"Type": "RTID(beach_surfer@ZombieTypes)"
+					}, {
+						"Type": "RTID(pirate_captain@ZombieTypes)"
+					}, {
+						"Type": "RTID(beach_surfer@ZombieTypes)"
+					}, {
+						"Type": "RTID(pirate_captain@ZombieTypes)"
+					}, {
+						"Type": "RTID(beach_surfer@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave12StormEvent0" ],
+			"objclass": "StormZombieSpawnerProps",
+			"objdata": {
+				"ColumnEnd": 6,
+				"ColumnStart": 5,
+				"GroupSize": 3,
+				"TimeBetweenGroups": "3",
+				"Type": "sandstorm",
+				"Zombies": [ {
+						"Type": "RTID(pirate_captain@ZombieTypes)"
+					}, {
+						"Type": "RTID(pirate_captain@ZombieTypes)"
+					}, {
+						"Type": "RTID(pirate_gargantuar@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave15" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "5",
+						"Type": "RTID(beach_surfer@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(barrelroller@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(ra@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(barrelroller@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(beach_surfer@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(lostcity_crystalskull@ZombieTypes)"
+					}, {
+						"Row": "4",
+						"Type": "RTID(barrelroller@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(lostcity_crystalskull@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(barrelroller@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(lostcity_crystalskull@ZombieTypes)"
+					}, {
+						"Row": "5",
+						"Type": "RTID(dark_wizard@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(dark_wizard@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(dark_wizard@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave15StormEvent0" ],
+			"objclass": "StormZombieSpawnerProps",
+			"objdata": {
+				"ColumnEnd": 5,
+				"ColumnStart": "4",
+				"GroupSize": "2",
+				"TimeBetweenGroups": "3",
+				"Type": "sandstorm",
+				"Zombies": [ {
+						"Type": "RTID(pirate_gargantuar@ZombieTypes)"
+					}, {
+						"Type": "RTID(pirate_gargantuar@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave9StormEvent0" ],
+			"objclass": "StormZombieSpawnerProps",
+			"objdata": {
+				"ColumnEnd": 6,
+				"ColumnStart": 6,
+				"GroupSize": 1,
+				"TimeBetweenGroups": "3",
+				"Type": "snowstorm",
+				"Zombies": [ {
+						"Type": "RTID(pirate_gargantuar@ZombieTypes)"
+					} ]
+			}
+		} ],
+	"version": 1
+}

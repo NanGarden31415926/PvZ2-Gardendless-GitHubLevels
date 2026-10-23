@@ -1,0 +1,275 @@
+{
+	"#comment": "Level Of The Day Test 1",
+	"objects": [ {
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "[PREMIUM_PLANT_QUEST_LOD_DESC]",
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"Modules": [ "RTID(StandardIntro@LevelModules)", "RTID(LevelEscalationModule@CurrentLevel)", "RTID(FrontLawnMowers@LevelModules)", "RTID(NewWaves@CurrentLevel)", "RTID(DefaultZombieWinCondition@LevelModules)", "RTID(FutureLinkedTileGroups@CurrentLevel)", "RTID(Gravestones@CurrentLevel)", "RTID(CowboyRails@CurrentLevel)", "RTID(ConveyorBelt@CurrentLevel)", "RTID(ZombiesDeadWinCon@LevelModules)" ],
+				"Name": "[PREMIUM_PLANT_QUEST_LOD_NAME]",
+				"NormalPresentTable": "egypt_normal_01",
+				"ShinyPresentTable": "egypt_shiny_01",
+				"ForceToWorldMap": true,
+				"RepeatPlayForceToWorldMap": true,
+				"StageModule": "RTID(FrontLawnStage@LevelModules)"
+			}
+		}, {
+			"aliases": [ "CowboyRails" ],
+			"objclass": "RailcartProperties",
+			"objdata": {
+				"Railcarts": [],
+				"Rails": []
+			}
+		}, {
+			"aliases": [ "FutureLinkedTileGroups" ],
+			"objclass": "PowerTileProperties",
+			"objdata": {
+				"LinkedTiles": [ {
+						"Group": "beta",
+						"Location": {
+							"mX": 3,
+							"mY": 0
+						},
+						"PropagationDelay": 0.2,
+						"PropagationInitialDelay": 2
+					}, {
+						"Group": "beta",
+						"Location": {
+							"mX": 2,
+							"mY": 1
+						},
+						"PropagationDelay": 0.2,
+						"PropagationInitialDelay": 2
+					}, {
+						"Group": "alpha",
+						"Location": {
+							"mX": 4,
+							"mY": 1
+						},
+						"PropagationDelay": 0.2,
+						"PropagationInitialDelay": 2
+					}, {
+						"Group": "alpha",
+						"Location": {
+							"mX": 4,
+							"mY": 2
+						},
+						"PropagationDelay": 0.2,
+						"PropagationInitialDelay": 2
+					}, {
+						"Group": "alpha",
+						"Location": {
+							"mX": 4,
+							"mY": 3
+						},
+						"PropagationDelay": 0.2,
+						"PropagationInitialDelay": 2
+					}, {
+						"Group": "gamma",
+						"Location": {
+							"mX": 2,
+							"mY": 3
+						},
+						"PropagationDelay": 0.2,
+						"PropagationInitialDelay": 2
+					}, {
+						"Group": "gamma",
+						"Location": {
+							"mX": 3,
+							"mY": 4
+						},
+						"PropagationDelay": 0.2,
+						"PropagationInitialDelay": 2
+					} ]
+			}
+		}, {
+			"aliases": [ "WaveManagerProps" ],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"FlagWaveInterval": 3,
+				"MaxNextWaveHealthPercentage": 0.9,
+				"MinNextWaveHealthPercentage": 0.8,
+				"WaveCount": 9,
+				"WaveSpendingPointIncrement": 450,
+				"WaveSpendingPoints": 300,
+				"Waves": [ [ "RTID(Wave1@CurrentLevel)" ], [ "RTID(Wave2@CurrentLevel)" ], [ "RTID(Wave3@CurrentLevel)" ], [ "RTID(Wave4@CurrentLevel)" ], [ "RTID(Wave5@CurrentLevel)" ], [ "RTID(Wave6@CurrentLevel)" ], [ "RTID(Wave7@CurrentLevel)", "RTID(Wave7ModConveyor@CurrentLevel)" ], [ "RTID(Wave8@CurrentLevel)", "RTID(Wave8ModConveyor@CurrentLevel)" ], [ "RTID(Wave9@CurrentLevel)" ] ]
+			}
+		}, {
+			"aliases": [ "Wave1" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Type": "RTID(future@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave2" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Type": "RTID(future@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave3" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Type": "RTID(future@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave4" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Type": "RTID(future@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave5" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "3",
+						"Type": "RTID(disco_mech@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave6" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Type": "RTID(future@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave7" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Row": "4",
+						"Type": "RTID(disco_mech@ZombieTypes)"
+					}, {
+						"Row": "2",
+						"Type": "RTID(disco_mech@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave8" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Type": "RTID(future_gargantuar@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave9" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 0,
+				"Zombies": [ {
+						"Row": "5",
+						"Type": "RTID(future_gargantuar@ZombieTypes)"
+					}, {
+						"Row": "3",
+						"Type": "RTID(disco_mech@ZombieTypes)"
+					}, {
+						"Row": "1",
+						"Type": "RTID(future_gargantuar@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave10" ],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [ {
+						"Type": "RTID(cowboy@ZombieTypes)"
+					} ]
+			}
+		}, {
+			"aliases": [ "LevelEscalationModule" ],
+			"objclass": "LevelEscalationModuleProperties",
+			"objdata": {
+				"FlagCount": 3,
+				"PlantfoodToSpawnCount": 4,
+				"PointIncrementPerWave": 250,
+				"StartingPoints": 200,
+				"WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)",
+				"WavesPerFlag": 3,
+				"ZombiePool": [ "RTID(future_jetpack@ZombieTypes)", "RTID(future_armor1@ZombieTypes)", "RTID(future_armor2@ZombieTypes)" ]
+			}
+		}, {
+			"aliases": [ "Gravestones" ],
+			"objclass": "GravestoneProperties",
+			"objdata": {}
+		}, {
+			"aliases": [ "NewWaves" ],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {}
+		}, {
+			"aliases": [ "ConveyorBelt" ],
+			"objclass": "ConveyorSeedBankProperties",
+			"objdata": {
+				"DropDelayConditions": [ {
+						"Delay": 3,
+						"MaxPackets": 0
+					}, {
+						"Delay": 6,
+						"MaxPackets": 2
+					}, {
+						"Delay": 9,
+						"MaxPackets": 4
+					}, {
+						"Delay": 12,
+						"MaxPackets": 8
+					} ],
+				"InitialPlantList": [ {
+						"MaxCount": 5,
+						"MaxWeightFactor": 0,
+						"PlantType": "holonut",
+						"Weight": 20
+					}, {
+						"PlantType": "spikeweed",
+						"Weight": 75
+					}, {
+						"PlantType": "starfruit",
+						"Weight": 100
+					} ],
+				"SpeedConditions": [ {
+						"MaxPackets": 0,
+						"Speed": 100
+					} ]
+			}
+		}, {
+			"aliases": [ "Wave7ModConveyor" ],
+			"objclass": "ModifyConveyorWaveActionProps",
+			"objdata": {
+				"Add": [ {
+						"MaxWeightFactor": 10.0,
+						"MinWeightFactor": 0.1,
+						"Type": "RTID(empea@PlantTypes)",
+						"Weight": 40
+					} ],
+				"Remove": []
+			}
+		}, {
+			"aliases": [ "Wave8ModConveyor" ],
+			"objclass": "ModifyConveyorWaveActionProps",
+			"objdata": {
+				"Add": [ {
+						"MaxWeightFactor": 10.0,
+						"MinWeightFactor": 0.1,
+						"Type": "RTID(cherry_bomb@PlantTypes)",
+						"Weight": 25
+					} ],
+				"Remove": []
+			}
+		} ],
+	"version": 1
+}

@@ -1,0 +1,955 @@
+{
+    "#comment": "",
+    "objects": [
+        {
+            "objclass": "LevelDefinition",
+            "objdata": {
+                "DescriptionMultiLanguage": {
+                    "en": "This Is Description",
+                    "zh": "介四描述"
+                },
+                "ForceToWorldMap": true,
+                "GameOverDialogShowBrain": false,
+                "Loot": "RTID(DefaultLoot@LevelModules)",
+                "Modules": [
+                    "RTID(StandardIntro@LevelModules)",
+                    "RTID(ZombiesDeadWinCon@LevelModules)",
+                    "RTID(SeedBank@CurrentLevel)",
+                    "RTID(ChallengeModule@CurrentLevel)",
+                    "RTID(DefaultZombieWinCondition@LevelModules)",
+                    "RTID(NewWaves@CurrentLevel)"
+                ],
+                "NameMultiLanguage": {
+                    "en": "Terrifying_Sculpture",
+                    "zh": "骇人雕塑"
+                },
+                "WrittenBy": "莱池_余垛",
+                "StageModule": "RTID(SummerNightsStage@LevelModules)"
+            }
+        },
+        {
+            "aliases": [
+                "juggler"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(jugglerProps@CurrentLevel)",
+                "ZombieBasedOn": "dark_juggler"
+            }
+        },
+        {
+            "aliases": [
+                "jugglerProps"
+            ],
+            "objclass": "ZombieProperties",
+            "objdata": {
+                "CannotBeTossedByCitron": false,
+                "WalkSPS": 0.2,
+                "EatDPS": 100,
+                "Toughness": 600,
+                "MoveSpeedMultiplierWhileJuggling": 2,
+                "RotateDuration": 2,
+                "WavePointCost": 450,
+                "Weight": 3500,
+                "HitRect": "RTID(CommonHitRect@RectangleProps)",
+                "AttackRect": "RTID(CommonAttackRect@RectangleProps)"
+            }
+        },
+        {
+            "aliases": [
+                "jugglerHitRect"
+            ],
+            "objclass": "RectangleProps",
+            "objdata": {
+                "Values": {
+                    "x": -20,
+                    "y": 38,
+                    "w": 68,
+                    "h": 96
+                }
+            }
+        },
+        {
+            "aliases": [
+                "EyeLaser"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(EyeLaserProps@CurrentLevel)",
+                "ZombieBasedOn": "future_gargantuar"
+            }
+        },
+        {
+            "aliases": [
+                "EyeLaserProps"
+            ],
+            "objclass": "ZombieProperties",
+            "objdata": {
+                "ZombieSort": "Gargantuar",
+                "CannotBeGrabbedByPtero": true,
+                "CannotChangeLaneByPowerToss": true,
+                "CannotBeFlickedByPowerToss": true,
+                "CannotBeDraggedByTangleKelp": true,
+                "CannotBeTossedByCitron": true,
+                "CannotBeSwallowedByChomper": true,
+                "ChiliStunDurationMult": 0,
+                "CannotCarryPlantfoodsInWaves": true,
+                "EyeLaserDelayBetweenShots": 20,
+                "EyeLaserMaxColumn": 4,
+                "EyeLaserMinDistance": 1.5,
+                "EyeLaserSweepLength": 2,
+                "EyeLaserSweepTime": 1.5,
+                "EyeLaserTotalDamage": 12000,
+                "IgnoredInWaves": true,
+                "SmashDamage": 1500,
+                "WalkSPS": 0,
+                "EatDPS": 100,
+                "Toughness": 9000,
+                "LivesInDeepWater": true,
+                "NormalDeathWhenMowed": true,
+                "ImmuneToGarlic": true,
+                "WavePointCost": 1,
+                "Weight": 0,
+                "StartingArmors": [
+                    "dark_armor3"
+                ],
+                "HitRect": "RTID(CommonHitRect@RectangleProps)",
+                "AttackRect": "RTID(EyeLaserAttackRect@CurrentLevel)"
+            }
+        },
+        {
+            "aliases": [
+                "EyeLaser_move"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(EyeLaser_moveProps@CurrentLevel)",
+                "ZombieBasedOn": "future_gargantuar"
+            }
+        },
+        {
+            "aliases": [
+                "EyeLaser_moveProps"
+            ],
+            "objclass": "ZombieProperties",
+            "objdata": {
+                "ZombieSort": "Gargantuar",
+                "CannotBeGrabbedByPtero": true,
+                "CannotChangeLaneByPowerToss": true,
+                "CannotBeFlickedByPowerToss": true,
+                "CannotBeDraggedByTangleKelp": true,
+                "CannotBeTossedByCitron": true,
+                "CannotBeSwallowedByChomper": true,
+                "ChiliStunDurationMult": 0,
+                "CannotCarryPlantfoodsInWaves": true,
+                "EyeLaserDelayBetweenShots": 6,
+                "EyeLaserMaxColumn": 4,
+                "EyeLaserMinDistance": 1.5,
+                "EyeLaserSweepLength": 2,
+                "EyeLaserSweepTime": 1.5,
+                "EyeLaserTotalDamage": 12000,
+                "IgnoredInWaves": true,
+                "SmashDamage": 1500,
+                "WalkSPS": 0.3,
+                "EatDPS": 100,
+                "Toughness": 9000,
+                "LivesInDeepWater": true,
+                "NormalDeathWhenMowed": true,
+                "WavePointCost": 1,
+                "Weight": 0,
+                "StartingArmors": [
+                    "dino_armor3"
+                ],
+                "HitRect": "RTID(GargantuarHitRect@RectangleProps)",
+                "AttackRect": "RTID(GargantuarAttackRect@RectangleProps)"
+            }
+        },
+        {
+            "aliases": [
+                "EyeLaserAttackRect"
+            ],
+            "objclass": "RectangleProps",
+            "objdata": {
+                "Values": {
+                    "x": -80,
+                    "y": 38,
+                    "w": 122,
+                    "h": 96
+                }
+            }
+        },
+        {
+            "aliases": [
+                "SeedBank"
+            ],
+            "objclass": "SeedBankProperties",
+            "objdata": {
+                "UnlockAll": true,
+                "PlantIncludeList": [
+                    "sunflower",
+                    "peashooter",
+                    "wallnut",
+                    "potatomine",
+                    "cabbagepult",
+                    "bloomerang",
+                    "iceburg",
+                    "gravebuster",
+                    "twinsunflower",
+                    "bonkchoy",
+                    "repeater",
+                    "kernelpult",
+                    "snapdragon",
+                    "spikeweed",
+                    "coconutcannon",
+                    "cherry_bomb",
+                    "springbean",
+                    "spikerock",
+                    "threepeater",
+                    "splitpea",
+                    "chilibean",
+                    "lightningreed",
+                    "tallnut",
+                    "peapod",
+                    "melonpult",
+                    "wintermelon",
+                    "laser_bean",
+                    "citron",
+                    "empea",
+                    "holonut",
+                    "magnifyinggrass",
+                    "powerplant",
+                    "sunshroom",
+                    "puffshroom",
+                    "fumeshroom",
+                    "sunbean",
+                    "magnetshroom",
+                    "lilypad",
+                    "tanglekelp",
+                    "bowlingbulb",
+                    "guacodile",
+                    "banana",
+                    "hotpotato",
+                    "pepperpult",
+                    "chardguard",
+                    "stunion",
+                    "xshot",
+                    "redstinger",
+                    "akee",
+                    "endurian",
+                    "stallia",
+                    "goldleaf",
+                    "firegourd",
+                    "snowpea",
+                    "bambooshoot",
+                    "turnip",
+                    "peach",
+                    "lychee",
+                    "phatbeet",
+                    "celerystalker",
+                    "garlic",
+                    "sporeshroom",
+                    "intensivecarrot",
+                    "primalpeashooter",
+                    "primalwallnut",
+                    "perfumeshroom",
+                    "primalsunflower",
+                    "primalpotatomine",
+                    "moonflower",
+                    "nightshade",
+                    "shadowshroom",
+                    "dusklobber",
+                    "grimrose"
+                ],
+                "SelectionMethod": "chooser"
+            }
+        },
+        {
+            "aliases": [
+                "ChallengeModule"
+            ],
+            "objclass": "StarChallengeModuleProperties",
+            "objdata": {
+                "Challenges": [
+                    [
+                        "RTID(BeatTheLevel@CurrentLevel)"
+                    ]
+                ],
+                "ChallengesAlwaysAvailable": true
+            }
+        },
+        {
+            "aliases": [
+                "BeatTheLevel"
+            ],
+            "objclass": "StarChallengeBeatTheLevelProps",
+            "objdata": {
+                "DescriptionsMultilanguage": [
+                    {
+                        "en": "beat the level",
+                        "zh": "beat the level"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "NewWaves"
+            ],
+            "objclass": "WaveManagerModuleProperties",
+            "objdata": {
+                "DynamicZombies": [
+                    {},
+                    {},
+                    {},
+                    {},
+                    {
+                        "PointIncrementPerWave": 20,
+                        "StartingPoints": 100,
+                        "StartingWave": 5,
+                        "ZombiePool": [
+                            "RTID(mech_cone@ZombieTypes)",
+                            "RTID(summer_armor1@ZombieTypes)",
+                            "RTID(juggler@CurrentLevel)",
+                            "RTID(eighties_punk@ZombieTypes)",
+                            "RTID(dino_imp@ZombieTypes)"
+                        ]
+                    },
+                    {
+                        "PointIncrementPerWave": 40,
+                        "StartingPoints": 200,
+                        "StartingWave": 4,
+                        "ZombiePool": [
+                            "RTID(mech_cone@ZombieTypes)",
+                            "RTID(summer_armor2@ZombieTypes)",
+                            "RTID(summer_armor1@ZombieTypes)",
+                            "RTID(juggler@CurrentLevel)",
+                            "RTID(eighties_punk@ZombieTypes)",
+                            "RTID(dino_imp@ZombieTypes)"
+                        ]
+                    },
+                    {
+                        "PointIncrementPerWave": 60,
+                        "StartingPoints": 400,
+                        "StartingWave": 3,
+                        "ZombiePool": [
+                            "RTID(summer_armor2@ZombieTypes)",
+                            "RTID(juggler@CurrentLevel)",
+                            "RTID(eighties_punk@ZombieTypes)",
+                            "RTID(mech_cone@ZombieTypes)",
+                            "RTID(dino_imp@ZombieTypes)"
+                        ]
+                    }
+                ],
+                "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+            }
+        },
+        {
+            "aliases": [
+                "WaveManagerProps"
+            ],
+            "objclass": "WaveManagerProperties",
+            "objdata": {
+                "FlagWaveInterval": 7,
+                "WaveCount": 14,
+                "LevelJamList": [
+                    "jam_punk",
+                    "jam_pop"
+                ],
+                "WaveSpendingPointIncrement": 100,
+                "WaveSpendingPoints": 100,
+                "Waves": [
+                    [
+                        "RTID(Wave1@CurrentLevel)",
+                        "RTID(Wave1EyeLaser@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave2@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave3@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave4@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave5@CurrentLevel)",
+                        "RTID(Wave5EyeLaser@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave6@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave7@CurrentLevel)",
+                        "RTID(Wave7EyeLaser@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave8@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave9@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave10@CurrentLevel)",
+                        "RTID(Wave10EyeLaser@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave11@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave12@CurrentLevel)",
+                        "RTID(Wave12EyeLaser@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave13@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave14@CurrentLevel)",
+                        "RTID(Wave14EyeLaser@CurrentLevel)"
+                    ]
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave1EyeLaser"
+            ],
+            "objclass": "WaveSchedulerProps",
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Max": 2,
+                    "Min": 1.5
+                },
+                "TimeBetween": {
+                    "Max": 1,
+                    "Min": 1
+                },
+                "Repeat": {
+                    "Max": 1,
+                    "Min": 1
+                },
+                "RewardWhenEnded": false,
+                "SuppressRewardState": true,
+                "Events": [
+                    "RTID(Wave1EyeLaserProp@CurrentLevel)"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave1EyeLaserProp"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "2",
+                        "Column": "9",
+                        "Type": "RTID(EyeLaser@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave5EyeLaser"
+            ],
+            "objclass": "WaveSchedulerProps",
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Max": 2,
+                    "Min": 1.5
+                },
+                "TimeBetween": {
+                    "Max": 1,
+                    "Min": 1
+                },
+                "Repeat": {
+                    "Max": 1,
+                    "Min": 1
+                },
+                "RewardWhenEnded": false,
+                "SuppressRewardState": true,
+                "Events": [
+                    "RTID(Wave5EyeLaserProp@CurrentLevel)"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave5EyeLaserProp"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "5",
+                        "Column": "9",
+                        "Type": "RTID(EyeLaser@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave7EyeLaser"
+            ],
+            "objclass": "WaveSchedulerProps",
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Max": 2,
+                    "Min": 1.5
+                },
+                "TimeBetween": {
+                    "Max": 1,
+                    "Min": 1
+                },
+                "Repeat": {
+                    "Max": 1,
+                    "Min": 1
+                },
+                "RewardWhenEnded": false,
+                "SuppressRewardState": true,
+                "Events": [
+                    "RTID(Wave7EyeLaserProp@CurrentLevel)"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave7EyeLaserProp"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "3",
+                        "Column": "9",
+                        "Type": "RTID(EyeLaser@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave10EyeLaser"
+            ],
+            "objclass": "WaveSchedulerProps",
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Max": 2,
+                    "Min": 1.5
+                },
+                "TimeBetween": {
+                    "Max": 1,
+                    "Min": 1
+                },
+                "Repeat": {
+                    "Max": 1,
+                    "Min": 1
+                },
+                "RewardWhenEnded": false,
+                "SuppressRewardState": true,
+                "Events": [
+                    "RTID(Wave10EyeLaserProp@CurrentLevel)"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave10EyeLaserProp"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "4",
+                        "Column": "9",
+                        "Type": "RTID(EyeLaser@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave12EyeLaser"
+            ],
+            "objclass": "WaveSchedulerProps",
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Max": 2,
+                    "Min": 1.5
+                },
+                "TimeBetween": {
+                    "Max": 1,
+                    "Min": 1
+                },
+                "Repeat": {
+                    "Max": 1,
+                    "Min": 1
+                },
+                "RewardWhenEnded": false,
+                "SuppressRewardState": true,
+                "Events": [
+                    "RTID(Wave12EyeLaserProp@CurrentLevel)"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave12EyeLaserProp"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "1",
+                        "Column": "9",
+                        "Type": "RTID(EyeLaser@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave14EyeLaser"
+            ],
+            "objclass": "WaveSchedulerProps",
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Max": 2,
+                    "Min": 1.5
+                },
+                "TimeBetween": {
+                    "Max": 1,
+                    "Min": 1
+                },
+                "Repeat": {
+                    "Max": 1,
+                    "Min": 1
+                },
+                "RewardWhenEnded": false,
+                "SuppressRewardState": true,
+                "Events": [
+                    "RTID(Wave14EyeLaserProp@CurrentLevel)"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave14EyeLaserProp"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "2",
+                        "Column": "9",
+                        "Type": "RTID(EyeLaser_move@CurrentLevel)"
+                    },
+                    {
+                        "Row": "5",
+                        "Column": "9",
+                        "Type": "RTID(EyeLaser_move@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave1"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "3",
+                        "Type": "RTID(juggler@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave2"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "1",
+                        "Type": "RTID(summer_armor1@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave3"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "4",
+                        "Type": "RTID(summer_armor1@ZombieTypes)"
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(eighties_punk@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave4"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "4",
+                        "Type": "RTID(eighties_punk@ZombieTypes)"
+                    },
+                    {
+                        "Row": "3",
+                        "Type": "RTID(summer_armor2@ZombieTypes)"
+                    },
+                    {
+                        "Row": "1",
+                        "Type": "RTID(juggler@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave5"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "2",
+                        "Type": "RTID(juggler@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave6"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "2",
+                        "Type": "RTID(eighties_punk@ZombieTypes)"
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(juggler@CurrentLevel)"
+                    },
+                    {
+                        "Row": "3",
+                        "Type": "RTID(mech_cone@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave7"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "1",
+                        "Type": "RTID(mech_cone@ZombieTypes)"
+                    },
+                    {
+                        "Row": "4",
+                        "Type": "RTID(mech_cone@ZombieTypes)"
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(mech_cone@ZombieTypes)"
+                    },
+                    {
+                        "Row": "1",
+                        "Type": "RTID(eighties_punk@ZombieTypes)"
+                    },
+                    {
+                        "Row": "4",
+                        "Type": "RTID(eighties_punk@ZombieTypes)"
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(eighties_punk@ZombieTypes)"
+                    },
+                    {
+                        "Row": "2",
+                        "Type": "RTID(juggler@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave8"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "2",
+                        "Type": "RTID(juggler@CurrentLevel)"
+                    },
+                    {
+                        "Row": "3",
+                        "Type": "RTID(juggler@CurrentLevel)"
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(juggler@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave9"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "2",
+                        "Type": "RTID(eighties_punk@ZombieTypes)"
+                    },
+                    {
+                        "Row": "3",
+                        "Type": "RTID(eighties_punk@ZombieTypes)"
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(eighties_punk@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave10"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "1",
+                        "Type": "RTID(mech_cone@ZombieTypes)"
+                    },
+                    {
+                        "Row": "4",
+                        "Type": "RTID(mech_cone@ZombieTypes)"
+                    },
+                    {
+                        "Row": "4",
+                        "Type": "RTID(eighties_punk@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave11"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "1",
+                        "Type": "RTID(mech_cone@ZombieTypes)"
+                    },
+                    {
+                        "Row": "3",
+                        "Type": "RTID(juggler@CurrentLevel)"
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(juggler@CurrentLevel)"
+                    },
+                    {
+                        "Row": "1",
+                        "Type": "RTID(eighties_punk@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave12"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "3",
+                        "Type": "RTID(mech_cone@ZombieTypes)"
+                    },
+                    {
+                        "Row": "1",
+                        "Type": "RTID(juggler@CurrentLevel)"
+                    },
+                    {
+                        "Row": "4",
+                        "Type": "RTID(juggler@CurrentLevel)"
+                    },
+                    {
+                        "Row": "3",
+                        "Type": "RTID(eighties_punk@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave13"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "2",
+                        "Type": "RTID(mech_cone@ZombieTypes)"
+                    },
+                    {
+                        "Row": "4",
+                        "Type": "RTID(mech_cone@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave14"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "1",
+                        "Type": "RTID(eighties_punk@ZombieTypes)"
+                    },
+                    {
+                        "Row": "3",
+                        "Type": "RTID(eighties_punk@ZombieTypes)"
+                    }
+                ]
+            }
+        }
+    ],
+    "version": 1
+}
