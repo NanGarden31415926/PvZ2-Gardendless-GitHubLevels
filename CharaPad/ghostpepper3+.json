@@ -1,0 +1,910 @@
+{
+  "#comment": " ",
+  "version": 1,
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "LevelNumber": 3,
+        
+        "Loot": "RTID(NoLoot@LevelModules)",
+        "Name": "[EPIC_PLANT_LEVEL_NAME]",
+        "Description": "[PLAYERS_ATTEMPT_TO_GET_PLANT]",
+        "StartingSun": 300,
+        "StageModule": "RTID(EightiesStage@LevelModules)",
+        "FirstRewardType": "unlock_plant",
+        "PlantToIntroduce": "ghostpepper",
+        "WrittenBy": "CharaPad猹派",
+        "Modules": [ 
+          "RTID(StandardIntro@LevelModules)",
+          "RTID(DefaultSunDropper@LevelModules)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(ProtectThePlant@CurrentLevel)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(FrozenPlantPlacement@CurrentLevel)",
+          "RTID(FrozenZombiePlacement@CurrentLevel)"
+        ]
+      }
+    },
+    {
+            "aliases": [
+                "SeedBank"
+            ],
+            "objclass": "SeedBankProperties",
+            "objdata": {
+                "PresetPlantList": [
+                    {
+                        "Level": -1,
+                        "PlantType": "ghostpepper"
+                    },
+                    {
+                        "Level": -1,
+                        "PlantType": "imitater"
+                    },
+                    {
+                        "Level": -1,
+                        "PlantType": "primalpotatomine"
+                    },
+                    {
+                        "Level": -1,
+                        "PlantType": "stallia"
+                    },
+                    {
+                        "Level": -1,
+                        "PlantType": "moonbean"
+                    },
+                    {
+                        "Level": -1,
+                        "PlantType": "stunion"
+                    },
+                     {
+                        "Level": -1,
+                        "PlantType": "loquat"
+                    },
+                    {
+                        "Level": -1,
+                        "PlantType": "cherry_bomb"
+                    }
+                ],
+                "SelectionMethod": "preset"
+            }
+        },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "MinNextWaveHealthPercentage": 0.8,
+        "MaxNextWaveHealthPercentage": 0.8,
+        "FlagWaveInterval": 5,
+        "LevelJam": "jam_metal,jam_rap",
+        "WaveCount": 10,
+        "WaveSpendingPointIncrement": 30,
+        "WaveSpendingPoints": 100,
+        "Waves": [
+          [
+            "RTID(SpawnBoomboxInfinity@CurrentLevel)",
+              "RTID(Wave1@CurrentLevel)"
+          ],
+          [
+              "RTID(Wave2@CurrentLevel)"
+          ],
+          [
+              "RTID(Wave3@CurrentLevel)"
+          ],
+          [
+              "RTID(Wave4@CurrentLevel)"
+          ],
+          [
+              "RTID(Wave5@CurrentLevel)"
+          ],
+          [
+              "RTID(Wave6@CurrentLevel)"
+          ],
+          [
+              "RTID(Wave7@CurrentLevel)"
+          ],
+          [
+              "RTID(Wave8@CurrentLevel)"
+          ],
+          [
+              "RTID(Wave9@CurrentLevel)"
+          ],
+          [
+              "RTID(Wave10@CurrentLevel)"
+          ],
+          [
+              "RTID(Wave11@CurrentLevel)"
+          ],
+          [
+              "RTID(Wave12@CurrentLevel)"
+          ],
+          [
+              "RTID(Wave13@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+    {
+            "aliases": [
+                "ProtectThePlant"
+            ],
+            "objclass": "ProtectThePlantChallengeProperties",
+            "objdata": {
+                "MustProtectCount": 7,
+                "Plants": [
+                  {
+            "GridX": 4,
+            "GridY": 0,
+            "PlantType": "ghostpepper"
+          },
+          {
+            "GridX": 4,
+            "GridY": 2,
+            "PlantType": "ghostpepper"
+          },
+          {
+            "GridX": 4,
+            "GridY": 4,
+            "PlantType": "ghostpepper"
+          },
+          {
+            "GridX": 2,
+            "GridY": 1,
+            "PlantType": "ghostpepper"
+          },
+          {
+            "GridX": 2,
+            "GridY": 3,
+            "PlantType": "ghostpepper"
+          },
+          {
+            "GridX": 6,
+            "GridY": 3,
+            "PlantType": "ghostpepper"
+          },
+          {
+            "GridX": 6,
+            "GridY": 1,
+            "PlantType": "ghostpepper"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "FrozenPlantPlacement"
+      ],
+      "objclass": "InitialPlantProperties",
+      "objdata": {
+        "InitialPlantPlacements": [
+        
+          {
+            "GridX": 8,
+            "GridY": 0,
+            "TypeName": "ghostpepper"
+          },
+          {
+            "GridX": 8,
+            "GridY": 2,
+            "TypeName": "ghostpepper"
+          },
+          {
+            "GridX": 8,
+            "GridY": 4,
+            "TypeName": "ghostpepper"
+          },
+          {
+            "GridX": 7,
+            "GridY": 2,
+            "TypeName": "ghostpepper"
+          },
+          {
+            "GridX": 7,
+            "GridY": 0,
+            "TypeName": "ghostpepper"
+          },
+          {
+            "GridX": 7,
+            "GridY": 4,
+            "TypeName": "ghostpepper"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "SpawnBoomboxInfinity"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+           {
+            "Column": "5",
+            "Row": "1",
+            "Type": "RTID(eighties_boombox_infinity@CurrentLevel)",
+            "CarrySun": 50
+           },
+           {
+            "Column": "1",
+            "Row": "4",
+            "Type": "RTID(eighties_boombox_infinity@CurrentLevel)",
+            "CarrySun": 50
+           },
+           {
+            "Column": "5",
+            "Row": "3",
+            "Type": "RTID(eighties_boombox_infinity@CurrentLevel)",
+            "CarrySun": 50
+           },
+           {
+            "Column": "1",
+            "Row": "2",
+            "Type": "RTID(eighties_boombox_infinity@CurrentLevel)",
+            "CarrySun": 50
+           },
+            {
+            "Column": "9",
+            "Row": "2",
+            "Type": "RTID(eighties_boombox_infinity@CurrentLevel)",
+            "CarrySun": 50
+           },
+            {
+            "Column": "9",
+            "Row": "4",
+            "Type": "RTID(eighties_boombox_infinity@CurrentLevel)",
+            "CarrySun": 50
+           },
+           {
+            "Column": "5",
+            "Row": "5",
+            "Type": "RTID(eighties_boombox_infinity@CurrentLevel)",
+            "CarrySun": 50
+           },
+           {
+            "Row": "1",
+            "Type": "RTID(sky_dronemaker_alt_reverse@CurrentLevel)"
+           },
+            {
+            "Row": "2",
+            "Type": "RTID(sky_dronemaker_alt_reverse@CurrentLevel)"
+           },
+            {
+            "Row": "3",
+            "Type": "RTID(sky_dronemaker_alt_reverse@CurrentLevel)"
+           },
+           {
+            "Row": "4",
+            "Type": "RTID(sky_dronemaker_alt_reverse@CurrentLevel)"
+           },
+           {
+            "Row": "5",
+            "Type": "RTID(sky_dronemaker_alt_reverse@CurrentLevel)"
+           },
+           {
+            "Row": "1",
+            "Type": "RTID(dark_king_veteran@ZombieTypes)"
+           },
+           {
+            "Row": "2",
+            "Type": "RTID(dark_king_veteran@ZombieTypes)"
+           },
+           {
+            "Row": "3",
+            "Type": "RTID(dark_king_veteran@ZombieTypes)"
+           },
+           {
+            "Row": "4",
+            "Type": "RTID(dark_king_veteran@ZombieTypes)"
+           },
+           {
+            "Row": "5",
+            "Type": "RTID(dark_king_veteran@ZombieTypes)"
+           }
+        ]
+      }
+    },
+    {
+  "aliases": [
+    "sky_dronemaker_alt_reverse"
+  ],
+  "objclass": "ZombieType",
+  "objdata": {
+    "Properties": "RTID(sky_dronemaker_alt_reverse@CurrentLevel)",
+    "ZombieBasedOn": "sky_dronemaker"
+  }
+},
+{
+    "aliases": ["sky_dronemaker_alt_reverse"],
+    "objclass": "ZombieProperties",
+    "objdata": {
+        "ChanceToReverse": 1,
+        "ValidDroneTargets": [
+    "sky_twin_upper",
+       "sky_twin_lower",
+       "sky_twin",
+       "sky_drone",
+       "sky_arbiterx",
+       "sky_gargantuar",
+       "sky_imp"],
+    "TargetListBecomesBlackList": true
+      
+    }
+  },
+  
+    {
+  "aliases": [
+    "eighties_boombox_infinity"
+  ],
+  "objclass": "ZombieType",
+  "objdata": {
+    "Properties": "RTID(eighties_boombox_infinity@CurrentLevel)",
+    "ZombieBasedOn": "eighties_boombox"
+  }
+},
+    {
+  "aliases": ["eighties_boombox_infinity"],
+  "objclass": "ZombieProperties",
+  "objdata": {
+    "NumberOfArcadeCabinetsToSpawnWith": 0,
+    "WalkSPS": 0,
+    "EatDPS": 100,
+    "Toughness": 250,
+    "BoomBoxColumn": 8,
+    "BoomBoxDuration": 100000,
+    "PlantFreezeRadius": 15,
+    "WavePointCost": 300,
+    "Weight": 1000,
+    "HitRect": "RTID(CommonHitRect@RectangleProps)",
+    "AttackRect": "RTID(CommonAttackRect@RectangleProps)"
+  }
+},
+    {
+      "aliases": [
+        "FrozenZombiePlacement"
+      ],
+      "objclass": "InitialZombieProperties",
+      "objdata": {
+        "InitialZombiePlacements": [
+          {
+            "GridX": 8,
+            "GridY": 4,
+            "TypeName": "dark_armor3",
+            "CarrySun": 50
+          },
+           {
+            "GridX": 8,
+            "GridY": 0,
+            "TypeName": "dark_armor3",
+            "CarrySun": 50
+          },
+          {
+            "GridX": 8,
+            "GridY": 2,
+            "TypeName": "dark_armor3",
+            "CarrySun": 50
+          }
+        ]
+      }
+    },
+    {
+            "aliases": [
+                "Wave1"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                       
+                        "Row": "1",
+                        "Type": "RTID(iceage_armor3@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                   
+                        "Row": "2",
+                        "Type": "RTID(iceage_armor3@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                    
+                        "Row": "3",
+                        "Type": "RTID(iceage_armor3@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                     
+                        "Row": "1",
+                        "Type": "RTID(dark_armor3@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                
+                        "Row": "2",
+                        "Type": "RTID(dark_armor3@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                    
+                        "Row": "3",
+                        "Type": "RTID(dark_armor3@ZombieTypes)",
+                        "CarrySun": 25
+                    }
+              ]
+          }
+    },
+     {
+            "aliases": [
+                "Wave2"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "2",
+                        "Type": "RTID(eighties_punk@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(eighties_punk@ZombieTypes)",
+                        "CarrySun": 25
+                    }
+                ]
+            }
+        },
+    {
+            "aliases": [
+                "Wave3"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                   
+                        "Row": "5",
+                        "Type": "RTID(iceage_armor3@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                    
+                        "Row": "4",
+                        "Type": "RTID(eighties_gargantuar@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                     
+                        "Row": "3",
+                        "Type": "RTID(iceage_armor3@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+               
+                        "Row": "4",
+                        "Type": "RTID(dark_armor3@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                    
+                        "Row": "5",
+                        "Type": "RTID(dark_armor3@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                     
+                        "Row": "3",
+                        "Type": "RTID(dark_armor3@ZombieTypes)",
+                        "CarrySun": 25
+                    }
+              ]
+          }
+    },
+    {
+            "aliases": [
+                "Wave4"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+            "Row": "1",
+            "Type": "RTID(sky_dronemaker_alt_reverse@CurrentLevel)"
+           },
+            {
+            "Row": "2",
+            "Type": "RTID(sky_dronemaker_alt_reverse@CurrentLevel)"
+           },
+            {
+            "Row": "3",
+            "Type": "RTID(sky_dronemaker_alt_reverse@CurrentLevel)"
+           },
+           {
+            "Row": "4",
+            "Type": "RTID(sky_dronemaker_alt_reverse@CurrentLevel)"
+           },
+           {
+            "Row": "5",
+            "Type": "RTID(sky_dronemaker_alt_reverse@CurrentLevel)"
+           },
+           {
+            "Row": "1",
+            "Type": "RTID(dark_king_veteran@ZombieTypes)"
+           },
+           {
+            "Row": "2",
+            "Type": "RTID(dark_king_veteran@ZombieTypes)"
+           },
+           {
+            "Row": "3",
+            "Type": "RTID(dark_king_veteran@ZombieTypes)"
+           },
+           {
+            "Row": "4",
+            "Type": "RTID(dark_king_veteran@ZombieTypes)"
+           },
+           {
+            "Row": "5",
+            "Type": "RTID(dark_king_veteran@ZombieTypes)"
+           },
+                    {
+                        "Row": "1",
+                        "Type": "RTID(eighties_punk@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Row": "3",
+                        "Type": "RTID(eighties_punk_veteran@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Row": "4",
+                        "Type": "RTID(eighties_punk@ZombieTypes)",
+                        "CarrySun": 25
+                    }
+                ]
+            }
+        },
+    {
+            "aliases": [
+                "Wave5"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Column": "9",
+                        "Row": "5",
+                        "Type": "RTID(chicken@ZombieTypes)",
+                        "CarrySun": 25
+                        
+                    },
+                    {
+                        "Column": "9",
+                        "Row": "1",
+                        "Type": "RTID(chicken@ZombieTypes)",
+                        "CarrySun": 25
+                        
+                    },
+                    {
+                        "Column": "6",
+                        "Row": "3",
+                        "Type": "RTID(dark_armor3@ZombieTypes)",
+                        "CarrySun": 25
+                    }
+              ]
+          }
+        },
+        {
+            "aliases": [
+                "Wave6"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "NotificationEvents": [
+                    "jam_rap"
+                ],
+                "Zombies": [
+                    {
+                        "Row": "2",
+                        "Type": "RTID(eighties_punk_veteran@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(eighties_punk_veteran@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Row": "2",
+                        "Type": "RTID(eighties_breakdancer@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(eighties_breakdancer@ZombieTypes)",
+                        "CarrySun": 25
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave7"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Column": "9",
+                        "Row": "5",
+                        "Type": "RTID(chicken@ZombieTypes)",
+                        "CarrySun": 25
+                        
+                    },
+                    {
+                        "Column": "9",
+                        "Row": "3",
+                        "Type": "RTID(chicken@ZombieTypes)",
+                        "CarrySun": 25
+                        
+                    },
+                    {
+                        "Row": "1",
+                        "Type": "RTID(kongfu_armor3@ZombieTypes)",
+                        "CarrySun": 25
+                    }
+              ]
+          }
+       },
+       {
+            "aliases": [
+                "Wave8"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "2",
+                        "Type": "RTID(eighties_gargantuar@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Row": "3",
+                        "Type": "RTID(eighties_gargantuar@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Row": "2",
+                        "Type": "RTID(eighties_boombox@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Row": "4",
+                        "Type": "RTID(eighties_boombox@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Row": "1",
+                        "Type": "RTID(eighties_breakdancer@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Row": "3",
+                        "Type": "RTID(eighties_breakdancer@ZombieTypes)",
+                        "CarrySun": 25
+                    }
+                ]
+            }
+        },
+       {
+            "aliases": [
+                "Wave9"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Column": "9",
+                        "Row": "1",
+                        "Type": "RTID(chicken@ZombieTypes)",
+                        "CarrySun": 25
+                        
+                    },
+                    {
+                        "Column": "9",
+                        "Row": "3",
+                        "Type": "RTID(chicken@ZombieTypes)",
+                        "CarrySun": 25
+                        
+                    },
+                    {
+
+                        "Row": "5",
+                        "Type": "RTID(kongfu_armor3@ZombieTypes)",
+                        "CarrySun": 25
+                    }
+              ]
+          }
+       },
+        {
+            "aliases": [
+                "Wave10"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+               "NotificationEvents": [
+                    "jam_punk"
+                ],
+                "Zombies": [
+                    {
+                        "Row": "1",
+                        "Type": "RTID(eighties_armor1@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Row": "3",
+                        "Type": "RTID(eighties_armor1@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(eighties_armor1@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Row": "1",
+                        "Type": "RTID(eighties_punk_veteran@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Row": "3",
+                        "Type": "RTID(eighties_punk_veteran@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(eighties_punk_veteran@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                       "Row": "4",
+                       "Type": "RTID(sky_dronemaker_alt_reverse@CurrentLevel)",
+                        "CarrySun": 25
+                    },
+                    {
+                       "Row": "1",
+                       "Type": "RTID(sky_dronemaker_alt_reverse@CurrentLevel)",
+                        "CarrySun": 25
+                    },
+                    {
+                       "Row": "2",
+                       "Type": "RTID(sky_dronemaker_alt_reverse@CurrentLevel)",
+                        "CarrySun": 25
+                    },
+                    {
+                       "Row": "3",
+                       "Type": "RTID(sky_dronemaker_alt_reverse@CurrentLevel)",
+                        "CarrySun": 25
+                    },
+                    {
+                       "Row": "5",
+                       "Type": "RTID(sky_dronemaker_alt_reverse@CurrentLevel)",
+                        "CarrySun": 25
+                    },
+                    {
+                       "Row": "1",
+                      "Type": "RTID(dark_king_veteran@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                       "Row": "2",
+                      "Type": "RTID(dark_king_veteran@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                       "Row": "3",
+                      "Type": "RTID(dark_king_veteran@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                       "Row": "4",
+                      "Type": "RTID(dark_king_veteran@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                       "Row": "5",
+                      "Type": "RTID(dark_king_veteran@ZombieTypes)",
+                        "CarrySun": 25
+                    }
+                ]
+            }
+        },
+         {
+            "aliases": [
+                "Wave11"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                     
+                        "Row": "1",
+                        "Type": "RTID(dino_armor3@ZombieTypes)",
+                        "CarrySun": 25
+                        
+                    },
+                    {
+                     
+                        "Row": "3",
+                        "Type": "RTID(eighties_gargantuar@ZombieTypes)",
+                        "CarrySun": 25
+                        
+                    },
+                    {
+
+                        "Row": "5",
+                        "Type": "RTID(dino_armor3@ZombieTypes)",
+                        "CarrySun": 25
+                    }
+              ]
+          }
+       },
+        {
+            "aliases": [
+                "Wave12"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "NotificationEvents": [
+                    "jam_metal"
+                ],
+                "Zombies": [
+                    {
+                        "Row": "5",
+                        "Type": "RTID(eighties_gargantuar@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Row": "1",
+                        "Type": "RTID(eighties_gargantuar@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Row": "2",
+                        "Type": "RTID(eighties_armor4@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(eighties_armor4@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Row": "2",
+                        "Type": "RTID(eighties_punk_veteran@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(eighties_punk_veteran@ZombieTypes)",
+                        "CarrySun": 25
+                    }
+                ]
+            }
+        }
+  ]
+}
+
+            

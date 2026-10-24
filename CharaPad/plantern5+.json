@@ -1,0 +1,1231 @@
+{
+    "#comment": "Plantern2",
+    "objects": [
+        {
+            "objclass": "LevelDefinition",
+            "objdata": {
+                "Description": "[PLAYERS_ATTEMPT_TO_GET_PLANT]",
+                "LevelNumber": 5,
+                "FirstRewardParam": "plantern",
+                "FirstRewardType": "unlock_plant",
+                "Loot": "RTID(DefaultLoot@LevelModules)",
+                "Modules": [
+                    "RTID(StandardIntro@LevelModules)",
+                    "RTID(DefaultSunDropper@LevelModules)",
+                    "RTID(ZombiesDeadWinCon@LevelModules)",
+                    "RTID(CowboyRails@CurrentLevel)",
+                    "RTID(SeedBank@CurrentLevel)",
+                    "RTID(DontEatMyBrains@CurrentLevel)",
+                    "RTID(AutoCollect@LevelModules)",
+                    "RTID(FrozenPlantPlacement@CurrentLevel)",
+                    "RTID(ProtectThePlant@CurrentLevel)",
+                    "RTID(ChallengeModule@CurrentLevel)",
+                    "RTID(//FutureMinigame@CurrentLevel)",
+                    "RTID(BowlingBulbMinigame@CurrentLevel)",
+                    "RTID(LevelScheduler@CurrentLevel)",
+                    "RTID(EightiesZombossIntro@LevelModules)",
+                    "RTID(LevelDeadLine@CurrentLevel)",
+                    "RTID(NewWaves@CurrentLevel)"
+                ],
+                "PlantToIntroduce": "plantern",
+                "Name": "[EPIC_PLANT_LEVEL_NAME]",
+                "WrittenBy": "CharaPad猹派",
+                "MusicType": "MiniGame_A",
+                "StageModule": "RTID(WestStage@LevelModules)"
+            }
+        },
+        {
+            "aliases": [
+                "FutureMinigame"
+            ],
+            "objclass": "FutureMinigameProperties",
+            "objdata": {
+                "SuppressObjectiveTip": true,
+                "Position": {
+                    "mX": 8,
+                    "mY": 0
+                },
+                "PlantUpgradeList": [
+                    {
+                        "Type": "blover",
+                        "UpgradeDetails": {
+                            "ShootIntervalScale": 0
+                        },
+                        "FullPoint": 10
+                    },
+                    {
+                        "Type": "blover",
+                        "UpgradeDetails": {
+                            "ShootIntervalScale": 0
+                        }
+                    }
+                ]
+            }
+        },
+        
+        {
+            "aliases": [
+                "thelavaguava"
+            ],
+            "objclass": "TileLiquidType",
+            "objdata": {
+                "Properties": "RTID(thelavaguavaprop@CurrentLevel)",
+                "TileLiquidBasedOn": "moltenpool"
+            }
+        },
+        {
+            "objclass": "ZombiesAteYourBrainsProperties",
+            "aliases": [
+                "DontEatMyBrains"
+            ],
+            "objdata": {
+                "ZombieWinPositionX": -800
+            }
+        },
+        {
+            "aliases": [
+                "thelavaguavaprop"
+            ],
+            "objclass": "TileLiquidProperties",
+            "objdata": {
+                "DPS": 80,
+                "SapflingDuration": 0.25,
+                "LifeSpan": 3000000,
+                "Priority": 0,
+                "BurnsPlants": false,
+                "Rect": "RTID(TileDefaultRect@RectangleProps)"
+            }
+        },
+        {
+            "aliases": [
+                "LevelScheduler"
+            ],
+            "objclass": "LevelSchedulerProps",
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Max": 5,
+                    "Min": 2
+                },
+                "TimeBetween": {
+                    "Max": 1,
+                    "Min": 1
+                },
+                "Repeat": {
+                    "Max": 1,
+                    "Min": 1
+                },
+                "RewardWhenEnded": false,
+                "SuppressRewardState": false,
+                "Events": [
+                    "RTID(Missile@CurrentLevel)"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "BowlingBulbMinigame"
+            ],
+            "objclass": "BowlingMinigameProperties",
+            "objdata": {
+                "BowlingFoulLine": 26,
+                "SuppressObjectiveTip": true
+            }
+        },
+        {
+            "aliases": [
+                "SeedBank"
+            ],
+            "objclass": "SeedBankProperties",
+            "objdata": {
+                "SuppressObjectiveTip": true,
+                "PresetPlantList": [
+                    {
+                        "Level": -1,
+                        "PlantType": "stunion"
+                    },
+                    {
+                        "Level": -1,
+                        "PlantType": "iceburg"
+                    }
+                ],
+                "SelectionMethod": "preset"
+            }
+        },
+        {
+            "aliases": [
+                "ProtectThePlant"
+            ],
+            "objclass": "ProtectThePlantChallengeProperties",
+            "objdata": {
+                "MustProtectCount": 12,
+                "Plants": [
+                    {
+                        "GridX": 3,
+                        "GridY": 0,
+                        "PlantType": "marigold_yellow"
+                    },
+                    {
+                        "GridX": 3,
+                        "GridY": 1,
+                        "PlantType": "marigold_yellow"
+                    },
+                    {
+                        "GridX": 3,
+                        "GridY": 2,
+                        "PlantType": "sunshroom"
+                    },
+                    {
+                        "GridX": 3,
+                        "GridY": 3,
+                        "PlantType": "marigold_yellow"
+                    },
+                    {
+                        "GridX": 3,
+                        "GridY": 4,
+                        "PlantType": "marigold_yellow"
+                    },
+                    {
+                        "GridX": 5,
+                        "GridY": 0,
+                        "PlantType": "marigold_yellow"
+                    },
+                    {
+                        "GridX": 5,
+                        "GridY": 1,
+                        "PlantType": "marigold_yellow"
+                    },
+                    {
+                        "GridX": 5,
+                        "GridY": 2,
+                        "PlantType": "sunshroom"
+                    },
+                    {
+                        "GridX": 5,
+                        "GridY": 3,
+                        "PlantType": "marigold_yellow"
+                    },
+                    {
+                        "GridX": 5,
+                        "GridY": 4,
+                        "PlantType": "marigold_yellow"
+                    },
+                    {
+                        "GridX": 4,
+                        "GridY": 0,
+                        "PlantType": "sunflower"
+                    },
+                    {
+                        "GridX": 4,
+                        "GridY": 4,
+                        "PlantType": "sunflower"
+                    }
+                ]
+            }
+        },
+        {
+			"aliases": [
+				"west_bull_veteran_reverse"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"ChanceToReverse":1
+			}
+		},
+        {
+			"aliases": [
+				"west_bull_veteran_reverse"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"Properties": "RTID(west_bull_veteran_reverse@CurrentLevel)",
+				"ZombieBasedOn": "west_bull_veteran"
+			}
+		},
+        {
+			"aliases": [
+				"modern_allstar_reverse"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"ChanceToReverse":1
+			}
+		},
+        {
+			"aliases": [
+				"modern_allstar_reverse"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"Properties": "RTID(modern_allstar_reverse@CurrentLevel)",
+				"ZombieBasedOn": "modern_allstar"
+			}
+		},
+        {
+            "aliases": [
+                "ChallengeModule"
+            ],
+            "objclass": "StarChallengeModuleProperties",
+            "objdata": {
+                "Challenges": [
+                    [
+                        "RTID(BeatTheLevel@CurrentLevel)"
+                    ]
+                ],
+                "ChallengesAlwaysAvailable": true
+            }
+        },
+        {
+            "aliases": [
+                "CowboyRails"
+            ],
+            "objclass": "RailcartProperties",
+            "objdata": {
+                "RailcartType": "railcart_cowboy",
+                "Railcarts": [
+                    {
+                        "Column": 2,
+                        "Row": 2
+                    },
+                    {
+                        "Column": 4,
+                        "Row": 2
+                    },
+                    {
+                        "Column": 6,
+                        "Row": 2
+                    }
+                ],
+                "Rails": [
+                    {
+                        "Column": 4,
+                        "RowEnd": 3,
+                        "RowStart": 1
+                    },
+                    {
+                        "Column": 2,
+                        "RowEnd": 4,
+                        "RowStart": 0
+                    },
+                    {
+                        "Column": 6,
+                        "RowEnd": 4,
+                        "RowStart": 0
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "FrozenPlantPlacement"
+            ],
+            "objclass": "InitialPlantProperties",
+            "objdata": {
+                "InitialPlantPlacements": [
+                    {
+                        "GridX": 2,
+                        "GridY": 2,
+                        "Plantfood": true,
+                        "TypeName": "plantern",
+                        "Level": -1
+                    },
+                    {
+                        "GridX": 4,
+                        "GridY": 2,
+                        "Plantfood": true,
+                        "Level": -1,
+                        "TypeName": "plantern"
+                    },
+                    {
+                        "GridX": 6,
+                        "GridY": 2,
+                        "Plantfood": true,
+                        "Level": -1,
+                        "TypeName": "plantern"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "NewWaves"
+            ],
+            "objclass": "WaveManagerModuleProperties",
+            "objdata": {
+                "DynamicZombies": [
+                    {},
+                    {},
+                    {},
+                    {},
+                    {
+                        "PointIncrementPerWave": 0,
+                        "StartingPoints": 1000,
+                        "StartingWave": 5,
+                        "ZombiePool": [
+                            "RTID(west_bull_veteran_plantern_5@ZombieTypes)"
+                        ]
+                    },
+                    {
+                        "PointIncrementPerWave": 0,
+                        "StartingPoints": 1000,
+                        "StartingWave": 4,
+                        "ZombiePool": [
+                            "RTID(west_bull_veteran_plantern_5@ZombieTypes)"
+                        ]
+                    },
+                    {
+                        "PointIncrementPerWave": 0,
+                        "StartingPoints": 1000,
+                        "StartingWave": 3,
+                        "ZombiePool": [
+                            "RTID(west_bull_veteran_plantern_5@ZombieTypes)"
+                        ]
+                    }
+                ],
+                "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+            }
+        },
+        {
+            "aliases": [
+                "WaveManagerProps"
+            ],
+            "objclass": "WaveManagerProperties",
+            "objdata": {
+                "MaxNextWaveHealthPercentage": 0.2,
+                "MinNextWaveHealthPercentage": 0.15,
+                "SuppressFlagZombie": true,
+                "FlagWaveInterval": 5,
+                "WaveCount": 5,
+                "SuppressedDynamicZombieWaves": [
+                    5,
+                    10
+                ],
+                "WaveSpendingPointIncrement": 100,
+                "WaveSpendingPoints": 200,
+                "Waves": [
+                    [
+                        "RTID(Wave1@CurrentLevel)",
+                        "RTID(Wave1Reverse@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave2@CurrentLevel)",
+                        "RTID(Wave2Reverse@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave3@CurrentLevel)",
+                        "RTID(Wave3Reverse@CurrentLevel)"
+                        
+
+                    ],
+                    [
+                        "RTID(Wave4@CurrentLevel)",
+                        "RTID(Wave4add@CurrentLevel)",
+                        "RTID(Wave4Reverse@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave5@CurrentLevel)",
+                        "RTID(Wave5add@CurrentLevel)",
+                        "RTID(Wave5Reverse@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave6@CurrentLevel)",
+                        "RTID(Wave6add@CurrentLevel)",
+                        "RTID(Wave6Reverse@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave7@CurrentLevel)",
+                        "RTID(Wave7add@CurrentLevel)",
+                        "RTID(Wave7everse@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave8@CurrentLevel)",
+                        "RTID(Wave8add@CurrentLevel)",
+                        "RTID(Wave8Reverse@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave9@CurrentLevel)",
+                        "RTID(Wave9add@CurrentLevel)",
+                        "RTID(Wave9Reverse@CurrentLevel)"
+                    ],
+                    []
+                ],
+                "ZombieCountdownFirstWaveSecs": 4
+            }
+        },
+        {
+            "aliases": [
+                "Wave1"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "3",
+                        "Type": "RTID(modern_allstar@ZombieTypes)"
+                    },
+                    {
+                        "Row": "4",
+                        "Type": "RTID(west_bull_veteran_plantern_5@ZombieTypes)"
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(modern_allstar@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+        "Wave1Reverse"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Row": "1",
+            "Type": "RTID(west_bull_veteran_reverse@CurrentLevel)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(modern_allstar_reverse@CurrentLevel)"
+          },
+        
+          {
+            "Row": "3",
+            "Type": "RTID(west_bull_veteran_reverse@CurrentLevel)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(west_bull_veteran_reverse@CurrentLevel)"
+          }
+        ]
+      }
+    },
+        {
+            "aliases": [
+                "Wave2"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "1",
+                        "Type": "RTID(modern_allstar@ZombieTypes)"
+                    },
+                    {
+                        "Row": "4",
+                        "Type": "RTID(modern_allstar@ZombieTypes)"
+                    },
+                    {
+                        "Row": "3",
+                        "Type": "RTID(modern_allstar@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+        "Wave2Reverse"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Row": "3",
+            "Type": "RTID(west_bull_veteran_reverse@CurrentLevel)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(west_bull_veteran_reverse@CurrentLevel)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(west_bull_veteran_reverse@CurrentLevel)"
+          }
+        ]
+      }
+    },
+        {
+            "aliases": [
+                "Wave3"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "AdditionalPlantfood": 0,
+                "Zombies": [
+                    {
+                        "Row": "2",
+                        "Type": "RTID(modern_allstar@ZombieTypes)"
+                    },
+                    {
+                        "Row": "1",
+                        "Type": "RTID(west_bull_veteran_plantern_5@ZombieTypes)"
+                    },
+                    {
+                        "Row": "3",
+                        "Type": "RTID(west_bull_veteran_plantern_5@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+        "Wave3Reverse"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Row": "4",
+            "Type": "RTID(west_bull_veteran_reverse@CurrentLevel)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(west_bull_veteran_reverse@CurrentLevel)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(modern_allstar_reverse@CurrentLevel)"
+          }
+        ]
+      }
+    },
+        {
+            "aliases": [
+                "Wave4"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Row": "3",
+            "Type": "RTID(west_bull_veteran@ZombieTypes)"
+          }
+                   
+                ]
+            }
+        },
+        {
+            "aliases": [
+        "Wave4Reverse"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Row": "2",
+            "Type": "RTID(modern_allstar_reverse@CurrentLevel)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(modern_allstar_reverse@CurrentLevel)"
+          }
+        ]
+      }
+    },
+        {
+            "aliases": [
+                "Wave4add"
+            ],
+            "objclass": "WaveSchedulerProps",
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Max": 9,
+                    "Min": 8.5
+                },
+                "TimeBetween": {
+                    "Max": 30,
+                    "Min": 30
+                },
+                "Repeat": {
+                    "Max": 1,
+                    "Min": 1
+                },
+                "Events": [
+                    "RTID(Wave4addProp@CurrentLevel)"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave4addProp"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "2",
+                        "Type": "RTID(west_bull_veteran_plantern_5@ZombieTypes)"
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(west_bull_veteran_plantern_5@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave5"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "AdditionalPlantfood": 0,
+                "Zombies": [
+                    {
+                        "Row": "2",
+                        "Type": "RTID(west_bull_veteran@ZombieTypes)"
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(west_bull_veteran@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave5add"
+            ],
+            "objclass": "WaveSchedulerProps",
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Max": 5,
+                    "Min": 4.5
+                },
+                "TimeBetween": {
+                    "Max": 30,
+                    "Min": 30
+                },
+                "Repeat": {
+                    "Max": 1,
+                    "Min": 1
+                },
+                "Events": [
+                    "RTID(Wave5addProp@CurrentLevel)"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave5addProp"
+            ],
+            "objclass": "RandomEventsProps",
+            "objdata": {
+                "EventCount": {
+                    "Min": 1,
+                    "Max": 1
+                },
+                "Events": [
+                    "RTID(Event00@CurrentLevel)"
+                ]
+            }
+        },
+        {
+            "aliases": [
+        "Wave5Reverse"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Row": "2",
+            "Type": "RTID(modern_allstar_reverse@CurrentLevel)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(modern_allstar_reverse@CurrentLevel)"
+          }
+        ]
+     }
+     },        
+        {
+            "aliases": [
+                "Wave6"
+            ],
+            "objclass": "RandomEventsProps",
+            "objdata": {
+                "EventCount": {
+                    "Min": 1,
+                    "Max": 1
+                },
+                "Events": [
+                    "RTID(Event10@CurrentLevel)"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave6add"
+            ],
+            "objclass": "WaveSchedulerProps",
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Max": 5,
+                    "Min": 4.5
+                },
+                "TimeBetween": {
+                    "Max": 30,
+                    "Min": 30
+                },
+                "Repeat": {
+                    "Max": 1,
+                    "Min": 1
+                },
+                "Events": [
+                    "RTID(Wave6addProp@CurrentLevel)"
+                ]
+            }
+        },
+        {
+            "aliases": [
+        "Wave6Reverse"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Row": "4",
+            "Type": "RTID(modern_allstar_reverse@CurrentLevel)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(modern_allstar_reverse@CurrentLevel)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(modern_allstar_reverse@CurrentLevel)"
+          }
+        ]
+      }
+    },
+        {
+            "aliases": [
+                "Wave6addProp"
+            ],
+            "objclass": "RandomEventsProps",
+            "objdata": {
+                "EventCount": {
+                    "Min": 1,
+                    "Max": 1
+                },
+                "Events": [
+                    "RTID(Event20@CurrentLevel)"
+                ]
+            }
+        },
+        {
+            "aliases": [
+        "Wave7Reverse"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Row": "5",
+            "Type": "RTID(modern_allstar_reverse@CurrentLevel)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(modern_allstar_reverse@CurrentLevel)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(modern_allstar_reverse@CurrentLevel)"
+          }
+        ]
+      }
+    },
+        {
+            "aliases": [
+                "Wave7"
+            ],
+            "objclass": "RandomEventsProps",
+            "objdata": {
+                "EventCount": {
+                    "Min": 1,
+                    "Max": 1
+                },
+                "Events": [
+                    "RTID(Event02@CurrentLevel)",
+                    "RTID(Event01@CurrentLevel)"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave7add"
+            ],
+            "objclass": "WaveSchedulerProps",
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Max": 5,
+                    "Min": 4.5
+                },
+                "TimeBetween": {
+                    "Max": 30,
+                    "Min": 30
+                },
+                "Repeat": {
+                    "Max": 1,
+                    "Min": 1
+                },
+                "Events": [
+                    "RTID(Wave7addProp@CurrentLevel)"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave7addProp"
+            ],
+            "objclass": "RandomEventsProps",
+            "objdata": {
+                "EventCount": {
+                    "Min": 1,
+                    "Max": 1
+                },
+                "Events": [
+                    "RTID(Event10@CurrentLevel)",
+                    "RTID(Event11@CurrentLevel)"
+                ]
+            }
+        },
+        {
+            "aliases": [
+        "Wave8Reverse"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Row": "1",
+            "Type": "RTID(modern_allstar_reverse@CurrentLevel)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(modern_allstar_reverse@CurrentLevel)"
+          }
+        ]
+      }
+    },
+        {
+            "aliases": [
+                "Wave8"
+            ],
+            "objclass": "RandomEventsProps",
+            "objdata": {
+                "EventCount": {
+                    "Min": 1,
+                    "Max": 1
+                },
+                "Events": [
+                    "RTID(Event02@CurrentLevel)",
+                    "RTID(Event00@CurrentLevel)"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave8add"
+            ],
+            "objclass": "WaveSchedulerProps",
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Max": 5,
+                    "Min": 4.5
+                },
+                "TimeBetween": {
+                    "Max": 30,
+                    "Min": 30
+                },
+                "Repeat": {
+                    "Max": 1,
+                    "Min": 1
+                },
+                "Events": [
+                    "RTID(Wave8addProp@CurrentLevel)"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave8addProp"
+            ],
+            "objclass": "RandomEventsProps",
+            "objdata": {
+                "EventCount": {
+                    "Min": 1,
+                    "Max": 1
+                },
+                "Events": [
+                    "RTID(Event20@CurrentLevel)",
+                    "RTID(Event21@CurrentLevel)",
+                    "RTID(Event22@CurrentLevel)"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave9add0"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "3",
+                        "Type": "RTID(modern_allstar@ZombieTypes)"
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(modern_allstar@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave9"
+            ],
+            "objclass": "RandomEventsProps",
+            "objdata": {
+                "EventCount": {
+                    "Min": 1,
+                    "Max": 1
+                },
+                "Events": [
+                    "RTID(Event01@CurrentLevel)",
+                    "RTID(Event00@CurrentLevel)"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave9add"
+            ],
+            "objclass": "WaveSchedulerProps",
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Max": 5,
+                    "Min": 4.5
+                },
+                "TimeBetween": {
+                    "Max": 14,
+                    "Min": 12
+                },
+                "Repeat": {
+                    "Max": 6,
+                    "Min": 6
+                },
+                "Events": [
+                    "RTID(Wave9addProp@CurrentLevel)"
+                ]
+            }
+        },
+        {
+            "aliases": [
+        "Wave9Reverse"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Row": "4",
+            "Type": "RTID(modern_allstar_reverse@CurrentLevel)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(modern_allstar_reverse@CurrentLevel)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(modern_allstar_reverse@CurrentLevel)"
+          }
+        ]
+      }
+    },
+        {
+            "aliases": [
+                "Wave9addProp"
+            ],
+            "objclass": "RandomEventsProps",
+            "objdata": {
+                "EventCount": {
+                    "Min": 1,
+                    "Max": 1
+                },
+                "Events": [
+                    "RTID(Event20@CurrentLevel)",
+                    "RTID(Event21@CurrentLevel)",
+                    "RTID(Event22@CurrentLevel)"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Event00"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "1",
+                        "Type": "RTID(west_bull_veteran_plantern_5@ZombieTypes)"
+                    },
+                    {
+                        "Row": "3",
+                        "Type": "RTID(west_bull_veteran_plantern_5@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Event01"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "2",
+                        "Type": "RTID(west_bull_veteran_plantern_5@ZombieTypes)"
+                    },
+                    {
+                        "Row": "4",
+                        "Type": "RTID(west_bull_veteran_plantern_5@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Event02"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "3",
+                        "Type": "RTID(west_bull_veteran_plantern_5@ZombieTypes)"
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(west_bull_veteran_plantern_5@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Event10"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "1",
+                        "Type": "RTID(west_bull_veteran_plantern_5@ZombieTypes)"
+                    },
+                    {
+                        "Row": "4",
+                        "Type": "RTID(west_bull_veteran_plantern_5@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Event11"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "2",
+                        "Type": "RTID(west_bull_veteran_plantern_5@ZombieTypes)"
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(west_bull_veteran_plantern_5@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Event20"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "3",
+                        "Type": "RTID(west_bull_veteran_plantern_5@ZombieTypes)"
+                    },
+                    {
+                        "Row": "4",
+                        "Type": "RTID(west_bull_veteran_plantern_5@ZombieTypes)"
+                    },
+                    {
+                        "Row": "1",
+                        "Type": "RTID(modern_allstar_reverse@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Event21"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "1",
+                        "Type": "RTID(west_bull_veteran_plantern_5@ZombieTypes)"
+                    },
+                    {
+                        "Row": "3",
+                        "Type": "RTID(west_bull_veteran_plantern_5@ZombieTypes)"
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(modern_allstar_reverse@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Event22"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "2",
+                        "Type": "RTID(west_bull_veteran_plantern_5@ZombieTypes)"
+                    },
+                    {
+                        "Row": "4",
+                        "Type": "RTID(modern_allstar_reverse@CurrentLevel)"
+                    },
+                    {
+                        "Row": "1",
+                        "Type": "RTID(west_bull_veteran_plantern_5@ZombieTypes)"
+                    }
+                ]
+            }
+        }
+    ],
+    "version": 1
+}
