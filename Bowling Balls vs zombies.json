@@ -1,0 +1,829 @@
+{
+  "#comment": "Bowling Balls vs zombies",
+  "version": 1,
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "LevelNumber": 1,
+        "Loot": "RTID(NoLoot@LevelModules)",
+        "Name": "Bowling Balls vs zombies",
+        "Description": "Custom Level",
+        "StartingSun": 50,
+        "StageModule": "RTID(EgyptStage@LevelModules)",
+        "Modules": [
+          "RTID(StandardIntro@LevelModules)",
+          "RTID(DefaultSunDropper@LevelModules)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(EgyptMowers@LevelModules)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(ConveyorBelt@CurrentLevel)"
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "ConveyorBelt"
+      ],
+      "objclass": "ConveyorSeedBankProperties",
+      "objdata": {
+        "DropDelayConditions": [
+          {
+            "MaxPackets": 0,
+            "Delay": 5
+          }
+        ],
+        "InitialPlantList": [
+          {
+            "Weight": 15,
+            "PlantType": "tool_projectile_bowling_wallnut"
+          },
+          {
+            "Weight": 15,
+            "PlantType": "tool_projectile_bowling_explodeonut"
+          },
+          {
+            "Weight": 15,
+            "PlantType": "tool_projectile_bowling_holonut"
+          },
+          {
+            "Weight": 15,
+            "PlantType": "tool_projectile_bowling_primalwallnut"
+          },
+          {
+            "Weight": 15,
+            "PlantType": "tool_projectile_bowlingbulb_iceburg"
+          },
+          {
+            "Weight": 15,
+            "PlantType": "tool_projectile_bowling_tallnut"
+          }
+        ],
+        "SpeedConditions": [
+          {
+            "MaxPackets": 0,
+            "Speed": 100
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {},
+          {},
+          {},
+          {},
+          {
+            "StartingWave": 0,
+            "StartingPoints": 0,
+            "PointIncrementPerWave": 0,
+            "ZombiePool": [
+              "RTID(tutorial@ZombieTypes)"
+            ]
+          },
+          {},
+          {}
+        ],
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "MinNextWaveHealthPercentage": 0.5,
+        "MaxNextWaveHealthPercentage": 0.65,
+        "FlagWaveInterval": 5,
+        "WaveCount": 5,
+        "WaveSpendingPointIncrement": 10,
+        "WaveSpendingPoints": 100,
+        "Waves": [
+          [
+            "RTID(Wave1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)"
+          }
+        ]
+      }
+    }
+  ]
+}
