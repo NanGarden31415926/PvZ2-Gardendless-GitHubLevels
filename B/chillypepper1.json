@@ -1,0 +1,833 @@
+{
+  "#comment": "custom_level_1",
+  "version": 1,
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "LevelNumber": 1,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Name": "[EPIC_PLANT_LEVEL_NAME]",
+        "Description": "[PLAYERS_ATTEMPT_TO_GET_PLANT]",
+        "PlantToIntroduce": "chillypepper",
+        "StartingSun": 50,
+        "StageModule": "RTID(EgyptStage@LevelModules)",
+        "MusicType": "MiniGame_A",
+        "Modules": [
+          "RTID(StandardIntro@LevelModules)",
+          "RTID(SlowSunDropper@LevelModules)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(InitialGridItems@CurrentLevel)"
+        ],
+        "WrittenBy": "B"
+      }
+    },
+    {
+      "aliases": [
+        "ChallengeModule"
+      ],
+      "objclass": "StarChallengeModuleProperties",
+      "objdata": {
+        "ChallengesAlwaysAvailable": true,
+        "Challenges": [
+          [
+            "RTID(ZombieDistance@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "ZombieDistance"
+      ],
+      "objclass": "StarChallengeZombieDistanceProps",
+      "objdata": {
+        "TargetDistance": 3
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "SelectionMethod": "preset",
+        "OverrideSeedSlotsCount": 8,
+        "PresetPlantList": [
+          {
+            "PlantType": "sunshroom",
+            "Level": -1
+          },
+          {
+            "PlantType": "fumeshroom",
+            "Level": -1
+          },
+          {
+            "PlantType": "chillypepper",
+            "Level": -1
+          },
+          {
+            "PlantType": "imitater",
+            "Level": -1
+          },
+          {
+            "PlantType": "chardguard",
+            "Level": -1
+          },
+          {
+            "PlantType": "primalwallnut",
+            "Level": -1
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {
+            "PointIncrementPerWave": -40,
+            "StartingPoints": -100,
+            "StartingWave": 3,
+            "ZombiePool": [
+              "RTID(kongfu_armor2@ZombieTypes)",
+              "RTID(monk_armor2@ZombieTypes)",
+              "RTID(abbot_armor2@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": -25,
+            "StartingPoints": -100,
+            "StartingWave": 4,
+            "ZombiePool": [
+              "RTID(kongfu_armor2@ZombieTypes)",
+              "RTID(monk_armor2@ZombieTypes)",
+              "RTID(abbot_armor2@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": -10,
+            "StartingPoints": -100,
+            "StartingWave": 5,
+            "ZombiePool": [
+              "RTID(kongfu_armor2@ZombieTypes)",
+              "RTID(monk_armor2@ZombieTypes)",
+              "RTID(abbot_armor2@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 60,
+            "StartingPoints": 500,
+            "StartingWave": 2,
+            "ZombiePool": [
+              "RTID(lostcity_impporter@ZombieTypes)",
+              "RTID(ra@ZombieTypes)",
+              "RTID(pharaoh@ZombieTypes)",
+              "RTID(mummy_armor2@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 60,
+            "StartingPoints": 500,
+            "StartingWave": 2,
+            "ZombiePool": [
+              "RTID(lostcity_impporter@ZombieTypes)",
+              "RTID(ra@ZombieTypes)",
+              "RTID(pharaoh@ZombieTypes)",
+              "RTID(mummy_armor2@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 60,
+            "StartingPoints": 500,
+            "StartingWave": 2,
+            "ZombiePool": [
+              "RTID(lostcity_impporter@ZombieTypes)",
+              "RTID(ra@ZombieTypes)",
+              "RTID(pharaoh@ZombieTypes)",
+              "RTID(mummy_armor2@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 60,
+            "StartingPoints": 500,
+            "StartingWave": 2,
+            "ZombiePool": [
+              "RTID(lostcity_impporter@ZombieTypes)",
+              "RTID(ra@ZombieTypes)",
+              "RTID(pharaoh@ZombieTypes)",
+              "RTID(mummy_armor2@ZombieTypes)"
+            ]
+          }
+        ],
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "MinNextWaveHealthPercentage": 0.45,
+        "MaxNextWaveHealthPercentage": 0.55,
+        "FlagWaveInterval": 8,
+        "WaveCount": 16,
+        "WaveSpendingPointIncrement": 30,
+        "WaveSpendingPoints": 100,
+        "Waves": [
+          [
+            "RTID(Wave1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)",
+            "RTID(Wave8StormEvent0@CurrentLevel)"           
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave11@CurrentLevel)",
+            "RTID(Wave11StormEvent0@CurrentLevel)"                      
+          ],
+          [
+            "RTID(Wave12@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave13@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave14@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave15@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave16@CurrentLevel)",
+            "RTID(Wave16StormEvent0@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(mummy_armor2@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(mummy_armor2@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(mummy_armor2@ZombieTypes)",
+            "Row": "3"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(ra@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(ra@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(mummy_armor2@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(mummy_armor2@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(mummy_armor2@ZombieTypes)",
+            "Row": "5"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_impporter@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(ra@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(ra@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(west_bull@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(ra@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(ra@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(explorer@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(west_bull@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(lostcity_impporter@ZombieTypes)",
+            "Row": "3"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(ra@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(ra@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(explorer@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(explorer@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(west_bull@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave7"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(lostcity_impporter@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(explorer@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(explorer@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(ra@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(ra@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave8"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 1,
+        "Zombies": [
+          {
+            "Type": "RTID(lostcity_impporter@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(lostcity_impporter@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(egypt_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(west_bull@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(west_bull@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(explorer@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(explorer@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(explorer@ZombieTypes)",
+            "Row": "5"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave9"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(football_mech@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(ra@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(ra@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(ra@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)",
+            "Row": "5"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave10"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(west_bull@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(west_bull@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(lostcity_impporter@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(lostcity_impporter@ZombieTypes)",
+            "Row": "3"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave11"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(football_mech@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(football_mech@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(ra@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(ra@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(ra@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(explorer_veteran@ZombieTypes)",
+            "Row": "3"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave12"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(west_bull_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(west_bull@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(west_bull@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(football_mech@ZombieTypes)"
+          },         
+          {
+            "Type": "RTID(lostcity_impporter@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(lostcity_impporter@ZombieTypes)",
+            "Row": "5"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave13"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 1,
+        "Zombies": [
+          {
+            "Type": "RTID(egypt_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(explorer_veteran@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(explorer_veteran@ZombieTypes)",
+            "Row": "4"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave14"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(west_bull_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(west_bull@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)",
+            "Row": "3"
+          },        
+          {
+            "Type": "RTID(football_mech@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(football_mech@ZombieTypes)",
+            "Row": "4"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave15"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)",
+            "Row": "1"
+          },
+
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(explorer_veteran@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(explorer_veteran@ZombieTypes)",
+            "Row": "5"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave16"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 1,
+        "Zombies": [
+          {
+            "Type": "RTID(egypt_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)"
+          },          
+          {
+            "Type": "RTID(west_bull_veteran@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(west_bull_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(explorer_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(explorer_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(explorer_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(football_mech@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(football_mech@ZombieTypes)"
+          }         
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave8StormEvent0"
+      ],
+      "objclass": "StormZombieSpawnerProps",
+      "objdata": {
+        "ColumnStart": 5,
+        "ColumnEnd": 6,
+        "GroupSize": 1,
+        "TimeBetweenGroups": 0,
+        "Type": "sandstorm",
+        "Zombies": [
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          }         
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave11StormEvent0"
+      ],
+      "objclass": "StormZombieSpawnerProps",
+      "objdata": {
+        "ColumnStart": 5,
+        "ColumnEnd": 6,
+        "GroupSize": 1,
+        "TimeBetweenGroups": 0,
+        "Type": "sandstorm",
+        "Zombies": [
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)"
+          } 
+        ]
+      }
+    },        
+    {
+      "aliases": [
+        "Wave16StormEvent0"
+      ],
+      "objclass": "StormZombieSpawnerProps",
+      "objdata": {
+        "ColumnStart": 6,
+        "ColumnEnd": 6,
+        "GroupSize": 1,
+        "TimeBetweenGroups": 0,
+        "Type": "sandstorm",
+        "Zombies": [
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)"
+          }                           
+        ]
+      }
+    },     
+    {
+      "aliases": [
+        "InitialGridItems"
+      ],
+      "objclass": "InitialGridItemProperties",
+      "objdata": {
+        "InitialGridItemPlacements": [
+          {
+            "GridX": 8,
+            "GridY": 0,
+            "TypeName": "goldtile"
+          },
+          {
+            "GridX": 8,
+            "GridY": 1,
+            "TypeName": "goldtile"
+          },
+          {
+            "GridX": 8,
+            "GridY": 2,
+            "TypeName": "goldtile"
+          },
+          {
+            "GridX": 8,
+            "GridY": 3,
+            "TypeName": "goldtile"
+          },
+          {
+            "GridX": 8,
+            "GridY": 4,
+            "TypeName": "goldtile"
+          }
+        ]
+      }
+    }
+
+  ]
+}
