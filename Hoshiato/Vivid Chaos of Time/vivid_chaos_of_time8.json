@@ -1,0 +1,4275 @@
+{
+  "#comment": "Vivid Chaos of Time",
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(StandardIntro@LevelModules)",
+          "RTID(DefaultSunDropper@LevelModules)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(LevelDeadLine@CurrentLevel)",
+          "RTID(BeatTheLevel@CurrentLevel)",
+          "RTID(LevelScheduler@CurrentLevel)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)"
+        ],
+        "Name": "Vivid Chaos of Time",
+        "NameMultiLanguage": {
+          "en": "Vivid Chaos of Time - Level <LEVELNUMBER>",
+          "zh": "时序绚乱 - 第 <LEVELNUMBER> 关"
+        },
+        "Description": "<PLAYERNAME>'s Trip to Time Turbulence!",
+        "DescriptionMultiLanguage": {
+          "en": "<PLAYERNAME>'s Trip to Time Turbulence!",
+          "zh": "<PLAYERNAME>的时空乱流之旅！"
+        },
+        "LevelNumber": 8,
+        "WrittenBy": "星痕_Hoshiato",
+        "MusicType": "MiniGame_A",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "StageModule": "RTID(TheStage@CurrentLevel)"
+      }
+    },
+	{
+      "aliases": [
+        "TheStage"
+      ],
+      "objclass": "LawnType",
+      "objdata": {
+        "LawnBaseOn": "PersuitStage",
+        "Properties": "RTID(TheStageProp@CurrentLevel)"
+      }
+    },
+	{
+      "aliases": [
+        "TheStageProp"
+      ],
+      "objclass": "LawnProperties",
+      "objdata": {
+        "Armor1_Zombie": [
+          "mummy_armor1",
+          "pirate_armor1",
+          "cowboy_armor1",
+          "future_armor1",
+          "dark_armor1",
+          "beach_armor1",
+          "beach_fem_armor1",
+          "iceage_armor1",
+          "lostcity_armor1",
+          "kongfu_armor1",
+          "monk_armor1",
+          "abbot_armor1",
+          "eighties_armor1",
+          "dino_armor1",
+          "sky_armor1"
+        ],
+        "Armor2_Zombie": [
+          "mummy_armor2",
+          "pirate_armor2",
+          "cowboy_armor2",
+          "future_armor2",
+          "dark_armor2",
+          "beach_armor2",
+          "beach_fem_armor2",
+          "iceage_armor2",
+          "lostcity_armor2",
+          "kongfu_armor2",
+          "monk_armor2",
+          "abbot_armor2",
+          "eighties_armor2",
+          "dino_armor2",
+          "sky_armor2"
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "BeatTheLevel"
+      ],
+      "objclass": "StarChallengeBeatTheLevelProps",
+      "objdata": {
+        "DescriptionsMultilanguage": [
+          {
+            "en": "Survive 380 seconds during zombie attack",
+            "zh": "在尸潮的进攻中存活380秒"
+          }
+        ]
+      }
+    },
+	{
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "LevelJamList": [
+          "jam_punk",
+		  "jam_pop",
+		  "jam_rap",
+		  "jam_8bit",
+		  "jam_metal"
+        ],
+        "FlagWaveInterval": 0,
+        "SpawnColEnd": 1,
+        "SpawnColStart": 1,
+        "WaveCount": 0,
+        "WaveSpendingPointIncrement": 0,
+        "WaveSpendingPoints": 0,
+        "Waves": []
+      }
+    },
+    {
+      "aliases": [
+        "LevelDeadLine"
+      ],
+      "objclass": "LevelDeadLineProps",
+      "objdata": {
+        "SuppressObjectiveTip": true,
+        "Countdown": 380,
+        "Events": [
+          "RTID(Win@CurrentLevel)"
+        ]
+      }
+    },
+    {
+		"aliases":[
+			"Win"
+		],
+		"objclass":"WaveSchedulerProps",
+		"objdata":{
+			"TimeBeforeFirst":{
+				"Max":0,
+				"Min":0
+			},
+			"TimeBetween":{
+				"Max":1,
+				"Min":1
+			},
+			"Repeat":{
+				"Max":1,
+				"Min":1
+			},
+			"RewardWhenEnded":true,
+			"SuppressRewardState":false,
+			"Events":[
+				"RTID(ThereIsNoEvent@CurrentLevel)"
+			]
+		}
+	},
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "SelectionMethod": "chooser"
+      }
+    },
+    {
+		"aliases":[
+			"LevelScheduler"
+		],
+		"objclass":"LevelSchedulerProps",
+		"objdata":{
+			"TimeBeforeFirst":{
+					"Max":0,
+					"Min":0
+			},
+			"TimeBetween":{
+					"Max":1,
+					"Min":1
+			},
+			"Repeat":{
+					"Max":1,
+					"Min":1
+			},
+			"RewardWhenEnded":false,
+			"SuppressRewardState":false,
+			"Events":[
+				"RTID(Wave1@CurrentLevel)",
+          		"RTID(Wave2@CurrentLevel)",
+          		"RTID(Wave3@CurrentLevel)",
+          		"RTID(Wave4@CurrentLevel)",
+          		"RTID(Wave5@CurrentLevel)",
+          		"RTID(Wave6@CurrentLevel)",
+          		"RTID(Wave7@CurrentLevel)",
+          		"RTID(Wave8@CurrentLevel)",
+          		"RTID(Wave9@CurrentLevel)",
+          		"RTID(Wave10@CurrentLevel)",
+          		"RTID(Wave11@CurrentLevel)",
+          		"RTID(Wave12@CurrentLevel)",
+          		"RTID(Wave13@CurrentLevel)",
+          		"RTID(Wave14@CurrentLevel)",
+          		"RTID(Wave15@CurrentLevel)",
+          		"RTID(Wave16@CurrentLevel)",
+          		"RTID(Wave17@CurrentLevel)",
+          		"RTID(Wave18@CurrentLevel)",
+          		"RTID(Message0Wave@CurrentLevel)",
+				"RTID(Message1Wave@CurrentLevel)",
+				"RTID(Message3Wave@CurrentLevel)",
+          		"RTID(Message5Wave@CurrentLevel)",
+          		"RTID(Message6Wave@CurrentLevel)"
+			]
+		}
+	},
+    {
+      "aliases": [
+        "Message0"
+      ],
+      "objclass": "WaveLevelAuthorMessageProps",
+      "objdata": {
+        "StringMultiLanguage": {
+          "en": "SURVIVE FOR ANOTHER 180 SECONDS!",
+          "zh": "再坚持300秒！"
+        },
+        "ThemeColor": "#64B5F6"
+      }
+    },
+    {
+      "aliases": [
+        "Message1"
+      ],
+      "objclass": "WaveLevelAuthorMessageProps",
+      "objdata": {
+        "StringMultiLanguage": {
+          "en": "SURVIVE FOR ANOTHER 180 SECONDS!",
+          "zh": "再坚持240秒！"
+        },
+        "ThemeColor": "#64B5F6"
+      }
+    },
+    {
+      "aliases": [
+        "Message2"
+      ],
+      "objclass": "WaveLevelAuthorMessageProps",
+      "objdata": {
+        "StringMultiLanguage": {
+          "en": "SURVIVE FOR ANOTHER 180 SECONDS!",
+          "zh": "再坚持180秒！"
+        },
+        "ThemeColor": "#64B5F6"
+      }
+    },
+    {
+      "aliases": [
+        "Message3"
+      ],
+      "objclass": "WaveLevelAuthorMessageProps",
+      "objdata": {
+        "StringMultiLanguage": {
+          "en": "SURVIVE FOR ANOTHER 120 SECONDS!",
+          "zh": "再坚持120秒！"
+        },
+        "ThemeColor": "#64B5F6"
+      }
+    },
+    {
+      "aliases": [
+        "Message4"
+      ],
+      "objclass": "WaveLevelAuthorMessageProps",
+      "objdata": {
+        "StringMultiLanguage": {
+          "en": "SURVIVE FOR ANOTHER 60 SECONDS!",
+          "zh": "再坚持60秒！"
+        },
+        "ThemeColor": "#64B5F6"
+      }
+    },
+    {
+      "aliases": [
+        "Message5"
+      ],
+      "objclass": "WaveLevelAuthorMessageProps",
+      "objdata": {
+        "StringMultiLanguage": {
+          "en": "SURVIVE FOR ANOTHER 30 SECONDS!",
+          "zh": "再坚持30秒！"
+        },
+        "ThemeColor": "#64B5F6"
+      }
+    },
+    {
+      "aliases": [
+        "Message6"
+      ],
+      "objclass": "WaveLevelAuthorMessageProps",
+      "objdata": {
+        "StringMultiLanguage": {
+          "en": "SURVIVE FOR ANOTHER 10 SECONDS!",
+          "zh": "再坚持10秒！"
+        },
+        "ThemeColor": "#64B5F6"
+      }
+    },
+    	{
+			"aliases":[
+				"Wave1"
+			],
+			"objclass":"WaveSchedulerProps",
+			"objdata":{
+				"TimeBeforeFirst":{
+					"Max":40,
+					"Min":40
+				},
+				"TimeBetween":{
+					"Max":1,
+					"Min":1
+				},
+				"Repeat":{
+					"Max":1,
+					"Min":1
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+					"RTID(Wave1Jitter@CurrentLevel)"
+				]
+			}
+		},
+    	{
+			"aliases":[
+				"Wave2"
+			],
+			"objclass":"WaveSchedulerProps",
+			"objdata":{
+				"TimeBeforeFirst":{
+					"Max":60,
+					"Min":60
+				},
+				"TimeBetween":{
+					"Max":1,
+					"Min":1
+				},
+				"Repeat":{
+					"Max":1,
+					"Min":1
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+					"RTID(Wave2Jitter@CurrentLevel)",
+					"RTID(PotionScheduler@CurrentLevel)"
+				]
+			}
+		},
+    	{
+			"aliases":[
+				"Wave3"
+			],
+			"objclass":"WaveSchedulerProps",
+			"objdata":{
+				"TimeBeforeFirst":{
+					"Max":85,
+					"Min":85
+				},
+				"TimeBetween":{
+					"Max":1,
+					"Min":1
+				},
+				"Repeat":{
+					"Max":1,
+					"Min":1
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+					"RTID(Wave3Jitter@CurrentLevel)"
+				]
+			}
+		},
+    	{
+			"aliases":[
+				"Wave4"
+			],
+			"objclass":"WaveSchedulerProps",
+			"objdata":{
+				"TimeBeforeFirst":{
+					"Max":105,
+					"Min":105
+				},
+				"TimeBetween":{
+					"Max":1,
+					"Min":1
+				},
+				"Repeat":{
+					"Max":1,
+					"Min":1
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+					"RTID(Wave4Jitter@CurrentLevel)",
+					"RTID(Wave4DinoTimeEvent0@CurrentLevel)",
+					"RTID(Wave4DinoTimeEvent1@CurrentLevel)",
+					"RTID(Wave4StormEvent@CurrentLevel)"
+				]
+			}
+		},
+    	{
+			"aliases":[
+				"Wave5"
+			],
+			"objclass":"WaveSchedulerProps",
+			"objdata":{
+				"TimeBeforeFirst":{
+					"Max":130,
+					"Min":130
+				},
+				"TimeBetween":{
+					"Max":1,
+					"Min":1
+				},
+				"Repeat":{
+					"Max":1,
+					"Min":1
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+					"RTID(Wave5Jitter@CurrentLevel)"
+				]
+			}
+		},
+    	{
+			"aliases":[
+				"Wave6"
+			],
+			"objclass":"WaveSchedulerProps",
+			"objdata":{
+				"TimeBeforeFirst":{
+					"Max":160,
+					"Min":160
+				},
+				"TimeBetween":{
+					"Max":1,
+					"Min":1
+				},
+				"Repeat":{
+					"Max":1,
+					"Min":1
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+					"RTID(Wave6Jitter@CurrentLevel)",
+					"RTID(RaidingPartyMessage@CurrentLevel)",
+					"RTID(Wave6Scheduler0@CurrentLevel)",
+					"RTID(Wave6Scheduler1@CurrentLevel)",
+					"RTID(Wave6Scheduler2@CurrentLevel)",
+					"RTID(Wave6Scheduler3@CurrentLevel)"
+				]
+			}
+		},
+    	{
+			"aliases":[
+				"Wave7"
+			],
+			"objclass":"WaveSchedulerProps",
+			"objdata":{
+				"TimeBeforeFirst":{
+					"Max":180,
+					"Min":180
+				},
+				"TimeBetween":{
+					"Max":1,
+					"Min":1
+				},
+				"Repeat":{
+					"Max":1,
+					"Min":1
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+					"RTID(Wave7Jitter@CurrentLevel)"
+				]
+			}
+		},
+    	{
+			"aliases":[
+				"Wave8"
+			],
+			"objclass":"WaveSchedulerProps",
+			"objdata":{
+				"TimeBeforeFirst":{
+					"Max":200,
+					"Min":200
+				},
+				"TimeBetween":{
+					"Max":1,
+					"Min":1
+				},
+				"Repeat":{
+					"Max":1,
+					"Min":1
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+					"RTID(Wave8Jitter@CurrentLevel)",
+          			"RTID(Message2@CurrentLevel)",
+					"RTID(Wave8Thunder@CurrentLevel)"
+				]
+			}
+		},
+    	{
+			"aliases":[
+				"Wave9"
+			],
+			"objclass":"WaveSchedulerProps",
+			"objdata":{
+				"TimeBeforeFirst":{
+					"Max":230,
+					"Min":230
+				},
+				"TimeBetween":{
+					"Max":1,
+					"Min":1
+				},
+				"Repeat":{
+					"Max":1,
+					"Min":1
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+					"RTID(Wave9Jitter@CurrentLevel)"
+				]
+			}
+		},
+    	{
+			"aliases":[
+				"Wave10"
+			],
+			"objclass":"WaveSchedulerProps",
+			"objdata":{
+				"TimeBeforeFirst":{
+					"Max":250,
+					"Min":250
+				},
+				"TimeBetween":{
+					"Max":1,
+					"Min":1
+				},
+				"Repeat":{
+					"Max":1,
+					"Min":1
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+					"RTID(Wave10Jitter@CurrentLevel)",
+					"RTID(Wave10DinoTimeEvent0@CurrentLevel)",
+					"RTID(Wave10DinoTimeEvent1@CurrentLevel)",
+					"RTID(Wave10DinoTimeEvent2@CurrentLevel)",
+					"RTID(Wave10KongfuHole@CurrentLevel)",
+					"RTID(Wave10Scheduler0@CurrentLevel)",
+					"RTID(Wave10Scheduler1@CurrentLevel)"
+				]
+			}
+		},
+    	{
+			"aliases":[
+				"Wave11"
+			],
+			"objclass":"WaveSchedulerProps",
+			"objdata":{
+				"TimeBeforeFirst":{
+					"Max":270,
+					"Min":270
+				},
+				"TimeBetween":{
+					"Max":1,
+					"Min":1
+				},
+				"Repeat":{
+					"Max":1,
+					"Min":1
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+					"RTID(Wave11Jitter@CurrentLevel)"
+				]
+			}
+		},
+    	{
+			"aliases":[
+				"Wave12"
+			],
+			"objclass":"WaveSchedulerProps",
+			"objdata":{
+				"TimeBeforeFirst":{
+					"Max":300,
+					"Min":300
+				},
+				"TimeBetween":{
+					"Max":1,
+					"Min":1
+				},
+				"Repeat":{
+					"Max":1,
+					"Min":1
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+					"RTID(Wave12Jitter@CurrentLevel)",
+					"RTID(Wave12Scheduler@CurrentLevel)"
+				]
+			}
+		},
+    	{
+			"aliases":[
+				"Wave13"
+			],
+			"objclass":"WaveSchedulerProps",
+			"objdata":{
+				"TimeBeforeFirst":{
+					"Max":320,
+					"Min":320
+				},
+				"TimeBetween":{
+					"Max":1,
+					"Min":1
+				},
+				"Repeat":{
+					"Max":1,
+					"Min":1
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+					"RTID(Wave13Jitter@CurrentLevel)",
+          			"RTID(Message4@CurrentLevel)"
+				]
+			}
+		},
+    	{
+			"aliases":[
+				"Wave14"
+			],
+			"objclass":"WaveSchedulerProps",
+			"objdata":{
+				"TimeBeforeFirst":{
+					"Max":337,
+					"Min":337
+				},
+				"TimeBetween":{
+					"Max":1,
+					"Min":1
+				},
+				"Repeat":{
+					"Max":1,
+					"Min":1
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+					"RTID(Wave14Jitter@CurrentLevel)",
+					"RTID(Wave14StormEvent@CurrentLevel)"
+				]
+			}
+		},
+    	{
+			"aliases":[
+				"Wave15"
+			],
+			"objclass":"WaveSchedulerProps",
+			"objdata":{
+				"TimeBeforeFirst":{
+					"Max":352,
+					"Min":352
+				},
+				"TimeBetween":{
+					"Max":1,
+					"Min":1
+				},
+				"Repeat":{
+					"Max":1,
+					"Min":1
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+					"RTID(Wave15Scheduler0@CurrentLevel)",
+					"RTID(Wave15Scheduler1@CurrentLevel)"
+				]
+			}
+		},
+    	{
+			"aliases":[
+				"Wave16"
+			],
+			"objclass":"WaveSchedulerProps",
+			"objdata":{
+				"TimeBeforeFirst":{
+					"Max":367,
+					"Min":367
+				},
+				"TimeBetween":{
+					"Max":1,
+					"Min":1
+				},
+				"Repeat":{
+					"Max":1,
+					"Min":1
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+					"RTID(Wave16Scheduler0@CurrentLevel)"
+				]
+			}
+		},
+    	{
+			"aliases":[
+				"Message0Wave"
+			],
+			"objclass":"WaveSchedulerProps",
+			"objdata":{
+				"TimeBeforeFirst":{
+					"Max":80,
+					"Min":80
+				},
+				"TimeBetween":{
+					"Max":1,
+					"Min":1
+				},
+				"Repeat":{
+					"Max":1,
+					"Min":1
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+					"RTID(Message0@CurrentLevel)"
+				]
+			}
+		},
+		{
+			"aliases":[
+				"Message1Wave"
+			],
+			"objclass":"WaveSchedulerProps",
+			"objdata":{
+				"TimeBeforeFirst":{
+					"Max":140,
+					"Min":140
+				},
+				"TimeBetween":{
+					"Max":1,
+					"Min":1
+				},
+				"Repeat":{
+					"Max":1,
+					"Min":1
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+					"RTID(Message1@CurrentLevel)"
+				]
+			}
+		},
+		{
+			"aliases":[
+				"Message3Wave"
+			],
+			"objclass":"WaveSchedulerProps",
+			"objdata":{
+				"TimeBeforeFirst":{
+					"Max":260,
+					"Min":260
+				},
+				"TimeBetween":{
+					"Max":1,
+					"Min":1
+				},
+				"Repeat":{
+					"Max":1,
+					"Min":1
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+					"RTID(Message3@CurrentLevel)"
+				]
+			}
+		},
+		{
+			"aliases":[
+				"Message5Wave"
+			],
+			"objclass":"WaveSchedulerProps",
+			"objdata":{
+				"TimeBeforeFirst":{
+					"Max":350,
+					"Min":350
+				},
+				"TimeBetween":{
+					"Max":1,
+					"Min":1
+				},
+				"Repeat":{
+					"Max":1,
+					"Min":1
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+					"RTID(Message5@CurrentLevel)"
+				]
+			}
+		},
+		{
+			"aliases":[
+				"Message6Wave"
+			],
+			"objclass":"WaveSchedulerProps",
+			"objdata":{
+				"TimeBeforeFirst":{
+					"Max":370,
+					"Min":370
+				},
+				"TimeBetween":{
+					"Max":1,
+					"Min":1
+				},
+				"Repeat":{
+					"Max":1,
+					"Min":1
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+					"RTID(Message6@CurrentLevel)"
+				]
+			}
+		},
+    {
+      "aliases": [
+        "Wave1Jitter"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(egypt_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pirate_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(west_bullrider@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(future_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dark_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(monk_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(eighties_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(sky_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(modern_superfanimp@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave2Jitter"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+		"DynamicPlantfood": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "Zombies": [
+          {
+            "Type": "RTID(lawn_armor2@ZombieTypes)",
+			"Row": 1
+          },
+		  {
+            "Type": "RTID(lawn_armor2@ZombieTypes)",
+			"Row": 2
+          },
+		  {
+            "Type": "RTID(lawn_armor2@ZombieTypes)",
+			"Row": 3
+          },
+		  {
+            "Type": "RTID(lawn_armor2@ZombieTypes)",
+			"Row": 4
+          },
+		  {
+            "Type": "RTID(lawn_armor2@ZombieTypes)",
+			"Row": 5
+          },
+		  {
+            "Type": "RTID(lawn_armor1@ZombieTypes)",
+			"Row": 1
+          },
+		  {
+            "Type": "RTID(lawn_armor1@ZombieTypes)",
+			"Row": 2
+          },
+		  {
+            "Type": "RTID(lawn_armor1@ZombieTypes)",
+			"Row": 3
+          },
+		  {
+            "Type": "RTID(lawn_armor1@ZombieTypes)",
+			"Row": 4
+          },
+		  {
+            "Type": "RTID(lawn_armor1@ZombieTypes)",
+			"Row": 5
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave3Jitter"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(camel_onehump@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(explorer@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(sky_dropship@ZombieTypes)",
+            "Row": 3,
+            "Column": 6
+          },
+		  {
+            "Type": "RTID(sky_battleplane@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(sky_electric@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(sky_electric@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave4Jitter"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(swashbuckler@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(swashbuckler@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(seagull@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(barrelroller@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(barrelroller@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(dino_bully@ZombieTypes)"
+          }
+        ]
+      }
+    },
+	{
+      "aliases": [
+        "Wave4DinoTimeEvent0"
+      ],
+      "objclass": "DinoWaveActionProps",
+      "objdata": {
+        "DinoRow": 1,
+        "DinoType": "raptor"
+      }
+    },
+	{
+      "aliases": [
+        "Wave4DinoTimeEvent1"
+      ],
+      "objclass": "DinoWaveActionProps",
+      "objdata": {
+        "DinoRow": 3,
+        "DinoType": "tyranno"
+      }
+    },
+	{
+      "aliases": [
+        "Wave4StormEvent"
+      ],
+      "objclass": "StormZombieSpawnerProps",
+      "objdata": {
+        "ColumnEnd": 6,
+        "ColumnStart": 3,
+        "GroupSize": 1,
+        "TimeBetweenGroups": 0.5,
+        "Type": "snowstorm",
+        "Zombies": [
+          {
+            "Type": "RTID(eighties_mc@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(eighties_mc@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(eighties_glitter@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(eighties_punk@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(eighties_punk@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(eighties_boombox@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave5Jitter"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(eighties_arcade@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(eighties_arcade@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(eighties_punk@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(west_bull@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(west_bull@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(chicken_farmer@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(chicken_farmer@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(poncho_plate@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6Jitter"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(mech_cone@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(football_mech@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(disco_mech@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(monk_drink@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(abbot_fan@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(kongfu_chi@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(kongfu_gong@ZombieTypes)"
+          }
+        ]
+      }
+    },
+	{
+      "aliases": [
+        "RaidingPartyMessage"
+      ],
+      "objclass": "RaidingPartyZombieSpawnerProps",
+      "objdata": {
+        "GroupSize": 0,
+        "SwashbucklerCount": 0,
+        "TimeBetweenGroups": 0
+      }
+    },
+	{
+		"aliases":[
+			"Wave6Scheduler0"
+		],
+		"objclass":"WaveSchedulerProps",
+		"objdata":{
+			"TimeBeforeFirst":{
+				"Max":0,
+				"Min":0
+			},
+			"TimeBetween":{
+				"Max":0.5,
+				"Min":0.5
+			},
+			"Repeat":{
+				"Max":4,
+				"Min":4
+			},
+			"RewardWhenEnded":false,
+			"SuppressRewardState":false,
+			"Events":[
+				"RTID(Wave6FakeEventJitter0@CurrentLevel)"
+			]
+		}
+	},
+	{
+		"aliases":[
+			"Wave6Scheduler1"
+		],
+		"objclass":"WaveSchedulerProps",
+		"objdata":{
+			"TimeBeforeFirst":{
+				"Max":2,
+				"Min":2
+			},
+			"TimeBetween":{
+				"Max":0.5,
+				"Min":0.5
+			},
+			"Repeat":{
+				"Max":4,
+				"Min":4
+			},
+			"RewardWhenEnded":false,
+			"SuppressRewardState":false,
+			"Events":[
+				"RTID(Wave6FakeEventJitter1@CurrentLevel)"
+			]
+		}
+	},
+	{
+		"aliases":[
+			"Wave6Scheduler2"
+		],
+		"objclass":"WaveSchedulerProps",
+		"objdata":{
+			"TimeBeforeFirst":{
+				"Max":4,
+				"Min":4
+			},
+			"TimeBetween":{
+				"Max":0.5,
+				"Min":0.5
+			},
+			"Repeat":{
+				"Max":4,
+				"Min":4
+			},
+			"RewardWhenEnded":false,
+			"SuppressRewardState":false,
+			"Events":[
+				"RTID(Wave6FakeEventJitter2@CurrentLevel)"
+			]
+		}
+	},
+	{
+		"aliases":[
+			"Wave6Scheduler3"
+		],
+		"objclass":"WaveSchedulerProps",
+		"objdata":{
+			"TimeBeforeFirst":{
+				"Max":6,
+				"Min":6
+			},
+			"TimeBetween":{
+				"Max":0.5,
+				"Min":0.5
+			},
+			"Repeat":{
+				"Max":4,
+				"Min":4
+			},
+			"RewardWhenEnded":false,
+			"SuppressRewardState":false,
+			"Events":[
+				"RTID(Wave6FakeEventJitter3@CurrentLevel)"
+			]
+		}
+	},
+	{
+      "aliases": [
+        "Wave6FakeEventJitter0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(lostcity_relichunter@ZombieTypes)",
+			"Style": "appear",
+			"Row": "???",
+			"Column": 6
+          }
+        ]
+      }
+    },
+	{
+      "aliases": [
+        "Wave6FakeEventJitter1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(lostcity_relichunter@ZombieTypes)",
+			"Style": "appear",
+			"Row": "???",
+			"Column": 5
+          }
+        ]
+      }
+    },
+	{
+      "aliases": [
+        "Wave6FakeEventJitter2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(swashbuckler@ZombieTypes)",
+			"Style": "appear",
+			"Row": "???",
+			"Column": 4
+          }
+        ]
+      }
+    },
+	{
+      "aliases": [
+        "Wave6FakeEventJitter3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(swashbuckler@ZombieTypes)",
+			"Style": "appear",
+			"Row": "???",
+			"Column": 3
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave7Jitter"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dark_juggler@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(dark_juggler@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(dark_wizard@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(dark_wizard@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(dark_imp_dragon@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(dark_armor3@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(lostcity_excavator@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(lostcity_jane@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(lostcity_bug_armor2@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(lostcity_bug_armor1@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(lostcity_crystalskull@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave8Jitter"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(beach_octopus@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(beach_octopus@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(beach_fisherman@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(beach_fisherman@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(iceage_hunter@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(iceage_hunter@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(iceage_dodo@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(iceage_troglobite@ZombieTypes)"
+          }
+        ]
+      }
+    },
+	{
+		"aliases":[
+			"Wave8Thunder"
+		],
+		"objclass":"WaveSchedulerProps",
+		"objdata":{
+			"TimeBeforeFirst":{
+				"Max":4,
+				"Min":4
+			},
+			"TimeBetween":{
+				"Max":1,
+				"Min":1
+			},
+			"Repeat":{
+				"Max":1,
+				"Min":1
+			},
+			"RewardWhenEnded":false,
+			"SuppressRewardState":false,
+			"Events":[
+				"RTID(Wave8ThunderEvent@CurrentLevel)"
+			]
+		}
+	},
+	{
+      "aliases": [
+        "Wave8ThunderEvent"
+      ],
+      "objclass": "ThunderChargeWaveActionProps",
+      "objdata": {
+        "TimeBeforeFirst": {
+          "Min": 1,
+          "Max": 1
+        },
+        "TimeBetween": {
+          "Min": 0.125,
+          "Max": 0.125
+        },
+        "WaveStartMessage": "[WARNING_THUNDER_STRIKE]",
+        "Thunders": [
+          {
+            "Sign": 1,
+            "LinkedPlantCount": 1
+          },
+          {
+            "Sign": -1,
+            "LinkedPlantCount": 1
+          },
+		  {
+            "Sign": 1,
+            "LinkedPlantCount": 1
+          },
+          {
+            "Sign": -1,
+            "LinkedPlantCount": 1
+          },
+		  {
+            "Sign": 1,
+            "LinkedPlantCount": 1
+          },
+          {
+            "Sign": -1,
+            "LinkedPlantCount": 1
+          },
+		  {
+            "Sign": 1,
+            "LinkedPlantCount": 1
+          },
+          {
+            "Sign": -1,
+            "LinkedPlantCount": 1
+          },
+		  {
+            "Sign": 1,
+            "LinkedPlantCount": 1
+          },
+          {
+            "Sign": -1,
+            "LinkedPlantCount": 1
+          },
+		  {
+            "Sign": 1,
+            "LinkedPlantCount": 1
+          },
+          {
+            "Sign": -1,
+            "LinkedPlantCount": 1
+          },
+		  {
+            "Sign": 1,
+            "LinkedPlantCount": 1
+          },
+          {
+            "Sign": -1,
+            "LinkedPlantCount": 1
+          },
+		  {
+            "Sign": 1,
+            "LinkedPlantCount": 1
+          },
+          {
+            "Sign": -1,
+            "LinkedPlantCount": 1
+          },
+		  {
+            "Sign": 1,
+            "LinkedPlantCount": 1
+          },
+          {
+            "Sign": -1,
+            "LinkedPlantCount": 1
+          },
+		  {
+            "Sign": 1,
+            "LinkedPlantCount": 1
+          },
+          {
+            "Sign": -1,
+            "LinkedPlantCount": 1
+          },
+		  {
+            "Sign": 1,
+            "LinkedPlantCount": 1
+          },
+          {
+            "Sign": -1,
+            "LinkedPlantCount": 1
+          },
+		  {
+            "Sign": 1,
+            "LinkedPlantCount": 1
+          },
+          {
+            "Sign": -1,
+            "LinkedPlantCount": 1
+          },
+		  {
+            "Sign": 1,
+            "LinkedPlantCount": 1
+          },
+          {
+            "Sign": -1,
+            "LinkedPlantCount": 1
+          },
+		  {
+            "Sign": 1,
+            "LinkedPlantCount": 1
+          },
+          {
+            "Sign": -1,
+            "LinkedPlantCount": 1
+          },
+		  {
+            "Sign": 1,
+            "LinkedPlantCount": 1
+          },
+          {
+            "Sign": -1,
+            "LinkedPlantCount": 1
+          },
+		  {
+            "Sign": 1,
+            "LinkedPlantCount": 1
+          },
+          {
+            "Sign": -1,
+            "LinkedPlantCount": 1
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave9Jitter"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(pirate_captain@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(pirate_captain@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(pirate_captain@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(cannon@ZombieTypes)",
+			"Row": 1
+          },
+		  {
+            "Type": "RTID(cannon@ZombieTypes)",
+			"Row": 2
+          },
+		  {
+            "Type": "RTID(cannon@ZombieTypes)",
+			"Row": 3
+          },
+		  {
+            "Type": "RTID(cannon@ZombieTypes)",
+			"Row": 4
+          },
+		  {
+            "Type": "RTID(cannon@ZombieTypes)",
+			"Row": 5
+          },
+		  {
+            "Type": "RTID(lostcity_crystalskull@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(lostcity_crystalskull@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(lostcity_bug_armor2@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(lostcity_bug_armor2@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(lostcity_bug_armor2@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(lostcity_bug_armor1@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(lostcity_bug_armor1@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(lostcity_jane@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(lostcity_jane@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(lostcity_jane@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(lostcity_jane@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave10Jitter"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dark_juggler@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(dark_juggler@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(dark_juggler@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(dark_juggler@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(dark_armor3@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(dark_armor3@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(dark_armor3@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(dark_armor3@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(dino_bully@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(dino_bully@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(dino_armor3@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(dino_armor3@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(dino_armor3@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(dino_armor3@ZombieTypes)"
+          }
+        ]
+      }
+    },
+	{
+      "aliases": [
+        "Wave10DinoTimeEvent0"
+      ],
+      "objclass": "DinoWaveActionProps",
+      "objdata": {
+        "DinoRow": 0,
+        "DinoType": "stego"
+      }
+    },
+	{
+      "aliases": [
+        "Wave10DinoTimeEvent1"
+      ],
+      "objclass": "DinoWaveActionProps",
+      "objdata": {
+        "DinoRow": 2,
+        "DinoType": "ankylo"
+      }
+    },
+	{
+      "aliases": [
+        "Wave10DinoTimeEvent2"
+      ],
+      "objclass": "DinoWaveActionProps",
+      "objdata": {
+        "DinoRow": 4,
+        "DinoType": "raptor"
+      }
+    },
+	{
+      "aliases": [
+        "FrostWindEvent0"
+      ],
+      "objclass": "FrostWindWaveActionProps",
+      "objdata": {
+        "Winds": [
+          {
+            "Direction": "left",
+            "Row": 4
+          },
+          {
+            "Direction": "right",
+            "Row": 3
+          },
+          {
+            "Direction": "left",
+            "Row": 2
+          },
+          {
+            "Direction": "right",
+            "Row": 1
+          },
+          {
+            "Direction": "left",
+            "Row": 0
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "FrostWindEvent1"
+      ],
+      "objclass": "FrostWindWaveActionProps",
+      "objdata": {
+        "Winds": [
+          {
+            "Direction": "right",
+            "Row": 0
+          },
+          {
+            "Direction": "left",
+            "Row": 1
+          },
+          {
+            "Direction": "right",
+            "Row": 2
+          },
+          {
+            "Direction": "left",
+            "Row": 3
+          },
+          {
+            "Direction": "right",
+            "Row": 4
+          }
+        ]
+      }
+    },
+	{
+		"aliases":[
+			"Wave10Scheduler0"
+		],
+		"objclass":"WaveSchedulerProps",
+		"objdata":{
+			"TimeBeforeFirst":{
+				"Max":5,
+				"Min":5
+			},
+			"TimeBetween":{
+				"Max":0,
+				"Min":0
+			},
+			"Repeat":{
+				"Max":1,
+				"Min":1
+			},
+			"RewardWhenEnded":false,
+			"SuppressRewardState":false,
+			"Events":[
+				"RTID(FrostWindEvent0@CurrentLevel)"
+			]
+		}
+	},
+	{
+		"aliases":[
+			"Wave10Scheduler1"
+		],
+		"objclass":"WaveSchedulerProps",
+		"objdata":{
+			"TimeBeforeFirst":{
+				"Max":10,
+				"Min":10
+			},
+			"TimeBetween":{
+				"Max":0,
+				"Min":0
+			},
+			"Repeat":{
+				"Max":1,
+				"Min":1
+			},
+			"RewardWhenEnded":false,
+			"SuppressRewardState":false,
+			"Events":[
+				"RTID(FrostWindEvent1@CurrentLevel)"
+			]
+		}
+	},
+	{
+        "aliases": [
+            "Wave10KongfuHole"
+        ],
+        "objclass": "KongfuChiHoleProps",
+        "objdata": {
+            "Direction": 1,
+            "LanesToAffect": [
+                0,
+                1,
+                2,
+                3,
+                4
+            ],
+            "WaveStartMessage": "[WARNING_QIGONG_HOLE]",
+            "PlantMovingTimeBetweenSquares": 1,
+            "LifeSpan": 1.5,
+            "TimeBeforeAbsorbing": 1,
+            "Column": 8,
+            "SuppressesNextWave": true,
+            "SuppressObjectiveTip": false
+            }
+        },
+    {
+      "aliases": [
+        "Wave11Jitter"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(iceage_weasel@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(iceage_weasel@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(iceage_weasel@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(iceage_weasel@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(iceage_weasel@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(iceage_weasel@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(iceage_troglobite@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(iceage_troglobite@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(ra@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(ra@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave12Jitter"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(sky_battleplane@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(sky_battleplane@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(sky_battleplane@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(sky_electric@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(sky_electric@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(sky_electric@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(sky_dronemaker@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(sky_arbiterx@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(sky_arbiterx@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(beach_octopus@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(beach_octopus@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(beach_octopus@ZombieTypes)"
+          }
+        ]
+      }
+    },
+	{
+		"aliases":[
+			"Wave12Scheduler"
+		],
+		"objclass":"WaveSchedulerProps",
+		"objdata":{
+			"WaveStartMessage": "[WARNING_GRAVESTONE_SPAWN]",
+			"TimeBeforeFirst":{
+				"Max":0,
+				"Min":0
+			},
+			"TimeBetween":{
+				"Max":0,
+				"Min":0
+			},
+			"Repeat":{
+				"Max":1,
+				"Min":1
+			},
+			"RewardWhenEnded":false,
+			"SuppressRewardState":false,
+			"Events":[
+				"RTID(Gravestone0@CurrentLevel)",
+				"RTID(Gravestone1@CurrentLevel)",
+				"RTID(Gravestone2@CurrentLevel)",
+				"RTID(Gravestone3@CurrentLevel)",
+				"RTID(Gravestone4@CurrentLevel)",
+				"RTID(Gravestone5@CurrentLevel)",
+				"RTID(Gravestone6@CurrentLevel)",
+				"RTID(Gravestone7@CurrentLevel)",
+				"RTID(Gravestone8@CurrentLevel)",
+				"RTID(Gravestone9@CurrentLevel)",
+				"RTID(GraveSpawn0@CurrentLevel)",
+				"RTID(GraveSpawn1@CurrentLevel)"
+			]
+		}
+	},
+	{
+		"aliases":[
+			"GraveSpawn0"
+		],
+		"objclass":"WaveSchedulerProps",
+		"objdata":{
+			"TimeBeforeFirst":{
+				"Max":2.5,
+				"Min":2.5
+			},
+			"TimeBetween":{
+				"Max":1,
+				"Min":1
+			},
+			"Repeat":{
+				"Max":3,
+				"Min":3
+			},
+			"RewardWhenEnded":false,
+			"SuppressRewardState":false,
+			"Events":[
+				"RTID(GraveSpawnEvent0@CurrentLevel)"
+			]
+		}
+	},
+	{
+		"aliases":[
+			"GraveSpawn1"
+		],
+		"objclass":"WaveSchedulerProps",
+		"objdata":{
+			"TimeBeforeFirst":{
+				"Max":3,
+				"Min":3
+			},
+			"TimeBetween":{
+				"Max":1,
+				"Min":1
+			},
+			"Repeat":{
+				"Max":3,
+				"Min":3
+			},
+			"RewardWhenEnded":false,
+			"SuppressRewardState":false,
+			"Events":[
+				"RTID(GraveSpawnEvent1@CurrentLevel)"
+			]
+		}
+	},
+	{
+      "aliases": [
+        "GraveSpawnEvent0"
+      ],
+      "objclass": "SpawnZombiesFromGridItemSpawnerProps",
+      "objdata": {
+        "AdditionalPlantfood": "0",
+        "GridTypes": [
+          "RTID(gravestone_egypt@GridItemTypes)"
+        ],
+        "ZombieSpawnWaitTime": "1",
+        "Zombies": [
+          {
+            "Type": "RTID(beach_surfer@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(lostcity_excavator@ZombieTypes)"
+          }
+        ]
+      }
+    },
+	{
+      "aliases": [
+        "GraveSpawnEvent1"
+      ],
+      "objclass": "SpawnZombiesFromGridItemSpawnerProps",
+      "objdata": {
+        "AdditionalPlantfood": "0",
+        "GridTypes": [
+          "RTID(gravestone_dark@GridItemTypes)"
+        ],
+        "ZombieSpawnWaitTime": "1",
+        "Zombies": [
+          {
+            "Type": "RTID(iceage_hunter@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(eighties_punk@ZombieTypes)"
+          }
+        ]
+      }
+    },
+	{
+		"aliases":[
+			"Gravestone0"
+		],
+		"objclass":"WaveSchedulerProps",
+		"objdata":{
+			"TimeBeforeFirst":{
+				"Max":0,
+				"Min":0
+			},
+			"TimeBetween":{
+				"Max":0,
+				"Min":0
+			},
+			"Repeat":{
+				"Max":1,
+				"Min":1
+			},
+			"RewardWhenEnded":false,
+			"SuppressRewardState":false,
+			"Events":[
+				"RTID(GravestoneEvent0@CurrentLevel)",
+				"RTID(GravestoneEvent10@CurrentLevel)"
+			]
+		}
+	},
+	{
+		"aliases":[
+			"Gravestone1"
+		],
+		"objclass":"WaveSchedulerProps",
+		"objdata":{
+			"TimeBeforeFirst":{
+				"Max":0.25,
+				"Min":0.25
+			},
+			"TimeBetween":{
+				"Max":0,
+				"Min":0
+			},
+			"Repeat":{
+				"Max":1,
+				"Min":1
+			},
+			"RewardWhenEnded":false,
+			"SuppressRewardState":false,
+			"Events":[
+				"RTID(GravestoneEvent1@CurrentLevel)",
+				"RTID(GravestoneEvent11@CurrentLevel)"
+			]
+		}
+	},
+	{
+		"aliases":[
+			"Gravestone2"
+		],
+		"objclass":"WaveSchedulerProps",
+		"objdata":{
+			"TimeBeforeFirst":{
+				"Max":0.5,
+				"Min":0.5
+			},
+			"TimeBetween":{
+				"Max":0,
+				"Min":0
+			},
+			"Repeat":{
+				"Max":1,
+				"Min":1
+			},
+			"RewardWhenEnded":false,
+			"SuppressRewardState":false,
+			"Events":[
+				"RTID(GravestoneEvent2@CurrentLevel)",
+				"RTID(GravestoneEvent12@CurrentLevel)"
+			]
+		}
+	},
+	{
+		"aliases":[
+			"Gravestone3"
+		],
+		"objclass":"WaveSchedulerProps",
+		"objdata":{
+			"TimeBeforeFirst":{
+				"Max":0.75,
+				"Min":0.75
+			},
+			"TimeBetween":{
+				"Max":0,
+				"Min":0
+			},
+			"Repeat":{
+				"Max":1,
+				"Min":1
+			},
+			"RewardWhenEnded":false,
+			"SuppressRewardState":false,
+			"Events":[
+				"RTID(GravestoneEvent3@CurrentLevel)",
+				"RTID(GravestoneEvent13@CurrentLevel)"
+			]
+		}
+	},
+	{
+		"aliases":[
+			"Gravestone4"
+		],
+		"objclass":"WaveSchedulerProps",
+		"objdata":{
+			"TimeBeforeFirst":{
+				"Max":1,
+				"Min":1
+			},
+			"TimeBetween":{
+				"Max":0,
+				"Min":0
+			},
+			"Repeat":{
+				"Max":1,
+				"Min":1
+			},
+			"RewardWhenEnded":false,
+			"SuppressRewardState":false,
+			"Events":[
+				"RTID(GravestoneEvent4@CurrentLevel)",
+				"RTID(GravestoneEvent14@CurrentLevel)"
+			]
+		}
+	},
+	{
+		"aliases":[
+			"Gravestone5"
+		],
+		"objclass":"WaveSchedulerProps",
+		"objdata":{
+			"TimeBeforeFirst":{
+				"Max":1.25,
+				"Min":1.25
+			},
+			"TimeBetween":{
+				"Max":0,
+				"Min":0
+			},
+			"Repeat":{
+				"Max":1,
+				"Min":1
+			},
+			"RewardWhenEnded":false,
+			"SuppressRewardState":false,
+			"Events":[
+				"RTID(GravestoneEvent5@CurrentLevel)",
+				"RTID(GravestoneEvent15@CurrentLevel)"
+			]
+		}
+	},
+	{
+		"aliases":[
+			"Gravestone6"
+		],
+		"objclass":"WaveSchedulerProps",
+		"objdata":{
+			"TimeBeforeFirst":{
+				"Max":1.5,
+				"Min":1.5
+			},
+			"TimeBetween":{
+				"Max":0,
+				"Min":0
+			},
+			"Repeat":{
+				"Max":1,
+				"Min":1
+			},
+			"RewardWhenEnded":false,
+			"SuppressRewardState":false,
+			"Events":[
+				"RTID(GravestoneEvent6@CurrentLevel)",
+				"RTID(GravestoneEvent16@CurrentLevel)"
+			]
+		}
+	},
+	{
+		"aliases":[
+			"Gravestone7"
+		],
+		"objclass":"WaveSchedulerProps",
+		"objdata":{
+			"TimeBeforeFirst":{
+				"Max":1.75,
+				"Min":1.75
+			},
+			"TimeBetween":{
+				"Max":0,
+				"Min":0
+			},
+			"Repeat":{
+				"Max":1,
+				"Min":1
+			},
+			"RewardWhenEnded":false,
+			"SuppressRewardState":false,
+			"Events":[
+				"RTID(GravestoneEvent7@CurrentLevel)",
+				"RTID(GravestoneEvent17@CurrentLevel)"
+			]
+		}
+	},
+	{
+		"aliases":[
+			"Gravestone8"
+		],
+		"objclass":"WaveSchedulerProps",
+		"objdata":{
+			"TimeBeforeFirst":{
+				"Max":2,
+				"Min":2
+			},
+			"TimeBetween":{
+				"Max":0,
+				"Min":0
+			},
+			"Repeat":{
+				"Max":1,
+				"Min":1
+			},
+			"RewardWhenEnded":false,
+			"SuppressRewardState":false,
+			"Events":[
+				"RTID(GravestoneEvent8@CurrentLevel)",
+				"RTID(GravestoneEvent18@CurrentLevel)"
+			]
+		}
+	},
+	{
+		"aliases":[
+			"Gravestone9"
+		],
+		"objclass":"WaveSchedulerProps",
+		"objdata":{
+			"TimeBeforeFirst":{
+				"Max":2.25,
+				"Min":2.25
+			},
+			"TimeBetween":{
+				"Max":0,
+				"Min":0
+			},
+			"Repeat":{
+				"Max":1,
+				"Min":1
+			},
+			"RewardWhenEnded":false,
+			"SuppressRewardState":false,
+			"Events":[
+				"RTID(GravestoneEvent9@CurrentLevel)",
+				"RTID(GravestoneEvent19@CurrentLevel)"
+			]
+		}
+	},
+	{
+      "aliases": [
+        "GravestoneEvent0"
+      ],
+      "objclass": "SpawnGravestonesWaveActionProps",
+      "objdata": {
+        "GravestonePool": [
+          {
+            "Count": 1,
+            "Type": "RTID(gravestone_egypt@GridItemTypes)"
+          }
+        ],
+        "SpawnEffectAnimID": "POPANIM_EFFECTS_DIRT_SPAWN_DIRT",
+        "SpawnEffectAnimPlay": "tomb_dirt_anim",
+        "SpawnPositionsPool": [
+          {
+            "mX": 4,
+            "mY": 0
+          }
+        ]
+      }
+    },
+	{
+      "aliases": [
+        "GravestoneEvent1"
+      ],
+      "objclass": "SpawnGravestonesWaveActionProps",
+      "objdata": {
+        "GravestonePool": [
+          {
+            "Count": 1,
+            "Type": "RTID(gravestone_egypt@GridItemTypes)"
+          }
+        ],
+        "SpawnEffectAnimID": "POPANIM_EFFECTS_DIRT_SPAWN_DIRT",
+        "SpawnEffectAnimPlay": "tomb_dirt_anim",
+        "SpawnPositionsPool": [
+          {
+            "mX": 5,
+            "mY": 1
+          }
+        ]
+      }
+    },
+	{
+      "aliases": [
+        "GravestoneEvent2"
+      ],
+      "objclass": "SpawnGravestonesWaveActionProps",
+      "objdata": {
+        "GravestonePool": [
+          {
+            "Count": 1,
+            "Type": "RTID(gravestone_egypt@GridItemTypes)"
+          }
+        ],
+        "SpawnEffectAnimID": "POPANIM_EFFECTS_DIRT_SPAWN_DIRT",
+        "SpawnEffectAnimPlay": "tomb_dirt_anim",
+        "SpawnPositionsPool": [
+          {
+            "mX": 4,
+            "mY": 2
+          }
+        ]
+      }
+    },
+	{
+      "aliases": [
+        "GravestoneEvent3"
+      ],
+      "objclass": "SpawnGravestonesWaveActionProps",
+      "objdata": {
+        "GravestonePool": [
+          {
+            "Count": 1,
+            "Type": "RTID(gravestone_egypt@GridItemTypes)"
+          }
+        ],
+        "SpawnEffectAnimID": "POPANIM_EFFECTS_DIRT_SPAWN_DIRT",
+        "SpawnEffectAnimPlay": "tomb_dirt_anim",
+        "SpawnPositionsPool": [
+          {
+            "mX": 5,
+            "mY": 3
+          }
+        ]
+      }
+    },
+	{
+      "aliases": [
+        "GravestoneEvent4"
+      ],
+      "objclass": "SpawnGravestonesWaveActionProps",
+      "objdata": {
+        "GravestonePool": [
+          {
+            "Count": 1,
+            "Type": "RTID(gravestone_egypt@GridItemTypes)"
+          }
+        ],
+        "SpawnEffectAnimID": "POPANIM_EFFECTS_DIRT_SPAWN_DIRT",
+        "SpawnEffectAnimPlay": "tomb_dirt_anim",
+        "SpawnPositionsPool": [
+          {
+            "mX": 4,
+            "mY": 4
+          }
+        ]
+      }
+    },
+	{
+      "aliases": [
+        "GravestoneEvent5"
+      ],
+      "objclass": "SpawnGravestonesWaveActionProps",
+      "objdata": {
+        "GravestonePool": [
+          {
+            "Count": 1,
+            "Type": "RTID(gravestone_egypt@GridItemTypes)"
+          }
+        ],
+        "SpawnEffectAnimID": "POPANIM_EFFECTS_DIRT_SPAWN_DIRT",
+        "SpawnEffectAnimPlay": "tomb_dirt_anim",
+        "SpawnPositionsPool": [
+          {
+            "mX": 6,
+            "mY": 0
+          }
+        ]
+      }
+    },
+	{
+      "aliases": [
+        "GravestoneEvent6"
+      ],
+      "objclass": "SpawnGravestonesWaveActionProps",
+      "objdata": {
+        "GravestonePool": [
+          {
+            "Count": 1,
+            "Type": "RTID(gravestone_egypt@GridItemTypes)"
+          }
+        ],
+        "SpawnEffectAnimID": "POPANIM_EFFECTS_DIRT_SPAWN_DIRT",
+        "SpawnEffectAnimPlay": "tomb_dirt_anim",
+        "SpawnPositionsPool": [
+          {
+            "mX": 7,
+            "mY": 1
+          }
+        ]
+      }
+    },
+	{
+      "aliases": [
+        "GravestoneEvent7"
+      ],
+      "objclass": "SpawnGravestonesWaveActionProps",
+      "objdata": {
+        "GravestonePool": [
+          {
+            "Count": 1,
+            "Type": "RTID(gravestone_egypt@GridItemTypes)"
+          }
+        ],
+        "SpawnEffectAnimID": "POPANIM_EFFECTS_DIRT_SPAWN_DIRT",
+        "SpawnEffectAnimPlay": "tomb_dirt_anim",
+        "SpawnPositionsPool": [
+          {
+            "mX": 6,
+            "mY": 2
+          }
+        ]
+      }
+    },
+	{
+      "aliases": [
+        "GravestoneEvent8"
+      ],
+      "objclass": "SpawnGravestonesWaveActionProps",
+      "objdata": {
+        "GravestonePool": [
+          {
+            "Count": 1,
+            "Type": "RTID(gravestone_egypt@GridItemTypes)"
+          }
+        ],
+        "SpawnEffectAnimID": "POPANIM_EFFECTS_DIRT_SPAWN_DIRT",
+        "SpawnEffectAnimPlay": "tomb_dirt_anim",
+        "SpawnPositionsPool": [
+          {
+            "mX": 7,
+            "mY": 3
+          }
+        ]
+      }
+    },
+	{
+      "aliases": [
+        "GravestoneEvent9"
+      ],
+      "objclass": "SpawnGravestonesWaveActionProps",
+      "objdata": {
+        "GravestonePool": [
+          {
+            "Count": 1,
+            "Type": "RTID(gravestone_egypt@GridItemTypes)"
+          }
+        ],
+        "SpawnEffectAnimID": "POPANIM_EFFECTS_DIRT_SPAWN_DIRT",
+        "SpawnEffectAnimPlay": "tomb_dirt_anim",
+        "SpawnPositionsPool": [
+          {
+            "mX": 6,
+            "mY": 4
+          }
+        ]
+      }
+    },
+	{
+      "aliases": [
+        "GravestoneEvent10"
+      ],
+      "objclass": "SpawnGravestonesWaveActionProps",
+      "objdata": {
+        "GravestonePool": [
+          {
+            "Count": 1,
+            "Type": "RTID(gravestone_dark@GridItemTypes)"
+          }
+        ],
+        "SpawnEffectAnimID": "POPANIM_EFFECTS_DIRT_SPAWN_DIRT",
+        "SpawnEffectAnimPlay": "tomb_dirt_anim",
+        "SpawnPositionsPool": [
+          {
+            "mX": 7,
+            "mY": 4
+          }
+        ]
+      }
+    },
+	{
+      "aliases": [
+        "GravestoneEvent11"
+      ],
+      "objclass": "SpawnGravestonesWaveActionProps",
+      "objdata": {
+        "GravestonePool": [
+          {
+            "Count": 1,
+            "Type": "RTID(gravestone_dark@GridItemTypes)"
+          }
+        ],
+        "SpawnEffectAnimID": "POPANIM_EFFECTS_DIRT_SPAWN_DIRT",
+        "SpawnEffectAnimPlay": "tomb_dirt_anim",
+        "SpawnPositionsPool": [
+          {
+            "mX": 6,
+            "mY": 3
+          }
+        ]
+      }
+    },
+	{
+      "aliases": [
+        "GravestoneEvent12"
+      ],
+      "objclass": "SpawnGravestonesWaveActionProps",
+      "objdata": {
+        "GravestonePool": [
+          {
+            "Count": 1,
+            "Type": "RTID(gravestone_dark@GridItemTypes)"
+          }
+        ],
+        "SpawnEffectAnimID": "POPANIM_EFFECTS_DIRT_SPAWN_DIRT",
+        "SpawnEffectAnimPlay": "tomb_dirt_anim",
+        "SpawnPositionsPool": [
+          {
+            "mX": 7,
+            "mY": 2
+          }
+        ]
+      }
+    },
+	{
+      "aliases": [
+        "GravestoneEvent13"
+      ],
+      "objclass": "SpawnGravestonesWaveActionProps",
+      "objdata": {
+        "GravestonePool": [
+          {
+            "Count": 1,
+            "Type": "RTID(gravestone_dark@GridItemTypes)"
+          }
+        ],
+        "SpawnEffectAnimID": "POPANIM_EFFECTS_DIRT_SPAWN_DIRT",
+        "SpawnEffectAnimPlay": "tomb_dirt_anim",
+        "SpawnPositionsPool": [
+          {
+            "mX": 6,
+            "mY": 1
+          }
+        ]
+      }
+    },
+	{
+      "aliases": [
+        "GravestoneEvent14"
+      ],
+      "objclass": "SpawnGravestonesWaveActionProps",
+      "objdata": {
+        "GravestonePool": [
+          {
+            "Count": 1,
+            "Type": "RTID(gravestone_dark@GridItemTypes)"
+          }
+        ],
+        "SpawnEffectAnimID": "POPANIM_EFFECTS_DIRT_SPAWN_DIRT",
+        "SpawnEffectAnimPlay": "tomb_dirt_anim",
+        "SpawnPositionsPool": [
+          {
+            "mX": 7,
+            "mY": 0
+          }
+        ]
+      }
+    },
+	{
+      "aliases": [
+        "GravestoneEvent15"
+      ],
+      "objclass": "SpawnGravestonesWaveActionProps",
+      "objdata": {
+        "GravestonePool": [
+          {
+            "Count": 1,
+            "Type": "RTID(gravestone_dark@GridItemTypes)"
+          }
+        ],
+        "SpawnEffectAnimID": "POPANIM_EFFECTS_DIRT_SPAWN_DIRT",
+        "SpawnEffectAnimPlay": "tomb_dirt_anim",
+        "SpawnPositionsPool": [
+          {
+            "mX": 5,
+            "mY": 4
+          }
+        ]
+      }
+    },
+	{
+      "aliases": [
+        "GravestoneEvent16"
+      ],
+      "objclass": "SpawnGravestonesWaveActionProps",
+      "objdata": {
+        "GravestonePool": [
+          {
+            "Count": 1,
+            "Type": "RTID(gravestone_dark@GridItemTypes)"
+          }
+        ],
+        "SpawnEffectAnimID": "POPANIM_EFFECTS_DIRT_SPAWN_DIRT",
+        "SpawnEffectAnimPlay": "tomb_dirt_anim",
+        "SpawnPositionsPool": [
+          {
+            "mX": 4,
+            "mY": 3
+          }
+        ]
+      }
+    },
+	{
+      "aliases": [
+        "GravestoneEvent17"
+      ],
+      "objclass": "SpawnGravestonesWaveActionProps",
+      "objdata": {
+        "GravestonePool": [
+          {
+            "Count": 1,
+            "Type": "RTID(gravestone_dark@GridItemTypes)"
+          }
+        ],
+        "SpawnEffectAnimID": "POPANIM_EFFECTS_DIRT_SPAWN_DIRT",
+        "SpawnEffectAnimPlay": "tomb_dirt_anim",
+        "SpawnPositionsPool": [
+          {
+            "mX": 5,
+            "mY": 2
+          }
+        ]
+      }
+    },
+	{
+      "aliases": [
+        "GravestoneEvent18"
+      ],
+      "objclass": "SpawnGravestonesWaveActionProps",
+      "objdata": {
+        "GravestonePool": [
+          {
+            "Count": 1,
+            "Type": "RTID(gravestone_dark@GridItemTypes)"
+          }
+        ],
+        "SpawnEffectAnimID": "POPANIM_EFFECTS_DIRT_SPAWN_DIRT",
+        "SpawnEffectAnimPlay": "tomb_dirt_anim",
+        "SpawnPositionsPool": [
+          {
+            "mX": 4,
+            "mY": 1
+          }
+        ]
+      }
+    },
+	{
+      "aliases": [
+        "GravestoneEvent19"
+      ],
+      "objclass": "SpawnGravestonesWaveActionProps",
+      "objdata": {
+        "GravestonePool": [
+          {
+            "Count": 1,
+            "Type": "RTID(gravestone_dark@GridItemTypes)"
+          }
+        ],
+        "SpawnEffectAnimID": "POPANIM_EFFECTS_DIRT_SPAWN_DIRT",
+        "SpawnEffectAnimPlay": "tomb_dirt_anim",
+        "SpawnPositionsPool": [
+          {
+            "mX": 5,
+            "mY": 0
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave13Jitter"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(chicken_farmer@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(chicken_farmer@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(chicken_farmer@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(chicken_farmer@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(prospector@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(prospector@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(prospector@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(prospector@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)",
+			"Row": 2
+          },
+		  {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)",
+			"Row": 5
+          },
+		  {
+            "Type": "RTID(abbot_fan@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(abbot_fan@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(monk_drink@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(monk_drink@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(monk_torch@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(monk_torch@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(kongfu_gong@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(kongfu_gong@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(kongfu_gong@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave14Jitter"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(eighties_arcade@ZombieTypes)",
+			"Row": 1
+          },
+		  {
+            "Type": "RTID(eighties_arcade@ZombieTypes)",
+			"Row": 2
+          },
+		  {
+            "Type": "RTID(eighties_arcade@ZombieTypes)",
+			"Row": 3
+          },
+		  {
+            "Type": "RTID(eighties_arcade@ZombieTypes)",
+			"Row": 4
+          },
+		  {
+            "Type": "RTID(eighties_arcade@ZombieTypes)",
+			"Row": 5
+          },
+		  {
+            "Type": "RTID(eighties_boombox@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(eighties_boombox@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(eighties_breakdancer@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(eighties_breakdancer@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(eighties_breakdancer@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(football_mech@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(football_mech@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(football_mech@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(mech_cone@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(mech_cone@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(mech_cone@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(mech_cone@ZombieTypes)"
+          }
+        ]
+      }
+    },
+	{
+      "aliases": [
+        "Wave14StormEvent"
+      ],
+      "objclass": "StormZombieSpawnerProps",
+      "objdata": {
+        "ColumnEnd": 7,
+        "ColumnStart": 3,
+        "GroupSize": 1,
+        "TimeBetweenGroups": 0.5,
+        "Type": "sandstorm",
+        "Zombies": [
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(monk_torch@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(monk_torch@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(monk_torch@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(monk_torch@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(monk_drink@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(monk_drink@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(monk_drink@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(kongfu_bomb@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(kongfu_bomb@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(kongfu_hammer@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(kongfu_hammer@ZombieTypes)"
+          }
+        ]
+      }
+    },
+	{
+		"aliases":[
+			"Wave15Scheduler0"
+		],
+		"objclass":"WaveSchedulerProps",
+		"objdata":{
+			"TimeBeforeFirst":{
+				"Max":0,
+				"Min":0
+			},
+			"TimeBetween":{
+				"Max":2.5,
+				"Min":2.5
+			},
+			"Repeat":{
+				"Max":0,
+				"Min":0
+			},
+			"RewardWhenEnded":false,
+			"SuppressRewardState":false,
+			"Events":[
+				"RTID(Wave15JitterRepeat@CurrentLevel)"
+			]
+		}
+	},
+	{
+		"aliases":[
+			"Wave15Scheduler1"
+		],
+		"objclass":"WaveSchedulerProps",
+		"objdata":{
+			"TimeBeforeFirst":{
+				"Max":0,
+				"Min":0
+			},
+			"TimeBetween":{
+				"Max":0,
+				"Min":0
+			},
+			"Repeat":{
+				"Max":1,
+				"Min":1
+			},
+			"RewardWhenEnded":false,
+			"SuppressRewardState":false,
+			"Events":[
+				"RTID(PortalEvent0@CurrentLevel)",
+				"RTID(Portal1@CurrentLevel)",
+				"RTID(Portal2@CurrentLevel)",
+				"RTID(Portal3@CurrentLevel)",
+				"RTID(Portal4@CurrentLevel)",
+				"RTID(Portal5@CurrentLevel)",
+				"RTID(Portal6@CurrentLevel)",
+				"RTID(Portal7@CurrentLevel)",
+				"RTID(Portal8@CurrentLevel)",
+				"RTID(Portal9@CurrentLevel)",
+				"RTID(Portal10@CurrentLevel)",
+				"RTID(Portal11@CurrentLevel)",
+				"RTID(Portal12@CurrentLevel)"
+			]
+		}
+	},
+    {
+      "aliases": [
+        "Wave15JitterRepeat"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(lawn_armor1@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(lawn_armor2@ZombieTypes)"
+          }
+        ]
+      }
+    },
+	{
+		"aliases":[
+			"Wave16Scheduler0"
+		],
+		"objclass":"WaveSchedulerProps",
+		"objdata":{
+			"TimeBeforeFirst":{
+				"Max":0,
+				"Min":0
+			},
+			"TimeBetween":{
+				"Max":1.3,
+				"Min":1.3
+			},
+			"Repeat":{
+				"Max":0,
+				"Min":0
+			},
+			"RewardWhenEnded":false,
+			"SuppressRewardState":false,
+			"Events":[
+				"RTID(Wave16Jitter@CurrentLevel)"
+			]
+		}
+	},
+    {
+      "aliases": [
+        "Wave16Jitter"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(modern_allstar@ZombieTypes)"
+          }
+        ]
+      }
+    },
+	{
+		"aliases": [
+			"Potion_s1"
+		],
+		"objclass": "SpawnPlantsWaveActionProps",
+		"objdata": {
+			"Plants": [
+				{
+					"GridX": 8,
+					"GridY": 0,
+					"TypeName": "zombiepotion_speed",
+					"AllowSpawnOnOtherPlants": false
+				}
+			]
+		}
+	},
+	{
+		"aliases": [
+			"Potion_s2"
+		],
+		"objclass": "SpawnPlantsWaveActionProps",
+		"objdata": {
+			"Plants": [
+				{
+					"GridX": 7,
+					"GridY": 1,
+					"TypeName": "zombiepotion_speed",
+					"AllowSpawnOnOtherPlants": false
+				}
+			]
+		}
+	},
+	{
+		"aliases": [
+			"Potion_s3"
+		],
+		"objclass": "SpawnPlantsWaveActionProps",
+		"objdata": {
+			"Plants": [
+				{
+					"GridX": 8,
+					"GridY": 2,
+					"TypeName": "zombiepotion_speed",
+					"AllowSpawnOnOtherPlants": false
+				}
+			]
+		}
+	},
+	{
+		"aliases": [
+			"Potion_s4"
+		],
+		"objclass": "SpawnPlantsWaveActionProps",
+		"objdata": {
+			"Plants": [
+				{
+					"GridX": 7,
+					"GridY": 3,
+					"TypeName": "zombiepotion_speed",
+					"AllowSpawnOnOtherPlants": false
+				}
+			]
+		}
+	},
+	{
+		"aliases": [
+			"Potion_s5"
+		],
+		"objclass": "SpawnPlantsWaveActionProps",
+		"objdata": {
+			"Plants": [
+				{
+					"GridX": 8,
+					"GridY": 4,
+					"TypeName": "zombiepotion_speed",
+					"AllowSpawnOnOtherPlants": false
+				}
+			]
+		}
+	},
+	{
+		"aliases": [
+			"Potion_t1"
+		],
+		"objclass": "SpawnPlantsWaveActionProps",
+		"objdata": {
+			"Plants": [
+				{
+					"GridX": 7,
+					"GridY": 0,
+					"TypeName": "zombiepotion_toughness",
+					"AllowSpawnOnOtherPlants": false
+				}
+			]
+		}
+	},
+	{
+		"aliases": [
+			"Potion_t2"
+		],
+		"objclass": "SpawnPlantsWaveActionProps",
+		"objdata": {
+			"Plants": [
+				{
+					"GridX": 8,
+					"GridY": 1,
+					"TypeName": "zombiepotion_toughness",
+					"AllowSpawnOnOtherPlants": false
+				}
+			]
+		}
+	},
+	{
+		"aliases": [
+			"Potion_t3"
+		],
+		"objclass": "SpawnPlantsWaveActionProps",
+		"objdata": {
+			"Plants": [
+				{
+					"GridX": 7,
+					"GridY": 2,
+					"TypeName": "zombiepotion_toughness",
+					"AllowSpawnOnOtherPlants": false
+				}
+			]
+		}
+	},
+	{
+		"aliases": [
+			"Potion_t4"
+		],
+		"objclass": "SpawnPlantsWaveActionProps",
+		"objdata": {
+			"Plants": [
+				{
+					"GridX": 8,
+					"GridY": 3,
+					"TypeName": "zombiepotion_toughness",
+					"AllowSpawnOnOtherPlants": false
+				}
+			]
+		}
+	},
+	{
+		"aliases": [
+			"Potion_t5"
+		],
+		"objclass": "SpawnPlantsWaveActionProps",
+		"objdata": {
+			"Plants": [
+				{
+					"GridX": 7,
+					"GridY": 4,
+					"TypeName": "zombiepotion_toughness",
+					"AllowSpawnOnOtherPlants": false
+				}
+			]
+		}
+	},
+	{
+		"aliases":[
+			"PotionScheduler"
+		],
+		"objclass":"WaveSchedulerProps",
+		"objdata":{
+			"TimeBeforeFirst":{
+				"Max":0,
+				"Min":0
+			},
+			"TimeBetween":{
+				"Max":0,
+				"Min":0
+			},
+			"Repeat":{
+				"Max":1,
+				"Min":1
+			},
+			"RewardWhenEnded":false,
+			"SuppressRewardState":false,
+			"Events":[
+				"RTID(Potion_s1@CurrentLevel)",
+				"RTID(Potion_t5@CurrentLevel)",
+				"RTID(Potion2@CurrentLevel)",
+				"RTID(Potion3@CurrentLevel)",
+				"RTID(Potion4@CurrentLevel)",
+				"RTID(Potion5@CurrentLevel)"
+			]
+		}
+	},
+	{
+		"aliases":[
+			"Potion2"
+		],
+		"objclass":"WaveSchedulerProps",
+		"objdata":{
+			"TimeBeforeFirst":{
+				"Max":0.5,
+				"Min":0.5
+			},
+			"TimeBetween":{
+				"Max":0,
+				"Min":0
+			},
+			"Repeat":{
+				"Max":1,
+				"Min":1
+			},
+			"RewardWhenEnded":false,
+			"SuppressRewardState":false,
+			"Events":[
+				"RTID(Potion_t2@CurrentLevel)",
+				"RTID(Potion_s4@CurrentLevel)"
+			]
+		}
+	},
+	{
+		"aliases":[
+			"Potion3"
+		],
+		"objclass":"WaveSchedulerProps",
+		"objdata":{
+			"TimeBeforeFirst":{
+				"Max":1,
+				"Min":1
+			},
+			"TimeBetween":{
+				"Max":0,
+				"Min":0
+			},
+			"Repeat":{
+				"Max":1,
+				"Min":1
+			},
+			"RewardWhenEnded":false,
+			"SuppressRewardState":false,
+			"Events":[
+				"RTID(Potion_s3@CurrentLevel)",
+				"RTID(Potion_t3@CurrentLevel)"
+			]
+		}
+	},
+	{
+		"aliases":[
+			"Potion4"
+		],
+		"objclass":"WaveSchedulerProps",
+		"objdata":{
+			"TimeBeforeFirst":{
+				"Max":1.5,
+				"Min":1.5
+			},
+			"TimeBetween":{
+				"Max":0,
+				"Min":0
+			},
+			"Repeat":{
+				"Max":1,
+				"Min":1
+			},
+			"RewardWhenEnded":false,
+			"SuppressRewardState":false,
+			"Events":[
+				"RTID(Potion_t4@CurrentLevel)",
+				"RTID(Potion_s2@CurrentLevel)"
+			]
+		}
+	},
+	{
+		"aliases":[
+			"Potion5"
+		],
+		"objclass":"WaveSchedulerProps",
+		"objdata":{
+			"TimeBeforeFirst":{
+				"Max":2,
+				"Min":2
+			},
+			"TimeBetween":{
+				"Max":0,
+				"Min":0
+			},
+			"Repeat":{
+				"Max":1,
+				"Min":1
+			},
+			"RewardWhenEnded":false,
+			"SuppressRewardState":false,
+			"Events":[
+				"RTID(Potion_s5@CurrentLevel)",
+				"RTID(Potion_t1@CurrentLevel)"
+			]
+		}
+	},
+	{
+		"aliases":[
+			"Portal1"
+		],
+		"objclass":"WaveSchedulerProps",
+		"objdata":{
+			"TimeBeforeFirst":{
+				"Max":1,
+				"Min":1
+			},
+			"TimeBetween":{
+				"Max":0,
+				"Min":0
+			},
+			"Repeat":{
+				"Max":1,
+				"Min":1
+			},
+			"RewardWhenEnded":false,
+			"SuppressRewardState":false,
+			"Events":[
+				"RTID(PortalEvent1@CurrentLevel)"
+			]
+		}
+	},
+	{
+		"aliases":[
+			"Portal2"
+		],
+		"objclass":"WaveSchedulerProps",
+		"objdata":{
+			"TimeBeforeFirst":{
+				"Max":2,
+				"Min":2
+			},
+			"TimeBetween":{
+				"Max":0,
+				"Min":0
+			},
+			"Repeat":{
+				"Max":1,
+				"Min":1
+			},
+			"RewardWhenEnded":false,
+			"SuppressRewardState":false,
+			"Events":[
+				"RTID(PortalEvent2@CurrentLevel)"
+			]
+		}
+	},
+	{
+		"aliases":[
+			"Portal3"
+		],
+		"objclass":"WaveSchedulerProps",
+		"objdata":{
+			"TimeBeforeFirst":{
+				"Max":3,
+				"Min":3
+			},
+			"TimeBetween":{
+				"Max":0,
+				"Min":0
+			},
+			"Repeat":{
+				"Max":1,
+				"Min":1
+			},
+			"RewardWhenEnded":false,
+			"SuppressRewardState":false,
+			"Events":[
+				"RTID(PortalEvent3@CurrentLevel)"
+			]
+		}
+	},
+	{
+		"aliases":[
+			"Portal4"
+		],
+		"objclass":"WaveSchedulerProps",
+		"objdata":{
+			"TimeBeforeFirst":{
+				"Max":4,
+				"Min":4
+			},
+			"TimeBetween":{
+				"Max":0,
+				"Min":0
+			},
+			"Repeat":{
+				"Max":1,
+				"Min":1
+			},
+			"RewardWhenEnded":false,
+			"SuppressRewardState":false,
+			"Events":[
+				"RTID(PortalEvent4@CurrentLevel)"
+			]
+		}
+	},
+	{
+		"aliases":[
+			"Portal5"
+		],
+		"objclass":"WaveSchedulerProps",
+		"objdata":{
+			"TimeBeforeFirst":{
+				"Max":5,
+				"Min":5
+			},
+			"TimeBetween":{
+				"Max":0,
+				"Min":0
+			},
+			"Repeat":{
+				"Max":1,
+				"Min":1
+			},
+			"RewardWhenEnded":false,
+			"SuppressRewardState":false,
+			"Events":[
+				"RTID(PortalEvent5@CurrentLevel)"
+			]
+		}
+	},
+	{
+		"aliases":[
+			"Portal6"
+		],
+		"objclass":"WaveSchedulerProps",
+		"objdata":{
+			"TimeBeforeFirst":{
+				"Max":6,
+				"Min":6
+			},
+			"TimeBetween":{
+				"Max":0,
+				"Min":0
+			},
+			"Repeat":{
+				"Max":1,
+				"Min":1
+			},
+			"RewardWhenEnded":false,
+			"SuppressRewardState":false,
+			"Events":[
+				"RTID(PortalEvent6@CurrentLevel)"
+			]
+		}
+	},
+	{
+		"aliases":[
+			"Portal7"
+		],
+		"objclass":"WaveSchedulerProps",
+		"objdata":{
+			"TimeBeforeFirst":{
+				"Max":7,
+				"Min":7
+			},
+			"TimeBetween":{
+				"Max":0,
+				"Min":0
+			},
+			"Repeat":{
+				"Max":1,
+				"Min":1
+			},
+			"RewardWhenEnded":false,
+			"SuppressRewardState":false,
+			"Events":[
+				"RTID(PortalEvent7@CurrentLevel)"
+			]
+		}
+	},
+	{
+		"aliases":[
+			"Portal8"
+		],
+		"objclass":"WaveSchedulerProps",
+		"objdata":{
+			"TimeBeforeFirst":{
+				"Max":8,
+				"Min":8
+			},
+			"TimeBetween":{
+				"Max":0,
+				"Min":0
+			},
+			"Repeat":{
+				"Max":1,
+				"Min":1
+			},
+			"RewardWhenEnded":false,
+			"SuppressRewardState":false,
+			"Events":[
+				"RTID(PortalEvent8@CurrentLevel)"
+			]
+		}
+	},
+	{
+		"aliases":[
+			"Portal9"
+		],
+		"objclass":"WaveSchedulerProps",
+		"objdata":{
+			"TimeBeforeFirst":{
+				"Max":9,
+				"Min":9
+			},
+			"TimeBetween":{
+				"Max":0,
+				"Min":0
+			},
+			"Repeat":{
+				"Max":1,
+				"Min":1
+			},
+			"RewardWhenEnded":false,
+			"SuppressRewardState":false,
+			"Events":[
+				"RTID(PortalEvent9@CurrentLevel)"
+			]
+		}
+	},
+	{
+		"aliases":[
+			"Portal10"
+		],
+		"objclass":"WaveSchedulerProps",
+		"objdata":{
+			"TimeBeforeFirst":{
+				"Max":10,
+				"Min":10
+			},
+			"TimeBetween":{
+				"Max":0,
+				"Min":0
+			},
+			"Repeat":{
+				"Max":1,
+				"Min":1
+			},
+			"RewardWhenEnded":false,
+			"SuppressRewardState":false,
+			"Events":[
+				"RTID(PortalEvent10@CurrentLevel)"
+			]
+		}
+	},
+	{
+		"aliases":[
+			"Portal11"
+		],
+		"objclass":"WaveSchedulerProps",
+		"objdata":{
+			"TimeBeforeFirst":{
+				"Max":11,
+				"Min":11
+			},
+			"TimeBetween":{
+				"Max":0,
+				"Min":0
+			},
+			"Repeat":{
+				"Max":1,
+				"Min":1
+			},
+			"RewardWhenEnded":false,
+			"SuppressRewardState":false,
+			"Events":[
+				"RTID(PortalEvent11@CurrentLevel)"
+			]
+		}
+	},
+	{
+		"aliases":[
+			"Portal12"
+		],
+		"objclass":"WaveSchedulerProps",
+		"objdata":{
+			"TimeBeforeFirst":{
+				"Max":12,
+				"Min":12
+			},
+			"TimeBetween":{
+				"Max":0,
+				"Min":0
+			},
+			"Repeat":{
+				"Max":1,
+				"Min":1
+			},
+			"RewardWhenEnded":false,
+			"SuppressRewardState":false,
+			"Events":[
+				"RTID(PortalEvent12@CurrentLevel)"
+			]
+		}
+	},
+	{
+      "objclass": "PortalType",
+      "aliases": [
+        "Portal0"
+      ],
+      "objdata": {
+        "Properties": "RTID(Portal0P@CurrentLevel)"
+      }
+    },
+	{
+      "objclass": "PortalType",
+      "aliases": [
+        "Portal1"
+      ],
+      "objdata": {
+        "Properties": "RTID(Portal1P@CurrentLevel)"
+      }
+    },
+	{
+      "objclass": "PortalType",
+      "aliases": [
+        "Portal2"
+      ],
+      "objdata": {
+        "Properties": "RTID(Portal2P@CurrentLevel)"
+      }
+    },
+	{
+      "objclass": "PortalType",
+      "aliases": [
+        "Portal3"
+      ],
+      "objdata": {
+        "Properties": "RTID(Portal3P@CurrentLevel)"
+      }
+    },
+	{
+      "objclass": "PortalType",
+      "aliases": [
+        "Portal4"
+      ],
+      "objdata": {
+        "Properties": "RTID(Portal4P@CurrentLevel)"
+      }
+    },
+	{
+      "objclass": "PortalType",
+      "aliases": [
+        "Portal5"
+      ],
+      "objdata": {
+        "Properties": "RTID(Portal5P@CurrentLevel)"
+      }
+    },
+	{
+      "objclass": "PortalType",
+      "aliases": [
+        "Portal6"
+      ],
+      "objdata": {
+        "Properties": "RTID(Portal6P@CurrentLevel)"
+      }
+    },
+	{
+      "objclass": "PortalType",
+      "aliases": [
+        "Portal7"
+      ],
+      "objdata": {
+        "Properties": "RTID(Portal7P@CurrentLevel)"
+      }
+    },
+	{
+      "objclass": "PortalType",
+      "aliases": [
+        "Portal8"
+      ],
+      "objdata": {
+        "Properties": "RTID(Portal8P@CurrentLevel)"
+      }
+    },
+	{
+      "objclass": "PortalType",
+      "aliases": [
+        "Portal9"
+      ],
+      "objdata": {
+        "Properties": "RTID(Portal9P@CurrentLevel)"
+      }
+    },
+	{
+      "objclass": "PortalType",
+      "aliases": [
+        "Portal10"
+      ],
+      "objdata": {
+        "Properties": "RTID(Portal10P@CurrentLevel)"
+      }
+    },
+	{
+      "objclass": "PortalType",
+      "aliases": [
+        "Portal11"
+      ],
+      "objdata": {
+        "Properties": "RTID(Portal11P@CurrentLevel)"
+      }
+    },
+	{
+      "objclass": "PortalType",
+      "aliases": [
+        "Portal12"
+      ],
+      "objdata": {
+        "Properties": "RTID(Portal12P@CurrentLevel)"
+      }
+    },
+	{
+      "objclass":"PortalProps",
+      "aliases":[
+        "Portal0P"
+      ],
+      "objdata":{
+        "TimeBeforeFirst":{
+          "Min":1,
+          "Max":1
+        },
+        "TimeBetween":{
+          "Min":0,
+          "Max":0
+        },
+        "Scale":1.3,
+        "World":"egypt",
+        "ZombieTypesToSpawn":[
+          {
+            "Weight":1,
+            "ZombieTypeName":"RTID(egypt_gargantuar@ZombieTypes)"
+          }
+        ]
+      }
+    },
+	{
+      "objclass":"PortalProps",
+      "aliases":[
+        "Portal1P"
+      ],
+      "objdata":{
+        "TimeBeforeFirst":{
+          "Min":1,
+          "Max":1
+        },
+        "TimeBetween":{
+          "Min":0,
+          "Max":0
+        },
+        "Scale":1.3,
+        "World":"pirate",
+        "ZombieTypesToSpawn":[
+          {
+            "Weight":1,
+            "ZombieTypeName":"RTID(pirate_gargantuar@ZombieTypes)"
+          }
+        ]
+      }
+    },
+	{
+      "objclass":"PortalProps",
+      "aliases":[
+        "Portal2P"
+      ],
+      "objdata":{
+        "TimeBeforeFirst":{
+          "Min":1,
+          "Max":1
+        },
+        "TimeBetween":{
+          "Min":0,
+          "Max":0
+        },
+        "Scale":1.3,
+        "World":"west",
+        "ZombieTypesToSpawn":[
+          {
+            "Weight":1,
+            "ZombieTypeName":"RTID(cowboy_gargantuar@ZombieTypes)"
+          }
+        ]
+      }
+    },
+	{
+      "objclass":"PortalProps",
+      "aliases":[
+        "Portal3P"
+      ],
+      "objdata":{
+        "TimeBeforeFirst":{
+          "Min":1,
+          "Max":1
+        },
+        "TimeBetween":{
+          "Min":0,
+          "Max":0
+        },
+        "Scale":1.3,
+        "World":"future",
+        "ZombieTypesToSpawn":[
+          {
+            "Weight":1,
+            "ZombieTypeName":"RTID(future_gargantuar@ZombieTypes)"
+          }
+        ]
+      }
+    },
+	{
+      "objclass":"PortalProps",
+      "aliases":[
+        "Portal4P"
+      ],
+      "objdata":{
+        "TimeBeforeFirst":{
+          "Min":1,
+          "Max":1
+        },
+        "TimeBetween":{
+          "Min":0,
+          "Max":0
+        },
+        "Scale":1.3,
+        "World":"dark",
+        "ZombieTypesToSpawn":[
+          {
+            "Weight":1,
+            "ZombieTypeName":"RTID(dark_gargantuar@ZombieTypes)"
+          }
+        ]
+      }
+    },
+	{
+      "objclass":"PortalProps",
+      "aliases":[
+        "Portal5P"
+      ],
+      "objdata":{
+        "TimeBeforeFirst":{
+          "Min":1,
+          "Max":1
+        },
+        "TimeBetween":{
+          "Min":0,
+          "Max":0
+        },
+        "Scale":1.3,
+        "World":"beach",
+        "ZombieTypesToSpawn":[
+          {
+            "Weight":1,
+            "ZombieTypeName":"RTID(beach_gargantuar@ZombieTypes)"
+          }
+        ]
+      }
+    },
+	{
+      "objclass":"PortalProps",
+      "aliases":[
+        "Portal6P"
+      ],
+      "objdata":{
+        "TimeBeforeFirst":{
+          "Min":1,
+          "Max":1
+        },
+        "TimeBetween":{
+          "Min":0,
+          "Max":0
+        },
+        "Scale":1.3,
+        "World":"iceage",
+        "ZombieTypesToSpawn":[
+          {
+            "Weight":1,
+            "ZombieTypeName":"RTID(iceage_gargantuar@ZombieTypes)"
+          }
+        ]
+      }
+    },
+	{
+      "objclass":"PortalProps",
+      "aliases":[
+        "Portal7P"
+      ],
+      "objdata":{
+        "TimeBeforeFirst":{
+          "Min":1,
+          "Max":1
+        },
+        "TimeBetween":{
+          "Min":0,
+          "Max":0
+        },
+        "Scale":1.3,
+        "World":"lostcity",
+        "ZombieTypesToSpawn":[
+          {
+            "Weight":1,
+            "ZombieTypeName":"RTID(lostcity_gargantuar@ZombieTypes)"
+          }
+        ]
+      }
+    },
+	{
+      "objclass":"PortalProps",
+      "aliases":[
+        "Portal8P"
+      ],
+      "objdata":{
+        "TimeBeforeFirst":{
+          "Min":1,
+          "Max":1
+        },
+        "TimeBetween":{
+          "Min":0,
+          "Max":0
+        },
+        "Scale":1.3,
+        "World":"kongfu",
+        "ZombieTypesToSpawn":[
+          {
+            "Weight":1,
+            "ZombieTypeName":"RTID(kongfu_bronze_hook@ZombieTypes)"
+          }
+        ]
+      }
+    },
+	{
+      "objclass":"PortalProps",
+      "aliases":[
+        "Portal9P"
+      ],
+      "objdata":{
+        "TimeBeforeFirst":{
+          "Min":1,
+          "Max":1
+        },
+        "TimeBetween":{
+          "Min":0,
+          "Max":0
+        },
+        "Scale":1.3,
+        "World":"eighties",
+        "ZombieTypesToSpawn":[
+          {
+            "Weight":1,
+            "ZombieTypeName":"RTID(eighties_gargantuar@ZombieTypes)"
+          }
+        ]
+      }
+    },
+	{
+      "objclass":"PortalProps",
+      "aliases":[
+        "Portal10P"
+      ],
+      "objdata":{
+        "TimeBeforeFirst":{
+          "Min":1,
+          "Max":1
+        },
+        "TimeBetween":{
+          "Min":0,
+          "Max":0
+        },
+        "Scale":1.3,
+        "World":"dino",
+        "ZombieTypesToSpawn":[
+          {
+            "Weight":1,
+            "ZombieTypeName":"RTID(dino_gargantuar@ZombieTypes)"
+          }
+        ]
+      }
+    },
+	{
+      "objclass":"PortalProps",
+      "aliases":[
+        "Portal11P"
+      ],
+      "objdata":{
+        "TimeBeforeFirst":{
+          "Min":1,
+          "Max":1
+        },
+        "TimeBetween":{
+          "Min":0,
+          "Max":0
+        },
+        "Scale":1.3,
+        "World":"sky",
+        "ZombieTypesToSpawn":[
+          {
+            "Weight":1,
+            "ZombieTypeName":"RTID(sky_gargantuar@ZombieTypes)"
+          }
+        ]
+      }
+    },
+	{
+      "objclass":"PortalProps",
+      "aliases":[
+        "Portal12P"
+      ],
+      "objdata":{
+        "TimeBeforeFirst":{
+          "Min":1,
+          "Max":1
+        },
+        "TimeBetween":{
+          "Min":0,
+          "Max":0
+        },
+        "Scale":1.3,
+        "World":"",
+        "ZombieTypesToSpawn":[
+          {
+            "Weight":1,
+            "ZombieTypeName":"RTID(supernova_gargantuar_gargantuar@ZombieTypes)"
+          }
+        ]
+      }
+    },
+	{
+      "aliases": [
+        "PortalEvent0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 2,
+        "PortalType": "RTID(Portal0@CurrentLevel)"
+      }
+    },
+	{
+      "aliases": [
+        "PortalEvent1"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 5,
+        "PortalRow": 1,
+        "PortalType": "RTID(Portal1@CurrentLevel)"
+      }
+    },
+	{
+      "aliases": [
+        "PortalEvent2"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 4,
+        "PortalType": "RTID(Portal2@CurrentLevel)"
+      }
+    },
+	{
+      "aliases": [
+        "PortalEvent3"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 5,
+        "PortalRow": 0,
+        "PortalType": "RTID(Portal3@CurrentLevel)"
+      }
+    },
+	{
+      "aliases": [
+        "PortalEvent4"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 5,
+        "PortalRow": 1,
+        "PortalType": "RTID(Portal4@CurrentLevel)"
+      }
+    },
+	{
+      "aliases": [
+        "PortalEvent5"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 1,
+        "PortalType": "RTID(Portal5@CurrentLevel)"
+      }
+    },
+	{
+      "aliases": [
+        "PortalEvent6"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 3,
+        "PortalType": "RTID(Portal6@CurrentLevel)"
+      }
+    },
+	{
+      "aliases": [
+        "PortalEvent7"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 4,
+        "PortalRow": 4,
+        "PortalType": "RTID(Portal7@CurrentLevel)"
+      }
+    },
+	{
+      "aliases": [
+        "PortalEvent8"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 5,
+        "PortalRow": 3,
+        "PortalType": "RTID(Portal8@CurrentLevel)"
+      }
+    },
+	{
+      "aliases": [
+        "PortalEvent9"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 0,
+        "PortalType": "RTID(Portal9@CurrentLevel)"
+      }
+    },
+	{
+      "aliases": [
+        "PortalEvent10"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 5,
+        "PortalRow": 4,
+        "PortalType": "RTID(Portal10@CurrentLevel)"
+      }
+    },
+	{
+      "aliases": [
+        "PortalEvent11"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 4,
+        "PortalRow": 1,
+        "PortalType": "RTID(Portal11@CurrentLevel)"
+      }
+    },
+	{
+      "aliases": [
+        "PortalEvent12"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 4,
+        "PortalRow": 2,
+        "PortalType": "RTID(Portal12@CurrentLevel)"
+      }
+    }
+  ],
+  "version": 1
+}
