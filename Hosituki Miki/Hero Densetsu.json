@@ -1,0 +1,3138 @@
+{
+	"#comment": "Hero Densetsu",
+	"Information": {
+		"Author": "Hosituki_Miki",
+		"Category": "Minigame",
+		"CreatedAt": "2026-05-28",
+		"Difficulty": "Normal",
+		"GameVersion": "0.16.1",
+		"Introduction": {
+			"en": "Hero Densetsu",
+			"zh-CN": "英雄传说"
+		},
+		"UpdatedAt": "2026-10-26",
+		"Version": "1.3",
+		"name": {
+			"en": "Hero Densetsu",
+			"zh-CN": "英雄传说"
+		},
+		"uuid": "893"
+	},
+	"objects": [
+		{
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "Hero Densetsu",
+				"LevelNumber": 2,
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"Modules": [
+					"RTID(StandardIntro@LevelModules)",
+					"RTID(//LevelOfTheDayIntro@LevelModules)",
+					"RTID(ZombiesDeadWinCon@LevelModules)",
+					"RTID(ChallengeModule@CurrentLevel)",
+					"RTID(FutureMinigame@CurrentLevel)",
+					"RTID(SeedBank@CurrentLevel)",
+					"RTID(DefaultZombieWinCondition@LevelModules)",
+					"RTID(NewWaves@CurrentLevel)",
+					"RTID(//LevelOfTheDayModule@CurrentLevel)",
+					"RTID(CowboyRails@CurrentLevel)",
+					"RTID(FrozenPlantPlacement@CurrentLevel)",
+					"RTID(Tide@CurrentLevel)"
+				],
+				"MusicType": "MiniGame_A",
+				"Name": "Hero Densetsu",
+				"//IsLevelOfTheDay": true,
+				"//VictoryModule": "RTID(LevelOfTheDayOutro@LevelModules)",
+				"NormalPresentTable": "egypt_normal_01",
+				"ShinyPresentTable": "egypt_shiny_01",
+				"StageModule": "RTID(HeroesStage@LevelModules)",
+				"WrittenBy": "Hosituki_Miki"
+			}
+		},
+		{
+			"objclass": "SeedBankProperties",
+			"aliases": [
+				"SeedBank"
+			],
+			"objdata": {
+				"UnlockAll": true,
+				"OverrideSeedSlotsCount": 2,
+				"PlantIncludeList": [
+					"penelopea",
+					"solarflare",
+					"wallknight",
+					"chompzilla",
+					"spudow",
+					"hero_citron",
+					"grassknuckles",
+					"nightcap",
+					"rose",
+					"captaincombustible",
+					"betacarrotina"
+				],
+				"SelectionMethod": "chooser",
+				"PresetPlantList": [
+					{
+						"Level": -1,
+						"PlantType": "spudow"
+					},
+					{
+						"Level": -1,
+						"PlantType": "betacarrotina"
+					}
+				]
+			}
+		},
+		{
+			"aliases": [
+				"ChallengeModule"
+			],
+			"objclass": "StarChallengeModuleProperties",
+			"objdata": {
+				"Challenges": [
+					[
+						"RTID(SunProduced@CurrentLevel)",
+						"RTID(BeatTheLevel@CurrentLevel)"
+					]
+				],
+				"ChallengesAlwaysAvailable": true
+			}
+		},
+		{
+			"objclass": "StarChallengeSunProducedProps",
+			"aliases": [
+				"SunProduced"
+			],
+			"objdata": {
+				"TargetSun": 7000
+			}
+		},
+		{
+			"aliases": [
+				"BeatTheLevel"
+			],
+			"objclass": "StarChallengeBeatTheLevelProps",
+			"objdata": {
+				"DescriptionsMultilanguage": [
+					{
+						"en": "Counter the siege of the zombie heroes with the plant heroes!",
+						"zh": "与植物英雄们一起挫败僵尸英雄们的入侵计划！"
+					}
+				]
+			}
+		},
+		{
+			"aliases": [
+				"CowboyRails"
+			],
+			"objclass": "RailcartProperties",
+			"objdata": {
+				"RailcartType": "railcart_beach",
+				"Railcarts": [
+					{
+						"Column": 0,
+						"Row": 2
+					},
+					{
+						"Column": 1,
+						"Row": 2,
+						"LinksToPrev": true
+					},
+					{
+						"Column": 2,
+						"Row": 2
+					}
+				],
+				"Rails": [
+					{
+						"Column": 0,
+						"RowEnd": 4,
+						"RowStart": 0
+					},
+					{
+						"Column": 1,
+						"RowEnd": 4,
+						"RowStart": 0
+					},
+					{
+						"Column": 2,
+						"RowEnd": 4,
+						"RowStart": 0
+					}
+				]
+			}
+		},
+		{
+			"objclass": "FutureMinigameProperties",
+			"aliases": [
+				"FutureMinigame"
+			],
+			"objdata": {
+				"SuppressObjectiveTip": true,
+				"Position": {
+					"mX": 0,
+					"mY": 2
+				},
+				"PlantUpgradeList": [
+					{
+						"Type": "penelopea",
+						"FullPoint": 10000,
+						"UpgradeDetails": {
+							"DamageScale": 1,
+							"ShootIntervalScale": 1
+						}
+					},
+					{
+						"Type": "hero_citron",
+						"FullPoint": 20000,
+						"UpgradeDetails": {
+							"DamageScale": 1,
+							"ShootIntervalScale": 1
+						}
+					},
+					{
+						"Type": "rose",
+						"FullPoint": 30000,
+						"UpgradeDetails": {
+							"DamageScale": 1,
+							"ShootIntervalScale": 1
+						}
+					},
+					{
+						"Type": "nightcap",
+						"FullPoint": 40000,
+						"UpgradeDetails": {
+							"DamageScale": 1,
+							"ShootIntervalScale": 1
+						}
+					},
+					{
+						"Type": "grassknuckles",
+						"FullPoint": 50000,
+						"UpgradeDetails": {
+							"DamageScale": 1,
+							"ShootIntervalScale": 1
+						}
+					},
+					{
+						"Type": "chompzilla",
+						"UpgradeDetails": {
+							"DamageScale": 1,
+							"ShootIntervalScale": 1
+						}
+					}
+				]
+			}
+		},
+		{
+			"aliases": [
+				"FrozenPlantPlacement"
+			],
+			"objclass": "InitialPlantProperties",
+			"objdata": {
+				"InitialPlantPlacements": [
+					{
+						"GridX": 2,
+						"GridY": 2,
+						"Level": -1,
+						"TypeName": "wallknight"
+					},
+					{
+						"GridX": 2,
+						"GridY": 2,
+						"Level": -1,
+						"TypeName": "solarflare"
+					},
+					{
+						"GridX": 1,
+						"GridY": 2,
+						"Level": -1,
+						"TypeName": "captaincombustible"
+					}
+				]
+			}
+		},
+		{
+			"aliases": [
+				"Tide"
+			],
+			"objclass": "TideProperties",
+			"objdata": {
+				"StartingWaveLocation": 2
+			}
+		},
+		{
+			"aliases": [
+				"NewWaves"
+			],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {
+				"DynamicZombies": [
+					{}
+				],
+				"WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"LevelOfTheDayModule"
+			],
+			"objclass": "LevelOfTheDayModuleProperties",
+			"objdata": {
+				"FlagCount": 10,
+				"WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"WaveManagerProps"
+			],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"FlagWaveInterval": 2,
+				"MaxNextWaveHealthPercentage": 0.02,
+				"MinNextWaveHealthPercentage": 0.01,
+				"SuppressFlagZombie": true,
+				"SuppressedDynamicZombieWaves": [],
+				"WaveCount": 10,
+				"WaveSpendingPointIncrement": 0,
+				"WaveSpendingPoints": 100,
+				"Waves": [
+					[
+						"RTID(WarningSuperBrainz@CurrentLevel)",
+						"RTID(WaveBrainy@CurrentLevel)",
+						"RTID(WaveSneaky@CurrentLevel)"
+					],
+					[
+						"RTID(WarningImpfinity@CurrentLevel)",
+						"RTID(TripleThreat1@CurrentLevel)",
+						"RTID(WaveCrazy@CurrentLevel)",
+						"RTID(WaveSneaky@CurrentLevel)"
+					],
+					[
+						"RTID(WarningElectricBoogaloo@CurrentLevel)",
+						"RTID(StayinAlive@CurrentLevel)",
+						"RTID(WaveCrazy@CurrentLevel)",
+						"RTID(WaveBeastly@CurrentLevel)",
+						"RTID(//SpawnPF@CurrentLevel)"
+					],
+					[
+						"RTID(WarningProfBrainstorm@CurrentLevel)",
+						"RTID(WaveBrainy@CurrentLevel)",
+						"RTID(WaveCrazy@CurrentLevel)"
+					],
+					[
+						"RTID(WarningZMech@CurrentLevel)",
+						"RTID(MissileMadness0@CurrentLevel)",
+						"RTID(MissileMadness1@CurrentLevel)",
+						"RTID(WaveHearty@CurrentLevel)",
+						"RTID(WaveCrazy@CurrentLevel)"
+					],
+					[
+						"RTID(WarningTheSmash@CurrentLevel)",
+						"RTID(SlamminSmackdown@CurrentLevel)",
+						"RTID(WaveHearty@CurrentLevel)",
+						"RTID(WaveBeastly@CurrentLevel)",
+						"RTID(//SpawnPF@CurrentLevel)"
+					],
+					[
+						"RTID(WarningRustbolt@CurrentLevel)",
+						"RTID(WaveBrainy@CurrentLevel)",
+						"RTID(WaveHearty@CurrentLevel)"
+					],
+					[
+						"RTID(WarningBrainFreeze@CurrentLevel)",
+						"RTID(FrozenTundra@CurrentLevel)",
+						"RTID(WaveBeastly@CurrentLevel)",
+						"RTID(WaveSneaky@CurrentLevel)",
+						"RTID(//SpawnPF@CurrentLevel)"
+					],
+					[
+						"RTID(WarningImmortitia@CurrentLevel)",
+						"RTID(WaveBrainy@CurrentLevel)",
+						"RTID(WaveBeastly@CurrentLevel)",
+						"RTID(//SpawnPF@CurrentLevel)"
+					],
+					[
+						"RTID(WarningNeptuna@CurrentLevel)",
+						"RTID(OctoPult@CurrentLevel)",
+						"RTID(WaveHearty@CurrentLevel)",
+						"RTID(WaveSneaky@CurrentLevel)"
+					]
+				]
+			}
+		},
+		{
+			"aliases": [
+				"lostcity_jane_0pf"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"ZombieBasedOn": "lostcity_jane",
+				"Properties": "RTID(lostcity_jane_0pf@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"lostcity_jane_0pf"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotCarryPlantfoodsInWaves": true
+			}
+		},
+		{
+			"aliases": [
+				"feastivus_swashbuckler_0pf"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"ZombieBasedOn": "feastivus_swashbuckler",
+				"Properties": "RTID(feastivus_swashbuckler_0pf@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"feastivus_swashbuckler_0pf"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotCarryPlantfoodsInWaves": true
+			}
+		},
+		{
+			"aliases": [
+				"halloween_0pf"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"ZombieBasedOn": "halloween",
+				"Properties": "RTID(halloween_0pf@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"halloween_0pf"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotCarryPlantfoodsInWaves": true
+			}
+		},
+		{
+			"aliases": [
+				"stpatrick_imp_0pf"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"ZombieBasedOn": "stpatrick_imp",
+				"Properties": "RTID(stpatrick_imp_0pf@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"stpatrick_imp_0pf"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotCarryPlantfoodsInWaves": true
+			}
+		},
+		{
+			"aliases": [
+				"sky_dronemaker_alt_0pf"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"ZombieBasedOn": "sky_dronemaker",
+				"Properties": "RTID(sky_dronemaker_alt_0pf@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"sky_dronemaker_alt_0pf"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotCarryPlantfoodsInWaves": true,
+				"TargetListBecomesBlackList": true,
+				"ValidDroneTargets": [
+					"sky_twin_upper",
+					"sky_twin_lower",
+					"sky_twin",
+					"sky_drone",
+					"sky_arbiterx",
+					"sky_gargantuar",
+					"sky_imp"
+				]
+			}
+		},
+		{
+			"aliases": [
+				"sky_electric_0pf"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"ZombieBasedOn": "sky_electric",
+				"Properties": "RTID(sky_electric_0pf@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"sky_electric_0pf"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotCarryPlantfoodsInWaves": true
+			}
+		},
+		{
+			"aliases": [
+				"sky_battleplane_0pf"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"ZombieBasedOn": "sky_battleplane",
+				"Properties": "RTID(sky_battleplane_0pf@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"sky_battleplane_0pf"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotCarryPlantfoodsInWaves": true
+			}
+		},
+		{
+			"aliases": [
+				"dark_wizard_0pf"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"ZombieBasedOn": "dark_wizard",
+				"Properties": "RTID(dark_wizard_0pf@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"dark_wizard_0pf"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotCarryPlantfoodsInWaves": true
+			}
+		},
+		{
+			"aliases": [
+				"WaveBrainy"
+			],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [
+					{
+						"Type": "lostcity_jane_0pf"
+					},
+					{
+						"Type": "feastivus_swashbuckler_0pf"
+					},
+					{
+						"Type": "halloween_0pf"
+					},
+					{
+						"Type": "stpatrick_imp_0pf"
+					},
+					{
+						"Type": "sky_dronemaker_alt_0pf"
+					},
+					{
+						"Type": "sky_electric_0pf"
+					},
+					{
+						"Type": "sky_battleplane_0pf"
+					},
+					{
+						"Type": "dark_wizard_0pf"
+					}
+				]
+			}
+		},
+		{
+			"aliases": [
+				"dark_juggler_0pf"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"ZombieBasedOn": "dark_juggler",
+				"Properties": "RTID(dark_juggler_0pf@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"dark_juggler_0pf"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotCarryPlantfoodsInWaves": true
+			}
+		},
+		{
+			"aliases": [
+				"disco_mech_0pf"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"ZombieBasedOn": "disco_mech",
+				"Properties": "RTID(disco_mech_0pf@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"disco_mech_0pf"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotCarryPlantfoodsInWaves": true
+			}
+		},
+		{
+			"aliases": [
+				"easter_gargantuar_0pf"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"ZombieBasedOn": "easter_gargantuar",
+				"Properties": "RTID(easter_gargantuar_0pf@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"easter_gargantuar_0pf"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotCarryPlantfoodsInWaves": true
+			}
+		},
+		{
+			"aliases": [
+				"modern_newspaper_0pf"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"ZombieBasedOn": "modern_newspaper",
+				"Properties": "RTID(modern_newspaper_0pf@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"modern_newspaper_0pf"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotCarryPlantfoodsInWaves": true
+			}
+		},
+		{
+			"aliases": [
+				"summer_armor1_0pf"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"ZombieBasedOn": "summer_armor1",
+				"Properties": "RTID(summer_armor1_0pf@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"summer_armor1_0pf"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotCarryPlantfoodsInWaves": true
+			}
+		},
+		{
+			"aliases": [
+				"halloween_gargantuar_0pf"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"ZombieBasedOn": "halloween_gargantuar",
+				"Properties": "RTID(halloween_gargantuar_0pf@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"halloween_gargantuar_0pf"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotCarryPlantfoodsInWaves": true
+			}
+		},
+		{
+			"aliases": [
+				"pirate_gargantuar_0pf"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"ZombieBasedOn": "pirate_gargantuar",
+				"Properties": "RTID(pirate_gargantuar_0pf@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"pirate_gargantuar_0pf"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotCarryPlantfoodsInWaves": true
+			}
+		},
+		{
+			"aliases": [
+				"WaveCrazy"
+			],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [
+					{
+						"Type": "dark_juggler_0pf"
+					},
+					{
+						"Type": "disco_mech_0pf"
+					},
+					{
+						"Type": "easter_gargantuar_0pf"
+					},
+					{
+						"Type": "modern_newspaper_0pf"
+					},
+					{
+						"Type": "summer_armor1_0pf"
+					},
+					{
+						"Type": "halloween_gargantuar_0pf"
+					},
+					{
+						"Type": "pirate_gargantuar_0pf"
+					}
+				]
+			}
+		},
+		{
+			"aliases": [
+				"duckytube_0pf"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"ZombieBasedOn": "duckytube",
+				"Properties": "RTID(duckytube_0pf@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"duckytube_0pf"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotCarryPlantfoodsInWaves": true
+			}
+		},
+		{
+			"aliases": [
+				"tomb_raiser_0pf"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"ZombieBasedOn": "tomb_raiser",
+				"Properties": "RTID(tomb_raiser_0pf@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"tomb_raiser_0pf"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotCarryPlantfoodsInWaves": true
+			}
+		},
+		{
+			"aliases": [
+				"swashbuckler_0pf"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"ZombieBasedOn": "swashbuckler",
+				"Properties": "RTID(swashbuckler_0pf@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"swashbuckler_0pf"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotCarryPlantfoodsInWaves": true
+			}
+		},
+		{
+			"aliases": [
+				"lostcity_excavator_0pf"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"ZombieBasedOn": "lostcity_excavator",
+				"Properties": "RTID(lostcity_excavator_0pf@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"lostcity_excavator_0pf"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotCarryPlantfoodsInWaves": true
+			}
+		},
+		{
+			"aliases": [
+				"birthday_gargantuar_0pf"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"ZombieBasedOn": "birthday_gargantuar",
+				"Properties": "RTID(birthday_gargantuar_0pf@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"birthday_gargantuar_0pf"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotCarryPlantfoodsInWaves": true
+			}
+		},
+		{
+			"aliases": [
+				"barrelroller_0pf"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"ZombieBasedOn": "barrelroller",
+				"Properties": "RTID(barrelroller_0pf@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"barrelroller_0pf"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotCarryPlantfoodsInWaves": true
+			}
+		},
+		{
+			"aliases": [
+				"chicken_farmer_0pf"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"ZombieBasedOn": "chicken_farmer",
+				"Properties": "RTID(chicken_farmer_0pf@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"chicken_farmer_0pf"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotCarryPlantfoodsInWaves": true
+			}
+		},
+		{
+			"aliases": [
+				"tutorial_imp_0pf"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"ZombieBasedOn": "tutorial_imp",
+				"Properties": "RTID(tutorial_imp_0pf@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"tutorial_imp_0pf"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotCarryPlantfoodsInWaves": true
+			}
+		},
+		{
+			"aliases": [
+				"pirate_imp_0pf"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"ZombieBasedOn": "pirate_imp",
+				"Properties": "RTID(pirate_imp_0pf@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"pirate_imp_0pf"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotCarryPlantfoodsInWaves": true
+			}
+		},
+		{
+			"aliases": [
+				"summer_imp_0pf"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"ZombieBasedOn": "summer_imp",
+				"Properties": "RTID(summer_imp_0pf@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"summer_imp_0pf"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotCarryPlantfoodsInWaves": true
+			}
+		},
+		{
+			"aliases": [
+				"WaveSneaky"
+			],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [
+					{
+						"Type": "duckytube_0pf"
+					},
+					{
+						"Type": "tomb_raiser_0pf"
+					},
+					{
+						"Type": "swashbuckler_0pf"
+					},
+					{
+						"Type": "lostcity_excavator_0pf"
+					},
+					{
+						"Type": "birthday_gargantuar_0pf"
+					},
+					{
+						"Type": "barrelroller_0pf"
+					},
+					{
+						"Type": "chicken_farmer_0pf"
+					},
+					{
+						"Type": "tutorial_imp_0pf"
+					},
+					{
+						"Type": "pirate_imp_0pf"
+					},
+					{
+						"Type": "summer_imp_0pf"
+					}
+				]
+			}
+		},
+		{
+			"aliases": [
+				"beach_gargantuar_0pf"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"ZombieBasedOn": "beach_gargantuar",
+				"Properties": "RTID(beach_gargantuar_0pf@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"beach_gargantuar_0pf"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotCarryPlantfoodsInWaves": true
+			}
+		},
+		{
+			"aliases": [
+				"beach_octopus_0pf"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"ZombieBasedOn": "beach_octopus",
+				"Properties": "RTID(beach_octopus_0pf@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"beach_octopus_0pf"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotCarryPlantfoodsInWaves": true
+			}
+		},
+		{
+			"aliases": [
+				"beach_snorkel_0pf"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"ZombieBasedOn": "beach_snorkel",
+				"Properties": "RTID(beach_snorkel_0pf@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"beach_snorkel_0pf"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotCarryPlantfoodsInWaves": true
+			}
+		},
+		{
+			"aliases": [
+				"beach_surfer_0pf"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"ZombieBasedOn": "beach_surfer",
+				"Properties": "RTID(beach_surfer_0pf@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"beach_surfer_0pf"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotCarryPlantfoodsInWaves": true
+			}
+		},
+		{
+			"aliases": [
+				"tutorial_gargantuar_0pf"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"ZombieBasedOn": "tutorial_gargantuar",
+				"Properties": "RTID(tutorial_gargantuar_0pf@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"tutorial_gargantuar_0pf"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotCarryPlantfoodsInWaves": true
+			}
+		},
+		{
+			"aliases": [
+				"eighties_punk_veteran_0pf"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"ZombieBasedOn": "eighties_punk_veteran",
+				"Properties": "RTID(eighties_punk_veteran_0pf@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"eighties_punk_veteran_0pf"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotCarryPlantfoodsInWaves": true
+			}
+		},
+		{
+			"aliases": [
+				"summer_gargantuar_0pf"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"ZombieBasedOn": "summer_gargantuar",
+				"Properties": "RTID(summer_gargantuar_0pf@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"summer_gargantuar_0pf"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotCarryPlantfoodsInWaves": true
+			}
+		},
+		{
+			"aliases": [
+				"piano_0pf"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"ZombieBasedOn": "piano",
+				"Properties": "RTID(piano_0pf@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"piano_0pf"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotCarryPlantfoodsInWaves": true
+			}
+		},
+		{
+			"aliases": [
+				"supernova_gargantuar_0pf"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"ZombieBasedOn": "supernova_gargantuar",
+				"Properties": "RTID(supernova_gargantuar_0pf@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"supernova_gargantuar_0pf"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotCarryPlantfoodsInWaves": true
+			}
+		},
+		{
+			"aliases": [
+				"WaveBeastly"
+			],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"AdditionalPlantfood": 1,
+				"Zombies": [
+					{
+						"Type": "beach_gargantuar_0pf"
+					},
+					{
+						"Type": "beach_octopus_0pf"
+					},
+					{
+						"Type": "beach_snorkel_0pf"
+					},
+					{
+						"Type": "beach_surfer_0pf"
+					},
+					{
+						"Type": "gargan_throwing_gargantuar"
+					},
+					{
+						"Type": "tutorial_gargantuar_0pf"
+					},
+					{
+						"Type": "eighties_punk_veteran_0pf"
+					},
+					{
+						"Type": "summer_gargantuar_0pf"
+					},
+					{
+						"Type": "piano_0pf"
+					},
+					{
+						"Type": "joustyeti_no_retreat"
+					},
+					{
+						"Type": "supernova_gargantuar_0pf"
+					}
+				]
+			}
+		},
+		{
+			"aliases": [
+				"cowboy_gargantuar_0pf"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"ZombieBasedOn": "cowboy_gargantuar",
+				"Properties": "RTID(cowboy_gargantuar_0pf@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"cowboy_gargantuar_0pf"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotCarryPlantfoodsInWaves": true
+			}
+		},
+		{
+			"aliases": [
+				"dark_armor3_0pf"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"ZombieBasedOn": "dark_armor3",
+				"Properties": "RTID(dark_armor3_0pf@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"dark_armor3_0pf"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotCarryPlantfoodsInWaves": true
+			}
+		},
+		{
+			"aliases": [
+				"eighties_armor2_0pf"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"ZombieBasedOn": "eighties_armor2",
+				"Properties": "RTID(eighties_armor2_0pf@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"eighties_armor2_0pf"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotCarryPlantfoodsInWaves": true
+			}
+		},
+		{
+			"aliases": [
+				"modern_allstar_0pf"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"ZombieBasedOn": "modern_allstar",
+				"Properties": "RTID(modern_allstar_0pf@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"modern_allstar_0pf"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotCarryPlantfoodsInWaves": true
+			}
+		},
+		{
+			"aliases": [
+				"pharaoh_0pf"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"ZombieBasedOn": "pharaoh",
+				"Properties": "RTID(pharaoh_0pf@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"pharaoh_0pf"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotCarryPlantfoodsInWaves": true
+			}
+		},
+		{
+			"aliases": [
+				"ra_0pf"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"ZombieBasedOn": "ra",
+				"Properties": "RTID(ra_0pf@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"ra_0pf"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotCarryPlantfoodsInWaves": true
+			}
+		},
+		{
+			"aliases": [
+				"camel_segment_0pf"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"ZombieBasedOn": "camel_segment",
+				"Properties": "RTID(camel_segment_0pf@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"camel_segment_0pf"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotCarryPlantfoodsInWaves": true,
+				"TeammateType": "camel_segment_0pf",
+				"TeamMemberCount": [
+					0
+				]
+			}
+		},
+		{
+			"aliases": [
+				"camel_threehump_0pf"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"ZombieBasedOn": "camel_onehump",
+				"Properties": "RTID(camel_threehump_0pf@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"camel_threehump_0pf"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotCarryPlantfoodsInWaves": true,
+				"TeammateType": "camel_segment_0pf",
+				"TeamMemberCount": [
+					5
+				]
+			}
+		},
+		{
+			"aliases": [
+				"tutorial_armor1_0pf"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"ZombieBasedOn": "tutorial_armor1",
+				"Properties": "RTID(tutorial_armor1_0pf@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"tutorial_armor1_0pf"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotCarryPlantfoodsInWaves": true
+			}
+		},
+		{
+			"aliases": [
+				"tutorial_armor2_0pf"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"ZombieBasedOn": "tutorial_armor2",
+				"Properties": "RTID(tutorial_armor2_0pf@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"tutorial_armor2_0pf"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotCarryPlantfoodsInWaves": true
+			}
+		},
+		{
+			"aliases": [
+				"tutorial_flag_0pf"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"ZombieBasedOn": "tutorial_flag",
+				"Properties": "RTID(tutorial_flag_0pf@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"tutorial_flag_0pf"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotCarryPlantfoodsInWaves": true
+			}
+		},
+		{
+			"aliases": [
+				"dino_armor3_0pf"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"ZombieBasedOn": "dino_armor3",
+				"Properties": "RTID(dino_armor3_0pf@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"dino_armor3_0pf"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotCarryPlantfoodsInWaves": true
+			}
+		},
+		{
+			"aliases": [
+				"dark_king_veteran_0pf"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"ZombieBasedOn": "dark_king_veteran",
+				"Properties": "RTID(dark_king_veteran_0pf@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"dark_king_veteran_0pf"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotCarryPlantfoodsInWaves": true
+			}
+		},
+		{
+			"aliases": [
+				"WaveHearty"
+			],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [
+					{
+						"Type": "cowboy_gargantuar_0pf"
+					},
+					{
+						"Type": "dark_armor3_0pf"
+					},
+					{
+						"Type": "eighties_armor2_0pf"
+					},
+					{
+						"Type": "modern_allstar_0pf"
+					},
+					{
+						"Type": "pharaoh_0pf"
+					},
+					{
+						"Type": "ra_0pf"
+					},
+					{
+						"Type": "camel_threehump_0pf"
+					},
+					{
+						"Type": "tutorial_armor1_0pf"
+					},
+					{
+						"Type": "tutorial_armor2_0pf"
+					},
+					{
+						"Type": "tutorial_flag_0pf"
+					},
+					{
+						"Type": "dino_armor3_0pf"
+					},
+					{
+						"Type": "dark_king_veteran_0pf"
+					}
+				]
+			}
+		},
+		{
+			"aliases": [
+				"WarningSuperBrainz"
+			],
+			"objclass": "WaveWarningProps",
+			"objdata": {
+				"LabelR": 255,
+				"LabelG": 110,
+				"LabelB": 82,
+				"LabelAInit": 0.1,
+				"OutLineR": 121,
+				"OutLineG": 22,
+				"OutLineB": 255,
+				"String": "Super Brainz Siege!",
+				"StringMultiLanguage": {
+					"en": "Super Brainz Siege!",
+					"zh": "超尸来袭！"
+				},
+				"Sound": "SandStorm",
+				"LabelTargetScale": 0.5,
+				"LabelInitScale": 0.1,
+				"Duration": 3,
+				"InitTime": 0.1
+			}
+		},
+		{
+			"aliases": [
+				"WarningImpfinity"
+			],
+			"objclass": "WaveWarningProps",
+			"objdata": {
+				"LabelR": 243,
+				"LabelG": 207,
+				"LabelB": 0,
+				"LabelAInit": 0.1,
+				"OutLineR": 99,
+				"OutLineG": 78,
+				"OutLineB": 0,
+				"String": "Impfinity Siege!",
+				"StringMultiLanguage": {
+					"en": "Impfinity Siege!",
+					"zh": "无限小鬼来袭！"
+				},
+				"Sound": "SandStorm",
+				"LabelTargetScale": 0.5,
+				"LabelInitScale": 0.1,
+				"Duration": 3,
+				"InitTime": 0.1
+			}
+		},
+		{
+			"aliases": [
+				"WarningElectricBoogaloo"
+			],
+			"objclass": "WaveWarningProps",
+			"objdata": {
+				"LabelR": 255,
+				"LabelG": 255,
+				"LabelB": 8,
+				"LabelAInit": 0.1,
+				"OutLineR": 0,
+				"OutLineG": 103,
+				"OutLineB": 235,
+				"String": "Electric Boogaloo Siege!",
+				"StringMultiLanguage": {
+					"en": "Electric Boogaloo Siege!",
+					"zh": "霹雳舞王来袭！"
+				},
+				"Sound": "SandStorm",
+				"LabelTargetScale": 0.5,
+				"LabelInitScale": 0.1,
+				"Duration": 3,
+				"InitTime": 0.1
+			}
+		},
+		{
+			"aliases": [
+				"WarningProfBrainstorm"
+			],
+			"objclass": "WaveWarningProps",
+			"objdata": {
+				"LabelR": 255,
+				"LabelG": 200,
+				"LabelB": 113,
+				"LabelAInit": 0.1,
+				"OutLineR": 255,
+				"OutLineG": 10,
+				"OutLineB": 0,
+				"String": "Prof Brainstorm Siege!",
+				"StringMultiLanguage": {
+					"en": "Prof Brainstorm Siege!",
+					"zh": "僵点子教授来袭！"
+				},
+				"Sound": "SandStorm",
+				"LabelTargetScale": 0.5,
+				"LabelInitScale": 0.1,
+				"Duration": 3,
+				"InitTime": 0.1
+			}
+		},
+		{
+			"aliases": [
+				"WarningZMech"
+			],
+			"objclass": "WaveWarningProps",
+			"objdata": {
+				"LabelR": 255,
+				"LabelG": 242,
+				"LabelB": 138,
+				"LabelAInit": 0.1,
+				"OutLineR": 255,
+				"OutLineG": 5,
+				"OutLineB": 0,
+				"String": "Z Mech Siege!",
+				"StringMultiLanguage": {
+					"en": "Z Mech Siege!",
+					"zh": "Z机甲来袭！"
+				},
+				"Sound": "SandStorm",
+				"LabelTargetScale": 0.5,
+				"LabelInitScale": 0.1,
+				"Duration": 3,
+				"InitTime": 0.1
+			}
+		},
+		{
+			"aliases": [
+				"WarningTheSmash"
+			],
+			"objclass": "WaveWarningProps",
+			"objdata": {
+				"LabelR": 247,
+				"LabelG": 199,
+				"LabelB": 0,
+				"LabelAInit": 0.1,
+				"OutLineR": 34,
+				"OutLineG": 64,
+				"OutLineB": 255,
+				"String": "The Smash Siege!",
+				"StringMultiLanguage": {
+					"en": "The Smash Siege!",
+					"zh": "摔角狂来袭！"
+				},
+				"Sound": "SandStorm",
+				"LabelTargetScale": 0.5,
+				"LabelInitScale": 0.1,
+				"Duration": 3,
+				"InitTime": 0.1
+			}
+		},
+		{
+			"aliases": [
+				"WarningRustbolt"
+			],
+			"objclass": "WaveWarningProps",
+			"objdata": {
+				"LabelR": 133,
+				"LabelG": 43,
+				"LabelB": 255,
+				"LabelAInit": 0.1,
+				"OutLineR": 255,
+				"OutLineG": 136,
+				"OutLineB": 18,
+				"String": "Rustbolt Siege!",
+				"StringMultiLanguage": {
+					"en": "Rustbolt Siege!",
+					"zh": "锈铁侠来袭！"
+				},
+				"Sound": "SandStorm",
+				"LabelTargetScale": 0.5,
+				"LabelInitScale": 0.1,
+				"Duration": 3,
+				"InitTime": 0.1
+			}
+		},
+		{
+			"aliases": [
+				"WarningBrainFreeze"
+			],
+			"objclass": "WaveWarningProps",
+			"objdata": {
+				"LabelR": 164,
+				"LabelG": 255,
+				"LabelB": 252,
+				"LabelAInit": 0.1,
+				"OutLineR": 26,
+				"OutLineG": 190,
+				"OutLineB": 255,
+				"String": "Brain Freeze Siege!",
+				"StringMultiLanguage": {
+					"en": "Brain Freeze Siege!",
+					"zh": "急冻魔来袭！"
+				},
+				"Sound": "SandStorm",
+				"LabelTargetScale": 0.5,
+				"LabelInitScale": 0.1,
+				"Duration": 3,
+				"InitTime": 0.1
+			}
+		},
+		{
+			"aliases": [
+				"WarningImmortitia"
+			],
+			"objclass": "WaveWarningProps",
+			"objdata": {
+				"LabelR": 207,
+				"LabelG": 34,
+				"LabelB": 255,
+				"LabelAInit": 0.1,
+				"OutLineR": 141,
+				"OutLineG": 0,
+				"OutLineB": 239,
+				"String": "Immortitia Siege!",
+				"StringMultiLanguage": {
+					"en": "Immortitia Siege!",
+					"zh": "不死女巫来袭！"
+				},
+				"Sound": "SandStorm",
+				"LabelTargetScale": 0.5,
+				"LabelInitScale": 0.1,
+				"Duration": 3,
+				"InitTime": 0.1
+			}
+		},
+		{
+			"aliases": [
+				"WarningNeptuna"
+			],
+			"objclass": "WaveWarningProps",
+			"objdata": {
+				"LabelR": 255,
+				"LabelG": 148,
+				"LabelB": 8,
+				"LabelAInit": 0.1,
+				"OutLineR": 255,
+				"OutLineG": 22,
+				"OutLineB": 113,
+				"String": "Neptuna Siege!",
+				"StringMultiLanguage": {
+					"en": "Neptuna Siege!",
+					"zh": "海妖来袭！"
+				},
+				"Sound": "SandStorm",
+				"LabelTargetScale": 0.5,
+				"LabelInitScale": 0.1,
+				"Duration": 3,
+				"InitTime": 0.1
+			}
+		},
+		{
+			"objclass": "MissileLocateWaveActionProps",
+			"aliases": [
+				"SlamminSmackdown"
+			],
+			"objdata": {
+				"MissileFallCountdown": 2,
+				"WaveStartMessage": "",
+				"ProjectileType": "eighties_speaker_wave",
+				"Locations": [
+					{
+						"mX": 0,
+						"mY": 0
+					},
+					{
+						"mX": 0,
+						"mY": 1
+					},
+					{
+						"mX": 0,
+						"mY": 3
+					},
+					{
+						"mX": 0,
+						"mY": 4
+					}
+				]
+			}
+		},
+		{
+			"objclass": "ThunderChargeWaveActionProps",
+			"aliases": [
+				"StayinAlive"
+			],
+			"objdata": {
+				"TimeBeforeFirst": {
+					"Min": 0,
+					"Max": 0
+				},
+				"TimeBetween": {
+					"Min": 0.5,
+					"Max": 0.5
+				},
+				"Thunders": [
+					{
+						"Sign": 1,
+						"LinkedPlantCount": 5
+					},
+					{
+						"Sign": 1,
+						"LinkedPlantCount": 5
+					},
+					{
+						"Sign": 1,
+						"LinkedPlantCount": 5
+					},
+					{
+						"Sign": 1,
+						"LinkedPlantCount": 5
+					},
+					{
+						"Sign": 1,
+						"LinkedPlantCount": 5
+					},
+					{
+						"Sign": 1,
+						"LinkedPlantCount": 5
+					},
+					{
+						"Sign": 1,
+						"LinkedPlantCount": 5
+					},
+					{
+						"Sign": 1,
+						"LinkedPlantCount": 5
+					}
+				]
+			}
+		},
+		{
+			"objclass": "QigongStrikeWaveActionProps",
+			"aliases": [
+				"TripleThreat0"
+			],
+			"objdata": {
+				"Zombies": [
+					{
+						"Type": "abbot_imp",
+						"Delay": 1,
+						"Rows": [
+							0
+						],
+						"Columns": [
+							4
+						]
+					},
+					{
+						"Type": "abbot_imp",
+						"Delay": 2,
+						"Rows": [
+							2
+						],
+						"Columns": [
+							4
+						]
+					},
+					{
+						"Type": "abbot_imp",
+						"Delay": 3,
+						"Rows": [
+							4
+						],
+						"Columns": [
+							4
+						]
+					}
+				]
+			}
+		},
+		{
+			"aliases": [
+				"TripleThreat1"
+			],
+			"objclass": "WaveSchedulerProps",
+			"objdata": {
+				"Events": [
+					"RTID(TripleThreat0@CurrentLevel)"
+				],
+				"Repeat": {
+					"Max": 1,
+					"Min": 1
+				},
+				"TimeBeforeFirst": {
+					"Max": 0,
+					"Min": 0
+				},
+				"TimeBetween": {
+					"Max": 30,
+					"Min": 30
+				}
+			}
+		},
+		{
+			"objclass": "MissileLocateWaveActionProps",
+			"aliases": [
+				"MissileMadness0"
+			],
+			"objdata": {
+				"ColumnEnd": 1,
+				"ColumnStart": 1,
+				"MissileCount": 4,
+				"MissileFallCountdown": 3
+			}
+		},
+		{
+			"objclass": "MissileLocateWaveActionProps",
+			"aliases": [
+				"MissileMadness1"
+			],
+			"objdata": {
+				"ColumnEnd": 2,
+				"ColumnStart": 2,
+				"MissileCount": 4,
+				"MissileFallCountdown": 3
+			}
+		},
+		{
+			"objclass": "FrostWindWaveActionProps",
+			"aliases": [
+				"FrozenTundra"
+			],
+			"objdata": {
+				"Winds": [
+					{
+						"Direction": "right",
+						"Row": 0
+					},
+					{
+						"Direction": "right",
+						"Row": 0
+					},
+					{
+						"Direction": "right",
+						"Row": 1
+					},
+					{
+						"Direction": "right",
+						"Row": 1
+					},
+					{
+						"Direction": "right",
+						"Row": 2
+					},
+					{
+						"Direction": "right",
+						"Row": 2
+					},
+					{
+						"Direction": "right",
+						"Row": 3
+					},
+					{
+						"Direction": "right",
+						"Row": 3
+					},
+					{
+						"Direction": "right",
+						"Row": 4
+					},
+					{
+						"Direction": "right",
+						"Row": 4
+					}
+				]
+			}
+		},
+		{
+			"objclass": "MissileLocateWaveActionProps",
+			"aliases": [
+				"OctoPult"
+			],
+			"objdata": {
+				"ColumnEnd": 0,
+				"ColumnStart": 0,
+				"MissileCount": 1,
+				"MissileFallCountdown": 2,
+				"ProjectileType": "octopus"
+			}
+		},
+		{
+			"aliases": [
+				"random_gargantuar"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"ZombieRedirection": [
+					{
+						"Type": "tutorial_gargantuar",
+						"Weight": 1
+					},
+					{
+						"Type": "easter_gargantuar_af",
+						"Weight": 1
+					},
+					{
+						"Type": "sportzball_gargantuar",
+						"Weight": 1
+					},
+					{
+						"Type": "easter_gargantuar",
+						"Weight": 1
+					},
+					{
+						"Type": "valentines_gargantuar",
+						"Weight": 1
+					},
+					{
+						"Type": "holiday_gargantuar",
+						"Weight": 1
+					},
+					{
+						"Type": "feastivus_gargantuar",
+						"Weight": 1
+					},
+					{
+						"Type": "vase_gargantuar",
+						"Weight": 1
+					},
+					{
+						"Type": "summer_gargantuar",
+						"Weight": 1
+					},
+					{
+						"Type": "egypt_gargantuar",
+						"Weight": 1
+					},
+					{
+						"Type": "pirate_gargantuar",
+						"Weight": 1
+					},
+					{
+						"Type": "cowboy_gargantuar",
+						"Weight": 1
+					},
+					{
+						"Type": "future_gargantuar",
+						"Weight": 1
+					},
+					{
+						"Type": "dark_gargantuar",
+						"Weight": 1
+					},
+					{
+						"Type": "beach_gargantuar",
+						"Weight": 1
+					},
+					{
+						"Type": "iceage_gargantuar",
+						"Weight": 1
+					},
+					{
+						"Type": "zoybean_gargantuar",
+						"Weight": 1
+					},
+					{
+						"Type": "halloween_gargantuar",
+						"Weight": 1
+					},
+					{
+						"Type": "lostcity_gargantuar",
+						"Weight": 1
+					},
+					{
+						"Type": "sky_gargantuar",
+						"Weight": 1
+					},
+					{
+						"Type": "eighties_gargantuar",
+						"Weight": 1
+					},
+					{
+						"Type": "dino_gargantuar",
+						"Weight": 1
+					},
+					{
+						"Type": "kongfu_bronze_strong",
+						"Weight": 1
+					},
+					{
+						"Type": "kongfu_bronze_chi",
+						"Weight": 1
+					},
+					{
+						"Type": "kongfu_bronze_hook",
+						"Weight": 1
+					},
+					{
+						"Type": "kongfu_bronze_statue",
+						"Weight": 1
+					},
+					{
+						"Type": "supernova_gargantuar",
+						"Weight": 1
+					},
+					{
+						"Type": "birthday_gargantuar",
+						"Weight": 1
+					},
+					{
+						"Type": "sky_gargantuar_armor2_thrower",
+						"Weight": 1
+					},
+					{
+						"Type": "kongfu_bronze_chi_without_torch",
+						"Weight": 1
+					}
+				]
+			}
+		},
+		{
+			"aliases": [
+				"joustyeti_no_retreat"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"ZombieBasedOn": "treasureyeti",
+				"Properties": "RTID(joustyeti_no_retreat@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"joustyeti_no_retreat"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotCarryPlantfoodsInWaves": false,
+				"WalkSPS": 0.45,
+				"Toughness": 6500,
+				"EatDPS": 300,
+				"PrizeProps": [
+					{
+						"Weight": 1,
+						"Prize": {
+							"Type": "sprout",
+							"Count": 0
+						}
+					},
+					{
+						"Weight": 5,
+						"Prize": {
+							"Type": "gem",
+							"Count": 0
+						}
+					},
+					{
+						"Weight": 2,
+						"Prize": {
+							"Type": "coin_gold",
+							"Count": 0
+						}
+					},
+					{
+						"Weight": 0.5,
+						"Prize": {
+							"Type": "coin_silver",
+							"Count": 0
+						}
+					}
+				],
+				"WalkForwardTime": {
+					"Min": 1000,
+					"Max": 1000
+				}
+			}
+		},
+		{
+			"aliases": [
+				"gargan_throwing_gargantuar"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"ZombieBasedOn": "pirate_gargantuar",
+				"Properties": "RTID(gargan_throwing_gargantuar@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"gargan_throwing_gargantuar"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotCarryPlantfoodsInWaves": true,
+				"ImpType": "random_gargantuar"
+			}
+		},
+		{
+			"aliases": [
+				"pea_penelopea"
+			],
+			"objclass": "ProjectileType",
+			"objdata": {
+				"ProjectileBasedOn": "pea_mega",
+				"Props": "RTID(pea_penelopea@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"pea_penelopea"
+			],
+			"objclass": "ProjectileProperties",
+			"objdata": {
+				"Damage": 600,
+				"ProjectileEmissions": [
+					{
+						"Type": "pea",
+						"Count": 10
+					}
+				],
+				"YellowIgnitedType": "pea_penelopea_flame_yellow",
+				"BlueIgnitedType": "pea_penelopea_flame_blue",
+				"Size": {
+					"w": 20,
+					"h": 20
+				}
+			}
+		},
+		{
+			"aliases": [
+				"pea_penelopea_flame_yellow"
+			],
+			"objclass": "ProjectileType",
+			"objdata": {
+				"ProjectileBasedOn": "pea_mega_flame_yellow",
+				"Props": "RTID(pea_penelopea_flame_yellow@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"pea_mega_mint_flame_blue"
+			],
+			"objclass": "ProjectileType",
+			"objdata": {
+				"ProjectileBasedOn": "pea_mega_flame_blue",
+				"Props": "RTID(pea_penelopea_flame_blue@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"pea_penelopea_flame_yellow"
+			],
+			"objclass": "ProjectileProperties",
+			"objdata": {
+				"Damage": 600,
+				"ProjectileEmissions": [
+					{
+						"Type": "pea_flame_yellow",
+						"Count": 10
+					}
+				],
+				"DamageScale": 2,
+				"BlueIgnitedType": "pea_penelopea_flame_blue",
+				"Size": {
+					"w": 20,
+					"h": 20
+				},
+				"DamageType": "fire"
+			}
+		},
+		{
+			"aliases": [
+				"pea_penelopea_flame_blue"
+			],
+			"objclass": "ProjectileProperties",
+			"objdata": {
+				"DamageScale": 3,
+				"ProjectileEmissions": [
+					{
+						"Type": "pea_flame_blue",
+						"Count": 10
+					}
+				],
+				"Damage": 600,
+				"Size": {
+					"w": 20,
+					"h": 20
+				},
+				"DamageType": "fire"
+			}
+		},
+		{
+			"aliases": [
+				"penelopea"
+			],
+			"objclass": "PlantType",
+			"objdata": {
+				"PlantBasedOn": "peashooter",
+				"Properties": "RTID(penelopea@CurrentLevel)",
+				"ShiftedPlantFeatures": {
+					"ALMANAC": "RTID(penelopea_almanac@CurrentLevel)",
+					"OBTAINWORLD": "mint",
+					"CODENAME": "penelopea",
+					"NAME": {
+									"en": "Green Shadow",
+									"zh": "绿影"
+								},
+					"TYPE": [
+						"plant"
+					]
+				}
+			}
+		},
+		{
+			"objclass": "PlantAlmanacProperties",
+			"aliases": [
+				"penelopea_almanac"
+			],
+			"objdata": {
+				"Introduction": {
+					"en": "Little known fact: When she takes of the cape and mask, she goes by the name Penelopea. Shoots huge peas that splits on impact.",
+					"zh": "冷知识：她脱下披风和面具时，以佩涅洛豌豆之名生活。发射巨大的会炸开的豌豆"
+				},
+				"BriefIntroduction": {
+					"en": "Little known fact: When she takes of the cape and mask, she goes by the name Penelopea. Shoots huge peas that splits on impact.",
+					"zh": "冷知识：她脱下披风和面具时，以佩涅洛豌豆之名生活。发射巨大的会炸开的豌豆"
+				}
+			}
+		},
+		{
+			"aliases": [
+				"penelopea"
+			],
+			"objclass": "PlantProperties",
+			"objdata": {
+				"CostumeOnSpawn": 4,
+				"SpawnedScale": 1.2,
+				"ShootInterval": 0.6,
+				"ShootIntervalAdditional": 0.1,
+				"PlantfoodPeaCount": 60,
+				"Cooldown": 5,
+				"CooldownFrom": 1,
+				"SunCost": 2000,
+				"BeghouledCost": 2000,
+				"Toughness": 1000,
+				"PeaType": "pea_penelopea",
+				"PeaTypePlantfood": "pea_penelopea",
+				"Family": "Peashooter",
+				"MintBoostedProps": {
+					"ResistanceMult": 1,
+					"SpeedMult": 2,
+					"Plantfood": false
+				}
+			}
+		},
+		{
+			"aliases": [
+				"solarflare"
+			],
+			"objclass": "PlantType",
+			"objdata": {
+				"PlantBasedOn": "sunflower",
+				"Properties": "RTID(solarflare@CurrentLevel)",
+				"ShiftedPlantFeatures": {
+					"ALMANAC": "RTID(solarflare_almanac@CurrentLevel)",
+					"OBTAINWORLD": "mint",
+					"CODENAME": "solarflare",
+					"NAME": {
+									"en": "Solar Flare",
+									"zh": "耀斑"
+								},
+					"TYPE": [
+						"plant"
+					]
+				}
+			}
+		},
+		{
+			"objclass": "PlantAlmanacProperties",
+			"aliases": [
+				"solarflare_almanac"
+			],
+			"objdata": {
+				"Introduction": {
+					"en": "When she's on fire, she's on FIRE. And so are the zombies. Generate sun at super speed.",
+					"zh": "当她热情高涨的时候，她真的会着火。僵尸也是。以超高速度生产阳光"
+				},
+				"BriefIntroduction": {
+					"en": "When she's on fire, she's on FIRE. And so are the zombies. Generate sun at super speed.",
+					"zh": "当她热情高涨的时候，她真的会着火。僵尸也是。以超高速度生产阳光"
+				}
+			}
+		},
+		{
+			"aliases": [
+				"solarflare"
+			],
+			"objclass": "PlantProperties",
+			"objdata": {
+				"CostumeOnSpawn": 7,
+				"SpawnedScale": 1.2,
+				"PlantfoodTime": 8,
+				"SunValue": 200,
+				"ProduceInterval": 8,
+				"ProduceIntervalAdditional": 0.5,
+				"ProduceCountdownStart": 2,
+				"ProduceCountdownStartAdditional": 0.5,
+				"Cooldown": 5,
+				"CooldownFrom": 0,
+				"SunCost": 2000,
+				"BeghouledCost": 2000,
+				"Toughness": 1000,
+				"Family": "Sun",
+				"MintProductionFactor": 2,
+				"MintBoostedProps": {
+					"ResistanceMult": 1,
+					"SpeedMult": 2,
+					"Plantfood": true
+				}
+			}
+		},
+		{
+			"aliases": [
+				"wallknight"
+			],
+			"objclass": "PlantType",
+			"objdata": {
+				"PlantBasedOn": "wallnut",
+				"Properties": "RTID(wallknight@CurrentLevel)",
+				"ShiftedPlantFeatures": {
+					"ALMANAC": "RTID(wallknight_almanac@CurrentLevel)",
+					"OBTAINWORLD": "mint",
+					"CODENAME": "wallknight",
+					"NAME": {
+									"en": "Wall-Knight",
+									"zh": "坚果骑士"
+								},
+					"TYPE": [
+						"plant"
+					]
+				}
+			}
+		},
+		{
+			"objclass": "PlantAlmanacProperties",
+			"aliases": [
+				"wallknight_almanac"
+			],
+			"objdata": {
+				"Introduction": {
+					"en": "He's a great guy - he just sometimes has a hard time coming out of his shell. Endures anything but smashing...",
+					"zh": "他是个好植，不过常常钻不出他的盔甲。抵抗除砸击外的一切攻击..."
+				},
+				"BriefIntroduction": {
+					"en": "He's a great guy - he just sometimes has a hard time coming out of his shell. Endures anything but smashing...",
+					"zh": "他是个好植，不过常常钻不出他的盔甲。抵抗除砸击外的一切攻击..."
+				}
+			}
+		},
+		{
+			"aliases": [
+				"wallknight"
+			],
+			"objclass": "PlantProperties",
+			"objdata": {
+				"CostumeOnSpawn": 3,
+				"SpawnedScale": 1.2,
+				"ArmorToughness": 400000,
+				"Cooldown": 5,
+				"CooldownFrom": 0.75,
+				"SunCost": 2000,
+				"BeghouledCost": 2000,
+				"Toughness": 400000,
+				"Family": "Defence",
+				"MintBoostedProps": {
+					"ResistanceMult": 3,
+					"SpeedMult": 1,
+					"Plantfood": true
+				}
+			}
+		},
+		{
+			"aliases": [
+				"captaincombustible"
+			],
+			"objclass": "PlantType",
+			"objdata": {
+				"PlantBasedOn": "torchwood",
+				"Properties": "RTID(captaincombustible@CurrentLevel)",
+				"ShiftedPlantFeatures": {
+					"ALMANAC": "RTID(captaincombustible_almanac@CurrentLevel)",
+					"OBTAINWORLD": "mint",
+					"CODENAME": "captaincombustible",
+					"NAME": {
+									"en": "Captain Combustible",
+									"zh": "爆燃队长"
+								},
+					"TYPE": [
+						"plant"
+					]
+				}
+			}
+		},
+		{
+			"objclass": "PlantAlmanacProperties",
+			"aliases": [
+				"captaincombustible_almanac"
+			],
+			"objdata": {
+				"Introduction": {
+					"en": "If you want to see him blow his top, try calling him 'Stumpy'. Go on. Try it. Ignites passing pea shots, and burns zombies with intense heat.",
+					"zh": "如果你想看他暴怒，叫他一句矮树墩子。去试试看。点燃豌豆子弹，并以超高温度灼烧僵尸"
+				},
+				"BriefIntroduction": {
+					"en": "If you want to see him blow his top, try calling him 'Stumpy'. Go on. Try it. Ignites passing pea shots, and burns zombies with intense heat.",
+					"zh": "如果你想看他暴怒，叫他一句矮树墩子。去试试看。点燃豌豆子弹，并以超高温度灼烧僵尸"
+				}
+			}
+		},
+		{
+			"aliases": [
+				"captaincombustible"
+			],
+			"objclass": "PlantProperties",
+			"objdata": {
+				"CostumeOnSpawn": 2,
+				"SpawnedScale": 1.2,
+				"Damage": 50,
+				"DamageScale": 2,
+				"DamageScalePlantfooded": 3,
+				"DamageInterval": 0.5,
+				"DeathDamage": 1800,
+				"DeathFireDuration": 5,
+				"PlantfoodDuration": 10,
+				"Cooldown": 5,
+				"CooldownFrom": 0.5,
+				"SunCost": 2000,
+				"BeghouledCost": 2000,
+				"Toughness": 4000,
+				"Family": "Peashooter",
+				"ImmuneToIceblock": true,
+				"WarmingRadius": {
+					"PulseInitialDelay": 0.5,
+					"PulseCooldown": 3,
+					"GridItemDamage": 200
+				},
+				"WarmingRadiusPlantfood": {
+					"PulseInitialDelay": 0.5,
+					"PulseCooldown": 0.5,
+					"GridItemDamage": 200
+				},
+				"MintBoostedProps": {
+					"ResistanceMult": 2,
+					"SpeedMult": 1,
+					"Plantfood": true
+				}
+			}
+		},
+		{
+			"aliases": [
+				"grassknuckles"
+			],
+			"objclass": "PlantType",
+			"objdata": {
+				"PlantBasedOn": "bonkchoy",
+				"Properties": "RTID(grassknuckles@CurrentLevel)",
+				"ShiftedPlantFeatures": {
+					"ALMANAC": "RTID(grassknuckles_almanac@CurrentLevel)",
+					"OBTAINWORLD": "mint",
+					"CODENAME": "grassknuckles",
+					"NAME": {
+									"en": "Grass Knuckles",
+									"zh": "拳王菜问"
+								},
+					"TYPE": [
+						"plant"
+					]
+				}
+			}
+		},
+		{
+			"objclass": "PlantAlmanacProperties",
+			"aliases": [
+				"grassknuckles_almanac"
+			],
+			"objdata": {
+				"Introduction": {
+					"en": "He's the best at what he does... and what he does is punching! Punches zombies around him heavily.",
+					"zh": "他最擅长他做的事...他做的事便是肘击！沉重的肘击他周围的僵尸"
+				},
+				"BriefIntroduction": {
+					"en": "He's the best at what he does... and what he does is punching! Punches zombies around him heavily.",
+					"zh": "他最擅长他做的事...他做的事便是肘击！沉重的肘击他周围的僵尸"
+				}
+			}
+		},
+		{
+			"aliases": [
+				"grassknuckles"
+			],
+			"objclass": "PlantProperties",
+			"objdata": {
+				"CostumeOnSpawn": 5,
+				"SpawnedScale": 1.2,
+				"Damage": 600,
+				"DamageHeavy": 900,
+				"DamagePlantfood": 1200,
+				"PlantfoodHitCount": 30,
+				"ZombieDetectorWidth": 4,
+				"TombDetectorWidth": 3,
+				"AttackInterval": 0.25,
+				"Cooldown": 5,
+				"CooldownFrom": 1,
+				"SunCost": 2000,
+				"BeghouledCost": 2000,
+				"Toughness": 1000,
+				"Family": "Melee",
+				"MintDamageFactor": 3,
+				"MintBoostedProps": {
+					"ResistanceMult": 1,
+					"SpeedMult": 2,
+					"Plantfood": false
+				}
+			}
+		},
+		{
+			"aliases": [
+				"nightcap"
+			],
+			"objclass": "PlantType",
+			"objdata": {
+				"PlantBasedOn": "fumeshroom",
+				"Properties": "RTID(nightcap@CurrentLevel)",
+				"ShiftedPlantFeatures": {
+					"ALMANAC": "RTID(nightcap_almanac@CurrentLevel)",
+					"OBTAINWORLD": "mint",
+					"CODENAME": "nightcap",
+					"NAME": {
+									"en": "Night Cap",
+									"zh": "暗夜菇"
+								},
+					"TYPE": [
+						"plant"
+					]
+				}
+			}
+		},
+		{
+			"objclass": "PlantAlmanacProperties",
+			"aliases": [
+				"nightcap_almanac"
+			],
+			"objdata": {
+				"Introduction": {
+					"en": "He's a fun guy. Blast spores rapidly at every zombie in front of him.",
+					"zh": "他是个有趣的植。对面前的所有僵尸迅速喷射孢子攻击"
+				},
+				"BriefIntroduction": {
+					"en": "He's a fun guy. Blast spores rapidly at every zombie in front of him.",
+					"zh": "他是个有趣的植。对面前的所有僵尸迅速喷射孢子攻击"
+				}
+			}
+		},
+		{
+			"aliases": [
+				"nightcap"
+			],
+			"objclass": "PlantProperties",
+			"objdata": {
+				"CostumeOnSpawn": 1,
+				"SpawnedScale": 1.2,
+				"Damage": 600,
+				"ShootInterval": 0.8,
+				"ShootIntervalAdditional": 0.1,
+				"PlantfoodDPS": 2000,
+				"PlantfoodKnockbackSPS": 5,
+				"PlantfoodDuration": 10,
+				"DetectDistance": 4.5,
+				"ShootDistance": 5.5,
+				"Cooldown": 5,
+				"CooldownFrom": 1,
+				"SunCost": 2000,
+				"BeghouledCost": 2000,
+				"Toughness": 1000,
+				"Family": "Poison",
+				"MintDamageFactor": 3,
+				"MintBoostedProps": {
+					"ResistanceMult": 1,
+					"SpeedMult": 2,
+					"Plantfood": false
+				}
+			}
+		},
+		{
+			"aliases": [
+				"spudow"
+			],
+			"objclass": "PlantType",
+			"objdata": {
+				"PlantBasedOn": "potatomine",
+				"Properties": "RTID(spudow@CurrentLevel)",
+				"ShiftedPlantFeatures": {
+					"ALMANAC": "RTID(spudow_almanac@CurrentLevel)",
+					"OBTAINWORLD": "mint",
+					"CODENAME": "spudow",
+					"NAME": {
+									"en": "Spudow",
+									"zh": "爆裂土豆雷"
+								},
+					"TYPE": [
+						"plant"
+					]
+				}
+			}
+		},
+		{
+			"objclass": "PlantAlmanacProperties",
+			"aliases": [
+				"spudow_almanac"
+			],
+			"objdata": {
+				"Introduction": {
+					"en": "Always tries to keep his head in tough situations. Always loses it. Arms super-quickly and devastates any zombie in its radius. Spudow!",
+					"zh": "在逆境中总是试图保住他的头，但总是丢。超快的准备并破坏一切范围内的僵尸，土豆爆炸！"
+				},
+				"BriefIntroduction": {
+					"en": "Always tries to keep his head in tough situations. Always loses it. Arms super-quickly and devastates any zombie in its radius. Spudow!",
+					"zh": "在逆境中总是试图保住他的头，但总是丢。超快的准备并破坏一切范围内的僵尸，土豆爆炸！"
+				}
+			}
+		},
+		{
+			"aliases": [
+				"spudow"
+			],
+			"objclass": "PlantProperties",
+			"objdata": {
+				"CostumeOnSpawn": -1,
+				"SpawnedScale": 1.2,
+				"ChargeTime": 1,
+				"Damage": 9000,
+				"PlantfoodChildrenCount": 5,
+				"Cooldown": 5,
+				"CooldownFrom": 0.75,
+				"SunCost": 2000,
+				"BeghouledCost": 2000,
+				"Toughness": 1000,
+				"Family": "Explosive",
+				"MintDamageFactor": 3,
+				"MintBoostedProps": {
+					"ResistanceMult": 1,
+					"SpeedMult": 3,
+					"Plantfood": false
+				}
+			}
+		},
+		{
+			"aliases": [
+				"chompzilla"
+			],
+			"objclass": "PlantType",
+			"objdata": {
+				"PlantBasedOn": "chomper",
+				"Properties": "RTID(chompzilla@CurrentLevel)",
+				"ShiftedPlantFeatures": {
+					"ALMANAC": "RTID(chompzilla_almanac@CurrentLevel)",
+					"OBTAINWORLD": "mint",
+					"CODENAME": "chompzilla",
+					"NAME": {
+									"en": "Chompzilla",
+									"zh": "哥吉拉大嘴"
+								},
+					"TYPE": [
+						"plant"
+					]
+				}
+			}
+		},
+		{
+			"objclass": "PlantAlmanacProperties",
+			"aliases": [
+				"chompzilla_almanac"
+			],
+			"objdata": {
+				"Introduction": {
+					"en": "She flosses every meal and still, Zombie Breath is a real problem. Devour whole zombies one by one and non-stop, or bites with a lethal chomp.",
+					"zh": "她每次用餐后都剔牙，但口中有僵尸臭味仍然是一个大麻烦。不停的一个接一个吞噬整只僵尸，或用致命的撕咬攻击"
+				},
+				"BriefIntroduction": {
+					"en": "She flosses every meal and still, Zombie Breath is a real problem. Devour whole zombies one by one and non-stop, or bites with a lethal chomp.",
+					"zh": "她每次用餐后都剔牙，但口中有僵尸臭味仍然是一个大麻烦。不停的一个接一个吞噬整只僵尸，或用致命的撕咬攻击"
+				}
+			}
+		},
+		{
+			"aliases": [
+				"chompzilla"
+			],
+			"objclass": "PlantProperties",
+			"objdata": {
+				"CostumeOnSpawn": -1,
+				"SpawnedScale": 1.2,
+				"MaxContainZombieCount": 180,
+				"ChewTimePerZombie": 60,
+				"PlantfoodPullDuration": 5,
+				"PlantfoodPushDuration": 5,
+				"PlantfoodSwallowCount": 20,
+				"ChompFailDamage": 6000,
+				"PlantfoodPushSPS": 5,
+				"PlantfoodPullSPS": 5,
+				"Cooldown": 5,
+				"CooldownFrom": 0.5,
+				"SunCost": 2000,
+				"BeghouledCost": 2000,
+				"Toughness": 1000,
+				"Family": "Melee",
+				"MintDamageFactor": 3,
+				"MintBoostedProps": {
+					"ResistanceMult": 1,
+					"SpeedMult": 4,
+					"Plantfood": false
+				}
+			}
+		},
+		{
+			"aliases": [
+				"hero_citron"
+			],
+			"objclass": "PlantType",
+			"objdata": {
+				"PlantBasedOn": "citron",
+				"Properties": "RTID(hero_citron@CurrentLevel)",
+				"ShiftedPlantFeatures": {
+					"ALMANAC": "RTID(hero_citron_almanac@CurrentLevel)",
+					"OBTAINWORLD": "mint",
+					"CODENAME": "hero_citron",
+					"NAME": {
+									"en": "Citron",
+									"zh": "香橼"
+								},
+					"TYPE": [
+						"plant"
+					]
+				}
+			}
+		},
+		{
+			"objclass": "PlantAlmanacProperties",
+			"aliases": [
+				"hero_citron_almanac"
+			],
+			"objdata": {
+				"Introduction": {
+					"en": "Wanted to be a poet, but couldn't find anything that rhymed with orange. Shoots plasma devastating to hordes of zombies.",
+					"zh": "想做诗人，但找不到和橘子押韵的东西。发射有概率魅惑僵尸的魔法弹。发射等离子体对成群的僵尸造成巨大伤害"
+				},
+				"BriefIntroduction": {
+					"en": "Wanted to be a poet, but couldn't find anything that rhymed with orange. Shoots plasma devastating to hordes of zombies.",
+					"zh": "想做诗人，但找不到和橘子押韵的东西。发射有概率魅惑僵尸的魔法弹。发射等离子体对成群的僵尸造成巨大伤害"
+				}
+			}
+		},
+		{
+			"aliases": [
+				"citron_plasma"
+			],
+			"objclass": "ProjectileType",
+			"objdata": {
+				"ProjectileBasedOn": "citron2",
+				"Props": "RTID(citron_plasma@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"citron_plasma"
+			],
+			"objclass": "ProjectileProperties",
+			"objdata": {
+				"Damage": 1200,
+				"SplashDamage": [
+					{
+						"Damage": 400,
+						"Range": {
+							"w": 3,
+							"h": 3
+						}
+					}
+				],
+				"Size": {
+					"w": 40,
+					"h": 40
+				}
+			}
+		},
+		{
+			"aliases": [
+				"citron_plasma_pf"
+			],
+			"objclass": "ProjectileType",
+			"objdata": {
+				"ProjectileBasedOn": "citron_pf",
+				"Props": "RTID(citron_plasma_pf@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"citron_plasma_pf"
+			],
+			"objclass": "ProjectileProperties",
+			"objdata": {
+				"IgnoredBy3SectionStaff": true,
+				"Damage": 6000,
+				"SplashDamage": [
+					{
+						"Damage": 2000,
+						"Range": {
+							"w": 5,
+							"h": 5
+						}
+					}
+				],
+				"Size": {
+					"w": 60,
+					"h": 60
+				},
+				"DamageType": "electricity",
+				"CannotBeReversedByJester": true
+			}
+		},
+		{
+			"aliases": [
+				"hero_citron"
+			],
+			"objclass": "PlantProperties",
+			"objdata": {
+				"CostumeOnSpawn": -1,
+				"SpawnedScale": 1.2,
+				"PeaType": "citron_plasma",
+				"PeaTypePlantfood": "citron_plasma_pf",
+				"CallsElectricCurrant": true,
+				"ChargeTime": 1.2,
+				"Cooldown": 5,
+				"CooldownFrom": 1,
+				"SunCost": 2000,
+				"BeghouledCost": 2000,
+				"Toughness": 1000,
+				"RedStunDuration": 5,
+				"Family": "Electricity",
+				"MintBoostedProps": {
+					"ResistanceMult": 1,
+					"SpeedMult": 3,
+					"Plantfood": false
+				}
+			}
+		},
+		{
+			"aliases": [
+				"rose_magic"
+			],
+			"objclass": "ProjectileType",
+			"objdata": {
+				"ProjectileRedirection": [
+					{
+						"Type": "rose_magic_weak",
+						"Weight": 7
+					},
+					{
+						"Type": "rose_magic_strong",
+						"Weight": 3
+					}
+				]
+			}
+		},
+		{
+			"aliases": [
+				"rose_magic_weak"
+			],
+			"objclass": "ProjectileType",
+			"objdata": {
+				"ProjectileBasedOn": "caulipower",
+				"Props": "RTID(rose_magic_weak@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"rose_magic_strong"
+			],
+			"objclass": "ProjectileType",
+			"objdata": {
+				"ProjectileBasedOn": "caulipower",
+				"Props": "RTID(rose_magic_strong@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"rose_magic_weak"
+			],
+			"objclass": "ProjectileProperties",
+			"objdata": {
+				"IgnoredBy3SectionStaff": true,
+				"IgnoreTombstones": false,
+				"CannotBeReversedByJester": true,
+				"Damage": 600,
+				"Hypnotizing": false,
+				"Size": {
+					"w": 28,
+					"h": 28
+				}
+			}
+		},
+		{
+			"aliases": [
+				"rose_magic_strong"
+			],
+			"objclass": "ProjectileProperties",
+			"objdata": {
+				"IgnoredBy3SectionStaff": true,
+				"IgnoreTombstones": false,
+				"CannotBeReversedByJester": true,
+				"Damage": 0,
+				"Hypnotizing": true,
+				"Size": {
+					"w": 28,
+					"h": 28
+				}
+			}
+		},
+		{
+			"aliases": [
+				"rose"
+			],
+			"objclass": "PlantType",
+			"objdata": {
+				"PlantBasedOn": "redstinger",
+				"Properties": "RTID(rose@CurrentLevel)",
+				"ShiftedPlantFeatures": {
+					"ALMANAC": "RTID(rose_almanac@CurrentLevel)",
+					"OBTAINWORLD": "mint",
+					"CODENAME": "rose",
+					"NAME": {
+									"en": "Rose",
+									"zh": "玫瑰"
+								},
+					"TYPE": [
+						"plant"
+					]
+				}
+			}
+		},
+		{
+			"objclass": "PlantAlmanacProperties",
+			"aliases": [
+				"rose_almanac"
+			],
+			"objdata": {
+				"Introduction": {
+					"en": "Refuses to be nerfed. Shoots magic blasts with a chance to hypnotize zombies.",
+					"zh": "拒绝被削弱。发射有概率魅惑僵尸的魔法弹"
+				},
+				"BriefIntroduction": {
+					"en": "Refuses to be nerfed. Shoots magic blasts with a chance to hypnotize zombies.",
+					"zh": "拒绝被削弱。发射有概率魅惑僵尸的魔法弹"
+				}
+			}
+		},
+		{
+			"aliases": [
+				"rose"
+			],
+			"objclass": "PlantProperties",
+			"objdata": {
+				"CostumeOnSpawn": -1,
+				"SpawnedScale": 1.2,
+				"ShootInterval": 1.8,
+				"ShootIntervalAdditional": 0.1,
+				"PeaType": "rose_magic",
+				"DamageScale0": 1,
+				"DamageScale1": 1,
+				"DamageScale2": 1,
+				"PFDuration": 10,
+				"PFDPS": 1000,
+				"Cooldown": 5,
+				"CooldownFrom": 1,
+				"SunCost": 200,
+				"BeghouledCost": 2000,
+				"Toughness": 1000,
+				"Family": "Magic",
+				"MintPlantfoodDPSMult": 5,
+				"MintBoostedProps": {
+					"ResistanceMult": 1,
+					"SpeedMult": 2,
+					"Plantfood": false
+				}
+			}
+		},
+		{
+			"aliases": [
+				"betacarrotina"
+			],
+			"objclass": "PlantType",
+			"objdata": {
+				"PlantBasedOn": "intensivecarrot",
+				"Properties": "RTID(betacarrotina@CurrentLevel)",
+				"ShiftedPlantFeatures": {
+					"ALMANAC": "RTID(betacarrotina_almanac@CurrentLevel)",
+					"OBTAINWORLD": "mint",
+					"CODENAME": "betacarrotina",
+					"NAME": {
+									"en": "Beta-Carrotina",
+									"zh": "贝塔胡萝卜蒂娜"
+								},
+					"TYPE": [
+						"plant"
+					]
+				}
+			}
+		},
+		{
+			"objclass": "PlantAlmanacProperties",
+			"aliases": [
+				"betacarrotina_almanac"
+			],
+			"objdata": {
+				"Introduction": {
+					"en": "As leader of the Plant-etary Guard, she's ready to root out Zombies wherever they crop up. Revives defeated plants with a boosted health.",
+					"zh": "作为植物警备队的队长，她时刻准备将僵尸连根铲除。复活战败的植物并增强其耐久"
+				},
+				"BriefIntroduction": {
+					"en": "As leader of the Plant-etary Guard, she's ready to root out Zombies wherever they crop up. Revives defeated plants with a boosted health.",
+					"zh": "作为植物警备队的队长，她时刻准备将僵尸连根铲除。复活战败的植物并增强其耐久"
+				}
+			}
+		},
+		{
+			"aliases": [
+				"betacarrotina"
+			],
+			"objclass": "PlantProperties",
+			"objdata": {
+				"CostumeOnSpawn": -1,
+				"SpawnedScale": 1.2,
+				"Cooldown": 5,
+				"CooldownFrom": 0.75,
+				"SunCost": 2000,
+				"BeghouledCost": 2000,
+				"Toughness": 1000,
+				"Family": "Magic",
+				"HealthReturns": 1.5,
+				"MintHealthReturnsFactor": 2,
+				"MintBoostedProps": {
+					"ResistanceMult": 1,
+					"SpeedMult": 2,
+					"Plantfood": false
+				}
+			}
+		},
+		{
+			"objclass": "SpawnPlantsWaveActionProps",
+			"aliases": [
+				"SpawnPF"
+			],
+			"objdata": {
+				"Plants": [
+					{
+						"TypeName": "powerlily",
+						"SpawnAnim": "grow",
+						"AllowSpawnOnOtherPlants": true,
+						"RandomSpawnMatrix": [
+							"000111100",
+							"000111100",
+							"000111100",
+							"000111100",
+							"000111100"
+						]
+					}
+				]
+			}
+		}
+	]
+}
