@@ -1,117 +1,207 @@
 {
-  "#comment": "Egypt Zomboss 2.0",
-  "objects": [
-    {
-      "objclass": "LevelDefinition",
-      "objdata": {
-        "Description": "Lucy ZombossPS",
-        "FirstIntroNarrative": "EGYPT_35_INTRO",
-        "FirstOutroNarrative": "EGYPT_35_OUTRO",
-        "LevelNumber": 10,
-        "LoadDefaultMusic": false,
-        "Loot": "RTID(DefaultLoot@LevelModules)",
-        "Modules": [
-          "RTID(StandardIntro@LevelModules)",
-          "RTID(ZombossIntro@LevelModules)",
-          "RTID(ConveyorBelt@CurrentLevel)",
-          "RTID(ZombossBattle@CurrentLevel)",
-          "RTID(PirateMowers@LevelModules)",
-          "RTID(RandomImitaterAdditional@CurrentLevel)",
-          "RTID(RandomImitater@LevelModules)",
-          "RTID(DefaultZombieWinCondition@LevelModules)",
-          "RTID(NewWaves@CurrentLevel)"
-        ],
-        "Name": "Zomboss Battle Of Luck-PS",
-        "NormalPresentTable": "egypt_normal_01",
-        "WrittenBy": "莱池_余垛",
-        "ForceToWorldMap": true,
-        "RepeatPlayForceToWorldMap": true,
-        "ShinyPresentTable": "egypt_shiny_01",
-        "StageModule": "RTID(PirateStage@LevelModules)",
-        "VictoryModule": "RTID(ZombossVictoryOutro@LevelModules)"
-      }
-    },
-    {
-      "aliases": [
-        "ZombossBattle"
-      ],
-      "objclass": "ZombossBattleModuleProperties",
-      "objdata": {
-        "ReservedColumnCount": 2,
-        "ZombossDeathColumn": 5,
-        "ZombossDeathRow": 3,
-        "ZombossMechType": "zombossmech_pirate2",
-        "ZombossSpawnGridPosition": {
-          "mX": 6,
-          "mY": 3
+    "objects": [
+        {
+            "objclass": "LevelDefinition",
+            "objdata": {
+                "DescriptionMultiLanguage": {
+                    "en": "<PLAYERNAME>'s Rematch with Zombot Plank Walker 2.0",
+                    "zh": "<PLAYERNAME>与甲板漫步者2.0的重赛"
+                },
+                "LoadDefaultMusic": false,
+                "FirstIntroNarrative": "RANDOM_INTRO_PIRATE",
+                "FirstOutroNarrative": "RANDOM_OUTRO_PIRATE",
+                "Loot": "RTID(DefaultLoot@LevelModules)",
+                "Modules": [
+                    "RTID(StandardIntro@LevelModules)",
+                    "RTID(ZombossIntro@LevelModules)",
+                    "RTID(ConveyorBelt@CurrentLevel)",
+                    "RTID(ZombossBattle@CurrentLevel)",
+                    "RTID(PirateMowers@LevelModules)",
+                    "RTID(RandomImitaterAdditional@CurrentLevel)",
+                    "RTID(RandomImitater@LevelModules)",
+                    "RTID(DefaultZombieWinCondition@LevelModules)",
+                    "RTID(NewWaves@CurrentLevel)"
+                ],
+                "NameMultiLanguage": {
+                    "en": "The Plank Walker's Gambit",
+                    "zh": "木板行者的赌局"
+                },
+                "WrittenBy": "莱池_余垛",
+                "ForceToWorldMap": true,
+                "RepeatPlayForceToWorldMap": true,
+                "StageModule": "RTID(PirateStage@LevelModules)",
+                "VictoryModule": "RTID(ZombossVictoryOutro@LevelModules)"
+            }
+        },
+        {
+            "aliases": [
+                "RANDOM_INTRO_PIRATE"
+            ],
+            "objclass": "NarrativeProperties",
+            "objdata": {
+                "Flow": [
+                    {
+                        "Character": "zombossicon",
+                        "Action": "NPC_ENTER"
+                    },
+                    {
+                        "Character": "zombossicon",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "Ya fools darez following me into my very own trap?",
+                            "zh": "汝等胆敢跟随我进入我自己的陷阱？"
+                        }
+                    },
+                    {
+                        "Character": "zombossicon",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "Foolish! Shall you be trapped in the storm with me!",
+                            "zh": "愚蠢！你我早已被困在雷暴中央！"
+                        }
+                    },
+                    {
+                        "Character": "zombossicon",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "The storm shows no mercy! Embrace your doom!",
+                            "zh": "雷暴可没有仁慈之心！接受你的毁灭吧！"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "RANDOM_OUTRO_PIRATE"
+            ],
+            "objclass": "NarrativeProperties",
+            "objdata": {
+                "Flow": [
+                    {
+                        "Character": "zombossicon",
+                        "Action": "NPC_ENTER"
+                    },
+                    {
+                        "Character": "winnie",
+                        "Action": "NPC_ENTER"
+                    },
+                    {
+                        "Character": "crazydave",
+                        "Action": "NPC_ENTER"
+                    },
+                    {
+                        "Character": "zombossicon",
+                        "Action": "NPC_EXIT"
+                    },
+                    {
+                        "Character": "crazydave",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "... did he just leave?",
+                            "zh": "......他这就走了？"
+                        }
+                    },
+                    {
+                        "Character": "winnie",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "I am 99.8% certain that he left, user Dave. ",
+                            "zh": "我认为有99.8%的概率他确实走了，用户戴夫"
+                        }
+                    },
+                    {
+                        "Character": "crazydave",
+                        "Action": "EXCITED",
+                        "Lines": {
+                            "en": "Hurray! March towards more tacos! ",
+                            "zh": "好诶！向更多玉米卷前进！"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "ZombossBattle"
+            ],
+            "objclass": "ZombossBattleModuleProperties",
+            "objdata": {
+                "ReservedColumnCount": 2,
+                "ZombossDeathColumn": 5,
+                "ZombossDeathRow": 3,
+                "ZombossMechType": "zombossmech_pirate2",
+                "ZombossSpawnGridPosition": {
+                    "mX": 6,
+                    "mY": 3
+                }
+            }
+        },
+        {
+            "aliases": [
+                "ConveyorBelt"
+            ],
+            "objclass": "ConveyorSeedBankProperties",
+            "objdata": {
+                "DropDelayConditions": [
+                    {
+                        "Delay": 3,
+                        "MaxPackets": 0
+                    },
+                    {
+                        "Delay": 6,
+                        "MaxPackets": 3
+                    },
+                    {
+                        "Delay": 12,
+                        "MaxPackets": 8
+                    }
+                ],
+                "InitialPlantList": [
+                    {
+                        "PlantType": "imitater",
+                        "Weight": 40
+                    }
+                ],
+                "SpeedConditions": [
+                    {
+                        "MaxPackets": 0,
+                        "Speed": 100
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "RandomImitaterAdditional"
+            ],
+            "objclass": "RandomImitaterProperties",
+            "objdata": {
+                "ExcludeListSunProducers": "true",
+                "ExtraRandomPlantExcludeList": [
+                    "lilypad",
+                    "springbean"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "NewWaves"
+            ],
+            "objclass": "WaveManagerModuleProperties",
+            "objdata": {
+                "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+            }
+        },
+        {
+            "aliases": [
+                "WaveManagerProps"
+            ],
+            "objclass": "WaveManagerProperties",
+            "objdata": {
+                "Waves": []
+            }
         }
-      }
-    },
-    {
-      "aliases": [
-        "ConveyorBelt"
-      ],
-      "objclass": "ConveyorSeedBankProperties",
-      "objdata": {
-        "DropDelayConditions": [
-          {
-            "Delay": 3,
-            "MaxPackets": 0
-          },
-          {
-            "Delay": 6,
-            "MaxPackets": 3
-          },
-          {
-            "Delay": 12,
-            "MaxPackets": 8
-          }
-        ],
-        "InitialPlantList": [
-          {
-            "PlantType": "imitater",
-            "Weight": 40
-          }
-        ],
-        "SpeedConditions": [
-          {
-            "MaxPackets": 0,
-            "Speed": 100
-          }
-        ]
-      }
-    },
-    {
-      "aliases": [
-        "RandomImitaterAdditional"
-      ],
-      "objclass": "RandomImitaterProperties",
-      "objdata": {
-        "ExcludeListSunProducers": "true",
-        "ExtraRandomPlantExcludeList": [
-          "lilypad",
-          "springbean"
-        ]
-      }
-    },
-    {
-      "aliases": [
-        "NewWaves"
-      ],
-      "objclass": "WaveManagerModuleProperties",
-      "objdata": {
-        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
-      }
-    },
-    {
-      "aliases": [
-        "WaveManagerProps"
-      ],
-      "objclass": "WaveManagerProperties",
-      "objdata": {
-        "Waves": []
-      }
-    }
-  ],
-  "version": 1
+    ],
+    "version": 1
 }
