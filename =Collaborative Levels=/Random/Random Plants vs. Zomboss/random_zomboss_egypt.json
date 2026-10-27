@@ -1,129 +1,293 @@
 {
-  "#comment": "Egypt Zomboss 2.0",
-  "objects": [
-    {
-      "objclass": "LevelDefinition",
-      "objdata": {
-        "Description": "Lucy ZombossAE",
-        "FirstIntroNarrative": "EGYPT_35_INTRO",
-        "FirstOutroNarrative": "EGYPT_35_OUTRO",
-        "LevelNumber": 10,
-        "LoadDefaultMusic": false,
-        "Loot": "RTID(DefaultLoot@LevelModules)",
-        "Modules": [
-          "RTID(StandardIntro@LevelModules)",
-          "RTID(ZombossIntro@LevelModules)",
-          "RTID(Gravestones@CurrentLevel)",
-          "RTID(ConveyorBelt@CurrentLevel)",
-          "RTID(ZombossBattle@CurrentLevel)",
-          "RTID(EgyptMowers@LevelModules)",
-          "RTID(RandomImitaterAdditional@CurrentLevel)",
-          "RTID(RandomImitater@LevelModules)",
-          "RTID(DefaultZombieWinCondition@LevelModules)",
-          "RTID(NewWaves@CurrentLevel)"
-        ],
-        "Name": "Zomboss Battle Of Luck-AE",
-        "NormalPresentTable": "egypt_normal_01",
-        "WrittenBy": "莱池_余垛",
-        "ForceToWorldMap": true,
-        "RepeatPlayForceToWorldMap": true,
-        "ShinyPresentTable": "egypt_shiny_01",
-        "StageModule": "RTID(EgyptStage@LevelModules)",
-        "VictoryModule": "RTID(ZombossVictoryOutro@LevelModules)"
-      }
-    },
-    {
-      "aliases": [
-        "ZombossBattle"
-      ],
-      "objclass": "ZombossBattleModuleProperties",
-      "objdata": {
-        "ReservedColumnCount": 2,
-        "ZombossDeathColumn": 5,
-        "ZombossDeathRow": 3,
-        "ZombossMechType": "zombossmech_egypt2",
-        "ZombossSpawnGridPosition": {
-          "mX": 6,
-          "mY": 3
+    "objects": [
+        {
+            "objclass": "LevelDefinition",
+            "objdata": {
+                "DescriptionMultiLanguage": {
+                    "en": "<PLAYERNAME>'s Rematch with Zombot Sphinx-inator 2.0",
+                    "zh": "<PLAYERNAME>与狮身人面降临者2.0的重赛"
+                },
+                "LoadDefaultMusic": false,
+                "Loot": "RTID(DefaultLoot@LevelModules)",
+                "Modules": [
+                    "RTID(StandardIntro@LevelModules)",
+                    "RTID(ZombossIntro@LevelModules)",
+                    "RTID(Gravestones@CurrentLevel)",
+                    "RTID(ConveyorBelt@CurrentLevel)",
+                    "RTID(ZombossBattle@CurrentLevel)",
+                    "RTID(EgyptMowers@LevelModules)",
+                    "RTID(RandomImitaterAdditional@CurrentLevel)",
+                    "RTID(RandomImitater@LevelModules)",
+                    "RTID(DefaultZombieWinCondition@LevelModules)",
+                    "RTID(NewWaves@CurrentLevel)"
+                ],
+                "NameMultiLanguage": {
+                    "en": "Mummy's One-in-a-Million",
+                    "zh": "木乃伊的万分之一"
+                },
+                "NormalPresentTable": "egypt_normal_01",
+                "FirstIntroNarrative": "RANDOM_INTRO_EGYPT",
+                "FirstOutroNarrative": "RANDOM_OUTRO_EGYPT",
+                "WrittenBy": "莱池_余垛",
+                "ForceToWorldMap": true,
+                "RepeatPlayForceToWorldMap": true,
+                "ShinyPresentTable": "egypt_shiny_01",
+                "StageModule": "RTID(EgyptNightStage@LevelModules)",
+                "VictoryModule": "RTID(ZombossVictoryOutro@LevelModules)"
+            }
+        },
+        {
+            "aliases": [
+                "RANDOM_INTRO_EGYPT"
+            ],
+            "objclass": "NarrativeProperties",
+            "objdata": {
+                "Flow": [
+                    {
+                        "Character": "winnie",
+                        "Action": "NPC_ENTER"
+                    },
+                    {
+                        "Character": "crazydave",
+                        "Action": "NPC_ENTER"
+                    },
+                    {
+                        "Character": "winnie",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "I have found a special imitater laying around, User Dave",
+                            "zh": "用户戴夫，我找到了一些特殊的模仿者"
+                        }
+                    },
+                    {
+                        "Character": "winnie",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "It appears that they transform themselves into a random plant once planted",
+                            "zh": "看起来他们种下后会变成一种随机植物"
+                        }
+                    },
+                    {
+                        "Character": "crazydave",
+                        "Action": "EXCITED",
+                        "Lines": {
+                            "en": "I knew it! I knew we could find some more interesting plants here!",
+                            "zh": "我就知道！我就说这里肯定有好玩的新植物！"
+                        }
+                    },
+                    {
+                        "Character": "zombossicon",
+                        "Action": "NPC_ENTER"
+                    },
+                    {
+                        "Character": "zombossicon",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "Wahahaha! Just as I expected, I've caught you again! ",
+                            "zh": "哇哈哈哈！果不其然，我又抓到你们了！"
+                        }
+                    },
+                    {
+                        "Character": "zombossicon",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "Fight me! I'd like a rematch! A rematch with my Zombot Sphinx-inator 2.0 !",
+                            "zh": "重赛！我要求带着我的狮身人面降临者2.0和你们再打一场！"
+                        }
+                    },
+                    {
+                        "Character": "winnie",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "User Dave, was that also part of your plan?",
+                            "zh": "这要是你计划的一部分吗，用户戴夫？"
+                        }
+                    },
+                    {
+                        "Character": "crazydave",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "......",
+                            "zh": "……"
+                        }
+                    },
+                    {
+                        "Character": "crazydave",
+                        "Action": "SHOUT",
+                        "Lines": {
+                            "en": "KNOCK HIM DOWN, NEIGHBOUR!",
+                            "zh": "邻居，快干掉他！！！"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "RANDOM_OUTRO_EGYPT"
+            ],
+            "objclass": "NarrativeProperties",
+            "objdata": {
+                "Flow": [
+                    {
+                        "Character": "zombossicon",
+                        "Action": "NPC_ENTER"
+                    },
+                    {
+                        "Character": "zombossicon",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "No, no! This can't be......",
+                            "zh": "不，不！这不可能……"
+                        }
+                    },
+                    {
+                        "Character": "zombossicon",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "No, you're just too lucky! And guess what? You won't be lucky ALL the time!",
+                            "zh": "不，你只是运气太好了！而你猜怎么着，你运气不可能一直好下去！"
+                        }
+                    },
+                    {
+                        "Character": "zombossicon",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "I won't stop trying! All it takes is one unlucky day......Wahahaha!",
+                            "zh": "我还会回来的！只要你哪天运气差了一点……哈哈哈哈！"
+                        }
+                    },
+                    {
+                        "Character": "zombossicon",
+                        "Action": "NPC_EXIT"
+                    },
+                    {
+                        "Character": "winnie",
+                        "Action": "NPC_ENTER"
+                    },
+                    {
+                        "Character": "crazydave",
+                        "Action": "NPC_ENTER"
+                    },
+                    {
+                        "Character": "crazydave",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "Are we...... going to go deeper?",
+                            "zh": "我们……要继续深入吗？"
+                        }
+                    },
+                    {
+                        "Character": "winnie",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "Let's persuit Dr. Zomboss' escape route and trap him in his own trap",
+                            "zh": "我们去追击僵王博士吧，试试能不能把他困在他自己的陷阱里"
+                        }
+                    },
+                    {
+                        "Character": "crazydave",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "I wish I could get some extra tacos along the way!",
+                            "zh": "我希望一路上能找到更多玉米卷"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "ZombossBattle"
+            ],
+            "objclass": "ZombossBattleModuleProperties",
+            "objdata": {
+                "ReservedColumnCount": 2,
+                "ZombossDeathColumn": 5,
+                "ZombossDeathRow": 3,
+                "ZombossMechType": "zombossmech_egypt2",
+                "ZombossSpawnGridPosition": {
+                    "mX": 6,
+                    "mY": 3
+                }
+            }
+        },
+        {
+            "aliases": [
+                "ConveyorBelt"
+            ],
+            "objclass": "ConveyorSeedBankProperties",
+            "objdata": {
+                "DropDelayConditions": [
+                    {
+                        "Delay": 3,
+                        "MaxPackets": 0
+                    },
+                    {
+                        "Delay": 6,
+                        "MaxPackets": 3
+                    },
+                    {
+                        "Delay": 12,
+                        "MaxPackets": 8
+                    }
+                ],
+                "InitialPlantList": [
+                    {
+                        "PlantType": "imitater",
+                        "Weight": 40
+                    }
+                ],
+                "SpeedConditions": [
+                    {
+                        "MaxPackets": 0,
+                        "Speed": 100
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "RandomImitaterAdditional"
+            ],
+            "objclass": "RandomImitaterProperties",
+            "objdata": {
+                "ExcludeListSunProducers": "true",
+                "ExtraRandomPlantExcludeList": [
+                    "lilypad",
+                    "springbean"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "NewWaves"
+            ],
+            "objclass": "WaveManagerModuleProperties",
+            "objdata": {
+                "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+            }
+        },
+        {
+            "aliases": [
+                "WaveManagerProps"
+            ],
+            "objclass": "WaveManagerProperties",
+            "objdata": {
+                "Waves": []
+            }
+        },
+        {
+            "aliases": [
+                "Gravestones"
+            ],
+            "objclass": "GravestoneProperties",
+            "objdata": {
+                "GravestoneCount": 5,
+                "SpawnColumnEnd": 6,
+                "SpawnColumnStart": 3
+            }
         }
-      }
-    },
-    {
-      "aliases": [
-        "ConveyorBelt"
-      ],
-      "objclass": "ConveyorSeedBankProperties",
-      "objdata": {
-        "DropDelayConditions": [
-          {
-            "Delay": 3,
-            "MaxPackets": 0
-          },
-          {
-            "Delay": 6,
-            "MaxPackets": 3
-          },
-          {
-            "Delay": 12,
-            "MaxPackets": 8
-          }
-        ],
-        "InitialPlantList": [
-          {
-            "PlantType": "imitater",
-            "Weight": 40
-          }
-        ],
-        "SpeedConditions": [
-          {
-            "MaxPackets": 0,
-            "Speed": 100
-          }
-        ]
-      }
-    },
-    {
-      "aliases": [
-        "RandomImitaterAdditional"
-      ],
-      "objclass": "RandomImitaterProperties",
-      "objdata": {
-        "ExcludeListSunProducers": "true",
-        "ExtraRandomPlantExcludeList": [
-          "lilypad",
-          "springbean"
-        ]
-      }
-    },
-    {
-      "aliases": [
-        "NewWaves"
-      ],
-      "objclass": "WaveManagerModuleProperties",
-      "objdata": {
-        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
-      }
-    },
-    {
-      "aliases": [
-        "WaveManagerProps"
-      ],
-      "objclass": "WaveManagerProperties",
-      "objdata": {
-        "Waves": []
-      }
-    },
-    {
-      "aliases": [
-        "Gravestones"
-      ],
-      "objclass": "GravestoneProperties",
-      "objdata": {
-        "GravestoneCount": 5,
-        "SpawnColumnEnd": 6,
-        "SpawnColumnStart": 3
-      }
-    }
-  ],
-  "version": 1
+    ],
+    "version": 1
 }
