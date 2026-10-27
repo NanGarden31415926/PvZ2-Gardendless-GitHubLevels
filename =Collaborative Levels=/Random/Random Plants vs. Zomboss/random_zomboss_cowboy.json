@@ -1,158 +1,239 @@
 {
-  "#comment": "Cowboy Zomboss",
-  "objects": [
-    {
-      "objclass": "LevelDefinition",
-      "objdata": {
-        "Description": "[EPIC_QUEST_COWBOY_NEW_TITLE]",
-        "FirstIntroNarrative": "COWBOY_35_INTRO",
-        "FirstOutroNarrative": "COWBOY_35_OUTRO",
-        "LevelNumber": 10,
-        "LoadDefaultMusic": false,
-        "Loot": "RTID(DefaultLoot@LevelModules)",
-        "Modules": [
-          "RTID(StandardIntro@LevelModules)",
-          "RTID(ZombossIntro@LevelModules)",
-          "RTID(ConveyorBelt@CurrentLevel)",
-          "RTID(WestMowers@LevelModules)",
-          "RTID(ZombossBattle@CurrentLevel)",
-          "RTID(CowboyRails@CurrentLevel)",
-          "RTID(RandomImitaterAdditional@CurrentLevel)",
-          "RTID(RandomImitater@LevelModules)",
-          "RTID(DefaultZombieWinCondition@LevelModules)",
-          "RTID(NewWaves@CurrentLevel)"
-        ],
-        "Name": "Zomboss Battle Of Luck-WW",
-        "NormalPresentTable": "cowboy_normal_01",
-        "WrittenBy": "莱池_余垛",
-        "ForceToWorldMap": true,
-        "RepeatPlayForceToWorldMap": true,
-        "ShinyPresentTable": "cowboy_shiny_01",
-        "StageModule": "RTID(WestStage@LevelModules)",
-        "VictoryModule": "RTID(ZombossVictoryOutro@LevelModules)"
-      }
-    },
-    {
-      "aliases": [
-        "CowboyRails"
-      ],
-      "objclass": "RailcartProperties",
-      "objdata": {
-        "RailcartType": "railcart_cowboy",
-        "Railcarts": [
-          {
-            "Column": 2,
-            "Row": 1
-          },
-          {
-            "Column": 0,
-            "Row": 0
-          },
-          {
-            "Column": 0,
-            "Row": 4
-          }
-        ],
-        "Rails": [
-          {
-            "Column": 0,
-            "RowEnd": 1,
-            "RowStart": 0
-          },
-          {
-            "Column": 0,
-            "RowEnd": 4,
-            "RowStart": 3
-          },
-          {
-            "Column": 2,
-            "RowEnd": 4,
-            "RowStart": 0
-          }
-        ]
-      }
-    },
-    {
-      "aliases": [
-        "ConveyorBelt"
-      ],
-      "objclass": "ConveyorSeedBankProperties",
-      "objdata": {
-        "DropDelayConditions": [
-          {
-            "Delay": 3,
-            "MaxPackets": 0
-          },
-          {
-            "Delay": 6,
-            "MaxPackets": 3
-          },
-          {
-            "Delay": 12,
-            "MaxPackets": 8
-          }
-        ],
-        "InitialPlantList": [
-          {
-            "PlantType": "imitater",
-            "Weight": 40
-          }
-        ],
-        "SpeedConditions": [
-          {
-            "MaxPackets": 0,
-            "Speed": 100
-          }
-        ]
-      }
-    },
-    {
-      "aliases": [
-        "RandomImitaterAdditional"
-      ],
-      "objclass": "RandomImitaterProperties",
-      "objdata": {
-        "ExcludeListSunProducers": "true",
-        "ExtraRandomPlantExcludeList": [
-          "lilypad",
-          "springbean"
-        ]
-      }
-    },
-    {
-      "aliases": [
-        "ZombossBattle"
-      ],
-      "objclass": "ZombossBattleModuleProperties",
-      "objdata": {
-        "ReservedColumnCount": 2,
-        "ZombossDeathColumn": 5,
-        "ZombossDeathRow": 3,
-        "ZombossMechType": "zombossmech_cowboy2",
-        "ZombossSpawnGridPosition": {
-          "mX": 6,
-          "mY": 3
+    "#comment": "Cowboy Zomboss",
+    "objects": [
+        {
+            "objclass": "LevelDefinition",
+            "objdata": {
+                "DescriptionMultiLanguage": {
+                    "en": "<PLAYERNAME>'s Rematch with Zombot War Wagon 2.0",
+                    "zh": "<PLAYERNAME>与重型战马车2.0的重赛"
+                },
+                "FirstIntroNarrative": "RANDOM_INTRO_WEST",
+                "FirstOutroNarrative": "RANDOM_OUTRO_WEST",
+                "LoadDefaultMusic": false,
+                "Loot": "RTID(DefaultLoot@LevelModules)",
+                "Modules": [
+                    "RTID(StandardIntro@LevelModules)",
+                    "RTID(ZombossIntro@LevelModules)",
+                    "RTID(ConveyorBelt@CurrentLevel)",
+                    "RTID(WestMowers@LevelModules)",
+                    "RTID(ZombossBattle@CurrentLevel)",
+                    "RTID(CowboyRails@CurrentLevel)",
+                    "RTID(RandomImitaterAdditional@CurrentLevel)",
+                    "RTID(RandomImitater@LevelModules)",
+                    "RTID(DefaultZombieWinCondition@LevelModules)",
+                    "RTID(NewWaves@CurrentLevel)"
+                ],
+                "NameMultiLanguage": {
+                    "en": "The Gambler's Fallacy in the West",
+                    "zh": "西部中的赌徒谬误"
+                },
+                "NormalPresentTable": "cowboy_normal_01",
+                "WrittenBy": "莱池_余垛",
+                "ForceToWorldMap": true,
+                "RepeatPlayForceToWorldMap": true,
+                "ShinyPresentTable": "cowboy_shiny_01",
+                "StageModule": "RTID(WestStage@LevelModules)",
+                "VictoryModule": "RTID(ZombossVictoryOutro@LevelModules)"
+            }
+        },
+        {
+            "aliases": [
+                "RANDOM_INTRO_WEST"
+            ],
+            "objclass": "NarrativeProperties",
+            "objdata": {
+                "Flow": [
+                    {
+                        "Character": "zombossicon",
+                        "Action": "NPC_ENTER"
+                    },
+                    {
+                        "Character": "zombossicon",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "Howdy, my greatest enemy",
+                            "zh": "你好啊，我的仇敌"
+                        }
+                    },
+                    {
+                        "Character": "zombossicon",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "What's that look on your face? Did you not like my Zombot War Wagon 2.0?",
+                            "zh": "怎么，你这是什么表情？你不喜欢我的重型战马车2.0吗？"
+                        }
+                    },
+                    {
+                        "Character": "zombossicon",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "Worry not, I shall bring back all those primal fears you had!",
+                            "zh": "别担心，我会帮你找回所有遗忘的恐惧！"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "RANDOM_OUTRO_WEST"
+            ],
+            "objclass": "NarrativeProperties",
+            "objdata": {
+                "Flow": [
+                    {
+                        "Character": "zombossicon",
+                        "Action": "NPC_ENTER"
+                    },
+                    {
+                        "Character": "zombossicon",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "You've defeated me fair and square in a 1 on 1 duel...... NOT! ",
+                            "zh": "你公平公正地赢下了这次单挑……才怪！"
+                        }
+                    },
+                    {
+                        "Character": "zombossicon",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "Don't think I didn't catch that! You were cheating! ",
+                            "zh": "别以为我没发现！你在作弊！"
+                        }
+                    },
+                    {
+                        "Character": "zombossicon",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "But it won't matter! No matter how hard you try, I will shatter your faith ruthlessly!",
+                            "zh": "但不重要！无论你多努力，我会无情的碾碎你的自尊心！"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "CowboyRails"
+            ],
+            "objclass": "RailcartProperties",
+            "objdata": {
+                "RailcartType": "railcart_cowboy",
+                "Railcarts": [
+                    {
+                        "Column": 2,
+                        "Row": 1
+                    },
+                    {
+                        "Column": 0,
+                        "Row": 0
+                    },
+                    {
+                        "Column": 0,
+                        "Row": 4
+                    }
+                ],
+                "Rails": [
+                    {
+                        "Column": 0,
+                        "RowEnd": 1,
+                        "RowStart": 0
+                    },
+                    {
+                        "Column": 0,
+                        "RowEnd": 4,
+                        "RowStart": 3
+                    },
+                    {
+                        "Column": 2,
+                        "RowEnd": 4,
+                        "RowStart": 0
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "ConveyorBelt"
+            ],
+            "objclass": "ConveyorSeedBankProperties",
+            "objdata": {
+                "DropDelayConditions": [
+                    {
+                        "Delay": 3,
+                        "MaxPackets": 0
+                    },
+                    {
+                        "Delay": 6,
+                        "MaxPackets": 3
+                    },
+                    {
+                        "Delay": 12,
+                        "MaxPackets": 8
+                    }
+                ],
+                "InitialPlantList": [
+                    {
+                        "PlantType": "imitater",
+                        "Weight": 40
+                    }
+                ],
+                "SpeedConditions": [
+                    {
+                        "MaxPackets": 0,
+                        "Speed": 100
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "RandomImitaterAdditional"
+            ],
+            "objclass": "RandomImitaterProperties",
+            "objdata": {
+                "ExcludeListSunProducers": "true",
+                "ExtraRandomPlantExcludeList": [
+                    "lilypad",
+                    "springbean"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "ZombossBattle"
+            ],
+            "objclass": "ZombossBattleModuleProperties",
+            "objdata": {
+                "ReservedColumnCount": 2,
+                "ZombossDeathColumn": 5,
+                "ZombossDeathRow": 3,
+                "ZombossMechType": "zombossmech_cowboy2",
+                "ZombossSpawnGridPosition": {
+                    "mX": 6,
+                    "mY": 3
+                }
+            }
+        },
+        {
+            "aliases": [
+                "NewWaves"
+            ],
+            "objclass": "WaveManagerModuleProperties",
+            "objdata": {
+                "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+            }
+        },
+        {
+            "aliases": [
+                "WaveManagerProps"
+            ],
+            "objclass": "WaveManagerProperties",
+            "objdata": {
+                "Waves": []
+            }
         }
-      }
-    },
-    {
-      "aliases": [
-        "NewWaves"
-      ],
-      "objclass": "WaveManagerModuleProperties",
-      "objdata": {
-        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
-      }
-    },
-    {
-      "aliases": [
-        "WaveManagerProps"
-      ],
-      "objclass": "WaveManagerProperties",
-      "objdata": {
-        "Waves": []
-      }
-    }
-  ],
-  "version": 1
+    ],
+    "version": 1
 }
