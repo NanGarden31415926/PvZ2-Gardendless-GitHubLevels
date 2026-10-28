@@ -1,0 +1,294 @@
+{
+    "objects": [
+        {
+            "objclass": "LevelDefinition",
+            "objdata": {
+                "DescriptionMultiLanguage": {
+                    "en": "<PLAYERNAME>'s Rematch with Devil of Dynamite and Blade-Wielding Hero",
+                    "zh": "<PLAYERNAME>与火药魔头和持刀大侠的重赛"
+                },
+                "FirstIntroNarrative": "RANDOM_INTRO_KONGFU_A",
+                "FirstOutroNarrative": "RANDOM_OUTRO_KONGFU_A",
+                "LoadDefaultMusic": false,
+                "Loot": "RTID(DefaultLoot@LevelModules)",
+                "Modules": [
+                    "RTID(EightiesZombossIntro@LevelModules)",
+                    "RTID(ConveyorBelt@CurrentLevel)",
+                    "RTID(FrontLawnMowers@LevelModules)",
+                    "RTID(RandomImitaterAdditional@CurrentLevel)",
+                    "RTID(RandomImitater@LevelModules)",
+                    "RTID(DefaultZombieWinCondition@LevelModules)",
+                    "RTID(NewWaves@CurrentLevel)",
+                    "RTID(BeatTheLevel@CurrentLevel)"
+                ],
+                "NameMultiLanguage": {
+                    "en": "A Once-in-a-Century Duel",
+                    "zh": "百年一遇的双雄会"
+                },
+                "NormalPresentTable": "egypt_normal_01",
+                "WrittenBy": "SansGrinder",
+                "ForceToWorldMap": true,
+                "RepeatPlayForceToWorldMap": true,
+                "ShinyPresentTable": "egypt_shiny_01",
+                "StageModule": "RTID(KongfuBossStage@LevelModules)",
+                "VictoryModule": "RTID(ZombossVictoryOutro@LevelModules)"
+            }
+        },
+        {
+            "aliases": [
+                "BeatTheLevel"
+            ],
+            "objclass": "StarChallengeBeatTheLevelProps",
+            "objdata": {
+                "DescriptionsMultilanguage": [
+                    {
+                        "en": "Beat the level by defeating BOTH the Devil of Dynamite and Blade-Wielding Hero, AND their summons",
+                        "zh": "击败火药魔头和持刀大侠和他们的召唤物以通过关卡"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "RANDOM_INTRO_KONGFU_A"
+            ],
+            "objclass": "NarrativeProperties",
+            "objdata": {
+                "Flow": [
+                    {
+                        "Character": "zombossicon",
+                        "Action": "NPC_ENTER"
+                    },
+                    {
+                        "Character": "zombossicon",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "Two of my friends wants a \"friendly rematch\" with you, and sadly \"no\" is not an option!",
+                            "zh": "我有两位朋友想跟你来场重赛，强制性的那种"
+                        }
+                    },
+                    {
+                        "Character": "zombossicon",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "While they annihilate you, I will ensure your destruction in the near future!",
+                            "zh": "在他们暴揍你的同时，我会确保你死的惨不忍睹！"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "RANDOM_OUTRO_KONGFU_A"
+            ],
+            "objclass": "NarrativeProperties",
+            "objdata": {
+                "Flow": [
+                    {
+                        "Character": "zombossicon",
+                        "Action": "NPC_ENTER"
+                    },
+                    {
+                        "Character": "zombossicon",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "What, did you think that was it?",
+                            "zh": "怎么，你不会以为这就结束了吧？"
+                        }
+                    },
+                    {
+                        "Character": "zombossicon",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "Qigong Master is on his on his way to your lawn! You shall face destruction any moment now!",
+                            "zh": "气功教主正在赶来！你很快就可以被揍得粉身碎骨了！"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "ConveyorBelt"
+            ],
+            "objclass": "ConveyorSeedBankProperties",
+            "objdata": {
+                "DropDelayConditions": [
+                    {
+                        "Delay": 3,
+                        "MaxPackets": 0
+                    },
+                    {
+                        "Delay": 6,
+                        "MaxPackets": 3
+                    },
+                    {
+                        "Delay": 12,
+                        "MaxPackets": 8
+                    }
+                ],
+                "InitialPlantList": [
+                    {
+                        "PlantType": "imitater",
+                        "Weight": 100
+                    }
+                ],
+                "SpeedConditions": [
+                    {
+                        "MaxPackets": 0,
+                        "Speed": 100
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "RandomImitaterAdditional"
+            ],
+            "objclass": "RandomImitaterProperties",
+            "objdata": {
+                "ExcludeListSunProducers": "true",
+                "ExtraRandomPlantExcludeList": [
+                    "springbean",
+                    "lilypad"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "NewWaves"
+            ],
+            "objclass": "WaveManagerModuleProperties",
+            "objdata": {
+                "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+            }
+        },
+        {
+            "aliases": [
+                "Wave1BladePortal"
+            ],
+            "objclass": "SpawnModernPortalsWaveActionProps",
+            "objdata": {
+                "PortalColumn": 7,
+                "PortalRow": 1,
+                "PortalType": "RTID(kongfu_boss_blade_portal@CurrentLevel)"
+            }
+        },
+        {
+            "aliases": [
+                "Wave1ExplodePortal"
+            ],
+            "objclass": "SpawnModernPortalsWaveActionProps",
+            "objdata": {
+                "PortalColumn": 7,
+                "PortalRow": 4,
+                "PortalType": "RTID(kongfu_boss_explode_portal@CurrentLevel)"
+            }
+        },
+        {
+            "objclass": "PortalType",
+            "aliases": [
+                "kongfu_boss_explode_portal"
+            ],
+            "objdata": {
+                "Properties": "RTID(kongfu_boss_explode_portal@CurrentLevel)"
+            }
+        },
+        {
+            "objclass": "PortalProps",
+            "aliases": [
+                "kongfu_boss_explode_portal"
+            ],
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Min": 0,
+                    "Max": 0
+                },
+                "TimeBetween": {
+                    "Min": 6.18,
+                    "Max": 6.18
+                },
+                "Scale": 2,
+                "World": "kongfu",
+                "ZombieTypesToSpawn": [
+                    {
+                        "Weight": 1,
+                        "ZombieTypeName": "kongfu_boss_explode"
+                    }
+                ]
+            }
+        },
+        {
+            "objclass": "PortalType",
+            "aliases": [
+                "kongfu_boss_blade_portal"
+            ],
+            "objdata": {
+                "Properties": "RTID(kongfu_boss_blade_portal@CurrentLevel)"
+            }
+        },
+        {
+            "objclass": "PortalProps",
+            "aliases": [
+                "kongfu_boss_blade_portal"
+            ],
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Min": 0,
+                    "Max": 0
+                },
+                "TimeBetween": {
+                    "Min": 6.18,
+                    "Max": 6.18
+                },
+                "Scale": 2,
+                "World": "kongfu",
+                "ZombieTypesToSpawn": [
+                    {
+                        "Weight": 1,
+                        "ZombieTypeName": "kongfu_boss_blade"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave1"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "2",
+                        "Type": "RTID(kongfu_flag_veteran@ZombieTypes)"
+                    },
+                    {
+                        "Row": "4",
+                        "Type": "RTID(monk_flag_veteran@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "WaveManagerProps"
+            ],
+            "objclass": "WaveManagerProperties",
+            "objdata": {
+                "FlagWaveInterval": 1,
+                "WaveCount": 1,
+                "ZombieCountdownFirstWaveSecs": 0.1,
+                "SuppressFlagZombie": true,
+                "Waves": [
+                    [
+                        "RTID(Wave1@CurrentLevel)",
+                        "RTID(Wave1BladePortal@CurrentLevel)",
+                        "RTID(Wave1ExplodePortal@CurrentLevel)"
+                    ]
+                ]
+            }
+        }
+    ],
+    "version": 1
+}

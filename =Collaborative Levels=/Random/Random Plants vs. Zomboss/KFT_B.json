@@ -1,0 +1,247 @@
+{
+    "objects": [
+        {
+            "objclass": "LevelDefinition",
+            "objdata": {
+                "DescriptionMultiLanguage": {
+                    "en": "<PLAYERNAME>'s Rematch with Qigong Master",
+                    "zh": "<PLAYERNAME>与气功教主的重赛"
+                },
+                "FirstIntroNarrative": "RANDOM_INTRO_KONGFU_B",
+                "FirstOutroNarrative": "RANDOM_OUTRO_KONGFU_B",
+                "LoadDefaultMusic": false,
+                "Loot": "RTID(DefaultLoot@LevelModules)",
+                "Modules": [
+                    "RTID(StandardIntro@LevelModules)",
+                    "RTID(ZombossIntro@LevelModules)",
+                    "RTID(ConveyorBelt@CurrentLevel)",
+                    "RTID(ZombossBattle@CurrentLevel)",
+                    "RTID(FrontLawnMowers@LevelModules)",
+                    "RTID(RandomImitaterAdditional@CurrentLevel)",
+                    "RTID(RandomImitater@LevelModules)",
+                    "RTID(DefaultZombieWinCondition@LevelModules)",
+                    "RTID(NewWaves@CurrentLevel)",
+                    "RTID(KongfuRack@CurrentLevel)"
+                ],
+                "NameMultiLanguage": {
+                    "en": "A Fighting Chance Against Chi",
+                    "zh": "一线气机"
+                },
+                "NormalPresentTable": "egypt_normal_01",
+                "WrittenBy": "SansGrinder",
+                "ForceToWorldMap": true,
+                "RepeatPlayForceToWorldMap": true,
+                "ShinyPresentTable": "egypt_shiny_01",
+                "StageModule": "RTID(KongfuBossStage@LevelModules)",
+                "VictoryModule": "RTID(ZombossVictoryOutro@LevelModules)"
+            }
+        },
+        {
+            "aliases": [
+                "KongfuRack"
+            ],
+            "objclass": "GravestoneProperties",
+            "objdata": {
+                "ForceSpawnData": [
+                    {
+                        "GridX": 3,
+                        "GridY": 0,
+                        "TypeName": "kongfu_rack_helmet"
+                    },
+                    {
+                        "GridX": 3,
+                        "GridY": 1,
+                        "TypeName": "kongfu_rack_torch"
+                    },
+                    {
+                        "GridX": 3,
+                        "GridY": 2,
+                        "TypeName": "kongfu_rack_flag"
+                    },
+                    {
+                        "GridX": 3,
+                        "GridY": 3,
+                        "TypeName": "kongfu_rack_torch"
+                    },
+                    {
+                        "GridX": 3,
+                        "GridY": 4,
+                        "TypeName": "kongfu_rack_helmet"
+                    },
+                    {
+                        "GridX": 4,
+                        "GridY": 0,
+                        "TypeName": "kongfu_rack_nunchaku"
+                    },
+                    {
+                        "GridX": 4,
+                        "GridY": 1,
+                        "TypeName": "kongfu_rack_3section_staff"
+                    },
+                    {
+                        "GridX": 4,
+                        "GridY": 2,
+                        "TypeName": "kongfu_rack_helmet"
+                    },
+                    {
+                        "GridX": 4,
+                        "GridY": 3,
+                        "TypeName": "kongfu_rack_fan"
+                    },
+                    {
+                        "GridX": 4,
+                        "GridY": 4,
+                        "TypeName": "kongfu_rack_flag"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "RANDOM_INTRO_KONGFU_B"
+            ],
+            "objclass": "NarrativeProperties",
+            "objdata": {
+                "Flow": [
+                    {
+                        "Character": "winnie",
+                        "Action": "NPC_ENTER"
+                    },
+                    {
+                        "Character": "crazydave",
+                        "Action": "NPC_ENTER"
+                    },
+                    {
+                        "Character": "winnie",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "Alert! Qigong Master has arrived!",
+                            "zh": "警告！气功教主来了！"
+                        }
+                    },
+                    {
+                        "Character": "crazydave",
+                        "Action": "SHOUT",
+                        "Lines": {
+                            "en": "I THOUGHT HE WAS BLUFFING",
+                            "zh": "不是真喊来了！？我当他吓唬我呢！！！"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "RANDOM_OUTRO_KONGFU_B"
+            ],
+            "objclass": "NarrativeProperties",
+            "objdata": {
+                "Flow": [
+                    {
+                        "Character": "zombossicon",
+                        "Action": "NPC_ENTER"
+                    },
+                    {
+                        "Character": "zombossicon",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "You might have defeated Qigong Master, but he is only here to stall for me!",
+                            "zh": "你或许击败了气功教主，但是他只是来给我拖延时间的！"
+                        }
+                    },
+                    {
+                        "Character": "zombossicon",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "I have a whole lot of surprises down the line for you! Wahahaha!",
+                            "zh": "还有一连串惊喜等着你们呢！哇哈哈哈！"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "ZombossBattle"
+            ],
+            "objclass": "ZombossBattleModuleProperties",
+            "objdata": {
+                "UseKongfuBossMusic": true,
+                "ReservedColumnCount": 3,
+                "ZombossDeathColumn": 5,
+                "ZombossDeathRow": 3,
+                "ZombossMechType": "kongfu_boss_chi",
+                "ZombossSpawnGridPosition": {
+                    "mX": 6,
+                    "mY": 3
+                }
+            }
+        },
+        {
+            "aliases": [
+                "ConveyorBelt"
+            ],
+            "objclass": "ConveyorSeedBankProperties",
+            "objdata": {
+                "DropDelayConditions": [
+                    {
+                        "Delay": 3,
+                        "MaxPackets": 0
+                    },
+                    {
+                        "Delay": 6,
+                        "MaxPackets": 3
+                    },
+                    {
+                        "Delay": 12,
+                        "MaxPackets": 8
+                    }
+                ],
+                "InitialPlantList": [
+                    {
+                        "PlantType": "imitater",
+                        "Weight": 100
+                    }
+                ],
+                "SpeedConditions": [
+                    {
+                        "MaxPackets": 0,
+                        "Speed": 100
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "RandomImitaterAdditional"
+            ],
+            "objclass": "RandomImitaterProperties",
+            "objdata": {
+                "ExcludeListSunProducers": "true",
+                "ExtraRandomPlantExcludeList": [
+                    "springbean",
+                    "lilypad"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "NewWaves"
+            ],
+            "objclass": "WaveManagerModuleProperties",
+            "objdata": {
+                "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+            }
+        },
+        {
+            "aliases": [
+                "WaveManagerProps"
+            ],
+            "objclass": "WaveManagerProperties",
+            "objdata": {
+                "Waves": []
+            }
+        }
+    ],
+    "version": 1
+}
