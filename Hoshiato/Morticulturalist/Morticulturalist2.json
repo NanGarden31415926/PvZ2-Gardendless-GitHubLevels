@@ -1,0 +1,520 @@
+{
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "FirstRewardParam": "cabbagepult",
+        "FirstRewardType": "unlock_plant",
+        "Modules": [
+          "RTID(StandardIntro@LevelModules)",
+          "RTID(ModPlants@CurrentLevel)",
+          "RTID(DefaultSunDropper@LevelModules)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(ModernMowers@LevelModules)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(FrozenPlantPlacement@CurrentLevel)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(BeatTheLevel@CurrentLevel)"
+        ],
+        "Name": "Morticulturalist",
+        "NameMultiLanguage": {
+          "en": "Morticulturalist - Level <LEVELUMBER>",
+          "zh": "植物学家 - 第 <LEVELNUMBER> 关"
+        },
+        "Description": "Fuse your plants!",
+        "DescriptionMultiLanguage": {
+          "en": "Fuse your plants!",
+          "zh": "融合你的植物！"
+        },
+        "LevelNumber": 2,
+        "WrittenBy": "星痕_Hoshiato",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "StageModule": "RTID(TheStage@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "BeatTheLevel"
+      ],
+      "objclass": "StarChallengeBeatTheLevelProps",
+      "objdata": {
+        "DescriptionsMultilanguage": [
+          {
+            "en": "New Recipe:Peashooter + Peashooter + Peashooter = Seashooter",
+            "zh": "新配方：豌豆射手 + 豌豆射手 + 豌豆射手 = 海豌豆"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "TheStage"
+      ],
+      "objclass": "LawnType",
+      "objdata": {
+        "LawnBaseOn": "HeroesStage",
+        "Properties": "RTID(TheStageProp@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "TheStageProp"
+      ],
+      "objclass": "LawnProperties",
+      "objdata": {
+       "Music": "Sky"
+      }
+    },
+    {
+      "aliases": [
+        "ModPlants"
+      ],
+      "objclass": "PlantModifierProperties",
+      "objdata": {
+        "List": [
+          {
+            "Type": "peashooter",
+            "NewObjdata": {
+              "EvolutionRecipes": [
+                {
+						      "OtherPlantType": "peashooter",
+						      "TargetPlantType": "repeater"
+					      }
+				      ]
+            }
+          },
+          {
+            "Type": "sunflower",
+            "NewObjdata": {
+              "EvolutionRecipes": [
+                {
+						      "OtherPlantType": "sunflower",
+						      "TargetPlantType": "twinsunflower"
+					      }
+				      ]
+            }
+          },
+          {
+            "Type": "repeater",
+            "NewObjdata": {
+              "EvolutionRecipes": [
+                {
+						      "OtherPlantType": "peashooter",
+						      "TargetPlantType": "seashooter"
+					      }
+				      ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "PresetPlantList": [
+          {
+            "Level": -1,
+            "PlantType": "sunflower"
+          },
+          {
+            "Level": -1,
+            "PlantType": "peashooter"
+          }
+        ],
+        "SuppressObjectiveTip": true,
+        "SelectionMethod": "preset"
+      }
+    },
+    {
+      "aliases": [
+        "FrozenPlantPlacement"
+      ],
+      "objclass": "InitialPlantProperties",
+      "objdata": {
+        "InitialPlantPlacements": [
+          {
+            "GridX": 1,
+            "GridY": 0,
+            "TypeName": "pvine"
+          },
+          {
+            "GridX": 2,
+            "GridY": 1,
+            "TypeName": "pvine"
+          },
+          {
+            "GridX": 0,
+            "GridY": 2,
+            "TypeName": "pvine"
+          },
+          {
+            "GridX": 2,
+            "GridY": 3,
+            "TypeName": "pvine"
+          },
+          {
+            "GridX": 0,
+            "GridY": 4,
+            "TypeName": "pvine"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {},
+          {},
+          {},
+          {
+            "PointIncrementPerWave": 120,
+            "StartingPoints": 100,
+            "StartingWave": 3,
+            "ZombiePool": [
+              "RTID(tutorial@ZombieTypes)",
+              "RTID(tutorial_armor1@ZombieTypes)",
+              "RTID(tutorial_armor2@ZombieTypes)",
+              "RTID(tutorial_armor4@ZombieTypes)",
+              "RTID(modern_newspaper@ZombieTypes)",
+              "RTID(newspaper_veteran@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 180,
+            "StartingPoints": 100,
+            "StartingWave": 3,
+            "ZombiePool": [
+              "RTID(tutorial@ZombieTypes)",
+              "RTID(tutorial_armor1@ZombieTypes)",
+              "RTID(tutorial_armor2@ZombieTypes)",
+              "RTID(tutorial_armor4@ZombieTypes)",
+              "RTID(modern_newspaper@ZombieTypes)",
+              "RTID(newspaper_veteran@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 240,
+            "StartingPoints": 200,
+            "StartingWave": 2,
+            "ZombiePool": [
+              "RTID(tutorial@ZombieTypes)",
+              "RTID(tutorial_armor1@ZombieTypes)",
+              "RTID(tutorial_armor2@ZombieTypes)",
+              "RTID(tutorial_armor4@ZombieTypes)",
+              "RTID(modern_newspaper@ZombieTypes)",
+              "RTID(newspaper_veteran@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 300,
+            "StartingPoints": 200,
+            "StartingWave": 2,
+            "ZombiePool": [
+              "RTID(tutorial@ZombieTypes)",
+              "RTID(tutorial_armor1@ZombieTypes)",
+              "RTID(tutorial_armor2@ZombieTypes)",
+              "RTID(tutorial_armor4@ZombieTypes)",
+              "RTID(modern_newspaper@ZombieTypes)",
+              "RTID(newspaper_veteran@ZombieTypes)"
+            ]
+          }
+        ],
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 6,
+        "SpawnColEnd": 1,
+        "SpawnColStart": 1,
+        "WaveCount": 12,
+        "WaveSpendingPointIncrement": 0,
+        "WaveSpendingPoints": 0,
+        "Waves": [
+          [
+            "RTID(Wave1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave11@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave12@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "DynamicPlantfood": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial_armor2@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(modern_newspaper@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "DynamicPlantfood": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(newspaper_veteran@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(modern_newspaper@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave7"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(newspaper_veteran@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave8"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "DynamicPlantfood": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        "Zombies": [
+          {
+            "Type": "RTID(modern_newspaper@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(modern_newspaper@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave9"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_armor4@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave10"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(modern_newspaper@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(modern_newspaper@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_armor4@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave11"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "DynamicPlantfood": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "Zombies": [
+          {
+            "Type": "RTID(newspaper_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_armor4@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave12"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(newspaper_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(newspaper_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_armor4@ZombieTypes)"
+          }
+        ]
+      }
+    }
+  ],
+  "version": 1
+}

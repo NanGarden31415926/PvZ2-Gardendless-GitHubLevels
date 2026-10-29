@@ -1,0 +1,1522 @@
+{
+    "objects":[
+        {
+            "objclass": "LevelDefinition",
+            "objdata": {
+                "Description": "[PLAYERS_ATTEMPT_TO_GET_PLANT]",
+                "LevelNumber": 5,
+                "Loot": "RTID(DefaultLoot@LevelModules)",
+                "Modules": [
+                    "RTID(StandardIntro@LevelModules)",
+                    "RTID(DefaultZombieWinCondition@LevelModules)",
+                    "RTID(ZombiesDeadWinCon@LevelModules)",
+                    "RTID(ConveyorBelt@CurrentLevel)",
+                    "RTID(NewWaves@CurrentLevel)",
+                    "RTID(ChallengeModule@CurrentLevel)"
+                ],
+                "WrittenBy": "砹化钫FrAt",
+                "PlantToIntroduce": "dragonbruit",
+                "FirstRewardParam": "dragonbruit",
+                "FirstRewardType": "unlock_plant",
+                "Name": "[EPIC_PLANT_LEVEL_NAME]",
+                "NormalPresentTable": "future_normal_01",
+                "ShinyPresentTable": "future_shiny_01",
+                "StageModule": "RTID(IceageStage@LevelModules)",
+                "MusicType": "MiniGame_A"
+            }
+        },
+    {
+      "aliases": [
+        "SliderPlacement"
+      ],
+      "objclass": "InitialGridItemProperties",
+      "objdata": {
+        "InitialGridItemPlacements": [
+          {
+            "GridX": 5,
+            "GridY": 1,
+            "TypeName": "slider_up"
+          },
+          {
+            "GridX": 6,
+            "GridY": 3,
+            "TypeName": "slider_down"
+          },
+          {
+            "GridX": 7,
+            "GridY": 2,
+            "TypeName": "slider_up"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Rails"
+      ],
+      "objclass": "RailcartProperties",
+      "objdata": {
+        "RailcartType": "railcart_cowboy",
+        "Railcarts": [
+          {
+            "Column": 1,
+            "Row": 2
+          }
+        ],
+        "Rails": [
+          {
+            "Column": 1,
+            "RowEnd": 4,
+            "RowStart": 0
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "InitialPlantPlacement"
+      ],
+      "objclass": "InitialPlantProperties",
+      "objdata": {
+        "InitialPlantPlacements": [
+          {
+            "GridX": "1",
+            "GridY": "2",
+            "TypeName": "moonflower"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "ChallengeModule"
+      ],
+      "objclass": "StarChallengeModuleProperties",
+      "objdata": {
+        "Challenges": [
+          [
+            "RTID(BeatTheLevel@CurrentLevel)"
+          ]
+        ],
+        "ChallengesAlwaysAvailable": true
+      }
+    },
+        {
+            "aliases": [
+                "BeatTheLevel"
+            ],
+            "objclass": "StarChallengeBeatTheLevelProps",
+            "objdata": {
+                "DescriptionsMultilanguage": [
+                    {
+                        "en": "# All static zombies carry 25 sun",
+                        "zh": "# 所有静态僵尸均携带25阳光"
+                    }
+                ]
+            }
+        },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "SelectionMethod": "chooser",
+        "ExcludeListSunProducers": "true",
+        "PresetPlantList": [
+          {
+            "PlantType": "dragonbruit"
+          }
+        ],
+        "PlantExcludeList": [
+            "gloomvine",
+            "moonflower"
+        ]
+      }
+    },
+      {
+         "aliases": [
+            "NewWaves"
+         ],
+         "objclass": "WaveManagerModuleProperties",
+         "objdata": {
+            "DynamicZombies": [
+               {},
+               {},
+               {},
+               {
+                  "PointIncrementPerWave": 20,
+                  "StartingPoints": 100,
+                  "StartingWave": 5,
+                  "ZombiePool": [
+                     "RTID(iceage@ZombieTypes)",
+                     "RTID(iceage_armor1@ZombieTypes)",
+                     "RTID(iceage_armor2@ZombieTypes)",
+                     "RTID(iceage_armor4@ZombieTypes)",
+                     "RTID(iceage_gargantuar@ZombieTypes)",
+                     "RTID(iceage_hunter@ZombieTypes)",
+                     "RTID(iceage_hunter_veteran@ZombieTypes)",
+                     "RTID(iceage_weaselhoarder@ZombieTypes)"
+                  ]
+               },
+               {
+                  "PointIncrementPerWave": 40,
+                  "StartingPoints": 200,
+                  "StartingWave": 5,
+                  "ZombiePool": [
+                     "RTID(iceage@ZombieTypes)",
+                     "RTID(iceage_armor1@ZombieTypes)",
+                     "RTID(iceage_armor2@ZombieTypes)",
+                     "RTID(iceage_armor4@ZombieTypes)",
+                     "RTID(iceage_gargantuar@ZombieTypes)",
+                     "RTID(iceage_hunter@ZombieTypes)",
+                     "RTID(iceage_hunter_veteran@ZombieTypes)",
+                     "RTID(iceage_weaselhoarder@ZombieTypes)"
+                  ]
+               },
+               {
+                  "PointIncrementPerWave": 50,
+                  "StartingPoints": 300,
+                  "StartingWave": 4,
+                  "ZombiePool": [
+                     "RTID(iceage_armor1@ZombieTypes)",
+                     "RTID(iceage_armor2@ZombieTypes)",
+                     "RTID(iceage_armor4@ZombieTypes)",
+                     "RTID(iceage_gargantuar@ZombieTypes)",
+                     "RTID(iceage_hunter@ZombieTypes)",
+                     "RTID(iceage_hunter_veteran@ZombieTypes)",
+                     "RTID(iceage_weaselhoarder@ZombieTypes)"
+                  ]
+               },
+               {
+                  "PointIncrementPerWave": 60,
+                  "StartingPoints": 400,
+                  "StartingWave": 3,
+                  "ZombiePool": [
+                     "RTID(iceage_armor2@ZombieTypes)",
+                     "RTID(iceage_armor4@ZombieTypes)",
+                     "RTID(iceage_gargantuar@ZombieTypes)",
+                     "RTID(iceage_hunter@ZombieTypes)",
+                     "RTID(iceage_hunter_veteran@ZombieTypes)",
+                     "RTID(iceage_weaselhoarder@ZombieTypes)"
+                  ]
+               }
+            ],
+            "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+         }
+      },
+      {
+         "aliases": [
+            "WaveManagerProps"
+         ],
+         "objclass": "WaveManagerProperties",
+         "objdata": {
+            "FlagWaveInterval": 4,
+            "WaveCount": 16,
+            "WaveSpendingPointIncrement": 100,
+            "WaveSpendingPoints": 150,
+            "Waves": [
+               [
+                  "RTID(Wave1@CurrentLevel)"
+               ],
+               [
+                  "RTID(Wave2@CurrentLevel)",
+                  "RTID(Wave2FrostWindEvent@CurrentLevel)"
+               ],
+               [
+                  "RTID(Wave3@CurrentLevel)"
+               ],
+               [
+                  "RTID(Wave4@CurrentLevel)",
+                  "RTID(Wave4StormEvent0@CurrentLevel)"
+               ],
+               [
+                  "RTID(Wave5@CurrentLevel)"
+               ],
+               [
+                  "RTID(Wave6@CurrentLevel)",
+                  "RTID(Wave6StormEvent0@CurrentLevel)",
+                  "RTID(Wave6FrostWindEvent@CurrentLevel)"
+               ],
+               [
+                  "RTID(Wave7@CurrentLevel)"
+               ],
+               [
+                  "RTID(Wave8@CurrentLevel)",
+                  "RTID(Wave8StormEvent0@CurrentLevel)"
+               ],
+               [
+                  "RTID(Wave9@CurrentLevel)"
+               ],
+               [
+                  "RTID(Wave10@CurrentLevel)",
+                  "RTID(Wave6FrostWindEvent@CurrentLevel)",
+                  "RTID(Wave10StormEvent0@CurrentLevel)"
+               ],
+               [
+                  "RTID(Wave11@CurrentLevel)"
+               ],
+               [
+                  "RTID(Wave12@CurrentLevel)",
+                  "RTID(Wave12StormEvent0@CurrentLevel)"
+               ],
+               [
+                  "RTID(Wave13@CurrentLevel)"
+               ],
+               [
+                  "RTID(Wave14@CurrentLevel)",
+                  "RTID(Wave6FrostWindEvent@CurrentLevel)",
+                  "RTID(Wave14StormEvent0@CurrentLevel)"
+               ],
+               [
+                  "RTID(Wave15@CurrentLevel)",
+                  "RTID(Wave15StormEvent0@CurrentLevel)"
+               ],
+               [
+                  "RTID(Wave16@CurrentLevel)",
+                  "RTID(Wave6FrostWindEvent@CurrentLevel)",
+                  "RTID(Wave16StormEvent0@CurrentLevel)"
+               ]
+            ]
+         }
+      },
+    {
+      "aliases": [
+        "Wave2FrostWindEvent"
+      ],
+      "objclass": "FrostWindWaveActionProps",
+      "objdata": {
+        "Winds": [
+          {
+            "Direction": "right",
+            "Row": 0
+          },
+          {
+            "Direction": "right",
+            "Row": 2
+          },
+          {
+            "Direction": "right",
+            "Row": 4
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6FrostWindEvent"
+      ],
+      "objclass": "FrostWindWaveActionProps",
+      "objdata": {
+        "Winds": [
+          {
+            "Direction": "right",
+            "Row": 0
+          },
+          {
+            "Direction": "right",
+            "Row": 1
+          },
+          {
+            "Direction": "right",
+            "Row": 2
+          },
+          {
+            "Direction": "right",
+            "Row": 3
+          },
+          {
+            "Direction": "right",
+            "Row": 4
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave4StormEvent0"
+      ],
+      "objclass": "StormZombieSpawnerProps",
+      "objdata": {
+        "ColumnEnd": 6,
+        "ColumnStart": 3,
+        "GroupSize": 2,
+        "TimeBetweenGroups": 1,
+        "Type": "snowstorm",
+        "Zombies": [
+          {
+            "Type": "RTID(iceage_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor3@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor3@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6StormEvent0"
+      ],
+      "objclass": "StormZombieSpawnerProps",
+      "objdata": {
+        "ColumnEnd": 6,
+        "ColumnStart": 3,
+        "GroupSize": 2,
+        "TimeBetweenGroups": 1,
+        "Type": "snowstorm",
+        "Zombies": [
+          {
+            "Type": "RTID(iceage_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor3@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor3@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave8StormEvent0"
+      ],
+      "objclass": "StormZombieSpawnerProps",
+      "objdata": {
+        "ColumnEnd": 6,
+        "ColumnStart": 3,
+        "GroupSize": 2,
+        "TimeBetweenGroups": 1,
+        "Type": "snowstorm",
+        "Zombies": [
+          {
+            "Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor3@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor3@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave10StormEvent0"
+      ],
+      "objclass": "StormZombieSpawnerProps",
+      "objdata": {
+        "ColumnEnd": 5,
+        "ColumnStart": 2,
+        "GroupSize": 2,
+        "TimeBetweenGroups": 1,
+        "Type": "snowstorm",
+        "Zombies": [
+          {
+            "Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor3@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor3@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave12StormEvent0"
+      ],
+      "objclass": "StormZombieSpawnerProps",
+      "objdata": {
+        "ColumnEnd": 4,
+        "ColumnStart": 2,
+        "GroupSize": 2,
+        "TimeBetweenGroups": 1,
+        "Type": "snowstorm",
+        "Zombies": [
+          {
+            "Type": "RTID(iceage_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor3@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor3@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave14StormEvent0"
+      ],
+      "objclass": "StormZombieSpawnerProps",
+      "objdata": {
+        "ColumnEnd": 5,
+        "ColumnStart": 2,
+        "GroupSize": 2,
+        "TimeBetweenGroups": 1,
+        "Type": "snowstorm",
+        "Zombies": [
+          {
+            "Type": "RTID(iceage_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor3@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor3@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave15StormEvent0"
+      ],
+      "objclass": "StormZombieSpawnerProps",
+      "objdata": {
+        "ColumnEnd": 5,
+        "ColumnStart": 2,
+        "GroupSize": 3,
+        "TimeBetweenGroups": 1,
+        "Type": "snowstorm",
+        "Zombies": [
+          {
+            "Type": "RTID(iceage_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor3@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave16StormEvent0"
+      ],
+      "objclass": "StormZombieSpawnerProps",
+      "objdata": {
+        "ColumnEnd": 4,
+        "ColumnStart": 1,
+        "GroupSize": 2,
+        "TimeBetweenGroups": 1,
+        "Type": "snowstorm",
+        "Zombies": [
+          {
+            "Type": "RTID(iceage_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor3@ZombieTypes)"
+          }
+        ]
+      }
+    },
+        {
+            "aliases": [
+                "Wave1"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(iceage@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage@ZombieTypes)",
+                        "CarrySun": 25
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave2"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(iceage_armor1@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage@ZombieTypes)",
+                        "CarrySun": 25
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave3"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(iceage_armor4@ZombieTypes)",
+                        "Row": "1",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_armor4@ZombieTypes)",
+                        "Row": "2",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_armor4@ZombieTypes)",
+                        "Row": "3",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage@ZombieTypes)",
+                        "Row": "5",
+                        "CarrySun": 25
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave4"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(iceage_armor4@ZombieTypes)",
+                        "Row": "3",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_armor4@ZombieTypes)",
+                        "Row": "4",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_armor4@ZombieTypes)",
+                        "Row": "5",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_dodo@ZombieTypes)",
+                        "Row": "2",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage@ZombieTypes)",
+                        "CarrySun": 25
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave5"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(iceage_armor4@ZombieTypes)",
+                        "Row": "1",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_weaselhoarder@ZombieTypes)",
+                        "Row": "3",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_armor4@ZombieTypes)",
+                        "Row": "5",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_troglobite@ZombieTypes)",
+                        "Row": "2",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage@ZombieTypes)",
+                        "CarrySun": 25
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave6"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(iceage_armor4@ZombieTypes)",
+                        "Row": "5",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_weaselhoarder@ZombieTypes)",
+                        "Row": "2",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_armor4@ZombieTypes)",
+                        "Row": "3",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_troglobite_veteran@ZombieTypes)",
+                        "Row": "4",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_armor2@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage@ZombieTypes)",
+                        "CarrySun": 25
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave7"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(iceage_hunter_veteran@ZombieTypes)",
+                        "Row": "1",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_hunter_veteran@ZombieTypes)",
+                        "Row": "2",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_hunter_veteran@ZombieTypes)",
+                        "Row": "3",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_hunter_veteran@ZombieTypes)",
+                        "Row": "4",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_troglobite_veteran@ZombieTypes)",
+                        "Row": "5",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_armor4@ZombieTypes)",
+                        "Row": "1",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_armor4@ZombieTypes)",
+                        "Row": "2",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_armor3@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_armor2@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage@ZombieTypes)",
+                        "CarrySun": 25
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave8"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(iceage_gargantuar@ZombieTypes)",
+                        "Row": "2",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_hunter_veteran@ZombieTypes)",
+                        "Row": "1",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_hunter_veteran@ZombieTypes)",
+                        "Row": "3",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_hunter@ZombieTypes)",
+                        "Row": "4",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_hunter@ZombieTypes)",
+                        "Row": "5",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_troglobite_veteran@ZombieTypes)",
+                        "Row": "3",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_troglobite@ZombieTypes)",
+                        "Row": "4",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_armor4@ZombieTypes)",
+                        "Row": "1",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_armor4@ZombieTypes)",
+                        "Row": "2",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_armor3@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_armor2@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage@ZombieTypes)",
+                        "CarrySun": 25
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave9"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(iceage_weaselhoarder@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_weaselhoarder@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_hunter_veteran@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_hunter_veteran@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_troglobite@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_armor4@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_armor4@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_armor3@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_armor2@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage@ZombieTypes)",
+                        "CarrySun": 25
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave10"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(iceage_troglobite_veteran@ZombieTypes)",
+                        "Row": "1",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_troglobite_veteran@ZombieTypes)",
+                        "Row": "3",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_troglobite_veteran@ZombieTypes)",
+                        "Row": "5",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_weaselhoarder@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_weaselhoarder@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_hunter_veteran@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_armor4@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_armor4@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_armor3@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_armor2@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage@ZombieTypes)",
+                        "CarrySun": 25
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave11"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(iceage_gargantuar@ZombieTypes)",
+                        "Row": "4",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_troglobite_veteran@ZombieTypes)",
+                        "Row": "2",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_troglobite@ZombieTypes)",
+                        "Row": "4",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_weaselhoarder@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_weaselhoarder@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_hunter@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_hunter@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_hunter@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_armor4@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_armor4@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_armor3@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_armor2@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage@ZombieTypes)",
+                        "CarrySun": 25
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave12"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(iceage_gargantuar@ZombieTypes)",
+                        "Row": "1",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_gargantuar@ZombieTypes)",
+                        "Row": "3",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_troglobite_veteran@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_troglobite@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_weaselhoarder@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_weaselhoarder@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_hunter@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_hunter@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_hunter@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_armor4@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_armor4@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_armor3@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_armor2@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage@ZombieTypes)",
+                        "CarrySun": 25
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave13"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(iceage_gargantuar@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_troglobite_veteran@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_troglobite@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_weaselhoarder@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_weaselhoarder@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_hunter_veteran@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_hunter@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_armor4@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_armor4@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_armor4@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_armor4@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_armor3@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_armor2@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage@ZombieTypes)",
+                        "CarrySun": 25
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave14"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(iceage_troglobite@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_troglobite@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_weaselhoarder@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_weaselhoarder@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_weaselhoarder@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_weaselhoarder@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_hunter_veteran@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_hunter@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_armor4@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_armor4@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_armor4@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_armor4@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_armor3@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_armor2@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage@ZombieTypes)",
+                        "CarrySun": 25
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave15"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(iceage_troglobite@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_weaselhoarder@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_weaselhoarder@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_weaselhoarder@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_hunter@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_armor4@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage@ZombieTypes)",
+                        "CarrySun": 25
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave16"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(iceage_gargantuar@ZombieTypes)",
+                        "Row": "3",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_gargantuar@ZombieTypes)",
+                        "Row": "4",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_troglobite_veteran@ZombieTypes)",
+                        "Row": "1",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_troglobite_veteran@ZombieTypes)",
+                        "Row": "5",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_weaselhoarder@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_weaselhoarder@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_hunter_veteran@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_hunter_veteran@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_hunter_veteran@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_armor4@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_armor4@ZombieTypes)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(iceage_armor4@ZombieTypes)",
+                        "CarrySun": 25
+                    }
+                ]
+            }
+        }
+    ],
+    "version": 1
+}
