@@ -1,0 +1,1547 @@
+{
+    "objects":[
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "[PLAYERS_TRIP_TO_WEST]",
+        "LevelNumber": 1,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(StandardIntro@LevelModules)",
+          "RTID(Rails@CurrentLevel)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(ModPlants@CurrentLevel)",
+          "RTID(LastStand@CurrentLevel)"
+        ],
+            "NameMultiLanguage": {
+            "en": "The Last Lv.4 Repeater",
+            "zh": "最后的四阶双发"
+        },
+                "WrittenBy": "砹化钫FrAt",
+        "StageModule": "RTID(WestStage@LevelModules)",
+        "MusicType": "MiniGame_A"
+      }
+    },
+    {
+      "aliases": [
+        "Rails"
+      ],
+      "objclass": "RailcartProperties",
+      "objdata": {
+        "RailcartType": "railcart_cowboy",
+        "Railcarts": [
+          {
+            "Column": 0,
+            "Row": 3
+          },
+          {
+            "Column": 1,
+            "Row": 0
+          },
+          {
+            "Column": 2,
+            "Row": 2
+          },
+          {
+            "Column": 3,
+            "Row": 0
+          }
+        ],
+        "Rails": [
+          {
+            "Column": 0,
+            "RowEnd": 4,
+            "RowStart": 3
+          },
+          {
+            "Column": 1,
+            "RowEnd": 2,
+            "RowStart": 0
+          },
+          {
+            "Column": 2,
+            "RowEnd": 4,
+            "RowStart": 2
+          },
+          {
+            "Column": 3,
+            "RowEnd": 1,
+            "RowStart": 0
+          }
+        ]
+      }
+    },
+    {
+        "aliases": [
+            "LastStand"
+        ],
+        "objclass": "LastStandMinigameProperties",
+        "objdata": {
+            "StartingPlantfood": 3,
+            "StartingSun": 5500
+        }
+    },
+    {
+        "aliases": [
+            "ModPlants"
+        ],
+        "objclass": "PlantModifierProperties",
+        "objdata": {
+            "SuppressParticle": true,
+            "List": [
+                {
+                    "Type": "repeater",
+                    "NewObjdata": {
+                        "ShootInterval": 1.35,
+                        "ShootIntervalAdditional": 0.15,
+                        "PeaType": "pea_lv4_repeater",
+                        "PeaTypePlantfood": "pea_lv4_repeater",
+                        "PeaTypeMega": "pea_mega_lv4",
+                        "PlantfoodPeaCount": 80,
+                        "Cooldown": 5,
+                        "CooldownFrom": 1,
+                        "SunCost": 200,
+                        "BeghouledCost": 2000,
+                        "Toughness": 750,
+                        "Family": "Peashooter"
+                    }
+                }
+            ]
+        }
+    },
+    {
+      "aliases": [
+        "pea_lv4_repeater"
+      ],
+      "objclass": "ProjectileType",
+      "objdata": {
+        "ProjectileRedirection":[
+          {
+            "Type": "pea_lv4",
+            "Weight": 1
+          },
+          {
+            "Type": "pea_flame_yellow_lv4",
+            "Weight": 2
+          },
+          {
+            "Type": "pea_flame_blue_lv4",
+            "Weight": 1
+          },
+          {
+            "Type": "pea_snow_lv4",
+            "Weight": 2
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "pea_lv4"
+      ],
+      "objclass": "ProjectileType",
+      "objdata": {
+        "Props": "RTID(pea_lv4@CurrentLevel)",
+        "ProjectileBasedOn": "pea"
+      }
+    },
+    {
+      "aliases": [
+        "pea_flame_yellow_lv4"
+      ],
+      "objclass": "ProjectileType",
+      "objdata": {
+        "Props": "RTID(pea_flame_yellow_lv4@CurrentLevel)",
+        "ProjectileBasedOn": "pea_flame_yellow"
+      }
+    },
+    {
+      "aliases": [
+        "pea_flame_blue_lv4"
+      ],
+      "objclass": "ProjectileType",
+      "objdata": {
+        "Props": "RTID(pea_flame_blue_lv4@CurrentLevel)",
+        "ProjectileBasedOn": "pea_flame_blue"
+      }
+    },
+    {
+      "aliases": [
+        "pea_snow_lv4"
+      ],
+      "objclass": "ProjectileType",
+      "objdata": {
+        "Props": "RTID(pea_snow_lv4@CurrentLevel)",
+        "ProjectileBasedOn": "pea_snow"
+      }
+    },
+    {
+        "objclass": "ProjectileProperties",
+        "aliases": [
+            "pea_lv4"
+        ],
+        "objdata": {
+            "Damage": 50,
+            "YellowIgnitedType": "pea_flame_yellow_lv4",
+            "BlueIgnitedType": "pea_flame_blue_lv4",
+            "Size": {
+                "w": 16,
+                "h": 16
+            }
+        }
+    },
+    {
+        "objclass": "ProjectileProperties",
+        "aliases": [
+            "pea_flame_yellow_lv4"
+        ],
+        "objdata": {
+            "Damage": 50,
+            "BlueIgnitedType": "pea_flame_blue_lv4",
+            "SuppressArmorImpactSound": true,
+            "SuppressZombieImpactSound": true,
+            "MeltsIceTile": true,
+            "DamageScale": 2,
+            "DamageType": "fire",
+            "Size": {
+                "w": 16,
+                "h": 16
+            }
+        }
+    },
+    {
+        "objclass": "ProjectileProperties",
+        "aliases": [
+            "pea_flame_blue_lv4"
+        ],
+        "objdata": {
+            "Damage": 50,
+            "SuppressArmorImpactSound": true,
+            "SuppressZombieImpactSound": true,
+            "MeltsIceTile": true,
+            "DamageScale": 3,
+            "DamageType": "fire",
+            "Size": {
+                "w": 16,
+                "h": 16
+            }
+        }
+    },
+    {
+        "objclass": "ProjectileProperties",
+        "aliases": [
+            "pea_mega_lv4"
+        ],
+        "objdata": {
+            "Damage": 1000,
+            "YellowIgnitedType": "pea_mega_flame_yellow_lv4",
+            "BlueIgnitedType": "pea_mega_flame_blue_lv4",
+            "Size": {
+                "w": 20,
+                "h": 20
+            }
+        }
+    },
+    {
+        "objclass": "ProjectileProperties",
+        "aliases": [
+            "pea_mega_flame_yellow_lv4"
+        ],
+        "objdata": {
+            "Damage": 1000,
+            "BlueIgnitedType": "pea_mega_flame_blue_lv4",
+            "DamageScale": 2,
+            "DamageType": "fire",
+            "Size": {
+                "w": 20,
+                "h": 20
+            }
+        }
+    },
+    {
+        "objclass": "ProjectileProperties",
+        "aliases": [
+            "pea_mega_flame_blue_lv4"
+        ],
+        "objdata": {
+            "Damage": 1000,
+            "DamageScale": 3,
+            "DamageType": "fire",
+            "Size": {
+                "w": 20,
+                "h": 20
+            }
+        }
+    },
+    {
+        "objclass": "ProjectileProperties",
+        "aliases": [
+            "pea_snow_lv4"
+        ],
+        "objdata": {
+            "Damage": 50,
+            "YellowIgnitedType": "pea_lv4",
+            "BlueIgnitedType": "pea_lv4",
+            "ChillDuration": 10,
+            "IceBlockLevel": 1,
+            "Size": {
+                "w": 16,
+                "h": 16
+            }
+        }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "SelectionMethod": "chooser",
+        "PlantExcludeList": [
+            "blover",
+            "hurrikale",
+	        "sunflower",
+	        "twinsunflower",
+	        "sunbean",
+	        "sunshroom",
+	        "primalsunflower",
+	        "solartomato",
+	        "solarsage",
+	        "toadstool",
+	        "goldbloom",
+	        "moonflower",
+	        "goldleaf",
+            "shinevine",
+	        "plantern",
+	        "moonbean",
+            "enlightenmint"
+        ],
+        "PresetPlantList": [
+          {
+            "PlantType": "repeater"
+          }
+        ],
+        "OverrideSeedSlotsCount": 3
+      }
+    },
+    {
+        "objclass": "WaveManagerModuleProperties",
+        "aliases": [
+            "NewWaves"
+        ],
+        "objdata": {
+            "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)",
+            "DynamicZombies": [
+                {
+                    "PointIncrementPerWave": -40,
+                    "StartingPoints": -100,
+                    "StartingWave": 3,
+                    "ZombiePool": [
+                        "RTID(cowboy_armor2_lv3@CurrentLevel)",
+                        "RTID(cowboy_armor4_lv3@CurrentLevel)",
+                        "RTID(west_bull_veteran_lv3@CurrentLevel)",
+                        "RTID(cowboy_gargantuar_lv3@ZombieTypes)",
+                        "RTID(chicken_farmer_lv3@CurrentLevel)",
+                        "RTID(piano_lv3@CurrentLevel)"
+                    ]
+                },
+                {
+                    "PointIncrementPerWave": -25,
+                    "StartingPoints": -100,
+                    "StartingWave": 4,
+                    "ZombiePool": [
+                        "RTID(cowboy_armor2_lv3@CurrentLevel)",
+                        "RTID(cowboy_armor4_lv3@CurrentLevel)",
+                        "RTID(west_bull_veteran_lv3@CurrentLevel)",
+                        "RTID(cowboy_gargantuar_lv3@ZombieTypes)",
+                        "RTID(chicken_farmer_lv3@CurrentLevel)",
+                        "RTID(piano_lv3@CurrentLevel)"
+                    ]
+                },
+                {
+                    "PointIncrementPerWave": -10,
+                    "StartingPoints": -100,
+                    "StartingWave": 5,
+                    "ZombiePool": [
+                        "RTID(cowboy_armor2_lv3@CurrentLevel)",
+                        "RTID(cowboy_armor4_lv3@CurrentLevel)",
+                        "RTID(west_bull_veteran_lv3@CurrentLevel)",
+                        "RTID(cowboy_gargantuar_lv3@ZombieTypes)",
+                        "RTID(chicken_farmer_lv3@CurrentLevel)",
+                        "RTID(piano_lv3@CurrentLevel)"
+                    ]
+                },
+                {},
+                {
+                    "PointIncrementPerWave": 10,
+                    "StartingPoints": 100,
+                    "StartingWave": 5,
+                    "ZombiePool": [
+                        "RTID(cowboy_armor2_lv3@CurrentLevel)",
+                        "RTID(cowboy_armor4_lv3@CurrentLevel)",
+                        "RTID(west_bull_veteran_lv3@CurrentLevel)",
+                        "RTID(cowboy_gargantuar_lv3@ZombieTypes)",
+                        "RTID(chicken_farmer_lv3@CurrentLevel)",
+                        "RTID(piano_lv3@CurrentLevel)"
+                    ]
+                },
+                {
+                    "PointIncrementPerWave": 30,
+                    "StartingPoints": 200,
+                    "StartingWave": 4,
+                    "ZombiePool": [
+                        "RTID(cowboy_armor2_lv3@CurrentLevel)",
+                        "RTID(cowboy_armor4_lv3@CurrentLevel)",
+                        "RTID(west_bull_veteran_lv3@CurrentLevel)",
+                        "RTID(cowboy_gargantuar_lv3@ZombieTypes)",
+                        "RTID(chicken_farmer_lv3@CurrentLevel)",
+                        "RTID(piano_lv3@CurrentLevel)"
+                    ]
+                },
+                {
+                    "PointIncrementPerWave": 60,
+                    "StartingPoints": 400,
+                    "StartingWave": 3,
+                    "ZombiePool": [
+                        "RTID(cowboy_armor2_lv3@CurrentLevel)",
+                        "RTID(west_bull_lv3@CurrentLevel)",
+                        "RTID(cowboy_gargantuar_lv3@CurrentLevel)",
+                        "RTID(chicken_farmer_lv3@CurrentLevel)",
+                        "RTID(piano_lv3@CurrentLevel)"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "aliases": [
+            "cowboy_armor1_lv3"
+        ],
+        "objclass": "ArmorType",
+        "objdata": {
+            "Properties": "RTID(cowboy_armor1_lv3@CurrentLevel)",
+            "ArmorBaseOn": "cowboy_armor1"
+        }
+    },
+    {
+        "aliases": [
+            "cowboy_armor2_lv3"
+        ],
+        "objclass": "ArmorType",
+        "objdata": {
+            "Properties": "RTID(cowboy_armor2_lv3@CurrentLevel)",
+            "ArmorBaseOn": "cowboy_armor2"
+        }
+    },
+    {
+        "aliases": [
+            "cowboy_armor4_lv3"
+        ],
+        "objclass": "ArmorType",
+        "objdata": {
+            "Properties": "RTID(cowboy_armor4_lv3@CurrentLevel)",
+            "ArmorBaseOn": "cowboy_armor4"
+        }
+    },
+    {
+        "objclass": "ArmorProperties",
+        "aliases": [
+            "cowboy_armor1_lv3"
+        ],
+        "objdata": {
+            "isMetal": false,
+            "isIce": false,
+            "Toughness": 1110,
+            "BowlingLevel": 1
+        }
+    },
+    {
+        "objclass": "ArmorProperties",
+        "aliases": [
+            "cowboy_armor2_lv3"
+        ],
+        "objdata": {
+            "isMetal": true,
+            "isIce": false,
+            "Toughness": 3300,
+            "BowlingLevel": 2
+        }
+    },
+    {
+        "objclass": "ArmorProperties",
+        "aliases": [
+            "cowboy_armor4_lv3"
+        ],
+        "objdata": {
+            "isMetal": false,
+            "isIce": false,
+            "Toughness": 6600,
+            "BowlingLevel": 4
+        }
+    },
+    {
+      "aliases": [
+        "cowboy_lv3"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(cowboy_lv3@CurrentLevel)",
+        "ZombieBasedOn": "cowboy"
+      }
+    },
+    {
+      "aliases": [
+        "cowboy_armor1_lv3"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(cowboy_armor1_lv3@CurrentLevel)",
+        "ZombieBasedOn": "cowboy"
+      }
+    },
+    {
+      "aliases": [
+        "cowboy_armor2_lv3"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(cowboy_armor2_lv3@CurrentLevel)",
+        "ZombieBasedOn": "cowboy"
+      }
+    },
+    {
+      "aliases": [
+        "cowboy_armor4_lv3"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(cowboy_armor4_lv3@CurrentLevel)",
+        "ZombieBasedOn": "cowboy"
+      }
+    },
+    {
+      "aliases": [
+        "prospector_lv3"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(prospector_lv3@CurrentLevel)",
+        "ZombieBasedOn": "prospector"
+      }
+    },
+    {
+      "aliases": [
+        "piano_lv3"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(piano_lv3@CurrentLevel)",
+        "ZombieBasedOn": "piano"
+      }
+    },
+    {
+      "aliases": [
+        "poncho_lv3"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(poncho_lv3@CurrentLevel)",
+        "ZombieBasedOn": "poncho"
+      }
+    },
+    {
+      "aliases": [
+        "chicken_farmer_lv3"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(chicken_farmer_lv3@CurrentLevel)",
+        "ZombieBasedOn": "chicken_farmer"
+      }
+    },
+    {
+      "aliases": [
+        "chicken_lv3"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(chicken_lv3@CurrentLevel)",
+        "ZombieBasedOn": "chicken"
+      }
+    },
+    {
+      "aliases": [
+        "west_bull_lv3"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(west_bull_lv3@CurrentLevel)",
+        "ZombieBasedOn": "west_bull"
+      }
+    },
+    {
+      "aliases": [
+        "west_bull_veteran_lv3"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(west_bull_veteran_lv3@CurrentLevel)",
+        "ZombieBasedOn": "west_bull_veteran"
+      }
+    },
+    {
+      "aliases": [
+        "cowboy_gargantuar_lv3"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(cowboy_gargantuar_lv3@CurrentLevel)",
+        "ZombieBasedOn": "cowboy_gargantuar"
+      }
+    },
+    {
+      "aliases": [
+        "cowboy_flag_lv3"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(cowboy_flag_lv3@CurrentLevel)",
+        "ZombieBasedOn": "cowboy_flag"
+      }
+    },
+    {
+      "aliases": [
+        "cowboy_flag_veteran_lv3"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(cowboy_flag_veteran_lv3@CurrentLevel)",
+        "ZombieBasedOn": "cowboy_flag_veteran"
+      }
+    },
+    {
+        "objclass": "ZombieProperties",
+        "aliases": [
+            "cowboy_lv3"
+        ],
+        "objdata": {
+            "ZombieSort": "Normal",
+            "DanceSPSScale": 1.2,
+            "WalkSPS": 0.185,
+            "EatDPS": 300,
+            "Toughness": 570,
+            "WavePointCost": 100,
+            "Weight": 1000,
+            "HitRect": "RTID(CommonHitRect@RectangleProps)",
+            "AttackRect": "RTID(CommonAttackRect@RectangleProps)"
+        }
+    },
+    {
+        "objclass": "ZombieProperties",
+        "aliases": [
+            "cowboy_armor1_lv3"
+        ],
+        "objdata": {
+            "ZombieSort": "Normal",
+            "DanceSPSScale": 1.2,
+            "WalkSPS": 0.185,
+            "EatDPS": 300,
+            "Toughness": 570,
+            "WavePointCost": 200,
+            "Weight": 3000,
+            "HitRect": "RTID(CommonHitRect@RectangleProps)",
+            "AttackRect": "RTID(CommonAttackRect@RectangleProps)",
+            "StartingArmors": [
+                "cowboy_armor1_lv3"
+            ]
+        }
+    },
+    {
+        "objclass": "ZombieProperties",
+        "aliases": [
+            "cowboy_armor2_lv3"
+        ],
+        "objdata": {
+            "ZombieSort": "Normal",
+            "DanceSPSScale": 1.2,
+            "WalkSPS": 0.185,
+            "EatDPS": 300,
+            "Toughness": 570,
+            "WavePointCost": 400,
+            "Weight": 4000,
+            "HitRect": "RTID(CommonHitRect@RectangleProps)",
+            "AttackRect": "RTID(CommonAttackRect@RectangleProps)",
+            "StartingArmors": [
+                "cowboy_armor2_lv3"
+            ]
+        }
+    },
+    {
+        "objclass": "ZombieProperties",
+        "aliases": [
+            "cowboy_armor4_lv3"
+        ],
+        "objdata": {
+            "ZombieSort": "Normal",
+            "DanceSPSScale": 1.2,
+            "WalkSPS": 0.185,
+            "EatDPS": 300,
+            "Toughness": 570,
+            "WavePointCost": 700,
+            "Weight": 4000,
+            "HitRect": "RTID(CommonHitRect@RectangleProps)",
+            "AttackRect": "RTID(CommonAttackRect@RectangleProps)",
+            "StartingArmors": [
+                "cowboy_armor4_lv3"
+            ]
+        }
+    },
+    {
+        "objclass": "ZombieProperties",
+        "aliases": [
+            "cowboy_flag_lv3"
+        ],
+        "objdata": {
+            "ZombieSort": "Normal",
+            "CannotCarryPlantfoodsInWaves": true,
+            "DanceSPSScale": 1.2,
+            "WalkSPS": 0.24,
+            "EatDPS": 300,
+            "Toughness": 570,
+            "WavePointCost": 100,
+            "Weight": 100,
+            "HitRect": "RTID(CommonHitRect@RectangleProps)",
+            "AttackRect": "RTID(CommonAttackRect@RectangleProps)"
+        }
+    },
+    {
+        "objclass": "ZombieProperties",
+        "aliases": [
+            "cowboy_flag_veteran_lv3"
+        ],
+        "objdata": {
+            "ZombieSort": "Normal",
+            "CannotCarryPlantfoodsInWaves": true,
+            "DanceSPSScale": 1.2,
+            "WalkSPS": 0.4,
+            "EatDPS": 900,
+            "Toughness": 1050,
+            "WavePointCost": 100,
+            "Weight": 100,
+            "HitRect": "RTID(CommonHitRect@RectangleProps)",
+            "AttackRect": "RTID(CommonAttackRect@RectangleProps)"
+        }
+    },
+    {
+        "objclass": "ZombieProperties",
+        "aliases": [
+            "prospector_lv3"
+        ],
+        "objdata": {
+            "WalkSPS": 0.16,
+            "EatDPS": 300,
+            "Toughness": 570,
+            "WavePointCost": 200,
+            "Weight": 3000,
+            "LandingStunnTime": 2.5,
+            "ExplodeCountdown": 10,
+            "HitRect": "RTID(CommonHitRect@RectangleProps)",
+            "AttackRect": "RTID(CommonAttackRect@RectangleProps)"
+        }
+    },
+    {
+        "objclass": "ZombieProperties",
+        "aliases": [
+            "piano_lv3"
+        ],
+        "objdata": {
+            "CannotBeSwallowedByChomper": true,
+            "CannotBeEnlightenedBySolarSage": true,
+            "WalkSPS": 0.2,
+            "EatDPS": 12000,
+            "Toughness": 2520,
+            "NormalDeathWhenMowed": true,
+            "ImmuneToGarlic": true,
+            "WavePointCost": 450,
+            "Weight": 2000,
+            "HitRect": "RTID(CowboyPianoHitRect@RectangleProps)",
+            "AttackRect": "RTID(CowboyPianoAttackRect@RectangleProps)"
+        }
+    },
+    {
+        "objclass": "ZombieProperties",
+        "aliases": [
+            "poncho_lv3"
+        ],
+        "objdata": {
+            "WalkSPS": 0.185,
+            "EatDPS": 300,
+            "Toughness": 570,
+            "ShieldToughness": 3300,
+            "PonchoToughness": 60,
+            "ChanceToPlate": 0.5,
+            "WavePointCost": 300,
+            "Weight": 4000,
+            "HitRect": "RTID(CommonHitRect@RectangleProps)",
+            "AttackRect": "RTID(CommonAttackRect@RectangleProps)"
+        }
+    },
+    {
+        "objclass": "ZombieProperties",
+        "aliases": [
+            "chicken_farmer_lv3"
+        ],
+        "objdata": {
+            "WalkSPS": 0.185,
+            "EatDPS": 300,
+            "Toughness": 570,
+            "ChickenTypeName": "chicken_lv3",
+            "ChickeningDuration": 2,
+            "ChickeningDurationVariance": 1,
+            "ChickeningHealthPercentage": 0.8,
+            "ChickeningInterval": 0.2,
+            "ChickeningIntervalVariance": 0.1,
+            "WavePointCost": 350,
+            "Weight": 3000,
+            "HitRect": "RTID(CommonHitRect@RectangleProps)",
+            "AttackRect": "RTID(CommonAttackRect@RectangleProps)"
+        }
+    },
+    {
+        "objclass": "ZombieProperties",
+        "aliases": [
+            "chicken_lv3"
+        ],
+        "objdata": {
+            "CannotBeEnlightenedBySolarSage": true,
+            "KilledByShrinkingViolet": true,
+            "CannotBeGrabbedByPtero": true,
+            "CanBeEasilySwallowedByChomper": true,
+            "ImmuneToSporeShroom": true,
+            "WalkSPS": 2,
+            "WalkSPSVarience": 0,
+            "EatDPS": 150,
+            "Toughness": 3,
+            "DoesNotDamageHeavilyToGarlic": true,
+            "NormalDeathWhenMowed": true,
+            "WavePointCost": 10,
+            "Weight": 0,
+            "HitRect": "RTID(CowboyChickenHitRect@RectangleProps)",
+            "AttackRect": "RTID(CowboyChickenAttackRect@RectangleProps)"
+        }
+    },
+    {
+        "objclass": "ZombieProperties",
+        "aliases": [
+            "west_bull_lv3"
+        ],
+        "objdata": {
+            "CannotBeEnlightenedBySolarSage": true,
+            "ImmuneToSweetPotato": true,
+            "CannotBeGrabbedByPtero": true,
+            "CannotBeSwallowedByChomper": true,
+            "EatDPS": 300,
+            "Toughness": 3900,
+            "NormalDeathWhenMowed": true,
+            "BullRunAgainDelay": 5,
+            "WalkSPS": 0.2,
+            "RushSPS": 1,
+            "ImpThrowDistance": 4,
+            "ImmuneToGarlic": true,
+            "WavePointCost": 600,
+            "Weight": 1000,
+            "HitRect": "RTID(CowboyBullHitRect@RectangleProps)",
+            "AttackRect": "RTID(CowboyBullAttackRect@RectangleProps)"
+        }
+    },
+    {
+        "objclass": "ZombieProperties",
+        "aliases": [
+            "west_bull_veteran_lv3"
+        ],
+        "objdata": {
+            "CannotBeEnlightenedBySolarSage": true,
+            "ImmuneToSweetPotato": true,
+            "CannotBeGrabbedByPtero": true,
+            "CannotBeSwallowedByChomper": true,
+            "EatDPS": 300,
+            "Toughness": 4200,
+            "NormalDeathWhenMowed": true,
+            "BullRunAgainDelay": 5,
+            "WalkSPS": 0.2,
+            "RushSPS": 2,
+            "BullRammingDamage": 6000,
+            "ImpThrowDistance": 4,
+            "ImmuneToGarlic": true,
+            "WavePointCost": 1000,
+            "Weight": 1000,
+            "HitRect": "RTID(CowboyBullHitRect@RectangleProps)",
+            "AttackRect": "RTID(CowboyBullAttackRect@RectangleProps)"
+        }
+    },
+    {
+        "objclass": "ZombieProperties",
+        "aliases": [
+            "cowboy_gargantuar_lv3"
+        ],
+        "objdata": {
+            "CannotBeEnlightenedBySolarSage": true,
+            "ZombieSort": "Gargantuar",
+            "CannotBeGrabbedByPtero": true,
+            "CannotChangeLaneByPowerToss": true,
+            "CannotBeFlickedByPowerToss": true,
+            "CannotBeDraggedByTangleKelp": true,
+            "CannotBeTossedByCitron": true,
+            "CannotBeSwallowedByChomper": true,
+            "CannotCarryPlantfoodsInWaves": true,
+            "SmashDamage": 4500,
+            "LivesInDeepWater": true,
+            "WalkSPS": 0.24,
+            "EatDPS": 300,
+            "Toughness": 10800,
+            "NormalDeathWhenMowed": true,
+            "SplashDamageToZombies": 0,
+            "SplashDamageToPlants": 0,
+            "WavePointCost": 1500,
+            "Weight": 3000,
+            "HitRect": "RTID(GargantuarHitRect@RectangleProps)",
+            "AttackRect": "RTID(GargantuarAttackRect@RectangleProps)"
+        }
+    },
+    {
+        "objclass": "WaveManagerProperties",
+        "aliases": [
+            "WaveManagerProps"
+        ],
+        "objdata": {
+            "FlagWaveInterval": 5,
+            "WaveCount": 10,
+            "SuppressFlagZombie": true,
+            "Waves": [
+              [
+                "RTID(w1zombies@CurrentLevel)"
+              ],
+              [
+                "RTID(w2zombies@CurrentLevel)"
+              ],
+              [
+                "RTID(w3zombies@CurrentLevel)"
+              ],
+              [
+                "RTID(w4zombies@CurrentLevel)"
+              ],
+              [
+                "RTID(w5zombies@CurrentLevel)"
+              ],
+              [
+                "RTID(w6zombies@CurrentLevel)"
+              ],
+              [
+                "RTID(w7zombies@CurrentLevel)"
+              ],
+              [
+                "RTID(w8zombies@CurrentLevel)"
+              ],
+              [
+                "RTID(w9zombies@CurrentLevel)"
+              ],
+              [
+                "RTID(w10zombies@CurrentLevel)"
+              ]
+            ]
+        }
+    },
+    {
+      "aliases": [
+        "w1zombies"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(cowboy_armor1_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(cowboy_armor1_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(cowboy_armor1_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(cowboy_armor2_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(cowboy_armor2_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(cowboy_armor2_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(cowboy_armor2_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(cowboy_armor2_lv3@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "w2zombies"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(cowboy_armor1_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(cowboy_armor1_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(cowboy_armor1_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(cowboy_armor1_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(cowboy_armor1_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(piano_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(piano_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(poncho_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(poncho_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(poncho_lv3@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "w3zombies"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(chicken_farmer_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(cowboy_armor1_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(cowboy_armor1_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(cowboy_armor1_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(cowboy_armor1_lv3@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "w4zombies"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(chicken_farmer_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(prospector_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(prospector_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(prospector_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(prospector_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(prospector_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(prospector_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(prospector_lv3@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "w5zombies"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(piano_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(piano_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(piano_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(piano_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(piano_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(piano_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(piano_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(piano_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(piano_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(cowboy_armor1_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(cowboy_armor1_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(cowboy_armor1_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(cowboy_armor1_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(cowboy_armor1_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(cowboy_armor1_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(poncho_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(poncho_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(poncho_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(poncho_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(poncho_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(poncho_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(poncho_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(poncho_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(cowboy_gargantuar_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(cowboy_gargantuar_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(cowboy_flag_lv3@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "w6zombies"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(prospector_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(prospector_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(prospector_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(prospector_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(prospector_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(prospector_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(prospector_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer_lv3@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "w7zombies"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(piano_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(piano_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(piano_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(piano_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(piano_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(poncho_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(poncho_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(poncho_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(poncho_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(poncho_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(poncho_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(prospector_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(prospector_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(prospector_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(cowboy_gargantuar_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(cowboy_gargantuar_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(cowboy_gargantuar_lv3@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "w8zombies"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(cowboy_armor2_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(cowboy_armor2_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(cowboy_armor2_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(cowboy_armor2_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(cowboy_armor2_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(prospector_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(prospector_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(prospector_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(prospector_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(prospector_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(prospector_lv3@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "w9zombies"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(cowboy_armor2_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(cowboy_armor2_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(cowboy_armor2_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(cowboy_armor2_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(cowboy_armor2_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(piano_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(piano_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(piano_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(piano_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(piano_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(poncho_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(poncho_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(poncho_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(poncho_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(poncho_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(poncho_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(west_bull_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(west_bull_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(west_bull_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(west_bull_lv3@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "w10zombies"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(cowboy_armor1_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(cowboy_armor1_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(cowboy_armor2_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(cowboy_armor2_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(cowboy_armor2_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(piano_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(piano_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(piano_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(poncho_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(poncho_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(poncho_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(prospector_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(prospector_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(prospector_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(prospector_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(prospector_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(prospector_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(cowboy_gargantuar_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(cowboy_gargantuar_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(cowboy_gargantuar_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(cowboy_gargantuar_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(cowboy_gargantuar_lv3@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(cowboy_flag_lv3@CurrentLevel)"
+          }
+        ]
+      }
+    }
+    ]
+}
