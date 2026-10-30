@@ -1,0 +1,174 @@
+{
+    "#comment": "",
+    "objects": [
+        {
+            "objclass": "LevelDefinition",
+            "objdata": {
+                "Loot": "RTID(DefaultLoot@LevelModules)",
+                "IsVasebreaker": true,
+                "Modules": [
+                    "RTID(LevelOfTheDayModule@CurrentLevel)",
+                    "RTID(DefaultZombieWinCondition@LevelModules)",
+                    "RTID(ZombiesDeadWinCon@LevelModules)",
+                    "RTID(VaseBreakerArcade@LevelModules)",
+                    "RTID(ModPlants@.)",
+                    "RTID(puddle@.)",
+                    "RTID(VaseBreakerProps@.)"
+                ],
+                "MusicType": "MiniGame_B",
+                "WrittenBy": "Xiao yao",
+                "Name": "VaseBreaker Tutorial - Level 3",
+                "NormalPresentTable": "egypt_normal_01",
+                "ShinyPresentTable": "egypt_shiny_01",
+                "StageModule": "RTID(ModernStage@LevelModules)"
+            }
+        },
+        {
+            "aliases": [
+                "puddle"
+            ],
+            "objclass": "InitialGridItemProperties",
+            "objdata": {
+                "InitialGridItemMatrixes": [
+                    {
+                        "GridMatrix": [
+                            "011110000",
+                            "011110000",
+                            "011110000",
+                            "011110000",
+                            "011110000"
+                        ],
+                        "TypeName": "potholepuddle"
+                    }
+                ]
+            }
+        },
+        {
+            "objclass": "VaseBreakerPresetProperties",
+            "aliases": [
+                "VaseBreakerProps"
+            ],
+            "objdata": {
+                "MinColumnIndex": 5,
+                "MaxColumnIndex": 8,
+                "Vases": [
+                    {
+                        "ZombieTypeName": "duckytube",
+                        "Count": 3
+                    },
+                    {
+                        "ZombieTypeName": "duckytube_armor1",
+                        "Count": 2
+                    },
+                    {
+                        "ZombieTypeName": "modern_balloon",
+                        "Count": 2
+                    },
+                    {
+                        "ZombieTypeName": "beach_snorkel",
+                        "Count": 2
+                    },
+                    {
+                        "PlantTypeName": "lilypad",
+                        "Count": 3
+                    },
+                    {
+                        "PlantTypeName": "threepeater",
+                        "Count": 3
+                    },
+                    {
+                        "PlantTypeName": "cactus",
+                        "Count": 2
+                    },
+                    {
+                        "PlantTypeName": "tanglekelp",
+                        "Count": 3
+                    }
+                ],
+                "NumColoredPlantVases": 4,
+                "NumColoredZombieVases": 0
+            }
+        },
+        {
+            "aliases": [
+                "ModPlants"
+            ],
+            "objclass": "PlantModifierProperties",
+            "objdata": {
+                "HidePlantfood": true,
+                "SuppressParticle": true,
+                "List": [
+                    {
+                        "Type": "puffshroom",
+                        "NewObjdata": {
+                            "PeaType": "puffshroom_spore",
+                            "PeaTypePlantfood": "puffshroom_spore",
+                            "ShootInterval": 1.4,
+                            "ShootIntervalAdditional": 0.15,
+                            "PlantfoodPeaCount": 0,
+                            "LifeSpan": 9999,
+                            "Cooldown": 7.5,
+                            "CooldownFrom": 1,
+                            "SunCost": 0,
+                            "BeghouledCost": 300,
+                            "Toughness": 200,
+                            "Family": "Poison"
+                        }
+                    },
+                    {
+                        "Type": "fumeshroom",
+                        "NewObjdata": {
+                            "Damage": 20,
+                            "ShootInterval": 1.4,
+                            "ShootIntervalAdditional": 0.15,
+                            "PlantfoodDPS": 0,
+                            "PlantfoodKnockbackSPS": 0,
+                            "PlantfoodDuration": 0,
+                            "DetectDistance": 4.5,
+                            "ShootDistance": 4.5,
+                            "Cooldown": 7.5,
+                            "CooldownFrom": 1,
+                            "SunCost": 75,
+                            "BeghouledCost": 500,
+                            "Toughness": 300,
+                            "Family": "Poison"
+                        }
+                    },
+                    {
+                        "Type": "hypnoshroom",
+                        "NewObjdata": {
+                            "HypnoedZombieDamageScale": 0.95,
+                            "Cooldown": 30,
+                            "CooldownFrom": 0.75,
+                            "SunCost": 75,
+                            "BeghouledCost": 1000,
+                            "Toughness": 300,
+                            "Family": "Magic"
+                        }
+                    },
+                    {
+                        "Type": "icebloom",
+                        "NewObjdata": {
+                            "CannotBeSheepenedByWizard": true,
+                            "Cooldown": 50,
+                            "CooldownFrom": 0.5,
+                            "SunCost": 75,
+                            "BeghouledCost": 1000,
+                            "Toughness": 300,
+                            "Family": "Cold",
+                            "ImmuneToBoomBox": true,
+                            "ImmuneToIceblock": true,
+                            "HypnotizingProjectileCount": 0,
+                            "HypnotizingProjectileType": "icebloom",
+                            "FreezeDuration": 4,
+                            "ChillDuration": 15,
+                            "DamageFullBoard": 20,
+                            "Damage3x3": 20
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "version": 1
+}
