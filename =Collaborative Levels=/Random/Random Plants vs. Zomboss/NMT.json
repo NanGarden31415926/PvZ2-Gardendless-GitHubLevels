@@ -1,0 +1,336 @@
+{
+    "objects": [
+        {
+            "objclass": "LevelDefinition",
+            "objdata": {
+                "DescriptionMultiLanguage": {
+                    "en": "<PLAYERNAME>'s Rematch with Zombot Multi-stage Masher 2.0",
+                    "zh": "<PLAYERNAME>与节奏引领者2.0的重赛"
+                },
+                "FirstIntroNarrative": "RANDOM_INTRO_EIGHTIES",
+                "FirstOutroNarrative": "RANDOM_INTRO_EIGHTIES",
+                "LoadDefaultMusic": false,
+                "Loot": "RTID(DefaultLoot@LevelModules)",
+                "Modules": [
+                    "RTID(EightiesZombossIntro@LevelModules)",
+                    "RTID(ConveyorBelt@CurrentLevel)",
+                    "RTID(ZombossBattle@CurrentLevel)",
+                    "RTID(FrontLawnMowers@LevelModules)",
+                    "RTID(RandomImitaterAdditional@CurrentLevel)",
+                    "RTID(RandomImitater@LevelModules)",
+                    "RTID(DefaultZombieWinCondition@LevelModules)",
+                    "RTID(NewWaves@CurrentLevel)",
+                    "RTID(Speakers@CurrentLevel)"
+                ],
+                "NameMultiLanguage": {
+                    "en": "The Discord of Chance",
+                    "zh": "变数不谐"
+                },
+                "NormalPresentTable": "egypt_normal_01",
+                "WrittenBy": "SansGrinder",
+                "ForceToWorldMap": true,
+                "RepeatPlayForceToWorldMap": true,
+                "ShinyPresentTable": "egypt_shiny_01",
+                "StageModule": "RTID(EightiesStage@LevelModules)",
+                "VictoryModule": "RTID(ZombossVictoryOutro@LevelModules)"
+            }
+        },
+        {
+            "aliases": [
+                "RANDOM_INTRO_EIGHTIES"
+            ],
+            "objclass": "NarrativeProperties",
+            "objdata": {
+                "Flow": [
+                    {
+                        "Character": "winnie",
+                        "Action": "NPC_ENTER"
+                    },
+                    {
+                        "Character": "crazydave",
+                        "Action": "NPC_ENTER"
+                    },
+                    {
+                        "Character": "winnie",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "Warning! I've noted some disturbingly discord notes!",
+                            "zh": "警告！我注意到了一些极其不和谐的音符！"
+                        }
+                    },
+                    {
+                        "Character": "crazydave",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "...... what is that supposed to mean?",
+                            "zh": "……那是什么意思？"
+                        }
+                    },
+                    {
+                        "Character": "winnie",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "Dr. Zomboss might have improved his speakers!",
+                            "zh": "僵尸博士可能升级了他的音响！"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "RANDOM_OUTRO_EIGHTIES"
+            ],
+            "objclass": "NarrativeProperties",
+            "objdata": {
+                "Flow": [
+                    {
+                        "Character": "zombossicon",
+                        "Action": "NPC_ENTER"
+                    },
+                    {
+                        "Character": "zombossicon",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "What!? Not even my improved Eighties Speaker with Eighties Speaker Wave 2.0 could defeat you!?",
+                            "zh": "什么？就连我的「超级无敌炫酷音波魔音音响」都无法战胜你吗？"
+                        }
+                    },
+                    {
+                        "Character": "zombossicon",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "Aarrgh! Whatever! You're not going to survive what comes next!",
+                            "zh": "无所谓了，你是不可能从我手里活下来的！"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "eighties_speaker_wave"
+            ],
+            "objclass": "ProjectileType",
+            "objdata": {
+                "ProjectileRedirection": [
+                    {
+                        "Type": "shoot",
+                        "Weight": 1
+                    },
+                    {
+                        "Type": "RTID(eighties_speaker_wave@ProjectileTypes)",
+                        "Weight": 1
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "shoot"
+            ],
+            "objclass": "ProjectileType",
+            "objdata": {
+                "ProjectileBasedOn": "eighties_gargantuar_wave",
+                "Props": "RTID(shoot@CurrentLevel)"
+            }
+        },
+        {
+            "aliases": [
+                "shoot"
+            ],
+            "objclass": "ProjectileProperties",
+            "objdata": {
+                "Damage": 8001,
+                "ProjectileEmissions": [
+                    {
+                        "Type": "stars",
+                        "Count": 25
+                    }
+                ],
+                "Size": {
+                    "w": 20,
+                    "h": 20
+                },
+                "CannotBeReversedByJester": true,
+                "DetectsEaterDetectDisabledPlants": true
+            }
+        },
+        {
+            "aliases": [
+                "stars"
+            ],
+            "objclass": "ProjectileType",
+            "objdata": {
+                "ProjectileRedirection": [
+                    {
+                        "Type": "star",
+                        "Weight": 1
+                    },
+                    {
+                        "Type": "star1",
+                        "Weight": 1
+                    },
+                    {
+                        "Type": "star2",
+                        "Weight": 1
+                    },
+                    {
+                        "Type": "pinkstar",
+                        "Weight": 1
+                    },
+                    {
+                        "Type": "pinkstar1",
+                        "Weight": 1
+                    },
+                    {
+                        "Type": "pinkstar2",
+                        "Weight": 1
+                    },
+                    {
+                        "Type": "star_pf",
+                        "Weight": 1
+                    },
+                    {
+                        "Type": "pinkstar_pf",
+                        "Weight": 1
+                    },
+                    {
+                        "Type": "shootingstar",
+                        "Weight": 1
+                    },
+                    {
+                        "Type": "shootingstar1",
+                        "Weight": 1
+                    },
+                    {
+                        "Type": "shootingstar2",
+                        "Weight": 1
+                    },
+                    {
+                        "Type": "shootingstar_pf",
+                        "Weight": 1
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Speakers"
+            ],
+            "objclass": "GravestoneProperties",
+            "objdata": {
+                "ForceSpawnData": [
+                    {
+                        "GridX": 6,
+                        "GridY": 0,
+                        "TypeName": "speaker"
+                    },
+                    {
+                        "GridX": 6,
+                        "GridY": 1,
+                        "TypeName": "speaker"
+                    },
+                    {
+                        "GridX": 6,
+                        "GridY": 2,
+                        "TypeName": "speaker"
+                    },
+                    {
+                        "GridX": 6,
+                        "GridY": 3,
+                        "TypeName": "speaker"
+                    },
+                    {
+                        "GridX": 6,
+                        "GridY": 4,
+                        "TypeName": "speaker"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "ZombossBattle"
+            ],
+            "objclass": "ZombossBattleModuleProperties",
+            "objdata": {
+                "DiscardBossMusic": true,
+                "ReservedColumnCount": 2,
+                "ZombossDeathColumn": 5,
+                "ZombossDeathRow": 3,
+                "ZombossMechType": "zombossmech_eighties2",
+                "ZombossSpawnGridPosition": {
+                    "mX": 6,
+                    "mY": 3
+                }
+            }
+        },
+        {
+            "aliases": [
+                "ConveyorBelt"
+            ],
+            "objclass": "ConveyorSeedBankProperties",
+            "objdata": {
+                "DropDelayConditions": [
+                    {
+                        "Delay": 3,
+                        "MaxPackets": 0
+                    },
+                    {
+                        "Delay": 6,
+                        "MaxPackets": 3
+                    },
+                    {
+                        "Delay": 12,
+                        "MaxPackets": 8
+                    }
+                ],
+                "InitialPlantList": [
+                    {
+                        "PlantType": "imitater",
+                        "Weight": 100
+                    }
+                ],
+                "SpeedConditions": [
+                    {
+                        "MaxPackets": 0,
+                        "Speed": 100
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "RandomImitaterAdditional"
+            ],
+            "objclass": "RandomImitaterProperties",
+            "objdata": {
+                "ExcludeListSunProducers": "true",
+                "ExtraRandomPlantExcludeList": [
+                    "springbean",
+                    "lilypad"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "NewWaves"
+            ],
+            "objclass": "WaveManagerModuleProperties",
+            "objdata": {
+                "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+            }
+        },
+        {
+            "aliases": [
+                "WaveManagerProps"
+            ],
+            "objclass": "WaveManagerProperties",
+            "objdata": {
+                "Waves": []
+            }
+        }
+    ],
+    "version": 1
+}
