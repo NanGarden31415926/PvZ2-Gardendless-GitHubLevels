@@ -1,129 +1,213 @@
 {
-  "#comment": "Egypt Zomboss 2.0",
-  "objects": [
-    {
-      "objclass": "LevelDefinition",
-      "objdata": {
-        "Description": "Lucy ZombossAE",
-        "FirstIntroNarrative": "EGYPT_35_INTRO",
-        "FirstOutroNarrative": "EGYPT_35_OUTRO",
-        "LevelNumber": 10,
-        "LoadDefaultMusic": false,
-        "Loot": "RTID(DefaultLoot@LevelModules)",
-        "Modules": [
-          "RTID(StandardIntro@LevelModules)",
-          "RTID(ZombossIntro@LevelModules)",
-          "RTID(Gravestones@CurrentLevel)",
-          "RTID(ConveyorBelt@CurrentLevel)",
-          "RTID(ZombossBattle@CurrentLevel)",
-          "RTID(DarkMowers@LevelModules)",
-          "RTID(RandomImitaterAdditional@CurrentLevel)",
-          "RTID(RandomImitater@LevelModules)",
-          "RTID(DefaultZombieWinCondition@LevelModules)",
-          "RTID(NewWaves@CurrentLevel)"
-        ],
-        "Name": "Zomboss Battle Of Luck-DA",
-        "NormalPresentTable": "egypt_normal_01",
-        "WrittenBy": "莱池_余垛",
-        "ForceToWorldMap": true,
-        "RepeatPlayForceToWorldMap": true,
-        "ShinyPresentTable": "egypt_shiny_01",
-        "StageModule": "RTID(DarkStage@LevelModules)",
-        "VictoryModule": "RTID(ZombossVictoryOutro@LevelModules)"
-      }
-    },
-    {
-      "aliases": [
-        "Gravestones"
-      ],
-      "objclass": "GravestoneProperties",
-      "objdata": {
-        "GravestoneCount": 10,
-        "SpawnColumnEnd": 7,
-        "SpawnColumnStart": 6
-      }
-    },
-    {
-      "aliases": [
-        "ZombossBattle"
-      ],
-      "objclass": "ZombossBattleModuleProperties",
-      "objdata": {
-        "ReservedColumnCount": 2,
-        "ZombossDeathColumn": 5,
-        "ZombossDeathRow": 3,
-        "ZombossMechType": "zombossmech_dark2",
-        "ZombossSpawnGridPosition": {
-          "mX": 6,
-          "mY": 3
+    "objects": [
+        {
+            "objclass": "LevelDefinition",
+            "objdata": {
+                "DescriptionMultiLanguage": {
+                    "en": "<PLAYERNAME>'s Rematch with Zombot Dark Dragon 2.0",
+                    "zh": "<PLAYERNAME>与巨龙驾驭者2.0的重赛"
+                },
+                "FirstIntroNarrative": "RANDOM_INTRO_DARK",
+                "FirstOutroNarrative": "RANDOM_OUTRO_DARK",
+                "LoadDefaultMusic": false,
+                "Loot": "RTID(DefaultLoot@LevelModules)",
+                "Modules": [
+                    "RTID(StandardIntro@LevelModules)",
+                    "RTID(ZombossIntro@LevelModules)",
+                    "RTID(Gravestones@CurrentLevel)",
+                    "RTID(ConveyorBelt@CurrentLevel)",
+                    "RTID(ZombossBattle@CurrentLevel)",
+                    "RTID(DarkMowers@LevelModules)",
+                    "RTID(RandomImitaterAdditional@CurrentLevel)",
+                    "RTID(RandomImitater@LevelModules)",
+                    "RTID(DefaultZombieWinCondition@LevelModules)",
+                    "RTID(NewWaves@CurrentLevel)"
+                ],
+                "NameMultiLanguage": {
+                    "en": "The Dragonfire Lottery",
+                    "zh": "龙息彩票"
+                },
+                "NormalPresentTable": "egypt_normal_01",
+                "WrittenBy": "莱池_余垛",
+                "ForceToWorldMap": true,
+                "RepeatPlayForceToWorldMap": true,
+                "ShinyPresentTable": "egypt_shiny_01",
+                "StageModule": "RTID(DarkStage@LevelModules)",
+                "VictoryModule": "RTID(ZombossVictoryOutro@LevelModules)"
+            }
+        },
+        {
+            "aliases": [
+                "RANDOM_INTRO_DARK"
+            ],
+            "objclass": "NarrativeProperties",
+            "objdata": {
+                "Flow": [
+                    {
+                        "Character": "zombossicon",
+                        "Action": "NPC_ENTER"
+                    },
+                    {
+                        "Character": "zombossicon",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "Embrace the fire, and thou shalt brave thy doom",
+                            "zh": "拥抱烈焰吧，汝当直面汝之末日"
+                        }
+                    },
+                    {
+                        "Character": "zombossicon",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "Shouldst thou resist, thy soul shall be shattered",
+                            "zh": "若汝胆敢抵抗，汝之灵魂必遭粉碎"
+                        }
+                    },
+                    {
+                        "Character": "zombossicon",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "The dragon's breath shall purify thy soul with the purest fire",
+                            "zh": "龙息将以至纯之火，净化汝之灵魂"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "RANDOM_OUTRO_DARK"
+            ],
+            "objclass": "NarrativeProperties",
+            "objdata": {
+                "Flow": [
+                    {
+                        "Character": "winnie",
+                        "Action": "NPC_ENTER"
+                    },
+                    {
+                        "Character": "crazydave",
+                        "Action": "NPC_ENTER"
+                    },
+                    {
+                        "Character": "crazydave",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "It's finally over! Now, where's my rules card?",
+                            "zh": "终于结束了！好了，我的规则牌呢？"
+                        }
+                    },
+                    {
+                        "Character": "winnie",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "You meant Rouxls Kaard?",
+                            "zh": "你在找卢斯卡德吗？"
+                        }
+                    },
+                    {
+                        "Character": "crazydave",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "No...? What's that?",
+                            "zh": "没啊……那是啥东西？"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Gravestones"
+            ],
+            "objclass": "GravestoneProperties",
+            "objdata": {
+                "GravestoneCount": 10,
+                "SpawnColumnEnd": 7,
+                "SpawnColumnStart": 6
+            }
+        },
+        {
+            "aliases": [
+                "ZombossBattle"
+            ],
+            "objclass": "ZombossBattleModuleProperties",
+            "objdata": {
+                "ReservedColumnCount": 2,
+                "ZombossDeathColumn": 5,
+                "ZombossDeathRow": 3,
+                "ZombossMechType": "zombossmech_dark2",
+                "ZombossSpawnGridPosition": {
+                    "mX": 6,
+                    "mY": 3
+                }
+            }
+        },
+        {
+            "aliases": [
+                "ConveyorBelt"
+            ],
+            "objclass": "ConveyorSeedBankProperties",
+            "objdata": {
+                "DropDelayConditions": [
+                    {
+                        "Delay": 3,
+                        "MaxPackets": 0
+                    },
+                    {
+                        "Delay": 6,
+                        "MaxPackets": 3
+                    },
+                    {
+                        "Delay": 12,
+                        "MaxPackets": 8
+                    }
+                ],
+                "InitialPlantList": [
+                    {
+                        "PlantType": "imitater",
+                        "Weight": 40
+                    }
+                ],
+                "SpeedConditions": [
+                    {
+                        "MaxPackets": 0,
+                        "Speed": 100
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "RandomImitaterAdditional"
+            ],
+            "objclass": "RandomImitaterProperties",
+            "objdata": {
+                "ExcludeListSunProducers": "true",
+                "ExtraRandomPlantExcludeList": [
+                    "lilypad",
+                    "springbean"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "NewWaves"
+            ],
+            "objclass": "WaveManagerModuleProperties",
+            "objdata": {
+                "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+            }
+        },
+        {
+            "aliases": [
+                "WaveManagerProps"
+            ],
+            "objclass": "WaveManagerProperties",
+            "objdata": {
+                "Waves": []
+            }
         }
-      }
-    },
-    {
-      "aliases": [
-        "ConveyorBelt"
-      ],
-      "objclass": "ConveyorSeedBankProperties",
-      "objdata": {
-        "DropDelayConditions": [
-          {
-            "Delay": 3,
-            "MaxPackets": 0
-          },
-          {
-            "Delay": 6,
-            "MaxPackets": 3
-          },
-          {
-            "Delay": 12,
-            "MaxPackets": 8
-          }
-        ],
-        "InitialPlantList": [
-          {
-            "PlantType": "imitater",
-            "Weight": 40
-          }
-        ],
-        "SpeedConditions": [
-          {
-            "MaxPackets": 0,
-            "Speed": 100
-          }
-        ]
-      }
-    },
-    {
-      "aliases": [
-        "RandomImitaterAdditional"
-      ],
-      "objclass": "RandomImitaterProperties",
-      "objdata": {
-        "ExcludeListSunProducers": "true",
-        "ExtraRandomPlantExcludeList": [
-          "lilypad",
-          "springbean"
-        ]
-      }
-    },
-    {
-      "aliases": [
-        "NewWaves"
-      ],
-      "objclass": "WaveManagerModuleProperties",
-      "objdata": {
-        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
-      }
-    },
-    {
-      "aliases": [
-        "WaveManagerProps"
-      ],
-      "objclass": "WaveManagerProperties",
-      "objdata": {
-        "Waves": []
-      }
-    }
-  ],
-  "version": 1
+    ],
+    "version": 1
 }

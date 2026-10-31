@@ -1,0 +1,1849 @@
+{
+  "#comment": "UmbrellaLeaf 4",
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "[PLAYERS_ATTEMPT_TO_GET_PLANT]",
+        "LevelNumber": 4,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(StandardIntro@LevelModules)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(ConveyorBelt@CurrentLevel)",
+          "RTID(NewWaves@CurrentLevel)"
+        ],
+        "PlantToIntroduce": "dragonbruit",
+        "Name": "[EPIC_PLANT_DEMO_LEVEL_NAME]",
+        "MusicType": "MiniGame_A",
+        "WrittenBy": "蔓逐I蝶舞",
+        "StageModule": "RTID(ModernStage@LevelModules)"
+      }
+    },
+    {
+      "aliases": [
+        "ConveyorBelt"
+      ],
+      "objclass": "ConveyorSeedBankProperties",
+      "objdata": {
+        "DropDelayConditions": [
+          {
+            "Delay": 3,
+            "MaxPackets": 2
+          },
+          {
+            "Delay": 6,
+            "MaxPackets": 4
+          },
+          {
+            "Delay": 12,
+            "MaxPackets": 8
+          }
+        ],
+        "InitialPlantList": [
+          {
+            "MaxCount": 2,
+            "MaxWeightFactor": 0,
+            "PlantType": "moonflower",
+            "Weight": 50
+          },
+          {
+            "MaxCount": 2,
+            "MaxWeightFactor": 0,
+            "PlantType": "dragonbruit",
+            "Weight": 5
+          }
+        ],
+        "SpeedConditions": [
+          {
+            "MaxPackets": 0,
+            "Speed": 120
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {},
+          {},
+          {},
+          {},
+          {
+            "PointIncrementPerWave": 20,
+            "StartingPoints": 200,
+            "StartingWave": 5,
+            "ZombiePool": [
+              "RTID(camel_onehump@ZombieTypes)",
+              "RTID(prospector@ZombieTypes)",
+              "RTID(zomboni@ZombieTypes)",
+              "RTID(dino_imp@ZombieTypes)",
+              "RTID(tutorial_armor1@ZombieTypes)",
+              "RTID(modern_newspaper@ZombieTypes)",
+              "RTID(iceage_gargantuar@ZombieTypes)",
+              "RTID(newspaper_veteran@ZombieTypes)",
+              "RTID(modern_balloon@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 40,
+            "StartingPoints": 400,
+            "StartingWave": 4,
+            "ZombiePool": [
+              "RTID(camel_onehump@ZombieTypes)",
+              "RTID(prospector@ZombieTypes)",
+              "RTID(zomboni@ZombieTypes)",
+              "RTID(dino_imp@ZombieTypes)",
+              "RTID(tutorial_armor1@ZombieTypes)",
+              "RTID(tutorial_armor2@ZombieTypes)",
+              "RTID(iceage_gargantuar@ZombieTypes)",
+              "RTID(modern_newspaper@ZombieTypes)",
+              "RTID(newspaper_veteran@ZombieTypes)",
+              "RTID(modern_balloon@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 100,
+            "StartingPoints": 600,
+            "StartingWave": 3,
+            "ZombiePool": [
+              "RTID(camel_onehump@ZombieTypes)",
+              "RTID(prospector@ZombieTypes)",
+              "RTID(zomboni@ZombieTypes)",
+              "RTID(dino_imp@ZombieTypes)",
+              "RTID(tutorial_armor2@ZombieTypes)",
+              "RTID(iceage_gargantuar@ZombieTypes)",
+              "RTID(modern_newspaper@ZombieTypes)",
+              "RTID(newspaper_veteran@ZombieTypes)",
+              "RTID(modern_balloon@ZombieTypes)"
+            ]
+          }
+        ],
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 4,
+        "FlagWaveVeteranOverrideTypes": [
+          0,
+          0,
+          1
+        ],
+        "WaveCount": 12,
+        "WaveSpendingPointIncrement": 50,
+        "WaveSpendingPoints": 100,
+        "Waves": [
+          [
+            "RTID(Wave1@CurrentLevel)",
+            "RTID(Wave1ModConveyor0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)",
+            "RTID(Wave2ModConveyor0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)",
+            "RTID(Wave3ModConveyor0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)",
+            "RTID(Wave4SpiderRainEvent0@CurrentLevel)",
+            "RTID(Wave4ModConveyor0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)",
+            "RTID(Wave5PortalsEvent0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)",
+            "RTID(Wave6PortalsEvent0@CurrentLevel)",
+            "RTID(Wave6PortalsEvent1@CurrentLevel)",
+            "RTID(Wave6PortalsEvent2@CurrentLevel)",
+            "RTID(Wave6ModConveyor0@CurrentLevel)",
+            "RTID(Wave6SpiderRainEvent0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)",
+            "RTID(Wave7ModConveyor0@CurrentLevel)",
+            "RTID(Wave7SpiderRainEvent0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)",
+            "RTID(Wave8PortalsEvent0@CurrentLevel)",
+            "RTID(Wave8PortalsEvent1@CurrentLevel)",
+            "RTID(Wave8ModConveyor0@CurrentLevel)",
+            "RTID(Wave8SpiderRainEvent0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)",
+            "RTID(Wave9PortalsEvent0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)",
+            "RTID(Wave10SpiderRainEvent0@CurrentLevel)",
+            "RTID(Wave10PortalsEvent0@CurrentLevel)",
+            "RTID(Wave10ModConveyor0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave11@CurrentLevel)",
+            "RTID(Wave11PortalsEvent0@CurrentLevel)",
+            "RTID(Wave11PortalsEvent1@CurrentLevel)",
+            "RTID(Wave11PortalsEvent2@CurrentLevel)",
+            "RTID(Wave11PortalsEvent3@CurrentLevel)",
+            "RTID(Wave11ModConveyor0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave12@CurrentLevel)",
+            "RTID(Wave12PortalsEvent0@CurrentLevel)",
+            "RTID(Wave12PortalsEvent1@CurrentLevel)",
+            "RTID(Wave12PortalsEvent2@CurrentLevel)",
+            "RTID(Wave12PortalsEvent3@CurrentLevel)",
+            "RTID(Wave12PortalsEvent4@CurrentLevel)",
+            "RTID(Wave12PortalsEvent5@CurrentLevel)",
+            "RTID(Wave12PortalsEvent6@CurrentLevel)",
+            "RTID(Wave12PortalsEvent7@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Row": "1",
+            "Type": "RTID(tutorial_armor4@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(tutorial_armor4@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(tutorial_armor4@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(dino_imp@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 1,
+        "DynamicPlantfood": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          0
+        ],
+        "Zombies": [
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(tutorial_armor2@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 1,
+        "DynamicPlantfood": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(camel_onehump@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(zomboni@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(tutorial_armor4@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(newspaper_veteran@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(tutorial_armor4@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(tutorial_armor4@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(prospector@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(modern_newspaper@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(tutorial_armor2@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 1,
+        "DynamicPlantfood": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(tutorial_armor2@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(tutorial_armor2@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(newspaper_veteran@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_imp@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 1,
+        "DynamicPlantfood": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        "Zombies": [
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(zomboni@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(modern_superfanimp@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(modern_allstar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(camel_onehump@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(tutorial_armor4@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(tutorial_armor4@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(tutorial_armor4@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave7"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Row": "1",
+            "Type": "RTID(tutorial_armor4@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(tutorial_armor4@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(tutorial_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(camel_onehump@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(camel_onehump@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(zomboni@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(zomboni@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(iceage_gargantuar@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(modern_superfanimp@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(modern_allstar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_armor4@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(prospector@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(prospector@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(newspaper_veteran@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave8"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(tutorial_armor2@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(zomboni@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(zomboni@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(iceage_gargantuar@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(modern_superfanimp@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(modern_allstar@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(tutorial_armor4@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(prospector@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(prospector@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(prospector@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(newspaper_veteran@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(prospector@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(dino_imp@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(dino_imp@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave9"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(modern_newspaper@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(prospector@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(zomboni@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(newspaper_veteran@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(newspaper_veteran@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(newspaper_veteran@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave10"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(zomboni@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(zomboni@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(zomboni@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(zomboni@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(zomboni@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(tutorial_armor2@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(tutorial_armor2@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(camel_onehump@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(camel_onehump@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(modern_allstar@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(tutorial_armor2@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(tutorial_armor2@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(modern_superfanimp@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(modern_superfanimp@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(modern_allstar@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(iceage_gargantuar@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(iceage_gargantuar@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(dino_imp@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(dino_imp@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(dino_imp@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(dino_imp@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave11"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(modern_superfanimp@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(prospector@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(zomboni@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(zomboni@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(tutorial_armor2@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(modern_newspaper@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_armor2@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(prospector@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(modern_superfanimp@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(modern_superfanimp@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(modern_allstar@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(iceage_gargantuar@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(newspaper_veteran@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave12"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Row": "1",
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(prospector@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(prospector@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(modern_superfanimp@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(modern_superfanimp@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(modern_superfanimp@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(camel_onehump@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(modern_allstar@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(zomboni@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(tutorial_armor2@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(zomboni@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(zomboni@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(zomboni@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(camel_onehump@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(modern_superfanimp@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(modern_allstar@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(modern_superfanimp@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(modern_allstar@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(modern_allstar@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(modern_allstar@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(modern_superfanimp@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(iceage_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_gargantuar@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(tutorial_armor2@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(tutorial_armor2@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(newspaper_veteran@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(newspaper_veteran@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(newspaper_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(prospector@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(zomboni@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(zomboni@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(camel_onehump@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(camel_onehump@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(camel_onehump@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(camel_onehump@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(prospector@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(prospector@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(prospector@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(prospector@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(prospector@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_armor2@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(camel_onehump@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(camel_onehump@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(camel_onehump@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave1ModConveyor0"
+      ],
+      "objclass": "ModifyConveyorWaveActionProps",
+      "objdata": {
+        "Add": [
+          {
+            "MaxCount": 1,
+            "MaxWeightFactor": 0,
+            "Type": "RTID(iceburg@PlantTypes)",
+            "Weight": 5
+          },
+          {
+            "MaxCount": 3,
+            "MaxWeightFactor": 0,
+            "Type": "RTID(dragonbruit@PlantTypes)",
+            "Weight": 40
+          },
+          {
+            "MaxCount": 6,
+            "MaxWeightFactor": 0,
+            "Type": "RTID(dragonbruit@PlantTypes)",
+            "Weight": 60
+          }
+        ],
+        "Remove": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave2ModConveyor0"
+      ],
+      "objclass": "ModifyConveyorWaveActionProps",
+      "objdata": {
+        "Add": [
+          {
+            "Type": "RTID(dragonbruit@PlantTypes)",
+            "Weight": 6
+          },
+          {
+            "Type": "RTID(gloomvine@PlantTypes)",
+            "Weight": 8
+          },
+          {
+            "MaxCount": 1,
+            "MaxWeightFactor": 0,
+            "Type": "RTID(empea@PlantTypes)",
+            "Weight": 7
+          },
+          {
+            "MaxCount": 1,
+            "MaxWeightFactor": 0,
+            "Type": "RTID(dragonbruit@PlantTypes)",
+            "Weight": 30
+          },
+          {
+            "MaxCount": 5,
+            "MaxWeightFactor": 0,
+            "Type": "RTID(snowpea@PlantTypes)",
+            "Weight": 30
+          }
+        ],
+        "Remove": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave3ModConveyor0"
+      ],
+      "objclass": "ModifyConveyorWaveActionProps",
+      "objdata": {
+        "Add": [
+          {
+            "MaxCount": 1,
+            "MaxWeightFactor": 0,
+            "Type": "RTID(moonflower@PlantTypes)",
+            "Weight": 40
+          },
+          {
+            "MaxCount": 1,
+            "MaxWeightFactor": 0,
+            "Type": "RTID(dragonbruit@PlantTypes)",
+            "Weight": 30
+          },
+          {
+            "MaxCount": 10,
+            "MaxWeightFactor": 0,
+            "MinCount": 5,
+            "MinWeightFactor": 4,
+            "Type": "RTID(holonut@PlantTypes)",
+            "Weight": 5
+          },
+          {
+            "MaxCount": 3,
+            "MaxWeightFactor": 0,
+            "Type": "RTID(gloomvine@PlantTypes)",
+            "Weight": 60
+          }
+        ],
+        "Remove": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave4ModConveyor0"
+      ],
+      "objclass": "ModifyConveyorWaveActionProps",
+      "objdata": {
+        "Add": [
+          {
+            "MaxCount": 3,
+            "MaxWeightFactor": 0,
+            "Type": "RTID(dragonbruit@PlantTypes)",
+            "Weight": 30
+          },
+          {
+            "MaxCount": 1,
+            "MaxWeightFactor": 0,
+            "Type": "RTID(intensivecarrot@PlantTypes)",
+            "Weight": 7
+          }
+        ],
+        "Remove": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave6ModConveyor0"
+      ],
+      "objclass": "ModifyConveyorWaveActionProps",
+      "objdata": {
+        "Add": [
+          {
+            "MaxCount": 2,
+            "MaxWeightFactor": 0,
+            "Type": "RTID(dragonbruit@PlantTypes)",
+            "Weight": 80
+          },
+          {
+            "MaxCount": 2,
+            "MaxWeightFactor": 0,
+            "Type": "RTID(coldsnapdragon@PlantTypes)",
+            "Weight": 100
+          }
+        ],
+        "Remove": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave7ModConveyor0"
+      ],
+      "objclass": "ModifyConveyorWaveActionProps",
+      "objdata": {
+        "Add": [
+          {
+            "Type": "RTID(snowpea@PlantTypes)",
+            "Weight": 6
+          },
+          {
+            "MaxCount": 8,
+            "MaxWeightFactor": 0,
+            "Type": "RTID(dragonbruit@PlantTypes)",
+            "Weight": 40
+          }
+        ],
+        "Remove": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave8ModConveyor0"
+      ],
+      "objclass": "ModifyConveyorWaveActionProps",
+      "objdata": {
+        "Add": [
+          {
+            "MaxCount": 1,
+            "MaxWeightFactor": 0,
+            "Type": "RTID(iceburg@PlantTypes)",
+            "Weight": 5
+          },
+          {
+            "MaxCount": 2,
+            "MaxWeightFactor": 0,
+            "Type": "RTID(dragonbruit@PlantTypes)",
+            "Weight": 20
+          }
+],
+        "Remove": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave10ModConveyor0"
+      ],
+      "objclass": "ModifyConveyorWaveActionProps",
+      "objdata": {
+        "Add": [
+          {
+            "MaxCount": 4,
+            "MaxWeightFactor": 0,
+            "Type": "RTID(dragonbruit@PlantTypes)",
+            "Weight": 100
+          }
+],
+        "Remove": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave11ModConveyor0"
+      ],
+      "objclass": "ModifyConveyorWaveActionProps",
+      "objdata": {
+        "Add": [
+          {
+            "MaxCount": 1,
+            "MaxWeightFactor": 0,
+            "MinCount": 1,
+            "MinWeightFactor": 3,
+            "Type": "RTID(cherry_bomb@PlantTypes)",
+            "Weight": 3
+          },
+          {
+            "MaxCount": 8,
+            "MaxWeightFactor": 0,
+            "Type": "RTID(dragonbruit@PlantTypes)",
+            "Weight": 80
+          },
+          {
+            "MaxCount": 3,
+            "MaxWeightFactor": 0,
+            "Type": "RTID(snowpea@PlantTypes)",
+            "Weight": 30
+          }
+],
+        "Remove": []
+      }
+        },
+{
+            "aliases": [
+                "Wave6PortalsEvent2"
+            ],
+            "objclass": "SpawnModernPortalsWaveActionProps",
+            "objdata": {
+                "PortalColumn": 6,
+                "PortalRow":3,
+                "PortalType": "RTID(dark@CurrentLevel)"
+            }
+        },
+        {
+            "objclass": "PortalType",
+            "aliases": [
+                "dark"
+            ],
+            "objdata": {
+                "Properties": "RTID(Portal_Dark@CurrentLevel)"
+            }
+        },
+        {
+            "objclass": "PortalProps",
+            "aliases": [
+                "Portal_Dark"
+            ],
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Min": 5,
+                    "Max": 6
+                },
+                "TimeBetween": {
+                    "Min": 12,
+                    "Max": 16
+                },
+                "World": "dark",
+                "ZombieTypesToSpawn": [
+                    {
+                        "Weight": 1,
+                        "ZombieTypeName": "dark_flag"
+                    },
+                    {
+                        "Weight": 1,
+                        "ZombieTypeName": "dark_armor3"
+                    },
+                    {
+                        "Weight": 1,
+                        "ZombieTypeName": "dark_wizard"
+                    }
+                ]
+            }
+        },
+{
+            "aliases": [
+                "Wave11PortalsEvent3"
+            ],
+            "objclass": "SpawnModernPortalsWaveActionProps",
+            "objdata": {
+                "PortalColumn": 5,
+                "PortalRow":1,
+                "PortalType": "RTID(dark@CurrentLevel)"
+            }
+        },
+        {
+            "objclass": "PortalType",
+            "aliases": [
+                "dark"
+            ],
+            "objdata": {
+                "Properties": "RTID(Portal_Dark@CurrentLevel)"
+            }
+        },
+        {
+            "objclass": "PortalProps",
+            "aliases": [
+                "Portal_Dark"
+            ],
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Min": 5,
+                    "Max": 6
+                },
+                "TimeBetween": {
+                    "Min": 12,
+                    "Max": 16
+                },
+                "World": "dark",
+                "ZombieTypesToSpawn": [
+                    {
+                        "Weight": 1,
+                        "ZombieTypeName": "dark_flag"
+                    },
+                    {
+                        "Weight": 1,
+                        "ZombieTypeName": "dark_armor3"
+                    },
+                    {
+                        "Weight": 1,
+                        "ZombieTypeName": "dark_wizard"
+                    }
+                ]
+            }
+        },
+{
+            "aliases": [
+                "Wave12PortalsEvent6"
+            ],
+            "objclass": "SpawnModernPortalsWaveActionProps",
+            "objdata": {
+                "PortalColumn": 7,
+                "PortalRow":4,
+                "PortalType": "RTID(dark@CurrentLevel)"
+            }
+        },
+        {
+            "objclass": "PortalType",
+            "aliases": [
+                "dark"
+            ],
+            "objdata": {
+                "Properties": "RTID(Portal_Dark@CurrentLevel)"
+            }
+        },
+        {
+            "objclass": "PortalProps",
+            "aliases": [
+                "Portal_Dark"
+            ],
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Min": 5,
+                    "Max": 6
+                },
+                "TimeBetween": {
+                    "Min": 12,
+                    "Max": 16
+                },
+                "World": "dark",
+                "ZombieTypesToSpawn": [
+                    {
+                        "Weight": 1,
+                        "ZombieTypeName": "dark_flag"
+                    },
+                    {
+                        "Weight": 1,
+                        "ZombieTypeName": "dark_armor3"
+                    },
+                    {
+                        "Weight": 1,
+                        "ZombieTypeName": "dark_wizard"
+                    }
+                ]
+            }
+        },
+{
+            "aliases": [
+                "Wave12PortalsEvent7"
+            ],
+            "objclass": "SpawnModernPortalsWaveActionProps",
+            "objdata": {
+                "PortalColumn": 7,
+                "PortalRow":0,
+                "PortalType": "RTID(dark@CurrentLevel)"
+            }
+        },
+        {
+            "objclass": "PortalType",
+            "aliases": [
+                "dark"
+            ],
+            "objdata": {
+                "Properties": "RTID(Portal_Dark@CurrentLevel)"
+            }
+        },
+        {
+            "objclass": "PortalProps",
+            "aliases": [
+                "Portal_Dark"
+            ],
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Min": 5,
+                    "Max": 6
+                },
+                "TimeBetween": {
+                    "Min": 12,
+                    "Max": 16
+                },
+                "World": "dark",
+                "ZombieTypesToSpawn": [
+                    {
+                        "Weight": 1,
+                        "ZombieTypeName": "dark_flag"
+                    },
+                    {
+                        "Weight": 1,
+                        "ZombieTypeName": "dark_armor3"
+                    },
+                    {
+                        "Weight": 1,
+                        "ZombieTypeName": "dark_wizard"
+                    }
+                ]
+            }
+    },
+    {
+      "aliases": [
+        "Wave4SpiderRainEvent0"
+      ],
+      "objclass": "SpiderRainZombieSpawnerProps",
+      "objdata": {
+        "ColumnEnd": 7,
+        "ColumnStart": 5,
+        "GroupSize": 1,
+        "SpiderCount": 4,
+        "SpiderZombieName": "future_imp",
+        "TimeBeforeFullSpawn": 2,
+        "TimeBetweenGroups": 0.25,
+        "WaveStartMessage": "[WARNING_SPIDERRAIN]",
+        "ZombieFallTime": 1.5
+      }
+    },
+    {
+      "aliases": [
+        "Wave6SpiderRainEvent0"
+      ],
+      "objclass": "SpiderRainZombieSpawnerProps",
+      "objdata": {
+        "ColumnEnd": 6,
+        "ColumnStart": 4,
+        "GroupSize": 1,
+        "SpiderCount": 6,
+        "SpiderZombieName": "future_imp",
+        "TimeBeforeFullSpawn": 2,
+        "TimeBetweenGroups": 0.25,
+        "WaveStartMessage": "[WARNING_SPIDERRAIN]",
+        "ZombieFallTime": 1.5
+      }
+    },
+    {
+      "aliases": [
+        "Wave7SpiderRainEvent0"
+      ],
+      "objclass": "SpiderRainZombieSpawnerProps",
+      "objdata": {
+        "ColumnEnd": 7,
+        "ColumnStart": 3,
+        "GroupSize": 1,
+        "SpiderCount": 7,
+        "SpiderZombieName": "future_imp",
+        "TimeBeforeFullSpawn": 2,
+        "TimeBetweenGroups": 0.25,
+        "WaveStartMessage": "[WARNING_SPIDERRAIN]",
+        "ZombieFallTime": 1.5
+      }
+    },
+    {
+      "aliases": [
+        "Wave8SpiderRainEvent0"
+      ],
+      "objclass": "SpiderRainZombieSpawnerProps",
+      "objdata": {
+        "ColumnEnd": 6,
+        "ColumnStart": 2,
+        "GroupSize": 1,
+        "SpiderCount": 8,
+        "SpiderZombieName": "future_imp",
+        "TimeBeforeFullSpawn": 2,
+        "TimeBetweenGroups": 0.25,
+        "WaveStartMessage": "[WARNING_SPIDERRAIN]",
+        "ZombieFallTime": 1.5
+      }
+    },
+    {
+      "aliases": [
+        "Wave10SpiderRainEvent0"
+      ],
+      "objclass": "SpiderRainZombieSpawnerProps",
+      "objdata": {
+        "ColumnEnd": 7,
+        "ColumnStart": 3,
+        "GroupSize": 1,
+        "SpiderCount": 10,
+        "SpiderZombieName": "future_imp",
+        "TimeBeforeFullSpawn": 2,
+        "TimeBetweenGroups": 0.25,
+        "WaveStartMessage": "[WARNING_SPIDERRAIN]",
+        "ZombieFallTime": 1.5
+      }
+    },
+    {
+      "aliases": [
+        "Wave5PortalsEvent0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 5,
+        "PortalRow": 1,
+        "PortalType": "future_2",
+        "SpawnEffectAnimID": "",
+        "SpawnSoundID": ""
+      }
+    },
+    {
+      "aliases": [
+        "Wave6PortalsEvent0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 5,
+        "PortalRow": 3,
+        "PortalType": "future_2",
+        "SpawnEffectAnimID": "",
+        "SpawnSoundID": ""
+      }
+    },
+    {
+      "aliases": [
+        "Wave6PortalsEvent1"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 4,
+        "PortalType": "future_2",
+        "SpawnEffectAnimID": "",
+        "SpawnSoundID": ""
+      }
+    },
+    {
+      "aliases": [
+        "Wave8PortalsEvent0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 1,
+        "PortalType": "lostcity",
+        "SpawnEffectAnimID": "",
+        "SpawnSoundID": ""
+      }
+    },
+    {
+      "aliases": [
+        "Wave8PortalsEvent1"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 0,
+        "PortalType": "future_2",
+        "SpawnEffectAnimID": "",
+        "SpawnSoundID": ""
+      }
+    },
+    {
+      "aliases": [
+        "Wave9PortalsEvent0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 2,
+        "PortalType": "egypt_2",
+        "SpawnEffectAnimID": "",
+        "SpawnSoundID": ""
+      }
+    },
+    {
+      "aliases": [
+        "Wave10PortalsEvent0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 2,
+        "PortalType": "future",
+        "SpawnEffectAnimID": "",
+        "SpawnSoundID": ""
+      }
+    },
+    {
+      "aliases": [
+        "Wave11PortalsEvent0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 4,
+        "PortalType": "egypt_2",
+        "SpawnEffectAnimID": "",
+        "SpawnSoundID": ""
+      }
+    },
+    {
+      "aliases": [
+        "Wave11PortalsEvent1"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 1,
+        "PortalType": "egypt_2",
+        "SpawnEffectAnimID": "",
+        "SpawnSoundID": ""
+      }
+    },
+    {
+      "aliases": [
+        "Wave11PortalsEvent2"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 5,
+        "PortalRow": 4,
+        "PortalType": "future_2",
+        "SpawnEffectAnimID": "",
+        "SpawnSoundID": ""
+      }
+    },
+    {
+      "aliases": [
+        "Wave12PortalsEvent0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 3,
+        "PortalType": "future",
+        "SpawnEffectAnimID": "",
+        "SpawnSoundID": ""
+      }
+    },
+    {
+      "aliases": [
+        "Wave12PortalsEvent1"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 5,
+        "PortalRow": 4,
+        "PortalType": "future",
+        "SpawnEffectAnimID": "",
+        "SpawnSoundID": ""
+      }
+    },
+    {
+      "aliases": [
+        "Wave12PortalsEvent2"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 1,
+        "PortalType": "lostcity",
+        "SpawnEffectAnimID": "",
+        "SpawnSoundID": ""
+      }
+    },
+    {
+      "aliases": [
+        "Wave12PortalsEvent3"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 2,
+        "PortalType": "egypt_2",
+        "SpawnEffectAnimID": "",
+        "SpawnSoundID": ""
+      }
+    },
+    {
+      "aliases": [
+        "Wave12PortalsEvent4"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 5,
+        "PortalRow": 0,
+        "PortalType": "future_2",
+        "SpawnEffectAnimID": "",
+        "SpawnSoundID": ""
+      }
+    },
+    {
+      "aliases": [
+        "Wave12PortalsEvent5"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 1,
+        "PortalType": "future",
+        "SpawnEffectAnimID": "",
+        "SpawnSoundID": ""
+      }
+    }
+  ],
+  "version": 1
+}

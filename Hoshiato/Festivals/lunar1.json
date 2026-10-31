@@ -1,0 +1,750 @@
+{
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(StandardIntro@LevelModules)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(ConveyorBelt@CurrentLevel)",
+          "RTID(Rails@CurrentLevel)",
+          "RTID(KongfuTNT@CurrentLevel)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)"
+        ],
+        "Name": "Beginning of the Year",
+        "NameMultiLanguage": {
+          "en": "Beginning of the Year - Level <LEVELNUMBER>",
+          "zh": "辞旧迎新 - 第 <LEVELNUMBER> 关"
+        },
+        "Description": "Happy Holidays!",
+        "DescriptionMultiLanguage": {
+          "en": "Happy Holidays!",
+          "zh": "欢度佳节！"
+        },
+        "LevelNumber": 1,
+        "WrittenBy": "星痕_Hoshiato",
+        "MusicType": "MiniGame_A",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "StageModule": "RTID(LunarStage@LevelModules)"
+      }
+    },
+    {
+      "aliases": [
+        "snowpea0"
+      ],
+      "objclass": "PlantType",
+      "objdata": {
+        "PlantBasedOn": "snowpea",
+        "Properties": "RTID(snowpea0@CurrentLevel)",
+        "ShiftedPlantFeatures": {
+          "OBTAINWORLD": "market"
+			    }
+        }
+    },
+    {
+			"aliases": [
+				"snowpea0"
+			],
+			"objclass": "PlantProperties",
+			"objdata": {
+        "PeaFreezeType": "snowdrop_freeze",
+        "ChanceToFreeze": 0.15
+			}
+		},
+    {
+      "aliases": [
+        "ConveyorBelt"
+      ],
+      "objclass": "ConveyorSeedBankProperties",
+      "objdata": {
+        "DropDelayConditions": [
+          {
+            "Delay": 5,
+            "MaxPackets": 0
+          },
+          {
+            "Delay": 7,
+            "MaxPackets": 3
+          },
+          {
+            "Delay": 9,
+            "MaxPackets": 6
+          }
+        ],
+        "InitialPlantList": [
+          {
+            "MaxCount": 2,
+            "MaxWeightFactor": 0,
+            "PlantType": "snowpea0",
+            "Weight": 100
+          },
+          {
+            "MaxCount": 5,
+            "MaxWeightFactor": 0.1,
+            "PlantType": "firegourd",
+            "Weight": 5
+          },
+          {
+            "MaxCount": 4,
+            "MaxWeightFactor": 0.1,
+            "PlantType": "snapdragon",
+            "Weight": 5
+          },
+          {
+            "MaxCount": 3,
+            "MaxWeightFactor": 0.1,
+            "PlantType": "jackolantern",
+            "Weight": 2
+          },
+          {
+            "MaxCount": 4,
+            "MaxWeightFactor": 0.1,
+            "PlantType": "wasabiwhip",
+            "Weight": 2
+          }
+        ],
+        "SpeedConditions": [
+          {
+            "MaxPackets": 0,
+            "Speed": 100
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Rails"
+      ],
+      "objclass": "RailcartProperties",
+      "objdata": {
+        "RailcartType": "railcart_kongfu",
+        "Railcarts": [
+          {
+            "Column": 0,
+            "Row": 1
+          },
+          {
+            "Column": 0,
+            "Row": 3
+          }
+        ],
+        "Rails": [
+          {
+            "Column": 0,
+            "RowEnd": 4,
+            "RowStart": 0
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "KongfuTNT"
+      ],
+      "objclass": "KongfuTNTProperties",
+      "objdata": {
+        "Speed": 0.2,
+        "TriggerGameLose": true,
+        "DamagesToZombies": true,
+        "DamagesToPlants": true,
+        "SpawnData": [
+          {
+            "Speed": 0.2,
+            "WireLength": 7,
+            "GridX": -1,
+            "GridY": 0
+          },
+          {
+            "Speed": 0.2,
+            "WireLength": 8,
+            "GridX": -1,
+            "GridY": 1
+          },
+          {
+            "Speed": 0.2,
+            "WireLength": 7,
+            "GridX": -1,
+            "GridY": 2
+          },
+          {
+            "Speed": 0.2,
+            "WireLength": 8,
+            "GridX": -1,
+            "GridY": 3
+          },
+          {
+            "Speed": 0.2,
+            "WireLength": 7,
+            "GridX": -1,
+            "GridY": 4
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {},
+          {},
+          {},
+          {
+            "PointIncrementPerWave": 80,
+            "StartingPoints": 200,
+            "StartingWave": 2,
+            "ZombiePool": [
+              "RTID(kongfu_torch@ZombieTypes)",
+              "RTID(monk_torch@ZombieTypes)",
+              "RTID(abbot_torch@ZombieTypes)",
+              "RTID(explorer_veteran@ZombieTypes)",
+              "RTID(abbot_fan@ZombieTypes)",
+              "RTID(lawn_armor1@ZombieTypes)",
+              "RTID(lawn_armor2@ZombieTypes)",
+              "RTID(summer_bug_armor1@ZombieTypes)",
+              "RTID(summer_bug_armor2@ZombieTypes)",
+              "RTID(lostcity_gargantuar@ZombieTypes)",
+              "RTID(kongfu_rocket_imp@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 120,
+            "StartingPoints": 300,
+            "StartingWave": 2,
+            "ZombiePool": [
+              "RTID(kongfu_torch@ZombieTypes)",
+              "RTID(monk_torch@ZombieTypes)",
+              "RTID(abbot_torch@ZombieTypes)",
+              "RTID(explorer_veteran@ZombieTypes)",
+              "RTID(abbot_fan@ZombieTypes)",
+              "RTID(lawn_armor1@ZombieTypes)",
+              "RTID(lawn_armor2@ZombieTypes)",
+              "RTID(summer_bug_armor1@ZombieTypes)",
+              "RTID(summer_bug_armor2@ZombieTypes)",
+              "RTID(lostcity_gargantuar@ZombieTypes)",
+              "RTID(kongfu_rocket_imp@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 160,
+            "StartingPoints": 400,
+            "StartingWave": 2,
+            "ZombiePool": [
+              "RTID(kongfu_torch@ZombieTypes)",
+              "RTID(monk_torch@ZombieTypes)",
+              "RTID(abbot_torch@ZombieTypes)",
+              "RTID(explorer_veteran@ZombieTypes)",
+              "RTID(abbot_fan@ZombieTypes)",
+              "RTID(lawn_armor1@ZombieTypes)",
+              "RTID(lawn_armor2@ZombieTypes)",
+              "RTID(summer_bug_armor1@ZombieTypes)",
+              "RTID(summer_bug_armor2@ZombieTypes)",
+              "RTID(lostcity_gargantuar@ZombieTypes)",
+              "RTID(kongfu_rocket_imp@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 200,
+            "StartingPoints": 500,
+            "StartingWave": 2,
+            "ZombiePool": [
+              "RTID(kongfu_torch@ZombieTypes)",
+              "RTID(monk_torch@ZombieTypes)",
+              "RTID(abbot_torch@ZombieTypes)",
+              "RTID(explorer_veteran@ZombieTypes)",
+              "RTID(abbot_fan@ZombieTypes)",
+              "RTID(lawn_armor1@ZombieTypes)",
+              "RTID(lawn_armor2@ZombieTypes)",
+              "RTID(summer_bug_armor1@ZombieTypes)",
+              "RTID(summer_bug_armor2@ZombieTypes)",
+              "RTID(lostcity_gargantuar@ZombieTypes)",
+              "RTID(kongfu_rocket_imp@ZombieTypes)"
+            ]
+          }
+        ],
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "LevelJamList": [
+          "jam_rap"
+        ],
+        "FlagWaveInterval": 6,
+        "SpawnColEnd": 1,
+        "SpawnColStart": 1,
+        "WaveCount": 12,
+        "WaveSpendingPointIncrement": 0,
+        "WaveSpendingPoints": 0,
+        "Waves": [
+          [
+            "RTID(Wave1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)",
+            "RTID(ModConveyor0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)",
+            "RTID(StormEvent0@CurrentLevel)",
+            "RTID(ModConveyor0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)",
+            "RTID(ModConveyor0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)",
+            "RTID(StormEvent0@CurrentLevel)",
+            "RTID(ModConveyor2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)",
+            "RTID(ModConveyor2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)",
+            "RTID(StormEvent1@CurrentLevel)",
+            "RTID(ModConveyor1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)",
+            "RTID(ModConveyor0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)",
+            "RTID(StormEvent2@CurrentLevel)",
+            "RTID(ModConveyor0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave11@CurrentLevel)",
+            "RTID(StormEvent1@CurrentLevel)",
+            "RTID(ModConveyor2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave12@CurrentLevel)",
+            "RTID(StormEvent2@CurrentLevel)",
+            "RTID(ModConveyor1@CurrentLevel)",
+            "RTID(ModConveyor0@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "ModConveyor0"
+      ],
+      "objclass": "ModifyConveyorWaveActionProps",
+      "objdata": {
+        "Add": [
+          {
+            "MaxDelivered": 1,
+            "Type": "RTID(hurrikale@PlantTypes)",
+            "Weight": 100
+          }
+        ],
+        "Remove": []
+      }
+    },
+    {
+      "aliases": [
+        "ModConveyor1"
+      ],
+      "objclass": "ModifyConveyorWaveActionProps",
+      "objdata": {
+        "Add": [
+          {
+            "MaxDelivered": 1,
+            "Type": "RTID(icebloom@PlantTypes)",
+            "Weight": 100
+          }
+        ],
+        "Remove": []
+      }
+    },
+    {
+      "aliases": [
+        "ModConveyor2"
+      ],
+      "objclass": "ModifyConveyorWaveActionProps",
+      "objdata": {
+        "Add": [
+          {
+            "MaxDelivered": 1,
+            "ForceBoosted": true,
+            "Type": "RTID(stallia@PlantTypes)",
+            "Weight": 100
+          }
+        ],
+        "Remove": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(kongfu_torch@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(kongfu_torch@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "DynamicPlantfood": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        "Zombies": [
+          {
+            "Type": "RTID(summer_bug_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(summer_bug_armor1@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(kongfu_rocket_imp@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(kongfu_rocket_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(eighties_breakdancer@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "DynamicPlantfood": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "Zombies": [
+          {
+            "Type": "RTID(monk_torch@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(monk_torch@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(monk_torch@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(eighties_breakdancer@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(kongfu_rocket_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(kongfu_rocket_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(eighties_breakdancer@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(eighties_breakdancer@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave7"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(abbot_torch@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(abbot_torch@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(eighties_breakdancer@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave8"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "DynamicPlantfood": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "Zombies": [
+          {
+            "Type": "RTID(kongfu_rocket_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(kongfu_rocket_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(kongfu_rocket_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(eighties_breakdancer@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave9"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(lostcity_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(eighties_breakdancer@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave10"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(kongfu_rocket_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(kongfu_rocket_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(abbot_torch@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(abbot_torch@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(eighties_breakdancer@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(eighties_breakdancer@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave11"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "DynamicPlantfood": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "Zombies": [
+          {
+            "Type": "RTID(kongfu_rocket_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(eighties_breakdancer@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(eighties_breakdancer@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave12"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(kongfu_rocket_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(kongfu_rocket_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(eighties_breakdancer@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "StormEvent0"
+      ],
+      "objclass": "StormZombieSpawnerProps",
+      "objdata": {
+        "ColumnEnd": 7,
+        "ColumnStart": 5,
+        "GroupSize": 1,
+        "TimeBetweenGroups": 1.5,
+        "Type": "sandstorm",
+        "Zombies": [
+          {
+            "Type": "RTID(kongfu_torch@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(monk_torch@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(monk_torch@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "StormEvent1"
+      ],
+      "objclass": "StormZombieSpawnerProps",
+      "objdata": {
+        "ColumnEnd": 7,
+        "ColumnStart": 4,
+        "GroupSize": 2,
+        "TimeBetweenGroups": 2,
+        "Type": "sandstorm",
+        "Zombies": [
+          {
+            "Type": "RTID(kongfu_torch@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(kongfu_torch@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(kongfu_torch@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(monk_torch@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(monk_torch@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(monk_torch@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "StormEvent2"
+      ],
+      "objclass": "StormZombieSpawnerProps",
+      "objdata": {
+        "ColumnEnd": 6,
+        "ColumnStart": 5,
+        "GroupSize": 1,
+        "TimeBetweenGroups": 2,
+        "Type": "sandstorm",
+        "Zombies": [
+          {
+            "Type": "RTID(abbot_torch@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(abbot_torch@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(abbot_torch@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(explorer_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(explorer_veteran@ZombieTypes)"
+          }
+        ]
+      }
+    }
+  ],
+  "version": 1
+}

@@ -1,0 +1,1244 @@
+{
+  "#comment": "战略转移",
+  "version": 1,
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "LevelNumber": 1,
+        "Loot": "RTID(NoLoot@LevelModules)",
+        "NameMultiLanguage": {
+          "zh":"战略转移",
+          "en":"Strategic Relocation"
+        },
+        "DescriptionMultiLanguage": {
+          "zh":"<PLAYERNAME>拯救裂荚射手的尝试",
+          "en":"<PLAYERNAME>'s Attempt to Save the Split Peas"
+        },
+        "StartingSun": 50,
+        "StageModule": "RTID(DarkTutorialStage@LevelModules)",
+        "Modules": [
+          "RTID(StandardIntro@LevelModules)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(DarkMowers@LevelModules)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(ProtectThePlant@CurrentLevel)",
+          "RTID(Rails@CurrentLevel)",
+          "RTID(FrozenPlantPlacement@CurrentLevel)",
+          "RTID(GoldTiles@CurrentLevel)",
+          "RTID(ChallengeModule@CurrentLevel)"
+        ],
+        "WrittenBy": "CreatorDream",
+        "FirstIntroNarrative":"Backwards_Intro",
+        "ReplayIntroNarrative":"Backwards_Replay"
+      }
+    },
+    {
+      "aliases":[
+        "Backwards_Replay"
+      ],
+      "objclass":"NarrativeProperties",
+      "objdata":{
+        "Flow":[
+          {
+            "Character":"winnie",
+            "Action":"NPC_ENTER"
+          },
+          {
+            "Character":"winnie",
+            "Action":"SAY",
+            "Lines":{
+              "en":"Perhaps Dr.Zomboss's army isn't invincible.We can make a strategic retreat and fullyutilize the Split Peas to attack the zombies from behind.",
+              "zh":"或许僵尸博士的大军并非无敌。我们可以战略转移，充分利用裂荚射手的优势，从后方打击僵尸。"
+            }
+          },
+          {
+            "Character":"winnie",
+            "Action":"SAY",
+            "Lines":{
+              "en":"Perhaps we can turn their strength against them and help with the relocation.",
+              "zh":"也许我们可以借力打力，利用敌人的力量帮助转移。"
+            }
+          }
+        ]
+      }
+    },
+    {
+			"aliases": [
+			  "ChallengeModule"
+		  ],
+			"objclass": "StarChallengeModuleProperties",
+			"objdata": {
+				"Challenges": [
+					[
+						"RTID(BeatTheLevel@CurrentLevel)"
+					]
+				],
+				"ChallengesAlwaysAvailable": true
+			}
+		},
+		{
+			"aliases": [
+			  "BeatTheLevel"
+		  ],
+			"objclass": "StarChallengeBeatTheLevelProps",
+			"objdata": {
+				"DescriptionsMultilanguage": [
+					{
+					  "en": "Tips:Using an Escape Root when a fishing hook grabs a plant can achieve cross-lane pulling.",
+					  "zh": "提示：鱼钩钩住植物时使用逃脱树根可以实现跨行牵引。"
+					}
+				]
+			}
+	  },
+    {
+      "aliases":[
+        "Backwards_Intro"
+      ],
+      "objclass":"NarrativeProperties",
+      "objdata":{
+        "Flow":[
+          {
+            "Character":"zombossicon",
+            "Action":"NPC_ENTER"
+          },
+          {
+            "Character":"zombossicon",
+            "Action":"SAY",
+            "Lines":{
+              "en":"My teleportation technology is already completely perfected.",
+              "zh":"我的传送科技已经登峰造极。"
+            }
+          },
+          {
+            "Character":"zombossicon",
+            "Action":"SAY",
+            "Lines":{
+              "en":"The sworn enemies of the Appease-mint family from numerous timelines will bombard your front yard head-on.",
+              "zh":"来自各条时间线的平射家族克星们将正面轰击你的前院。"
+            }
+          },
+          {
+            "Character":"zombossicon",
+            "Action":"SAY",
+            "Lines":{
+              "en":"Those pathetic little peas are already dead.",
+              "zh":"你那几株可怜的豌豆已经死透了。"
+            }
+          },
+          {
+            "Character":"zombossicon",
+            "Action":"NPC_EXIT"
+          },
+          {
+            "Character":"crazydave",
+            "Action":"NPC_ENTER"
+          },
+          {
+            "Character":"crazydave",
+            "Action":"EXCITED",
+            "Lines":{
+              "en":"Impossible!The Appease-mint family is invincible!",
+              "zh":"不可能，平射家族天下无敌！"
+            }
+          },
+          {
+            "Character":"winnie",
+            "Action":"NPC_ENTER"
+          },
+          {
+            "Character":"winnie",
+            "Action":"TIRED",
+            "Lines":{
+              "en":"They're almost here.We'd better think of a plan.",
+              "zh":"他们快来了，还是想想对策吧。"
+            }
+          },
+          {
+            "Character":"winnie",
+            "Action":"SAY",
+            "Lines":{
+              "en":"Perhaps Dr.Zomboss's army isn't invincible.We can make a strategic retreat and fullyutilize the Split Peas to attack the zombies from behind.",
+              "zh":"或许僵尸博士的大军并非无敌。我们可以战略转移，充分利用裂荚射手的优势，从后方打击僵尸。"
+            }
+          },
+          {
+            "Character":"crazydave",
+            "Action":"EXCITED",
+            "Lines":{
+              "en":"I have two Escape Roots here.They'll come in handy!",
+              "zh":"我这里有两株逃脱树根，正好能派上用场！"
+            }
+          },
+          {
+            "Character":"winnie",
+            "Action":"TIRED",
+            "Lines":{
+              "en":"However,relying solely on the Escape Roots is not enough to cover these heavily targeted plants.",
+              "zh":"然而，光靠逃脱树根不足以掩护这几株被重点关注的植物。"
+            }
+          },
+          {
+            "Character":"winnie",
+            "Action":"SAY",
+            "Lines":{
+              "en":"Perhaps we can turn their strength against them and help with the relocation.",
+              "zh":"也许我们可以借力打力，利用敌人的力量帮助转移。"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "ProtectThePlant"
+      ],
+      "objclass": "ProtectThePlantChallengeProperties",
+      "objdata": {
+        "MustProtectCount": 3,
+        "Plants": [
+          {
+            "GridX": 1,
+            "GridY": 4,
+            "PlantType": "splitpea"
+          },
+          {
+            "GridX": 1,
+            "GridY": 2,
+            "PlantType": "splitpea"
+          },
+          {
+            "GridX": 1,
+            "GridY": 0,
+            "PlantType": "splitpea"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "GoldTiles"
+      ],
+      "objclass": "InitialGridItemProperties",
+      "objdata": {
+        "InitialGridItemPlacements": [
+          {
+            "GridX": 0,
+            "GridY": 0,
+            "TypeName": "goldtile"
+          },
+          {
+            "GridX": 0,
+            "GridY": 2,
+            "TypeName": "goldtile"
+          },
+          {
+            "GridX": 0,
+            "GridY": 4,
+            "TypeName": "goldtile"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Rails"
+      ],
+      "objclass": "RailcartProperties",
+      "objdata": {
+        "RailcartType": "railcart_dark",
+        "Railcarts": [
+          {
+            "Column": 5,
+            "Row": 1
+          },
+          {
+            "Column": 6,
+            "Row": 4
+          },
+          {
+            "Column": 7,
+            "Row": 2
+          }
+        ],
+        "Rails": [
+          {
+            "Column": 5,
+            "RowStart": 0,
+            "RowEnd": 4
+          },
+          {
+            "Column": 6,
+            "RowStart": 0,
+            "RowEnd": 4
+          },
+          {
+            "Column": 7,
+            "RowStart": 0,
+            "RowEnd": 4
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "SelectionMethod": "preset",
+        "PresetPlantList": [
+          {
+            "PlantType": "sunflower",
+            "Level": -1
+          },
+          {
+            "PlantType": "pvine",
+            "Level": -1
+          },
+          {
+            "PlantType": "sapfling",
+            "Level": -1
+          },
+          {
+            "PlantType": "stallia",
+            "Level": -1
+          },
+          {
+            "PlantType": "iceburg",
+            "Level": -1
+          },
+          {
+            "PlantType": "potatomine",
+            "Level": -1
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {},
+          {},
+          {},
+          {},
+          {},
+          {
+            "StartingPoints": 100,
+            "ZombiePool": [
+              "RTID(dark_imp@ZombieTypes)"
+            ],
+            "StartingWave": 9,
+            "PointIncrementPerWave": 25
+          },
+          {
+            "ZombiePool": [
+              "RTID(swashbuckler@ZombieTypes)",
+              "RTID(dark_imp@ZombieTypes)"
+            ],
+            "StartingWave": 5,
+            "StartingPoints": 130,
+            "PointIncrementPerWave": 15
+          }
+        ],
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "MinNextWaveHealthPercentage": 0.45,
+        "MaxNextWaveHealthPercentage": 0.55,
+        "FlagWaveInterval": 6,
+        "WaveCount": 14,
+        "WaveSpendingPointIncrement": 30,
+        "WaveSpendingPoints": 100,
+        "Waves": [
+          [
+            "RTID(Wave1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave1_1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2_1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)",
+            "RTID(Wave6PortalsEvent0@CurrentLevel)",
+            "RTID(Wave6PortalsEvent1@CurrentLevel)",
+            "RTID(Wave6PortalsEvent2@CurrentLevel)",
+            "RTID(Wave6PortalsEvent3@CurrentLevel)",
+            "RTID(Wave6PortalsEvent4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave11@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave11_1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave12@CurrentLevel)",
+            "RTID(Wave12PortalsEvent0@CurrentLevel)",
+            "RTID(Wave12PortalsEvent1@CurrentLevel)",
+            "RTID(Wave12PortalsEvent2@CurrentLevel)",
+            "RTID(Wave12PortalsEvent3@CurrentLevel)",
+            "RTID(Wave12PortalsEvent4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave13@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave14@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "DynamicPlantfood": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "Zombies": [
+          {
+            "Type": "RTID(beach_fisherman@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(beach_fisherman@ZombieTypes)",
+            "Row": "4"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dark@ZombieTypes)",
+            "Row": "5"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "FrozenPlantPlacement"
+      ],
+      "objclass": "InitialPlantProperties",
+      "objdata": {
+        "InitialPlantPlacements": [
+          {
+            "GridX": 0,
+            "GridY": 1,
+            "TypeName": "escaperoot"
+          },
+          {
+            "GridX": 0,
+            "GridY": 3,
+            "TypeName": "escaperoot"
+          },
+          {
+            "GridX": 8,
+            "GridY": 2,
+            "TypeName": "cherry_bomb",
+            "Condition": "icecubed"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave1_1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dark@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dark@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dark_armor1@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(dark@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(dark_imp@ZombieTypes)",
+            "Row": "4"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave2_1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dark@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dark_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dark_armor1@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood":1,
+        "Zombies": [
+          {
+            "Type": "RTID(cannon@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dark_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_surfer@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6PortalsEvent0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 4,
+        "PortalRow": 1,
+        "PortalType": "RTID(PortalA@CurrentLevel)"
+      }
+    },
+    {
+      "objclass": "PortalType",
+      "aliases": [
+        "PortalA"
+      ],
+      "objdata": {
+        "Properties": "RTID(PortalAprops@CurrentLevel)"
+      }
+    },
+    {
+      "objclass": "PortalProps",
+      "aliases": [
+        "PortalAprops"
+      ],
+      "objdata": {
+        "TimeBeforeFirst": {
+          "Min": 1,
+          "Max": 3
+        },
+        "TimeBetween": {
+          "Min": 9,
+          "Max": 16
+        },
+        "World": "dark",
+        "ZombieTypesToSpawn": [
+          {
+            "Weight": 1,
+            "ZombieTypeName": "dark_juggler"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "dark_juggler"
+          },
+          {
+            "Weight": 100,
+            "ZombieTypeName": "dark_king_veteran"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6PortalsEvent1"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 4,
+        "PortalRow": 2,
+        "PortalType": "RTID(PortalB@CurrentLevel)"
+      }
+    },
+    {
+      "objclass": "PortalType",
+      "aliases": [
+        "PortalB"
+      ],
+      "objdata": {
+        "Properties": "RTID(PortalBprops@CurrentLevel)"
+      }
+    },
+    {
+      "objclass": "PortalProps",
+      "aliases": [
+        "PortalBprops"
+      ],
+      "objdata": {
+        "TimeBeforeFirst": {
+          "Min": 3,
+          "Max": 5
+        },
+        "TimeBetween": {
+          "Min": 11,
+          "Max": 18
+        },
+        "World": "future",
+        "ZombieTypesToSpawn": [
+          {
+            "Weight": 9,
+            "ZombieTypeName": "future_protector"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "future_jetpack"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6PortalsEvent2"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 4,
+        "PortalRow": 4,
+        "PortalType": "RTID(PortalC@CurrentLevel)"
+      }
+    },
+    {
+      "objclass": "PortalType",
+      "aliases": [
+        "PortalC"
+      ],
+      "objdata": {
+        "Properties": "RTID(PortalCprops@CurrentLevel)"
+      }
+    },
+    {
+      "objclass": "PortalProps",
+      "aliases": [
+        "PortalCprops"
+      ],
+      "objdata": {
+        "TimeBeforeFirst": {
+          "Min": 3,
+          "Max": 5
+        },
+        "TimeBetween": {
+          "Min": 6,
+          "Max": 12
+        },
+        "World": "egypt",
+        "ZombieTypesToSpawn": [
+          {
+            "Weight": 1,
+            "ZombieTypeName": "explorer"
+          },
+          {
+            "Weight": 20,
+            "ZombieTypeName": "explorer"
+          },
+          {
+            "Weight": 10,
+            "ZombieTypeName": "tomb_raiser"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6PortalsEvent3"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 4,
+        "PortalRow": 3,
+        "PortalType": "RTID(PortalD@CurrentLevel)"
+      }
+    },
+    {
+      "objclass": "PortalType",
+      "aliases": [
+        "PortalD"
+      ],
+      "objdata": {
+        "Properties": "RTID(PortalDprops@CurrentLevel)"
+      }
+    },
+    {
+      "objclass": "PortalProps",
+      "aliases": [
+        "PortalDprops"
+      ],
+      "objdata": {
+        "TimeBeforeFirst": {
+          "Min": 2,
+          "Max": 5
+        },
+        "TimeBetween": {
+          "Min": 4,
+          "Max": 8
+        },
+        "World": "west",
+        "ZombieTypesToSpawn": [
+          {
+            "Weight": 1,
+            "ZombieTypeName": "prospector"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "prospector"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "prospector"
+          },
+          {
+            "Weight": 100,
+            "ZombieTypeName": "poncho_plate"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6PortalsEvent4"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 4,
+        "PortalRow": 0,
+        "PortalType": "RTID(PortalE@CurrentLevel)"
+      }
+    },
+    {
+      "objclass": "PortalType",
+      "aliases": [
+        "PortalE"
+      ],
+      "objdata": {
+        "Properties": "RTID(PortalEprops@CurrentLevel)"
+      }
+    },
+    {
+      "objclass": "PortalProps",
+      "aliases": [
+        "PortalEprops"
+      ],
+      "objdata": {
+        "TimeBeforeFirst": {
+          "Min": 5,
+          "Max": 9
+        },
+        "TimeBetween": {
+          "Min": 8,
+          "Max": 14
+        },
+        "World": "kongfu",
+        "ZombieTypesToSpawn": [
+          {
+            "Weight": 1,
+            "ZombieTypeName": "monk_nunchaku"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "kongfu_hammer"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "monk_nunchaku"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave8"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "MustKillAllToNextWave": true,
+        "Zombies": [
+          {
+            "Type": "RTID(dark@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dark@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave9"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dark_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dark@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave10"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dark_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dark_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dark@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave11"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dark_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_surfer@ZombieTypes)"
+          },
+          {
+            "Type":"RTID(dark@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave12"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "DynamicPlantfood": [
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        "Zombies": [
+          {
+            "Type": "RTID(swashbuckler@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(swashbuckler@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(swashbuckler@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(cannon@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(cannon@ZombieTypes)",
+            "Row": "4"
+          }
+        ],
+        "NotificationEvents":[
+          "jam_pop"
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave11_1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dark_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(swashbuckler@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave12PortalsEvent0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 4,
+        "PortalRow": 4,
+        "PortalType": "RTID(PortalF@CurrentLevel)"
+      }
+    },
+    {
+      "objclass": "PortalType",
+      "aliases": [
+        "PortalF"
+      ],
+      "objdata": {
+        "Properties": "RTID(PortalFprops@CurrentLevel)"
+      }
+    },
+    {
+      "objclass": "PortalProps",
+      "aliases": [
+        "PortalFprops"
+      ],
+      "objdata": {
+        "TimeBeforeFirst": {
+          "Min": 3,
+          "Max": 5
+        },
+        "TimeBetween": {
+          "Min": 6,
+          "Max": 10
+        },
+        "World": "dark",
+        "ZombieTypesToSpawn": [
+          {
+            "Weight": 1,
+            "ZombieTypeName": "dark_juggler"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "dark_juggler"
+          },
+          {
+            "Weight":1,
+            "ZombieTypeName":"dark_juggler"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "dark_juggler"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave12PortalsEvent1"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 4,
+        "PortalRow": 1,
+        "PortalType": "RTID(PortalG@CurrentLevel)"
+      }
+    },
+    {
+      "objclass": "PortalType",
+      "aliases": [
+        "PortalG"
+      ],
+      "objdata": {
+        "Properties": "RTID(PortalGprops@CurrentLevel)"
+      }
+    },
+    {
+      "objclass": "PortalProps",
+      "aliases": [
+        "PortalGprops"
+      ],
+      "objdata": {
+        "TimeBeforeFirst": {
+          "Min": 1,
+          "Max": 4
+        },
+        "TimeBetween": {
+          "Min": 9,
+          "Max": 12
+        },
+        "World": "future",
+        "ZombieTypesToSpawn": [
+          {
+            "Weight": 10,
+            "ZombieTypeName": "future_protector"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "football_mech"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave12PortalsEvent2"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 4,
+        "PortalRow": 2,
+        "PortalType": "RTID(PortalH@CurrentLevel)"
+      }
+    },
+    {
+      "objclass": "PortalType",
+      "aliases": [
+        "PortalH"
+      ],
+      "objdata": {
+        "Properties": "RTID(PortalHprops@CurrentLevel)"
+      }
+    },
+    {
+      "objclass": "PortalProps",
+      "aliases": [
+        "PortalHprops"
+      ],
+      "objdata": {
+        "TimeBeforeFirst": {
+          "Min": 1,
+          "Max": 2
+        },
+        "TimeBetween": {
+          "Min": 6,
+          "Max": 10
+        },
+        "World": "eighties",
+        "ZombieTypesToSpawn": [
+          {
+            "Weight": 300,
+            "ZombieTypeName": "eighties_glitter"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "eighties_breakdancer"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "eighties_breakdancer"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave12PortalsEvent3"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 4,
+        "PortalRow": 3,
+        "PortalType": "RTID(PortalI@CurrentLevel)"
+      }
+    },
+    {
+      "objclass": "PortalType",
+      "aliases": [
+        "PortalI"
+      ],
+      "objdata": {
+        "Properties": "RTID(PortalIprops@CurrentLevel)"
+      }
+    },
+    {
+      "objclass": "PortalProps",
+      "aliases": [
+        "PortalIprops"
+      ],
+      "objdata": {
+        "TimeBeforeFirst": {
+          "Min": 1,
+          "Max": 4
+        },
+        "TimeBetween": {
+          "Min": 12,
+          "Max": 15
+        },
+        "World": "future",
+        "ZombieTypesToSpawn": [
+          {
+            "Weight": 1,
+            "ZombieTypeName": "future_protector"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "future_protector"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave12PortalsEvent4"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 4,
+        "PortalRow": 0,
+        "PortalType": "RTID(PortalJ@CurrentLevel)"
+      }
+    },
+    {
+      "objclass": "PortalType",
+      "aliases": [
+        "PortalJ"
+      ],
+      "objdata": {
+        "Properties": "RTID(PortalJprops@CurrentLevel)"
+      }
+    },
+    {
+      "objclass": "PortalProps",
+      "aliases": [
+        "PortalJprops"
+      ],
+      "objdata": {
+        "TimeBeforeFirst": {
+          "Min": 3,
+          "Max": 5
+        },
+        "TimeBetween": {
+          "Min": 8,
+          "Max": 10
+        },
+        "World": "lostcity",
+        "ZombieTypesToSpawn": [
+          {
+            "Weight": 100,
+            "ZombieTypeName": "lostcity_excavator"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "lostcity_crystalskull"
+          },
+          {
+            "Weight":1,
+            "ZombieTypeName":"lostcity_excavator"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave13"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dark@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(swashbuckler@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(swashbuckler@ZombieTypes)",
+            "Row": "4"
+          }
+        ],
+        "NotificationEvents":[
+          "jam_rap"
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave14"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dark_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_surfer@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_surfer@ZombieTypes)"
+          }
+        ]
+      }
+    }
+  ]
+}

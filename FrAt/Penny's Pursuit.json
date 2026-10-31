@@ -1,0 +1,516 @@
+{
+    "objects":[
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "StageModule": "RTID(PersuitStage@LevelModules)",
+            "NameMultiLanguage": {
+            "en": "Penny's Pursuit",
+            "zh": "潘妮的追击"
+        },
+            "DescriptionMultiLanguage": {
+            "en": "<PLAYERNAME>'s Penny's Pursuit!",
+            "zh": "<PLAYERNAME>的潘妮的追击！"
+        },
+        "LevelNumber": 1,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "StartingSun": 1000,
+        "Modules": [
+          "RTID(StandardIntro@LevelModules)",
+          "RTID(NewWaves@.)",
+          "RTID(SeedBank@.)",
+          "RTID(SunDropper@CurrentLevel)",
+          "RTID(LevelDeadLine@CurrentLevel)",
+          "RTID(ZombossBattle@CurrentLevel)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(ZombossIntro@LevelModules)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(ModPlants@CurrentLevel)"
+        ],
+        "WrittenBy": "砹化钫FrAt",
+        "FirstRewardType": "collectable",
+        "FirstRewardParam": "moneybag",
+        "ReplayRewardType": "collectable",
+        "ReplayRewardParam": "moneybag"
+      }
+    },
+        {
+            "objclass": "SunDropperProperties",
+            "aliases": [
+                "SunDropper"
+            ],
+            "objdata": {
+                "InitialSunDropDelay": 1,
+                "SunCountdownBase": 2,
+                "SunCountdownRange": 0.1,
+                "SunCountdownIncreasePerSun": 0.01,
+                "SunCountdownMax": 2.1,
+                "Value": 200
+            }
+        },
+    {
+        "aliases": [
+            "LevelDeadLine"
+        ],
+        "objclass": "LevelDeadLineProps",
+        "objdata": {
+            "SuppressObjectiveTip": true,
+            "Countdown": 180,
+            "Events": [
+                "RTID(Deadline@CurrentLevel)"
+            ]
+        }
+    },
+    {
+        "aliases": [
+            "Deadline"
+        ],
+        "objclass": "LoseGameWaveActionProps",
+        "objdata": {
+            "Tip": {
+                "en": "",
+                "zh": ""
+            },
+            "SmallTip": {
+                "en": "Mission Fail",
+                "zh": "任务失败"
+            }
+        }
+    },
+    {
+        "aliases": [
+            "SeedBank"
+        ],
+        "objclass": "SeedBankProperties",
+        "objdata": {
+            "SelectionMethod": "chooser",
+        "PresetPlantList": [
+          {
+            "PlantType": "powerlily"
+          },
+          {
+            "PlantType": "bloominghearts"
+          }
+        ]
+        }
+    },
+    {
+        "aliases": [
+            "ChallengeModule"
+        ],
+        "objclass": "StarChallengeModuleProperties",
+        "objdata": {
+            "Challenges": [
+                [
+                    "RTID(BeatTheLevel@CurrentLevel)"
+                ]
+            ],
+            "ChallengesAlwaysAvailable": true
+        }
+    },
+    {      
+        "aliases": [        
+            "BeatTheLevel"
+        ],      
+        "objclass": "StarChallengeBeatTheLevelProps",      
+        "objdata": {        
+            "DescriptionsMultilanguage": [
+                {            
+                    "en": "Survive and deplete 1 Septillion Zomboss health in 5 minutes",
+                    "zh": "生存并在5分钟内耗尽1亿亿亿僵尸博士血量"
+                }
+            ]
+        }
+    },
+    {
+      "aliases": [
+        "ZombossBattle"
+      ],
+      "objclass": "ZombossBattleModuleProperties",
+      "objdata": {
+        "ReservedColumnCount": 3,
+        "ZombossDeathColumn": 5,
+        "ZombossDeathRow": 3,
+        "ZombossMechType": "zombossmech_pirate_pursuit3",
+        "ZombossSpawnGridPosition": {
+          "mX": 6,
+          "mY": 3
+        }
+      }
+    },
+    {
+      "aliases": [
+        "zombossmech_pirate_pursuit3"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(zombossmech_pirate_pursuit3@CurrentLevel)",
+        "ZombieBasedOn": "zombossmech_pirate"
+      }
+    },
+    {
+        "objclass": "ZombieProperties",
+        "aliases": [
+            "zombossmech_pirate_pursuit3"
+        ],
+        "objdata": {
+            "CannotBeEnlightenedBySolarSage": true,
+            "ImmuneToSweetPotato": true,
+            "ImmuneToShrinkingViolet": true,
+            "ZombieSort": "Zomboss",
+            "CannotBeGrabbedByPtero": true,
+            "CannotBeDetectedByPowerToss": true,
+            "CannotBeDraggedByTangleKelp": true,
+            "CannotBeTossedByCitron": true,
+            "CannotBeDetectedBySapfling": true,
+            "CannotBeSwallowedByChomper": true,
+            "ChiliStunDurationMult": 0,
+            "CannotCarryPlantfoodsInWaves": true,
+            "FoeEatDamageReflectPct": 0.5,
+            "LivesInDeepWater": true,
+            "WalkSPS": 0.185,
+            "EatDPS": 100,
+            "Toughness": 190,
+            "ImmuneToGarlic": true,
+            "WavePointCost": 100,
+            "Weight": 0,
+            "HitRect": "RTID(ZombossMechHitRect@RectangleProps)",
+            "AttackRect": "RTID(ZombossMechAttackRect@RectangleProps)",
+            "ZombossMechLevel": 0,
+            "ZombossStages": [
+                {
+                    "AnimRateModifier": 1,
+                    "ChilledDurationFromFrozen": 10,
+                    "DamageIndexFull": 0,
+                    "DamageIndexHalf": 0,
+                    "HitPoints": 1000000000000000000000000,
+                    "MaxIdleTime": 1,
+                    "MinIdleTime": 0.5,
+                    "StunDamageScale": 1.5,
+                    "StunStaggerBackMovement": 1,
+                    "StunStaggerBackTime": 0.4,
+                    "StunTime": 4,
+                    "Actions": [
+                        {
+                            "actionName": "walk",
+                            "weight": 5,
+                            "repeatMax": 1,
+                            "repeatMin": 1,
+                            "summonProps": {
+                                "pointMin": 1000,
+                                "pointMax": 2000,
+                                "zombieList": []
+                            }
+                        },
+                        {
+                            "actionName": "shoot",
+                            "weight": 10,
+                            "repeatMax": 1,
+                            "repeatMin": 1,
+                            "summonProps": {
+                                "pointMin": 1000,
+                                "pointMax": 2000,
+                                "zombieList": []
+                            }
+                        },
+                        {
+                            "actionName": "summon",
+                            "weight": 10,
+                            "repeatMax": 2,
+                            "repeatMin": 2,
+                            "summonProps": {
+                                "pointMin": 600,
+                                "pointMax": 1600,
+                                "zombieList": [
+                                    "pirate_armor1_lv7",
+                                    "pirate_armor2_lv7"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "Waves": []
+      }
+    },
+        {
+            "aliases": [
+                "ModPlants"
+            ],
+            "objclass": "PlantModifierProperties",
+            "objdata": {
+                "List": [
+                    {
+                        "Type": "powerlily",
+                        "NewObjdata": {
+                            "Cooldown": 10,
+                            "CooldownFrom": 0.5
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "pirate_armor1_lv7"
+            ],
+            "objclass": "ArmorType",
+            "objdata": {
+                "Properties": "RTID(pirate_armor1_lv7@CurrentLevel)",
+                "ArmorBaseOn": "pirate_armor1"
+            }
+        },
+        {
+            "objclass": "ArmorProperties",
+            "aliases": [
+                "pirate_armor1_lv7"
+            ],
+            "objdata": {
+                "isMetal": false,
+                "isIce": false,
+                "Toughness": 1899,
+                "BowlingLevel": 1
+            }
+        },
+        {
+            "aliases": [
+                "pirate_armor2_lv7"
+            ],
+            "objclass": "ArmorType",
+            "objdata": {
+                "Properties": "RTID(pirate_armor2_lv7@CurrentLevel)",
+                "ArmorBaseOn": "pirate_armor2"
+            }
+        },
+        {
+            "objclass": "ArmorProperties",
+            "aliases": [
+                "pirate_armor2_lv7"
+            ],
+            "objdata": {
+                "isMetal": true,
+                "isIce": false,
+                "Toughness": 5643,
+                "BowlingLevel": 1
+            }
+        },
+        {
+            "aliases": [
+                "pirate_armor4_lv7"
+            ],
+            "objclass": "ArmorType",
+            "objdata": {
+                "Properties": "RTID(pirate_armor4_lv7@CurrentLevel)",
+                "ArmorBaseOn": "pirate_armor4"
+            }
+        },
+        {
+            "objclass": "ArmorProperties",
+            "aliases": [
+                "pirate_armor4_lv7"
+            ],
+            "objdata": {
+                "isMetal": true,
+                "isIce": false,
+                "Toughness": 11286,
+                "BowlingLevel": 1
+            }
+        },
+        {
+            "aliases": [
+                "pirate_armor1_lv7"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(pirate_armor1_lv7@CurrentLevel)",
+                "ZombieBasedOn": "pirate"
+            }
+        },
+        {
+            "objclass": "ZombieProperties",
+            "aliases": [
+                "pirate_armor1_lv7"
+            ],
+            "objdata": {
+                "ZombieSort": "Normal",
+                "WalkSPS": 0.185,
+                "Toughness": 975,
+                "EatDPS": 513,
+                "CannotCarryPlantfoodsInWaves": false,
+                "WavePointCost": 1100,
+                "Weight": 4000,
+                "HitRect": "RTID(CommonHitRect@RectangleProps)",
+                "AttackRect": "RTID(CommonAttackRect@RectangleProps)",
+                "StartingArmors": [
+                    "pirate_armor1_lv7"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "pirate_armor2_lv7"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(pirate_armor2_lv7@CurrentLevel)",
+                "ZombieBasedOn": "pirate"
+            }
+        },
+        {
+            "objclass": "ZombieProperties",
+            "aliases": [
+                "pirate_armor2_lv7"
+            ],
+            "objdata": {
+                "ZombieSort": "Normal",
+                "WalkSPS": 0.185,
+                "Toughness": 975,
+                "EatDPS": 513,
+                "CannotCarryPlantfoodsInWaves": false,
+                "WavePointCost": 1100,
+                "Weight": 4000,
+                "HitRect": "RTID(CommonHitRect@RectangleProps)",
+                "AttackRect": "RTID(CommonAttackRect@RectangleProps)",
+                "StartingArmors": [
+                    "pirate_armor2_lv7"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "pirate_armor4_lv7"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(pirate_armor4_lv7@CurrentLevel)",
+                "ZombieBasedOn": "pirate"
+            }
+        },
+        {
+            "objclass": "ZombieProperties",
+            "aliases": [
+                "pirate_armor4_lv7"
+            ],
+            "objdata": {
+                "ZombieSort": "Normal",
+                "WalkSPS": 0.185,
+                "Toughness": 975,
+                "EatDPS": 513,
+                "CannotCarryPlantfoodsInWaves": false,
+                "WavePointCost": 1100,
+                "Weight": 4000,
+                "HitRect": "RTID(CommonHitRect@RectangleProps)",
+                "AttackRect": "RTID(CommonAttackRect@RectangleProps)",
+                "StartingArmors": [
+                    "pirate_armor4_lv7"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "seagull_lv7"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(seagull_lv7@CurrentLevel)",
+                "ZombieBasedOn": "seagull"
+            }
+        },
+        {
+            "objclass": "ZombieProperties",
+            "aliases": [
+                "seagull_lv7"
+            ],
+            "objdata": {
+                "ChooseToSpawnOnNonDeckRows": true,
+                "WalkSPS": 0.355,
+                "EatDPS": 513,
+                "Toughness": 1386,
+                "WavePointCost": 200,
+                "Weight": 4000,
+                "HitRect": "RTID(CommonHitRect@RectangleProps)",
+                "AttackRect": "RTID(CommonAttackRect@RectangleProps)"
+            }
+        },
+        {
+            "aliases": [
+                "pelican_lv7"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(pelican_lv7@CurrentLevel)",
+                "ZombieBasedOn": "pelican"
+            }
+        },
+        {
+            "objclass": "ZombieProperties",
+            "aliases": [
+                "pelican_lv7"
+            ],
+            "objdata": {
+                "ChooseToSpawnOnNonDeckRows": true,
+                "WalkSPS": 0.6,
+                "EatDPS": 513,
+                "Toughness": 1386,
+                "WavePointCost": 350,
+                "Weight": 4000,
+                "HitRect": "RTID(CommonHitRect@RectangleProps)",
+                "AttackRect": "RTID(CommonAttackRect@RectangleProps)"
+            }
+        },
+        {
+            "aliases": [
+                "pirate_gargantuar_lv7"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(pirate_gargantuar_lv7@CurrentLevel)",
+                "ZombieBasedOn": "pirate_gargantuar"
+            }
+        },
+        {
+            "objclass": "ZombieProperties",
+            "aliases": [
+                "pirate_gargantuar_lv7"
+            ],
+            "objdata": {
+                "CannotBeEnlightenedBySolarSage": true,
+                "ZombieSort": "Gargantuar",
+                "CannotBeGrabbedByPtero": true,
+                "CannotChangeLaneByPowerToss": true,
+                "CannotBeFlickedByPowerToss": true,
+                "CannotBeDraggedByTangleKelp": true,
+                "CannotBeTossedByCitron": true,
+                "CannotBeSwallowedByChomper": true,
+                "CannotCarryPlantfoodsInWaves": true,
+                "SmashDamage": 7695,
+                "LivesInDeepWater": true,
+                "WalkSPS": 0.24,
+                "EatDPS": 513,
+                "Toughness": 18468,
+                "NormalDeathWhenMowed": true,
+                "WavePointCost": 1500,
+                "Weight": 3000,
+                "HitRect": "RTID(GargantuarHitRect@RectangleProps)",
+                "AttackRect": "RTID(GargantuarAttackRect@RectangleProps)"
+            }
+        }
+    ]
+}

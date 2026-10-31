@@ -1,0 +1,240 @@
+{
+    "objects": [
+        {
+            "objclass": "LevelDefinition",
+            "objdata": {
+                "DescriptionMultiLanguage": {
+                    "en": "<PLAYERNAME>'s Rematch with Zombot Tuskmaster 10,000 BC 2.0",
+                    "zh": "<PLAYERNAME>与獠牙征服者2.0的重赛"
+                },
+                "FirstIntroNarrative": "RANDOM_INTRO_ICEAGE",
+                "FirstOutroNarrative": "RANDOM_OUTRO_ICEAGE",
+                "LoadDefaultMusic": false,
+                "Loot": "RTID(DefaultLoot@LevelModules)",
+                "Modules": [
+                    "RTID(StandardIntro@LevelModules)",
+                    "RTID(ZombossIntro@LevelModules)",
+                    "RTID(ConveyorBelt@CurrentLevel)",
+                    "RTID(ZombossBattle@CurrentLevel)",
+                    "RTID(FrontLawnMowers@LevelModules)",
+                    "RTID(RandomImitaterAdditional@CurrentLevel)",
+                    "RTID(RandomImitater@LevelModules)",
+                    "RTID(DefaultZombieWinCondition@LevelModules)",
+                    "RTID(NewWaves@CurrentLevel)",
+                    "RTID(FrozenPlantPlacement@CurrentLevel)"
+                ],
+                "NameMultiLanguage": {
+                    "en": "When Hell Freezes Over",
+                    "zh": "地狱冻结之时"
+                },
+                "NormalPresentTable": "egypt_normal_01",
+                "WrittenBy": "SansGrinder",
+                "ForceToWorldMap": true,
+                "RepeatPlayForceToWorldMap": true,
+                "ShinyPresentTable": "egypt_shiny_01",
+                "StageModule": "RTID(IceageVeteranStage@LevelModules)",
+                "VictoryModule": "RTID(ZombossVictoryOutro@LevelModules)"
+            }
+        },
+        {
+            "aliases": [
+                "FrozenPlantPlacement"
+            ],
+            "objclass": "InitialPlantProperties",
+            "objdata": {
+                "InitialPlantPlacements": [
+                    {
+                        "GridX": 1,
+                        "GridY": 0,
+                        "Condition": "icecubed",
+                        "TypeName": "RTID(powerlily@PlantTypes)"
+                    },
+                    {
+                        "GridX": 3,
+                        "GridY": 2,
+                        "Condition": "icecubed",
+                        "TypeName": "RTID(powerlily@PlantTypes)"
+                    },
+                    {
+                        "GridX": 1,
+                        "GridY": 4,
+                        "Condition": "icecubed",
+                        "TypeName": "RTID(powerlily@PlantTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "RANDOM_INTRO_ICEAGE"
+            ],
+            "objclass": "NarrativeProperties",
+            "objdata": {
+                "Flow": [
+                    {
+                        "Character": "winnie",
+                        "Action": "NPC_ENTER"
+                    },
+                    {
+                        "Character": "crazydave",
+                        "Action": "NPC_ENTER"
+                    },
+                    {
+                        "Character": "crazydave",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "Penny, I'm getting a lil' Dejavu here",
+                            "zh": "潘妮，我怎么有种似曾相识的感觉"
+                        }
+                    },
+                    {
+                        "Character": "winnie",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "...?",
+                            "zh": "...？"
+                        }
+                    },
+                    {
+                        "Character": "crazydave",
+                        "Action": "SHOUT",
+                        "Lines": {
+                            "en": "THAT HUNTER IS COMING! WATCH OUT FOR HIS SNOWBALLS!",
+                            "zh": "那个猎人要来了！！！！当心他的雪球！！！！"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "RANDOM_OUTRO_ICEAGE"
+            ],
+            "objclass": "NarrativeProperties",
+            "objdata": {
+                "Flow": [
+                    {
+                        "Character": "winnie",
+                        "Action": "NPC_ENTER"
+                    },
+                    {
+                        "Character": "crazydave",
+                        "Action": "NPC_ENTER"
+                    },
+                    {
+                        "Character": "crazydave",
+                        "Action": "SPECIAL1",
+                        "Lines": {
+                            "en": "Yay! We defeated Dr. Zomboss before the cold snap arrived!",
+                            "zh": "好诶！我们在寒潮来临之前打败了僵尸博士！"
+                        }
+                    },
+                    {
+                        "Character": "winnie",
+                        "Action": "TIRED",
+                        "Lines": {
+                            "en": "......what are you talking about, User Dave?",
+                            "zh": "……你在说什么呢，用户戴夫？"
+                        }
+                    },
+                    {
+                        "Character": "crazydave",
+                        "Action": "PLAYFUL",
+                        "Lines": {
+                            "en": "Welp, you have NO IDEA how much trouble we saved ourselves from right there!",
+                            "zh": "哈哈，你不知道我们省去了多少麻烦事！"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "ZombossBattle"
+            ],
+            "objclass": "ZombossBattleModuleProperties",
+            "objdata": {
+                "ReservedColumnCount": 2,
+                "ZombossDeathColumn": 5,
+                "ZombossDeathRow": 3,
+                "ZombossMechType": "zombossmech_iceage2",
+                "ZombossSpawnGridPosition": {
+                    "mX": 6,
+                    "mY": 3
+                }
+            }
+        },
+        {
+            "aliases": [
+                "ConveyorBelt"
+            ],
+            "objclass": "ConveyorSeedBankProperties",
+            "objdata": {
+                "DropDelayConditions": [
+                    {
+                        "Delay": 3,
+                        "MaxPackets": 0
+                    },
+                    {
+                        "Delay": 6,
+                        "MaxPackets": 3
+                    },
+                    {
+                        "Delay": 12,
+                        "MaxPackets": 8
+                    }
+                ],
+                "InitialPlantList": [
+                    {
+                        "MaxCount": 10,
+                        "MaxWeightFactor": 0,
+                        "PlantType": "hotpotato",
+                        "Weight": 25
+                    },
+                    {
+                        "PlantType": "imitater",
+                        "Weight": 100
+                    }
+                ],
+                "SpeedConditions": [
+                    {
+                        "MaxPackets": 0,
+                        "Speed": 100
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "RandomImitaterAdditional"
+            ],
+            "objclass": "RandomImitaterProperties",
+            "objdata": {
+                "ExcludeListSunProducers": "true",
+                "ExtraRandomPlantExcludeList": [
+                    "springbean",
+                    "lilypad"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "NewWaves"
+            ],
+            "objclass": "WaveManagerModuleProperties",
+            "objdata": {
+                "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+            }
+        },
+        {
+            "aliases": [
+                "WaveManagerProps"
+            ],
+            "objclass": "WaveManagerProperties",
+            "objdata": {
+                "Waves": []
+            }
+        }
+    ],
+    "version": 1
+}

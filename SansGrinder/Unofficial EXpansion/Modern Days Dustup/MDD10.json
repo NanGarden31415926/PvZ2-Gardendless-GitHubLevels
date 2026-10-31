@@ -1,0 +1,8827 @@
+{
+	"objects":[
+		{
+			"objclass":"LevelDefinition",
+			"objdata":{
+				"Description":"[PLAYERS_TRIP_TO_MODERN]",
+				"FirstIntroNarrative":"MODERN_54_INTRO",
+				"FirstOutroNarrative":"MODERN_54_OUTRO",
+				"LevelNumber":54,
+				"LoadDefaultMusic":false,
+				"Loot":"RTID(DefaultLoot@LevelModules)",
+				"Modules":[
+					"RTID(ZombossIntro@LevelModules)",
+					"RTID(ConveyorBelt@CurrentLevel)",
+					"RTID(ZombossBattle@CurrentLevel)",
+					"RTID(DefaultZombieWinCondition@LevelModules)",
+					"RTID(NewWaves@CurrentLevel)",
+					"RTID(FrozenPlantPlacement@CurrentLevel)",
+					"RTID(FrozenZombiePlacement@CurrentLevel)",
+					"RTID(MainScheduler@CurrentLevel)"
+				],
+				"MusicType":"MiniGame_A",
+				"NameMultiLanguage": {
+          			"en": "Modern Days Dustup: Day 10",
+          			"zh": "现代时光大扫除：第10天"
+        		},
+				"WrittenBy": "SansGrinder",
+				"StageModule":"RTID(ModernNightStage@LevelModules)",
+				"SuppressSunSpawn":true,
+				"VictoryModule":"RTID(ZombossVictoryOutro@LevelModules)"
+			}
+		},
+		{
+			"aliases":[
+				"MODERN_54_INTRO"
+			],
+			"objclass":"NarrativeProperties",
+			"objdata":{
+				"Flow":[
+					{
+						"Character":"winnie",
+						"Action":"NPC_ENTER"
+					},
+					{
+						"Character":"crazydave",
+						"Action":"NPC_ENTER"
+					},
+					{
+						"Character":"zombossicon",
+						"Action":"NPC_ENTER"
+					},
+					{
+						"Character":"zombossicon",
+						"Action":"SAY",
+						"Lines":{
+							"en":"So we've met again, again! After all this chaos, CHAOS!",
+							"zh":"咱们又见面了，又见面了！经历了这么多混乱——混乱！"
+						}
+					},
+					{
+						"Character":"zombossicon",
+						"Action":"SAY",
+						"Lines":{
+							"en":"You've been highly dependent on that stupid conveyor belt and plants delivered by your stupid neighbours, heh?",
+							"zh":"你们一直死守着那条蠢得不行的传送带，还有那些傻邻居送来的植物，是吧？"
+						}
+					},
+					{
+						"Character":"zombossicon",
+						"Action":"SAY",
+						"Lines":{
+							"en":"I wonder what will happen......if I send my Zombot Historical-tron 1.0 to your past lawn and erase your existence from the very start!",
+							"zh":"我很好奇……如果我把我的历史重塑者1.0送回你们过去的草坪，从最一开始就把你们彻底抹除，会怎么样呢！"
+						}
+					},
+					{
+						"Character":"zombossicon",
+						"Action":"SAY",
+						"Lines":{
+							"en":"The lunatic shall be erased by the paradox along with the genius neighbours! Wahahaha!",
+							"zh":"就让那个疯子，连同那些天才邻居一起，被悖论彻底抹去吧！哇哈哈哈！"
+						}
+					},
+					{
+						"Character":"zombossicon",
+						"Action":"NPC_EXIT"
+					},
+					{
+						"Character":"winnie",
+						"Action":"SAY",
+						"Lines":{
+							"en":"Alert! I detect some extremely specific timeline turbulence!",
+							"zh":"警报！我检测到时间线出现了极度异常的波动！"
+						}
+					},
+					{
+						"Character":"winnie",
+						"Action":"EXCITED",
+						"Lines":{
+							"en":"Dr. Zomboss has sent a Zombot back to Ancient Egypt! If our past selves fail to escape Ancient Egypt, then we won't be here, and we'll be erased once and for all! ",
+							"zh":"僵王博士把一台机甲送回了古埃及！如果我们过去的自己没能逃出神秘埃及，那我们现在就不会存在于此，我们将被彻底抹除！"
+						}
+					},
+					{
+						"Character":"crazydave",
+						"Action":"PLAYFUL",
+						"Lines":{
+							"en":"Penny! Let's smack that Zombot just like how we used to back in the good old days!",
+							"zh":"潘妮！咱们去揍扁那台僵王机甲，就像以前那些好日子一样！"
+						}
+					},
+					{
+						"Character":"winnie",
+						"Action":"TIRED",
+						"Lines":{
+							"en":"Then...... who will supply our neighbour with——",
+							"zh":"那……谁来给我们的邻居提供——"
+						}
+					},
+					{
+						"Character":"crazydave",
+						"Action":"SPECIAL2",
+						"Lines":{
+							"en":"Let's get it going before it's too late!",
+							"zh":"咱们赶紧出发吧，不然就来不及啦！"
+						}
+					}
+				]
+			}
+		},
+		{
+			"aliases":[
+				"MainScheduler"
+			],
+			"objclass":"LevelSchedulerProps",
+			"Note":"single-use scheduler for entry plot",
+			"objdata":{
+				"TimeBeforeFirst":{
+					"Max":0.1,
+					"Min":0.1
+				},
+				"TimeBetween":{
+					"Max":0.025,
+					"Min":0.025
+				},
+				"Repeat":{
+					"Max":1,
+					"Min":1
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+					"RTID(Line1S@CurrentLevel)",
+					"RTID(Line2S@CurrentLevel)",
+					"RTID(Line3S@CurrentLevel)",
+					"RTID(CallForHelpScheduler@CurrentLevel)",
+					"RTID(PlotConvinientExplodeONut@CurrentLevel)",
+					"RTID(Line4S@CurrentLevel)",
+					"RTID(RandomConveyor@CurrentLevel)",
+					"RTID(Line5S@CurrentLevel)"
+				]
+			}
+		},
+		{
+			"aliases":[
+				"Line1S"
+			],
+			"objclass":"WaveSchedulerProps",
+			"objdata":{
+				"TimeBeforeFirst":{
+					"Max":0.1,
+					"Min":0.1
+				},
+				"TimeBetween":{
+					"Max":1,
+					"Min":1
+				},
+				"Repeat":{
+					"Max":1,
+					"Min":1
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+					"RTID(Line1@CurrentLevel)"
+				]
+			}
+		},
+		{
+			"aliases":[
+				"Line1"
+			],
+			"objclass":"TutorialLabelProperties",
+			"objdata":{
+				"String":"",
+				"StringMultiLanguage":{
+					"en":"Just as expected! The two of us, left alone in the midst of this catastrophe!",
+					"zh":"果然不出所料！就剩我们俩了，孤零零地被困在这场灾难的正中央！"
+				},
+				"LifeSpan":3
+			}
+		},
+		{
+			"aliases":[
+				"Line2S"
+			],
+			"objclass":"WaveSchedulerProps",
+			"objdata":{
+				"TimeBeforeFirst":{
+					"Max":5,
+					"Min":5
+				},
+				"TimeBetween":{
+					"Max":1,
+					"Min":1
+				},
+				"Repeat":{
+					"Max":1,
+					"Min":1
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+					"RTID(Line2@CurrentLevel)"
+				]
+			}
+		},
+		{
+			"aliases":[
+				"Line2"
+			],
+			"objclass":"TutorialLabelProperties",
+			"objdata":{
+				"String":"",
+				"StringMultiLanguage":{
+					"en":"Now there's no more Crazy Dave delivering plants for you via the Conveyor Belt!",
+					"zh":"现在可没有疯狂戴夫给你往传送带上放植物了！"
+				},
+				"LifeSpan":3
+			}
+		},
+		{
+			"aliases":[
+				"Line3S"
+			],
+			"objclass":"WaveSchedulerProps",
+			"objdata":{
+				"TimeBeforeFirst":{
+					"Max":12,
+					"Min":12
+				},
+				"TimeBetween":{
+					"Max":1,
+					"Min":1
+				},
+				"Repeat":{
+					"Max":1,
+					"Min":1
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+					"RTID(Line3@CurrentLevel)"
+				]
+			}
+		},
+		{
+			"aliases":[
+				"Line3"
+			],
+			"objclass":"TutorialLabelProperties",
+			"objdata":{
+				"String":"",
+				"StringMultiLanguage":{
+					"en":"Give up already! You are no different from a fly caught in a well-planned web!",
+					"zh":"趁早放弃吧！此刻你就是个被天罗地网抓住的无头苍蝇！"
+				},
+				"LifeSpan":3
+			}
+		},
+		{
+			"aliases":[
+				"Line4S"
+			],
+			"objclass":"WaveSchedulerProps",
+			"objdata":{
+				"TimeBeforeFirst":{
+					"Max":30,
+					"Min":30
+				},
+				"TimeBetween":{
+					"Max":1,
+					"Min":1
+				},
+				"Repeat":{
+					"Max":1,
+					"Min":1
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+					"RTID(Line4@CurrentLevel)"
+				]
+			}
+		},
+		{
+			"aliases":[
+				"Line4"
+			],
+			"objclass":"TutorialLabelProperties",
+			"objdata":{
+				"String":"",
+				"StringMultiLanguage":{
+					"en":"Wh-what? How did that get there?",
+					"zh":"什-什么？哪来的爆炸坚果？"
+				},
+				"LifeSpan":3
+			}
+		},
+		{
+			"aliases":[
+				"Line5S"
+			],
+			"objclass":"WaveSchedulerProps",
+			"objdata":{
+				"TimeBeforeFirst":{
+					"Max":72,
+					"Min":72
+				},
+				"TimeBetween":{
+					"Max":1,
+					"Min":1
+				},
+				"Repeat":{
+					"Max":1,
+					"Min":1
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+					"RTID(Line5@CurrentLevel)",
+					"RTID(RandomPortalScheduler@CurrentLevel)",
+					"RTID(RandomEventScheduler@CurrentLevel)"
+				]
+			}
+		},
+		{
+			"aliases":[
+				"Line5"
+			],
+			"objclass":"TutorialLabelProperties",
+			"objdata":{
+				"String":"",
+				"StringMultiLanguage":{
+					"en":"Wh-what? Aaarrrgh! I'll have to play this seriously!",
+					"zh":"什-什么？既然这样，那我也要认真了！"
+				},
+				"LifeSpan":3
+			}
+		},
+		{
+			"aliases":[
+				"RandomPortalScheduler"
+			],
+			"objclass":"WaveSchedulerProps",
+			"objdata":{
+				"TimeBeforeFirst":{
+					"Max":0.0001,
+					"Min":0.0001
+				},
+				"TimeBetween":{
+					"Max":15,
+					"Min":15
+				},
+				"Repeat":{
+					"Max":100000000,
+					"Min":100000000
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+					"RTID(RandomPortals@CurrentLevel)"
+				]
+			}
+		},
+		{
+			"aliases":[
+				"RandomEventScheduler"
+			],
+			"objclass":"WaveSchedulerProps",
+			"objdata":{
+				"TimeBeforeFirst":{
+					"Max":0.0001,
+					"Min":0.0001
+				},
+				"TimeBetween":{
+					"Max":30,
+					"Min":30
+				},
+				"Repeat":{
+					"Max":100000000,
+					"Min":100000000
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+					"RTID(RandomEvents@CurrentLevel)"
+				]
+			}
+		},
+		{
+			"aliases":[
+				"RandomPortals"
+			],
+			"objclass":"RandomEventsProps",
+			"objdata":{
+				"EventCount":{
+					"Min":2,
+					"Max":3
+				},
+				"Events":[
+					"RTID(PortalAEE_6_0@CurrentLevel)",
+					"RTID(PortalAEE_6_1@CurrentLevel)",
+					"RTID(PortalAEE_6_2@CurrentLevel)",
+					"RTID(PortalAEE_6_3@CurrentLevel)",
+					"RTID(PortalAEE_6_4@CurrentLevel)",
+					"RTID(PortalAEE_7_0@CurrentLevel)",
+					"RTID(PortalAEE_7_1@CurrentLevel)",
+					"RTID(PortalAEE_7_2@CurrentLevel)",
+					"RTID(PortalAEE_7_3@CurrentLevel)",
+					"RTID(PortalAEE_7_4@CurrentLevel)",
+					"RTID(PortalAEE_8_0@CurrentLevel)",
+					"RTID(PortalAEE_8_1@CurrentLevel)",
+					"RTID(PortalAEE_8_2@CurrentLevel)",
+					"RTID(PortalAEE_8_3@CurrentLevel)",
+					"RTID(PortalAEE_8_4@CurrentLevel)",
+					"RTID(PortalPSS_6_0@CurrentLevel)",
+					"RTID(PortalPSS_6_1@CurrentLevel)",
+					"RTID(PortalPSS_6_2@CurrentLevel)",
+					"RTID(PortalPSS_6_3@CurrentLevel)",
+					"RTID(PortalPSS_6_4@CurrentLevel)",
+					"RTID(PortalPSS_7_0@CurrentLevel)",
+					"RTID(PortalPSS_7_1@CurrentLevel)",
+					"RTID(PortalPSS_7_2@CurrentLevel)",
+					"RTID(PortalPSS_7_3@CurrentLevel)",
+					"RTID(PortalPSS_7_4@CurrentLevel)",
+					"RTID(PortalPSS_8_0@CurrentLevel)",
+					"RTID(PortalPSS_8_1@CurrentLevel)",
+					"RTID(PortalPSS_8_2@CurrentLevel)",
+					"RTID(PortalPSS_8_3@CurrentLevel)",
+					"RTID(PortalPSS_8_4@CurrentLevel)",
+					"RTID(PortalWWW_6_0@CurrentLevel)",
+					"RTID(PortalWWW_6_1@CurrentLevel)",
+					"RTID(PortalWWW_6_2@CurrentLevel)",
+					"RTID(PortalWWW_6_3@CurrentLevel)",
+					"RTID(PortalWWW_6_4@CurrentLevel)",
+					"RTID(PortalWWW_7_0@CurrentLevel)",
+					"RTID(PortalWWW_7_1@CurrentLevel)",
+					"RTID(PortalWWW_7_2@CurrentLevel)",
+					"RTID(PortalWWW_7_3@CurrentLevel)",
+					"RTID(PortalWWW_7_4@CurrentLevel)",
+					"RTID(PortalWWW_8_0@CurrentLevel)",
+					"RTID(PortalWWW_8_1@CurrentLevel)",
+					"RTID(PortalWWW_8_2@CurrentLevel)",
+					"RTID(PortalWWW_8_3@CurrentLevel)",
+					"RTID(PortalWWW_8_4@CurrentLevel)",
+					"RTID(PortalFFF_6_0@CurrentLevel)",
+					"RTID(PortalFFF_6_1@CurrentLevel)",
+					"RTID(PortalFFF_6_2@CurrentLevel)",
+					"RTID(PortalFFF_6_3@CurrentLevel)",
+					"RTID(PortalFFF_6_4@CurrentLevel)",
+					"RTID(PortalFFF_7_0@CurrentLevel)",
+					"RTID(PortalFFF_7_1@CurrentLevel)",
+					"RTID(PortalFFF_7_2@CurrentLevel)",
+					"RTID(PortalFFF_7_3@CurrentLevel)",
+					"RTID(PortalFFF_7_4@CurrentLevel)",
+					"RTID(PortalFFF_8_0@CurrentLevel)",
+					"RTID(PortalFFF_8_1@CurrentLevel)",
+					"RTID(PortalFFF_8_2@CurrentLevel)",
+					"RTID(PortalFFF_8_3@CurrentLevel)",
+					"RTID(PortalFFF_8_4@CurrentLevel)",
+					"RTID(PortalDAA_6_0@CurrentLevel)",
+					"RTID(PortalDAA_6_1@CurrentLevel)",
+					"RTID(PortalDAA_6_2@CurrentLevel)",
+					"RTID(PortalDAA_6_3@CurrentLevel)",
+					"RTID(PortalDAA_6_4@CurrentLevel)",
+					"RTID(PortalDAA_7_0@CurrentLevel)",
+					"RTID(PortalDAA_7_1@CurrentLevel)",
+					"RTID(PortalDAA_7_2@CurrentLevel)",
+					"RTID(PortalDAA_7_3@CurrentLevel)",
+					"RTID(PortalDAA_7_4@CurrentLevel)",
+					"RTID(PortalDAA_8_0@CurrentLevel)",
+					"RTID(PortalDAA_8_1@CurrentLevel)",
+					"RTID(PortalDAA_8_2@CurrentLevel)",
+					"RTID(PortalDAA_8_3@CurrentLevel)",
+					"RTID(PortalDAA_8_4@CurrentLevel)",
+					"RTID(PortalBWBB_6_0@CurrentLevel)",
+					"RTID(PortalBWBB_6_1@CurrentLevel)",
+					"RTID(PortalBWBB_6_2@CurrentLevel)",
+					"RTID(PortalBWBB_6_3@CurrentLevel)",
+					"RTID(PortalBWBB_6_4@CurrentLevel)",
+					"RTID(PortalBWBB_7_0@CurrentLevel)",
+					"RTID(PortalBWBB_7_1@CurrentLevel)",
+					"RTID(PortalBWBB_7_2@CurrentLevel)",
+					"RTID(PortalBWBB_7_3@CurrentLevel)",
+					"RTID(PortalBWBB_7_4@CurrentLevel)",
+					"RTID(PortalBWBB_8_0@CurrentLevel)",
+					"RTID(PortalBWBB_8_1@CurrentLevel)",
+					"RTID(PortalBWBB_8_2@CurrentLevel)",
+					"RTID(PortalBWBB_8_3@CurrentLevel)",
+					"RTID(PortalBWBB_8_4@CurrentLevel)",
+					"RTID(PortalFBCC_6_0@CurrentLevel)",
+					"RTID(PortalFBCC_6_1@CurrentLevel)",
+					"RTID(PortalFBCC_6_2@CurrentLevel)",
+					"RTID(PortalFBCC_6_3@CurrentLevel)",
+					"RTID(PortalFBCC_6_4@CurrentLevel)",
+					"RTID(PortalFBCC_7_0@CurrentLevel)",
+					"RTID(PortalFBCC_7_1@CurrentLevel)",
+					"RTID(PortalFBCC_7_2@CurrentLevel)",
+					"RTID(PortalFBCC_7_3@CurrentLevel)",
+					"RTID(PortalFBCC_7_4@CurrentLevel)",
+					"RTID(PortalFBCC_8_0@CurrentLevel)",
+					"RTID(PortalFBCC_8_1@CurrentLevel)",
+					"RTID(PortalFBCC_8_2@CurrentLevel)",
+					"RTID(PortalFBCC_8_3@CurrentLevel)",
+					"RTID(PortalFBCC_8_4@CurrentLevel)",
+					"RTID(PortalLCC_6_0@CurrentLevel)",
+					"RTID(PortalLCC_6_1@CurrentLevel)",
+					"RTID(PortalLCC_6_2@CurrentLevel)",
+					"RTID(PortalLCC_6_3@CurrentLevel)",
+					"RTID(PortalLCC_6_4@CurrentLevel)",
+					"RTID(PortalLCC_7_0@CurrentLevel)",
+					"RTID(PortalLCC_7_1@CurrentLevel)",
+					"RTID(PortalLCC_7_2@CurrentLevel)",
+					"RTID(PortalLCC_7_3@CurrentLevel)",
+					"RTID(PortalLCC_7_4@CurrentLevel)",
+					"RTID(PortalLCC_8_0@CurrentLevel)",
+					"RTID(PortalLCC_8_1@CurrentLevel)",
+					"RTID(PortalLCC_8_2@CurrentLevel)",
+					"RTID(PortalLCC_8_3@CurrentLevel)",
+					"RTID(PortalLCC_8_4@CurrentLevel)",
+					"RTID(PortalKFTT_6_0@CurrentLevel)",
+					"RTID(PortalKFTT_6_1@CurrentLevel)",
+					"RTID(PortalKFTT_6_2@CurrentLevel)",
+					"RTID(PortalKFTT_6_3@CurrentLevel)",
+					"RTID(PortalKFTT_6_4@CurrentLevel)",
+					"RTID(PortalKFTT_7_0@CurrentLevel)",
+					"RTID(PortalKFTT_7_1@CurrentLevel)",
+					"RTID(PortalKFTT_7_2@CurrentLevel)",
+					"RTID(PortalKFTT_7_3@CurrentLevel)",
+					"RTID(PortalKFTT_7_4@CurrentLevel)",
+					"RTID(PortalKFTT_8_0@CurrentLevel)",
+					"RTID(PortalKFTT_8_1@CurrentLevel)",
+					"RTID(PortalKFTT_8_2@CurrentLevel)",
+					"RTID(PortalKFTT_8_3@CurrentLevel)",
+					"RTID(PortalKFTT_8_4@CurrentLevel)",
+					"RTID(PortalNMTT_6_0@CurrentLevel)",
+					"RTID(PortalNMTT_6_1@CurrentLevel)",
+					"RTID(PortalNMTT_6_2@CurrentLevel)",
+					"RTID(PortalNMTT_6_3@CurrentLevel)",
+					"RTID(PortalNMTT_6_4@CurrentLevel)",
+					"RTID(PortalNMTT_7_0@CurrentLevel)",
+					"RTID(PortalNMTT_7_1@CurrentLevel)",
+					"RTID(PortalNMTT_7_2@CurrentLevel)",
+					"RTID(PortalNMTT_7_3@CurrentLevel)",
+					"RTID(PortalNMTT_7_4@CurrentLevel)",
+					"RTID(PortalNMTT_8_0@CurrentLevel)",
+					"RTID(PortalNMTT_8_1@CurrentLevel)",
+					"RTID(PortalNMTT_8_2@CurrentLevel)",
+					"RTID(PortalNMTT_8_3@CurrentLevel)",
+					"RTID(PortalNMTT_8_4@CurrentLevel)",
+					"RTID(PortalJMM_6_0@CurrentLevel)",
+					"RTID(PortalJMM_6_1@CurrentLevel)",
+					"RTID(PortalJMM_6_2@CurrentLevel)",
+					"RTID(PortalJMM_6_3@CurrentLevel)",
+					"RTID(PortalJMM_6_4@CurrentLevel)",
+					"RTID(PortalJMM_7_0@CurrentLevel)",
+					"RTID(PortalJMM_7_1@CurrentLevel)",
+					"RTID(PortalJMM_7_2@CurrentLevel)",
+					"RTID(PortalJMM_7_3@CurrentLevel)",
+					"RTID(PortalJMM_7_4@CurrentLevel)",
+					"RTID(PortalJMM_8_0@CurrentLevel)",
+					"RTID(PortalJMM_8_1@CurrentLevel)",
+					"RTID(PortalJMM_8_2@CurrentLevel)",
+					"RTID(PortalJMM_8_3@CurrentLevel)",
+					"RTID(PortalJMM_8_4@CurrentLevel)",
+					"RTID(PortalMDD_6_0@CurrentLevel)",
+					"RTID(PortalMDD_6_1@CurrentLevel)",
+					"RTID(PortalMDD_6_2@CurrentLevel)",
+					"RTID(PortalMDD_6_3@CurrentLevel)",
+					"RTID(PortalMDD_6_4@CurrentLevel)",
+					"RTID(PortalMDD_7_0@CurrentLevel)",
+					"RTID(PortalMDD_7_1@CurrentLevel)",
+					"RTID(PortalMDD_7_2@CurrentLevel)",
+					"RTID(PortalMDD_7_3@CurrentLevel)",
+					"RTID(PortalMDD_7_4@CurrentLevel)",
+					"RTID(PortalMDD_8_0@CurrentLevel)",
+					"RTID(PortalMDD_8_1@CurrentLevel)",
+					"RTID(PortalMDD_8_2@CurrentLevel)",
+					"RTID(PortalMDD_8_3@CurrentLevel)",
+					"RTID(PortalMDD_8_4@CurrentLevel)"
+				]
+			}
+		},
+		{
+			"aliases":[
+				"RandomEvents"
+			],
+			"objclass":"RandomEventsProps",
+			"objdata":{
+				"EventCount":{
+					"Min":1,
+					"Max":1
+				},
+				"Events":[
+					"RTID(Sandstorm@CurrentLevel)",
+					"RTID(RaidingParty@CurrentLevel)",
+					"RTID(JetpackAttack@CurrentLevel)",
+					"RTID(Snowstorm@CurrentLevel)",
+					"RTID(ParachuteRain@CurrentLevel)",
+					"RTID(RelichunterParty@CurrentLevel)",
+					"RTID(RocketStrike@CurrentLevel)",
+					"RTID(DinoEvent@CurrentLevel)"
+				]
+			}
+		},
+		{
+			"aliases":[
+				"Sandstorm"
+			],
+			"objclass":"StormZombieSpawnerProps",
+			"objdata":{
+				"ColumnEnd":5,
+				"ColumnStart":3,
+				"GroupSize":"2",
+				"TimeBetweenGroups":"3",
+				"Type":"sandstorm",
+				"Zombies":[
+					{
+						"Type":"RTID(explorer@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(egypt_gargantuar@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(pharaoh@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(camel_segment@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(mummy_armor2@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(mummy_armor4@ZombieTypes)"
+					}
+				]
+			}
+		},
+		{
+			"aliases":[
+				"RaidingParty"
+			],
+			"objclass":"RaidingPartyZombieSpawnerProps",
+			"objdata":{
+				"GroupSize":5,
+				"SwashbucklerCount":20,
+				"TimeBetweenGroups":1
+			}
+		},
+		{
+			"aliases":[
+				"RelichunterParty"
+			],
+			"objclass":"RaidingPartyZombieSpawnerProps",
+			"objdata":{
+				"GroupSize":4,
+				"SwashbucklerCount":10,
+				"TimeBetweenGroups":1,
+				"ZombieType":"RTID(lostcity_relichunter@ZombieTypes)",
+				"WaveStartMessage":""
+			}
+		},
+		{
+			"aliases":[
+				"JetpackAttack"
+			],
+			"objclass":"SpawnZombiesFromGroundSpawnerProps",
+			"objdata":{
+				"ColumnEnd":5,
+				"ColumnStart":3,
+				"WaveStartMessage":"[WARNING_JETPACKRAIN]",
+				"Zombies":[
+					{
+						"Type":"RTID(future_jetpack@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(future_jetpack@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(future_jetpack@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(future_jetpack_veteran@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(future_jetpack_veteran@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(future_jetpack_veteran@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(future_jetpack_veteran@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(future_jetpack_veteran@ZombieTypes)"
+					}
+				]
+			}
+		},
+		{
+			"aliases":[
+				"Snowstorm"
+			],
+			"objclass":"StormZombieSpawnerProps",
+			"objdata":{
+				"ColumnEnd":"5",
+				"ColumnStart":"3",
+				"GroupSize":"3",
+				"TimeBetweenGroups":"3",
+				"Type":"snowstorm",
+				"Zombies":[
+					{
+						"Type":"RTID(iceage_hunter@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(iceage_armor3@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(iceage_weaselhoarder@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(iceage_armor4@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(iceage_armor2@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(iceage_dodo@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(iceage_troglobite@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(iceage_armor3@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(iceage_gargantuar@ZombieTypes)"
+					}
+				]
+			}
+		},
+		{
+			"aliases":[
+				"ParachuteRain"
+			],
+			"objclass":"ParachuteRainZombieSpawnerProps",
+			"objdata":{
+				"ColumnEnd":"5",
+				"ColumnStart":"3",
+				"GroupSize":"2",
+				"SpiderCount":"8",
+				"SpiderZombieName":"lostcity_lostpilot_veteran",
+				"TimeBeforeFullSpawn":"1",
+				"TimeBetweenGroups":"0.2",
+				"WaveStartMessage":"[WARNING_PARACHUTERAIN]",
+				"ZombieFallTime":"1.5"
+			}
+		},
+		{
+			"aliases":[
+				"DinoEvent"
+			],
+			"objclass":"RandomEventsProps",
+			"objdata":{
+				"EventCount":{
+					"Min":3,
+					"Max":5
+				},
+				"Events":[
+					"RTID(ptero@CurrentLevel)",
+					"RTID(raptor@CurrentLevel)",
+					"RTID(stego@CurrentLevel)",
+					"RTID(tyranno@CurrentLevel)",
+					"RTID(ankylo@CurrentLevel)"
+				]
+			}
+		},
+		{
+			"aliases":[
+				"ptero"
+			],
+			"objclass":"DinoWaveActionProps",
+			"objdata":{
+				"DinoRow":"???",
+				"DinoType":"ptero",
+				"DinoWaveDuration":6
+			}
+		},
+		{
+			"aliases":[
+				"raptor"
+			],
+			"objclass":"DinoWaveActionProps",
+			"objdata":{
+				"DinoRow":"???",
+				"DinoType":"raptor",
+				"DinoWaveDuration":6
+			}
+		},
+		{
+			"aliases":[
+				"stego"
+			],
+			"objclass":"DinoWaveActionProps",
+			"objdata":{
+				"DinoRow":"???",
+				"DinoType":"stego",
+				"DinoWaveDuration":6
+			}
+		},
+		{
+			"aliases":[
+				"tyranno"
+			],
+			"objclass":"DinoWaveActionProps",
+			"objdata":{
+				"DinoRow":"???",
+				"DinoType":"tyranno",
+				"DinoWaveDuration":6
+			}
+		},
+		{
+			"aliases":[
+				"ankylo"
+			],
+			"objclass":"DinoWaveActionProps",
+			"objdata":{
+				"DinoRow":"???",
+				"DinoType":"ankylo",
+				"DinoWaveDuration":6
+			}
+		},
+		{
+			"aliases":[
+				"RocketStrike"
+			],
+			"objclass":"RaidingPartyZombieSpawnerProps",
+			"objdata":{
+				"GroupSize":5,
+				"SwashbucklerCount":25,
+				"TimeBetweenGroups":2.5,
+				"ZombieType":"RTID(kongfu_rocket_imp@ZombieTypes)",
+				"WaveStartMessage":"[WARNING_ROCKET_STRIKE]"
+			}
+		},
+		{
+			"aliases":[
+				"CallForHelpScheduler"
+			],
+			"objclass":"WaveSchedulerProps",
+			"objdata":{
+				"TimeBeforeFirst":{
+					"Max":15,
+					"Min":15
+				},
+				"TimeBetween":{
+					"Max":1,
+					"Min":1
+				},
+				"Repeat":{
+					"Max":1,
+					"Min":1
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+					"RTID(CallForHelp@CurrentLevel)"
+				]
+			}
+		},
+		{
+			"aliases":[
+				"PlotConvinientExplodeONut"
+			],
+			"objclass":"WaveSchedulerProps",
+			"objdata":{
+				"TimeBeforeFirst":{
+					"Max":25,
+					"Min":25
+				},
+				"TimeBetween":{
+					"Max":1,
+					"Min":1
+				},
+				"Repeat":{
+					"Max":1,
+					"Min":1
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+					"RTID(ExplodeONut@CurrentLevel)"
+				]
+			}
+		},
+		{
+			"aliases":[
+				"RandomConveyor"
+			],
+			"objclass":"WaveSchedulerProps",
+			"objdata":{
+				"Note":"this is a repeating scheduler that Mods Conveyors",
+				"TimeBeforeFirst":{
+					"Max":60,
+					"Min":60
+				},
+				"TimeBetween":{
+					"Max":100,
+					"Min":100
+				},
+				"Repeat":{
+					"Max":100000000,
+					"Min":100000000
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+					"RTID(CallForHelp@CurrentLevel)",
+					"RTID(ConveyorSelectorEvent@CurrentLevel)"
+				]
+			}
+		},
+		{
+			"aliases":[
+				"ConveyorSelectorEvent"
+			],
+			"objclass":"WaveSchedulerProps",
+			"objdata":{
+				"TimeBeforeFirst":{
+					"Max":3,
+					"Min":3
+				},
+				"TimeBetween":{
+					"Max":1,
+					"Min":1
+				},
+				"Repeat":{
+					"Max":1,
+					"Min":1
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+					"RTID(ConveyorSelector@CurrentLevel)"
+				]
+			}
+		},
+		{
+			"aliases":[
+				"CallForHelp"
+			],
+			"objclass":"WaveLevelAuthorMessageProps",
+			"objdata":{
+				"String":"",
+				"StringMultiLanguage":{
+					"en":"You called for help......",
+					"zh":"你大声呼救……"
+				},
+				"ThemeColor":"#ff0000"
+			}
+		},
+		{
+			"aliases":[
+				"ExplodeONut"
+			],
+			"objclass":"ModifyConveyorWaveActionProps",
+			"objdata":{
+				"Add":[
+					{
+						"MaxDelivered":1,
+						"Type":"RTID(explodeonut@PlantTypes)",
+						"Weight":1
+					}
+				],
+				"Remove":[
+					{
+						"Type":"RTID(explodeonut@PlantTypes)"
+					}
+				]
+			}
+		},
+    {
+      "aliases": [
+        "PortalAEE_6_0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 0,
+        "PortalType": "RTID(PortalAEE@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalAEE_6_1"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 1,
+        "PortalType": "RTID(PortalAEE@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalAEE_6_2"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 2,
+        "PortalType": "RTID(PortalAEE@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalAEE_6_3"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 3,
+        "PortalType": "RTID(PortalAEE@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalAEE_6_4"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 4,
+        "PortalType": "RTID(PortalAEE@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalAEE_7_0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 0,
+        "PortalType": "RTID(PortalAEE@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalAEE_7_1"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 1,
+        "PortalType": "RTID(PortalAEE@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalAEE_7_2"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 2,
+        "PortalType": "RTID(PortalAEE@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalAEE_7_3"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 3,
+        "PortalType": "RTID(PortalAEE@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalAEE_7_4"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 4,
+        "PortalType": "RTID(PortalAEE@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalAEE_8_0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 0,
+        "PortalType": "RTID(PortalAEE@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalAEE_8_1"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 1,
+        "PortalType": "RTID(PortalAEE@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalAEE_8_2"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 2,
+        "PortalType": "RTID(PortalAEE@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalAEE_8_3"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 3,
+        "PortalType": "RTID(PortalAEE@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalAEE_8_4"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 4,
+        "PortalType": "RTID(PortalAEE@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalPSS_6_0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 0,
+        "PortalType": "RTID(PortalPSS@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalPSS_6_1"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 1,
+        "PortalType": "RTID(PortalPSS@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalPSS_6_2"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 2,
+        "PortalType": "RTID(PortalPSS@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalPSS_6_3"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 3,
+        "PortalType": "RTID(PortalPSS@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalPSS_6_4"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 4,
+        "PortalType": "RTID(PortalPSS@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalPSS_7_0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 0,
+        "PortalType": "RTID(PortalPSS@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalPSS_7_1"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 1,
+        "PortalType": "RTID(PortalPSS@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalPSS_7_2"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 2,
+        "PortalType": "RTID(PortalPSS@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalPSS_7_3"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 3,
+        "PortalType": "RTID(PortalPSS@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalPSS_7_4"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 4,
+        "PortalType": "RTID(PortalPSS@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalPSS_8_0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 0,
+        "PortalType": "RTID(PortalPSS@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalPSS_8_1"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 1,
+        "PortalType": "RTID(PortalPSS@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalPSS_8_2"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 2,
+        "PortalType": "RTID(PortalPSS@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalPSS_8_3"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 3,
+        "PortalType": "RTID(PortalPSS@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalPSS_8_4"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 4,
+        "PortalType": "RTID(PortalPSS@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalWWW_6_0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 0,
+        "PortalType": "RTID(PortalWWW@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalWWW_6_1"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 1,
+        "PortalType": "RTID(PortalWWW@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalWWW_6_2"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 2,
+        "PortalType": "RTID(PortalWWW@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalWWW_6_3"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 3,
+        "PortalType": "RTID(PortalWWW@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalWWW_6_4"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 4,
+        "PortalType": "RTID(PortalWWW@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalWWW_7_0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 0,
+        "PortalType": "RTID(PortalWWW@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalWWW_7_1"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 1,
+        "PortalType": "RTID(PortalWWW@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalWWW_7_2"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 2,
+        "PortalType": "RTID(PortalWWW@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalWWW_7_3"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 3,
+        "PortalType": "RTID(PortalWWW@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalWWW_7_4"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 4,
+        "PortalType": "RTID(PortalWWW@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalWWW_8_0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 0,
+        "PortalType": "RTID(PortalWWW@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalWWW_8_1"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 1,
+        "PortalType": "RTID(PortalWWW@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalWWW_8_2"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 2,
+        "PortalType": "RTID(PortalWWW@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalWWW_8_3"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 3,
+        "PortalType": "RTID(PortalWWW@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalWWW_8_4"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 4,
+        "PortalType": "RTID(PortalWWW@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalFFF_6_0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 0,
+        "PortalType": "RTID(PortalFFF@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalFFF_6_1"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 1,
+        "PortalType": "RTID(PortalFFF@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalFFF_6_2"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 2,
+        "PortalType": "RTID(PortalFFF@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalFFF_6_3"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 3,
+        "PortalType": "RTID(PortalFFF@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalFFF_6_4"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 4,
+        "PortalType": "RTID(PortalFFF@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalFFF_7_0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 0,
+        "PortalType": "RTID(PortalFFF@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalFFF_7_1"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 1,
+        "PortalType": "RTID(PortalFFF@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalFFF_7_2"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 2,
+        "PortalType": "RTID(PortalFFF@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalFFF_7_3"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 3,
+        "PortalType": "RTID(PortalFFF@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalFFF_7_4"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 4,
+        "PortalType": "RTID(PortalFFF@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalFFF_8_0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 0,
+        "PortalType": "RTID(PortalFFF@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalFFF_8_1"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 1,
+        "PortalType": "RTID(PortalFFF@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalFFF_8_2"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 2,
+        "PortalType": "RTID(PortalFFF@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalFFF_8_3"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 3,
+        "PortalType": "RTID(PortalFFF@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalFFF_8_4"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 4,
+        "PortalType": "RTID(PortalFFF@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalDAA_6_0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 0,
+        "PortalType": "RTID(PortalDAA@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalDAA_6_1"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 1,
+        "PortalType": "RTID(PortalDAA@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalDAA_6_2"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 2,
+        "PortalType": "RTID(PortalDAA@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalDAA_6_3"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 3,
+        "PortalType": "RTID(PortalDAA@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalDAA_6_4"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 4,
+        "PortalType": "RTID(PortalDAA@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalDAA_7_0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 0,
+        "PortalType": "RTID(PortalDAA@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalDAA_7_1"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 1,
+        "PortalType": "RTID(PortalDAA@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalDAA_7_2"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 2,
+        "PortalType": "RTID(PortalDAA@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalDAA_7_3"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 3,
+        "PortalType": "RTID(PortalDAA@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalDAA_7_4"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 4,
+        "PortalType": "RTID(PortalDAA@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalDAA_8_0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 0,
+        "PortalType": "RTID(PortalDAA@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalDAA_8_1"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 1,
+        "PortalType": "RTID(PortalDAA@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalDAA_8_2"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 2,
+        "PortalType": "RTID(PortalDAA@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalDAA_8_3"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 3,
+        "PortalType": "RTID(PortalDAA@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalDAA_8_4"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 4,
+        "PortalType": "RTID(PortalDAA@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalBWBB_6_0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 0,
+        "PortalType": "RTID(PortalBWBB@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalBWBB_6_1"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 1,
+        "PortalType": "RTID(PortalBWBB@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalBWBB_6_2"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 2,
+        "PortalType": "RTID(PortalBWBB@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalBWBB_6_3"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 3,
+        "PortalType": "RTID(PortalBWBB@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalBWBB_6_4"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 4,
+        "PortalType": "RTID(PortalBWBB@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalBWBB_7_0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 0,
+        "PortalType": "RTID(PortalBWBB@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalBWBB_7_1"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 1,
+        "PortalType": "RTID(PortalBWBB@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalBWBB_7_2"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 2,
+        "PortalType": "RTID(PortalBWBB@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalBWBB_7_3"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 3,
+        "PortalType": "RTID(PortalBWBB@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalBWBB_7_4"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 4,
+        "PortalType": "RTID(PortalBWBB@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalBWBB_8_0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 0,
+        "PortalType": "RTID(PortalBWBB@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalBWBB_8_1"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 1,
+        "PortalType": "RTID(PortalBWBB@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalBWBB_8_2"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 2,
+        "PortalType": "RTID(PortalBWBB@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalBWBB_8_3"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 3,
+        "PortalType": "RTID(PortalBWBB@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalBWBB_8_4"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 4,
+        "PortalType": "RTID(PortalBWBB@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalFBCC_6_0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 0,
+        "PortalType": "RTID(PortalFBCC@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalFBCC_6_1"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 1,
+        "PortalType": "RTID(PortalFBCC@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalFBCC_6_2"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 2,
+        "PortalType": "RTID(PortalFBCC@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalFBCC_6_3"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 3,
+        "PortalType": "RTID(PortalFBCC@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalFBCC_6_4"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 4,
+        "PortalType": "RTID(PortalFBCC@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalFBCC_7_0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 0,
+        "PortalType": "RTID(PortalFBCC@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalFBCC_7_1"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 1,
+        "PortalType": "RTID(PortalFBCC@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalFBCC_7_2"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 2,
+        "PortalType": "RTID(PortalFBCC@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalFBCC_7_3"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 3,
+        "PortalType": "RTID(PortalFBCC@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalFBCC_7_4"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 4,
+        "PortalType": "RTID(PortalFBCC@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalFBCC_8_0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 0,
+        "PortalType": "RTID(PortalFBCC@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalFBCC_8_1"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 1,
+        "PortalType": "RTID(PortalFBCC@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalFBCC_8_2"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 2,
+        "PortalType": "RTID(PortalFBCC@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalFBCC_8_3"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 3,
+        "PortalType": "RTID(PortalFBCC@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalFBCC_8_4"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 4,
+        "PortalType": "RTID(PortalFBCC@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalLCC_6_0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 0,
+        "PortalType": "RTID(PortalLCC@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalLCC_6_1"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 1,
+        "PortalType": "RTID(PortalLCC@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalLCC_6_2"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 2,
+        "PortalType": "RTID(PortalLCC@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalLCC_6_3"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 3,
+        "PortalType": "RTID(PortalLCC@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalLCC_6_4"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 4,
+        "PortalType": "RTID(PortalLCC@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalLCC_7_0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 0,
+        "PortalType": "RTID(PortalLCC@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalLCC_7_1"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 1,
+        "PortalType": "RTID(PortalLCC@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalLCC_7_2"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 2,
+        "PortalType": "RTID(PortalLCC@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalLCC_7_3"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 3,
+        "PortalType": "RTID(PortalLCC@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalLCC_7_4"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 4,
+        "PortalType": "RTID(PortalLCC@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalLCC_8_0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 0,
+        "PortalType": "RTID(PortalLCC@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalLCC_8_1"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 1,
+        "PortalType": "RTID(PortalLCC@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalLCC_8_2"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 2,
+        "PortalType": "RTID(PortalLCC@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalLCC_8_3"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 3,
+        "PortalType": "RTID(PortalLCC@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalLCC_8_4"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 4,
+        "PortalType": "RTID(PortalLCC@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalKFTT_6_0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 0,
+        "PortalType": "RTID(PortalKFTT@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalKFTT_6_1"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 1,
+        "PortalType": "RTID(PortalKFTT@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalKFTT_6_2"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 2,
+        "PortalType": "RTID(PortalKFTT@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalKFTT_6_3"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 3,
+        "PortalType": "RTID(PortalKFTT@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalKFTT_6_4"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 4,
+        "PortalType": "RTID(PortalKFTT@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalKFTT_7_0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 0,
+        "PortalType": "RTID(PortalKFTT@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalKFTT_7_1"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 1,
+        "PortalType": "RTID(PortalKFTT@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalKFTT_7_2"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 2,
+        "PortalType": "RTID(PortalKFTT@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalKFTT_7_3"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 3,
+        "PortalType": "RTID(PortalKFTT@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalKFTT_7_4"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 4,
+        "PortalType": "RTID(PortalKFTT@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalKFTT_8_0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 0,
+        "PortalType": "RTID(PortalKFTT@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalKFTT_8_1"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 1,
+        "PortalType": "RTID(PortalKFTT@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalKFTT_8_2"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 2,
+        "PortalType": "RTID(PortalKFTT@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalKFTT_8_3"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 3,
+        "PortalType": "RTID(PortalKFTT@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalKFTT_8_4"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 4,
+        "PortalType": "RTID(PortalKFTT@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalNMTT_6_0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 0,
+        "PortalType": "RTID(PortalNMTT@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalNMTT_6_1"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 1,
+        "PortalType": "RTID(PortalNMTT@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalNMTT_6_2"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 2,
+        "PortalType": "RTID(PortalNMTT@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalNMTT_6_3"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 3,
+        "PortalType": "RTID(PortalNMTT@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalNMTT_6_4"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 4,
+        "PortalType": "RTID(PortalNMTT@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalNMTT_7_0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 0,
+        "PortalType": "RTID(PortalNMTT@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalNMTT_7_1"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 1,
+        "PortalType": "RTID(PortalNMTT@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalNMTT_7_2"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 2,
+        "PortalType": "RTID(PortalNMTT@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalNMTT_7_3"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 3,
+        "PortalType": "RTID(PortalNMTT@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalNMTT_7_4"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 4,
+        "PortalType": "RTID(PortalNMTT@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalNMTT_8_0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 0,
+        "PortalType": "RTID(PortalNMTT@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalNMTT_8_1"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 1,
+        "PortalType": "RTID(PortalNMTT@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalNMTT_8_2"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 2,
+        "PortalType": "RTID(PortalNMTT@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalNMTT_8_3"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 3,
+        "PortalType": "RTID(PortalNMTT@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalNMTT_8_4"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 4,
+        "PortalType": "RTID(PortalNMTT@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalJMM_6_0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 0,
+        "PortalType": "RTID(PortalJMM@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalJMM_6_1"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 1,
+        "PortalType": "RTID(PortalJMM@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalJMM_6_2"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 2,
+        "PortalType": "RTID(PortalJMM@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalJMM_6_3"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 3,
+        "PortalType": "RTID(PortalJMM@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalJMM_6_4"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 4,
+        "PortalType": "RTID(PortalJMM@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalJMM_7_0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 0,
+        "PortalType": "RTID(PortalJMM@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalJMM_7_1"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 1,
+        "PortalType": "RTID(PortalJMM@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalJMM_7_2"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 2,
+        "PortalType": "RTID(PortalJMM@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalJMM_7_3"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 3,
+        "PortalType": "RTID(PortalJMM@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalJMM_7_4"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 4,
+        "PortalType": "RTID(PortalJMM@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalJMM_8_0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 0,
+        "PortalType": "RTID(PortalJMM@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalJMM_8_1"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 1,
+        "PortalType": "RTID(PortalJMM@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalJMM_8_2"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 2,
+        "PortalType": "RTID(PortalJMM@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalJMM_8_3"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 3,
+        "PortalType": "RTID(PortalJMM@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalJMM_8_4"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 4,
+        "PortalType": "RTID(PortalJMM@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalMDD_6_0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 0,
+        "PortalType": "RTID(PortalMDD@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalMDD_6_1"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 1,
+        "PortalType": "RTID(PortalMDD@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalMDD_6_2"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 2,
+        "PortalType": "RTID(PortalMDD@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalMDD_6_3"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 3,
+        "PortalType": "RTID(PortalMDD@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalMDD_6_4"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 4,
+        "PortalType": "RTID(PortalMDD@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalMDD_7_0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 0,
+        "PortalType": "RTID(PortalMDD@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalMDD_7_1"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 1,
+        "PortalType": "RTID(PortalMDD@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalMDD_7_2"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 2,
+        "PortalType": "RTID(PortalMDD@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalMDD_7_3"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 3,
+        "PortalType": "RTID(PortalMDD@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalMDD_7_4"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 4,
+        "PortalType": "RTID(PortalMDD@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalMDD_8_0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 0,
+        "PortalType": "RTID(PortalMDD@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalMDD_8_1"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 1,
+        "PortalType": "RTID(PortalMDD@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalMDD_8_2"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 2,
+        "PortalType": "RTID(PortalMDD@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalMDD_8_3"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 3,
+        "PortalType": "RTID(PortalMDD@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "PortalMDD_8_4"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 4,
+        "PortalType": "RTID(PortalMDD@CurrentLevel)"
+      }
+    },
+    {
+      "objclass": "PortalType",
+      "aliases": [
+        "PortalAEE"
+      ],
+      "objdata": {
+        "Properties": "RTID(PortalAEE@CurrentLevel)"
+      }
+    },
+    {
+      "objclass": "PortalProps",
+      "aliases": [
+        "PortalAEE"
+      ],
+      "objdata": {
+        "World": "egypt",
+        "TimeBeforeFirst": {
+          "Min": 6,
+          "Max": 7
+        },
+        "TimeBetween": {
+          "Min": 2,
+          "Max": 3
+        },
+        "ZombieTypesToSpawn": [
+          {
+            "Weight": 1,
+            "ZombieTypeName": "egypt_gargantuar"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "mummy_armor4"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "explorer_veteran"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "explorer"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "pharaoh"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "tomb_raiser"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "camel_manyhump"
+          }
+        ]
+      }
+    },
+    {
+      "objclass": "PortalType",
+      "aliases": [
+        "PortalPSS"
+      ],
+      "objdata": {
+        "Properties": "RTID(PortalPSS@CurrentLevel)"
+      }
+    },
+    {
+      "objclass": "PortalProps",
+      "aliases": [
+        "PortalPSS"
+      ],
+      "objdata": {
+        "World": "pirate",
+        "TimeBeforeFirst": {
+          "Min": 6,
+          "Max": 7
+        },
+        "TimeBetween": {
+          "Min": 2,
+          "Max": 3
+        },
+        "ZombieTypesToSpawn": [
+          {
+            "Weight": 1,
+            "ZombieTypeName": "pirate_gargantuar"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "pirate_armor4"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "pelican"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "seagull"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "pirate_captain"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "barrelroller"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "swashbuckler"
+          }
+        ]
+      }
+    },
+    {
+      "objclass": "PortalType",
+      "aliases": [
+        "PortalWWW"
+      ],
+      "objdata": {
+        "Properties": "RTID(PortalWWW@CurrentLevel)"
+      }
+    },
+    {
+      "objclass": "PortalProps",
+      "aliases": [
+        "PortalWWW"
+      ],
+      "objdata": {
+        "World": "west",
+        "TimeBeforeFirst": {
+          "Min": 6,
+          "Max": 7
+        },
+        "TimeBetween": {
+          "Min": 2,
+          "Max": 3
+        },
+        "ZombieTypesToSpawn": [
+          {
+            "Weight": 1,
+            "ZombieTypeName": "cowboy_gargantuar"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "cowboy_armor4"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "west_bull_veteran"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "piano"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "chicken_farmer"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "prospector"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "poncho_plate"
+          }
+        ]
+      }
+    },
+    {
+      "objclass": "PortalType",
+      "aliases": [
+        "PortalFFF"
+      ],
+      "objdata": {
+        "Properties": "RTID(PortalFFF@CurrentLevel)"
+      }
+    },
+    {
+      "objclass": "PortalProps",
+      "aliases": [
+        "PortalFFF"
+      ],
+      "objdata": {
+        "World": "future",
+        "TimeBeforeFirst": {
+          "Min": 6,
+          "Max": 7
+        },
+        "TimeBetween": {
+          "Min": 2,
+          "Max": 3
+        },
+        "ZombieTypesToSpawn": [
+          {
+            "Weight": 1,
+            "ZombieTypeName": "future_gargantuar"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "future_armor4"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "mech_cone"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "disco_mech"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "future_jetpack_veteran"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "future_jetpack"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "football_mech"
+          }
+        ]
+      }
+    },
+    {
+      "objclass": "PortalType",
+      "aliases": [
+        "PortalDAA"
+      ],
+      "objdata": {
+        "Properties": "RTID(PortalDAA@CurrentLevel)"
+      }
+    },
+    {
+      "objclass": "PortalProps",
+      "aliases": [
+        "PortalDAA"
+      ],
+      "objdata": {
+        "World": "dark",
+        "TimeBeforeFirst": {
+          "Min": 6,
+          "Max": 7
+        },
+        "TimeBetween": {
+          "Min": 2,
+          "Max": 3
+        },
+        "ZombieTypesToSpawn": [
+          {
+            "Weight": 1,
+            "ZombieTypeName": "dark_gargantuar"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "dark_armor4"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "dark_king_veteran"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "dark_juggler"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "dark_king"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "dark_imp_dragon"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "dark_armor3"
+          }
+        ]
+      }
+    },
+    {
+      "objclass": "PortalType",
+      "aliases": [
+        "PortalBWBB"
+      ],
+      "objdata": {
+        "Properties": "RTID(PortalBWBB@CurrentLevel)"
+      }
+    },
+    {
+      "objclass": "PortalProps",
+      "aliases": [
+        "PortalBWBB"
+      ],
+      "objdata": {
+        "World": "beach",
+        "TimeBeforeFirst": {
+          "Min": 6,
+          "Max": 7
+        },
+        "TimeBetween": {
+          "Min": 2,
+          "Max": 3
+        },
+        "ZombieTypesToSpawn": [
+          {
+            "Weight": 1,
+            "ZombieTypeName": "beach_gargantuar"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "beach_armor4"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "beach_surfer_veteran"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "beach_fisherman"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "beach_octopus"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "beach_surfer"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "beach_fem_armor4"
+          }
+        ]
+      }
+    },
+    {
+      "objclass": "PortalType",
+      "aliases": [
+        "PortalFBCC"
+      ],
+      "objdata": {
+        "Properties": "RTID(PortalFBCC@CurrentLevel)"
+      }
+    },
+    {
+      "objclass": "PortalProps",
+      "aliases": [
+        "PortalFBCC"
+      ],
+      "objdata": {
+        "World": "iceage",
+        "TimeBeforeFirst": {
+          "Min": 6,
+          "Max": 7
+        },
+        "TimeBetween": {
+          "Min": 2,
+          "Max": 3
+        },
+        "ZombieTypesToSpawn": [
+          {
+            "Weight": 1,
+            "ZombieTypeName": "iceage_gargantuar"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "iceage_armor4"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "iceage_hunter"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "iceage_dodo"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "iceage_troglobite"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "iceage_weaselhoarder"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "iceage_armor3"
+          }
+        ]
+      }
+    },
+    {
+      "objclass": "PortalType",
+      "aliases": [
+        "PortalLCC"
+      ],
+      "objdata": {
+        "Properties": "RTID(PortalLCC@CurrentLevel)"
+      }
+    },
+    {
+      "objclass": "PortalProps",
+      "aliases": [
+        "PortalLCC"
+      ],
+      "objdata": {
+        "World": "lostcity",
+        "TimeBeforeFirst": {
+          "Min": 6,
+          "Max": 7
+        },
+        "TimeBetween": {
+          "Min": 2,
+          "Max": 3
+        },
+        "ZombieTypesToSpawn": [
+          {
+            "Weight": 1,
+            "ZombieTypeName": "dark_gargantuar"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "dark_armor4"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "lostcity_armor1_veteran"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "lostcity_armor2_veteran"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "lostcity_veteran"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "lostcity_crystalskull"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "lostcity_relichunter"
+          }
+        ]
+      }
+    },
+    {
+      "objclass": "PortalType",
+      "aliases": [
+        "PortalKFTT"
+      ],
+      "objdata": {
+        "Properties": "RTID(PortalKFTT@CurrentLevel)"
+      }
+    },
+    {
+      "objclass": "PortalProps",
+      "aliases": [
+        "PortalKFTT"
+      ],
+      "objdata": {
+        "World": "kongfu",
+        "TimeBeforeFirst": {
+          "Min": 6,
+          "Max": 7
+        },
+        "TimeBetween": {
+          "Min": 2,
+          "Max": 3
+        },
+        "ZombieTypesToSpawn": [
+          {
+            "Weight": 1,
+            "ZombieTypeName": "kongfu_bronze_statue"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "abbot_armor4"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "kongfu_gong"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "monk_drink"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "abbot_torch"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "kongfu_bomb"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "abbot_chi"
+          }
+        ]
+      }
+    },
+    {
+      "objclass": "PortalType",
+      "aliases": [
+        "PortalNMTT"
+      ],
+      "objdata": {
+        "Properties": "RTID(PortalNMTT@CurrentLevel)"
+      }
+    },
+    {
+      "objclass": "PortalProps",
+      "aliases": [
+        "PortalNMTT"
+      ],
+      "objdata": {
+        "World": "eighties",
+        "TimeBeforeFirst": {
+          "Min": 6,
+          "Max": 7
+        },
+        "TimeBetween": {
+          "Min": 2,
+          "Max": 3
+        },
+        "ZombieTypesToSpawn": [
+          {
+            "Weight": 1,
+            "ZombieTypeName": "eighties_gargantuar"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "eighties_armor4"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "eighties_mc"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "eighties_breakdancer"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "eighties_arcade"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "eighties_glitter"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "eighties_punk_veteran"
+          }
+        ]
+      }
+    },
+    {
+      "objclass": "PortalType",
+      "aliases": [
+        "PortalJMM"
+      ],
+      "objdata": {
+        "Properties": "RTID(PortalJMM@CurrentLevel)"
+      }
+    },
+    {
+      "objclass": "PortalProps",
+      "aliases": [
+        "PortalJMM"
+      ],
+      "objdata": {
+        "World": "dino",
+        "TimeBeforeFirst": {
+          "Min": 6,
+          "Max": 7
+        },
+        "TimeBetween": {
+          "Min": 2,
+          "Max": 3
+        },
+        "ZombieTypesToSpawn": [
+          {
+            "Weight": 1,
+            "ZombieTypeName": "dino_gargantuar"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "dino_armor4"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "dino_bully_veteran"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "dino_imp_veteran"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "dino_armor3"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "dino_bully"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "dino_bully_veteran"
+          }
+        ]
+      }
+    },
+    {
+      "objclass": "PortalType",
+      "aliases": [
+        "PortalMDD"
+      ],
+      "objdata": {
+        "Properties": "RTID(PortalMDD@CurrentLevel)"
+      }
+    },
+    {
+      "objclass": "PortalProps",
+      "aliases": [
+        "PortalMDD"
+      ],
+      "objdata": {
+        "World": "modern",
+        "TimeBeforeFirst": {
+          "Min": 6,
+          "Max": 7
+        },
+        "TimeBetween": {
+          "Min": 2,
+          "Max": 3
+        },
+        "ZombieTypesToSpawn": [
+          {
+            "Weight": 1,
+            "ZombieTypeName": "tutorial_gargantuar"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "tutorial_armor4"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "newspaper_veteran"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "modern_newspaper"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "modern_allstar"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "modern_superfanimp"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "modern_balloon"
+          }
+        ]
+      }
+    },
+		{
+			"aliases":[
+				"ConveyorSelector"
+			],
+			"objclass":"RandomEventsProps",
+			"objdata":{
+				"EventCount":{
+					"Min":1,
+					"Max":1
+				},
+				"Events":[
+					"RTID(AEEEvent@CurrentLevel)",
+					"RTID(PSSEvent@CurrentLevel)",
+					"RTID(WWWEvent@CurrentLevel)",
+					"RTID(FFFEvent@CurrentLevel)",
+					"RTID(DAAEvent@CurrentLevel)",
+					"RTID(BWBBEvent@CurrentLevel)",
+					"RTID(FBCCEvent@CurrentLevel)",
+					"RTID(LCCEvent@CurrentLevel)",
+					"RTID(KFTTEvent@CurrentLevel)",
+					"RTID(NMTTEvent@CurrentLevel)",
+					"RTID(JMMEvent@CurrentLevel)",
+					"RTID(MDDEvent@CurrentLevel)"
+				]
+			}
+		},
+		{
+			"aliases":[
+				"AEEEvent"
+			],
+			"objclass":"WaveSchedulerProps",
+			"objdata":{
+				"TimeBeforeFirst":{
+					"Max":0.0001,
+					"Min":0.0001
+				},
+				"TimeBetween":{
+					"Max":1,
+					"Min":1
+				},
+				"Repeat":{
+					"Max":1,
+					"Min":1
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+					"RTID(AEE@CurrentLevel)",
+					"RTID(AEEBanner@CurrentLevel)",
+					"RTID(AEEJitter@CurrentLevel)"
+				]
+			}
+		},
+		{
+			"aliases":[
+				"PSSEvent"
+			],
+			"objclass":"WaveSchedulerProps",
+			"objdata":{
+				"TimeBeforeFirst":{
+					"Max":0.0001,
+					"Min":0.0001
+				},
+				"TimeBetween":{
+					"Max":1,
+					"Min":1
+				},
+				"Repeat":{
+					"Max":1,
+					"Min":1
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+					"RTID(PSS@CurrentLevel)",
+					"RTID(PSSBanner@CurrentLevel)",
+					"RTID(PSSJitter@CurrentLevel)"
+				]
+			}
+		},
+		{
+			"aliases":[
+				"WWWEvent"
+			],
+			"objclass":"WaveSchedulerProps",
+			"objdata":{
+				"TimeBeforeFirst":{
+					"Max":0.0001,
+					"Min":0.0001
+				},
+				"TimeBetween":{
+					"Max":1,
+					"Min":1
+				},
+				"Repeat":{
+					"Max":1,
+					"Min":1
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+					"RTID(WWW@CurrentLevel)",
+					"RTID(WWWBanner@CurrentLevel)",
+					"RTID(WWWJitter@CurrentLevel)"
+				]
+			}
+		},
+		{
+			"aliases":[
+				"FFFEvent"
+			],
+			"objclass":"WaveSchedulerProps",
+			"objdata":{
+				"TimeBeforeFirst":{
+					"Max":0.0001,
+					"Min":0.0001
+				},
+				"TimeBetween":{
+					"Max":1,
+					"Min":1
+				},
+				"Repeat":{
+					"Max":1,
+					"Min":1
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+					"RTID(FFF@CurrentLevel)",
+					"RTID(FFFBanner@CurrentLevel)",
+					"RTID(FFFJitter@CurrentLevel)"
+				]
+			}
+		},
+		{
+			"aliases":[
+				"DAAEvent"
+			],
+			"objclass":"WaveSchedulerProps",
+			"objdata":{
+				"TimeBeforeFirst":{
+					"Max":0.0001,
+					"Min":0.0001
+				},
+				"TimeBetween":{
+					"Max":1,
+					"Min":1
+				},
+				"Repeat":{
+					"Max":1,
+					"Min":1
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+					"RTID(DAA@CurrentLevel)",
+					"RTID(DAABanner@CurrentLevel)",
+					"RTID(DAAJitter@CurrentLevel)"
+				]
+			}
+		},
+		{
+			"aliases":[
+				"BWBBEvent"
+			],
+			"objclass":"WaveSchedulerProps",
+			"objdata":{
+				"TimeBeforeFirst":{
+					"Max":0.0001,
+					"Min":0.0001
+				},
+				"TimeBetween":{
+					"Max":1,
+					"Min":1
+				},
+				"Repeat":{
+					"Max":1,
+					"Min":1
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+					"RTID(BWBB@CurrentLevel)",
+					"RTID(BWBBBanner@CurrentLevel)",
+					"RTID(BWBBJitter@CurrentLevel)"
+				]
+			}
+		},
+		{
+			"aliases":[
+				"FBCCEvent"
+			],
+			"objclass":"WaveSchedulerProps",
+			"objdata":{
+				"TimeBeforeFirst":{
+					"Max":0.0001,
+					"Min":0.0001
+				},
+				"TimeBetween":{
+					"Max":1,
+					"Min":1
+				},
+				"Repeat":{
+					"Max":1,
+					"Min":1
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+					"RTID(FBCC@CurrentLevel)",
+					"RTID(FBCCBanner@CurrentLevel)",
+					"RTID(FBCCJitter@CurrentLevel)"
+				]
+			}
+		},
+		{
+			"aliases":[
+				"LCCEvent"
+			],
+			"objclass":"WaveSchedulerProps",
+			"objdata":{
+				"TimeBeforeFirst":{
+					"Max":0.0001,
+					"Min":0.0001
+				},
+				"TimeBetween":{
+					"Max":1,
+					"Min":1
+				},
+				"Repeat":{
+					"Max":1,
+					"Min":1
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+					"RTID(LCC@CurrentLevel)",
+					"RTID(LCCBanner@CurrentLevel)",
+					"RTID(LCCJitter@CurrentLevel)"
+				]
+			}
+		},
+		{
+			"aliases":[
+				"KFTTEvent"
+			],
+			"objclass":"WaveSchedulerProps",
+			"objdata":{
+				"TimeBeforeFirst":{
+					"Max":0.0001,
+					"Min":0.0001
+				},
+				"TimeBetween":{
+					"Max":1,
+					"Min":1
+				},
+				"Repeat":{
+					"Max":1,
+					"Min":1
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+					"RTID(KFTT@CurrentLevel)",
+					"RTID(KFTTBanner@CurrentLevel)",
+					"RTID(KFTTJitter@CurrentLevel)"
+				]
+			}
+		},
+		{
+			"aliases":[
+				"NMTTEvent"
+			],
+			"objclass":"WaveSchedulerProps",
+			"objdata":{
+				"TimeBeforeFirst":{
+					"Max":0.0001,
+					"Min":0.0001
+				},
+				"TimeBetween":{
+					"Max":1,
+					"Min":1
+				},
+				"Repeat":{
+					"Max":1,
+					"Min":1
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+					"RTID(NMTT@CurrentLevel)",
+					"RTID(NMTTBanner@CurrentLevel)",
+					"RTID(NMTTJitter@CurrentLevel)"
+				]
+			}
+		},
+		{
+			"aliases":[
+				"JMMEvent"
+			],
+			"objclass":"WaveSchedulerProps",
+			"objdata":{
+				"TimeBeforeFirst":{
+					"Max":0.0001,
+					"Min":0.0001
+				},
+				"TimeBetween":{
+					"Max":1,
+					"Min":1
+				},
+				"Repeat":{
+					"Max":1,
+					"Min":1
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+					"RTID(JMM@CurrentLevel)",
+					"RTID(JMMBanner@CurrentLevel)",
+					"RTID(JMMJitter@CurrentLevel)"
+				]
+			}
+		},
+		{
+			"aliases":[
+				"MDDEvent"
+			],
+			"objclass":"WaveSchedulerProps",
+			"objdata":{
+				"TimeBeforeFirst":{
+					"Max":0.0001,
+					"Min":0.0001
+				},
+				"TimeBetween":{
+					"Max":1,
+					"Min":1
+				},
+				"Repeat":{
+					"Max":1,
+					"Min":1
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+					"RTID(MDD@CurrentLevel)",
+					"RTID(MDDBanner@CurrentLevel)",
+					"RTID(MDDJitter@CurrentLevel)"
+				]
+			}
+		},
+		{
+			"aliases":[
+				"AEEJitter"
+			],
+			"objclass":"SpawnZombiesJitteredWaveActionProps",
+			"objdata":{
+				"Zombies":[
+					{
+						"Type":"RTID(mummy_flag_veteran@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(mummy_armor4@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(egypt_gargantuar@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(explorer_veteran@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(pharaoh@ZombieTypes)"
+					}
+				]
+			}
+		},
+		{
+			"aliases":[
+				"PSSJitter"
+			],
+			"objclass":"SpawnZombiesJitteredWaveActionProps",
+			"objdata":{
+				"Zombies":[
+					{
+						"Type":"RTID(pirate_flag_veteran@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(pirate_armor4@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(pirate_gargantuar@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(pelican@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(barrelroller@ZombieTypes)"
+					}
+				]
+			}
+		},
+		{
+			"aliases":[
+				"WWWJitter"
+			],
+			"objclass":"SpawnZombiesJitteredWaveActionProps",
+			"objdata":{
+				"Zombies":[
+					{
+						"Type":"RTID(cowboy_flag_veteran_reverse@CurrentLevel)"
+					},
+					{
+						"Type":"RTID(cowboy_armor4_reverse@CurrentLevel)"
+					},
+					{
+						"Type":"RTID(cowboy_gargantuar@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(west_bull_veteran@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(piano@ZombieTypes)"
+					}
+				]
+			}
+		},
+		{
+			"aliases":[
+				"FFFJitter"
+			],
+			"objclass":"SpawnZombiesJitteredWaveActionProps",
+			"objdata":{
+				"Zombies":[
+					{
+						"Type":"RTID(future_flag_veteran@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(future_armor4@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(future_gargantuar@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(future_jetpack_veteran@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(disco_mech@ZombieTypes)"
+					}
+				]
+			}
+		},
+		{
+			"aliases":[
+				"DAAJitter"
+			],
+			"objclass":"SpawnZombiesJitteredWaveActionProps",
+			"objdata":{
+				"Zombies":[
+					{
+						"Type":"RTID(dark_flag_veteran@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(dark_armor4@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(dark_gargantuar@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(dark_king_veteran@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(dark_juggler@ZombieTypes)"
+					}
+				]
+			}
+		},
+		{
+			"aliases":[
+				"BWBBJitter"
+			],
+			"objclass":"SpawnZombiesJitteredWaveActionProps",
+			"objdata":{
+				"Zombies":[
+					{
+						"Type":"RTID(beach_flag_veteran@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(beach_armor4@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(beach_gargantuar@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(beach_surfer_veteran@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(beach_fisherman@ZombieTypes)"
+					}
+				]
+			}
+		},
+		{
+			"aliases":[
+				"FBCCJitter"
+			],
+			"objclass":"SpawnZombiesJitteredWaveActionProps",
+			"objdata":{
+				"Zombies":[
+					{
+						"Row":"3",
+						"Type":"RTID(iceage_flag_veteran_veteran@CurrentLevel)"
+					},
+					{
+						"Row":"2",
+						"Type":"RTID(iceage_armor4@ZombieTypes)"
+					},
+					{
+						"Row":"4",
+						"Type":"RTID(iceage_gargantuar@ZombieTypes)"
+					},
+					{
+						"Row":"1",
+						"Type":"RTID(iceage_troglobite_veteran@CurrentLevel)"
+					},
+					{
+						"Row":"5",
+						"Type":"RTID(iceage_hunter_veteran@CurrentLevel)"
+					},
+					{
+						"Row":"1",
+						"Column":8,
+						"Style":"snowstorm",
+						"Type":"RTID(iceage_gargantuar@ZombieTypes)"
+					},
+					{
+						"Row":"2",
+						"Column":8,
+						"Style":"snowstorm",
+						"Type":"RTID(iceage_gargantuar@ZombieTypes)"
+					},
+					{
+						"Row":"3",
+						"Column":8,
+						"Style":"snowstorm",
+						"Type":"RTID(iceage_gargantuar@ZombieTypes)"
+					},
+					{
+						"Row":"4",
+						"Column":8,
+						"Style":"snowstorm",
+						"Type":"RTID(iceage_gargantuar@ZombieTypes)"
+					},
+					{
+						"Row":"5",
+						"Column":8,
+						"Style":"snowstorm",
+						"Type":"RTID(iceage_gargantuar@ZombieTypes)"
+					},
+					{
+						"Row":"1",
+						"Column":7,
+						"Style":"snowstorm",
+						"Type":"RTID(iceage_gargantuar@ZombieTypes)"
+					},
+					{
+						"Row":"2",
+						"Column":7,
+						"Style":"snowstorm",
+						"Type":"RTID(iceage_gargantuar@ZombieTypes)"
+					},
+					{
+						"Row":"3",
+						"Column":7,
+						"Style":"snowstorm",
+						"Type":"RTID(iceage_gargantuar@ZombieTypes)"
+					},
+					{
+						"Row":"4",
+						"Column":7,
+						"Style":"snowstorm",
+						"Type":"RTID(iceage_gargantuar@ZombieTypes)"
+					},
+					{
+						"Row":"5",
+						"Column":7,
+						"Style":"snowstorm",
+						"Type":"RTID(iceage_gargantuar@ZombieTypes)"
+					}
+				]
+			}
+		},
+		{
+			"aliases":[
+				"LCCJitter"
+			],
+			"objclass":"SpawnZombiesJitteredWaveActionProps",
+			"objdata":{
+				"Zombies":[
+					{
+						"Row":"3",
+						"Column":"5",
+						"Type":"RTID(lostcity_lostpilot_for_flag_veteran@CurrentLevel)"
+					},
+					{
+						"Row":"4",
+						"Column":"6",
+						"Type":"RTID(lostcity_lostpilot_for_armor4@CurrentLevel)"
+					},
+					{
+						"Row":"2",
+						"Column":"8",
+						"Type":"RTID(lostcity_lostpilot_for_gargantuar@CurrentLevel)"
+					},
+					{
+						"Row":"1",
+						"Column":"7",
+						"Type":"RTID(lostcity_lostpilot_for_lostcity_veteran@CurrentLevel)"
+					},
+					{
+						"Row":"5",
+						"Column":"4",
+						"Type":"RTID(lostcity_lostpilot_for_armor1_veteran@CurrentLevel)"
+					},
+					{
+						"Row":"2",
+						"Column":"2",
+						"Type":"RTID(lostcity_lostpilot_for_armor2_veteran@CurrentLevel)"
+					},
+					{
+						"Row":"3",
+						"Column":"7",
+						"Type":"RTID(lostcity_lostpilot_for_crystalskull@CurrentLevel)"
+					}
+				]
+			}
+		},
+		{
+			"aliases":[
+				"JMMJitter"
+			],
+			"objclass":"SpawnZombiesJitteredWaveActionProps",
+			"objdata":{
+				"Zombies":[
+					{
+						"Type":"RTID(dino_flag_veteran@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(dino_armor4@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(dino_gargantuar@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(dino_gargantuar_veteran@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(dino_bully_veteran@ZombieTypes)"
+					}
+				]
+			}
+		},
+		{
+			"aliases":[
+				"KFTTJitter"
+			],
+			"objclass":"SpawnZombiesJitteredWaveActionProps",
+			"objdata":{
+				"Zombies":[
+					{
+						"Type":"RTID(kongfu_flag_veteran@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(monk_flag_veteran@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(abbot_flag_veteran@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(kongfu_armor4@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(monk_armor4@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(abbot_armor4@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(kongfu_bronze_strong@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(kongfu_bronze_hook@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(kongfu_bronze_chi@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(monk_blade_veteran@CurrentLevel)"
+					}
+				]
+			}
+		},
+		{
+			"aliases":[
+				"NMTTJitter"
+			],
+			"objclass":"SpawnZombiesJitteredWaveActionProps",
+			"objdata":{
+				"Zombies":[
+					{
+						"Type":"RTID(eighties_flag_veteran@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(eighties_armor4@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(eighties_gargantuar@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(eighties_punk_veteran@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(eighties_gargantuar_veteran@CurrentLevel)"
+					}
+				]
+			}
+		},
+		{
+			"aliases":[
+				"MDDJitter"
+			],
+			"objclass":"SpawnZombiesJitteredWaveActionProps",
+			"objdata":{
+				"Zombies":[
+					{
+						"Type":"RTID(tutorial_flag_veteran@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(tutorial_armor4@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(tutorial_gargantuar@ZombieTypes)"
+					},
+					{
+						"Type":"RTID(treasureyeti_veteran@CurrentLevel)"
+					},
+					{
+						"Type":"RTID(catapult_veteran@CurrentLevel)"
+					}
+				]
+			}
+		},
+		{
+			"aliases":[
+				"AEEBanner"
+			],
+			"objclass":"WaveLevelAuthorMessageProps",
+			"objdata":{
+				"String":"",
+				"StringMultiLanguage":{
+					"en":"You hear sandstorm blowing in the distance......",
+					"zh":"你听到远处传来沙尘暴的呼啸声……"
+				},
+				"ThemeColor":"#fbc02d"
+			}
+		},
+		{
+			"aliases":[
+				"PSSBanner"
+			],
+			"objclass":"WaveLevelAuthorMessageProps",
+			"objdata":{
+				"String":"",
+				"StringMultiLanguage":{
+					"en":"You smell some salty sea breeze and moldy planks......",
+					"zh":"你闻到一些咸湿的海风和腐朽的甲板……"
+				},
+				"ThemeColor":"#4d3d95"
+			}
+		},
+		{
+			"aliases":[
+				"WWWBanner"
+			],
+			"objclass":"WaveLevelAuthorMessageProps",
+			"objdata":{
+				"String":"",
+				"StringMultiLanguage":{
+					"en":"You hear some cowboy music in the distance......",
+					"zh":"你听到远处传来牛仔的笛声……"
+				},
+				"ThemeColor":"#ffeb3b"
+			}
+		},
+		{
+			"aliases":[
+				"FFFBanner"
+			],
+			"objclass":"WaveLevelAuthorMessageProps",
+			"objdata":{
+				"String":"",
+				"StringMultiLanguage":{
+					"en":"You see machines whirring in the distance......",
+					"zh":"你看到远处机器在轰鸣……"
+				},
+				"ThemeColor":"#1976d2"
+			}
+		},
+		{
+			"aliases":[
+				"DAABanner"
+			],
+			"objclass":"WaveLevelAuthorMessageProps",
+			"objdata":{
+				"String":"",
+				"StringMultiLanguage":{
+					"en":"You hear metals clanging in the distance......",
+					"zh":"你听到远处金属碰撞的声音……"
+				},
+				"ThemeColor":"#54306a"
+			}
+		},
+		{
+			"aliases":[
+				"BWBBBanner"
+			],
+			"objclass":"WaveLevelAuthorMessageProps",
+			"objdata":{
+				"String":"",
+				"StringMultiLanguage":{
+					"en":"You hear tides crashing in the distance......",
+					"zh":"你听到远处海浪拍打岸边的声音……"
+				},
+				"ThemeColor":"#64b5f6"
+			}
+		},
+		{
+			"aliases":[
+				"FBCCBanner"
+			],
+			"objclass":"WaveLevelAuthorMessageProps",
+			"objdata":{
+				"String":"",
+				"StringMultiLanguage":{
+					"en":"You felt some frost wind whirling by......",
+					"zh":"你感受到一些寒风在身边呼啸而过……"
+				},
+				"ThemeColor":"#283593"
+			}
+		},
+		{
+			"aliases":[
+				"LCCBanner"
+			],
+			"objclass":"WaveLevelAuthorMessageProps",
+			"objdata":{
+				"String":"",
+				"StringMultiLanguage":{
+					"en":"You see some mysterious figures in the distance......",
+					"zh":"你看到远处有一些神秘的身影……"
+				},
+				"ThemeColor":"#ffa000"
+			}
+		},
+		{
+			"aliases":[
+				"JMMBanner"
+			],
+			"objclass":"WaveLevelAuthorMessageProps",
+			"objdata":{
+				"String":"",
+				"StringMultiLanguage":{
+					"en":"You hear dinosaurs roaring in the distance......",
+					"zh":"你听到远处恐龙的咆哮声……"
+				},
+				"ThemeColor":"#78481d"
+			}
+		},
+		{
+			"aliases":[
+				"KFTTBanner"
+			],
+			"objclass":"WaveLevelAuthorMessageProps",
+			"objdata":{
+				"String":"",
+				"StringMultiLanguage":{
+					"en":"You hear weapons clashing in the distance......",
+					"zh":"你听到远处武器碰撞的声音……"
+				},
+				"ThemeColor":"#f44336"
+			}
+		},
+		{
+			"aliases":[
+				"NMTTBanner"
+			],
+			"objclass":"WaveLevelAuthorMessageProps",
+			"objdata":{
+				"String":"",
+				"StringMultiLanguage":{
+					"en":"You hear some hollow music playing in the distance......",
+					"zh":"你听到远处传来空灵的音乐声……"
+				},
+				"ThemeColor":"#7b1fa2"
+			}
+		},
+		{
+			"aliases":[
+				"MDDBanner"
+			],
+			"objclass":"WaveLevelAuthorMessageProps",
+			"objdata":{
+				"String":"",
+				"StringMultiLanguage":{
+					"en":"But nobody came......",
+					"zh":"但是谁也没有来……"
+				},
+				"ThemeColor":"#ff0000"
+			}
+		},
+		{
+			"aliases":[
+				"AEE"
+			],
+			"objclass":"ModifyConveyorWaveActionProps",
+			"objdata":{
+				"Add":[
+					{
+						"MaxCount":5,
+						"MaxWeightFactor":0,
+						"Type":"snowpea",
+						"Weight":30
+					},
+					{
+						"MaxCount":3,
+						"MaxWeightFactor":0,
+						"Type":"ghostpepper",
+						"Weight":10
+					},
+					{
+						"MaxCount":1,
+						"MaxWeightFactor":0,
+						"Type":"loquat",
+						"Weight":10
+					}
+				],
+				"Remove":[
+					{
+						"Type":"RTID(anthurium@PlantTypes)"
+					},
+					{
+						"Type":"RTID(bamboozle@PlantTypes)"
+					},
+					{
+						"Type":"RTID(banana@PlantTypes)"
+					},
+					{
+						"Type":"RTID(bloominghearts@PlantTypes)"
+					},
+					{
+						"Type":"RTID(blover@PlantTypes)"
+					},
+					{
+						"Type":"RTID(cantaloupe@PlantTypes)"
+					},
+					{
+						"Type":"RTID(chardguard@PlantTypes)"
+					},
+					{
+						"Type":"RTID(cherry_bomb@PlantTypes)"
+					},
+					{
+						"Type":"RTID(chomper@PlantTypes)"
+					},
+					{
+						"Type":"RTID(citron@PlantTypes)"
+					},
+					{
+						"Type":"RTID(coconutcannon@PlantTypes)"
+					},
+					{
+						"Type":"RTID(coldsnapdragon@PlantTypes)"
+					},
+					{
+						"Type":"RTID(concealmint@PlantTypes)"
+					},
+					{
+						"Type":"RTID(cranjelly@PlantTypes)"
+					},
+					{
+						"Type":"RTID(darkmatterdragonfruit@PlantTypes)"
+					},
+					{
+						"Type":"RTID(doomshroom@PlantTypes)"
+					},
+					{
+						"Type":"RTID(explodeonut@PlantTypes)"
+					},
+					{
+						"Type":"RTID(filamint@PlantTypes)"
+					},
+					{
+						"Type":"RTID(ghostpepper@PlantTypes)"
+					},
+					{
+						"Type":"RTID(glaciershroom@PlantTypes)"
+					},
+					{
+						"Type":"RTID(gloomvine@PlantTypes)"
+					},
+					{
+						"Type":"RTID(goldleaf@PlantTypes)"
+					},
+					{
+						"Type":"RTID(grapeshot@PlantTypes)"
+					},
+					{
+						"Type":"RTID(guacodile@PlantTypes)"
+					},
+					{
+						"Type":"RTID(hollyknight@PlantTypes)"
+					},
+					{
+						"Type":"RTID(holonut@PlantTypes)"
+					},
+					{
+						"Type":"RTID(hotdate@PlantTypes)"
+					},
+					{
+						"Type":"RTID(hurrikale@PlantTypes)"
+					},
+					{
+						"Type":"RTID(hypnoshroom@PlantTypes)"
+					},
+					{
+						"Type":"RTID(iceweed@PlantTypes)"
+					},
+					{
+						"Type":"RTID(jalapeno@PlantTypes)"
+					},
+					{
+						"Type":"RTID(loquat@PlantTypes)"
+					},
+					{
+						"Type":"RTID(lychee@PlantTypes)"
+					},
+					{
+						"Type":"RTID(magnetshroom@PlantTypes)"
+					},
+					{
+						"Type":"RTID(moonflower@PlantTypes)"
+					},
+					{
+						"Type":"RTID(noctarine@PlantTypes)"
+					},
+					{
+						"Type":"RTID(parsnip@PlantTypes)"
+					},
+					{
+						"Type":"RTID(peach@PlantTypes)"
+					},
+					{
+						"Type":"RTID(peacommando@PlantTypes)"
+					},
+					{
+						"Type":"RTID(peanut@PlantTypes)"
+					},
+					{
+						"Type":"RTID(peapod@PlantTypes)"
+					},
+					{
+						"Type":"RTID(pinkstarfruit@PlantTypes)"
+					},
+					{
+						"Type":"RTID(poisonpeashooter@PlantTypes)"
+					},
+					{
+						"Type":"RTID(pyrevine@PlantTypes)"
+					},
+					{
+						"Type":"RTID(pumpkin@PlantTypes)"
+					},
+					{
+						"Type":"RTID(sapfling@PlantTypes)"
+					},
+					{
+						"Type":"RTID(snapdragon@PlantTypes)"
+					},
+					{
+						"Type":"RTID(snowpea@PlantTypes)"
+					},
+					{
+						"Type":"RTID(squash@PlantTypes)"
+					},
+					{
+						"Type":"RTID(strawburst@PlantTypes)"
+					},
+					{
+						"Type":"RTID(sweetpotato@PlantTypes)"
+					},
+					{
+						"Type":"RTID(powerplant_gamma@PlantTypes)"
+					},
+					{
+						"Type":"RTID(wasabiwhip@PlantTypes)"
+					},
+					{
+						"Type":"RTID(wintermelon@PlantTypes)"
+					}
+				]
+			}
+		},
+		{
+			"aliases":[
+				"PSS"
+			],
+			"objclass":"ModifyConveyorWaveActionProps",
+			"objdata":{
+				"Add":[
+					{
+						"MaxCount":1,
+						"MaxWeightFactor":0,
+						"Type":"bloominghearts",
+						"Weight":5
+					},
+					{
+						"MaxCount":2,
+						"MaxWeightFactor":0,
+						"Type":"sweetpotato",
+						"Weight":30
+					},
+					{
+						"MaxCount":8,
+						"MaxWeightFactor":0.6,
+						"Type":"wasabiwhip",
+						"Weight":25
+					},
+					{
+						"MaxCount":4,
+						"MaxWeightFactor":0,
+						"Type":"chardguard",
+						"Weight":18
+					}
+				],
+				"Remove":[
+					{
+						"Type":"RTID(anthurium@PlantTypes)"
+					},
+					{
+						"Type":"RTID(bamboozle@PlantTypes)"
+					},
+					{
+						"Type":"RTID(banana@PlantTypes)"
+					},
+					{
+						"Type":"RTID(bloominghearts@PlantTypes)"
+					},
+					{
+						"Type":"RTID(blover@PlantTypes)"
+					},
+					{
+						"Type":"RTID(cantaloupe@PlantTypes)"
+					},
+					{
+						"Type":"RTID(chardguard@PlantTypes)"
+					},
+					{
+						"Type":"RTID(cherry_bomb@PlantTypes)"
+					},
+					{
+						"Type":"RTID(chomper@PlantTypes)"
+					},
+					{
+						"Type":"RTID(citron@PlantTypes)"
+					},
+					{
+						"Type":"RTID(coconutcannon@PlantTypes)"
+					},
+					{
+						"Type":"RTID(coldsnapdragon@PlantTypes)"
+					},
+					{
+						"Type":"RTID(concealmint@PlantTypes)"
+					},
+					{
+						"Type":"RTID(cranjelly@PlantTypes)"
+					},
+					{
+						"Type":"RTID(darkmatterdragonfruit@PlantTypes)"
+					},
+					{
+						"Type":"RTID(doomshroom@PlantTypes)"
+					},
+					{
+						"Type":"RTID(explodeonut@PlantTypes)"
+					},
+					{
+						"Type":"RTID(filamint@PlantTypes)"
+					},
+					{
+						"Type":"RTID(ghostpepper@PlantTypes)"
+					},
+					{
+						"Type":"RTID(glaciershroom@PlantTypes)"
+					},
+					{
+						"Type":"RTID(gloomvine@PlantTypes)"
+					},
+					{
+						"Type":"RTID(goldleaf@PlantTypes)"
+					},
+					{
+						"Type":"RTID(grapeshot@PlantTypes)"
+					},
+					{
+						"Type":"RTID(guacodile@PlantTypes)"
+					},
+					{
+						"Type":"RTID(hollyknight@PlantTypes)"
+					},
+					{
+						"Type":"RTID(holonut@PlantTypes)"
+					},
+					{
+						"Type":"RTID(hotdate@PlantTypes)"
+					},
+					{
+						"Type":"RTID(hurrikale@PlantTypes)"
+					},
+					{
+						"Type":"RTID(hypnoshroom@PlantTypes)"
+					},
+					{
+						"Type":"RTID(iceweed@PlantTypes)"
+					},
+					{
+						"Type":"RTID(jalapeno@PlantTypes)"
+					},
+					{
+						"Type":"RTID(loquat@PlantTypes)"
+					},
+					{
+						"Type":"RTID(lychee@PlantTypes)"
+					},
+					{
+						"Type":"RTID(magnetshroom@PlantTypes)"
+					},
+					{
+						"Type":"RTID(moonflower@PlantTypes)"
+					},
+					{
+						"Type":"RTID(noctarine@PlantTypes)"
+					},
+					{
+						"Type":"RTID(parsnip@PlantTypes)"
+					},
+					{
+						"Type":"RTID(peach@PlantTypes)"
+					},
+					{
+						"Type":"RTID(peacommando@PlantTypes)"
+					},
+					{
+						"Type":"RTID(peanut@PlantTypes)"
+					},
+					{
+						"Type":"RTID(peapod@PlantTypes)"
+					},
+					{
+						"Type":"RTID(pinkstarfruit@PlantTypes)"
+					},
+					{
+						"Type":"RTID(poisonpeashooter@PlantTypes)"
+					},
+					{
+						"Type":"RTID(pyrevine@PlantTypes)"
+					},
+					{
+						"Type":"RTID(pumpkin@PlantTypes)"
+					},
+					{
+						"Type":"RTID(sapfling@PlantTypes)"
+					},
+					{
+						"Type":"RTID(snapdragon@PlantTypes)"
+					},
+					{
+						"Type":"RTID(snowpea@PlantTypes)"
+					},
+					{
+						"Type":"RTID(squash@PlantTypes)"
+					},
+					{
+						"Type":"RTID(strawburst@PlantTypes)"
+					},
+					{
+						"Type":"RTID(sweetpotato@PlantTypes)"
+					},
+					{
+						"Type":"RTID(powerplant_gamma@PlantTypes)"
+					},
+					{
+						"Type":"RTID(wasabiwhip@PlantTypes)"
+					},
+					{
+						"Type":"RTID(wintermelon@PlantTypes)"
+					}
+				]
+			}
+		},
+		{
+			"aliases":[
+				"WWW"
+			],
+			"objclass":"ModifyConveyorWaveActionProps",
+			"objdata":{
+				"Add":[
+					{
+						"MaxCount":5,
+						"MaxWeightFactor":0,
+						"Type":"peanut",
+						"Weight":20
+					},
+					{
+						"MaxCount":2,
+						"MaxWeightFactor":0,
+						"Type":"wintermelon",
+						"Weight":40
+					},
+					{
+						"MaxCount":3,
+						"MaxWeightFactor":0,
+						"Type":"peacommando",
+						"Weight":15
+					},
+					{
+						"MaxCount":5,
+						"MaxWeightFactor":0,
+						"Type":"banana",
+						"Weight":15
+					},
+					{
+						"MaxCount":1,
+						"MaxWeightFactor":0,
+						"Type":"cranjelly",
+						"MaxCountCooldownSeconds":25,
+						"Weight":5
+					}
+				],
+				"Remove":[
+					{
+						"Type":"RTID(anthurium@PlantTypes)"
+					},
+					{
+						"Type":"RTID(bamboozle@PlantTypes)"
+					},
+					{
+						"Type":"RTID(banana@PlantTypes)"
+					},
+					{
+						"Type":"RTID(bloominghearts@PlantTypes)"
+					},
+					{
+						"Type":"RTID(blover@PlantTypes)"
+					},
+					{
+						"Type":"RTID(cantaloupe@PlantTypes)"
+					},
+					{
+						"Type":"RTID(chardguard@PlantTypes)"
+					},
+					{
+						"Type":"RTID(cherry_bomb@PlantTypes)"
+					},
+					{
+						"Type":"RTID(chomper@PlantTypes)"
+					},
+					{
+						"Type":"RTID(citron@PlantTypes)"
+					},
+					{
+						"Type":"RTID(coconutcannon@PlantTypes)"
+					},
+					{
+						"Type":"RTID(coldsnapdragon@PlantTypes)"
+					},
+					{
+						"Type":"RTID(concealmint@PlantTypes)"
+					},
+					{
+						"Type":"RTID(cranjelly@PlantTypes)"
+					},
+					{
+						"Type":"RTID(darkmatterdragonfruit@PlantTypes)"
+					},
+					{
+						"Type":"RTID(doomshroom@PlantTypes)"
+					},
+					{
+						"Type":"RTID(explodeonut@PlantTypes)"
+					},
+					{
+						"Type":"RTID(filamint@PlantTypes)"
+					},
+					{
+						"Type":"RTID(ghostpepper@PlantTypes)"
+					},
+					{
+						"Type":"RTID(glaciershroom@PlantTypes)"
+					},
+					{
+						"Type":"RTID(gloomvine@PlantTypes)"
+					},
+					{
+						"Type":"RTID(goldleaf@PlantTypes)"
+					},
+					{
+						"Type":"RTID(grapeshot@PlantTypes)"
+					},
+					{
+						"Type":"RTID(guacodile@PlantTypes)"
+					},
+					{
+						"Type":"RTID(hollyknight@PlantTypes)"
+					},
+					{
+						"Type":"RTID(holonut@PlantTypes)"
+					},
+					{
+						"Type":"RTID(hotdate@PlantTypes)"
+					},
+					{
+						"Type":"RTID(hurrikale@PlantTypes)"
+					},
+					{
+						"Type":"RTID(hypnoshroom@PlantTypes)"
+					},
+					{
+						"Type":"RTID(iceweed@PlantTypes)"
+					},
+					{
+						"Type":"RTID(jalapeno@PlantTypes)"
+					},
+					{
+						"Type":"RTID(loquat@PlantTypes)"
+					},
+					{
+						"Type":"RTID(lychee@PlantTypes)"
+					},
+					{
+						"Type":"RTID(magnetshroom@PlantTypes)"
+					},
+					{
+						"Type":"RTID(moonflower@PlantTypes)"
+					},
+					{
+						"Type":"RTID(noctarine@PlantTypes)"
+					},
+					{
+						"Type":"RTID(parsnip@PlantTypes)"
+					},
+					{
+						"Type":"RTID(peach@PlantTypes)"
+					},
+					{
+						"Type":"RTID(peacommando@PlantTypes)"
+					},
+					{
+						"Type":"RTID(peanut@PlantTypes)"
+					},
+					{
+						"Type":"RTID(peapod@PlantTypes)"
+					},
+					{
+						"Type":"RTID(pinkstarfruit@PlantTypes)"
+					},
+					{
+						"Type":"RTID(poisonpeashooter@PlantTypes)"
+					},
+					{
+						"Type":"RTID(pyrevine@PlantTypes)"
+					},
+					{
+						"Type":"RTID(pumpkin@PlantTypes)"
+					},
+					{
+						"Type":"RTID(sapfling@PlantTypes)"
+					},
+					{
+						"Type":"RTID(snapdragon@PlantTypes)"
+					},
+					{
+						"Type":"RTID(snowpea@PlantTypes)"
+					},
+					{
+						"Type":"RTID(squash@PlantTypes)"
+					},
+					{
+						"Type":"RTID(strawburst@PlantTypes)"
+					},
+					{
+						"Type":"RTID(sweetpotato@PlantTypes)"
+					},
+					{
+						"Type":"RTID(powerplant_gamma@PlantTypes)"
+					},
+					{
+						"Type":"RTID(wasabiwhip@PlantTypes)"
+					},
+					{
+						"Type":"RTID(wintermelon@PlantTypes)"
+					}
+				]
+			}
+		},
+		{
+			"aliases":[
+				"FFF"
+			],
+			"objclass":"ModifyConveyorWaveActionProps",
+			"objdata":{
+				"Add":[
+					{
+						"MaxCount":50,
+						"MaxWeightFactor":0.5,
+						"Type":"peapod",
+						"Weight":50
+					},
+					{
+						"MaxCount":3,
+						"MaxWeightFactor":0,
+						"Type":"banana",
+						"Weight":20
+					},
+					{
+						"MaxCount":5,
+						"MaxWeightFactor":0.1,
+						"Type":"sapfling",
+						"Weight":10
+					},
+					{
+						"MaxCount":3,
+						"MaxWeightFactor":0,
+						"Type":"hollyknight",
+						"Weight":4
+					},
+					{
+						"MaxCount":5,
+						"MaxWeightFactor":0,
+						"Type":"powerplant_beta",
+						"Weight":15
+					}
+				],
+				"Remove":[
+					{
+						"Type":"RTID(anthurium@PlantTypes)"
+					},
+					{
+						"Type":"RTID(bamboozle@PlantTypes)"
+					},
+					{
+						"Type":"RTID(banana@PlantTypes)"
+					},
+					{
+						"Type":"RTID(bloominghearts@PlantTypes)"
+					},
+					{
+						"Type":"RTID(blover@PlantTypes)"
+					},
+					{
+						"Type":"RTID(cantaloupe@PlantTypes)"
+					},
+					{
+						"Type":"RTID(chardguard@PlantTypes)"
+					},
+					{
+						"Type":"RTID(cherry_bomb@PlantTypes)"
+					},
+					{
+						"Type":"RTID(chomper@PlantTypes)"
+					},
+					{
+						"Type":"RTID(citron@PlantTypes)"
+					},
+					{
+						"Type":"RTID(coconutcannon@PlantTypes)"
+					},
+					{
+						"Type":"RTID(coldsnapdragon@PlantTypes)"
+					},
+					{
+						"Type":"RTID(concealmint@PlantTypes)"
+					},
+					{
+						"Type":"RTID(cranjelly@PlantTypes)"
+					},
+					{
+						"Type":"RTID(darkmatterdragonfruit@PlantTypes)"
+					},
+					{
+						"Type":"RTID(doomshroom@PlantTypes)"
+					},
+					{
+						"Type":"RTID(explodeonut@PlantTypes)"
+					},
+					{
+						"Type":"RTID(filamint@PlantTypes)"
+					},
+					{
+						"Type":"RTID(ghostpepper@PlantTypes)"
+					},
+					{
+						"Type":"RTID(glaciershroom@PlantTypes)"
+					},
+					{
+						"Type":"RTID(gloomvine@PlantTypes)"
+					},
+					{
+						"Type":"RTID(goldleaf@PlantTypes)"
+					},
+					{
+						"Type":"RTID(grapeshot@PlantTypes)"
+					},
+					{
+						"Type":"RTID(guacodile@PlantTypes)"
+					},
+					{
+						"Type":"RTID(hollyknight@PlantTypes)"
+					},
+					{
+						"Type":"RTID(holonut@PlantTypes)"
+					},
+					{
+						"Type":"RTID(hotdate@PlantTypes)"
+					},
+					{
+						"Type":"RTID(hurrikale@PlantTypes)"
+					},
+					{
+						"Type":"RTID(hypnoshroom@PlantTypes)"
+					},
+					{
+						"Type":"RTID(iceweed@PlantTypes)"
+					},
+					{
+						"Type":"RTID(jalapeno@PlantTypes)"
+					},
+					{
+						"Type":"RTID(loquat@PlantTypes)"
+					},
+					{
+						"Type":"RTID(lychee@PlantTypes)"
+					},
+					{
+						"Type":"RTID(magnetshroom@PlantTypes)"
+					},
+					{
+						"Type":"RTID(moonflower@PlantTypes)"
+					},
+					{
+						"Type":"RTID(noctarine@PlantTypes)"
+					},
+					{
+						"Type":"RTID(parsnip@PlantTypes)"
+					},
+					{
+						"Type":"RTID(peach@PlantTypes)"
+					},
+					{
+						"Type":"RTID(peacommando@PlantTypes)"
+					},
+					{
+						"Type":"RTID(peanut@PlantTypes)"
+					},
+					{
+						"Type":"RTID(peapod@PlantTypes)"
+					},
+					{
+						"Type":"RTID(pinkstarfruit@PlantTypes)"
+					},
+					{
+						"Type":"RTID(poisonpeashooter@PlantTypes)"
+					},
+					{
+						"Type":"RTID(pyrevine@PlantTypes)"
+					},
+					{
+						"Type":"RTID(pumpkin@PlantTypes)"
+					},
+					{
+						"Type":"RTID(sapfling@PlantTypes)"
+					},
+					{
+						"Type":"RTID(snapdragon@PlantTypes)"
+					},
+					{
+						"Type":"RTID(snowpea@PlantTypes)"
+					},
+					{
+						"Type":"RTID(squash@PlantTypes)"
+					},
+					{
+						"Type":"RTID(strawburst@PlantTypes)"
+					},
+					{
+						"Type":"RTID(sweetpotato@PlantTypes)"
+					},
+					{
+						"Type":"RTID(powerplant_gamma@PlantTypes)"
+					},
+					{
+						"Type":"RTID(wasabiwhip@PlantTypes)"
+					},
+					{
+						"Type":"RTID(wintermelon@PlantTypes)"
+					}
+				]
+			}
+		},
+		{
+			"aliases":[
+				"DAA"
+			],
+			"objclass":"ModifyConveyorWaveActionProps",
+			"objdata":{
+				"Add":[
+					{
+						"MaxCountCooldownSeconds":20,
+						"MaxCount":1,
+						"MaxWeightFactor":0,
+						"ForceBoosted":true,
+						"Type":"magnetshroom",
+						"Weight":10
+					},
+					{
+						"MaxCountCooldownSeconds":20,
+						"MaxCount":1,
+						"MaxWeightFactor":0,
+						"Type":"jalapeno",
+						"Weight":10
+					},
+					{
+						"MaxCount":10,
+						"MaxWeightFactor":0.5,
+						"Type":"snapdragon",
+						"Weight":35
+					},
+					{
+						"MaxCount":10,
+						"MaxWeightFactor":0.5,
+						"Type":"pyrevine",
+						"Weight":25
+					},
+					{
+						"MaxCount":2,
+						"MaxWeightFactor":0,
+						"Type":"hotdate",
+						"Weight":40
+					},
+					{
+						"MaxCount":3,
+						"MaxWeightFactor":0,
+						"Type":"chomper",
+						"Weight":30
+					}
+				],
+				"Remove":[
+					{
+						"Type":"RTID(anthurium@PlantTypes)"
+					},
+					{
+						"Type":"RTID(bamboozle@PlantTypes)"
+					},
+					{
+						"Type":"RTID(banana@PlantTypes)"
+					},
+					{
+						"Type":"RTID(bloominghearts@PlantTypes)"
+					},
+					{
+						"Type":"RTID(blover@PlantTypes)"
+					},
+					{
+						"Type":"RTID(cantaloupe@PlantTypes)"
+					},
+					{
+						"Type":"RTID(chardguard@PlantTypes)"
+					},
+					{
+						"Type":"RTID(cherry_bomb@PlantTypes)"
+					},
+					{
+						"Type":"RTID(chomper@PlantTypes)"
+					},
+					{
+						"Type":"RTID(citron@PlantTypes)"
+					},
+					{
+						"Type":"RTID(coconutcannon@PlantTypes)"
+					},
+					{
+						"Type":"RTID(coldsnapdragon@PlantTypes)"
+					},
+					{
+						"Type":"RTID(concealmint@PlantTypes)"
+					},
+					{
+						"Type":"RTID(cranjelly@PlantTypes)"
+					},
+					{
+						"Type":"RTID(darkmatterdragonfruit@PlantTypes)"
+					},
+					{
+						"Type":"RTID(doomshroom@PlantTypes)"
+					},
+					{
+						"Type":"RTID(explodeonut@PlantTypes)"
+					},
+					{
+						"Type":"RTID(filamint@PlantTypes)"
+					},
+					{
+						"Type":"RTID(ghostpepper@PlantTypes)"
+					},
+					{
+						"Type":"RTID(glaciershroom@PlantTypes)"
+					},
+					{
+						"Type":"RTID(gloomvine@PlantTypes)"
+					},
+					{
+						"Type":"RTID(goldleaf@PlantTypes)"
+					},
+					{
+						"Type":"RTID(grapeshot@PlantTypes)"
+					},
+					{
+						"Type":"RTID(guacodile@PlantTypes)"
+					},
+					{
+						"Type":"RTID(hollyknight@PlantTypes)"
+					},
+					{
+						"Type":"RTID(holonut@PlantTypes)"
+					},
+					{
+						"Type":"RTID(hotdate@PlantTypes)"
+					},
+					{
+						"Type":"RTID(hurrikale@PlantTypes)"
+					},
+					{
+						"Type":"RTID(hypnoshroom@PlantTypes)"
+					},
+					{
+						"Type":"RTID(iceweed@PlantTypes)"
+					},
+					{
+						"Type":"RTID(jalapeno@PlantTypes)"
+					},
+					{
+						"Type":"RTID(loquat@PlantTypes)"
+					},
+					{
+						"Type":"RTID(lychee@PlantTypes)"
+					},
+					{
+						"Type":"RTID(magnetshroom@PlantTypes)"
+					},
+					{
+						"Type":"RTID(moonflower@PlantTypes)"
+					},
+					{
+						"Type":"RTID(noctarine@PlantTypes)"
+					},
+					{
+						"Type":"RTID(parsnip@PlantTypes)"
+					},
+					{
+						"Type":"RTID(peach@PlantTypes)"
+					},
+					{
+						"Type":"RTID(peacommando@PlantTypes)"
+					},
+					{
+						"Type":"RTID(peanut@PlantTypes)"
+					},
+					{
+						"Type":"RTID(peapod@PlantTypes)"
+					},
+					{
+						"Type":"RTID(pinkstarfruit@PlantTypes)"
+					},
+					{
+						"Type":"RTID(poisonpeashooter@PlantTypes)"
+					},
+					{
+						"Type":"RTID(pyrevine@PlantTypes)"
+					},
+					{
+						"Type":"RTID(pumpkin@PlantTypes)"
+					},
+					{
+						"Type":"RTID(sapfling@PlantTypes)"
+					},
+					{
+						"Type":"RTID(snapdragon@PlantTypes)"
+					},
+					{
+						"Type":"RTID(snowpea@PlantTypes)"
+					},
+					{
+						"Type":"RTID(squash@PlantTypes)"
+					},
+					{
+						"Type":"RTID(strawburst@PlantTypes)"
+					},
+					{
+						"Type":"RTID(sweetpotato@PlantTypes)"
+					},
+					{
+						"Type":"RTID(powerplant_gamma@PlantTypes)"
+					},
+					{
+						"Type":"RTID(wasabiwhip@PlantTypes)"
+					},
+					{
+						"Type":"RTID(wintermelon@PlantTypes)"
+					}
+				]
+			}
+		},
+		{
+			"aliases":[
+				"BWBB"
+			],
+			"objclass":"ModifyConveyorWaveActionProps",
+			"objdata":{
+				"Add":[
+					{
+						"MaxCount":5,
+						"MaxWeightFactor":0,
+						"Type":"strawburst",
+						"Weight":25
+					},
+					{
+						"MaxCount":2,
+						"MaxWeightFactor":0,
+						"Type":"bamboozle",
+						"Weight":15
+					},
+					{
+						"MaxCount":1,
+						"MaxWeightFactor":0,
+						"Type":"loquat",
+						"Weight":7
+					}
+				],
+				"Remove":[
+					{
+						"Type":"RTID(anthurium@PlantTypes)"
+					},
+					{
+						"Type":"RTID(bamboozle@PlantTypes)"
+					},
+					{
+						"Type":"RTID(banana@PlantTypes)"
+					},
+					{
+						"Type":"RTID(bloominghearts@PlantTypes)"
+					},
+					{
+						"Type":"RTID(blover@PlantTypes)"
+					},
+					{
+						"Type":"RTID(cantaloupe@PlantTypes)"
+					},
+					{
+						"Type":"RTID(chardguard@PlantTypes)"
+					},
+					{
+						"Type":"RTID(cherry_bomb@PlantTypes)"
+					},
+					{
+						"Type":"RTID(chomper@PlantTypes)"
+					},
+					{
+						"Type":"RTID(citron@PlantTypes)"
+					},
+					{
+						"Type":"RTID(coconutcannon@PlantTypes)"
+					},
+					{
+						"Type":"RTID(coldsnapdragon@PlantTypes)"
+					},
+					{
+						"Type":"RTID(concealmint@PlantTypes)"
+					},
+					{
+						"Type":"RTID(cranjelly@PlantTypes)"
+					},
+					{
+						"Type":"RTID(darkmatterdragonfruit@PlantTypes)"
+					},
+					{
+						"Type":"RTID(doomshroom@PlantTypes)"
+					},
+					{
+						"Type":"RTID(explodeonut@PlantTypes)"
+					},
+					{
+						"Type":"RTID(filamint@PlantTypes)"
+					},
+					{
+						"Type":"RTID(ghostpepper@PlantTypes)"
+					},
+					{
+						"Type":"RTID(glaciershroom@PlantTypes)"
+					},
+					{
+						"Type":"RTID(gloomvine@PlantTypes)"
+					},
+					{
+						"Type":"RTID(goldleaf@PlantTypes)"
+					},
+					{
+						"Type":"RTID(grapeshot@PlantTypes)"
+					},
+					{
+						"Type":"RTID(guacodile@PlantTypes)"
+					},
+					{
+						"Type":"RTID(hollyknight@PlantTypes)"
+					},
+					{
+						"Type":"RTID(holonut@PlantTypes)"
+					},
+					{
+						"Type":"RTID(hotdate@PlantTypes)"
+					},
+					{
+						"Type":"RTID(hurrikale@PlantTypes)"
+					},
+					{
+						"Type":"RTID(hypnoshroom@PlantTypes)"
+					},
+					{
+						"Type":"RTID(iceweed@PlantTypes)"
+					},
+					{
+						"Type":"RTID(jalapeno@PlantTypes)"
+					},
+					{
+						"Type":"RTID(loquat@PlantTypes)"
+					},
+					{
+						"Type":"RTID(lychee@PlantTypes)"
+					},
+					{
+						"Type":"RTID(magnetshroom@PlantTypes)"
+					},
+					{
+						"Type":"RTID(moonflower@PlantTypes)"
+					},
+					{
+						"Type":"RTID(noctarine@PlantTypes)"
+					},
+					{
+						"Type":"RTID(parsnip@PlantTypes)"
+					},
+					{
+						"Type":"RTID(peach@PlantTypes)"
+					},
+					{
+						"Type":"RTID(peacommando@PlantTypes)"
+					},
+					{
+						"Type":"RTID(peanut@PlantTypes)"
+					},
+					{
+						"Type":"RTID(peapod@PlantTypes)"
+					},
+					{
+						"Type":"RTID(pinkstarfruit@PlantTypes)"
+					},
+					{
+						"Type":"RTID(poisonpeashooter@PlantTypes)"
+					},
+					{
+						"Type":"RTID(pyrevine@PlantTypes)"
+					},
+					{
+						"Type":"RTID(pumpkin@PlantTypes)"
+					},
+					{
+						"Type":"RTID(sapfling@PlantTypes)"
+					},
+					{
+						"Type":"RTID(snapdragon@PlantTypes)"
+					},
+					{
+						"Type":"RTID(snowpea@PlantTypes)"
+					},
+					{
+						"Type":"RTID(squash@PlantTypes)"
+					},
+					{
+						"Type":"RTID(strawburst@PlantTypes)"
+					},
+					{
+						"Type":"RTID(sweetpotato@PlantTypes)"
+					},
+					{
+						"Type":"RTID(powerplant_gamma@PlantTypes)"
+					},
+					{
+						"Type":"RTID(wasabiwhip@PlantTypes)"
+					},
+					{
+						"Type":"RTID(wintermelon@PlantTypes)"
+					}
+				]
+			}
+		},
+		{
+			"aliases":[
+				"FBCC"
+			],
+			"objclass":"ModifyConveyorWaveActionProps",
+			"objdata":{
+				"Add":[
+					{
+						"MaxCount":5,
+						"MaxWeightFactor":0,
+						"Type":"citron",
+						"Weight":10
+					},
+					{
+						"MaxCount":5,
+						"MaxWeightFactor":0.4,
+						"Type":"darkmatterdragonfruit",
+						"Weight":20
+					},
+					{
+						"MaxCount":5,
+						"MaxWeightFactor":0,
+						"Type":"moonflower",
+						"Weight":15
+					},
+					{
+						"MaxCount":1,
+						"MaxWeightFactor":0,
+						"Type":"doomshroom",
+						"Weight":2
+					},
+					{
+						"MaxCount":1,
+						"MaxWeightFactor":0,
+						"Type":"noctarine",
+						"Weight":5
+					},
+					{
+						"MaxCount":1,
+						"MaxWeightFactor":0,
+						"Type":"cranjelly",
+						"Weight":5
+					}
+				],
+				"Remove":[
+					{
+						"Type":"RTID(anthurium@PlantTypes)"
+					},
+					{
+						"Type":"RTID(bamboozle@PlantTypes)"
+					},
+					{
+						"Type":"RTID(banana@PlantTypes)"
+					},
+					{
+						"Type":"RTID(bloominghearts@PlantTypes)"
+					},
+					{
+						"Type":"RTID(blover@PlantTypes)"
+					},
+					{
+						"Type":"RTID(cantaloupe@PlantTypes)"
+					},
+					{
+						"Type":"RTID(chardguard@PlantTypes)"
+					},
+					{
+						"Type":"RTID(cherry_bomb@PlantTypes)"
+					},
+					{
+						"Type":"RTID(chomper@PlantTypes)"
+					},
+					{
+						"Type":"RTID(citron@PlantTypes)"
+					},
+					{
+						"Type":"RTID(coconutcannon@PlantTypes)"
+					},
+					{
+						"Type":"RTID(coldsnapdragon@PlantTypes)"
+					},
+					{
+						"Type":"RTID(concealmint@PlantTypes)"
+					},
+					{
+						"Type":"RTID(cranjelly@PlantTypes)"
+					},
+					{
+						"Type":"RTID(darkmatterdragonfruit@PlantTypes)"
+					},
+					{
+						"Type":"RTID(doomshroom@PlantTypes)"
+					},
+					{
+						"Type":"RTID(explodeonut@PlantTypes)"
+					},
+					{
+						"Type":"RTID(filamint@PlantTypes)"
+					},
+					{
+						"Type":"RTID(ghostpepper@PlantTypes)"
+					},
+					{
+						"Type":"RTID(glaciershroom@PlantTypes)"
+					},
+					{
+						"Type":"RTID(gloomvine@PlantTypes)"
+					},
+					{
+						"Type":"RTID(goldleaf@PlantTypes)"
+					},
+					{
+						"Type":"RTID(grapeshot@PlantTypes)"
+					},
+					{
+						"Type":"RTID(guacodile@PlantTypes)"
+					},
+					{
+						"Type":"RTID(hollyknight@PlantTypes)"
+					},
+					{
+						"Type":"RTID(holonut@PlantTypes)"
+					},
+					{
+						"Type":"RTID(hotdate@PlantTypes)"
+					},
+					{
+						"Type":"RTID(hurrikale@PlantTypes)"
+					},
+					{
+						"Type":"RTID(hypnoshroom@PlantTypes)"
+					},
+					{
+						"Type":"RTID(iceweed@PlantTypes)"
+					},
+					{
+						"Type":"RTID(jalapeno@PlantTypes)"
+					},
+					{
+						"Type":"RTID(loquat@PlantTypes)"
+					},
+					{
+						"Type":"RTID(lychee@PlantTypes)"
+					},
+					{
+						"Type":"RTID(magnetshroom@PlantTypes)"
+					},
+					{
+						"Type":"RTID(moonflower@PlantTypes)"
+					},
+					{
+						"Type":"RTID(noctarine@PlantTypes)"
+					},
+					{
+						"Type":"RTID(parsnip@PlantTypes)"
+					},
+					{
+						"Type":"RTID(peach@PlantTypes)"
+					},
+					{
+						"Type":"RTID(peacommando@PlantTypes)"
+					},
+					{
+						"Type":"RTID(peanut@PlantTypes)"
+					},
+					{
+						"Type":"RTID(peapod@PlantTypes)"
+					},
+					{
+						"Type":"RTID(pinkstarfruit@PlantTypes)"
+					},
+					{
+						"Type":"RTID(poisonpeashooter@PlantTypes)"
+					},
+					{
+						"Type":"RTID(pyrevine@PlantTypes)"
+					},
+					{
+						"Type":"RTID(pumpkin@PlantTypes)"
+					},
+					{
+						"Type":"RTID(sapfling@PlantTypes)"
+					},
+					{
+						"Type":"RTID(snapdragon@PlantTypes)"
+					},
+					{
+						"Type":"RTID(snowpea@PlantTypes)"
+					},
+					{
+						"Type":"RTID(squash@PlantTypes)"
+					},
+					{
+						"Type":"RTID(strawburst@PlantTypes)"
+					},
+					{
+						"Type":"RTID(sweetpotato@PlantTypes)"
+					},
+					{
+						"Type":"RTID(powerplant_gamma@PlantTypes)"
+					},
+					{
+						"Type":"RTID(wasabiwhip@PlantTypes)"
+					},
+					{
+						"Type":"RTID(wintermelon@PlantTypes)"
+					}
+				]
+			}
+		},
+		{
+			"aliases":[
+				"LCC"
+			],
+			"objclass":"ModifyConveyorWaveActionProps",
+			"objdata":{
+				"Add":[
+					{
+						"MaxCount":5,
+						"MaxWeightFactor":0.1,
+						"Type":"chardguard",
+						"Weight":20
+					},
+					{
+						"MaxCount":3,
+						"MaxWeightFactor":0.1,
+						"Type":"peach",
+						"Weight":20
+					},
+					{
+						"MaxCount":3,
+						"MaxCountCooldownSeconds":15,
+						"MaxWeightFactor":0,
+						"Type":"squash",
+						"Weight":40
+					},
+					{
+						"MaxDelivered":5,
+						"MaxCountCooldownSeconds":10,
+						"Type":"goldleaf",
+						"Weight":40
+					},
+					{
+						"MaxCount":1,
+						"MaxCountCooldownSeconds":20,
+						"Type":"hurrikale",
+						"Weight":40
+					},
+					{
+						"MaxCount":1,
+						"MaxWeightFactor":0,
+						"MaxCountCooldownSeconds":10,
+						"Type":"doomshroom",
+						"Weight":8
+					}
+				],
+				"Remove":[
+					{
+						"Type":"RTID(anthurium@PlantTypes)"
+					},
+					{
+						"Type":"RTID(bamboozle@PlantTypes)"
+					},
+					{
+						"Type":"RTID(banana@PlantTypes)"
+					},
+					{
+						"Type":"RTID(bloominghearts@PlantTypes)"
+					},
+					{
+						"Type":"RTID(blover@PlantTypes)"
+					},
+					{
+						"Type":"RTID(cantaloupe@PlantTypes)"
+					},
+					{
+						"Type":"RTID(chardguard@PlantTypes)"
+					},
+					{
+						"Type":"RTID(cherry_bomb@PlantTypes)"
+					},
+					{
+						"Type":"RTID(chomper@PlantTypes)"
+					},
+					{
+						"Type":"RTID(citron@PlantTypes)"
+					},
+					{
+						"Type":"RTID(coconutcannon@PlantTypes)"
+					},
+					{
+						"Type":"RTID(coldsnapdragon@PlantTypes)"
+					},
+					{
+						"Type":"RTID(concealmint@PlantTypes)"
+					},
+					{
+						"Type":"RTID(cranjelly@PlantTypes)"
+					},
+					{
+						"Type":"RTID(darkmatterdragonfruit@PlantTypes)"
+					},
+					{
+						"Type":"RTID(doomshroom@PlantTypes)"
+					},
+					{
+						"Type":"RTID(explodeonut@PlantTypes)"
+					},
+					{
+						"Type":"RTID(filamint@PlantTypes)"
+					},
+					{
+						"Type":"RTID(ghostpepper@PlantTypes)"
+					},
+					{
+						"Type":"RTID(glaciershroom@PlantTypes)"
+					},
+					{
+						"Type":"RTID(gloomvine@PlantTypes)"
+					},
+					{
+						"Type":"RTID(goldleaf@PlantTypes)"
+					},
+					{
+						"Type":"RTID(grapeshot@PlantTypes)"
+					},
+					{
+						"Type":"RTID(guacodile@PlantTypes)"
+					},
+					{
+						"Type":"RTID(hollyknight@PlantTypes)"
+					},
+					{
+						"Type":"RTID(holonut@PlantTypes)"
+					},
+					{
+						"Type":"RTID(hotdate@PlantTypes)"
+					},
+					{
+						"Type":"RTID(hurrikale@PlantTypes)"
+					},
+					{
+						"Type":"RTID(hypnoshroom@PlantTypes)"
+					},
+					{
+						"Type":"RTID(iceweed@PlantTypes)"
+					},
+					{
+						"Type":"RTID(jalapeno@PlantTypes)"
+					},
+					{
+						"Type":"RTID(loquat@PlantTypes)"
+					},
+					{
+						"Type":"RTID(lychee@PlantTypes)"
+					},
+					{
+						"Type":"RTID(magnetshroom@PlantTypes)"
+					},
+					{
+						"Type":"RTID(moonflower@PlantTypes)"
+					},
+					{
+						"Type":"RTID(noctarine@PlantTypes)"
+					},
+					{
+						"Type":"RTID(parsnip@PlantTypes)"
+					},
+					{
+						"Type":"RTID(peach@PlantTypes)"
+					},
+					{
+						"Type":"RTID(peacommando@PlantTypes)"
+					},
+					{
+						"Type":"RTID(peanut@PlantTypes)"
+					},
+					{
+						"Type":"RTID(peapod@PlantTypes)"
+					},
+					{
+						"Type":"RTID(pinkstarfruit@PlantTypes)"
+					},
+					{
+						"Type":"RTID(poisonpeashooter@PlantTypes)"
+					},
+					{
+						"Type":"RTID(pyrevine@PlantTypes)"
+					},
+					{
+						"Type":"RTID(pumpkin@PlantTypes)"
+					},
+					{
+						"Type":"RTID(sapfling@PlantTypes)"
+					},
+					{
+						"Type":"RTID(snapdragon@PlantTypes)"
+					},
+					{
+						"Type":"RTID(snowpea@PlantTypes)"
+					},
+					{
+						"Type":"RTID(squash@PlantTypes)"
+					},
+					{
+						"Type":"RTID(strawburst@PlantTypes)"
+					},
+					{
+						"Type":"RTID(sweetpotato@PlantTypes)"
+					},
+					{
+						"Type":"RTID(powerplant_gamma@PlantTypes)"
+					},
+					{
+						"Type":"RTID(wasabiwhip@PlantTypes)"
+					},
+					{
+						"Type":"RTID(wintermelon@PlantTypes)"
+					}
+				]
+			}
+		},
+		{
+			"aliases":[
+				"JMM"
+			],
+			"objclass":"ModifyConveyorWaveActionProps",
+			"objdata":{
+				"Add":[
+					{
+						"MaxCount":8,
+						"MaxCountCooldownSeconds":20,
+						"MaxWeightFactor":0,
+						"MinCount":2,
+						"MinWeightFactor":2,
+						"Type":"explodeonut",
+						"Weight":10
+					},
+					{
+						"MaxCount":8,
+						"MaxCountCooldownSeconds":20,
+						"MaxWeightFactor":0,
+						"MinCount":2,
+						"MinWeightFactor":2,
+						"Type":"coldsnapdragon",
+						"Weight":10
+					},
+					{
+						"MaxCount":8,
+						"MaxCountCooldownSeconds":20,
+						"MaxWeightFactor":0,
+						"MinCount":2,
+						"MinWeightFactor":2,
+						"Type":"guacodile",
+						"Weight":15
+					},
+					{
+						"MaxCount":12,
+						"MaxCountCooldownSeconds":20,
+						"MaxWeightFactor":0,
+						"MinCount":2,
+						"MinWeightFactor":2,
+						"Type":"parsnip",
+						"Weight":25
+					}
+				],
+				"Remove":[
+					{
+						"Type":"RTID(anthurium@PlantTypes)"
+					},
+					{
+						"Type":"RTID(bamboozle@PlantTypes)"
+					},
+					{
+						"Type":"RTID(banana@PlantTypes)"
+					},
+					{
+						"Type":"RTID(bloominghearts@PlantTypes)"
+					},
+					{
+						"Type":"RTID(blover@PlantTypes)"
+					},
+					{
+						"Type":"RTID(cantaloupe@PlantTypes)"
+					},
+					{
+						"Type":"RTID(chardguard@PlantTypes)"
+					},
+					{
+						"Type":"RTID(cherry_bomb@PlantTypes)"
+					},
+					{
+						"Type":"RTID(chomper@PlantTypes)"
+					},
+					{
+						"Type":"RTID(citron@PlantTypes)"
+					},
+					{
+						"Type":"RTID(coconutcannon@PlantTypes)"
+					},
+					{
+						"Type":"RTID(coldsnapdragon@PlantTypes)"
+					},
+					{
+						"Type":"RTID(concealmint@PlantTypes)"
+					},
+					{
+						"Type":"RTID(cranjelly@PlantTypes)"
+					},
+					{
+						"Type":"RTID(darkmatterdragonfruit@PlantTypes)"
+					},
+					{
+						"Type":"RTID(doomshroom@PlantTypes)"
+					},
+					{
+						"Type":"RTID(explodeonut@PlantTypes)"
+					},
+					{
+						"Type":"RTID(filamint@PlantTypes)"
+					},
+					{
+						"Type":"RTID(ghostpepper@PlantTypes)"
+					},
+					{
+						"Type":"RTID(glaciershroom@PlantTypes)"
+					},
+					{
+						"Type":"RTID(gloomvine@PlantTypes)"
+					},
+					{
+						"Type":"RTID(goldleaf@PlantTypes)"
+					},
+					{
+						"Type":"RTID(grapeshot@PlantTypes)"
+					},
+					{
+						"Type":"RTID(guacodile@PlantTypes)"
+					},
+					{
+						"Type":"RTID(hollyknight@PlantTypes)"
+					},
+					{
+						"Type":"RTID(holonut@PlantTypes)"
+					},
+					{
+						"Type":"RTID(hotdate@PlantTypes)"
+					},
+					{
+						"Type":"RTID(hurrikale@PlantTypes)"
+					},
+					{
+						"Type":"RTID(hypnoshroom@PlantTypes)"
+					},
+					{
+						"Type":"RTID(iceweed@PlantTypes)"
+					},
+					{
+						"Type":"RTID(jalapeno@PlantTypes)"
+					},
+					{
+						"Type":"RTID(loquat@PlantTypes)"
+					},
+					{
+						"Type":"RTID(lychee@PlantTypes)"
+					},
+					{
+						"Type":"RTID(magnetshroom@PlantTypes)"
+					},
+					{
+						"Type":"RTID(moonflower@PlantTypes)"
+					},
+					{
+						"Type":"RTID(noctarine@PlantTypes)"
+					},
+					{
+						"Type":"RTID(parsnip@PlantTypes)"
+					},
+					{
+						"Type":"RTID(peach@PlantTypes)"
+					},
+					{
+						"Type":"RTID(peacommando@PlantTypes)"
+					},
+					{
+						"Type":"RTID(peanut@PlantTypes)"
+					},
+					{
+						"Type":"RTID(peapod@PlantTypes)"
+					},
+					{
+						"Type":"RTID(pinkstarfruit@PlantTypes)"
+					},
+					{
+						"Type":"RTID(poisonpeashooter@PlantTypes)"
+					},
+					{
+						"Type":"RTID(pyrevine@PlantTypes)"
+					},
+					{
+						"Type":"RTID(pumpkin@PlantTypes)"
+					},
+					{
+						"Type":"RTID(sapfling@PlantTypes)"
+					},
+					{
+						"Type":"RTID(snapdragon@PlantTypes)"
+					},
+					{
+						"Type":"RTID(snowpea@PlantTypes)"
+					},
+					{
+						"Type":"RTID(squash@PlantTypes)"
+					},
+					{
+						"Type":"RTID(strawburst@PlantTypes)"
+					},
+					{
+						"Type":"RTID(sweetpotato@PlantTypes)"
+					},
+					{
+						"Type":"RTID(powerplant_gamma@PlantTypes)"
+					},
+					{
+						"Type":"RTID(wasabiwhip@PlantTypes)"
+					},
+					{
+						"Type":"RTID(wintermelon@PlantTypes)"
+					}
+				]
+			}
+		},
+		{
+			"aliases":[
+				"KFTT"
+			],
+			"objclass":"ModifyConveyorWaveActionProps",
+			"objdata":{
+				"Add":[
+					{
+						"MaxCount":5,
+						"MaxWeightFactor":0,
+						"Type":"poisonpeashooter",
+						"Weight":15
+					},
+					{
+						"MaxCount":5,
+						"MaxWeightFactor":0.2,
+						"Type":"jalapeno",
+						"Weight":20
+					},
+					{
+						"MaxCount":2,
+						"MaxWeightFactor":0.1,
+						"MinCount":1,
+						"MinWeightFactor":2,
+						"Type":"cherry_bomb",
+						"Weight":10
+					},
+					{
+						"MaxCount":10,
+						"MaxWeightFactor":0.1,
+						"MinCount":5,
+						"MinWeightFactor":2,
+						"Type":"coconutcannon",
+						"Weight":45
+					},
+					{
+						"MaxCount":5,
+						"MaxWeightFactor":0,
+						"MinCount":2,
+						"MinWeightFactor":2,
+						"Type":"lychee",
+						"ForceBoosted":true,
+						"Weight":15
+					},
+					{
+						"MaxCount":1,
+						"MaxWeightFactor":0.1,
+						"Type":"concealmint",
+						"Weight":7
+					},
+					{
+						"MaxCount":3,
+						"MaxWeightFactor":0.1,
+						"Type":"grapeshot",
+						"Weight":10
+					},
+					{
+						"MaxCount":10,
+						"MaxWeightFactor":0,
+						"Type":"wintermelon",
+						"Weight":25
+					},
+					{
+						"MaxCount":5,
+						"MaxWeightFactor":0.2,
+						"Type":"citron",
+						"Weight":20
+					},
+					{
+						"MaxCount":2,
+						"MaxWeightFactor":0,
+						"Type":"hypnoshroom",
+						"Weight":7
+					},
+					{
+						"MaxCount":5,
+						"MaxWeightFactor":0,
+						"Type":"holonut",
+						"Weight":10
+					},
+					{
+						"MaxCount":1,
+						"MaxWeightFactor":0,
+						"Type":"blover",
+						"Weight":1
+					},
+					{
+						"MaxCount":3,
+						"MaxWeightFactor":0.1,
+						"Type":"lychee",
+						"ForceBoosted":true,
+						"Weight":8
+					},
+					{
+						"MaxCount":3,
+						"MaxWeightFactor":0,
+						"Type":"hollyknight",
+						"Weight":8
+					},
+					{
+						"Type":"anthurium",
+						"Weight":25,
+						"ForceBoosted":true
+					},
+					{
+						"MaxCount":1,
+						"MaxWeightFactor":0,
+						"Type":"filamint",
+						"Weight":5
+					}
+				],
+				"Remove":[
+					{
+						"Type":"RTID(anthurium@PlantTypes)"
+					},
+					{
+						"Type":"RTID(bamboozle@PlantTypes)"
+					},
+					{
+						"Type":"RTID(banana@PlantTypes)"
+					},
+					{
+						"Type":"RTID(bloominghearts@PlantTypes)"
+					},
+					{
+						"Type":"RTID(blover@PlantTypes)"
+					},
+					{
+						"Type":"RTID(cantaloupe@PlantTypes)"
+					},
+					{
+						"Type":"RTID(chardguard@PlantTypes)"
+					},
+					{
+						"Type":"RTID(cherry_bomb@PlantTypes)"
+					},
+					{
+						"Type":"RTID(chomper@PlantTypes)"
+					},
+					{
+						"Type":"RTID(citron@PlantTypes)"
+					},
+					{
+						"Type":"RTID(coconutcannon@PlantTypes)"
+					},
+					{
+						"Type":"RTID(coldsnapdragon@PlantTypes)"
+					},
+					{
+						"Type":"RTID(concealmint@PlantTypes)"
+					},
+					{
+						"Type":"RTID(cranjelly@PlantTypes)"
+					},
+					{
+						"Type":"RTID(darkmatterdragonfruit@PlantTypes)"
+					},
+					{
+						"Type":"RTID(doomshroom@PlantTypes)"
+					},
+					{
+						"Type":"RTID(explodeonut@PlantTypes)"
+					},
+					{
+						"Type":"RTID(filamint@PlantTypes)"
+					},
+					{
+						"Type":"RTID(ghostpepper@PlantTypes)"
+					},
+					{
+						"Type":"RTID(glaciershroom@PlantTypes)"
+					},
+					{
+						"Type":"RTID(gloomvine@PlantTypes)"
+					},
+					{
+						"Type":"RTID(goldleaf@PlantTypes)"
+					},
+					{
+						"Type":"RTID(grapeshot@PlantTypes)"
+					},
+					{
+						"Type":"RTID(guacodile@PlantTypes)"
+					},
+					{
+						"Type":"RTID(hollyknight@PlantTypes)"
+					},
+					{
+						"Type":"RTID(holonut@PlantTypes)"
+					},
+					{
+						"Type":"RTID(hotdate@PlantTypes)"
+					},
+					{
+						"Type":"RTID(hurrikale@PlantTypes)"
+					},
+					{
+						"Type":"RTID(hypnoshroom@PlantTypes)"
+					},
+					{
+						"Type":"RTID(iceweed@PlantTypes)"
+					},
+					{
+						"Type":"RTID(jalapeno@PlantTypes)"
+					},
+					{
+						"Type":"RTID(loquat@PlantTypes)"
+					},
+					{
+						"Type":"RTID(lychee@PlantTypes)"
+					},
+					{
+						"Type":"RTID(magnetshroom@PlantTypes)"
+					},
+					{
+						"Type":"RTID(moonflower@PlantTypes)"
+					},
+					{
+						"Type":"RTID(noctarine@PlantTypes)"
+					},
+					{
+						"Type":"RTID(parsnip@PlantTypes)"
+					},
+					{
+						"Type":"RTID(peach@PlantTypes)"
+					},
+					{
+						"Type":"RTID(peacommando@PlantTypes)"
+					},
+					{
+						"Type":"RTID(peanut@PlantTypes)"
+					},
+					{
+						"Type":"RTID(peapod@PlantTypes)"
+					},
+					{
+						"Type":"RTID(pinkstarfruit@PlantTypes)"
+					},
+					{
+						"Type":"RTID(poisonpeashooter@PlantTypes)"
+					},
+					{
+						"Type":"RTID(pyrevine@PlantTypes)"
+					},
+					{
+						"Type":"RTID(pumpkin@PlantTypes)"
+					},
+					{
+						"Type":"RTID(sapfling@PlantTypes)"
+					},
+					{
+						"Type":"RTID(snapdragon@PlantTypes)"
+					},
+					{
+						"Type":"RTID(snowpea@PlantTypes)"
+					},
+					{
+						"Type":"RTID(squash@PlantTypes)"
+					},
+					{
+						"Type":"RTID(strawburst@PlantTypes)"
+					},
+					{
+						"Type":"RTID(sweetpotato@PlantTypes)"
+					},
+					{
+						"Type":"RTID(powerplant_gamma@PlantTypes)"
+					},
+					{
+						"Type":"RTID(wasabiwhip@PlantTypes)"
+					},
+					{
+						"Type":"RTID(wintermelon@PlantTypes)"
+					}
+				]
+			}
+		},
+		{
+			"aliases":[
+				"NMTT"
+			],
+			"objclass":"ModifyConveyorWaveActionProps",
+			"objdata":{
+				"Add":[
+					{
+						"MaxCount":3,
+						"MaxWeightFactor":0,
+						"MinCount":1,
+						"MinWeightFactor":3,
+						"Type":"glaciershroom",
+						"Weight":30
+					},
+					{
+						"MaxCount":5,
+						"MaxWeightFactor":0.4,
+						"Type":"wintermelon",
+						"Weight":25
+					},
+					{
+						"MaxCount":7,
+						"MaxWeightFactor":0,
+						"MinCount":2,
+						"MinWeightFactor":3,
+						"Type":"peacommando",
+						"Weight":10
+					},
+					{
+						"MaxCount":2,
+						"MaxWeightFactor":0,
+						"Type":"guacodile",
+						"ForceBoosted":true,
+						"Weight":5
+					},
+					{
+						"MaxCount":5,
+						"MaxWeightFactor":0,
+						"Type":"pinkstarfruit",
+						"Weight":5
+					}
+				],
+				"Remove":[
+					{
+						"Type":"RTID(anthurium@PlantTypes)"
+					},
+					{
+						"Type":"RTID(bamboozle@PlantTypes)"
+					},
+					{
+						"Type":"RTID(banana@PlantTypes)"
+					},
+					{
+						"Type":"RTID(bloominghearts@PlantTypes)"
+					},
+					{
+						"Type":"RTID(blover@PlantTypes)"
+					},
+					{
+						"Type":"RTID(cantaloupe@PlantTypes)"
+					},
+					{
+						"Type":"RTID(chardguard@PlantTypes)"
+					},
+					{
+						"Type":"RTID(cherry_bomb@PlantTypes)"
+					},
+					{
+						"Type":"RTID(chomper@PlantTypes)"
+					},
+					{
+						"Type":"RTID(citron@PlantTypes)"
+					},
+					{
+						"Type":"RTID(coconutcannon@PlantTypes)"
+					},
+					{
+						"Type":"RTID(coldsnapdragon@PlantTypes)"
+					},
+					{
+						"Type":"RTID(concealmint@PlantTypes)"
+					},
+					{
+						"Type":"RTID(cranjelly@PlantTypes)"
+					},
+					{
+						"Type":"RTID(darkmatterdragonfruit@PlantTypes)"
+					},
+					{
+						"Type":"RTID(doomshroom@PlantTypes)"
+					},
+					{
+						"Type":"RTID(explodeonut@PlantTypes)"
+					},
+					{
+						"Type":"RTID(filamint@PlantTypes)"
+					},
+					{
+						"Type":"RTID(ghostpepper@PlantTypes)"
+					},
+					{
+						"Type":"RTID(glaciershroom@PlantTypes)"
+					},
+					{
+						"Type":"RTID(gloomvine@PlantTypes)"
+					},
+					{
+						"Type":"RTID(goldleaf@PlantTypes)"
+					},
+					{
+						"Type":"RTID(grapeshot@PlantTypes)"
+					},
+					{
+						"Type":"RTID(guacodile@PlantTypes)"
+					},
+					{
+						"Type":"RTID(hollyknight@PlantTypes)"
+					},
+					{
+						"Type":"RTID(holonut@PlantTypes)"
+					},
+					{
+						"Type":"RTID(hotdate@PlantTypes)"
+					},
+					{
+						"Type":"RTID(hurrikale@PlantTypes)"
+					},
+					{
+						"Type":"RTID(hypnoshroom@PlantTypes)"
+					},
+					{
+						"Type":"RTID(iceweed@PlantTypes)"
+					},
+					{
+						"Type":"RTID(jalapeno@PlantTypes)"
+					},
+					{
+						"Type":"RTID(loquat@PlantTypes)"
+					},
+					{
+						"Type":"RTID(lychee@PlantTypes)"
+					},
+					{
+						"Type":"RTID(magnetshroom@PlantTypes)"
+					},
+					{
+						"Type":"RTID(moonflower@PlantTypes)"
+					},
+					{
+						"Type":"RTID(noctarine@PlantTypes)"
+					},
+					{
+						"Type":"RTID(parsnip@PlantTypes)"
+					},
+					{
+						"Type":"RTID(peach@PlantTypes)"
+					},
+					{
+						"Type":"RTID(peacommando@PlantTypes)"
+					},
+					{
+						"Type":"RTID(peanut@PlantTypes)"
+					},
+					{
+						"Type":"RTID(peapod@PlantTypes)"
+					},
+					{
+						"Type":"RTID(pinkstarfruit@PlantTypes)"
+					},
+					{
+						"Type":"RTID(poisonpeashooter@PlantTypes)"
+					},
+					{
+						"Type":"RTID(pyrevine@PlantTypes)"
+					},
+					{
+						"Type":"RTID(pumpkin@PlantTypes)"
+					},
+					{
+						"Type":"RTID(sapfling@PlantTypes)"
+					},
+					{
+						"Type":"RTID(snapdragon@PlantTypes)"
+					},
+					{
+						"Type":"RTID(snowpea@PlantTypes)"
+					},
+					{
+						"Type":"RTID(squash@PlantTypes)"
+					},
+					{
+						"Type":"RTID(strawburst@PlantTypes)"
+					},
+					{
+						"Type":"RTID(sweetpotato@PlantTypes)"
+					},
+					{
+						"Type":"RTID(powerplant_gamma@PlantTypes)"
+					},
+					{
+						"Type":"RTID(wasabiwhip@PlantTypes)"
+					},
+					{
+						"Type":"RTID(wintermelon@PlantTypes)"
+					}
+				]
+			}
+		},
+		{
+			"aliases":[
+				"MDD"
+			],
+			"objclass":"ModifyConveyorWaveActionProps",
+			"objdata":{
+				"Add":[
+					{
+						"MaxCount":5,
+						"MaxWeightFactor":0,
+						"MinCount":3,
+						"MinWeightFactor":3,
+						"Type":"poisonpeashooter",
+						"Weight":30
+					},
+					{
+						"MaxCount":2,
+						"MaxWeightFactor":0,
+						"Type":"wintermelon",
+						"Weight":25
+					},
+					{
+						"MaxCount":3,
+						"MaxWeightFactor":0,
+						"Type":"cantaloupe",
+						"Weight":25
+					},
+					{
+						"MaxCount":5,
+						"MaxWeightFactor":0.1,
+						"Type":"tallnut",
+						"Weight":10
+					},
+					{
+						"MaxCount":5,
+						"MaxWeightFactor":0.1,
+						"Type":"pumpkin",
+						"Weight":10
+					},
+					{
+						"MaxCount":5,
+						"MaxWeightFactor":0,
+						"Type":"iceweed",
+						"Weight":10
+					},
+					{
+						"MaxCount":5,
+						"MaxWeightFactor":0,
+						"Type":"darkmatterdragonfruit",
+						"ForceBoosted":true,
+						"Weight":25
+					},
+					{
+						"MaxCount":5,
+						"MaxWeightFactor":0,
+						"Type":"gloomvine",
+						"Weight":15
+					}
+				],
+				"Remove":[
+					{
+						"Type":"RTID(anthurium@PlantTypes)"
+					},
+					{
+						"Type":"RTID(bamboozle@PlantTypes)"
+					},
+					{
+						"Type":"RTID(banana@PlantTypes)"
+					},
+					{
+						"Type":"RTID(bloominghearts@PlantTypes)"
+					},
+					{
+						"Type":"RTID(blover@PlantTypes)"
+					},
+					{
+						"Type":"RTID(cantaloupe@PlantTypes)"
+					},
+					{
+						"Type":"RTID(chardguard@PlantTypes)"
+					},
+					{
+						"Type":"RTID(cherry_bomb@PlantTypes)"
+					},
+					{
+						"Type":"RTID(chomper@PlantTypes)"
+					},
+					{
+						"Type":"RTID(citron@PlantTypes)"
+					},
+					{
+						"Type":"RTID(coconutcannon@PlantTypes)"
+					},
+					{
+						"Type":"RTID(coldsnapdragon@PlantTypes)"
+					},
+					{
+						"Type":"RTID(concealmint@PlantTypes)"
+					},
+					{
+						"Type":"RTID(cranjelly@PlantTypes)"
+					},
+					{
+						"Type":"RTID(darkmatterdragonfruit@PlantTypes)"
+					},
+					{
+						"Type":"RTID(doomshroom@PlantTypes)"
+					},
+					{
+						"Type":"RTID(explodeonut@PlantTypes)"
+					},
+					{
+						"Type":"RTID(filamint@PlantTypes)"
+					},
+					{
+						"Type":"RTID(ghostpepper@PlantTypes)"
+					},
+					{
+						"Type":"RTID(glaciershroom@PlantTypes)"
+					},
+					{
+						"Type":"RTID(gloomvine@PlantTypes)"
+					},
+					{
+						"Type":"RTID(goldleaf@PlantTypes)"
+					},
+					{
+						"Type":"RTID(grapeshot@PlantTypes)"
+					},
+					{
+						"Type":"RTID(guacodile@PlantTypes)"
+					},
+					{
+						"Type":"RTID(hollyknight@PlantTypes)"
+					},
+					{
+						"Type":"RTID(holonut@PlantTypes)"
+					},
+					{
+						"Type":"RTID(hotdate@PlantTypes)"
+					},
+					{
+						"Type":"RTID(hurrikale@PlantTypes)"
+					},
+					{
+						"Type":"RTID(hypnoshroom@PlantTypes)"
+					},
+					{
+						"Type":"RTID(iceweed@PlantTypes)"
+					},
+					{
+						"Type":"RTID(jalapeno@PlantTypes)"
+					},
+					{
+						"Type":"RTID(loquat@PlantTypes)"
+					},
+					{
+						"Type":"RTID(lychee@PlantTypes)"
+					},
+					{
+						"Type":"RTID(magnetshroom@PlantTypes)"
+					},
+					{
+						"Type":"RTID(moonflower@PlantTypes)"
+					},
+					{
+						"Type":"RTID(noctarine@PlantTypes)"
+					},
+					{
+						"Type":"RTID(parsnip@PlantTypes)"
+					},
+					{
+						"Type":"RTID(peach@PlantTypes)"
+					},
+					{
+						"Type":"RTID(peacommando@PlantTypes)"
+					},
+					{
+						"Type":"RTID(peanut@PlantTypes)"
+					},
+					{
+						"Type":"RTID(peapod@PlantTypes)"
+					},
+					{
+						"Type":"RTID(pinkstarfruit@PlantTypes)"
+					},
+					{
+						"Type":"RTID(poisonpeashooter@PlantTypes)"
+					},
+					{
+						"Type":"RTID(pyrevine@PlantTypes)"
+					},
+					{
+						"Type":"RTID(pumpkin@PlantTypes)"
+					},
+					{
+						"Type":"RTID(sapfling@PlantTypes)"
+					},
+					{
+						"Type":"RTID(snapdragon@PlantTypes)"
+					},
+					{
+						"Type":"RTID(snowpea@PlantTypes)"
+					},
+					{
+						"Type":"RTID(squash@PlantTypes)"
+					},
+					{
+						"Type":"RTID(strawburst@PlantTypes)"
+					},
+					{
+						"Type":"RTID(sweetpotato@PlantTypes)"
+					},
+					{
+						"Type":"RTID(powerplant_gamma@PlantTypes)"
+					},
+					{
+						"Type":"RTID(wasabiwhip@PlantTypes)"
+					},
+					{
+						"Type":"RTID(wintermelon@PlantTypes)"
+					}
+				]
+			}
+		},
+		{
+			"aliases":[
+				"FrozenPlantPlacement"
+			],
+			"objclass":"InitialPlantProperties",
+			"objdata":{
+				"InitialPlantPlacements":[
+					{
+						"GridX":0,
+						"GridY":0,
+						"TypeName":"RTID(cantaloupe@PlantTypes)"
+					},
+					{
+						"GridX":0,
+						"GridY":1,
+						"TypeName":"RTID(wintermelon@PlantTypes)"
+					},
+					{
+						"GridX":0,
+						"GridY":2,
+						"TypeName":"RTID(cantaloupe@PlantTypes)"
+					},
+					{
+						"GridX":0,
+						"GridY":3,
+						"TypeName":"RTID(wintermelon@PlantTypes)"
+					},
+					{
+						"GridX":0,
+						"GridY":4,
+						"TypeName":"RTID(cantaloupe@PlantTypes)"
+					},
+					{
+						"GridX":1,
+						"GridY":0,
+						"TypeName":"RTID(poisonpeashooter@PlantTypes)"
+					},
+					{
+						"GridX":1,
+						"GridY":1,
+						"TypeName":"RTID(poisonpeashooter@PlantTypes)"
+					},
+					{
+						"GridX":1,
+						"GridY":2,
+						"TypeName":"RTID(poisonpeashooter@PlantTypes)"
+					},
+					{
+						"GridX":1,
+						"GridY":3,
+						"TypeName":"RTID(poisonpeashooter@PlantTypes)"
+					},
+					{
+						"GridX":1,
+						"GridY":4,
+						"TypeName":"RTID(poisonpeashooter@PlantTypes)"
+					},
+					{
+						"GridX":1,
+						"GridY":0,
+						"TypeName":"RTID(pvine@PlantTypes)"
+					},
+					{
+						"GridX":1,
+						"GridY":1,
+						"TypeName":"RTID(pvine@PlantTypes)"
+					},
+					{
+						"GridX":1,
+						"GridY":2,
+						"TypeName":"RTID(pvine@PlantTypes)"
+					},
+					{
+						"GridX":1,
+						"GridY":3,
+						"TypeName":"RTID(pvine@PlantTypes)"
+					},
+					{
+						"GridX":1,
+						"GridY":4,
+						"TypeName":"RTID(pvine@PlantTypes)"
+					},
+					{
+						"GridX":2,
+						"GridY":0,
+						"TypeName":"RTID(gloomvine@PlantTypes)"
+					},
+					{
+						"GridX":2,
+						"GridY":1,
+						"TypeName":"RTID(gloomvine@PlantTypes)"
+					},
+					{
+						"GridX":2,
+						"GridY":2,
+						"TypeName":"RTID(gloomvine@PlantTypes)"
+					},
+					{
+						"GridX":2,
+						"GridY":3,
+						"TypeName":"RTID(gloomvine@PlantTypes)"
+					},
+					{
+						"GridX":2,
+						"GridY":4,
+						"TypeName":"RTID(gloomvine@PlantTypes)"
+					},
+					{
+						"GridX":2,
+						"GridY":0,
+						"TypeName":"RTID(darkmatterdragonfruit@PlantTypes)"
+					},
+					{
+						"GridX":2,
+						"GridY":1,
+						"TypeName":"RTID(peach@PlantTypes)"
+					},
+					{
+						"GridX":2,
+						"GridY":2,
+						"TypeName":"RTID(darkmatterdragonfruit@PlantTypes)"
+					},
+					{
+						"GridX":2,
+						"GridY":3,
+						"TypeName":"RTID(peach@PlantTypes)"
+					},
+					{
+						"GridX":2,
+						"GridY":4,
+						"TypeName":"RTID(darkmatterdragonfruit@PlantTypes)"
+					},
+					{
+						"GridX":3,
+						"GridY":0,
+						"TypeName":"RTID(tallnut@PlantTypes)"
+					},
+					{
+						"GridX":3,
+						"GridY":1,
+						"TypeName":"RTID(tallnut@PlantTypes)"
+					},
+					{
+						"GridX":3,
+						"GridY":2,
+						"TypeName":"RTID(tallnut@PlantTypes)"
+					},
+					{
+						"GridX":3,
+						"GridY":3,
+						"TypeName":"RTID(tallnut@PlantTypes)"
+					},
+					{
+						"GridX":3,
+						"GridY":4,
+						"TypeName":"RTID(tallnut@PlantTypes)"
+					},
+					{
+						"GridX":3,
+						"GridY":0,
+						"TypeName":"RTID(pumpkin@PlantTypes)"
+					},
+					{
+						"GridX":3,
+						"GridY":1,
+						"TypeName":"RTID(pumpkin@PlantTypes)"
+					},
+					{
+						"GridX":3,
+						"GridY":2,
+						"TypeName":"RTID(pumpkin@PlantTypes)"
+					},
+					{
+						"GridX":3,
+						"GridY":3,
+						"TypeName":"RTID(pumpkin@PlantTypes)"
+					},
+					{
+						"GridX":3,
+						"GridY":4,
+						"TypeName":"RTID(pumpkin@PlantTypes)"
+					},
+					{
+						"GridX":4,
+						"GridY":0,
+						"TypeName":"RTID(iceweed@PlantTypes)"
+					},
+					{
+						"GridX":4,
+						"GridY":1,
+						"TypeName":"RTID(iceweed@PlantTypes)"
+					},
+					{
+						"GridX":4,
+						"GridY":2,
+						"TypeName":"RTID(iceweed@PlantTypes)"
+					},
+					{
+						"GridX":4,
+						"GridY":3,
+						"TypeName":"RTID(iceweed@PlantTypes)"
+					},
+					{
+						"GridX":4,
+						"GridY":4,
+						"TypeName":"RTID(iceweed@PlantTypes)"
+					}
+				]
+			}
+		},
+		{
+			"aliases":[
+				"FrozenZombiePlacement"
+			],
+			"objclass":"InitialZombieProperties",
+			"objdata":{
+				"InitialZombiePlacements":[
+					{
+						"GridX":5,
+						"GridY":0,
+						"TypeName":"RTID(treasureyeti_veteran@CurrentLevel)"
+					},
+					{
+						"GridX":4,
+						"GridY":1,
+						"TypeName":"RTID(tutorial_armor4@ZombieTypes)"
+					},
+					{
+						"GridX":3,
+						"GridY":2,
+						"TypeName":"RTID(tutorial_flag_veteran@ZombieTypes)"
+					},
+					{
+						"GridX":4,
+						"GridY":3,
+						"TypeName":"RTID(tutorial_armor4@ZombieTypes)"
+					},
+					{
+						"GridX":5,
+						"GridY":4,
+						"TypeName":"RTID(treasureyeti_veteran@CurrentLevel)"
+					},
+					{
+						"GridX":6,
+						"GridY":0,
+						"TypeName":"RTID(tutorial_gargantuar@ZombieTypes)"
+					},
+					{
+						"GridX":6,
+						"GridY":1,
+						"TypeName":"RTID(tutorial_gargantuar@ZombieTypes)"
+					},
+					{
+						"GridX":6,
+						"GridY":2,
+						"TypeName":"RTID(tutorial_gargantuar@ZombieTypes)"
+					},
+					{
+						"GridX":6,
+						"GridY":3,
+						"TypeName":"RTID(tutorial_gargantuar@ZombieTypes)"
+					},
+					{
+						"GridX":6,
+						"GridY":4,
+						"TypeName":"RTID(tutorial_gargantuar@ZombieTypes)"
+					}
+				]
+			}
+		},
+		{
+			"aliases":[
+				"vase_gargantuar"
+			],
+			"objclass":"ZombieType",
+			"objdata":{
+				"Properties":"RTID(vase_gargantuar@CurrentLevel)",
+				"ZombieBasedOn":"vase_gargantuar"
+			}
+		},
+		{
+			"aliases":[
+				"vase_gargantuar"
+			],
+			"objclass":"ZombieProperties",
+			"objdata":{
+				"Toughness":7200
+			}
+		},
+		{
+			"objclass":"ZombieType",
+			"aliases":[
+				"catapult_veteran"
+			],
+			"objdata":{
+				"Properties":"RTID(catapult_veteran@CurrentLevel)",
+				"ZombieBasedOn":"catapult"
+			}
+		},
+		{
+			"objclass":"ZombieProperties",
+			"aliases":[
+				"catapult_veteran"
+			],
+			"objdata":{
+				"FoeEatDamageReflectPct":3,
+				"CannotBeGummedByGumnut":true,
+				"BallType":"busketball",
+				"CannotBeEnlightenedBySolarSage":true,
+				"CannotBeGrabbedByPtero":true,
+				"ImmuneToSweetPotato":true,
+				"CannotBeDraggedByTangleKelp":true,
+				"CannotBeTossedByCitron":true,
+				"CannotBeSwallowedByChomper":true,
+				"WalkSPS":0.75,
+				"EatDPS":3000,
+				"Toughness":1200,
+				"LivesInDeepWater":true,
+				"NormalDeathWhenMowed":true,
+				"LobInterval":1,
+				"LobIntervalAdditional":0,
+				"MaxBallCount":20,
+				"ImmuneToGarlic":true,
+				"WavePointCost":300,
+				"Weight":4000,
+				"HitRect":"RTID(CatapultHitRect@RectangleProps)",
+				"AttackRect":"RTID(CatapultAttackRect@RectangleProps)"
+			}
+		},
+		{
+			"aliases":[
+				"cowboy_flag_veteran_reverse"
+			],
+			"objclass":"ZombieType",
+			"objdata":{
+				"Properties":"RTID(cowboy_flag_veteran_reverse@CurrentLevel)",
+				"ZombieBasedOn":"cowboy_flag_veteran"
+			}
+		},
+		{
+			"aliases":[
+				"cowboy_flag_veteran_reverse"
+			],
+			"objclass":"ZombieProperties",
+			"objdata":{
+				"ChanceToReverse":1
+			}
+		},
+		{
+			"aliases":[
+				"cowboy_armor4_reverse"
+			],
+			"objclass":"ZombieType",
+			"objdata":{
+				"Properties":"RTID(cowboy_armor4_reverse@CurrentLevel)",
+				"ZombieBasedOn":"cowboy_armor4"
+			}
+		},
+		{
+			"aliases":[
+				"cowboy_armor4_reverse"
+			],
+			"objclass":"ZombieProperties",
+			"objdata":{
+				"ChanceToReverse":1
+			}
+		},
+		{
+			"objclass":"ZombieType",
+			"aliases":[
+				"iceage_troglobite_veteran"
+			],
+			"objdata":{
+				"Properties":"RTID(iceage_troglobite_veteran@CurrentLevel)",
+				"ZombieBasedOn":"iceage_troglobite_veteran"
+			}
+		},
+		{
+			"objclass":"ZombieProperties",
+			"aliases":[
+				"iceage_troglobite_veteran"
+			],
+			"objdata":{
+				"IgnoredByThymeWarp":true,
+				"CannotBeCarriedByFanStorm":true,
+				"CannotBeGummedByGumnut":true,
+				"SpawnedScale":1.5,
+				"KnockBackDistanceScale":0,
+				"CannotBeKnockedBackByProjectiles":true,
+				"CannotBeEnlightenedBySolarSage":true,
+				"ImmuneToSweetPotato":true,
+				"ImmuneToShrinkingViolet":true,
+				"ZombieSort":"Zomboss",
+				"IgnoredBySnapPea":true,
+				"CannotBeGrabbedByPtero":true,
+				"CannotBeDetectedByPowerToss":true,
+				"CannotBeDraggedByTangleKelp":true,
+				"CannotBeTossedByCitron":true,
+				"CannotBeDetectedBySapfling":true,
+				"CannotBeSwallowedByChomper":true,
+				"ChiliStunDurationMult":0,
+				"CannotCarryPlantfoodsInWaves":true,
+				"LivesInDeepWater":true,
+				"FoeEatDamageReflectPct":1.5,
+				"ImmuneToGarlic":true,
+				"ChillInsteadOfFreeze":true,
+				"NumberOfIceblocksToSpawnWith":6,
+				"WalkSPS":0.05,
+				"EatDPS":1500,
+				"Toughness":17000,
+				"WavePointCost":2500,
+				"IgnoredInWaves":false,
+				"CannotChangeLaneByPowerToss":true,
+				"CannotBeFlickedByPowerToss":true,
+				"NormalDeathWhenMowed":true,
+				"Weight":3500,
+				"HitRect":"RTID(BullyHitRect@RectangleProps)",
+				"AttackRect":"RTID(BullyAttackRect@RectangleProps)",
+				"ImpTypes":[
+					"iceage_gargantuar"
+				]
+			}
+		},
+		{
+			"objclass":"ZombieType",
+			"aliases":[
+				"iceage_hunter_veteran"
+			],
+			"objdata":{
+				"Properties":"RTID(iceage_hunter_veteran@CurrentLevel)",
+				"ZombieBasedOn":"iceage_hunter_veteran"
+			}
+		},
+		{
+			"objclass":"ZombieProperties",
+			"aliases":[
+				"iceage_hunter_veteran"
+			],
+			"objdata":{
+				"IgnoredByThymeWarp":true,
+				"CannotBeCarriedByFanStorm":true,
+				"CannotBeGummedByGumnut":true,
+				"KnockBackDistanceScale":0,
+				"CannotBeKnockedBackByProjectiles":true,
+				"CannotBeEnlightenedBySolarSage":true,
+				"ImmuneToSweetPotato":true,
+				"ImmuneToShrinkingViolet":true,
+				"ZombieSort":"Zomboss",
+				"IgnoredBySnapPea":true,
+				"CannotBeGrabbedByPtero":true,
+				"CannotBeDetectedByPowerToss":true,
+				"CannotBeDraggedByTangleKelp":true,
+				"CannotBeTossedByCitron":true,
+				"CannotBeDetectedBySapfling":true,
+				"CannotBeSwallowedByChomper":true,
+				"ChiliStunDurationMult":0,
+				"CannotCarryPlantfoodsInWaves":true,
+				"LivesInDeepWater":true,
+				"FoeEatDamageReflectPct":1.5,
+				"ImmuneToGarlic":true,
+				"SpawnedScale":1.5,
+				"SnowballType":"hurtz",
+				"ChillInsteadOfFreeze":true,
+				"IgnoredInWaves":false,
+				"CannotChangeLaneByPowerToss":true,
+				"CannotBeFlickedByPowerToss":true,
+				"NormalDeathWhenMowed":true,
+				"WalkSPS":0.05,
+				"EatDPS":1500,
+				"Toughness":11000,
+				"LobInterval":10,
+				"LobIntervalAdditional":0,
+				"WavePointCost":700,
+				"Weight":3500,
+				"HitRect":"RTID(CommonHitRect@RectangleProps)",
+				"AttackRect":"RTID(CommonAttackRect@RectangleProps)"
+			}
+		},
+    {
+			"objclass":"ProjectileType",
+			"aliases":[
+				"hurtz"
+			],
+			"objdata":{
+				"ProjectileBasedOn":"powerup_snow",
+				"Props":"RTID(hurtz@CurrentLevel)"
+			}
+		},
+		{
+			"objclass":"ProjectileProperties",
+			"aliases":[
+				"hurtz"
+			],
+			"objdata":{
+				"Damage":1000,
+				"ChillDuration":5,
+				"IceBlockLevel":5,
+				"SplashDamage":[
+					{
+						"Damage":500,
+						"ChillDuration":5,
+						"Range":{
+							"w":3,
+							"h":3
+						}
+					}
+				],
+				"Size":{
+					"w":18,
+					"h":18
+				}
+			}
+		},
+		{
+			"objclass":"ZombieType",
+			"aliases":[
+				"iceage_flag_veteran_veteran"
+			],
+			"objdata":{
+				"Properties":"RTID(iceage_flag_veteran_veteran@CurrentLevel)",
+				"ZombieBasedOn":"iceage_flag_veteran"
+			}
+		},
+		{
+			"objclass":"ZombieProperties",
+			"aliases":[
+				"iceage_flag_veteran_veteran"
+			],
+			"objdata":{
+				"IgnoredByThymeWarp":true,
+				"CannotBeCarriedByFanStorm":true,
+				"CannotBeGummedByGumnut":true,
+				"SpawnedScale":1.5,
+				"KnockBackDistanceScale":0,
+				"CannotBeKnockedBackByProjectiles":true,
+				"CannotBeEnlightenedBySolarSage":true,
+				"ImmuneToSweetPotato":true,
+				"ImmuneToShrinkingViolet":true,
+				"ZombieSort":"Zomboss",
+				"IgnoredBySnapPea":true,
+				"CannotBeGrabbedByPtero":true,
+				"CannotBeDetectedByPowerToss":true,
+				"CannotBeDraggedByTangleKelp":true,
+				"CannotBeTossedByCitron":true,
+				"CannotBeDetectedBySapfling":true,
+				"CannotBeSwallowedByChomper":true,
+				"ChiliStunDurationMult":0,
+				"CannotCarryPlantfoodsInWaves":true,
+				"LivesInDeepWater":true,
+				"FoeEatDamageReflectPct":1.5,
+				"ImmuneToGarlic":true,
+				"ChillInsteadOfFreeze":true,
+				"WalkSPS":0.2,
+				"EatDPS":4000,
+				"Toughness":2800,
+				"WavePointCost":2500,
+				"IgnoredInWaves":false,
+				"CannotChangeLaneByPowerToss":true,
+				"CannotBeFlickedByPowerToss":true,
+				"NormalDeathWhenMowed":true,
+				"Weight":3500,
+				"HitRect":"RTID(CommonHitRect@RectangleProps)",
+				"AttackRect":"RTID(CommonAttackRect@RectangleProps)",
+				"StartingArmors":[
+					"iceage_armor4"
+				]
+			}
+		},
+		{
+			"objclass":"ZombieType",
+			"aliases":[
+				"lostcity_lostpilot_for_flag_veteran"
+			],
+			"objdata":{
+				"Properties":"RTID(lostcity_lostpilot_for_flag_veteran@CurrentLevel)",
+				"ZombieBasedOn":"lostcity_lostpilot_veteran"
+			}
+		},
+		{
+			"objclass":"ZombieProperties",
+			"aliases":[
+				"lostcity_lostpilot_for_flag_veteran"
+			],
+			"objdata":{
+				"HangingNoEatTimeUntilDrop":3,
+				"WalkSPS":0.185,
+				"EatDPS":100,
+				"Toughness":500,
+				"WavePointCost":250,
+				"Weight":3000,
+				"HitRect":"RTID(CommonHitRect@RectangleProps)",
+				"AttackRect":"RTID(CommonAttackRect@RectangleProps)",
+				"ZombiesToBringWith":[
+					{
+						"Type":"lostcity_flag_veteran",
+						"Weight":1
+					}
+				]
+			}
+		},
+		{
+			"objclass":"ZombieType",
+			"aliases":[
+				"lostcity_lostpilot_for_armor4"
+			],
+			"objdata":{
+				"Properties":"RTID(lostcity_lostpilot_for_armor4@CurrentLevel)",
+				"ZombieBasedOn":"lostcity_lostpilot_veteran"
+			}
+		},
+		{
+			"objclass":"ZombieProperties",
+			"aliases":[
+				"lostcity_lostpilot_for_armor4"
+			],
+			"objdata":{
+				"HangingNoEatTimeUntilDrop":3,
+				"WalkSPS":0.185,
+				"EatDPS":100,
+				"Toughness":500,
+				"WavePointCost":250,
+				"Weight":3000,
+				"HitRect":"RTID(CommonHitRect@RectangleProps)",
+				"AttackRect":"RTID(CommonAttackRect@RectangleProps)",
+				"ZombiesToBringWith":[
+					{
+						"Type":"lostcity_armor4",
+						"Weight":1
+					}
+				]
+			}
+		},
+		{
+			"objclass":"ZombieType",
+			"aliases":[
+				"lostcity_lostpilot_for_gargantuar"
+			],
+			"objdata":{
+				"Properties":"RTID(lostcity_lostpilot_for_gargantuar@CurrentLevel)",
+				"ZombieBasedOn":"lostcity_lostpilot_veteran"
+			}
+		},
+		{
+			"objclass":"ZombieProperties",
+			"aliases":[
+				"lostcity_lostpilot_for_gargantuar"
+			],
+			"objdata":{
+				"HangingNoEatTimeUntilDrop":3,
+				"WalkSPS":0.185,
+				"EatDPS":100,
+				"Toughness":500,
+				"WavePointCost":250,
+				"Weight":3000,
+				"HitRect":"RTID(CommonHitRect@RectangleProps)",
+				"AttackRect":"RTID(CommonAttackRect@RectangleProps)",
+				"ZombiesToBringWith":[
+					{
+						"Type":"lostcity_gargantuar",
+						"Weight":1
+					}
+				]
+			}
+		},
+		{
+			"objclass":"ZombieType",
+			"aliases":[
+				"lostcity_lostpilot_for_lostcity_veteran"
+			],
+			"objdata":{
+				"Properties":"RTID(lostcity_lostpilot_for_lostcity_veteran@CurrentLevel)",
+				"ZombieBasedOn":"lostcity_lostpilot_veteran"
+			}
+		},
+		{
+			"objclass":"ZombieProperties",
+			"aliases":[
+				"lostcity_lostpilot_for_lostcity_veteran"
+			],
+			"objdata":{
+				"HangingNoEatTimeUntilDrop":3,
+				"WalkSPS":0.185,
+				"EatDPS":100,
+				"Toughness":500,
+				"WavePointCost":250,
+				"Weight":3000,
+				"HitRect":"RTID(CommonHitRect@RectangleProps)",
+				"AttackRect":"RTID(CommonAttackRect@RectangleProps)",
+				"ZombiesToBringWith":[
+					{
+						"Type":"lostcity_veteran",
+						"Weight":1
+					}
+				]
+			}
+		},
+		{
+			"objclass":"ZombieType",
+			"aliases":[
+				"lostcity_lostpilot_for_armor1_veteran"
+			],
+			"objdata":{
+				"Properties":"RTID(lostcity_lostpilot_for_armor1_veteran@CurrentLevel)",
+				"ZombieBasedOn":"lostcity_lostpilot_veteran"
+			}
+		},
+		{
+			"objclass":"ZombieProperties",
+			"aliases":[
+				"lostcity_lostpilot_for_armor1_veteran"
+			],
+			"objdata":{
+				"HangingNoEatTimeUntilDrop":3,
+				"WalkSPS":0.185,
+				"EatDPS":100,
+				"Toughness":500,
+				"WavePointCost":250,
+				"Weight":3000,
+				"HitRect":"RTID(CommonHitRect@RectangleProps)",
+				"AttackRect":"RTID(CommonAttackRect@RectangleProps)",
+				"ZombiesToBringWith":[
+					{
+						"Type":"lostcity_armor1_veteran",
+						"Weight":1
+					}
+				]
+			}
+		},
+		{
+			"objclass":"ZombieType",
+			"aliases":[
+				"lostcity_lostpilot_for_armor2_veteran"
+			],
+			"objdata":{
+				"Properties":"RTID(lostcity_lostpilot_for_armor2_veteran@CurrentLevel)",
+				"ZombieBasedOn":"lostcity_lostpilot_veteran"
+			}
+		},
+		{
+			"objclass":"ZombieProperties",
+			"aliases":[
+				"lostcity_lostpilot_for_armor2_veteran"
+			],
+			"objdata":{
+				"HangingNoEatTimeUntilDrop":3,
+				"WalkSPS":0.185,
+				"EatDPS":100,
+				"Toughness":500,
+				"WavePointCost":250,
+				"Weight":3000,
+				"HitRect":"RTID(CommonHitRect@RectangleProps)",
+				"AttackRect":"RTID(CommonAttackRect@RectangleProps)",
+				"ZombiesToBringWith":[
+					{
+						"Type":"lostcity_armor2_veteran",
+						"Weight":1
+					}
+				]
+			}
+		},
+		{
+			"objclass":"ZombieType",
+			"aliases":[
+				"lostcity_lostpilot_for_crystalskull"
+			],
+			"objdata":{
+				"Properties":"RTID(lostcity_lostpilot_for_crystalskull@CurrentLevel)",
+				"ZombieBasedOn":"lostcity_lostpilot_veteran"
+			}
+		},
+		{
+			"objclass":"ZombieProperties",
+			"aliases":[
+				"lostcity_lostpilot_for_crystalskull"
+			],
+			"objdata":{
+				"HangingNoEatTimeUntilDrop":3,
+				"WalkSPS":0.185,
+				"EatDPS":100,
+				"Toughness":500,
+				"WavePointCost":250,
+				"Weight":3000,
+				"HitRect":"RTID(CommonHitRect@RectangleProps)",
+				"AttackRect":"RTID(CommonAttackRect@RectangleProps)",
+				"ZombiesToBringWith":[
+					{
+						"Type":"lostcity_crystalskull",
+						"Weight":1
+					}
+				]
+			}
+		},
+		{
+			"aliases":[
+				"lostcity_vet_armor1"
+			],
+			"objclass":"ArmorType",
+			"objdata":{
+				"Properties":"RTID(lostcity_vet_armor1@CurrentLevel)",
+				"ArmorBasedOn":"lostcity_armor1"
+			}
+		},
+		{
+			"aliases":[
+				"lostcity_vet_armor2"
+			],
+			"objclass":"ArmorType",
+			"objdata":{
+				"Properties":"RTID(lostcity_vet_armor2@CurrentLevel)",
+				"ArmorBasedOn":"lostcity_armor2"
+			}
+		},
+		{
+			"aliases":[
+				"lostcity_vet_armor1"
+			],
+			"objclass":"ArmorProperties",
+			"objdata":{
+				"isMetal":false,
+				"isIce":false,
+				"Toughness":1850,
+				"BowlingLevel":1
+			}
+		},
+		{
+			"aliases":[
+				"lostcity_vet_armor2"
+			],
+			"objclass":"ArmorProperties",
+			"objdata":{
+				"isMetal":true,
+				"isIce":false,
+				"Toughness":5500,
+				"BowlingLevel":2
+			}
+		},
+		{
+			"aliases":[
+				"lostcity_veteran"
+			],
+			"objclass":"ZombieType",
+			"objdata":{
+				"Properties":"RTID(lostcity_veteran@CurrentLevel)",
+				"ZombieBasedOn":"lostcity"
+			}
+		},
+		{
+			"objclass":"ZombieProperties",
+			"aliases":[
+				"lostcity_veteran"
+			],
+			"objdata":{
+				"SpawnedScale":1.25,
+				"ZombieSort":"Gargantuar",
+				"BugToughness":0,
+				"WalkSPS":0.5,
+				"EatDPS":1000,
+				"Toughness":900,
+				"WavePointCost":300,
+				"Weight":1500,
+				"HitRect":"RTID(CommonHitRect@RectangleProps)",
+				"AttackRect":"RTID(CommonAttackRect@RectangleProps)"
+			}
+		},
+		{
+			"aliases":[
+				"lostcity_armor1_veteran"
+			],
+			"objclass":"ZombieType",
+			"objdata":{
+				"Properties":"RTID(lostcity_armor1_veteran@CurrentLevel)",
+				"ZombieBasedOn":"lostcity_armor1"
+			}
+		},
+		{
+			"objclass":"ZombieProperties",
+			"aliases":[
+				"lostcity_armor1_veteran"
+			],
+			"objdata":{
+				"SpawnedScale":1.25,
+				"ZombieSort":"Gargantuar",
+				"BugToughness":0,
+				"WalkSPS":0,
+				"EatDPS":1000,
+				"Toughness":1801,
+				"WavePointCost":500,
+				"Weight":1500,
+				"HitRect":"RTID(CommonHitRect@RectangleProps)",
+				"AttackRect":"RTID(CommonAttackRect@RectangleProps)",
+				"StartingArmors":[
+					"lostcity_vet_armor1"
+				]
+			}
+		},
+		{
+			"aliases":[
+				"lostcity_armor2_veteran"
+			],
+			"objclass":"ZombieType",
+			"objdata":{
+				"Properties":"RTID(lostcity_armor2_veteran@CurrentLevel)",
+				"ZombieBasedOn":"lostcity_armor2"
+			}
+		},
+		{
+			"objclass":"ZombieProperties",
+			"aliases":[
+				"lostcity_armor2_veteran"
+			],
+			"objdata":{
+				"SpawnedScale":1.25,
+				"ChanceToReverse":1,
+				"ZombieSort":"Gargantuar",
+				"BugToughness":0,
+				"WalkSPS":0.5,
+				"EatDPS":1000,
+				"Toughness":1801,
+				"WavePointCost":700,
+				"Weight":1500,
+				"HitRect":"RTID(CommonHitRect@RectangleProps)",
+				"AttackRect":"RTID(CommonAttackRect@RectangleProps)",
+				"StartingArmors":[
+					"lostcity_vet_armor2"
+				]
+			}
+		},
+		{
+			"objclass":"ZombieType",
+			"aliases":[
+				"dino_gargantuar_veteran"
+			],
+			"objdata":{
+				"Properties":"RTID(dino_gargantuar_veteran@CurrentLevel)",
+				"ZombieBasedOn":"dino_gargantuar"
+			}
+		},
+		{
+			"objclass":"ZombieProperties",
+			"aliases":[
+				"dino_gargantuar_veteran"
+			],
+			"objdata":{
+				"CannotBeEnlightenedBySolarSage":true,
+				"ZombieSort":"Gargantuar",
+				"CannotBeGrabbedByPtero":true,
+				"CannotChangeLaneByPowerToss":true,
+				"CannotBeFlickedByPowerToss":true,
+				"CannotBeDraggedByTangleKelp":true,
+				"CannotBeTossedByCitron":true,
+				"CannotBeSwallowedByChomper":true,
+				"CannotCarryPlantfoodsInWaves":true,
+				"SmashDamage":1500,
+				"WalkSPS":0.25,
+				"EatDPS":100,
+				"Toughness":5400,
+				"LivesInDeepWater":true,
+				"NormalDeathWhenMowed":true,
+				"WavePointCost":1800,
+				"Weight":3000,
+				"ImpType":"dino_imp_veteran",
+				"HitRect":"RTID(GargantuarHitRect@RectangleProps)",
+				"AttackRect":"RTID(GargantuarAttackRect@RectangleProps)",
+				"StartingArmors":[
+					"dino_armor3"
+				]
+			}
+		},
+    {
+			"objclass":"ZombieType",
+			"aliases":[
+				"dino_imp_veteran"
+			],
+			"objdata":{
+				"Properties":"RTID(dino_imp_veteran@CurrentLevel)",
+				"ZombieBasedOn":"dino_imp"
+			}
+		},
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "dino_imp_veteran"
+      ],
+      "objdata": {
+        "KilledByShrinkingViolet": true,
+        "CannotBeGrabbedByPtero": true,
+        "ZombieSort": "Normal",
+        "IgnoredInWaves": true,
+        "WalkSPS": 0.5,
+        "EatDPS": 700,
+        "Toughness": 514,
+        "WavePointCost": 150,
+        "Weight": 1000,
+        "HitRect": "RTID(ImpHitRect@RectangleProps)",
+        "AttackRect": "RTID(ImpAttackRect@RectangleProps)",
+        "StartingArmors": [
+          "dino_armor1"
+        ]
+      }
+    },
+		{
+			"objclass":"ZombieType",
+			"aliases":[
+				"eighties_gargantuar_veteran"
+			],
+			"objdata":{
+				"Properties":"RTID(eighties_gargantuar_veteran@CurrentLevel)",
+				"ZombieBasedOn":"eighties_gargantuar"
+			}
+		},
+		{
+			"objclass":"ZombieProperties",
+			"aliases":[
+				"eighties_gargantuar_veteran"
+			],
+			"objdata":{
+				"CannotBeEnlightenedBySolarSage":true,
+				"ZombieSort":"Gargantuar",
+				"CannotBeGrabbedByPtero":true,
+				"CannotChangeLaneByPowerToss":true,
+				"CannotBeFlickedByPowerToss":true,
+				"CannotBeDraggedByTangleKelp":true,
+				"CannotBeTossedByCitron":true,
+				"CannotBeSwallowedByChomper":true,
+				"WalkSPS":0.25,
+				"EatDPS":100,
+				"Toughness":4500,
+				"LivesInDeepWater":true,
+				"NormalDeathWhenMowed":true,
+				"CannotCarryPlantfoodsInWaves":true,
+				"SmashDamage":4001,
+				"JamStyle":"jam_ballad",
+				"WaveType":"eighties_speaker_wave",
+				"WavePointCost":1500,
+				"Weight":3000,
+				"ImpType":"eighties_boombox",
+				"HitRect":"RTID(GargantuarHitRect@RectangleProps)",
+				"AttackRect":"RTID(GargantuarAttackRect@RectangleProps)",
+				"StartingArmors":[
+					"eighties_armor4"
+				]
+			}
+		},
+		{
+			"objclass":"ZombieType",
+			"aliases":[
+				"monk_blade_veteran"
+			],
+			"objdata":{
+				"Properties":"RTID(monk_blade_veteran@CurrentLevel)",
+				"ZombieBasedOn":"monk_blade"
+			}
+		},
+		{
+			"objclass":"ZombieProperties",
+			"aliases":[
+				"monk_blade_veteran"
+			],
+			"objdata":{
+				"SpawnedScale":1.05,
+				"BladeDamage":4001,
+				"WalkSPS":1,
+				"EatDPS":500,
+				"Toughness":1400,
+				"WavePointCost":750,
+				"Weight":3500,
+				"HitRect":"RTID(CommonHitRect@RectangleProps)",
+				"AttackRect":"RTID(CommonAttackRect@RectangleProps)",
+				"AttackRectWithBlade":"RTID(BladeAttackRect@RectangleProps)",
+				"StartingArmors":[
+					"kongfu_armor3"
+				]
+			}
+		},
+		{
+			"objclass":"ZombieType",
+			"aliases":[
+				"zomboni_veteran"
+			],
+			"objdata":{
+				"Properties":"RTID(zomboni_veteran@CurrentLevel)",
+				"ZombieBasedOn":"zomboni"
+			}
+		},
+		{
+			"objclass":"ZombieProperties",
+			"aliases":[
+				"zomboni_veteran"
+			],
+			"objdata":{
+				"CannotBeGummedByGumnut":true,
+				"CannotBeEnlightenedBySolarSage":true,
+				"CannotBeGrabbedByPtero":true,
+				"ImmuneToSweetPotato":true,
+				"CannotBeDraggedByTangleKelp":true,
+				"CannotBeTossedByCitron":true,
+				"CannotBeSwallowedByChomper":true,
+				"WalkSPS":1,
+				"EatDPS":3000,
+				"Toughness":1800,
+				"LivesInDeepWater":true,
+				"NormalDeathWhenMowed":true,
+				"ChiliStunDurationMult":0,
+				"ImmuneToGarlic":true,
+				"WavePointCost":400,
+				"Weight":4000,
+				"HitRect":"RTID(ZomboniHitRect@RectangleProps)",
+				"AttackRect":"RTID(ZomboniAttackRect@RectangleProps)"
+			}
+		},
+		{
+			"objclass":"ZombieType",
+			"aliases":[
+				"treasureyeti_veteran"
+			],
+			"objdata":{
+				"Properties":"RTID(treasureyeti_veteran@CurrentLevel)",
+				"ZombieBasedOn":"treasureyeti"
+			}
+		},
+		{
+			"objclass":"ZombieProperties",
+			"aliases":[
+				"treasureyeti_veteran"
+			],
+			"objdata":{
+				"CannotCarryPlantfoodsInWaves":true,
+				"RetreatSpeedScale":2,
+				"ImmuneToGarlic":true,
+				"LivesInDeepWater":true,
+				"ImmuneToSweetPotato":true,
+				"CannotBeCarriedByFanStorm":true,
+				"CannotBeGrabbedByPtero":true,
+				"CannotBeEnlightenedBySolarSage":true,
+				"CannotBeSwallowedByChomper":true,
+				"WalkSPS":0.5,
+				"Toughness":6500,
+				"EatDPS":300,
+				"WavePointCost":500,
+				"Weight":1000,
+				"HitRect":"RTID(YetiHitRect@RectangleProps)",
+				"AttackRect":"RTID(CommonAttackRect@RectangleProps)",
+				"PrizeProps":[
+					{
+						"Weight":1,
+						"Prize":{
+							"Type":"sprout",
+							"Count":5
+						}
+					},
+					{
+						"Weight":3,
+						"Prize":{
+							"Type":"gem",
+							"Count":10
+						}
+					}
+				],
+				"WalkForwardTime":{
+					"Min":25,
+					"Max":30
+				}
+			}
+		},
+		{
+			"aliases":[
+				"ConveyorBelt"
+			],
+			"objclass":"ConveyorSeedBankProperties",
+			"objdata":{
+				"DropDelayConditions":[
+					{
+						"Delay":2,
+						"MaxPackets":0
+					}
+				],
+				"InitialPlantList":[
+					
+				],
+				"SpeedConditions":[
+					{
+						"MaxPackets":0,
+						"Speed":100
+					}
+				]
+			}
+		},
+		{
+			"aliases":[
+				"ZombossBattle"
+			],
+			"objclass":"ZombossBattleModuleProperties",
+			"objdata":{
+				"ReservedColumnCount":1,
+				"ZombossDeathColumn":5,
+				"ZombossDeathRow":3,
+				"ZombossMechType":"zombossmech_modern2",
+				"ZombossSpawnGridPosition":{
+					"mX":7,
+					"mY":3
+				}
+			}
+		},
+		{
+			"objclass":"ZombieType",
+			"aliases":[
+				"zombossmech_modern2"
+			],
+			"objdata":{
+				"Properties":"RTID(zombossmech_modern2@CurrentLevel)",
+				"ZombieBasedOn":"zombossmech_modern1"
+			}
+		},
+		{
+			"objclass":"ZombieProperties",
+			"aliases":[
+				"zombossmech_modern2"
+			],
+			"objdata":{
+				"MissileType":"zomboss_missile_cowboy",
+				"CannotBeEnlightenedBySolarSage":true,
+				"ImmuneToSweetPotato":true,
+				"ImmuneToShrinkingViolet":true,
+				"ZombieSort":"Zomboss",
+				"IgnoredBySnapPea":true,
+				"CannotBeGrabbedByPtero":true,
+				"CannotBeDetectedByPowerToss":true,
+				"CannotBeDraggedByTangleKelp":true,
+				"CannotBeTossedByCitron":true,
+				"CannotBeDetectedBySapfling":true,
+				"CannotBeSwallowedByChomper":true,
+				"ChiliStunDurationMult":0,
+				"CannotCarryPlantfoodsInWaves":true,
+				"FoeEatDamageReflectPct":2.5,
+				"LivesInDeepWater":true,
+				"WalkSPS":0.185,
+				"EatDPS":100,
+				"Toughness":190,
+				"ImmuneToGarlic":true,
+				"WavePointCost":100,
+				"Weight":0,
+				"IdleColumn":7,
+				"HitRect":"RTID(ZombossMechHitRect@RectangleProps)",
+				"AttackRect":"RTID(ZombossMechAttackRect@RectangleProps)",
+				"ZombossMechLevel":0,
+				"ZombossStages":[
+					{
+						"AnimRateModifier":1,
+						"ChilledDurationFromFrozen":5,
+						"DamageIndexFull":0,
+						"DamageIndexHalf":0,
+						"HitPoints":25000,
+						"MaxIdleTime":0.5,
+						"MinIdleTime":0.5,
+						"StunDamageScale":1.25,
+						"StunStaggerBackMovement":1,
+						"StunStaggerBackTime":0.4,
+						"StunTime":2,
+						"Actions":[
+							{
+								"actionName":"summon",
+								"weight":14,
+								"repeatMax":2,
+								"repeatMin":2,
+								"summonProps":{
+									"pointMin":4000,
+									"pointMax":4800,
+									"plantfoodchance":0,
+									"zombieList":[
+										"tutorial_armor4",
+										"treasureyeti_veteran",
+										"tutorial_gargantuar",
+										"newspaper_veteran"
+									]
+								}
+							},
+							{
+								"actionName":"walk",
+								"weight":4,
+								"repeatMax":1,
+								"repeatMin":1,
+								"summonProps":{
+									"pointMin":1000,
+									"pointMax":2000,
+									"zombieList":[
+										
+									]
+								}
+							},
+							{
+								"actionName":"shoot",
+								"weight":7,
+								"repeatMax":1,
+								"repeatMin":1,
+								"summonProps":{
+									"pointMin":1000,
+									"pointMax":2000,
+									"zombieList":[
+										
+									]
+								}
+							}
+						]
+					},
+					{
+						"AnimRateModifier":1.1,
+						"ChilledDurationFromFrozen":5,
+						"DamageIndexFull":3,
+						"DamageIndexHalf":3,
+						"HitPoints":50000,
+						"MaxIdleTime":0.5,
+						"MinIdleTime":0.5,
+						"StunDamageScale":1.25,
+						"StunStaggerBackMovement":1,
+						"StunStaggerBackTime":0.4,
+						"StunTime":1.5,
+						"Actions":[
+							{
+								"actionName":"walk",
+								"weight":3,
+								"repeatMax":2,
+								"repeatMin":3,
+								"summonProps":{
+									"pointMin":1000,
+									"pointMax":2000,
+									"zombieList":[
+										
+									]
+								}
+							},
+							{
+								"actionName":"summon",
+								"weight":12,
+								"repeatMax":2,
+								"repeatMin":2,
+								"summonProps":{
+									"pointMin":5000,
+									"pointMax":5500,
+									"plantfoodchance":0.1,
+									"zombieList":[
+										"future_armor2",
+										"eighties_glitter",
+										"dino_imp_veteran",
+										"iceage_weaselhoarder",
+                    "cowboy_gargantuar"
+									]
+								}
+							},
+							{
+								"actionName":"summon",
+								"weight":18,
+								"repeatMax":2,
+								"repeatMin":2,
+								"summonProps":{
+									"pointMin":5000,
+									"pointMax":5500,
+									"zombieList":[
+										"newspaper_veteran",
+										"tutorial_armor4",
+										"modern_allstar",
+                    "modern_superfanimp",
+                    "tutorial_gargantuar"
+									]
+								}
+							},
+							{
+								"actionName":"shoot",
+								"weight":6,
+								"repeatMax":1,
+								"repeatMin":1,
+								"summonProps":{
+									"pointMin":1000,
+									"pointMax":2000,
+									"zombieList":[
+										
+									]
+								}
+							},
+							{
+								"actionName":"rush",
+								"weight":12,
+								"repeatMax":1,
+								"repeatMin":1,
+								"summonProps":{
+									"pointMin":1000,
+									"pointMax":2000,
+									"zombieList":[
+										
+									]
+								}
+							}
+						]
+					},
+					{
+						"AnimRateModifier":1.25,
+						"ChilledDurationFromFrozen":5,
+						"DamageIndexFull":6,
+						"DamageIndexHalf":6,
+						"HitPoints":75000,
+						"MaxIdleTime":0.3,
+						"MinIdleTime":0.1,
+						"StunDamageScale":1.25,
+						"StunStaggerBackMovement":1,
+						"StunStaggerBackTime":0.4,
+						"StunTime":1,
+						"Actions":[
+							{
+								"actionName":"walk",
+								"weight":3,
+								"repeatMax":2,
+								"repeatMin":3,
+								"summonProps":{
+									"pointMin":1000,
+									"pointMax":2000,
+									"zombieList":[
+										
+									]
+								}
+							},
+							{
+								"actionName":"summon",
+								"weight":16,
+								"repeatMax":2,
+								"repeatMin":2,
+								"summonProps":{
+									"pointMin":5500,
+									"pointMax":6000,
+									"plantfoodchance":0.1,
+									"zombieList":[
+										"kongfu_bronze_chi",
+										"piano",
+										"west_bull",
+										"chicken_farmer",
+										"camel_manyhump_touch",
+                    "abbot_torch",
+                    "lostcity_crystalskull"
+									]
+								}
+							},
+							{
+								"actionName":"summon",
+								"weight":12,
+								"repeatMax":2,
+								"repeatMin":2,
+								"summonProps":{
+									"pointMin":5500,
+									"pointMax":6000,
+									"plantfoodchance":0,
+									"zombieList":[
+										"modern_allstar",
+										"modern_superfanimp",
+										"tutorial_gargantuar",
+                    "catapult_veteran"
+									]
+								}
+							},
+							{
+								"actionName":"shoot",
+								"weight":6,
+								"repeatMax":1,
+								"repeatMin":1,
+								"summonProps":{
+									"pointMin":1000,
+									"pointMax":2000,
+									"zombieList":[
+										
+									]
+								}
+							},
+							{
+								"actionName":"rush",
+								"weight":12,
+								"repeatMax":1,
+								"repeatMin":1,
+								"summonProps":{
+									"pointMin":1000,
+									"pointMax":2000,
+									"zombieList":[
+										
+									]
+								}
+							}
+						]
+					},
+					{
+						"AnimRateModifier":1.25,
+						"ChilledDurationFromFrozen":5,
+						"DamageIndexFull":6,
+						"DamageIndexHalf":6,
+						"HitPoints":175000,
+						"MaxIdleTime":0.3,
+						"MinIdleTime":0.1,
+						"StunDamageScale":1.25,
+						"StunStaggerBackMovement":1,
+						"StunStaggerBackTime":0.4,
+						"StunTime":0.75,
+						"Actions":[
+							{
+								"actionName":"walk",
+								"weight":3,
+								"repeatMax":2,
+								"repeatMin":3,
+								"summonProps":{
+									"pointMin":1000,
+									"pointMax":2000,
+									"zombieList":[
+										
+									]
+								}
+							},
+							{
+								"actionName":"summon",
+								"weight":16,
+								"repeatMax":2,
+								"repeatMin":2,
+								"summonProps":{
+									"pointMin":3500,
+									"pointMax":5000,
+									"plantfoodchance":0.1,
+									"zombieList":[
+										"pirate_armor4",
+										"eighties_punk_veteran",
+										"lostcity_gargantuar",
+										"explorer_veteran",
+										"football_mech",
+                    "eighties_mc"
+									]
+								}
+							},
+							{
+								"actionName":"summon",
+								"weight":12,
+								"repeatMax":2,
+								"repeatMin":2,
+								"summonProps":{
+									"pointMin":5500,
+									"pointMax":6000,
+									"plantfoodchance":0,
+									"zombieList":[
+										"modern_allstar",
+										"modern_superfanimp",
+										"tutorial_gargantuar",
+                    "treasureyeti_veteran",
+                    "catapult_veteran"
+									]
+								}
+							},
+							{
+								"actionName":"shoot",
+								"weight":6,
+								"repeatMax":1,
+								"repeatMin":1,
+								"summonProps":{
+									"pointMin":1000,
+									"pointMax":2000,
+									"zombieList":[
+										
+									]
+								}
+							},
+							{
+								"actionName":"rush",
+								"weight":12,
+								"repeatMax":1,
+								"repeatMin":1,
+								"summonProps":{
+									"pointMin":1000,
+									"pointMax":2000,
+									"zombieList":[
+										
+									]
+								}
+							}
+						]
+					},
+					{
+						"AnimRateModifier":1.25,
+						"ChilledDurationFromFrozen":5,
+						"DamageIndexFull":6,
+						"DamageIndexHalf":6,
+						"HitPoints":500000,
+						"MaxIdleTime":0.3,
+						"MinIdleTime":0.1,
+						"StunDamageScale":1.25,
+						"StunStaggerBackMovement":1,
+						"StunStaggerBackTime":0.4,
+						"StunTime":0.5,
+						"Actions":[
+							{
+								"actionName":"walk",
+								"weight":3,
+								"repeatMax":2,
+								"repeatMin":3,
+								"summonProps":{
+									"pointMin":1000,
+									"pointMax":2000,
+									"zombieList":[
+										
+									]
+								}
+							},
+							{
+								"actionName":"summon",
+								"weight":16,
+								"repeatMax":2,
+								"repeatMin":2,
+								"summonProps":{
+									"pointMin":6000,
+									"pointMax":6500,
+									"plantfoodchance":0.1,
+									"zombieList":[
+										"cannon",
+										"west_bull_veteran_plantern_5",
+										"sky_battleplane",
+										"sky_twin",
+										"abbot_torch",
+                    "dark_king_veteran",
+                    "beach_surfer_veteran",
+                    "lostcity_veteran",
+                    "sky_arbiterx",
+                    "eighties_gargantuar_veteran",
+                    "dino_gargantuar_veteran",
+                    "monk_blade_veteran",
+                    "kongfu_gong",
+                    "iceage_flag_veteran_veteran"
+									]
+								}
+							},
+							{
+								"actionName":"summon",
+								"weight":12,
+								"repeatMax":2,
+								"repeatMin":2,
+								"summonProps":{
+									"pointMin":5500,
+									"pointMax":6000,
+									"plantfoodchance":0,
+									"zombieList":[
+										"modern_allstar",
+										"modern_superfanimp",
+										"tutorial_gargantuar",
+                    "zomboni_veteran",
+                    "treasureyeti_veteran"
+									]
+								}
+							},
+							{
+								"actionName":"shoot",
+								"weight":6,
+								"repeatMax":1,
+								"repeatMin":1,
+								"summonProps":{
+									"pointMin":1000,
+									"pointMax":2000,
+									"zombieList":[
+										
+									]
+								}
+							},
+							{
+								"actionName":"rush",
+								"weight":12,
+								"repeatMax":1,
+								"repeatMin":1,
+								"summonProps":{
+									"pointMin":1000,
+									"pointMax":2000,
+									"zombieList":[
+										
+									]
+								}
+							}
+						]
+					}
+				]
+			}
+		},
+		{
+			"aliases":[
+				"NewWaves"
+			],
+			"objclass":"WaveManagerModuleProperties",
+			"objdata":{
+				"WaveManagerProps":"RTID(WaveManagerProps@CurrentLevel)"
+			}
+		},
+		{
+			"aliases":[
+				"WaveManagerProps"
+			],
+			"objclass":"WaveManagerProperties",
+			"objdata":{
+				"LevelJamList":[
+					"jam_rap",
+					"jam_8bit",
+					"jam_metal",
+					"jam_punk",
+					"jam_pop",
+					"jam_ballad"
+				],
+				"Waves":[
+					
+				]
+			}
+		}
+	],
+	"version":1
+}

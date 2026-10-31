@@ -1,0 +1,840 @@
+{
+    "objects":[
+        {
+            "objclass": "LevelDefinition",
+            "objdata": {"NameMultiLanguage": {
+            "en": "Qigong Contest",
+            "zh": "气功大会"
+        },
+            "DescriptionMultiLanguage": {
+            "en": "Qigong Contest",
+            "zh": "气功大会"
+        },
+                "ForceToWorldMap": true,
+                "GameOverDialogShowBrain": false,
+                "FirstRewardParam": "moneybag",
+                "FirstRewardType": "collectable",
+                "LevelNumber": 30,
+                "Loot": "RTID(DefaultLoot@LevelModules)",
+                "Modules": [
+                    "RTID(StandardIntro@LevelModules)",
+                    "RTID(DefaultSunDropper@LevelModules)",
+                    "RTID(ZombiesDeadWinCon@LevelModules)",
+                    "RTID(KongfuRack@CurrentLevel)",
+                    "RTID(SeedBank@CurrentLevel)",
+                    "RTID(DefaultZombieWinCondition@LevelModules)",
+                    "RTID(NewWaves@CurrentLevel)"
+                ],
+                "WrittenBy": "砹化钫FrAt",
+                "StageModule": "RTID(AbbotStage@LevelModules)"
+            }
+        },
+        {
+            "aliases": [
+                "SeedBank"
+            ],
+            "objclass": "SeedBankProperties",
+            "objdata": {
+                "SelectionMethod": "chooser"
+            }
+        },
+        {
+            "aliases": [
+                "KongfuRack"
+            ],
+            "objclass": "GravestoneProperties",
+            "objdata": {
+                "ForceSpawnData": [
+                    {
+                        "GridX": 4,
+                        "GridY": 0,
+                        "TypeName": "kongfu_rack_3section_staff"
+                    },
+                    {
+                        "GridX": 3,
+                        "GridY": 1,
+                        "TypeName": "kongfu_rack_3section_staff"
+                    },
+                    {
+                        "GridX": 4,
+                        "GridY": 2,
+                        "TypeName": "kongfu_rack_3section_staff"
+                    },
+                    {
+                        "GridX": 3,
+                        "GridY": 3,
+                        "TypeName": "kongfu_rack_3section_staff"
+                    },
+                    {
+                        "GridX": 4,
+                        "GridY": 4,
+                        "TypeName": "kongfu_rack_3section_staff"
+                    },
+                    {
+                        "GridX": 6,
+                        "GridY": 0,
+                        "TypeName": "kongfu_rack_3section_staff"
+                    },
+                    {
+                        "GridX": 6,
+                        "GridY": 2,
+                        "TypeName": "kongfu_rack_3section_staff"
+                    },
+                    {
+                        "GridX": 6,
+                        "GridY": 4,
+                        "TypeName": "kongfu_rack_3section_staff"
+                    }
+                ]
+            }
+        },
+    {
+      "aliases": [
+        "kongfu_bronze_chi1"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(kongfu_bronze_chi1@CurrentLevel)",
+        "ZombieBasedOn": "kongfu_bronze_chi"
+      }
+    },
+    {
+        "objclass": "ZombieProperties",
+        "aliases": [
+            "kongfu_bronze_chi1"
+        ],
+        "objdata": {
+            "CannotBeEnlightenedBySolarSage": true,
+            "ZombieSort": "Gargantuar",
+            "CannotBeGrabbedByPtero": true,
+            "CannotChangeLaneByPowerToss": true,
+            "CannotBeFlickedByPowerToss": true,
+            "CannotBeDraggedByTangleKelp": true,
+            "CannotBeTossedByCitron": true,
+            "CannotBeSwallowedByChomper": true,
+            "CannotCarryPlantfoodsInWaves": true,
+            "SmashDamage": 1500,
+            "LivesInDeepWater": true,
+            "WalkSPS": 0.125,
+            "EatDPS": 100,
+            "Toughness": 7000,
+            "NormalDeathWhenMowed": true,
+            "WavePointCost": 3200,
+            "Weight": 3000,
+            "HitRect": "RTID(GargantuarHitRect@RectangleProps)",
+            "AttackRect": "RTID(GargantuarAttackRect@RectangleProps)",
+            "SummonCount": 3,
+            "SummonTime": 2,
+            "TimeBetweenSkills": {
+                "Min": 7,
+                "Max": 12
+            },
+            "TimeBeforeSkills": {
+                "Min": 3,
+                "Max": 8
+            },
+            "ZombiesToSummon": [
+                "kongfu_chi",
+                "abbot_chi"
+            ],
+            "SummonColumn": {
+                "Min": 6,
+                "Max": 7
+            }
+        }
+    },
+    {
+      "aliases": [
+        "kongfu_boss_chi1"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(kongfu_boss_chi1@CurrentLevel)",
+        "ZombieBasedOn": "kongfu_boss_chi"
+      }
+    },
+		{
+			"aliases": [
+				"kongfu_boss_chi1"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"CannotBeEnlightenedBySolarSage": true,
+				"ImmuneToSweetPotato": true,
+				"ImmuneToShrinkingViolet": true,
+				"ZombieSort": "Zomboss",
+				"IgnoredBySnapPea": true,
+				"CannotBeGrabbedByPtero": true,
+				"CannotBeDetectedByPowerToss": true,
+				"CannotBeDraggedByTangleKelp": true,
+				"CannotBeTossedByCitron": true,
+				"CannotBeDetectedBySapfling": true,
+				"CannotBeSwallowedByChomper": true,
+				"ChiliStunDurationMult": 0,
+				"CannotCarryPlantfoodsInWaves": true,
+				"FoeEatDamageReflectPct": 0.5,
+				"LivesInDeepWater": true,
+				"WalkSPS": 0.185,
+				"EatDPS": 100,
+				"Toughness": 190,
+				"ImmuneToGarlic": true,
+				"WavePointCost": 100,
+				"Weight": 0,
+				"HitRect": "RTID(GargantuarHitRect@RectangleProps)",
+				"AttackRect": "RTID(GargantuarHitRect@RectangleProps)",
+				"ZombossMechLevel": 0,
+				"SummonColumn": 6,
+				"SmashProjectileType": "kongfu_boss_chi_chi",
+				"MissileType": "kongfu_boss_chi_rack",
+				"RoarStunDuration": 1000,
+				"ZombossStages": [
+					{
+						"Actions": [
+							{
+								"actionName": "jump",
+								"summonProps": {
+									"zombieList": [],
+									"pointMin": 1000,
+									"pointMax": 2000
+								},
+								"weight": 8,
+								"repeatMax": 1,
+								"repeatMin": 1
+							},
+							{
+								"actionName": "summon",
+								"summonProps": {
+									"zombieList": [
+										"kongfu_chi",
+										"abbot_chi"
+									],
+									"pointMin": 1000,
+									"pointMax": 3000
+								},
+								"weight": 20,
+								"repeatMax": 2,
+								"repeatMin": 1
+							},
+							{
+								"actionName": "rush",
+								"summonProps": {
+									"zombieList": [],
+									"pointMin": 1000,
+									"pointMax": 2000
+								},
+								"weight": 6,
+								"repeatMax": 1,
+								"repeatMin": 1
+							},
+							{
+								"actionName": "shoot",
+								"summonProps": {
+									"zombieList": [],
+									"pointMin": 1000,
+									"pointMax": 2000
+								},
+								"weight": 10,
+								"repeatMax": 1,
+								"repeatMin": 1
+							}
+						],
+						"AnimRateModifier": 1,
+						"ChilledDurationFromFrozen": 10,
+						"DamageIndexFull": 0,
+						"DamageIndexHalf": 0,
+						"HitPoints": 9000,
+						"MaxIdleTime": 2.5,
+						"MinIdleTime": 1.5,
+						"StunDamageScale": 1.25,
+						"StunStaggerBackMovement": 1,
+						"StunStaggerBackTime": 0.4,
+						"StunTime": 3,
+						"ShieldLifeSpan": 10,
+						"RushDuration": 5,
+						"RushDPS": 400,
+						"RushSPS": 2,
+						"AbsorbDuration": 5,
+						"RoarStunDuration": 7.5
+					},
+					{
+						"Actions": [
+							{
+								"actionName": "jump",
+								"summonProps": {
+									"zombieList": [],
+									"pointMin": 1000,
+									"pointMax": 2000
+								},
+								"weight": 10,
+								"repeatMax": 1,
+								"repeatMin": 1
+							},
+							{
+								"actionName": "summon",
+								"summonProps": {
+									"zombieList": [
+										"kongfu_chi",
+										"abbot_chi",
+										"kongfu_bronze_chi1"
+									],
+									"pointMin": 7500,
+									"pointMax": 10500
+								},
+								"weight": 20,
+								"repeatMax": 2,
+								"repeatMin": 2
+							},
+							{
+								"actionName": "shoot",
+								"summonProps": {
+									"zombieList": [],
+									"pointMin": 1000,
+									"pointMax": 2000
+								},
+								"weight": 6,
+								"repeatMax": 2,
+								"repeatMin": 1
+							},
+							{
+								"actionName": "rush",
+								"summonProps": {
+									"zombieList": [],
+									"pointMin": 1000,
+									"pointMax": 2000
+								},
+								"weight": 5,
+								"repeatMax": 1,
+								"repeatMin": 1
+							},
+							{
+								"actionName": "rush2",
+								"summonProps": {
+									"zombieList": [],
+									"pointMin": 1000,
+									"pointMax": 2000
+								},
+								"weight": 5,
+								"repeatMax": 1,
+								"repeatMin": 1
+							},
+							{
+								"actionName": "roar",
+								"summonProps": {
+									"zombieList": [],
+									"pointMin": 1000,
+									"pointMax": 2000
+								},
+								"weight": 6,
+								"repeatMax": 1,
+								"repeatMin": 1
+							}
+						],
+						"AnimRateModifier": 1.1,
+						"ChilledDurationFromFrozen": 10,
+						"DamageIndexFull": 3,
+						"DamageIndexHalf": 3,
+						"HitPoints": 12000,
+						"MaxIdleTime": 2,
+						"MinIdleTime": 1,
+						"StunDamageScale": 1.25,
+						"StunStaggerBackMovement": 1,
+						"StunStaggerBackTime": 0.4,
+						"StunTime": 2.5,
+						"ShieldLifeSpan": 20,
+						"RushDuration": 5,
+						"RushDPS": 400,
+						"RushSPS": 2,
+						"AbsorbDuration": 5,
+						"RoarStunDuration": 7.5
+					},
+					{
+						"Actions": [
+							{
+								"actionName": "jump",
+								"summonProps": {
+									"zombieList": [],
+									"pointMin": 1000,
+									"pointMax": 2000
+								},
+								"weight": 10,
+								"repeatMax": 1,
+								"repeatMin": 1
+							},
+							{
+								"actionName": "summon",
+								"summonProps": {
+									"zombieList": [
+										"kongfu_chi",
+										"abbot_chi",
+										"kongfu_bronze_chi1"
+									],
+									"pointMin": 18000,
+									"pointMax": 20000
+								},
+								"weight": 30,
+								"repeatMax": 2,
+								"repeatMin": 2
+							},
+							{
+								"actionName": "rush",
+								"summonProps": {
+									"zombieList": [],
+									"pointMin": 1000,
+									"pointMax": 2000
+								},
+								"weight": 8,
+								"repeatMax": 1,
+								"repeatMin": 1
+							},
+							{
+								"actionName": "rush2",
+								"summonProps": {
+									"zombieList": [],
+									"pointMin": 1000,
+									"pointMax": 2000
+								},
+								"weight": 8,
+								"repeatMax": 1,
+								"repeatMin": 1
+							},
+							{
+								"actionName": "shoot",
+								"summonProps": {
+									"zombieList": [],
+									"pointMin": 1000,
+									"pointMax": 2000
+								},
+								"weight": 12,
+								"repeatMax": 1,
+								"repeatMin": 1
+							},
+							{
+								"actionName": "roar",
+								"summonProps": {
+									"zombieList": [],
+									"pointMin": 1000,
+									"pointMax": 2000
+								},
+								"weight": 6,
+								"repeatMax": 1,
+								"repeatMin": 1
+							}
+						],
+						"AnimRateModifier": 1.25,
+						"ChilledDurationFromFrozen": 10,
+						"DamageIndexFull": 6,
+						"DamageIndexHalf": 6,
+						"HitPoints": 15000,
+						"MaxIdleTime": 1.5,
+						"MinIdleTime": 1,
+						"StunDamageScale": 1.25,
+						"StunStaggerBackMovement": 1,
+						"StunStaggerBackTime": 0.4,
+						"StunTime": 2,
+						"AbbotChiType": "abbot_chi",
+						"ShieldLifeSpan": 30,
+						"RushDuration": 7.5,
+						"RushDPS": 400,
+						"RushSPS": 2,
+						"AbsorbDuration": 5,
+						"RoarStunDuration": 7.5
+					}
+				]
+			}
+		},
+        {
+            "aliases": [
+                "NewWaves"
+            ],
+            "objclass": "WaveManagerModuleProperties",
+            "objdata": {
+                "DynamicZombies": [
+                    {
+                        "PointIncrementPerWave": -40,
+                        "StartingPoints": -100,
+                        "StartingWave": 3,
+                        "ZombiePool": [
+                            "RTID(kongfu_chi@ZombieTypes)",
+                            "RTID(abbot_chi@ZombieTypes)",
+                            "RTID(kongfu_bronze_chi1@CurrentLevel)"
+                        ]
+                    },
+                    {
+                        "PointIncrementPerWave": -25,
+                        "StartingPoints": -100,
+                        "StartingWave": 4,
+                        "ZombiePool": [
+                            "RTID(kongfu_chi@ZombieTypes)",
+                            "RTID(abbot_chi@ZombieTypes)",
+                            "RTID(kongfu_bronze_chi1@CurrentLevel)"
+                        ]
+                    },
+                    {
+                        "PointIncrementPerWave": -10,
+                        "StartingPoints": -100,
+                        "StartingWave": 5,
+                        "ZombiePool": [
+                            "RTID(kongfu_chi@ZombieTypes)",
+                            "RTID(abbot_chi@ZombieTypes)",
+                            "RTID(kongfu_bronze_chi1@CurrentLevel)"
+                        ]
+                    },
+                    {},
+                    {
+                        "PointIncrementPerWave": 20,
+                        "StartingPoints": 100,
+                        "StartingWave": 5,
+                        "ZombiePool": [
+                            "RTID(kongfu_chi@ZombieTypes)",
+                            "RTID(abbot_chi@ZombieTypes)",
+                            "RTID(kongfu_bronze_chi1@CurrentLevel)"
+                        ]
+                    },
+                    {
+                        "PointIncrementPerWave": 40,
+                        "StartingPoints": 200,
+                        "StartingWave": 4,
+                        "ZombiePool": [
+                            "RTID(kongfu_chi@ZombieTypes)",
+                            "RTID(abbot_chi@ZombieTypes)",
+                            "RTID(kongfu_bronze_chi1@CurrentLevel)"
+                        ]
+                    },
+                    {
+                        "PointIncrementPerWave": 60,
+                        "StartingPoints": 400,
+                        "StartingWave": 3,
+                        "ZombiePool": [
+                            "RTID(kongfu_chi@ZombieTypes)",
+                            "RTID(abbot_chi@ZombieTypes)",
+                            "RTID(kongfu_bronze_chi1@CurrentLevel)"
+                        ]
+                    }
+                ],
+                "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+            }
+        },
+        {
+            "aliases": [
+                "WaveManagerProps"
+            ],
+            "objclass": "WaveManagerProperties",
+            "objdata": {
+                "FlagWaveInterval": 10,
+                "WaveCount": 10,
+                "Waves": [
+                    [
+                        "RTID(Wave1@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave2@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave3@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave4@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave5@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave6@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave7@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave8@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave9@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave10PortalsEvent0@CurrentLevel)"
+                    ]
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave1"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "AdditionalPlantfood": 0,
+                "Zombies": [
+                    {
+                        "Row": "4",
+                        "Type": "RTID(kongfu_chi@ZombieTypes)"
+                    },
+                    {
+                        "Row": "2",
+                        "Type": "RTID(kongfu_chi@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave2"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "AdditionalPlantfood": 0,
+                "Zombies": [
+                    {
+                        "Row": "1",
+                        "Type": "RTID(abbot_chi@ZombieTypes)"
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(abbot_chi@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave3"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "AdditionalPlantfood": 1,
+                "Zombies": [
+                    {
+                        "Row": "2",
+                        "Type": "RTID(kongfu_chi@ZombieTypes)"
+                    },
+                    {
+                        "Row": "3",
+                        "Type": "RTID(kongfu_chi@ZombieTypes)"
+                    },
+                    {
+                        "Row": "4",
+                        "Type": "RTID(kongfu_chi@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave4"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "AdditionalPlantfood": 1,
+                "Zombies": [
+                    {
+                        "Row": "1",
+                        "Type": "RTID(kongfu_chi@ZombieTypes)"
+                    },
+                    {
+                        "Row": "2",
+                        "Type": "RTID(abbot_chi@ZombieTypes)"
+                    },
+                    {
+                        "Row": "4",
+                        "Type": "RTID(abbot_chi@ZombieTypes)"
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(kongfu_chi@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave5"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "AdditionalPlantfood": 0,
+                "Zombies": [
+                    {
+                        "Row": "3",
+                        "Type": "RTID(kongfu_bronze_chi1@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave6"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "AdditionalPlantfood": 0,
+                "Zombies": [
+                    {
+                        "Row": "1",
+                        "Type": "RTID(kongfu_chi@ZombieTypes)"
+                    },
+                    {
+                        "Row": "2",
+                        "Type": "RTID(kongfu_chi@ZombieTypes)"
+                    },
+                    {
+                        "Row": "3",
+                        "Type": "RTID(kongfu_chi@ZombieTypes)"
+                    },
+                    {
+                        "Row": "4",
+                        "Type": "RTID(kongfu_chi@ZombieTypes)"
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(kongfu_chi@ZombieTypes)"
+                    },
+                    {
+                        "Row": "2",
+                        "Type": "RTID(abbot_chi@ZombieTypes)"
+                    },
+                    {
+                        "Row": "4",
+                        "Type": "RTID(abbot_chi@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave7"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "AdditionalPlantfood": 1,
+                "Zombies": [
+                    {
+                        "Row": "1",
+                        "Type": "RTID(kongfu_chi@ZombieTypes)"
+                    },
+                    {
+                        "Row": "2",
+                        "Type": "RTID(kongfu_chi@ZombieTypes)"
+                    },
+                    {
+                        "Row": "3",
+                        "Type": "RTID(kongfu_chi@ZombieTypes)"
+                    },
+                    {
+                        "Row": "4",
+                        "Type": "RTID(kongfu_chi@ZombieTypes)"
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(kongfu_chi@ZombieTypes)"
+                    },
+                    {
+                        "Row": "1",
+                        "Type": "RTID(abbot_chi@ZombieTypes)"
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(abbot_chi@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave8"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "AdditionalPlantfood": 1,
+                "Zombies": [
+                    {
+                        "Row": "2",
+                        "Type": "RTID(kongfu_bronze_chi1@CurrentLevel)"
+                    },
+                    {
+                        "Row": "4",
+                        "Type": "RTID(kongfu_bronze_chi1@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave9"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "AdditionalPlantfood": 1,
+                "Zombies": [
+                    {
+                        "Row": "1",
+                        "Type": "RTID(kongfu_bronze_chi1@CurrentLevel)"
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(kongfu_bronze_chi1@CurrentLevel)"
+                    },
+                    {
+                        "Row": "3",
+                        "Type": "RTID(abbot_chi@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave10"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "AdditionalPlantfood": 0,
+                "Zombies": [
+                    {
+                        "Row": "3",
+                        "Type": "RTID(kongfu_boss_chi1@CurrentLevel)"
+                    }
+                ]
+            }
+        },{
+            "aliases": [
+                "Wave10PortalsEvent0"
+            ],
+            "objclass": "SpawnModernPortalsWaveActionProps",
+            "objdata": {
+                "PortalColumn": 8,
+                "PortalRow":2,
+                "PortalType": "RTID(kongfu_boss_chi_portal@CurrentLevel)"
+            }
+        },
+        {
+            "objclass": "PortalType",
+            "aliases": [
+                "kongfu_boss_chi_portal"
+            ],
+            "objdata": {
+                "Properties": "RTID(kongfu_boss_chi_portal@CurrentLevel)"
+            }
+        },
+        {
+            "objclass": "PortalProps",
+            "aliases": [
+                "kongfu_boss_chi_portal"
+            ],
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Min": 0,
+                    "Max": 0
+                },
+                "TimeBetween": {
+                    "Min": 6.18,
+                    "Max": 6.18
+                },
+                "World": "kongfu",
+                "ZombieTypesToSpawn": [
+                    {
+                        "Weight": 1,
+                        "ZombieTypeName": "kongfu_boss_chi1"
+                    }
+                ]
+            }
+    }
+    ]
+}

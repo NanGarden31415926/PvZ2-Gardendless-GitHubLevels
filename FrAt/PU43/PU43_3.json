@@ -1,0 +1,928 @@
+{
+    "objects":[
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+            "NameMultiLanguage": {
+            "en": "Parallel Universe No.43 - Day <LEVELNUMBER>",
+            "zh": "43号平行宇宙 - 第 <LEVELNUMBER> 天"
+        },
+            "DescriptionMultiLanguage": {
+            "en": "<PLAYERNAME>'s trip to the Parallel Universe!",
+            "zh": "<PLAYERNAME>的平行宇宙之旅！"
+        },
+        "FirstRewardParam": "moneybag",
+        "FirstRewardType": "collectable",
+        "LevelNumber": 3,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(StandardIntro@LevelModules)",
+          "RTID(DefaultSunDropper@LevelModules)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)"
+        ],
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+                "WrittenBy": "砹化钫FrAt",
+        "StageModule": "RTID(ModernStage@LevelModules)"
+      }
+    },
+    {
+        "aliases": [
+            "snowpea1"
+        ],
+        "objclass": "PlantType",
+        "objdata": {
+            "PlantBasedOn": "snowpea",
+            "Properties": "RTID(snowpea1@CurrentLevel)",
+            "ShiftedPlantFeatures": {
+                "OBTAINWORLD": "modern"
+            }
+        }
+    },
+    {
+        "aliases": [
+            "cherry_bomb"
+        ],
+        "objclass": "PlantType",
+        "objdata": {
+            "PlantBasedOn": "cherry_bomb",
+            "Properties": "RTID(cherry_bomb@PlantProps)",
+            "ShiftedPlantFeatures": {
+                "OBTAINWORLD": "epic"
+            }
+        }
+    },
+    {
+        "aliases": [
+            "repeater1"
+        ],
+        "objclass": "PlantType",
+        "objdata": {
+            "PlantBasedOn": "repeater",
+            "Properties": "RTID(repeater1@CurrentLevel)",
+            "ShiftedPlantFeatures": {
+                "OBTAINWORLD": "modern"
+            }
+        }
+    },
+    {
+        "aliases": [
+            "chomper"
+        ],
+        "objclass": "PlantType",
+        "objdata": {
+            "PlantBasedOn": "chomper",
+            "Properties": "RTID(chomper@PlantProps)",
+            "ShiftedPlantFeatures": {
+                "OBTAINWORLD": "epic"
+            }
+        }
+    },
+    {
+        "objclass": "PlantProperties",
+        "aliases": [
+            "snowpea1"
+        ],
+        "objdata": {
+            "PeaType": "winter_melon1",
+            "PeaTypePlantfood": "winter_melon1",
+            "PeaFreezeType": "pea_snow",
+            "ShootInterval": 4.85,
+            "ShootIntervalAdditional": 0.15,
+            "PlantfoodPeaCount": 60,
+            "ChanceToFreeze": 0,
+            "Cooldown": 15,
+            "CooldownFrom": 0.5,
+            "SunCost": 225,
+            "BeghouledCost": 2500,
+            "Toughness": 300,
+            "Family": "Cold",
+            "ImmuneToIceblock": true
+        }
+    },
+    {
+        "aliases": [
+            "winter_melon1"
+        ],
+        "objclass": "ProjectileType",
+        "objdata": {
+            "Props": "RTID(winter_melon1@CurrentLevel)",
+            "ProjectileBasedOn": "winter_melon"
+        }
+    },
+    {
+        "aliases": [
+            "winter_melon1"
+        ],
+        "objclass": "ProjectileProperties",
+        "objdata": {
+            "Damage": 10,
+            "SplashDamage": [
+                {
+                    "Damage": 10,
+                    "Range": {
+                        "w": 7,
+                        "h": 7
+                    },
+                    "ChillDuration": 2
+                }
+            ],
+            "Size": {
+                "w": 15,
+                "h": 15
+            },
+            "ChillDuration": 10,
+            "IceBlockLevel": 1
+        }
+    },
+    {
+        "objclass": "PlantProperties",
+        "aliases": [
+            "repeater1"
+        ],
+        "objdata": {
+            "ShootInterval": 0.55,
+            "ShootIntervalAdditional": 0.15,
+            "PeaType": "pea",
+            "PeaTypePlantfood": "pea",
+            "PeaTypeMega": "pea_mega",
+            "PlantfoodPeaCount": 270,
+            "Cooldown": 15,
+            "CooldownFrom": 1,
+            "SunCost": 500,
+            "BeghouledCost": 2000,
+            "Toughness": 300,
+            "Family": "Peashooter"
+        }
+    },
+    {
+      "aliases": [
+        "tutorial_gargantuar1"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(tutorial_gargantuar1@CurrentLevel)",
+        "ZombieBasedOn": "tutorial_gargantuar"
+      }
+    },
+    {
+        "objclass": "ZombieProperties",
+        "aliases": [
+            "tutorial_gargantuar1"
+        ],
+        "objdata": {
+            "ZombieSort": "Normal",
+            "CannotBeGrabbedByPtero": true,
+            "CannotChangeLaneByPowerToss": true,
+            "CannotBeFlickedByPowerToss": true,
+            "CannotBeDraggedByTangleKelp": true,
+            "SmashDamage": 1500,
+            "WalkSPS": 0.12,
+            "EatDPS": 100,
+            "Toughness": 190,
+            "LivesInDeepWater": true,
+            "NormalDeathWhenMowed": true,
+            "WavePointCost": 250,
+            "Weight": 3000,
+            "HitRect": "RTID(GargantuarHitRect@RectangleProps)",
+            "AttackRect": "RTID(GargantuarAttackRect@RectangleProps)"
+        }
+    },
+    {
+      "aliases": [
+        "tutorial_gargantuar1_armor1"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(tutorial_gargantuar1_armor1@CurrentLevel)",
+        "ZombieBasedOn": "tutorial_gargantuar"
+      }
+    },
+    {
+        "objclass": "ZombieProperties",
+        "aliases": [
+            "tutorial_gargantuar1_armor1"
+        ],
+        "objdata": {
+            "ZombieSort": "Normal",
+            "CannotBeGrabbedByPtero": true,
+            "CannotChangeLaneByPowerToss": true,
+            "CannotBeFlickedByPowerToss": true,
+            "CannotBeDraggedByTangleKelp": true,
+            "SmashDamage": 1500,
+            "WalkSPS": 0.12,
+            "EatDPS": 100,
+            "Toughness": 190,
+            "LivesInDeepWater": true,
+            "NormalDeathWhenMowed": true,
+            "WavePointCost": 500,
+            "Weight": 3000,
+            "HitRect": "RTID(GargantuarHitRect@RectangleProps)",
+            "AttackRect": "RTID(GargantuarAttackRect@RectangleProps)",
+            "StartingArmors":[
+              "modern_armor1"
+            ]
+        }
+    },
+    {
+      "aliases": [
+        "tutorial1"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(tutorial1@CurrentLevel)",
+        "ZombieBasedOn": "tutorial"
+      }
+    },
+      {
+          "objclass": "ZombieProperties",
+          "aliases": [
+              "tutorial1"
+          ],
+          "objdata": {
+              "ZombieSort": "Gargantuar",
+              "CannotBeEnlightenedBySolarSage": true,
+              "CannotBeGrabbedByPtero": true,
+              "CannotChangeLaneByPowerToss": true,
+              "CannotBeFlickedByPowerToss": true,
+              "CannotBeDraggedByTangleKelp": true,
+              "CannotBeTossedByCitron": true,
+              "CannotBeSwallowedByChomper": true,
+              "CannotCarryPlantfoodsInWaves": true,
+              "WalkSPS": 0.37,
+              "Toughness": 1800,
+              "EatDPS": 1000,
+              "WavePointCost": 1500,
+              "Weight": 1000,
+              "HitRect": "RTID(CommonHitRect@RectangleProps)",
+              "AttackRect": "RTID(CommonAttackRect@RectangleProps)"
+          }
+      },
+    {
+      "aliases": [
+        "chicken_farmer1"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(chicken_farmer1@CurrentLevel)",
+        "ZombieBasedOn": "chicken_farmer"
+      }
+    },
+    {
+        "objclass": "ZombieProperties",
+        "aliases": [
+            "chicken_farmer1"
+        ],
+        "objdata": {
+            "WalkSPS": 0.185,
+            "EatDPS": 100,
+            "Toughness": 350,
+            "ChickenTypeName": "chicken_farmer",
+            "ChickeningDuration": 1,
+            "ChickeningDurationVariance": 0.2,
+            "ChickeningHealthPercentage": 0.9,
+            "ChickeningInterval": 0.15,
+            "ChickeningIntervalVariance": 0,
+            "WavePointCost": 750,
+            "Weight": 3000,
+            "HitRect": "RTID(CommonHitRect@RectangleProps)",
+            "AttackRect": "RTID(CommonAttackRect@RectangleProps)"
+        }
+    },
+    {
+      "aliases": [
+        "tutorial1_armor1"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(tutorial1_armor1@CurrentLevel)",
+        "ZombieBasedOn": "tutorial"
+      }
+    },
+      {
+          "objclass": "ZombieProperties",
+          "aliases": [
+              "tutorial1_armor1"
+          ],
+          "objdata": {
+              "ZombieSort": "Gargantuar",
+              "CannotBeEnlightenedBySolarSage": true,
+              "CannotBeGrabbedByPtero": true,
+              "CannotChangeLaneByPowerToss": true,
+              "CannotBeFlickedByPowerToss": true,
+              "CannotBeDraggedByTangleKelp": true,
+              "CannotBeTossedByCitron": true,
+              "CannotBeSwallowedByChomper": true,
+              "CannotCarryPlantfoodsInWaves": true,
+              "WalkSPS": 0.37,
+              "Toughness": 1800,
+              "EatDPS": 1000,
+              "WavePointCost": 2000,
+              "Weight": 1000,
+              "HitRect": "RTID(CommonHitRect@RectangleProps)",
+              "AttackRect": "RTID(CommonAttackRect@RectangleProps)",
+            "StartingArmors":[
+              "modern_armor1_1"
+            ]
+          }
+      },
+    {
+      "aliases": [
+        "modern_armor1_1"
+      ],
+      "objclass": "ArmorType",
+      "objdata": {
+        "Properties": "RTID(modern_armor1_1@CurrentLevel)",
+        "ArmorBasedOn": "modern_armor1"
+      }
+    },
+    {
+      "aliases": [
+        "modern_armor1_1"
+      ],
+      "objclass": "ArmorProperties",
+      "objdata": {
+        "Toughness": 3700,
+        "isMetal": false,
+        "BowlingLevel": 1
+      }
+    },
+    {
+        "aliases": [
+            "SeedBank"
+        ],
+        "objclass": "SeedBankProperties",
+        "objdata": {
+            "UnlockAll": true,
+            "PlantIncludeList": [
+                "peashooter",
+                "sunflower",
+                "potatomine",
+                "wallnut",
+                "cherry_bomb",
+                "snowpea1",
+                "repeater1",
+                "chomper"
+                
+            ],
+            "OverrideSeedSlotsCount": 5,
+            "SelectionMethod": "chooser"
+        }
+    },  
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {
+            "PointIncrementPerWave": -40,
+            "StartingPoints": -100,
+            "StartingWave": 3,
+            "ZombiePool": [
+              "RTID(tutorial1@CurrentLevel)",
+              "RTID(tutorial_gargantuar1@CurrentLevel)",
+              "RTID(tutorial_gargantuar1_armor1@CurrentLevel)",
+              "RTID(chicken_farmer1@CurrentLevel)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": -25,
+            "StartingPoints": -100,
+            "StartingWave": 4,
+            "ZombiePool": [
+              "RTID(tutorial1@CurrentLevel)",
+              "RTID(tutorial_gargantuar1@CurrentLevel)",
+              "RTID(tutorial_gargantuar1_armor1@CurrentLevel)",
+              "RTID(chicken_farmer1@CurrentLevel)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": -10,
+            "StartingPoints": -100,
+            "StartingWave": 5,
+            "ZombiePool": [
+              "RTID(tutorial1@CurrentLevel)",
+              "RTID(tutorial_gargantuar1@CurrentLevel)",
+              "RTID(tutorial_gargantuar1_armor1@CurrentLevel)",
+              "RTID(chicken_farmer1@CurrentLevel)"
+            ]
+          },
+          {},
+          {
+            "PointIncrementPerWave": 20,
+            "StartingPoints": 100,
+            "StartingWave": 5,
+            "ZombiePool": [
+              "RTID(tutorial1@CurrentLevel)",
+              "RTID(tutorial_gargantuar1@CurrentLevel)",
+              "RTID(tutorial_gargantuar1_armor1@CurrentLevel)",
+              "RTID(chicken_farmer1@CurrentLevel)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 40,
+            "StartingPoints": 200,
+            "StartingWave": 4,
+            "ZombiePool": [
+              "RTID(tutorial1@CurrentLevel)",
+              "RTID(tutorial_gargantuar1@CurrentLevel)",
+              "RTID(tutorial_gargantuar1_armor1@CurrentLevel)",
+              "RTID(chicken_farmer1@CurrentLevel)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 60,
+            "StartingPoints": 400,
+            "StartingWave": 3,
+            "ZombiePool": [
+              "RTID(tutorial1@CurrentLevel)",
+              "RTID(tutorial_gargantuar1_armor1@CurrentLevel)",
+              "RTID(chicken_farmer1@CurrentLevel)"
+            ]
+          }
+        ],
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 5,
+        "WaveCount": 15,
+        "WaveSpendingPointIncrement": 100,
+        "WaveSpendingPoints": 100,
+        "Waves": [
+          [
+            "RTID(Wave1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave11@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave12@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave13@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave14@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave15@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial_gargantuar1_armor1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar1@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial_gargantuar1_armor1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar1_armor1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar1@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial_gargantuar1_armor1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar1_armor1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar1@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(chicken_farmer1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar1@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(chicken_farmer1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(tutorial1@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial_gargantuar1_armor1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar1_armor1@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave7"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial_gargantuar1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar1_armor1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer1@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave8"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(chicken_farmer1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(tutorial1@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave9"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial_gargantuar1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer1@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave10"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial1_armor1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(tutorial1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar1_armor1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer1@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave11"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial_gargantuar1_armor1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer1@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave12"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial_gargantuar1_armor1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar1_armor1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(tutorial1@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave13"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial_gargantuar1_armor1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar1_armor1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(tutorial1@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave14"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial_gargantuar1_armor1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar1_armor1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar1_armor1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar1_armor1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer1@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave15"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial_gargantuar1_armor1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar1_armor1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar1_armor1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar1_armor1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(chicken_farmer1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(tutorial1_armor1@CurrentLevel)",
+            "Row": 2
+          },
+          {
+            "Type": "RTID(tutorial1@CurrentLevel)",
+            "Row": 5
+          }
+        ]
+      }
+    }
+    ]
+}
