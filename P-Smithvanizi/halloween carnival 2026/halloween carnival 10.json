@@ -1,0 +1,1289 @@
+{
+    "#comment": "Halloween Carnival Level 10 Ultimate Battle",
+    "objects": [
+        {
+            "objclass": "LevelDefinition",
+            "objdata": {
+                "Loot": "RTID(DefaultLoot@LevelModules)",
+                "Modules": [
+                    "RTID(StandardIntro@LevelModules)",
+                    "RTID(ZombiesDeadWinCon@LevelModules)",
+                    "RTID(ModernMowers@LevelModules)",
+                    "RTID(ConveyorBelt@CurrentLevel)",
+                    "RTID(Gravestones@CurrentLevel)",
+                    "RTID(DefaultZombieWinCondition@LevelModules)",
+                    "RTID(NewWaves@CurrentLevel)"
+                ],
+                "Name": "Halloween Carnival",
+                "NameMultiLanguage": {
+                    "en": "Halloween Carnival - Level <LEVELNUMBER>",
+                    "zh": "万圣嘉年华 - 第 <LEVELNUMBER> 关"
+                },
+                "Description": "Trick or Treat!",
+                "DescriptionMultiLanguage": {
+                    "en": "Trick or Treat!",
+                    "zh": "不给糖就捣蛋！"
+                },
+                "LevelNumber": 10,
+                "WrittenBy": "P_smithvanizi",
+                "MusicType": "MiniGame_A",
+                "NormalPresentTable": "egypt_normal_01",
+                "ShinyPresentTable": "egypt_shiny_01",
+                "StageModule": "RTID(HalloweenStage@LevelModules)"
+            }
+        },
+        {
+            "aliases": [
+                "dark_king_veteran"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(dark_king_veteran_prop@CurrentLevel)",
+                "ZombieBasedOn": "dark_king_veteran"
+            }
+        },
+        {
+            "aliases": [
+                "dark_king_veteran_prop"
+            ],
+            "objclass": "ZombieProperties",
+            "objdata": {
+                "CannotBeTransformedByWitchHazel": true,
+                "CannotBeHypnotizedByProjectiles": true,
+                "CannotBeGrabbedByPtero": true,
+                "ImmuneToShrinkingViolet": true,
+                "CannotBeTossedByCitron": true,
+                "CannotBeSwallowedByChomper": true,
+                "CannotCarryPlantfoodsInWaves": true,
+                "PlantablePlants": [
+                    "cherry_bomb",
+                    "jalapeno",
+                    "powerlily",
+                    "iceburg",
+                    "empea",
+                    "solarsage",
+                    "powerplant",
+                    "goldleaf",
+                    "grapeshot"
+                ],
+                "KnightingAreaW": 2,
+                "DelayBetweenKnightings": 1.5,
+                "ValidKnightTargets": [
+                    "dark_king",
+                    "dark_king_veteran",
+                    "pirate_barrel",
+                    "future_protector_shield",
+                    "future_infinut_shield"
+                ],
+                "TargetListBecomesBlackList": true,
+                "WalkSPS": 0.185,
+                "EatDPS": 100,
+                "Toughness": 1500,
+                "NormalDeathWhenMowed": true,
+                "ImmuneToGarlic": true,
+                "WavePointCost": 1000,
+                "Weight": 1800,
+                "ArmorToGive": "dark_armor3",
+                "HitRect": "RTID(DarkKingHitRect@RectangleProps)",
+                "AttackRect": "RTID(DarkKingAttackRect@RectangleProps)"
+            }
+        },
+        {
+            "aliases": [
+                "Gravestones"
+            ],
+            "objclass": "GravestoneProperties",
+            "objdata": {
+                "GravestoneCount": 14,
+                "SpawnColumnEnd": 8,
+                "SpawnColumnStart": 4
+            }
+        },
+        {
+            "aliases": [
+                "ConveyorBelt"
+            ],
+            "objclass": "ConveyorSeedBankProperties",
+            "objdata": {
+                "DropDelayConditions": [
+                    {
+                        "Delay": 3,
+                        "MaxPackets": 3
+                    },
+                    {
+                        "Delay": 5,
+                        "MaxPackets": 5
+                    },
+                    {
+                        "Delay": 9,
+                        "MaxPackets": 7
+                    }
+                ],
+                "InitialPlantList": [
+                    {
+                        "CooldownSeconds": 10,
+                        "PlantType": "pumpkin",
+                        "Weight": 50
+                    },
+                    {
+                        "MaxCount": 1,
+                        "MaxWeightFactor": 0,
+                        "PlantType": "gravebuster",
+                        "Weight": 30
+                    },
+                    {
+                        "MaxCount": 6,
+                        "MaxWeightFactor": 0,
+                        "PlantType": "repeater",
+                        "Weight": 50
+                    }
+                ],
+                "SpeedConditions": [
+                    {
+                        "MaxPackets": 0,
+                        "Speed": 100
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "NewWaves"
+            ],
+            "objclass": "WaveManagerModuleProperties",
+            "objdata": {
+                "DynamicZombies": [
+                    {},
+                    {},
+                    {},
+                    {
+                        "PointIncrementPerWave": 40,
+                        "StartingPoints": 300,
+                        "StartingWave": 6,
+                        "ZombiePool": [
+                            "RTID(dark_imp_dragon@ZombieTypes)",
+                            "RTID(lawn_imp@ZombieTypes)",
+                            "RTID(lawn@ZombieTypes)",
+                            "RTID(lawn_armor1@ZombieTypes)",
+                            "RTID(lawn_armor2@ZombieTypes)",
+                            "RTID(lawn_gargantuar@ZombieTypes)",
+                            "RTID(dark_wizard@ZombieTypes)",
+                            "RTID(dark_juggler@ZombieTypes)",
+                            "RTID(lostcity_crystalskull@ZombieTypes)",
+                            "RTID(explorer@ZombieTypes)",
+                            "RTID(barrelroller@ZombieTypes)"
+                        ]
+                    },
+                    {
+                        "PointIncrementPerWave": 60,
+                        "StartingPoints": 400,
+                        "StartingWave": 6,
+                        "ZombiePool": [
+                            "RTID(dark_imp_dragon@ZombieTypes)",
+                            "RTID(lawn_imp@ZombieTypes)",
+                            "RTID(lawn@ZombieTypes)",
+                            "RTID(lawn_armor1@ZombieTypes)",
+                            "RTID(lawn_armor2@ZombieTypes)",
+                            "RTID(lawn_gargantuar@ZombieTypes)",
+                            "RTID(dark_wizard@ZombieTypes)",
+                            "RTID(dark_juggler@ZombieTypes)",
+                            "RTID(lostcity_crystalskull@ZombieTypes)",
+                            "RTID(explorer@ZombieTypes)",
+                            "RTID(barrelroller@ZombieTypes)"
+                        ]
+                    },
+                    {
+                        "PointIncrementPerWave": 80,
+                        "StartingPoints": 500,
+                        "StartingWave": 5,
+                        "ZombiePool": [
+                            "RTID(dark_imp_dragon@ZombieTypes)",
+                            "RTID(lawn_imp@ZombieTypes)",
+                            "RTID(lawn@ZombieTypes)",
+                            "RTID(lawn_armor1@ZombieTypes)",
+                            "RTID(lawn_armor2@ZombieTypes)",
+                            "RTID(lawn_gargantuar@ZombieTypes)",
+                            "RTID(dark_wizard@ZombieTypes)",
+                            "RTID(dark_juggler@ZombieTypes)",
+                            "RTID(lostcity_crystalskull@ZombieTypes)",
+                            "RTID(explorer@ZombieTypes)",
+                            "RTID(barrelroller@ZombieTypes)"
+                        ]
+                    },
+                    {
+                        "PointIncrementPerWave": 100,
+                        "StartingPoints": 700,
+                        "StartingWave": 4,
+                        "ZombiePool": [
+                            "RTID(dark_imp_dragon@ZombieTypes)",
+                            "RTID(lawn_imp@ZombieTypes)",
+                            "RTID(lawn@ZombieTypes)",
+                            "RTID(lawn_armor1@ZombieTypes)",
+                            "RTID(lawn_armor2@ZombieTypes)",
+                            "RTID(lawn_gargantuar@ZombieTypes)",
+                            "RTID(dark_wizard@ZombieTypes)",
+                            "RTID(dark_juggler@ZombieTypes)",
+                            "RTID(lostcity_crystalskull@ZombieTypes)",
+                            "RTID(explorer@ZombieTypes)",
+                            "RTID(barrelroller@ZombieTypes)"
+                        ]
+                    }
+                ],
+                "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+            }
+        },
+        {
+            "aliases": [
+                "WaveManagerProps"
+            ],
+            "objclass": "WaveManagerProperties",
+            "objdata": {
+                "FlagWaveInterval": 5,
+                "SpawnColEnd": 1,
+                "SpawnColStart": 1,
+                "WaveCount": 20,
+                "WaveSpendingPointIncrement": 0,
+                "WaveSpendingPoints": 0,
+                "Waves": [
+                    [
+                        "RTID(Wave1@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave2@CurrentLevel)",
+                        "RTID(Wave2ModConveyor0@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave3@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave4@CurrentLevel)",
+                        "RTID(Wave4ModConveyor0@CurrentLevel)",
+                        "RTID(GravestoneEvent0@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave5@CurrentLevel)",
+                        "RTID(Wave5ModConveyor0@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave6@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave7@CurrentLevel)",
+                        "RTID(Wave7ModConveyor0@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave8@CurrentLevel)",
+                        "RTID(GravestoneEvent0@CurrentLevel)",
+                        "RTID(GraveSpawnEvent0@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave9@CurrentLevel)",
+                        "RTID(Wave9ModConveyor0@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave10@CurrentLevel)",
+                        "RTID(GravestoneEvent0@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave11@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave12@CurrentLevel)",
+                        "RTID(Wave12ModConveyor0@CurrentLevel)",
+                        "RTID(GravestoneEvent0@CurrentLevel)",
+                        "RTID(GraveSpawnEvent0@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave13@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave14@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave15@CurrentLevel)",
+                        "RTID(Wave15ModConveyor0@CurrentLevel)",
+                        "RTID(GravestoneEvent0@CurrentLevel)",
+                        "RTID(GraveSpawnEvent0@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave16@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave17@CurrentLevel)",
+                        "RTID(GraveSpawnEvent0@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave18@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave19@CurrentLevel)",
+                        "RTID(GravestoneEvent0@CurrentLevel)",
+                        "RTID(GraveSpawnEvent0@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave20@CurrentLevel)",
+                        "RTID(GravestoneEvent0@CurrentLevel)",
+                        "RTID(GraveSpawnEvent0@CurrentLevel)"
+                    ]
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "GravestoneEvent0"
+            ],
+            "objclass": "SpawnGravestonesWaveActionProps",
+            "objdata": {
+                "GravestonePool": [
+                    {
+                        "Count": 8,
+                        "Type": "RTID(gravestone_cowboy@GridItemTypes)"
+                    }
+                ],
+                "SpawnEffectAnimID": "POPANIM_EFFECTS_TOMBSTONE_DARK_SPAWN_EFFECT",
+                "SpawnPositionsPool": [
+                    {
+                        "mX": 5,
+                        "mY": 0
+                    },
+                    {
+                        "mX": 5,
+                        "mY": 1
+                    },
+                    {
+                        "mX": 5,
+                        "mY": 2
+                    },
+                    {
+                        "mX": 5,
+                        "mY": 3
+                    },
+                    {
+                        "mX": 5,
+                        "mY": 4
+                    },
+                    {
+                        "mX": 6,
+                        "mY": 0
+                    },
+                    {
+                        "mX": 6,
+                        "mY": 1
+                    },
+                    {
+                        "mX": 6,
+                        "mY": 2
+                    },
+                    {
+                        "mX": 6,
+                        "mY": 3
+                    },
+                    {
+                        "mX": 6,
+                        "mY": 4
+                    },
+                    {
+                        "mX": 7,
+                        "mY": 0
+                    },
+                    {
+                        "mX": 7,
+                        "mY": 1
+                    },
+                    {
+                        "mX": 7,
+                        "mY": 2
+                    },
+                    {
+                        "mX": 7,
+                        "mY": 3
+                    },
+                    {
+                        "mX": 7,
+                        "mY": 4
+                    },
+                    {
+                        "mX": 8,
+                        "mY": 0
+                    },
+                    {
+                        "mX": 8,
+                        "mY": 1
+                    },
+                    {
+                        "mX": 8,
+                        "mY": 2
+                    },
+                    {
+                        "mX": 8,
+                        "mY": 3
+                    },
+                    {
+                        "mX": 8,
+                        "mY": 4
+                    }
+                ],
+                "SpawnSoundID": "Play_Zomb_Egypt_TombRaiser_Grave_Rise"
+            }
+        },
+        {
+            "aliases": [
+                "GraveSpawnEvent0"
+            ],
+            "objclass": "SpawnZombiesFromGridItemSpawnerProps",
+            "objdata": {
+                "GridTypes": [
+                    "RTID(gravestone_cowboy@GridItemTypes)"
+                ],
+                "WaveStartMessage": "[WARNING_GRAVESTONE_SPAWN]",
+                "ZombieSpawnWaitTime": 1,
+                "Zombies": [
+                    {
+                        "Type": "RTID(lawn_armor2@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn_armor2@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(dark_wizard@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(dark_wizard_veteran@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(dark_juggler@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(dark_juggler@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave1"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": 3,
+                        "Type": "RTID(dark_king_veteran@CurrentLevel)"
+                    },
+                    {
+                        "Row": 3,
+                        "Type": "RTID(lawn@ZombieTypes)"
+                    },
+                    {
+                        "Row": 3,
+                        "Type": "RTID(lawn@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave2"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": 1,
+                        "Type": "RTID(lawn_armor2@ZombieTypes)"
+                    },
+                    {
+                        "Row": 5,
+                        "Type": "RTID(lawn_armor2@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave3"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": 1,
+                        "Type": "RTID(lawn_armor1@ZombieTypes)"
+                    },
+                    {
+                        "Row": 3,
+                        "Type": "RTID(lawn_armor1@ZombieTypes)"
+                    },
+                    {
+                        "Row": 5,
+                        "Type": "RTID(lawn_armor1@ZombieTypes)"
+                    },
+                    {
+                        "Row": 2,
+                        "Type": "RTID(dark_king_veteran@CurrentLevel)"
+                    },
+                    {
+                        "Row": 4,
+                        "Type": "RTID(dark_king_veteran@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave4"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": 2,
+                        "Type": "RTID(dark_juggler@ZombieTypes)"
+                    },
+                    {
+                        "Row": 4,
+                        "Type": "RTID(dark_juggler@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn_armor2@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn_armor1@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn_armor1@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave5"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": 1,
+                        "Type": "RTID(dark_king_veteran@CurrentLevel)"
+                    },
+                    {
+                        "Row": 5,
+                        "Type": "RTID(dark_king_veteran@CurrentLevel)"
+                    },
+                    {
+                        "Row": 3,
+                        "Type": "RTID(dark_juggler@ZombieTypes)"
+                    },
+                    {
+                        "Row": 1,
+                        "Type": "RTID(lawn_armor1@ZombieTypes)"
+                    },
+                    {
+                        "Row": 2,
+                        "Type": "RTID(lawn_armor1@ZombieTypes)"
+                    },
+                    {
+                        "Row": 3,
+                        "Type": "RTID(lawn_armor1@ZombieTypes)"
+                    },
+                    {
+                        "Row": 4,
+                        "Type": "RTID(lawn_armor1@ZombieTypes)"
+                    },
+                    {
+                        "Row": 5,
+                        "Type": "RTID(lawn_armor1@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave6"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(lawn_armor2@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn_armor2@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn_armor2@ZombieTypes)"
+                    },
+                    {
+                        "Row": 1,
+                        "Type": "RTID(barrelroller@ZombieTypes)"
+                    },
+                    {
+                        "Row": 5,
+                        "Type": "RTID(barrelroller@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave7"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": 2,
+                        "Type": "RTID(dark_wizard@ZombieTypes)"
+                    },
+                    {
+                        "Row": 4,
+                        "Type": "RTID(dark_wizard@ZombieTypes)"
+                    },
+                    {
+                        "Row": 1,
+                        "Type": "RTID(dark_juggler@ZombieTypes)"
+                    },
+                    {
+                        "Row": 5,
+                        "Type": "RTID(dark_juggler@ZombieTypes)"
+                    },
+                    {
+                        "Row": 1,
+                        "Type": "RTID(lawn_armor2@ZombieTypes)"
+                    },
+                    {
+                        "Row": 5,
+                        "Type": "RTID(lawn_armor2@ZombieTypes)"
+                    },
+                    {
+                        "Row": 3,
+                        "Type": "RTID(dark_king_veteran@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave8"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": 3,
+                        "Type": "RTID(lostcity_crystalskull@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn_armor2@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn_armor2@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn_armor1@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn_armor1@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave9"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(dark_king_veteran@CurrentLevel)"
+                    },
+                    {
+                        "Row": 1,
+                        "Type": "RTID(dark_juggler@ZombieTypes)"
+                    },
+                    {
+                        "Row": 3,
+                        "Type": "RTID(dark_juggler@ZombieTypes)"
+                    },
+                    {
+                        "Row": 5,
+                        "Type": "RTID(dark_juggler@ZombieTypes)"
+                    },
+                    {
+                        "Row": 1,
+                        "Type": "RTID(lawn_armor1@ZombieTypes)"
+                    },
+                    {
+                        "Row": 2,
+                        "Type": "RTID(lawn_armor1@ZombieTypes)"
+                    },
+                    {
+                        "Row": 3,
+                        "Type": "RTID(lawn_armor1@ZombieTypes)"
+                    },
+                    {
+                        "Row": 4,
+                        "Type": "RTID(lawn_armor1@ZombieTypes)"
+                    },
+                    {
+                        "Row": 5,
+                        "Type": "RTID(lawn_armor1@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave10"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(lawn_gargantuar@ZombieTypes)"
+                    },
+                    {
+                        "Row": 1,
+                        "Type": "RTID(dark_wizard@ZombieTypes)"
+                    },
+                    {
+                        "Row": 3,
+                        "Type": "RTID(dark_wizard@ZombieTypes)"
+                    },
+                    {
+                        "Row": 5,
+                        "Type": "RTID(dark_wizard@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn_armor2@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn_armor2@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn_armor1@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn_armor1@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn_armor1@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave11"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(dark_wizard_veteran@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(barrelroller@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(barrelroller@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave12"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": 1,
+                        "Type": "RTID(dark_king_veteran@CurrentLevel)"
+                    },
+                    {
+                        "Row": 3,
+                        "Type": "RTID(dark_king_veteran@CurrentLevel)"
+                    },
+                    {
+                        "Row": 5,
+                        "Type": "RTID(dark_king_veteran@CurrentLevel)"
+                    },
+                    {
+                        "Row": 1,
+                        "Type": "RTID(dark_juggler@ZombieTypes)"
+                    },
+                    {
+                        "Row": 2,
+                        "Type": "RTID(dark_juggler@ZombieTypes)"
+                    },
+                    {
+                        "Row": 3,
+                        "Type": "RTID(dark_juggler@ZombieTypes)"
+                    },
+                    {
+                        "Row": 4,
+                        "Type": "RTID(dark_juggler@ZombieTypes)"
+                    },
+                    {
+                        "Row": 5,
+                        "Type": "RTID(dark_juggler@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave13"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(lawn_gargantuar@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(dark_king_veteran@CurrentLevel)"
+                    },
+                    {
+                        "Type": "RTID(dark_king_veteran@CurrentLevel)"
+                    },
+                    {
+                        "Type": "RTID(lawn_armor1@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn_armor1@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave14"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(lawn_gargantuar@ZombieTypes)"
+                    },
+                    {
+                        "Row": 2,
+                        "Type": "RTID(dark_king_veteran@CurrentLevel)"
+                    },
+                    {
+                        "Row": 4,
+                        "Type": "RTID(dark_king_veteran@CurrentLevel)"
+                    },
+                    {
+                        "Row": 1,
+                        "Type": "RTID(explorer@ZombieTypes)"
+                    },
+                    {
+                        "Row": 2,
+                        "Type": "RTID(explorer@ZombieTypes)"
+                    },
+                    {
+                        "Row": 3,
+                        "Type": "RTID(explorer@ZombieTypes)"
+                    },
+                    {
+                        "Row": 4,
+                        "Type": "RTID(explorer@ZombieTypes)"
+                    },
+                    {
+                        "Row": 5,
+                        "Type": "RTID(explorer@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave15"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(lawn_gargantuar@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn_gargantuar@ZombieTypes)"
+                    },
+                    {
+                        "Row": 1,
+                        "Type": "RTID(dark_king_veteran@CurrentLevel)"
+                    },
+                    {
+                        "Row": 3,
+                        "Type": "RTID(dark_king_veteran@CurrentLevel)"
+                    },
+                    {
+                        "Row": 5,
+                        "Type": "RTID(dark_king_veteran@CurrentLevel)"
+                    },
+                    {
+                        "Row": 1,
+                        "Type": "RTID(lostcity_crystalskull@ZombieTypes)"
+                    },
+                    {
+                        "Row": 2,
+                        "Type": "RTID(lostcity_crystalskull@ZombieTypes)"
+                    },
+                    {
+                        "Row": 3,
+                        "Type": "RTID(lostcity_crystalskull@ZombieTypes)"
+                    },
+                    {
+                        "Row": 4,
+                        "Type": "RTID(lostcity_crystalskull@ZombieTypes)"
+                    },
+                    {
+                        "Row": 5,
+                        "Type": "RTID(lostcity_crystalskull@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave16"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": 1,
+                        "Type": "RTID(barrelroller@ZombieTypes)"
+                    },
+                    {
+                        "Row": 2,
+                        "Type": "RTID(barrelroller@ZombieTypes)"
+                    },
+                    {
+                        "Row": 3,
+                        "Type": "RTID(barrelroller@ZombieTypes)"
+                    },
+                    {
+                        "Row": 4,
+                        "Type": "RTID(barrelroller@ZombieTypes)"
+                    },
+                    {
+                        "Row": 5,
+                        "Type": "RTID(barrelroller@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave17"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(lawn_gargantuar@ZombieTypes)"
+                    },
+                    {
+                        "Row": 2,
+                        "Type": "RTID(dark_king_veteran@CurrentLevel)"
+                    },
+                    {
+                        "Row": 4,
+                        "Type": "RTID(dark_king_veteran@CurrentLevel)"
+                    },
+                    {
+                        "Row": 1,
+                        "Type": "RTID(lawn_armor2@ZombieTypes)"
+                    },
+                    {
+                        "Row": 2,
+                        "Type": "RTID(lawn_armor2@ZombieTypes)"
+                    },
+                    {
+                        "Row": 3,
+                        "Type": "RTID(lawn_armor2@ZombieTypes)"
+                    },
+                    {
+                        "Row": 4,
+                        "Type": "RTID(lawn_armor2@ZombieTypes)"
+                    },
+                    {
+                        "Row": 5,
+                        "Type": "RTID(lawn_armor2@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave18"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(lawn_gargantuar@ZombieTypes)"
+                    },
+                    {
+                        "Row": 2,
+                        "Type": "RTID(dark_wizard_veteran@ZombieTypes)"
+                    },
+                    {
+                        "Row": 4,
+                        "Type": "RTID(dark_wizard_veteran@ZombieTypes)"
+                    },
+                    {
+                        "Row": 1,
+                        "Type": "RTID(explorer@ZombieTypes)"
+                    },
+                    {
+                        "Row": 2,
+                        "Type": "RTID(explorer@ZombieTypes)"
+                    },
+                    {
+                        "Row": 3,
+                        "Type": "RTID(explorer@ZombieTypes)"
+                    },
+                    {
+                        "Row": 4,
+                        "Type": "RTID(explorer@ZombieTypes)"
+                    },
+                    {
+                        "Row": 5,
+                        "Type": "RTID(explorer@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave19"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(lawn_gargantuar@ZombieTypes)"
+                    },
+                    {
+                        "Row": 1,
+                        "Type": "RTID(lostcity_crystalskull@ZombieTypes)"
+                    },
+                    {
+                        "Row": 2,
+                        "Type": "RTID(lostcity_crystalskull@ZombieTypes)"
+                    },
+                    {
+                        "Row": 3,
+                        "Type": "RTID(lostcity_crystalskull@ZombieTypes)"
+                    },
+                    {
+                        "Row": 4,
+                        "Type": "RTID(lostcity_crystalskull@ZombieTypes)"
+                    },
+                    {
+                        "Row": 5,
+                        "Type": "RTID(lostcity_crystalskull@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave20"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": 1,
+                        "Type": "RTID(lawn_gargantuar@ZombieTypes)"
+                    },
+                    {
+                        "Row": 2,
+                        "Type": "RTID(lawn_gargantuar@ZombieTypes)"
+                    },
+                    {
+                        "Row": 3,
+                        "Type": "RTID(lawn_gargantuar@ZombieTypes)"
+                    },
+                    {
+                        "Row": 4,
+                        "Type": "RTID(lawn_gargantuar@ZombieTypes)"
+                    },
+                    {
+                        "Row": 5,
+                        "Type": "RTID(lawn_gargantuar@ZombieTypes)"
+                    },
+                    {
+                        "Row": 1,
+                        "Type": "RTID(dark_king_veteran@CurrentLevel)"
+                    },
+                    {
+                        "Row": 2,
+                        "Type": "RTID(dark_king_veteran@CurrentLevel)"
+                    },
+                    {
+                        "Row": 3,
+                        "Type": "RTID(dark_king_veteran@CurrentLevel)"
+                    },
+                    {
+                        "Row": 4,
+                        "Type": "RTID(dark_king_veteran@CurrentLevel)"
+                    },
+                    {
+                        "Row": 5,
+                        "Type": "RTID(dark_king_veteran@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave2ModConveyor0"
+            ],
+            "objclass": "ModifyConveyorWaveActionProps",
+            "objdata": {
+                "Add": [
+                    {
+                        "CooldownSeconds": 15,
+                        "Type": "RTID(vamporcini@PlantTypes)",
+                        "Weight": 30
+                    }
+                ],
+                "Remove": []
+            }
+        },
+        {
+            "aliases": [
+                "Wave4ModConveyor0"
+            ],
+            "objclass": "ModifyConveyorWaveActionProps",
+            "objdata": {
+                "Add": [
+                    {
+                        "MaxCount": 10,
+                        "MaxWeightFactor": 0,
+                        "Type": "RTID(fumeshroom@PlantTypes)",
+                        "Weight": 50
+                    }
+                ],
+                "Remove": []
+            }
+        },
+        {
+            "aliases": [
+                "Wave5ModConveyor0"
+            ],
+            "objclass": "ModifyConveyorWaveActionProps",
+            "objdata": {
+                "Add": [
+                    {
+                        "MaxDelivered": 2,
+                        "Type": "RTID(witchhazel@PlantTypes)",
+                        "Weight": 50
+                    }
+                ],
+                "Remove": []
+            }
+        },
+        {
+            "aliases": [
+                "Wave7ModConveyor0"
+            ],
+            "objclass": "ModifyConveyorWaveActionProps",
+            "objdata": {
+                "Add": [
+                    {
+                        "CooldownSeconds": 10,
+                        "Type": "RTID(ghostpepper@PlantTypes)",
+                        "Weight": 50
+                    }
+                ],
+                "Remove": []
+            }
+        },
+        {
+            "aliases": [
+                "Wave9ModConveyor0"
+            ],
+            "objclass": "ModifyConveyorWaveActionProps",
+            "objdata": {
+                "Add": [
+                    {
+                        "CooldownSeconds": 10,
+                        "Type": "RTID(stunion@PlantTypes)",
+                        "Weight": 50
+                    },
+                    {
+                        "MaxCount": 2,
+                        "MaxWeightFactor": 0,
+                        "Type": "RTID(chardguard@PlantTypes)",
+                        "Weight": 100
+                    }
+                ],
+                "Remove": []
+            }
+        },
+        {
+            "aliases": [
+                "Wave12ModConveyor0"
+            ],
+            "objclass": "ModifyConveyorWaveActionProps",
+            "objdata": {
+                "Add": [
+                    {
+                        "MaxDelivered": 5,
+                        "Type": "RTID(jackolantern@PlantTypes)",
+                        "Weight": 500
+                    }
+                ],
+                "Remove": []
+            }
+        },
+        {
+            "aliases": [
+                "Wave15ModConveyor0"
+            ],
+            "objclass": "ModifyConveyorWaveActionProps",
+            "objdata": {
+                "Add": [
+                    {
+                        "MaxDelivered": 2,
+                        "Type": "RTID(peacommando@PlantTypes)",
+                        "Weight": 150
+                    }
+                ],
+                "Remove": []
+            }
+        }
+    ],
+    "version": 1
+}

@@ -1,0 +1,166 @@
+{
+    "#comment": "Halloween Carnival Level 3",
+    "objects": [
+        {
+            "objclass": "LevelDefinition",
+            "objdata": {
+                "FirstIntroNarrative": "INTRO_III",
+                "Loot": "RTID(DefaultLoot@LevelModules)",
+                "Modules": [
+                    "RTID(LevelOfTheDayIntro@CurrentLevel)",
+                    "RTID(ZombiesDeadWinCon@LevelModules)",
+                    "RTID(DefaultZombieWinCondition@LevelModules)",
+                    "RTID(CowboyRails@CurrentLevel)",
+                    "RTID(ChallengeModule@CurrentLevel)",
+                    "RTID(VaseBreakerArcade@LevelModules)",
+                    "RTID(VaseBreakerProps@.)"
+                ],
+                "IsVasebreaker": true,
+                "Name": "Halloween Carnival",
+                "NameMultiLanguage": {
+                    "en": "Halloween Carnival - Level <LEVELNUMBER>",
+                    "zh": "万圣嘉年华 - 第 <LEVELNUMBER> 关"
+                },
+                "Description": "Trick or Treat!",
+                "DescriptionMultiLanguage": {
+                    "en": "Trick or Treat!",
+                    "zh": "不给糖就捣蛋！"
+                },
+                "LevelNumber": 3,
+                "WrittenBy": "P_smithvanizi",
+                "NormalPresentTable": "egypt_normal_01",
+                "ShinyPresentTable": "egypt_shiny_01",
+                "StageModule": "RTID(HalloweenStage@LevelModules)"
+            }
+        },
+        {
+            "aliases": [
+                "INTRO_III"
+            ],
+            "objclass": "NarrativeProperties",
+            "objdata": {
+                "Flow": [
+                    {
+                        "Character": "winnie",
+                        "Action": "NPC_ENTER"
+                    },
+                    {
+                        "Character": "winnie",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "There are only two Vamporcinis provided in vases.",
+                            "zh": "花瓶里只会提供两个吸血牛肝菌。"
+                        }
+                    },
+                    {
+                        "Character": "winnie",
+                        "Action": "TIRED",
+                        "Lines": {
+                            "en": "Use them carefully.",
+                            "zh": "请谨慎使用。"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "ChallengeModule"
+            ],
+            "objclass": "StarChallengeModuleProperties",
+            "objdata": {
+                "Challenges": [
+                    [
+                        "RTID(KillZombies@CurrentLevel)"
+                    ]
+                ],
+                "ChallengesAlwaysAvailable": true
+            }
+        },
+        {
+            "aliases": [
+                "KillZombies"
+            ],
+            "objclass": "StarChallengeKillZombiesInTimeProps",
+            "objdata": {
+                "Time": 8,
+                "ZombiesToKill": 12
+            }
+        },
+        {
+            "aliases": [
+                "CowboyRails"
+            ],
+            "objclass": "RailcartProperties",
+            "objdata": {
+                "Railcarts": [
+                    {
+                        "Column": 0,
+                        "Row": 2
+                    }
+                ],
+                "Rails": [
+                    {
+                        "Column": 0,
+                        "RowEnd": 4,
+                        "RowStart": 0
+                    }
+                ]
+            }
+        },
+        {
+            "objclass": "LevelIntroProperties",
+            "aliases": [
+                "Intro"
+            ],
+            "objdata": {
+                "PanStartOffset": -40,
+                "PanStreetOffset": 0,
+                "ZombiePreviewOff": true
+            }
+        },
+        {
+            "objclass": "VaseBreakerPresetProperties",
+            "aliases": [
+                "VaseBreakerProps"
+            ],
+            "objdata": {
+                "MinColumnIndex": 4,
+                "MaxColumnIndex": 8,
+                "Vases": [
+                    {
+                        "ZombieTypeName": "lawn",
+                        "Count": 5
+                    },
+                    {
+                        "ZombieTypeName": "lawn_armor1",
+                        "Count": 7
+                    },
+                    {
+                        "ZombieTypeName": "lawn_armor2",
+                        "Count": 5
+                    },
+                    {
+                        "PlantTypeName": "vamporcini",
+                        "Count": 2
+                    },
+                    {
+                        "PlantTypeName": "jackolantern",
+                        "Count": 1
+                    },
+                    {
+                        "PlantTypeName": "homingthistle",
+                        "Count": 2
+                    },
+                    {
+                        "PlantTypeName": "garlic",
+                        "Count": 2
+                    }
+                ],
+                "NumColoredPlantVases": 3,
+                "NumColoredZombieVases": 1
+            }
+        }
+    ],
+    "version": 1
+}

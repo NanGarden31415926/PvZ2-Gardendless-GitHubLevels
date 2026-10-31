@@ -1,0 +1,906 @@
+{
+    "#comment": "Halloween Carnival Level 12",
+    "objects": [
+        {
+            "objclass": "LevelDefinition",
+            "objdata": {
+                "FirstIntroNarrative": "INTRO_VI",
+                "FirstOutroNarrative": "OUTRO",
+                "Loot": "RTID(DefaultLoot@LevelModules)",
+                "Modules": [
+                    "RTID(StandardIntro@LevelModules)",
+                    "RTID(ZombiesDeadWinCon@LevelModules)",
+                    "RTID(SeedBank@CurrentLevel)",
+                    "RTID(ProtectThePlant@CurrentLevel)",
+                    "RTID(ChallengeModule@CurrentLevel)",
+                    "RTID(DefaultZombieWinCondition@LevelModules)",
+                    "RTID(NewWaves@CurrentLevel)"
+                ],
+                "Name": "Halloween Carnival",
+                "NameMultiLanguage": {
+                    "en": "Halloween Carnival - Level <LEVELNUMBER>",
+                    "zh": "万圣嘉年华 - 第 <LEVELNUMBER> 关"
+                },
+                "Description": "Trick or Treat!",
+                "DescriptionMultiLanguage": {
+                    "en": "Trick or Treat!",
+                    "zh": "不给糖就捣蛋！"
+                },
+                "LevelNumber": 12,
+                "WrittenBy": "P_smithvanizi",
+                "NormalPresentTable": "egypt_normal_01",
+                "ShinyPresentTable": "egypt_shiny_01",
+                "StageModule": "RTID(HalloweenStage@LevelModules)"
+            }
+        },
+        {
+            "aliases": [
+                "INTRO_VI"
+            ],
+            "objclass": "NarrativeProperties",
+            "objdata": {
+                "Flow": [
+                    {
+                        "Character": "crazydave",
+                        "Action": "NPC_ENTER"
+                    },
+                    {
+                        "Character": "crazydave",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "You've got to do everything you can to protect these party guests.",
+                            "zh": "你得尽己所能保护好聚会的来客。"
+                        }
+                    },
+                    {
+                        "Character": "crazydave",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "Remember: not a single one can be lost!",
+                            "zh": "记住：一个都不能少！"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "OUTRO"
+            ],
+            "objclass": "NarrativeProperties",
+            "objdata": {
+                "Flow": [
+                    {
+                        "Character": "crazydave",
+                        "Action": "NPC_ENTER"
+                    },
+                    {
+                        "Character": "crazydave",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "There won't be any more zombies tonight, and we still have plenty of candy left.",
+                            "zh": "今晚不会再有僵尸了，我们还有不少糖果。"
+                        }
+                    },
+                    {
+                        "Character": "crazydave",
+                        "Action": "TIRED",
+                        "Lines": {
+                            "en": "Everyone here gets a share!",
+                            "zh": "在座的各位都有份！"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "ProtectThePlant"
+            ],
+            "objclass": "ProtectThePlantChallengeProperties",
+            "objdata": {
+                "MustProtectCount": 7,
+                "Plants": [
+                    {
+                        "GridX": 2,
+                        "GridY": 0,
+                        "PlantType": "ghostpepper"
+                    },
+                    {
+                        "GridX": 2,
+                        "GridY": 4,
+                        "PlantType": "ghostpepper"
+                    },
+                    {
+                        "GridX": 5,
+                        "GridY": 0,
+                        "PlantType": "vamporcini"
+                    },
+                    {
+                        "GridX": 5,
+                        "GridY": 4,
+                        "PlantType": "vamporcini"
+                    },
+                    {
+                        "GridX": 5,
+                        "GridY": 2,
+                        "PlantType": "witchhazel"
+                    },
+                    {
+                        "GridX": 5,
+                        "GridY": 1,
+                        "PlantType": "jackolantern"
+                    },
+                    {
+                        "GridX": 5,
+                        "GridY": 3,
+                        "PlantType": "jackolantern"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "ChallengeModule"
+            ],
+            "objclass": "StarChallengeModuleProperties",
+            "objdata": {
+                "Challenges": [
+                    [
+                        "RTID(PlantsLost@CurrentLevel)",
+                        "RTID(DoNotPlantBeforeLine@CurrentLevel)"
+                    ]
+                ],
+                "ChallengesAlwaysAvailable": true
+            }
+        },
+        {
+            "aliases": [
+                "PlantsLost"
+            ],
+            "objclass": "StarChallengePlantsLostProps",
+            "objdata": {
+                "MaximumPlantsLost": 0
+            }
+        },
+        {
+            "aliases": [
+                "DoNotPlantBeforeLine"
+            ],
+            "objclass": "MoldColonyChallengeProps",
+            "objdata": {
+                "MoldMatrix": [
+                    "000000111",
+                    "000000011",
+                    "000000011",
+                    "000000011",
+                    "000000111"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "SeedBank"
+            ],
+            "objclass": "SeedBankProperties",
+            "objdata": {
+                "PlantExcludeList": [
+                    "peach",
+                    "aloe",
+                    "glaciershroom",
+                    "megagatling",
+                    "electricpeashooter",
+                    "electriccurrant",
+                    "glaciershroom",
+                    "caulipower"
+                ],
+                "SelectionMethod": "chooser"
+            }
+        },
+        {
+            "aliases": [
+                "halloween_crystalskull"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(halloween_crystalskull_prop@CurrentLevel)",
+                "ZombieBasedOn": "lostcity_crystalskull"
+            }
+        },
+        {
+            "aliases": [
+                "halloween_crystalskull_prop"
+            ],
+            "objclass": "ZombieProperties",
+            "objdata": {
+                "MaxAbsorbValue": 250,
+                "WalkSPS": 0.185,
+                "EatDPS": 100,
+                "Toughness": 250,
+                "StartingArmors": [
+                    "halloween_armor3"
+                ],
+                "LaserBeamDamage": 4001,
+                "LaserBeamLength": 220,
+                "LaserCooldownTime": 5,
+                "ChargingTime": 5,
+                "ChargingTimeDecrementPer50Sun": 0.2,
+                "WavePointCost": 1350,
+                "Weight": 3000,
+                "HitRect": "RTID(CommonHitRect@RectangleProps)",
+                "AttackRect": "RTID(CommonAttackRect@RectangleProps)"
+            }
+        },
+        {
+            "aliases": [
+                "halloween_juggler"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(halloween_juggler_prop@CurrentLevel)",
+                "ZombieBasedOn": "dark_juggler"
+            }
+        },
+        {
+            "aliases": [
+                "halloween_juggler_prop"
+            ],
+            "objclass": "ZombieProperties",
+            "objdata": {
+                "WalkSPS": 0.2,
+                "EatDPS": 100,
+                "Toughness": 420,
+                "StartingArmors": [
+                    "halloween_armor3"
+                ],
+                "MoveSpeedMultiplierWhileJuggling": 2,
+                "RotateDuration": 2,
+                "WavePointCost": 1350,
+                "Weight": 3500,
+                "HitRect": "RTID(CommonHitRect@RectangleProps)",
+                "AttackRect": "RTID(CommonAttackRect@RectangleProps)"
+            }
+        },
+        {
+            "aliases": [
+                "NewWaves"
+            ],
+            "objclass": "WaveManagerModuleProperties",
+            "objdata": {
+                "DynamicZombies": [
+                    {},
+                    {},
+                    {},
+                    {
+                        "PointIncrementPerWave": 30,
+                        "StartingPoints": 150,
+                        "StartingWave": 6,
+                        "ZombiePool": [
+                            "RTID(lawn_imp@ZombieTypes)",
+                            "RTID(lawn_armor1@ZombieTypes)",
+                            "RTID(lawn_armor2@ZombieTypes)",
+                            "RTID(pirate_armor4@ZombieTypes)"
+                        ]
+                    },
+                    {
+                        "PointIncrementPerWave": 40,
+                        "StartingPoints": 200,
+                        "StartingWave": 5,
+                        "ZombiePool": [
+                            "RTID(lawn_imp@ZombieTypes)",
+                            "RTID(lawn_armor1@ZombieTypes)",
+                            "RTID(lawn_armor2@ZombieTypes)",
+                            "RTID(pirate_armor4@ZombieTypes)",
+                            "RTID(modern_newspaper@ZombieTypes)"
+                        ]
+                    },
+                    {
+                        "PointIncrementPerWave": 50,
+                        "StartingPoints": 300,
+                        "StartingWave": 4,
+                        "ZombiePool": [
+                            "RTID(lawn_imp@ZombieTypes)",
+                            "RTID(lawn_armor1@ZombieTypes)",
+                            "RTID(lawn_armor2@ZombieTypes)",
+                            "RTID(pirate_armor4@ZombieTypes)",
+                            "RTID(modern_newspaper@ZombieTypes)",
+                            "RTID(newspaper_veteran@ZombieTypes)"
+                        ]
+                    },
+                    {
+                        "PointIncrementPerWave": 60,
+                        "StartingPoints": 400,
+                        "StartingWave": 4,
+                        "ZombiePool": [
+                            "RTID(lawn_imp@ZombieTypes)",
+                            "RTID(lawn_armor1@ZombieTypes)",
+                            "RTID(lawn_armor2@ZombieTypes)",
+                            "RTID(pirate_armor4@ZombieTypes)",
+                            "RTID(modern_newspaper@ZombieTypes)",
+                            "RTID(newspaper_veteran@ZombieTypes)"
+                        ]
+                    }
+                ],
+                "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+            }
+        },
+        {
+            "aliases": [
+                "WaveManagerProps"
+            ],
+            "objclass": "WaveManagerProperties",
+            "objdata": {
+                "FlagWaveInterval": 6,
+                "WaveCount": 18,
+                "WaveSpendingPointIncrement": 150,
+                "WaveSpendingPoints": 100,
+                "Waves": [
+                    [
+                        "RTID(Wave1@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave2@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave3@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave4@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave5@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave6@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave7@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave8@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave9@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave10@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave11@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave12@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave13@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave14@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave15@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave16@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave17@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave18@CurrentLevel)"
+                    ]
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave1"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": 1,
+                        "Type": "RTID(beach_octopus@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave2"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": 5,
+                        "Type": "RTID(beach_octopus@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave3"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": 2,
+                        "Type": "RTID(pirate_armor4@ZombieTypes)"
+                    },
+                    {
+                        "Row": 4,
+                        "Type": "RTID(pirate_armor4@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave4"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": 1,
+                        "Type": "RTID(lawn_armor1@ZombieTypes)"
+                    },
+                    {
+                        "Row": 3,
+                        "Type": "RTID(lawn_armor2@ZombieTypes)"
+                    },
+                    {
+                        "Row": 5,
+                        "Type": "RTID(lawn_armor1@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave5"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": 1,
+                        "Type": "RTID(lawn_armor1@ZombieTypes)"
+                    },
+                    {
+                        "Row": 2,
+                        "Type": "RTID(lawn_armor1@ZombieTypes)"
+                    },
+                    {
+                        "Row": 4,
+                        "Type": "RTID(lawn_armor1@ZombieTypes)"
+                    },
+                    {
+                        "Row": 5,
+                        "Type": "RTID(lawn_armor1@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave6"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "AdditionalPlantfood": 1,
+                "Zombies": [
+                    {
+                        "Row": 3,
+                        "Type": "RTID(abbot_torch@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn_armor1@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn_armor1@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn_imp@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn_imp@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn_imp@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn_imp@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave7"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": 1,
+                        "Type": "RTID(barrelroller@ZombieTypes)"
+                    },
+                    {
+                        "Row": 5,
+                        "Type": "RTID(barrelroller@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave8"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": 2,
+                        "Type": "RTID(pirate_armor4@ZombieTypes)"
+                    },
+                    {
+                        "Row": 4,
+                        "Type": "RTID(pirate_armor4@ZombieTypes)"
+                    },
+                    {
+                        "Row": 3,
+                        "Type": "RTID(lawn_armor2@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave9"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": 1,
+                        "Type": "RTID(lostcity_relichunter@ZombieTypes)"
+                    },
+                    {
+                        "Row": 5,
+                        "Type": "RTID(lostcity_relichunter@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn_armor1@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn_armor1@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave10"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": 1,
+                        "Type": "RTID(abbot_torch@ZombieTypes)"
+                    },
+                    {
+                        "Row": 5,
+                        "Type": "RTID(abbot_torch@ZombieTypes)"
+                    },
+                    {
+                        "Row": 2,
+                        "Type": "RTID(modern_newspaper@ZombieTypes)"
+                    },
+                    {
+                        "Row": 4,
+                        "Type": "RTID(modern_newspaper@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave11"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": 2,
+                        "Type": "RTID(barrelroller@ZombieTypes)"
+                    },
+                    {
+                        "Row": 4,
+                        "Type": "RTID(barrelroller@ZombieTypes)"
+                    },
+                    {
+                        "Row": 3,
+                        "Type": "RTID(lostcity_excavator@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave12"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "AdditionalPlantfood": 1,
+                "Zombies": [
+                    {
+                        "Row": 1,
+                        "Type": "RTID(lostcity_relichunter@ZombieTypes)"
+                    },
+                    {
+                        "Row": 5,
+                        "Type": "RTID(lostcity_relichunter@ZombieTypes)"
+                    },
+                    {
+                        "Row": 2,
+                        "Type": "RTID(lawn_gargantuar@ZombieTypes)"
+                    },
+                    {
+                        "Row": 4,
+                        "Type": "RTID(lawn_gargantuar@ZombieTypes)"
+                    },
+                    {
+                        "Row": 3,
+                        "Type": "RTID(halloween_crystalskull@CurrentLevel)"
+                    },
+                    {
+                        "Type": "RTID(lawn_imp@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn_imp@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn_imp@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn_imp@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave13"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": 1,
+                        "Type": "RTID(abbot_torch@ZombieTypes)"
+                    },
+                    {
+                        "Row": 3,
+                        "Type": "RTID(abbot_torch@ZombieTypes)"
+                    },
+                    {
+                        "Row": 5,
+                        "Type": "RTID(abbot_torch@ZombieTypes)"
+                    },
+                    {
+                        "Row": 2,
+                        "Type": "RTID(pirate_armor4@ZombieTypes)"
+                    },
+                    {
+                        "Row": 4,
+                        "Type": "RTID(pirate_armor4@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave14"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": 2,
+                        "Type": "RTID(halloween_juggler@CurrentLevel)"
+                    },
+                    {
+                        "Row": 4,
+                        "Type": "RTID(halloween_juggler@CurrentLevel)"
+                    },
+                    {
+                        "Row": 1,
+                        "Type": "RTID(lostcity_relichunter@ZombieTypes)"
+                    },
+                    {
+                        "Row": 5,
+                        "Type": "RTID(lostcity_relichunter@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn_imp@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn_imp@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn_imp@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave15"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": 3,
+                        "Type": "RTID(barrelroller@ZombieTypes)"
+                    },
+                    {
+                        "Row": 2,
+                        "Type": "RTID(abbot_torch@ZombieTypes)"
+                    },
+                    {
+                        "Row": 4,
+                        "Type": "RTID(abbot_torch@ZombieTypes)"
+                    },
+                    {
+                        "Row": 1,
+                        "Type": "RTID(halloween_crystalskull@CurrentLevel)"
+                    },
+                    {
+                        "Row": 5,
+                        "Type": "RTID(halloween_crystalskull@CurrentLevel)"
+                    },
+                    {
+                        "Type": "RTID(lawn_armor1@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn_armor1@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave16"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": 1,
+                        "Type": "RTID(lostcity_relichunter@ZombieTypes)"
+                    },
+                    {
+                        "Row": 5,
+                        "Type": "RTID(lostcity_relichunter@ZombieTypes)"
+                    },
+                    {
+                        "Row": 3,
+                        "Type": "RTID(lawn_gargantuar@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave17"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": 2,
+                        "Type": "RTID(barrelroller@ZombieTypes)"
+                    },
+                    {
+                        "Row": 4,
+                        "Type": "RTID(barrelroller@ZombieTypes)"
+                    },
+                    {
+                        "Row": 1,
+                        "Type": "RTID(abbot_torch@ZombieTypes)"
+                    },
+                    {
+                        "Row": 2,
+                        "Type": "RTID(abbot_torch@ZombieTypes)"
+                    },
+                    {
+                        "Row": 3,
+                        "Type": "RTID(abbot_torch@ZombieTypes)"
+                    },
+                    {
+                        "Row": 4,
+                        "Type": "RTID(abbot_torch@ZombieTypes)"
+                    },
+                    {
+                        "Row": 5,
+                        "Type": "RTID(abbot_torch@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave18"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "AdditionalPlantfood": 1,
+                "Zombies": [
+                    {
+                        "Row": 1,
+                        "Type": "RTID(lawn_gargantuar@ZombieTypes)"
+                    },
+                    {
+                        "Row": 3,
+                        "Type": "RTID(lawn_gargantuar@ZombieTypes)"
+                    },
+                    {
+                        "Row": 5,
+                        "Type": "RTID(lawn_gargantuar@ZombieTypes)"
+                    },
+                    {
+                        "Row": 2,
+                        "Type": "RTID(halloween_crystalskull@CurrentLevel)"
+                    },
+                    {
+                        "Row": 4,
+                        "Type": "RTID(halloween_crystalskull@CurrentLevel)"
+                    },
+                    {
+                        "Row": 1,
+                        "Type": "RTID(lostcity_excavator@ZombieTypes)"
+                    },
+                    {
+                        "Row": 3,
+                        "Type": "RTID(lostcity_excavator@ZombieTypes)"
+                    },
+                    {
+                        "Row": 5,
+                        "Type": "RTID(lostcity_excavator@ZombieTypes)"
+                    },
+                    {
+                        "Row": 1,
+                        "Type": "RTID(lostcity_relichunter@ZombieTypes)"
+                    },
+                    {
+                        "Row": 5,
+                        "Type": "RTID(lostcity_relichunter@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn@ZombieTypes)"
+                    }
+                ]
+            }
+        }
+    ],
+    "version": 1
+}

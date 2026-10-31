@@ -1,0 +1,539 @@
+{
+    "#comment": "Halloween Carnival Level 9",
+    "objects": [
+        {
+            "objclass": "LevelDefinition",
+            "objdata": {
+                "Loot": "RTID(DefaultLoot@LevelModules)",
+                "Modules": [
+                    "RTID(StandardIntro@LevelModules)",
+                    "RTID(ZombiesDeadWinCon@LevelModules)",
+                    "RTID(ModernMowers@LevelModules)",
+                    "RTID(SeedBank@CurrentLevel)",
+                    "RTID(ChallengeModule@CurrentLevel)",
+                    "RTID(ZombiePotions@CurrentLevel)",
+                    "RTID(Rails@CurrentLevel)",
+                    "RTID(DefaultZombieWinCondition@LevelModules)",
+                    "RTID(NewWaves@CurrentLevel)"
+                ],
+                "Name": "Halloween Carnival",
+                "NameMultiLanguage": {
+                    "en": "Halloween Carnival - Level <LEVELNUMBER>",
+                    "zh": "万圣嘉年华 - 第 <LEVELNUMBER> 关"
+                },
+                "Description": "Trick or Treat!",
+                "DescriptionMultiLanguage": {
+                    "en": "Trick or Treat!",
+                    "zh": "不给糖就捣蛋！"
+                },
+                "LevelNumber": 9,
+                "WrittenBy": "P_smithvanizi",
+                "NormalPresentTable": "egypt_normal_01",
+                "ShinyPresentTable": "egypt_shiny_01",
+                "StageModule": "RTID(HalloweenStage@LevelModules)"
+            }
+        },
+        {
+            "aliases": [
+                "ChallengeModule"
+            ],
+            "objclass": "StarChallengeModuleProperties",
+            "objdata": {
+                "Challenges": [
+                    [
+                        "RTID(SunUsed@CurrentLevel)"
+                    ]
+                ],
+                "ChallengesAlwaysAvailable": true
+            }
+        },
+        {
+            "aliases": [
+                "SunUsed"
+            ],
+            "objclass": "StarChallengeSunUsedProps",
+            "objdata": {
+                "MaximumSun": 1350
+            }
+        },
+        {
+            "aliases": [
+                "Rails"
+            ],
+            "objclass": "RailcartProperties",
+            "objdata": {
+                "Railcarts": [
+                    {
+                        "Column": 0,
+                        "Row": 2
+                    },
+                    {
+                        "Column": 3,
+                        "Row": 2
+                    }
+                ],
+                "Rails": [
+                    {
+                        "Column": 0,
+                        "RowEnd": 4,
+                        "RowStart": 0
+                    },
+                    {
+                        "Column": 3,
+                        "RowEnd": 4,
+                        "RowStart": 0
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "ZombiePotions"
+            ],
+            "objclass": "ZombiePotionModuleProperties",
+            "objdata": {
+                "InitialPotionCount": 3,
+                "MaxPotionCount": 9,
+                "PotionSpawnTimer": {
+                    "Max": 8,
+                    "Min": 6
+                },
+                "PotionTypes": [
+                    "zombiepotion_speed",
+                    "zombiepotion_toughness"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "chomper"
+            ],
+            "objclass": "PlantType",
+            "objdata": {
+                "PlantBasedOn": "chomper",
+                "Properties": "RTID(chomper@CurrentLevel)"
+            }
+        },
+        {
+            "aliases": [
+                "chomper"
+            ],
+            "objclass": "PlantProperties",
+            "objdata": {
+                "MaxContainZombieCount": 1,
+                "ChewTimePerZombie": 30,
+                "PlantfoodPullDuration": 3,
+                "PlantfoodPushDuration": 3,
+                "PlantfoodSwallowCount": 4,
+                "ChompFailDamage": 200,
+                "PlantfoodPushSPS": 3,
+                "PlantfoodPullSPS": 3,
+                "Cooldown": 5,
+                "CooldownFrom": 0.5,
+                "SunCost": 150,
+                "BeghouledCost": 1500,
+                "Toughness": 300,
+                "Family": "Melee",
+                "MintDamageFactor": 3,
+                "MintBoostedProps": {
+                    "ResistanceMult": 1,
+                    "SpeedMult": 4,
+                    "Plantfood": false
+                }
+            }
+        },
+        {
+            "aliases": [
+                "SeedBank"
+            ],
+            "objclass": "SeedBankProperties",
+            "objdata": {
+                "PresetPlantList": [
+                    {
+                        "Level": -1,
+                        "PlantType": "pumpkin"
+                    }
+                ],
+                "OverrideSeedSlotsCount": 6,
+                "UnlockAll": true,
+                "PlantIncludeList": [
+                    "plantern",
+                    "sunshroom",
+                    "puffshroom",
+                    "fumeshroom",
+                    "hypnoshroom",
+                    "magnetshroom",
+                    "peashooter",
+                    "repeater",
+                    "threepeater",
+                    "splitpea",
+                    "snowpea",
+                    "starfruit",
+                    "cabbagepult",
+                    "kernelpult",
+                    "melonpult",
+                    "chomper",
+                    "cherry_bomb",
+                    "jalapeno",
+                    "potatomine",
+                    "squash",
+                    "spikeweed"
+                ],
+                "SelectionMethod": "chooser"
+            }
+        },
+        {
+            "aliases": [
+                "NewWaves"
+            ],
+            "objclass": "WaveManagerModuleProperties",
+            "objdata": {
+                "DynamicZombies": [
+                    {},
+                    {},
+                    {},
+                    {
+                        "PointIncrementPerWave": 30,
+                        "StartingPoints": 100,
+                        "StartingWave": 6,
+                        "ZombiePool": [
+                            "RTID(lawn_imp@ZombieTypes)",
+                            "RTID(lawn_armor1@ZombieTypes)"
+                        ]
+                    },
+                    {
+                        "PointIncrementPerWave": 40,
+                        "StartingPoints": 150,
+                        "StartingWave": 5,
+                        "ZombiePool": [
+                            "RTID(lawn_imp@ZombieTypes)",
+                            "RTID(lawn_armor1@ZombieTypes)"
+                        ]
+                    },
+                    {
+                        "PointIncrementPerWave": 50,
+                        "StartingPoints": 200,
+                        "StartingWave": 4,
+                        "ZombiePool": [
+                            "RTID(lawn_imp@ZombieTypes)",
+                            "RTID(lawn_armor1@ZombieTypes)"
+                        ]
+                    },
+                    {
+                        "PointIncrementPerWave": 50,
+                        "StartingPoints": 300,
+                        "StartingWave": 3,
+                        "ZombiePool": [
+                            "RTID(lawn_imp@ZombieTypes)",
+                            "RTID(lawn_armor1@ZombieTypes)",
+                            "RTID(eighties_boombox@ZombieTypes)"
+                        ]
+                    }
+                ],
+                "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+            }
+        },
+        {
+            "aliases": [
+                "WaveManagerProps"
+            ],
+            "objclass": "WaveManagerProperties",
+            "objdata": {
+                "SuppressedDynamicZombieWaves": [
+                    9
+                ],
+                "FlagWaveInterval": 6,
+                "SpawnColEnd": 1,
+                "SpawnColStart": 1,
+                "WaveCount": 12,
+                "WaveSpendingPointIncrement": 0,
+                "WaveSpendingPoints": 0,
+                "Waves": [
+                    [
+                        "RTID(Wave1@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave2@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave3@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave4@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave5@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave6@CurrentLevel)",
+                        "RTID(Wave6RaidingPartyEvent0@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave7@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave8@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave9@CurrentLevel)",
+                        "RTID(Wave9RaidingPartyEvent0@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave10@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave11@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave12@CurrentLevel)",
+                        "RTID(Wave12RaidingPartyEvent0@CurrentLevel)"
+                    ]
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave1"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(lawn@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave2"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(lawn@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave3"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(lawn_armor1@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave4"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(lostcity_jane@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave5"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(eighties_boombox@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave6"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "AdditionalPlantfood": 1,
+                "Zombies": [
+                    {
+                        "Type": "RTID(lawn_armor1@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lostcity_jane@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn_armor1@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn_armor1@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave7"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(lawn@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn_armor1@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave8"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(lostcity_jane@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave9"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(lawn_armor2@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(eighties_boombox@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave10"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(lawn_armor1@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave11"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": 2,
+                        "Type": "RTID(lostcity_jane@ZombieTypes)"
+                    },
+                    {
+                        "Row": 4,
+                        "Type": "RTID(eighties_boombox@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave12"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "AdditionalPlantfood": 1,
+                "Zombies": [
+                    {
+                        "Row": 5,
+                        "Type": "RTID(lostcity_jane@ZombieTypes)"
+                    },
+                    {
+                        "Row": 3,
+                        "Type": "RTID(eighties_boombox@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn_armor2@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave6RaidingPartyEvent0"
+            ],
+            "objclass": "RaidingPartyZombieSpawnerProps",
+            "objdata": {
+                "GroupSize": 2,
+                "SwashbucklerCount": 2,
+                "ZombieType": "RTID(swashbuckler@ZombieTypes)",
+                "TimeBetweenGroups": 2
+            }
+        },
+        {
+            "aliases": [
+                "Wave9RaidingPartyEvent0"
+            ],
+            "objclass": "RaidingPartyZombieSpawnerProps",
+            "objdata": {
+                "GroupSize": 3,
+                "SwashbucklerCount": 3,
+                "ZombieType": "RTID(swashbuckler@ZombieTypes)",
+                "TimeBetweenGroups": 2
+            }
+        },
+        {
+            "aliases": [
+                "Wave12RaidingPartyEvent0"
+            ],
+            "objclass": "RaidingPartyZombieSpawnerProps",
+            "objdata": {
+                "GroupSize": 2,
+                "SwashbucklerCount": 4,
+                "ZombieType": "RTID(swashbuckler@ZombieTypes)",
+                "TimeBetweenGroups": 2
+            }
+        }
+    ],
+    "version": 1
+}
