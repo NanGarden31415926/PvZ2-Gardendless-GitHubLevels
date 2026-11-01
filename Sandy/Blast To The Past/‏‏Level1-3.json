@@ -1,0 +1,296 @@
+{
+  "Information": {
+    "Author": "Sandy",
+    "Introduction": "",
+    "Version": "1.0",
+    "CreatedAt": "2026-1-21",
+    "UpdatedAt": "2025-1-21",
+    "Difficulty": "Easy",
+    "Category": "Adventure"
+  },
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "Player's Front Yard",
+        "LevelNumber": 3,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(SunDropper@CurrentLevel)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(StandardIntro@LevelModules)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(ModernMowers@LevelModules)",
+          "RTID(WaveManagerModule@CurrentLevel)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(PlantMods@CurrentLevel)"
+        ],
+        "Name": "Blast From The Past - Day 3",
+        "WritenBy": "Sandy",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "StageModule": "RTID(TutorialStage@LevelModules)",
+        "FirstRewardParam": "snowpea",
+        "FirstRewardType": "unlock_plant",
+        "StartingSun": 50,
+        "FirstIntroNarrative": "INTRO",
+        "ReplayIntroNarrative": "INTRO"
+      }
+    },
+    {
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {
+            "PointIncrementPerWave": 0,
+            "StartingPoints": 0,
+            "StartingWave": 0,
+            "ZombiePool": []
+          },
+          {
+            "PointIncrementPerWave": 0,
+            "StartingPoints": 0,
+            "StartingWave": 0,
+            "ZombiePool": []
+          },
+          {
+            "PointIncrementPerWave": 0,
+            "StartingPoints": 0,
+            "StartingWave": 0,
+            "ZombiePool": []
+          },
+          {
+            "PointIncrementPerWave": 20,
+            "StartingPoints": 100,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(tutorial@ZombieTypes)",
+              "RTID(tutorial_armor1@ZombieTypes)",
+              "RTID(tutorial_armor2@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 33,
+            "StartingPoints": 100,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(tutorial@ZombieTypes)",
+              "RTID(tutorial_armor1@ZombieTypes)",
+              "RTID(tutorial_armor2@ZombieTypes)",
+              "RTID(Newerpaper@CurrentLevel)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 50,
+            "StartingPoints": 100,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(tutorial@ZombieTypes)",
+              "RTID(tutorial_armor1@ZombieTypes)",
+              "RTID(tutorial_armor2@ZombieTypes)",
+              "RTID(Newerpaper@CurrentLevel)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 60,
+            "StartingPoints": 120,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(tutorial@ZombieTypes)",
+              "RTID(tutorial_armor1@ZombieTypes)",
+              "RTID(tutorial_armor2@ZombieTypes)",
+              "RTID(Newerpaper@CurrentLevel)"
+            ]
+          }
+        ],
+        "WaveManagerProps": "RTID(WaveManager@CurrentLevel)"
+      },
+      "aliases": [
+        "WaveManagerModule"
+      ]
+    },
+    {
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 10,
+        "WaveCount": 20,
+        "ZombieCountdownFirstWaveSecs": 18,
+        "Waves": [
+          ["RTID(Wave1@CurrentLevel)"],
+          ["RTID(Wave2@CurrentLevel)"],
+          ["RTID(Wave3@CurrentLevel)"],
+          ["RTID(Wave4@CurrentLevel)"],
+          ["RTID(Wave5@CurrentLevel)"],
+          ["RTID(Wave6@CurrentLevel)"],
+          ["RTID(Wave7@CurrentLevel)"],
+          ["RTID(Wave8@CurrentLevel)"],
+          ["RTID(Wave9@CurrentLevel)"],
+          ["RTID(Wave10@CurrentLevel)"],
+          ["RTID(Wave11@CurrentLevel)"],
+          ["RTID(Wave12@CurrentLevel)"],
+          ["RTID(Wave13@CurrentLevel)"],
+          ["RTID(Wave14@CurrentLevel)"],
+          ["RTID(Wave15@CurrentLevel)"],
+          ["RTID(Wave16@CurrentLevel)"],
+          ["RTID(Wave17@CurrentLevel)"],
+          ["RTID(Wave18@CurrentLevel)"],
+          ["RTID(Wave19@CurrentLevel)"],
+          ["RTID(Wave20@CurrentLevel)"]
+        ]
+      },
+      "aliases": [
+        "WaveManager"
+      ]
+    },
+    {
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "SelectionMethod": "chooser",
+        "UnlockAll": true,
+        "OverrideSeedSlotsCount": 5,
+        "PlantIncludeList": [
+          "peashooter",
+          "sunflower",
+          "cherry_bomb",
+          "wallnut",
+          "potatomine"
+        ]
+      },
+      "aliases": [
+        "SeedBank"
+      ]
+    },
+    {
+      "aliases": [
+        "SunDropper"
+      ],
+      "objclass": "SunDropperProperties",
+      "objdata": {
+        "InitialSunDropDelay": 5,
+        "SunCountdownBase": 10,
+        "SunCountdownIncreasePerSun": 0,
+        "SunCountdownMax": 10.5,
+        "SunCountdownRange": 0.5,
+        "Value": 25
+      }
+    },
+    {
+      "aliases": [
+        "PlantMods"
+      ],
+      "objclass": "PlantModifierProperties",
+      "objdata": {
+        "SuppressParticle": true,
+        "List": [
+          {
+            "Type": "sunflower",
+            "NewObjdata": {
+              "SunValue": 25,
+              "Cooldown": 7.5
+            }
+          },
+          {
+            "Type": "peashooter",
+            "NewObjdata": {
+              "Cooldown": 7.5
+            }
+          },
+          {
+            "Type": "cherry_bomb",
+            "NewObjdata": {
+              "Cooldown": 50
+            }
+          },
+          {
+            "Type": "wallnut",
+            "NewObjdata": {
+              "Cooldown": 30
+            }
+          },
+          {
+            "Type": "potatomine",
+            "NewObjdata": {
+              "Cooldown": 45,
+              "ChargeTime": 15,
+              "CooldownFrom": 0.85
+            }
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+              "Newerpaper"
+          ],
+          "objclass": "ZombieType",
+          "objdata": {
+              "Properties": "RTID(NewerpaperProperties@CurrentLevel)",
+              "ZombieBasedOn": "modern_newspaper"
+          }
+      },
+      {
+          "aliases": [
+              "NewerpaperProperties"
+          ],
+          "objclass": "ZombieProperties",
+          "objdata": { "WalkSPS": 0.185, 
+          "EatDPS": 100, 
+          "Toughness": 190,
+          "EnragedDamageScale": 2,
+          "EnragedSpeedScale": 3,
+          "NewspaperHealth": 150, 
+          "WavePointCost": 250, 
+          "NewspaperBowlingLevel": 1, 
+          "Weight": 4000,
+          "HitRect": "RTID(CommonHitRect@RectangleProps)", 
+          "AttackRect": "RTID(CommonAttackRect@RectangleProps)" }
+      },
+    {
+    "aliases": [
+        "INTRO"
+    ],
+    "objclass": "NarrativeProperties",
+    "objdata": {
+        "Flow": [
+        {
+            "Character": "crazydave",
+            "Action": "NPC_ENTER"
+        },
+        {
+            "Character": "crazydave",
+            "Action": "SPECIAL1",
+            "Lines": {
+                "en": "Hello again! ",
+                "zh": "Hello again! "
+            }
+        },
+        {
+            "Character": "crazydave",
+            "Action": "EXCITED",
+            "Lines": {
+                "en": "Newspaper Zombies are back! ",
+                "zh": "Newspaper Zombies are back! "
+            }
+        },
+        {
+            "Character": "crazydave",
+            "Action": "SAY",
+            "Lines": {
+                "en": "They seem a little weaker, but theres many of them! ",
+                "zh": "They seem a little weaker, but theres many of them! "
+            }
+        },
+        {
+            "Character": "crazydave",
+            "Action": "SHOUT",
+            "Lines": {
+                "en": "See ya tomorrow! ",
+                "zh": "See ya tomorrow! "
+            }
+        }
+        ]
+    }
+    }
+  ],
+  "version": 1
+}
