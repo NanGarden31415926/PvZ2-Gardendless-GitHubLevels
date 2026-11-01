@@ -1,0 +1,285 @@
+{
+  "Information": {
+    "Author": "Sandy",
+    "Introduction": "",
+    "Version": "1.0",
+    "CreatedAt": "2026-1-21",
+    "UpdatedAt": "2025-1-21",
+    "Difficulty": "Easy",
+    "Category": "Adventure"
+  },
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "<PLAYERNAME>'s House",
+        "LevelNumber": 5,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(StandardIntro@LevelModules)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(ModernMowers@LevelModules)",
+          "RTID(WaveManagerModule@CurrentLevel)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(PlantMods@CurrentLevel)",
+          "RTID(ConveyorBelt@CurrentLevel)",
+          "RTID(Bowling@CurrentLevel)"
+        ],
+        "Name": "Level 1-5",
+        "WritenBy": "Sandy",
+        "MusicType": "MiniGame_B",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "StageModule": "RTID(ModernStage@LevelModules)",
+        "FirstRewardParam": "potatomine",
+        "FirstRewardType": "unlock_plant",
+        "StartingSun": 50
+      }
+    },
+    {
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {
+            "PointIncrementPerWave": 0,
+            "StartingPoints": 0,
+            "StartingWave": 0,
+            "ZombiePool": []
+          },
+          {
+            "PointIncrementPerWave": 0,
+            "StartingPoints": 0,
+            "StartingWave": 0,
+            "ZombiePool": []
+          },
+          {
+            "PointIncrementPerWave": 0,
+            "StartingPoints": 0,
+            "StartingWave": 0,
+            "ZombiePool": []
+          },
+          {
+            "PointIncrementPerWave": 100,
+            "StartingPoints": 400,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(tutorial@ZombieTypes)",
+              "RTID(tutorial_armor1@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 130,
+            "StartingPoints": 400,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(tutorial@ZombieTypes)",
+              "RTID(tutorial_armor1@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 200,
+            "StartingPoints": 400,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(tutorial@ZombieTypes)",
+              "RTID(tutorial_armor1@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 220,
+            "StartingPoints": 480,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(tutorial@ZombieTypes)",
+              "RTID(tutorial_armor1@ZombieTypes)"
+            ]
+          }
+        ],
+        "WaveManagerProps": "RTID(WaveManager@CurrentLevel)"
+      },
+      "aliases": [
+        "WaveManagerModule"
+      ]
+    },
+    {
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 8,
+        "WaveCount": 8,
+        "ZombieCountdownFirstWaveSecs": 2,
+        "Waves": [
+          ["RTID(Wave1@CurrentLevel)"],
+          ["RTID(Wave2@CurrentLevel)"],
+          ["RTID(Wave3@CurrentLevel)"],
+          ["RTID(Wave4@CurrentLevel)"],
+          ["RTID(Wave5@CurrentLevel)"],
+          ["RTID(Wave6@CurrentLevel)"],
+          ["RTID(Wave7@CurrentLevel)"],
+          ["RTID(Wave8@CurrentLevel)"]
+        ]
+      },
+      "aliases": [
+        "WaveManager"
+      ]
+    },
+    {
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "SelectionMethod": "conveyor"
+      },
+      "aliases": [
+        "SeedBank"
+      ]
+    },
+    {
+      "aliases": [
+        "SunDropper"
+      ],
+      "objclass": "SunDropperProperties",
+      "objdata": {
+        "InitialSunDropDelay": 5,
+        "SunCountdownBase": 10,
+        "SunCountdownIncreasePerSun": 0,
+        "SunCountdownMax": 10.5,
+        "SunCountdownRange": 0.5,
+        "Value": 25
+      }
+    },
+    {
+      "aliases": [
+        "PlantMods"
+      ],
+      "objclass": "PlantModifierProperties",
+      "objdata": {
+        "SuppressParticle": true,
+        "List": [
+          {
+            "Type": "sunflower",
+            "NewObjdata": {
+              "SunValue": 25,
+              "Cooldown": 7.5
+            }
+          },
+          {
+            "Type": "peashooter",
+            "NewObjdata": {
+              "Cooldown": 7.5
+            }
+          },
+          {
+            "Type": "cherry_bomb",
+            "NewObjdata": {
+              "Cooldown": 50
+            }
+          },
+          {
+            "Type": "wallnut",
+            "NewObjdata": {
+              "Cooldown": 30
+            }
+          },
+          {
+            "Type": "potatomine",
+            "NewObjdata": {
+              "Cooldown": 45,
+              "ChargeTime": 15,
+              "CooldownFrom": 1
+            }
+          },
+          {
+            "Type": "tool_projectile_bowling_wallnut",
+            "NewObjdata": {
+              "SpeedX": 4,
+              "ProjectileType": "bowling_nut"
+            }
+          }
+        ]
+      }
+    },
+    {
+        "aliases": [
+            "bowling_nut"
+        ],
+        "objclass": "ProjectileType",
+        "objdata": {
+            "ProjectileBasedOn": "bowling_wallnut",
+            "Props": "RTID(bowling_nut@CurrentLevel)"
+        }    
+    },
+    {
+        "aliases": [
+            "bowling_nut"
+        ],
+        "objclass": "ProjectileProperties",
+        "objdata": {
+            "Damage": 1000,
+            "DamageBowlingLevel": 1,
+            "Size": {
+                "w": 5,
+                "h": 5
+            },
+            "ShakesScreenOnImpact": true,
+            "IgnoredBy3SectionStaff": true,
+            "CannotBeReversedByJester": true
+        }
+    },
+    {
+        "aliases": [
+            "ConveyorBelt"
+        ],
+        "objclass": "ConveyorSeedBankProperties",
+        "objdata": {
+            "DropDelayConditions": [
+                {
+                    "Delay": 5,
+                    "MaxPackets": 2
+                },
+                {
+                    "Delay": 5,
+                    "MaxPackets": 4
+                },
+                {
+                    "Delay": 5,
+                    "MaxPackets": 6
+                },
+                {
+                    "Delay": 5,
+                    "MaxPackets": 8
+                }
+            ],
+            "InitialPlantList": [
+                {
+                    "MaxWeightFactor": 0,
+                    "MaxCount": 8,
+                    "PlantType": "tool_projectile_bowling_wallnut",
+                    "Weight": 85
+                },
+                {
+                    "MaxWeightFactor": 0,
+                    "MaxCount": 2,
+                    "PlantType": "tool_projectile_bowling_explodeonut",
+                    "Weight": 15
+                }
+            ],
+            "SpeedConditions": [
+                {
+                    "MaxPackets": 0,
+                    "Speed": 100
+                }
+            ]
+        }
+      },
+      {
+            "aliases": [
+                "Bowling"
+            ],
+            "objclass": "BowlingMinigameProperties",
+            "objdata": {
+                "BowlingFoulLine": 2,
+                "SuppressObjectiveTip": false
+            }
+      }
+  ],
+  "version": 1
+}
