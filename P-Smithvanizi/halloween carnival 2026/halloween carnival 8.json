@@ -1,0 +1,877 @@
+{
+    "#comment": "Halloween Carnival Level 8",
+    "objects": [
+        {
+            "objclass": "LevelDefinition",
+            "objdata": {
+                "FirstIntroNarrative": "INTRO_V",
+                "Loot": "RTID(DefaultLoot@LevelModules)",
+                "Modules": [
+                    "RTID(StandardIntro@LevelModules)",
+                    "RTID(ZombiesDeadWinCon@LevelModules)",
+                    "RTID(Conveyor@CurrentLevel)",
+                    "RTID(CowboyMinigame@CurrentLevel)",
+                    "RTID(Rails@CurrentLevel)",
+                    "RTID(DefaultZombieWinCondition@LevelModules)",
+                    "RTID(NewWaves@CurrentLevel)"
+                ],
+                "Name": "Halloween Carnival",
+                "NameMultiLanguage": {
+                    "en": "Halloween Carnival - Level <LEVELNUMBER>",
+                    "zh": "万圣嘉年华 - 第 <LEVELNUMBER> 关"
+                },
+                "Description": "Trick or Treat!",
+                "DescriptionMultiLanguage": {
+                    "en": "Trick or Treat!",
+                    "zh": "不给糖就捣蛋！"
+                },
+                "LevelNumber": 8,
+                "WrittenBy": "P_smithvanizi",
+                "MusicType": "MiniGame_B",
+                "NormalPresentTable": "egypt_normal_01",
+                "ShinyPresentTable": "egypt_shiny_01",
+                "StageModule": "RTID(HalloweenStage@LevelModules)"
+            }
+        },
+        {
+            "aliases": [
+                "INTRO_V"
+            ],
+            "objclass": "NarrativeProperties",
+            "objdata": {
+                "Flow": [
+                    {
+                        "Character": "winnie",
+                        "Action": "NPC_ENTER"
+                    },
+                    {
+                        "Character": "winnie",
+                        "Action": "TIRED",
+                        "Lines": {
+                            "en": "Keep an eye on those Super-Fan Imps.",
+                            "zh": "留意一下狂热粉丝小鬼。"
+                        }
+                    },
+                    {
+                        "Character": "winnie",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "They indicate where the All-Star Zombies might show up.",
+                            "zh": "那预示着全明星僵尸可能出现的位置。"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Rails"
+            ],
+            "objclass": "RailcartProperties",
+            "objdata": {
+                "Railcarts": [
+                    {
+                        "Column": 0,
+                        "Row": 2
+                    },
+                    {
+                        "Column": 1,
+                        "Row": 2
+                    },
+                    {
+                        "Column": 2,
+                        "Row": 1
+                    },
+                    {
+                        "Column": 2,
+                        "Row": 3
+                    },
+                    {
+                        "Column": 3,
+                        "Row": 2
+                    },
+                    {
+                        "Column": 4,
+                        "Row": 2
+                    },
+                    {
+                        "Column": 5,
+                        "Row": 1
+                    },
+                    {
+                        "Column": 5,
+                        "Row": 3
+                    }
+                ],
+                "Rails": [
+                    {
+                        "Column": 0,
+                        "RowEnd": 4,
+                        "RowStart": 0
+                    },
+                    {
+                        "Column": 1,
+                        "RowEnd": 4,
+                        "RowStart": 0
+                    },
+                    {
+                        "Column": 2,
+                        "RowEnd": 4,
+                        "RowStart": 0
+                    },
+                    {
+                        "Column": 3,
+                        "RowEnd": 4,
+                        "RowStart": 0
+                    },
+                    {
+                        "Column": 4,
+                        "RowEnd": 4,
+                        "RowStart": 0
+                    },
+                    {
+                        "Column": 5,
+                        "RowEnd": 4,
+                        "RowStart": 0
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Conveyor"
+            ],
+            "objclass": "ConveyorSeedBankProperties",
+            "objdata": {
+                "InitialPlantList": [
+                    {
+                        "PlantType": "scaredyshroom",
+                        "MaxDelivered": 1
+                    }
+                ],
+                "ManualPacketSpawning": true,
+                "SpeedConditions": [
+                    {
+                        "MaxPackets": 0,
+                        "Speed": 100
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "CowboyMinigame"
+            ],
+            "objclass": "CowboyMinigameProperties",
+            "objdata": {}
+        },
+        {
+            "aliases": [
+                "NewWaves"
+            ],
+            "objclass": "WaveManagerModuleProperties",
+            "objdata": {
+                "DynamicZombies": [
+                    {},
+                    {},
+                    {},
+                    {},
+                    {
+                        "PointIncrementPerWave": 50,
+                        "StartingPoints": 100,
+                        "StartingWave": 5,
+                        "ZombiePool": [
+                            "RTID(lostcity_excavator@ZombieTypes)",
+                            "RTID(lawn_imp@ZombieTypes)",
+                            "RTID(lawn_armor1@ZombieTypes)"
+                        ]
+                    },
+                    {
+                        "PointIncrementPerWave": 50,
+                        "StartingPoints": 150,
+                        "StartingWave": 4,
+                        "ZombiePool": [
+                            "RTID(lostcity_excavator@ZombieTypes)",
+                            "RTID(lawn_imp@ZombieTypes)",
+                            "RTID(lawn_armor1@ZombieTypes)",
+                            "RTID(lawn_armor2@ZombieTypes)"
+                        ]
+                    },
+                    {
+                        "PointIncrementPerWave": 50,
+                        "StartingPoints": 200,
+                        "StartingWave": 4,
+                        "ZombiePool": [
+                            "RTID(lostcity_excavator@ZombieTypes)",
+                            "RTID(lawn_imp@ZombieTypes)",
+                            "RTID(lawn_armor1@ZombieTypes)",
+                            "RTID(lawn_armor2@ZombieTypes)"
+                        ]
+                    }
+                ],
+                "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+            }
+        },
+        {
+            "aliases": [
+                "WaveManagerProps"
+            ],
+            "objclass": "WaveManagerProperties",
+            "objdata": {
+                "FlagWaveInterval": 12,
+                "WaveCount": 12,
+                "SuppressedDynamicZombieWaves": [
+                    11,
+                    12
+                ],
+                "WaveSpendingPointIncrement": 100,
+                "WaveSpendingPoints": 150,
+                "Waves": [
+                    [
+                        "RTID(Wave1@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave2@CurrentLevel)",
+                        "RTID(Wave2ModConveyor@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave3@CurrentLevel)",
+                        "RTID(Wave3ModConveyor@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave4@CurrentLevel)",
+                        "RTID(Wave4ModConveyor@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave5@CurrentLevel)",
+                        "RTID(Wave5ModConveyor@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave6@CurrentLevel)",
+                        "RTID(Wave6ModConveyor@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave7@CurrentLevel)",
+                        "RTID(Wave7ModConveyor@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave8@CurrentLevel)",
+                        "RTID(Wave8ModConveyor@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave9@CurrentLevel)",
+                        "RTID(Wave9ModConveyor@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave10@CurrentLevel)",
+                        "RTID(Wave10ModConveyor@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave11@CurrentLevel)",
+                        "RTID(Wave11ModConveyor@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(RandomWave12@CurrentLevel)",
+                        "RTID(Wave12ModConveyor@CurrentLevel)"
+                    ]
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave1"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(lawn@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave2"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(explorer@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave2ModConveyor"
+            ],
+            "objclass": "ModifyConveyorWaveActionProps",
+            "objdata": {
+                "Add": [
+                    {
+                        "MaxDelivered": 1,
+                        "Type": "RTID(kernelpult@PlantTypes)",
+                        "Weight": 100
+                    }
+                ],
+                "Remove": []
+            }
+        },
+        {
+            "aliases": [
+                "Wave3"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": 3,
+                        "Type": "RTID(lawn@ZombieTypes)"
+                    },
+                    {
+                        "Row": 4,
+                        "Type": "RTID(lawn_armor2@ZombieTypes)"
+                    },
+                    {
+                        "Row": 5,
+                        "Type": "RTID(lawn_armor1@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave3ModConveyor"
+            ],
+            "objclass": "ModifyConveyorWaveActionProps",
+            "objdata": {
+                "Add": [
+                    {
+                        "MaxDelivered": 1,
+                        "Type": "RTID(ghostpepper@PlantTypes)",
+                        "Weight": 100
+                    }
+                ],
+                "Remove": []
+            }
+        },
+        {
+            "aliases": [
+                "Wave4"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": 3,
+                        "Type": "RTID(lawn_armor2@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn@ZombieTypes)"
+                    },
+                    {
+                        "Row": 4,
+                        "Type": "RTID(lostcity_excavator@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave4ModConveyor"
+            ],
+            "objclass": "ModifyConveyorWaveActionProps",
+            "objdata": {
+                "Add": [
+                    {
+                        "MaxDelivered": 1,
+                        "Type": "RTID(vamporcini@PlantTypes)",
+                        "Weight": 100
+                    }
+                ],
+                "Remove": []
+            }
+        },
+        {
+            "aliases": [
+                "Wave5"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": 3,
+                        "Type": "RTID(iceage_hunter@ZombieTypes)"
+                    },
+                    {
+                        "Row": 4,
+                        "Type": "RTID(lostcity_jane@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn_imp@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave5ModConveyor"
+            ],
+            "objclass": "ModifyConveyorWaveActionProps",
+            "objdata": {
+                "Add": [
+                    {
+                        "MaxDelivered": 1,
+                        "Type": "RTID(pepperpult@PlantTypes)",
+                        "Weight": 100
+                    }
+                ],
+                "Remove": []
+            }
+        },
+        {
+            "aliases": [
+                "Wave6"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": 2,
+                        "Type": "RTID(explorer@ZombieTypes)"
+                    },
+                    {
+                        "Row": 4,
+                        "Type": "RTID(lawn_armor2@ZombieTypes)"
+                    },
+                    {
+                        "Row": 3,
+                        "Type": "RTID(iceage_hunter@ZombieTypes)"
+                    },
+                    {
+                        "Row": 5,
+                        "Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave6ModConveyor"
+            ],
+            "objclass": "ModifyConveyorWaveActionProps",
+            "objdata": {
+                "Add": [
+                    {
+                        "MaxDelivered": 1,
+                        "Type": "RTID(vamporcini@PlantTypes)",
+                        "Weight": 100
+                    }
+                ],
+                "Remove": []
+            }
+        },
+        {
+            "aliases": [
+                "Wave7"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": 1,
+                        "Type": "RTID(lostcity_excavator@ZombieTypes)"
+                    },
+                    {
+                        "Row": 5,
+                        "Type": "RTID(lostcity_excavator@ZombieTypes)"
+                    },
+                    {
+                        "Row": 3,
+                        "Type": "RTID(explorer@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave7ModConveyor"
+            ],
+            "objclass": "ModifyConveyorWaveActionProps",
+            "objdata": {
+                "Add": [
+                    {
+                        "MaxDelivered": 1,
+                        "Type": "RTID(pepperpult@PlantTypes)",
+                        "Weight": 100
+                    }
+                ],
+                "Remove": []
+            }
+        },
+        {
+            "aliases": [
+                "Wave8"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(lawn_armor1@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn_armor1@ZombieTypes)"
+                    },
+                    {
+                        "Row": 2,
+                        "Type": "RTID(modern_superfanimp@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave8ModConveyor"
+            ],
+            "objclass": "ModifyConveyorWaveActionProps",
+            "objdata": {
+                "Add": [
+                    {
+                        "MaxDelivered": 1,
+                        "Type": "RTID(ghostpepper@PlantTypes)",
+                        "Weight": 100
+                    }
+                ],
+                "Remove": []
+            }
+        },
+        {
+            "aliases": [
+                "Wave9"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": 4,
+                        "Type": "RTID(modern_superfanimp@ZombieTypes)"
+                    },
+                    {
+                        "Row": 2,
+                        "Type": "RTID(modern_allstar@ZombieTypes)"
+                    },
+                    {
+                        "Row": 1,
+                        "Type": "RTID(explorer@ZombieTypes)"
+                    },
+                    {
+                        "Row": 2,
+                        "Type": "RTID(explorer@ZombieTypes)"
+                    },
+                    {
+                        "Row": 3,
+                        "Type": "RTID(explorer@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn_armor1@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave9ModConveyor"
+            ],
+            "objclass": "ModifyConveyorWaveActionProps",
+            "objdata": {
+                "Add": [
+                    {
+                        "MaxDelivered": 1,
+                        "Type": "RTID(moonbean@PlantTypes)",
+                        "Weight": 100
+                    }
+                ],
+                "Remove": []
+            }
+        },
+        {
+            "aliases": [
+                "Wave10"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": 4,
+                        "Type": "RTID(modern_allstar@ZombieTypes)"
+                    },
+                    {
+                        "Row": 3,
+                        "Type": "RTID(lostcity_jane@ZombieTypes)"
+                    },
+                    {
+                        "Row": 4,
+                        "Type": "RTID(lostcity_jane@ZombieTypes)"
+                    },
+                    {
+                        "Row": 5,
+                        "Type": "RTID(lostcity_jane@ZombieTypes)"
+                    },
+                    {
+                        "Row": 3,
+                        "Type": "RTID(lostcity_excavator@ZombieTypes)"
+                    },
+                    {
+                        "Row": 4,
+                        "Type": "RTID(lostcity_excavator@ZombieTypes)"
+                    },
+                    {
+                        "Row": 5,
+                        "Type": "RTID(lostcity_excavator@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave10ModConveyor"
+            ],
+            "objclass": "ModifyConveyorWaveActionProps",
+            "objdata": {
+                "Add": [
+                    {
+                        "MaxDelivered": 1,
+                        "Type": "RTID(moonbean@PlantTypes)",
+                        "Weight": 100
+                    }
+                ],
+                "Remove": []
+            }
+        },
+        {
+            "aliases": [
+                "Wave11"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": 1,
+                        "Type": "RTID(modern_superfanimp@ZombieTypes)"
+                    },
+                    {
+                        "Row": 5,
+                        "Type": "RTID(modern_superfanimp@ZombieTypes)"
+                    },
+                    {
+                        "Row": 2,
+                        "Type": "RTID(iceage_hunter@ZombieTypes)"
+                    },
+                    {
+                        "Row": 4,
+                        "Type": "RTID(iceage_hunter@ZombieTypes)"
+                    },
+                    {
+                        "Row": 2,
+                        "Type": "RTID(lawn_imp@ZombieTypes)"
+                    },
+                    {
+                        "Row": 3,
+                        "Type": "RTID(lawn_imp@ZombieTypes)"
+                    },
+                    {
+                        "Row": 4,
+                        "Type": "RTID(lawn_imp@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave11ModConveyor"
+            ],
+            "objclass": "ModifyConveyorWaveActionProps",
+            "objdata": {
+                "Add": [
+                    {
+                        "MaxDelivered": 1,
+                        "Type": "RTID(sporeshroom@PlantTypes)",
+                        "Weight": 100
+                    }
+                ],
+                "Remove": []
+            }
+        },
+        {
+            "aliases": [
+                "RandomWave12"
+            ],
+            "objclass": "RandomEventsProps",
+            "objdata": {
+                "EventCount": {
+                    "Min": 1,
+                    "Max": 1
+                },
+                "Events": [
+                    "RTID(RandomZombies0@CurrentLevel)",
+                    "RTID(RandomZombies1@CurrentLevel)",
+                    "RTID(RandomZombies2@CurrentLevel)",
+                    "RTID(RandomZombies3@CurrentLevel)"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "RandomZombies0"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": 1,
+                        "Type": "RTID(modern_allstar@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn_imp@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn_armor1@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn_armor2@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lostcity_jane@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lostcity_excavator@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "RandomZombies1"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": 5,
+                        "Type": "RTID(modern_allstar@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn_armor1@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn_armor2@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(explorer@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lostcity_excavator@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "RandomZombies2"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": 1,
+                        "Type": "RTID(modern_allstar@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn_imp@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lostcity_jane@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn_armor2@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn_armor1@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "RandomZombies3"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": 5,
+                        "Type": "RTID(modern_allstar@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn_armor1@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(lawn_armor2@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(explorer@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(iceage_hunter@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave12ModConveyor"
+            ],
+            "objclass": "ModifyConveyorWaveActionProps",
+            "objdata": {
+                "Add": [
+                    {
+                        "MaxWeightFactor": 10,
+                        "MinWeightFactor": 0.1,
+                        "Type": "RTID(jackolantern@PlantTypes)"
+                    }
+                ],
+                "Remove": []
+            }
+        }
+    ],
+    "version": 1
+}

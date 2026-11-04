@@ -1,0 +1,1455 @@
+{
+    "#comment": "潘追3辣椒",
+    "objects": [
+        {
+            "objclass": "LevelDefinition",
+            "objdata": {
+                "Description": "<PLAYERNAME>'s Persuit",
+                "Loot": "RTID(DefaultLoot@LevelModules)",
+                "Modules": [
+                    "RTID(StandardIntro@LevelModules)",
+                    "RTID(ZombiesDeadWinCon@LevelModules)",
+                    "RTID(SeedBank@CurrentLevel)",
+                    "RTID(DefaultZombieWinCondition@LevelModules)",
+                    "RTID(LevelWarning@CurrentLevel)",
+                    "RTID(PiratePlanks@CurrentLevel)",
+                    "RTID(NewWaves@CurrentLevel)"
+                ],
+                "Name": "潘妮的追击 - 海盗港湾",
+                "NameMultiLanguage": {
+                    "en": "Epic Quest - Electric Mangosteen - Level 6",
+                    "zh": "聚能山竹史诗任务 - 第六关"
+                },
+                "MusicType": "MiniGame_B",
+                "StartingSun": 150,
+                "LevelNumber": 6,
+                "WrittenBy": "SansGrinder",
+                "NormalPresentTable": "egypt_normal_01",
+                "ShinyPresentTable": "egypt_shiny_01",
+                "FirstIntroNarrative": "PERSUITABLE_INTRO",
+                "StageModule": "RTID(PirateStage@LevelModules)"
+            }
+        },
+        {
+            "aliases": [
+                "PERSUITABLE_INTRO"
+            ],
+            "objclass": "NarrativeProperties",
+            "objdata": {
+                "Flow": [
+                    {
+                        "Character": "winnie",
+                        "Action": "NPC_ENTER"
+                    },
+                    {
+                        "Character": "zombossicon",
+                        "Action": "NPC_ENTER"
+                    },
+                    {
+                        "Character": "zombossicon",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "oh hey it's Wednesday isn't it?",
+                            "zh": "哦嘿是不是周三了？"
+                        }
+                    },
+                    {
+                        "Character": "winnie",
+                        "Action": "TIRED",
+                        "Lines": {
+                            "en": "I... don't think - ",
+                            "zh": "我……不认为 - "
+                        }
+                    },
+                    {
+                        "Character": "zombossicon",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "oh i gotta go play persuit else i lose free gems =(",
+                            "zh": "哦我得去打追击了，追五不打留级就少拿钻石了 =("
+                        }
+                    },
+                    {
+                        "Character": "zombossicon",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "welp i gotta go. taking my beloved lvl5 mangosteen with me, ofc",
+                            "zh": "我得走喽。当然，带着我的5阶山竹一起走"
+                        }
+                    },
+                    {
+                        "Character": "winnie",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "Wait! Don't leave! I've detec-",
+                            "zh": "等会，先别走！我检测到——"
+                        }
+                    },
+                    {
+                        "Character": "zombossicon",
+                        "Action": "NPC_EXIT"
+                    },
+                    {
+                        "Character": "winnie",
+                        "Action": "TIRED",
+                        "Lines": {
+                            "en": ". . . . . .",
+                            "zh": ". . . . . ."
+                        }
+                    },
+                    {
+                        "Character": "crazydave",
+                        "Action": "NPC_ENTER"
+                    },
+                    {
+                        "Character": "crazydave",
+                        "Action": "EXCITED",
+                        "Lines": {
+                            "en": "Did he just leave? For real?",
+                            "zh": "他走了？真的假的？"
+                        }
+                    },
+                    {
+                        "Character": "winnie",
+                        "Action": "TIRED",
+                        "Lines": {
+                            "en": "I've detected a lot of intangible timeline turbulence and... ",
+                            "zh": "我检测到了大量无法修复的时间线错乱……"
+                        }
+                    },
+                    {
+                        "Character": "winnie",
+                        "Action": "PLAYFUL",
+                        "Lines": {
+                            "en": "I'm afrid that he will be playing Pirate Seas Day 17, while we have to face his persuit level",
+                            "zh": "恐怕他现在会在打海盗港湾第17天，而我们要面对他的追击关"
+                        }
+                    },
+                    {
+                        "Character": "crazydave",
+                        "Action": "EXCITED",
+                        "Lines": {
+                            "en": "Persuit level? I thought you are the one who organize persuits?",
+                            "zh": "追击？我记得不是你组织的追击吗？"
+                        }
+                    },
+                    {
+                        "Character": "winnie",
+                        "Action": "PLAYFUL",
+                        "Lines": {
+                            "en": "That's another me, from another timeline, another parallel universe, User Dave.",
+                            "zh": "那是另一个平行宇宙的另一条时间线里的我，用户戴夫"
+                        }
+                    },
+                    {
+                        "Character": "winnie",
+                        "Action": "TIRED",
+                        "Lines": {
+                            "en": "For now, we should worry about those Level 6 monsters marching onto our ship",
+                            "zh": "我们现在更应该担心如何应对这些6阶的怪物"
+                        }
+                    },
+                    {
+                        "Character": "crazydave",
+                        "Action": "SHOUT",
+                        "Lines": {
+                            "en": "WHAT? LEVEL 6?!?!",
+                            "zh": "等会？多少阶？！？！"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "PiratePlanks"
+            ],
+            "objclass": "PiratePlankProperties",
+            "objdata": {
+                "PlankRows": [
+                    1,
+                    3
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "mangosteen_normal"
+            ],
+            "objclass": "PlantType",
+            "objdata": {
+                "PlantBasedOn": "phatbeet",
+                "Properties": "RTID(mangosteen_normal@CurrentLevel)",
+                "ShiftedPlantFeatures": {
+                    "ID": 1,
+                    "NAME": {
+                        "zh": "聚能山竹",
+                        "en": "Electric Mangosteen"
+                    },
+                    "_CARDSPRITENAME": "phatbeet",
+                    "CODENAME": "phatbeet",
+                    "OBTAINWORLD": "sky",
+                    "BOOST": 0,
+                    "COSTUME": 1,
+                    "PROPS": "RTID(phatbeet@PlantProps)",
+                    "ALMANAC": "RTID(mangosteen_normal_almanac@CurrentLevel)"
+                }
+            }
+        },
+        {
+            "aliases": [
+                "mangosteen_normal"
+            ],
+            "objclass": "PlantProperties",
+            "objdata": {
+                "Damage": 200,
+                "SunCost": 150,
+                "AttackInterval": 1.9,
+                "Family": "Electricity",
+                "CallsElectricCurrant": true,
+                "RedStunDuration": 1.5,
+                "TimesHeavy": 4,
+                "DamageHeavy": 500,
+                "PlantfoodDamageNear": 1800,
+                "PlantfoodDamageFar": 1800,
+                "ImmuneToBoomBox": false,
+                "ImmuneToSpeakerHit": false,
+                "Cooldown": 10,
+                "CooldownFrom": 0.5,
+                "Toughness": 300
+            }
+        },
+        {
+            "aliases": [
+                "mangosteen_normal_almanac"
+            ],
+            "objclass": "PlantAlmanacProperties",
+            "objdata": {
+                "Introduction": {
+                    "zh": "图鉴",
+                    "en": "Almanac"
+                },
+                "BriefIntroduction": {
+                    "zh": "只是一只最普通的山竹……",
+                    "en": "Just a normal mangosteen..."
+                }
+            }
+        },
+        {
+            "aliases": [
+                "pirate"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(pirate@CurrentLevel)",
+                "ZombieBasedOn": "pirate"
+            }
+        },
+        {
+            "aliases": [
+                "pirate"
+            ],
+            "objclass": "ZombieProperties",
+            "objdata": {
+                "ZombieSort": "Normal",
+                "WalkSPS": 0.185,
+                "EatDPS": 800,
+                "Toughness": 1520
+            }
+        },
+        {
+            "aliases": [
+                "pirate_armor1"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(pirate_armor1@CurrentLevel)",
+                "ZombieBasedOn": "pirate_armor1"
+            }
+        },
+        {
+            "aliases": [
+                "pirate_armor1"
+            ],
+            "objclass": "ZombieProperties",
+            "objdata": {
+                "Toughness": 1520,
+                "EatDPS": 800,
+                "WalkSPS": 0.185,
+                "ZombieSort": "Normal",
+                "StartingArmors": [
+                    "cone"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "cone"
+            ],
+            "objclass": "ArmorType",
+            "objdata": {
+                "Properties": "RTID(tier6_cone@CurrentLevel)",
+                "ArmorBasedOn": "pirate_armor1"
+            }
+        },
+        {
+            "aliases": [
+                "tier6_cone"
+            ],
+            "objclass": "ArmorProperties",
+            "objdata": {
+                "isMetal": false,
+                "isIce": false,
+                "Toughness": 2960,
+                "BowlingLevel": 1
+            }
+        },
+        {
+            "aliases": [
+                "pirate_armor2"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(pirate_armor2@CurrentLevel)",
+                "ZombieBasedOn": "pirate_armor2"
+            }
+        },
+        {
+            "aliases": [
+                "pirate_armor2"
+            ],
+            "objclass": "ZombieProperties",
+            "objdata": {
+                "Toughness": 1520,
+                "EatDPS": 800,
+                "WalkSPS": 0.185,
+                "ZombieSort": "Normal",
+                "StartingArmors": [
+                    "bucket"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "bucket"
+            ],
+            "objclass": "ArmorType",
+            "objdata": {
+                "Properties": "RTID(tier6_bucket@CurrentLevel)",
+                "ArmorBasedOn": "pirate_armor2"
+            }
+        },
+        {
+            "aliases": [
+                "tier6_bucket"
+            ],
+            "objclass": "ArmorProperties",
+            "objdata": {
+                "Toughness": 8800,
+                "isMetal": false,
+                "BowlingLevel": 2
+            }
+        },
+        {
+            "aliases": [
+                "swashbuckler"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(swashbuckler@CurrentLevel)",
+                "ZombieBasedOn": "swashbuckler"
+            }
+        },
+        {
+            "aliases": [
+                "swashbuckler"
+            ],
+            "objclass": "ZombieProperties",
+            "objdata": {
+                "ChooseToSpawnOnNonDeckRows": true,
+                "WalkSPS": 0.185,
+                "EatDPS": 800,
+                "Toughness": 1520,
+                "ChanceToFallIntoSea": 0.05,
+                "LandingColumns": [
+                    4
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "pirate_armor4"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(pirate_armor4@CurrentLevel)",
+                "ZombieBasedOn": "pirate_armor4"
+            }
+        },
+        {
+            "aliases": [
+                "pirate_armor4"
+            ],
+            "objclass": "ZombieProperties",
+            "objdata": {
+                "Toughness": 1520,
+                "EatDPS": 800,
+                "WalkSPS": 0.185,
+                "ZombieSort": "Normal",
+                "StartingArmors": [
+                    "brick"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "brick"
+            ],
+            "objclass": "ArmorType",
+            "objdata": {
+                "Properties": "RTID(tier6_brick@CurrentLevel)",
+                "ArmorBasedOn": "pirate_armor4"
+            }
+        },
+        {
+            "aliases": [
+                "tier6_brick"
+            ],
+            "objclass": "ArmorProperties",
+            "objdata": {
+                "Toughness": 17600,
+                "isMetal": false,
+                "BowlingLevel": 3
+            }
+        },
+        {
+            "aliases": [
+                "pirate_flag"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(pirate_flag@CurrentLevel)",
+                "ZombieBasedOn": "pirate_flag"
+            }
+        },
+        {
+            "aliases": [
+                "pirate_flag"
+            ],
+            "objclass": "ZombieProperties",
+            "objdata": {
+                "ZombieSort": "Normal",
+                "CannotCarryPlantfoodsInWaves": true,
+                "WalkSPS": 0.24,
+                "EatDPS": 800,
+                "Toughness": 1520
+            }
+        },
+        {
+            "aliases": [
+                "seagull"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(seagull@CurrentLevel)",
+                "ZombieBasedOn": "seagull"
+            }
+        },
+        {
+            "aliases": [
+                "seagull"
+            ],
+            "objclass": "ZombieProperties",
+            "objdata": {
+                "ChooseToSpawnOnNonDeckRows": true,
+                "WalkSPS": 0.355,
+                "EatDPS": 800,
+                "Toughness": 2160
+            }
+        },
+        {
+            "aliases": [
+                "pirate_captain"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(pirate_captain@CurrentLevel)",
+                "ZombieBasedOn": "pirate_captain"
+            }
+        },
+        {
+            "aliases": [
+                "pirate_captain"
+            ],
+            "objclass": "ZombieProperties",
+            "objdata": {
+                "EatDPS": 800,
+                "Toughness": 3360,
+                "WalkSPS": 0.15,
+                "ParrotCooldown": 7,
+                "ParrotRetryCooldown": 1
+            }
+        },
+        {
+            "aliases": [
+                "pirate_captain_parrot"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(pirate_captain_parrot@CurrentLevel)",
+                "ZombieBasedOn": "pirate_captain_parrot"
+            }
+        },
+        {
+            "aliases": [
+                "pirate_captain_parrot"
+            ],
+            "objclass": "ZombieProperties",
+            "objdata": {
+                "CannotBeHypnotizedByProjectiles": true,
+                "CannotBeEnlightenedBySolarSage": true,
+                "ImmuneToSweetPotato": true,
+                "KilledByShrinkingViolet": true,
+                "CanBeEasilySwallowedByChomper": true,
+                "CannotCarryPlantfoodsInWaves": true,
+                "WalkSPS": 1.4,
+                "EatDPS": 800,
+                "Toughness": 2400,
+                "NormalDeathWhenMowed": true,
+                "FlyingSpeed": 1.4,
+                "ImmuneToGarlic": true
+            }
+        },
+        {
+            "aliases": [
+                "cannon"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(cannon@CurrentLevel)",
+                "ZombieBasedOn": "cannon"
+            }
+        },
+        {
+            "aliases": [
+                "cannon"
+            ],
+            "objclass": "ZombieProperties",
+            "objdata": {
+                "CannotBeHypnotizedByProjectiles": true,
+                "CannotBeEnlightenedBySolarSage": true,
+                "CannotBeGrabbedByPtero": true,
+                "ImmuneToSweetPotato": true,
+                "ImmuneToShrinkingViolet": true,
+                "ChooseToSpawnOnNonDeckRows": true,
+                "CannotBeTossedByCitron": true,
+                "CannotBeSwallowedByChomper": true,
+                "WalkSPS": 0.185,
+                "EatDPS": 800,
+                "Toughness": 4800,
+                "ImpType": "pirate_imp",
+                "NormalDeathWhenMowed": true,
+                "TimeBefore": 3,
+                "TimeBeforeAdditional": 1,
+                "ShootInterval": 7.5,
+                "ShootIntervalAdditional": 0.5,
+                "MaxImpCount": 5,
+                "MaxImpCountAdditional": 0,
+                "ExplodeImpCount": 5,
+                "ExplodeImpCountAdditional": 0,
+                "IgnoredByThymeWarp": true,
+                "ImmuneToGarlic": true,
+                "WavePointCost": 700,
+                "Weight": 1500,
+                "HitRect": "RTID(PirateCannonHitRect@RectangleProps)",
+                "AttackRect": "RTID(PirateCannonAttackRect@RectangleProps)",
+                "ShootColumns": [
+                    5,
+                    4
+                ],
+                "ExplodeColumns": [
+                    5,
+                    4,
+                    3
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "barrelroller"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(barrelroller@CurrentLevel)",
+                "ZombieBasedOn": "barrelroller"
+            }
+        },
+        {
+            "aliases": [
+                "barrelroller"
+            ],
+            "objclass": "ZombieProperties",
+            "objdata": {
+                "BarrelType": "pirate_barrel",
+                "ImmuneToSweetPotato": true,
+                "WalkSPS": 0.2,
+                "EatDPS": 800,
+                "Toughness": 1520,
+                "NormalDeathWhenMowed": true
+            }
+        },
+        {
+            "aliases": [
+                "pirate_barrel"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(pirate_barrel@CurrentLevel)",
+                "ZombieBasedOn": "pirate_barrel"
+            }
+        },
+        {
+            "aliases": [
+                "pirate_barrel"
+            ],
+            "objclass": "ZombieProperties",
+            "objdata": {
+                "IgnoredBySnapPea": true,
+                "CannotBeHypnotizedByProjectiles": true,
+                "CannotBeEnlightenedBySolarSage": true,
+                "ImmuneToSweetPotato": true,
+                "ImmuneToShrinkingViolet": true,
+                "CannotBeDetectedBySapfling": true,
+                "CannotBeSwallowedByChomper": true,
+                "ChiliStunDurationMult": 0,
+                "CannotCarryPlantfoodsInWaves": true,
+                "WalkSPS": 0.185,
+                "EatDPS": 800,
+                "Toughness": 8800,
+                "NormalDeathWhenMowed": true,
+                "ImmuneToGarlic": true
+            }
+        },
+        {
+            "aliases": [
+                "pirate_imp"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(pirate_imp@CurrentLevel)",
+                "ZombieBasedOn": "pirate_imp"
+            }
+        },
+        {
+            "aliases": [
+                "pirate_imp"
+            ],
+            "objclass": "ZombieProperties",
+            "objdata": {
+                "KilledByShrinkingViolet": true,
+                "CannotBeGrabbedByPtero": true,
+                "ZombieSort": "Normal",
+                "IgnoredInWaves": false,
+                "WalkSPS": 0.22,
+                "EatDPS": 800,
+                "Toughness": 1520
+            }
+        },
+        {
+            "aliases": [
+                "pirate_gargantuar"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(pirate_gargantuar@CurrentLevel)",
+                "ZombieBasedOn": "pirate_gargantuar"
+            }
+        },
+        {
+            "aliases": [
+                "pirate_gargantuar"
+            ],
+            "objclass": "ZombieProperties",
+            "objdata": {
+                "CannotBeEnlightenedBySolarSage": true,
+                "ZombieSort": "Gargantuar",
+                "CannotBeGrabbedByPtero": true,
+                "CannotChangeLaneByPowerToss": true,
+                "CannotBeFlickedByPowerToss": true,
+                "CannotBeDraggedByTangleKelp": true,
+                "CannotBeTossedByCitron": true,
+                "CannotBeSwallowedByChomper": true,
+                "CannotCarryPlantfoodsInWaves": true,
+                "SmashDamage": 12000,
+                "LivesInDeepWater": true,
+                "WalkSPS": 0.24,
+                "EatDPS": 800,
+                "Toughness": 28800,
+                "NormalDeathWhenMowed": true,
+                "ImpType": "pirate_imp"
+            }
+        },
+        {
+            "aliases": [
+                "SeedBank"
+            ],
+            "objclass": "SeedBankProperties",
+            "objdata": {
+                "OverrideSeedSlotsCount": 5,
+                "PresetPlantList": [
+                    {
+                        "Level": -1,
+                        "PlantType": "mangosteen_normal"
+                    }
+                ],
+                "PlantExcludeList": [
+                    "springbean",
+                    "sunflower",
+                    "sunshroom",
+                    "twinsunflower",
+                    "solartomato",
+                    "chardguard",
+                    "sunbean",
+                    "plantern",
+                    "toadstool",
+                    "shinevine",
+                    "solarsage",
+                    "primalsunflower",
+                    "goldbloom",
+                    "goldleaf",
+                    "moonbean",
+                    "moonflower",
+                    "enlightenmint",
+                    "marigold",
+                    "marigold_yellow",
+                    "hollyknight",
+                    "scaredyshroom",
+                    "primalpeashooter",
+                    "guacodile",
+                    "parsnip",
+                    "reinforcemint"
+                ],
+                "SelectionMethod": "chooser"
+            }
+        },
+        {
+            "aliases": [
+                "LevelWarning"
+            ],
+            "objclass": "StarChallengeBeatTheLevelProps",
+            "objdata": {
+                "DescriptionsMultilanguage": [
+                    {
+                        "en": "All zombies are PVZ2c PERSUIT Level 6 (8 times atk/hp)",
+                        "zh": "所有僵尸均为中文版追击6阶（8倍攻击力和血量）"
+                    },
+                    {
+                        "en": "Survive without sun producers or tactical blovers",
+                        "zh": "不使用生产植物和战术风扇过关"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "NewWaves"
+            ],
+            "objclass": "WaveManagerModuleProperties",
+            "objdata": {
+                "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+            }
+        },
+        {
+            "aliases": [
+                "WaveManagerProps"
+            ],
+            "objclass": "WaveManagerProperties",
+            "objdata": {
+                "ZombieCountdownFirstWaveSecs": 0.1,
+                "SuppressFlagZombie": true,
+                "FlagWaveInterval": 15,
+                "WaveCount": 15,
+                "WaveSpendingPointIncrement": 100,
+                "WaveSpendingPoints": 300,
+                "Waves": [
+                    [
+                        "RTID(Wave1@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave2@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave3@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave4@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave5@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave6@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave7@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave8@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave9@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave10@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave11@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave12@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave13@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave14@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave15@CurrentLevel)"
+                    ]
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave1"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "MustKillAllToNextWave": true,
+                "AdditionalPlantfood": 0,
+                "Zombies": [
+                    {
+                        "Type": "RTID(swashbuckler@CurrentLevel)",
+                        "CarrySun": 75
+                    },
+                    {
+                        "Type": "RTID(swashbuckler@CurrentLevel)",
+                        "CarrySun": 75
+                    },
+                    {
+                        "Type": "RTID(swashbuckler@CurrentLevel)",
+                        "CarrySun": 75
+                    },
+                    {
+                        "Type": "RTID(swashbuckler@CurrentLevel)",
+                        "CarrySun": 75
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave2"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "MustKillAllToNextWave": true,
+                "Zombies": [
+                    {
+                        "Type": "RTID(pirate_armor1@CurrentLevel)",
+                        "CarrySun": 100
+                    },
+                    {
+                        "Type": "RTID(pirate@CurrentLevel)",
+                        "CarrySun": 50
+                    },
+                    {
+                        "Type": "RTID(pirate@CurrentLevel)",
+                        "CarrySun": 50
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave3"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "MustKillAllToNextWave": true,
+                "AdditionalPlantfood": 0,
+                "Zombies": [
+                    {
+                        "Type": "RTID(seagull@CurrentLevel)",
+                        "CarrySun": 75
+                    },
+                    {
+                        "Type": "RTID(seagull@CurrentLevel)",
+                        "CarrySun": 75
+                    },
+                    {
+                        "Type": "RTID(seagull@CurrentLevel)",
+                        "CarrySun": 75
+                    },
+                    {
+                        "Type": "RTID(swashbuckler@CurrentLevel)",
+                        "CarrySun": 75
+                    },
+                    {
+                        "Row": "4",
+                        "Type": "RTID(swashbuckler@CurrentLevel)",
+                        "CarrySun": 75
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave4"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "MustKillAllToNextWave": true,
+                "Zombies": [
+                    {
+                        "Type": "RTID(pirate_armor1@CurrentLevel)",
+                        "CarrySun": 100
+                    },
+                    {
+                        "Type": "RTID(pirate_armor1@CurrentLevel)",
+                        "CarrySun": 100
+                    },
+                    {
+                        "Type": "RTID(pirate@CurrentLevel)",
+                        "CarrySun": 50
+                    },
+                    {
+                        "Type": "RTID(pirate@CurrentLevel)",
+                        "CarrySun": 50
+                    },
+                    {
+                        "Type": "RTID(pirate@CurrentLevel)",
+                        "CarrySun": 50
+                    },
+                    {
+                        "Type": "RTID(cannon@CurrentLevel)",
+                        "CarrySun": 250
+                    },
+                    {
+                        "Type": "RTID(cannon@CurrentLevel)",
+                        "CarrySun": 250
+                    },
+                    {
+                        "Type": "RTID(cannon@CurrentLevel)",
+                        "CarrySun": 250
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave5"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "MustKillAllToNextWave": true,
+                "AdditionalPlantfood": 0,
+                "Zombies": [
+                    {
+                        "Type": "RTID(pirate_armor2@CurrentLevel)",
+                        "CarrySun": 200
+                    },
+                    {
+                        "Type": "RTID(pirate@CurrentLevel)",
+                        "CarrySun": 50
+                    },
+                    {
+                        "Type": "RTID(barrelroller@CurrentLevel)",
+                        "CarrySun": 250
+                    },
+                    {
+                        "Type": "RTID(barrelroller@CurrentLevel)",
+                        "CarrySun": 250
+                    },
+                    {
+                        "Type": "RTID(barrelroller@CurrentLevel)",
+                        "CarrySun": 250
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave6"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "MustKillAllToNextWave": true,
+                "Zombies": [
+                    {
+                        "Type": "RTID(seagull@CurrentLevel)",
+                        "CarrySun": 75
+                    },
+                    {
+                        "Type": "RTID(seagull@CurrentLevel)",
+                        "CarrySun": 75
+                    },
+                    {
+                        "Type": "RTID(pirate_captain@CurrentLevel)",
+                        "CarrySun": 225
+                    },
+                    {
+                        "Type": "RTID(pirate_captain@CurrentLevel)",
+                        "CarrySun": 225
+                    },
+                    {
+                        "Type": "RTID(pirate_armor4@CurrentLevel)",
+                        "CarrySun": 300
+                    },
+                    {
+                        "Type": "RTID(pirate_armor4@CurrentLevel)",
+                        "CarrySun": 300
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave7"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "MustKillAllToNextWave": true,
+                "Zombies": [
+                    {
+                        "Type": "RTID(pirate_captain@CurrentLevel)",
+                        "CarrySun": 225
+                    },
+                    {
+                        "Type": "RTID(pirate_captain@CurrentLevel)",
+                        "CarrySun": 225
+                    },
+                    {
+                        "Type": "RTID(pirate_captain@CurrentLevel)",
+                        "CarrySun": 225
+                    },
+                    {
+                        "Type": "RTID(pirate_captain@CurrentLevel)",
+                        "CarrySun": 225
+                    },
+                    {
+                        "Type": "RTID(pirate_captain@CurrentLevel)",
+                        "CarrySun": 225
+                    },
+                    {
+                        "Type": "RTID(pirate_armor1@CurrentLevel)",
+                        "CarrySun": 100
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave8"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "MustKillAllToNextWave": true,
+                "AdditionalPlantfood": 0,
+                "Zombies": [
+                    {
+                        "Type": "RTID(pirate_armor2@CurrentLevel)",
+                        "CarrySun": 200
+                    },
+                    {
+                        "Type": "RTID(pirate@CurrentLevel)",
+                        "CarrySun": 50
+                    },
+                    {
+                        "Type": "RTID(pirate_armor2@CurrentLevel)",
+                        "CarrySun": 200
+                    },
+                    {
+                        "Type": "RTID(pirate@CurrentLevel)",
+                        "CarrySun": 50
+                    },
+                    {
+                        "Type": "RTID(pirate_gargantuar@CurrentLevel)",
+                        "CarrySun": 500
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave9"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "MustKillAllToNextWave": true,
+                "AdditionalPlantfood": 0,
+                "Zombies": [
+                    {
+                        "Type": "RTID(cannon@CurrentLevel)",
+                        "CarrySun": 250
+                    },
+                    {
+                        "Type": "RTID(cannon@CurrentLevel)",
+                        "CarrySun": 250
+                    },
+                    {
+                        "Type": "RTID(swashbuckler@CurrentLevel)",
+                        "CarrySun": 75
+                    },
+                    {
+                        "Type": "RTID(barrelroller@CurrentLevel)",
+                        "CarrySun": 250
+                    },
+                    {
+                        "Type": "RTID(barrelroller@CurrentLevel)",
+                        "CarrySun": 250
+                    },
+                    {
+                        "Type": "RTID(barrelroller@CurrentLevel)",
+                        "CarrySun": 250
+                    },
+                    {
+                        "Type": "RTID(barrelroller@CurrentLevel)",
+                        "CarrySun": 250
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave10"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "MustKillAllToNextWave": true,
+                "Zombies": [
+                    {
+                        "Type": "RTID(seagull@CurrentLevel)",
+                        "CarrySun": 75
+                    },
+                    {
+                        "Type": "RTID(seagull@CurrentLevel)",
+                        "CarrySun": 75
+                    },
+                    {
+                        "Type": "RTID(pirate_captain@CurrentLevel)",
+                        "CarrySun": 225
+                    },
+                    {
+                        "Type": "RTID(pirate_captain@CurrentLevel)",
+                        "CarrySun": 225
+                    },
+                    {
+                        "Type": "RTID(pirate_captain@CurrentLevel)",
+                        "CarrySun": 225
+                    },
+                    {
+                        "Type": "RTID(pirate_captain@CurrentLevel)",
+                        "CarrySun": 225
+                    },
+                    {
+                        "Type": "RTID(pirate_armor4@CurrentLevel)",
+                        "CarrySun": 300
+                    },
+                    {
+                        "Type": "RTID(pirate_armor4@CurrentLevel)",
+                        "CarrySun": 300
+                    },
+                    {
+                        "Type": "RTID(pirate_armor4@CurrentLevel)",
+                        "CarrySun": 300
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave11"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "MustKillAllToNextWave": true,
+                "Zombies": [
+                    {
+                        "Type": "RTID(pirate_imp@CurrentLevel)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(pirate_imp@CurrentLevel)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(pirate_imp@CurrentLevel)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(pirate_imp@CurrentLevel)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(pirate_imp@CurrentLevel)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(pirate_gargantuar@CurrentLevel)",
+                        "CarrySun": 500
+                    },
+                    {
+                        "Type": "RTID(pirate_gargantuar@CurrentLevel)",
+                        "CarrySun": 500
+                    },
+                    {
+                        "Type": "RTID(pirate_gargantuar@CurrentLevel)",
+                        "CarrySun": 500
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave12"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "MustKillAllToNextWave": true,
+                "AdditionalPlantfood": 0,
+                "Zombies": [
+                    {
+                        "Type": "RTID(cannon@CurrentLevel)",
+                        "CarrySun": 250
+                    },
+                    {
+                        "Type": "RTID(cannon@CurrentLevel)",
+                        "CarrySun": 250
+                    },
+                    {
+                        "Type": "RTID(cannon@CurrentLevel)",
+                        "CarrySun": 250
+                    },
+                    {
+                        "Type": "RTID(cannon@CurrentLevel)",
+                        "CarrySun": 250
+                    },
+                    {
+                        "Type": "RTID(cannon@CurrentLevel)",
+                        "CarrySun": 250
+                    },
+                    {
+                        "Type": "RTID(cannon@CurrentLevel)",
+                        "CarrySun": 250
+                    },
+                    {
+                        "Type": "RTID(swashbuckler@CurrentLevel)",
+                        "CarrySun": 75
+                    },
+                    {
+                        "Type": "RTID(pirate_armor4@CurrentLevel)",
+                        "CarrySun": 300
+                    },
+                    {
+                        "Type": "RTID(pirate_armor4@CurrentLevel)",
+                        "CarrySun": 300
+                    },
+                    {
+                        "Type": "RTID(pirate_armor4@CurrentLevel)",
+                        "CarrySun": 300
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave13"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "MustKillAllToNextWave": true,
+                "AdditionalPlantfood": 0,
+                "Zombies": [
+                    {
+                        "Type": "RTID(pirate_gargantuar@CurrentLevel)",
+                        "CarrySun": 500
+                    },
+                    {
+                        "Type": "RTID(pirate_captain@CurrentLevel)",
+                        "CarrySun": 225
+                    },
+                    {
+                        "Type": "RTID(pirate_captain@CurrentLevel)",
+                        "CarrySun": 225
+                    },
+                    {
+                        "Type": "RTID(barrelroller@CurrentLevel)",
+                        "CarrySun": 250
+                    },
+                    {
+                        "Type": "RTID(barrelroller@CurrentLevel)",
+                        "CarrySun": 250
+                    },
+                    {
+                        "Type": "RTID(barrelroller@CurrentLevel)",
+                        "CarrySun": 250
+                    },
+                    {
+                        "Type": "RTID(barrelroller@CurrentLevel)",
+                        "CarrySun": 250
+                    },
+                    {
+                        "Type": "RTID(pirate_armor4@CurrentLevel)",
+                        "CarrySun": 300
+                    },
+                    {
+                        "Type": "RTID(pirate_armor4@CurrentLevel)",
+                        "CarrySun": 300
+                    },
+                    {
+                        "Type": "RTID(pirate_armor4@CurrentLevel)",
+                        "CarrySun": 300
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave14"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "MustKillAllToNextWave": true,
+                "AdditionalPlantfood": 0,
+                "Zombies": [
+                    {
+                        "Type": "RTID(pirate_gargantuar@CurrentLevel)",
+                        "CarrySun": 500
+                    },
+                    {
+                        "Type": "RTID(pirate_gargantuar@CurrentLevel)",
+                        "CarrySun": 500
+                    },
+                    {
+                        "Type": "RTID(pirate_imp@CurrentLevel)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(pirate_imp@CurrentLevel)",
+                        "CarrySun": 25
+                    },
+                    {
+                        "Type": "RTID(cannon@CurrentLevel)",
+                        "CarrySun": 250
+                    },
+                    {
+                        "Type": "RTID(cannon@CurrentLevel)",
+                        "CarrySun": 250
+                    },
+                    {
+                        "Type": "RTID(pirate_armor4@CurrentLevel)",
+                        "CarrySun": 300
+                    },
+                    {
+                        "Type": "RTID(pirate_armor4@CurrentLevel)",
+                        "CarrySun": 300
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave15"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "MustKillAllToNextWave": true,
+                "AdditionalPlantfood": 0,
+                "Zombies": [
+                    {
+                        "Type": "RTID(pirate_flag@CurrentLevel)"
+                    },
+                    {
+                        "Type": "RTID(pirate_gargantuar@CurrentLevel)",
+                        "CarrySun": 500
+                    },
+                    {
+                        "Type": "RTID(pirate_gargantuar@CurrentLevel)",
+                        "CarrySun": 500
+                    },
+                    {
+                        "Type": "RTID(pirate_gargantuar@CurrentLevel)",
+                        "CarrySun": 500
+                    },
+                    {
+                        "Type": "RTID(pirate_gargantuar@CurrentLevel)",
+                        "CarrySun": 500
+                    },
+                    {
+                        "Type": "RTID(pirate_captain@CurrentLevel)",
+                        "CarrySun": 225
+                    },
+                    {
+                        "Type": "RTID(pirate_captain@CurrentLevel)",
+                        "CarrySun": 225
+                    },
+                    {
+                        "Type": "RTID(pirate_captain@CurrentLevel)",
+                        "CarrySun": 225
+                    },
+                    {
+                        "Type": "RTID(pirate_armor4@CurrentLevel)",
+                        "CarrySun": 300
+                    },
+                    {
+                        "Type": "RTID(pirate_armor4@CurrentLevel)",
+                        "CarrySun": 300
+                    },
+                    {
+                        "Type": "RTID(barrelroller@CurrentLevel)",
+                        "CarrySun": 250
+                    },
+                    {
+                        "Type": "RTID(barrelroller@CurrentLevel)",
+                        "CarrySun": 250
+                    },
+                    {
+                        "Type": "RTID(barrelroller@CurrentLevel)",
+                        "CarrySun": 250
+                    },
+                    {
+                        "Type": "RTID(barrelroller@CurrentLevel)",
+                        "CarrySun": 250
+                    },
+                    {
+                        "Type": "RTID(barrelroller@CurrentLevel)",
+                        "CarrySun": 250
+                    },
+                    {
+                        "Type": "RTID(swashbuckler@CurrentLevel)",
+                        "CarrySun": 75
+                    },
+                    {
+                        "Type": "RTID(swashbuckler@CurrentLevel)",
+                        "CarrySun": 75
+                    },
+                    {
+                        "Type": "RTID(swashbuckler@CurrentLevel)",
+                        "CarrySun": 75
+                    },
+                    {
+                        "Type": "RTID(swashbuckler@CurrentLevel)",
+                        "CarrySun": 75
+                    },
+                    {
+                        "Type": "RTID(swashbuckler@CurrentLevel)",
+                        "CarrySun": 75
+                    }
+                ]
+            }
+        }
+    ],
+    "version": 1
+}

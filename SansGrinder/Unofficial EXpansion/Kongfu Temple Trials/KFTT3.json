@@ -39,7 +39,7 @@
 				],
 				"InitialPlantList":[
 					{
-						"PlantType":"repeater",
+						"PlantType":"RTID(repeater@CurrentLevel)",
 						"Weight":20
 					}
 				],
@@ -49,6 +49,42 @@
 						"Speed":100
 					}
 				]
+			}
+		},
+		{
+			"aliases":[
+				"repeater"
+			],
+			"objclass":"PlantType",
+			"objdata":{
+				"PlantBasedOn":"repeater",
+				"Properties":"RTID(repeater@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"repeater"
+			],
+			"objclass": "PlantProperties",
+			"objdata": {
+				"ShootInterval": 1.35,
+				"ShootIntervalAdditional": 0.15,
+				"PeaType": "pea",
+				"PeaTypePlantfood": "pea",
+				"PeaTypeMega": "pea_mega",
+				"PlantfoodPeaCount": 90,
+				"Cooldown": 5,
+				"CooldownFrom": 1,
+				"SunCost": 200,
+				"BeghouledCost": 2000,
+				"Toughness": 300,
+				"Family": "Peashooter",
+				"EvolutionRecipes": [],
+				"MintBoostedProps": {
+					"ResistanceMult": 1,
+					"SpeedMult": 2,
+					"Plantfood": false
+				}
 			}
 		},
 		{
@@ -100,6 +136,20 @@
 				"ChallengesAlwaysAvailable":true
 			}
 		},
+		{
+            "aliases": [
+                "BeatTheLevel"
+            ],
+            "objclass": "StarChallengeBeatTheLevelProps",
+            "objdata": {
+                "DescriptionsMultilanguage": [
+                    {
+                        "en": "MGP Fusions are disabled in this level!",
+                        "zh": "本关卡禁用了超级机枪豌豆融合！"
+                    }
+                ]
+            }
+        },
 		{
 			"aliases":[
 				"NewWaves"
@@ -280,15 +330,55 @@
 			"objdata":{
 				"Add":[
 					{
-						"Type":"RTID(gatling@PlantTypes)",
+						"Type":"RTID(gatling@CurrentLevel)",
 						"Weight":40
 					}
 				],
 				"Remove":[
 					{
-                        "Type": "RTID(repeater@PlantTypes)"
+                        "Type": "RTID(repeater@CurrentLevel)"
                     }
 				]
+			}
+		},
+		{
+			"aliases":[
+				"gatling"
+			],
+			"objclass":"PlantType",
+			"objdata":{
+				"PlantBasedOn":"gatling",
+				"Properties":"RTID(gatling@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"gatling"
+			],
+			"objclass": "PlantProperties",
+			"objdata": {
+				"ShootInterval": 0.9,
+				"ShootIntervalAdditional": 0.1,
+				"PeaType": "pea",
+				"PeaTypePlantfood": "pea",
+				"PeaTypesPlantfood": [
+					"pea",
+					"pea_flame_yellow",
+					"pea_flame_blue"
+				],
+				"PlantfoodPeaCount": 60,
+				"Cooldown": 5,
+				"CooldownFrom": 1,
+				"SunCost": 450,
+				"BeghouledCost": 4000,
+				"Toughness": 300,
+				"Family": "Peashooter",
+				"EvolutionRecipes": [],
+				"MintBoostedProps": {
+					"ResistanceMult": 1,
+					"SpeedMult": 2,
+					"Plantfood": false
+				}
 			}
 		},
 		{
@@ -427,7 +517,7 @@
 						"MaxCount":10,
 						"MaxCountCooldownSeconds":5,
 						"MaxWeightFactor":0,
-						"Type":"RTID(megagatling@PlantTypes)",
+						"Type":"RTID(megagatling@CurrentLevel)",
 						"Weight":40
 					}
 				],
@@ -436,6 +526,43 @@
                         "Type": "RTID(cherry_bomb@PlantTypes)"
                     }
 				]
+			}
+		},
+		{
+			"aliases":[
+				"megagatling"
+			],
+			"objclass":"PlantType",
+			"objdata":{
+				"PlantBasedOn":"megagatling",
+				"Properties":"RTID(megagatling@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"megagatling"
+			],
+			"objclass": "PlantProperties",
+			"objdata": {
+				"PeaSpeedMult": 1.7,
+				"ShootInterval": 1.35,
+				"ShootIntervalAdditional": 0.15,
+				"PeaType": "pea",
+				"PeaTypePlantfood": "pea",
+				"PlantfoodPeaCount": 150,
+				"ChanceToPlantfood": 0.03,
+				"Cooldown": 5,
+				"CooldownFrom": 1,
+				"SunCost": 450,
+				"BeghouledCost": 6500,
+				"Toughness": 300,
+				"EvolutionRecipes": [],
+				"Family": "Peashooter",
+				"MintBoostedProps": {
+					"ResistanceMult": 1,
+					"SpeedMult": 2,
+					"Plantfood": false
+				}
 			}
 		},
         {
@@ -448,18 +575,53 @@
 					{
 						"MaxCount":10,
 						"MaxWeightFactor":0,
-						"Type":"RTID(poisonpeashooter@PlantTypes)",
+						"Type":"RTID(poisonpeashooter@CurrentLevel)",
 						"Weight":40
 					}
 				],
 				"Remove":[
 					{
-                        "Type": "RTID(gatling@PlantTypes)"
+                        "Type": "RTID(gatling@CurrentLevel)"
                     },
                     {
                         "Type": "RTID(cherry_bomb@PlantTypes)"
                     }
 				]
+			}
+		},
+		{
+			"aliases":[
+				"poisonpeashooter"
+			],
+			"objclass":"PlantType",
+			"objdata":{
+				"PlantBasedOn":"poisonpeashooter",
+				"Properties":"RTID(poisonpeashooter@CurrentLevel)"
+			}
+		},
+		{
+			"aliases": [
+				"poisonpeashooter"
+			],
+			"objclass": "PlantProperties",
+			"objdata": {
+				"ShootInterval": 1.35,
+				"ShootIntervalAdditional": 0.15,
+				"Cooldown": 5,
+				"CooldownFrom": 1,
+				"SunCost": 150,
+				"BeghouledCost": 1500,
+				"Toughness": 300,
+				"PeaType": "pea_goo",
+				"PeaTypePlantfood": "pea_goo_pf",
+				"Family": "Poison",
+				"PeaSpeedPlantfood": 5,
+				"EvolutionRecipes": [],
+				"MintBoostedProps": {
+					"ResistanceMult": 1,
+					"SpeedMult": 2,
+					"Plantfood": false
+				}
 			}
 		},
         {

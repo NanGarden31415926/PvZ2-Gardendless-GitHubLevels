@@ -1,0 +1,825 @@
+{
+  "#comment": "Vanish",
+  "version": 1,
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "LevelNumber": 21,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "MusicType": "MiniGame_A",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "NameMultiLanguage": {
+          "en": "Vanish",
+          "zh": "消陨"
+        },
+        "Description": "[PLAYERS_TRIP_TO_LOSTCITY]",
+        "StageModule": "RTID(LostCityNightStage@LevelModules)",
+        "Modules": [
+          "RTID(StandardIntro@LevelModules)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(BeatTheLevel@CurrentLevel)",
+          "RTID(ModPlants@CurrentLevel)",
+          "RTID(InitialGridItems@CurrentLevel)"
+        ],
+        "WrittenBy": "岸波白野＆失重汤姆"
+      }
+    },
+    {
+      "aliases": [
+        "BeatTheLevel"
+      ],
+      "objclass": "StarChallengeBeatTheLevelProps",
+      "objdata": {
+        "DescriptionsMultilanguage": [
+          {
+            "en": "Your Plants look a bit different...",
+            "zh": "你的植物看起来有些变化..."
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "ModPlants"
+      ],
+      "objclass": "PlantModifierProperties",
+      "objdata": {
+        "List": [
+          {
+            "Type": "repeater",
+            "NewObjdata": {             
+              "SunCost": 225             
+            }
+          },
+          {
+            "Type": "tallnut",
+            "NewObjdata": {
+              "Toughness": 10000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "ChallengeModule"
+      ],
+      "objclass": "StarChallengeModuleProperties",
+      "objdata": {
+        "Challenges": [
+          [
+            "RTID(BeatTheLevel@CurrentLevel)"
+          ]
+        ],
+        "ChallengesAlwaysAvailable": true
+      }
+    },
+    {
+      "aliases": [
+        "BeatTheLevel"
+      ],
+      "objclass": "StarChallengeBeatTheLevelProps",
+      "objdata": {
+        "Description": "[STARCHALLENGE_PRESET_PLANTS]",
+        "DescriptiveName": "[STARCHALLENGE_PRESET_PLANTS_NAME]"
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "PresetPlantList": [
+          {
+            "PlantType": "repeater",
+            "Level": 0
+          },
+          {
+            "PlantType": "akee",
+            "Level": 0
+          },
+          {
+            "PlantType": "puffshroom",
+            "Level": 0
+          },
+          {
+            "PlantType": "stallia",
+            "Level": 0
+          },
+          {
+            "PlantType": "tallnut",
+            "Level": 0
+          }
+        ],
+        "SelectionMethod": "preset"
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {},
+          {},
+          {},
+          {
+            "PointIncrementPerWave": 40,
+            "StartingPoints": 380,
+            "StartingWave": 4,
+            "ZombiePool": [
+              "RTID(lostcity_excavator@ZombieTypes)",
+              "RTID(lostcity_armor2@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 60,
+            "StartingPoints": 460,
+            "StartingWave": 5,
+            "ZombiePool": [
+              "RTID(lostcity_excavator@ZombieTypes)",
+              "RTID(lostcity_armor2@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 70,
+            "StartingPoints": 560,
+            "StartingWave": 4,
+            "ZombiePool": [
+              "RTID(lostcity_excavator@ZombieTypes)",
+              "RTID(lostcity_armor2@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 90,
+            "StartingPoints": 660,
+            "StartingWave": 4,
+            "ZombiePool": [
+              "RTID(lostcity_excavator@ZombieTypes)",
+              "RTID(lostcity_armor2@ZombieTypes)"
+            ]
+          }
+        ],
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "MinNextWaveHealthPercentage": 0.5,
+        "MaxNextWaveHealthPercentage": 0.65,
+        "FlagWaveInterval": 4,
+        "WaveCount": 12,
+        "WaveSpendingPointIncrement": 150,
+        "WaveSpendingPoints": 300,
+        "Waves": [
+          [
+            "RTID(Wave1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)",
+            "RTID(Wave4ParachuteRainEvent0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)",
+            "RTID(Wave7ParachuteRainEvent0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)",
+            "RTID(Wave9ParachuteRainEvent0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)",
+            "RTID(Wave10ParachuteRainEvent0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave11@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave12@CurrentLevel)",
+            "RTID(Wave12ParachuteRainEvent0@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "DynamicPlantfood": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "Zombies": [
+          {
+            "Row": "1",
+            "Type": "RTID(lostcity@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(lostcity@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(lostcity@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 1,
+        "Zombies": [
+          {
+            "Row": "2",
+            "Type": "RTID(lostcity_jane@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(lostcity_jane@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(lostcity_impporter@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(lostcity_impporter@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(lostcity_armor1@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(lostcity@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(lostcity@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(lostcity@ZombieTypes)",
+            "Row": "5"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Row": "3",
+            "Type": "RTID(lostcity_relichunter@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(lostcity_armor1@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(lostcity_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_armor2@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 1,
+        "Zombies": [
+          {
+            "Row": "2",
+            "Type": "RTID(lostcity_excavator@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(lostcity_excavator@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_impporter@ZombieTypes)",
+            "Row": "3"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Row": "3",
+            "Type": "RTID(lostcity_bug_armor1@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(lostcity_armor1@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(lostcity_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_impporter@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(lostcity_impporter@ZombieTypes)",
+            "Row": "4"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave7"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "DynamicPlantfood": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        "Zombies": [
+          {
+            "Row": "4",
+            "Type": "RTID(lostcity_impporter@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(lostcity_impporter@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_crystalskull@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(lostcity_crystalskull@ZombieTypes)",
+            "Row": "5"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave8"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Row": "5",
+            "Type": "RTID(lostcity_armor2@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(lostcity_impporter@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(lostcity_armor2@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(lostcity_impporter@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(lostcity_jane@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(lostcity_jane@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(lostcity@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_armor1@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(lostcity_armor1@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(lostcity_armor1@ZombieTypes)",
+            "Row": "4"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave9"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Row": "3",
+            "Type": "RTID(lostcity_excavator@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_excavator@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_armor2@ZombieTypes)",
+            "Row": "1"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave10"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 1,
+        "Zombies": [
+          {
+            "Row": "1",
+            "Type": "RTID(lostcity_bug_armor1@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(lostcity_bug_armor1@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(lostcity_bug_armor1@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave11"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Row": "2",
+            "Type": "RTID(lostcity_relichunter@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(lostcity_relichunter@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(lostcity_bug_armor1@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(lostcity_bug_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_impporter@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(lostcity_crystalskull@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(lostcity_crystalskull@ZombieTypes)",
+            "Row": "5"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave12"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Row": "3",
+            "Type": "RTID(lostcity_impporter@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(lostcity_impporter@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(lostcity_impporter@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(lostcity_excavator@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(lostcity_excavator@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(lostcity_excavator@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(lostcity_jane@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(lostcity_jane@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(lostcity_bug_armor1@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(lostcity@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(lostcity@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_relichunter@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(lostcity_relichunter@ZombieTypes)",
+            "Row": "5"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave4ParachuteRainEvent0"
+      ],
+      "objclass": "ParachuteRainZombieSpawnerProps",
+      "objdata": {
+        "ColumnEnd": 8,
+        "ColumnStart": 4,
+        "GroupSize": 1,
+        "SpiderCount": 4,
+        "SpiderZombieName": "lostcity_lostpilot_veteran",
+        "TimeBeforeFullSpawn": 1,
+        "TimeBetweenGroups": 0.25,
+        "WaveStartMessage": "[WARNING_PARACHUTERAIN]",
+        "ZombieFallTime": 1.5,
+        "ZombiesToBringWith": [
+          {
+            "mX": 5,
+            "mY": 0,
+            "Type": "lostcity_armor1"
+          },
+          {
+            "mX": 3,
+            "mY": 3,
+            "Type": "lostcity"
+          },
+          {
+            "mX": 4,
+            "mY": 1,
+            "Type": "lostcity"
+          },
+          {
+            "mX": 3,
+            "mY": 2,
+            "Type": "lostcity"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave7ParachuteRainEvent0"
+      ],
+      "objclass": "ParachuteRainZombieSpawnerProps",
+      "objdata": {
+        "ColumnEnd": 6,
+        "ColumnStart": 4,
+        "GroupSize": 2,
+        "SpiderCount": 5,
+        "SpiderZombieName": "lostcity_lostpilot",
+        "TimeBeforeFullSpawn": 1,
+        "TimeBetweenGroups": 0.25,
+        "WaveStartMessage": "[WARNING_PARACHUTERAIN]",
+        "ZombieFallTime": 1.5
+      }
+    },
+    {
+      "aliases": [
+        "Wave9ParachuteRainEvent0"
+      ],
+      "objclass": "ParachuteRainZombieSpawnerProps",
+      "objdata": {
+        "ColumnEnd": 6,
+        "ColumnStart": 4,
+        "GroupSize": 2,
+        "SpiderCount": 4,
+        "SpiderZombieName": "lostcity_lostpilot_veteran",
+        "TimeBeforeFullSpawn": 2,
+        "TimeBetweenGroups": 0.25,
+        "WaveStartMessage": "[WARNING_PARACHUTERAIN]",
+        "ZombieFallTime": 1.5,
+        "ZombiesToBringWith": [
+          {
+            "mX": 4,
+            "mY": 4,
+            "Type": "lostcity_armor1"
+          },
+          {
+            "mX": 3,
+            "mY": 2,
+            "Type": "lostcity_jane"
+          },
+          {
+            "mX": 4,
+            "mY": 1,
+            "Type": "lostcity_armor2"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave10ParachuteRainEvent0"
+      ],
+      "objclass": "ParachuteRainZombieSpawnerProps",
+      "objdata": {
+        "ColumnEnd": 5,
+        "ColumnStart": 4,
+        "GroupSize": 2,
+        "SpiderCount": 6,
+        "SpiderZombieName": "lostcity_lostpilot",
+        "TimeBeforeFullSpawn": 2,
+        "TimeBetweenGroups": 0.25,
+        "WaveStartMessage": "[WARNING_PARACHUTERAIN]",
+        "ZombieFallTime": 1.5
+      }
+    },
+    {
+      "aliases": [
+        "Wave12ParachuteRainEvent0"
+      ],
+      "objclass": "ParachuteRainZombieSpawnerProps",
+      "objdata": {
+        "ColumnEnd": 6,
+        "ColumnStart": 5,
+        "GroupSize": 1,
+        "SpiderCount": 4,
+        "SpiderZombieName": "lostcity_lostpilot_veteran",
+        "TimeBeforeFullSpawn": 1,
+        "TimeBetweenGroups": 0.25,
+        "WaveStartMessage": "[WARNING_PARACHUTERAIN]",
+        "ZombieFallTime": 1.5,
+        "ZombiesToBringWith": [
+          {
+            "mX": 4,
+            "mY": 0,
+            "Type": "lostcity_crystalskull"
+          },
+          {
+            "mX": 4,
+            "mY": 4,
+            "Type": "lostcity_crystalskull"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "InitialGridItems"
+      ],
+      "objclass": "InitialGridItemProperties",
+      "objdata": {
+        "InitialGridItemPlacements": [
+          {
+            "GridX": 3,
+            "GridY": 0,
+            "TypeName": "goldtile"
+          },
+          {
+            "GridX": 3,
+            "GridY": 1,
+            "TypeName": "goldtile"
+          },
+          {
+            "GridX": 7,
+            "GridY": 1,
+            "TypeName": "goldtile"
+          },
+          {
+            "GridX": 3,
+            "GridY": 2,
+            "TypeName": "goldtile"
+          },
+          {
+            "GridX": 3,
+            "GridY": 3,
+            "TypeName": "goldtile"
+          },
+          {
+            "GridX": 7,
+            "GridY": 3,
+            "TypeName": "goldtile"
+          },
+          {
+            "GridX": 3,
+            "GridY": 4,
+            "TypeName": "goldtile"
+          },
+          {
+            "GridX": 7,
+            "GridY": 0,
+            "TypeName": "goldtile"
+          },
+          {
+            "GridX": 7,
+            "GridY": 2,
+            "TypeName": "goldtile"
+          },
+          {
+            "GridX": 7,
+            "GridY": 4,
+            "TypeName": "goldtile"
+          }
+        ]
+      }
+    }
+  ]
+}

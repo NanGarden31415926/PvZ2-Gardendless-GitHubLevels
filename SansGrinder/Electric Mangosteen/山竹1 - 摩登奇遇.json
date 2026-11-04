@@ -1,0 +1,1175 @@
+{
+    "#comment": "基于Modern 38，但是4阶僵尸",
+    "objects": [
+        {
+            "objclass": "LevelDefinition",
+            "objdata": {
+                "Description": "4阶僵尸！？",
+                "Loot": "RTID(DefaultLoot@LevelModules)",
+                "Modules": [
+                    "RTID(StandardIntro@LevelModules)",
+                    "RTID(DefaultSunDropper@LevelModules)",
+                    "RTID(ZombiesDeadWinCon@LevelModules)",
+                    "RTID(ModernMowers@LevelModules)",
+                    "RTID(SeedBank@CurrentLevel)",
+                    "RTID(DefaultZombieWinCondition@LevelModules)",
+                    "RTID(ChallengeModule@CurrentLevel)",
+                    "RTID(NewWaves@CurrentLevel)"
+                ],
+                "Name": "聚能山竹史诗任务 - 第一关",
+                "NameMultiLanguage": {
+                    "en": "Epic Quest - Electric Mangosteen - Level 1",
+                    "zh": "聚能山竹史诗任务 - 第一关"
+                },
+                "LevelNumber": 1,
+                "WrittenBy": "SansGrinder",
+                "NormalPresentTable": "egypt_normal_01",
+                "ShinyPresentTable": "egypt_shiny_01",
+                "FirstIntroNarrative": "2c_RELATED_INTRO",
+                "StageModule": "RTID(ModernStage@LevelModules)"
+            }
+        },
+        {
+            "objclass": "NarrativeProperties",
+            "aliases": [
+                "2c_RELATED_INTRO"
+            ],
+            "objdata": {
+                "Flow": [
+                    {
+                        "Character": "crazydave",
+                        "Action": "NPC_ENTER"
+                    },
+                    {
+                        "Character": "winnie",
+                        "Action": "NPC_ENTER"
+                    },
+                    {
+                        "Character": "zombossicon",
+                        "Action": "NPC_ENTER"
+                    },
+                    {
+                        "Character": "zombossicon",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "Dear insane beard guy, stupid red car and your genius neighbour",
+                            "zh": "你们好啊疯胡子，破红车和你们那天才一般的邻居"
+                        }
+                    },
+                    {
+                        "Character": "zombossicon",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "I am hereby introducing - level 4 zombies from PvZ2c",
+                            "zh": "容我向你介绍——中文版4阶僵尸"
+                        }
+                    },
+                    {
+                        "Character": "zombossicon",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "Have fun with those monsters...... NOT!",
+                            "zh": "希望你和它们玩的开心……才怪！"
+                        }
+                    },
+                    {
+                        "Character": "zombossicon",
+                        "Action": "NPC_EXIT"
+                    },
+                    {
+                        "Character": "crazydave",
+                        "Action": "SHOUT",
+                        "Lines": {
+                            "en": "We're screwed! These zombies just wouldn't die!",
+                            "zh": "这些僵尸特别难对付！我们完蛋了！"
+                        }
+                    },
+                    {
+                        "Character": "winnie",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "As Dr. Zomboss breaches our timeline and get his overpowered 2c zombies,",
+                            "zh": "在僵王撕裂时间线并招募中文版僵尸时"
+                        }
+                    },
+                    {
+                        "Character": "winnie",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "I managed to bring back some Electric Mangosteens from PvZ2c",
+                            "zh": "我成功的从中文版带回来了一些聚能山竹"
+                        }
+                    },
+                    {
+                        "Character": "winnie",
+                        "Action": "TIRED",
+                        "Lines": {
+                            "en": "Sadly, their ability to grow and stun zombies was lost in the transfer",
+                            "zh": "可惜由于时间线穿梭，他们失去了成长和麻痹僵尸的能力"
+                        }
+                    },
+                    {
+                        "Character": "crazydave",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "Mangosteens? I love both mango and steen!",
+                            "zh": "山竹？我既喜欢爬山也喜欢竹笋！"
+                        }
+                    },
+                    {
+                        "Character": "winnie",
+                        "Action": "TIRED",
+                        "Lines": {
+                            "en": "......",
+                            "zh": "……"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "mangosteen_normal"
+            ],
+            "objclass": "PlantType",
+            "objdata": {
+                "PlantBasedOn": "phatbeet",
+                "Properties": "RTID(mangosteen_normal@CurrentLevel)",
+                "ShiftedPlantFeatures": {
+                    "ID": 1,
+                    "NAME": {
+                        "zh": "聚能山竹",
+                        "en": "Electric Mangosteen"
+                    },
+                    "_CARDSPRITENAME": "phatbeet",
+                    "CODENAME": "phatbeet",
+                    "OBTAINWORLD": "sky",
+                    "BOOST": 0,
+                    "COSTUME": 1,
+                    "PROPS": "RTID(phatbeet@PlantProps)",
+                    "ALMANAC": "RTID(mangosteen_normal_almanac@CurrentLevel)"
+                }
+            }
+        },
+        {
+            "aliases": [
+                "mangosteen_normal"
+            ],
+            "objclass": "PlantProperties",
+            "objdata": {
+                "Damage": 200,
+                "SunCost": 150,
+                "AttackInterval": 1.9,
+                "Family": "Electricity",
+                "CallsElectricCurrant": true,
+                "RedStunDuration": 1.5,
+                "TimesHeavy": 4,
+                "DamageHeavy": 500,
+                "PlantfoodDamageNear": 1800,
+                "PlantfoodDamageFar": 1800,
+                "ImmuneToBoomBox": false,
+                "ImmuneToSpeakerHit": false,
+                "Cooldown": 10,
+                "CooldownFrom": 0.5,
+                "Toughness": 300
+            }
+        },
+        {
+            "aliases": [
+                "mangosteen_normal_almanac"
+            ],
+            "objclass": "PlantAlmanacProperties",
+            "objdata": {
+                "Introduction": {
+                    "zh": "图鉴",
+                    "en": "Almanac"
+                },
+                "BriefIntroduction": {
+                    "zh": "只是一只最普通的山竹……",
+                    "en": "Just a normal mangosteen..."
+                }
+            }
+        },
+        {
+            "aliases": [
+                "dino"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(dino@CurrentLevel)",
+                "ZombieBasedOn": "dino"
+            }
+        },
+        {
+            "aliases": [
+                "dino"
+            ],
+            "objclass": "ZombieProperties",
+            "objdata": {
+                "Toughness": 855,
+                "EatDPS": 450,
+                "WalkSPS": 0.185,
+                "ZombieSort": "Normal"
+            }
+        },
+        {
+            "aliases": [
+                "prospector"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(prospector@CurrentLevel)",
+                "ZombieBasedOn": "prospector"
+            }
+        },
+        {
+            "aliases": [
+                "prospector"
+            ],
+            "objclass": "ZombieProperties",
+            "objdata": {
+                "Toughness": 855,
+                "EatDPS": 450,
+                "WalkSPS": 0.185,
+                "ZombieSort": "Normal"
+            }
+        },
+        {
+            "aliases": [
+                "dino_armor1"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(dino_armor1@CurrentLevel)",
+                "ZombieBasedOn": "dino_armor1"
+            }
+        },
+        {
+            "aliases": [
+                "dino_armor1"
+            ],
+            "objclass": "ZombieProperties",
+            "objdata": {
+                "Toughness": 855,
+                "EatDPS": 450,
+                "WalkSPS": 0.185,
+                "ZombieSort": "Normal",
+                "StartingArmors": [
+                    "cone"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "cone"
+            ],
+            "objclass": "ArmorType",
+            "objdata": {
+                "Properties": "RTID(tier4_cone@CurrentLevel)",
+                "ArmorBasedOn": "dino_armor1"
+            }
+        },
+        {
+            "aliases": [
+                "tier4_cone"
+            ],
+            "objclass": "ArmorProperties",
+            "objdata": {
+                "Toughness": 1665,
+                "isMetal": false,
+                "BowlingLevel": 1
+            }
+        },
+        {
+            "aliases": [
+                "dino_armor2"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(dino_armor2@CurrentLevel)",
+                "ZombieBasedOn": "dino_armor2"
+            }
+        },
+        {
+            "aliases": [
+                "dino_armor2"
+            ],
+            "objclass": "ZombieProperties",
+            "objdata": {
+                "Toughness": 855,
+                "EatDPS": 450,
+                "WalkSPS": 0.185,
+                "ZombieSort": "Normal",
+                "StartingArmors": [
+                    "bucket"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "bucket"
+            ],
+            "objclass": "ArmorType",
+            "objdata": {
+                "Properties": "RTID(tier4_bucket@CurrentLevel)",
+                "ArmorBasedOn": "dino_armor2"
+            }
+        },
+        {
+            "aliases": [
+                "tier4_bucket"
+            ],
+            "objclass": "ArmorProperties",
+            "objdata": {
+                "Toughness": 4950,
+                "isMetal": true,
+                "BowlingLevel": 2
+            }
+        },
+        {
+            "aliases": [
+                "dino_armor3"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(dino_armor3@CurrentLevel)",
+                "ZombieBasedOn": "dino_armor3"
+            }
+        },
+        {
+            "aliases": [
+                "dino_armor3"
+            ],
+            "objclass": "ZombieProperties",
+            "objdata": {
+                "Toughness": 855,
+                "EatDPS": 450,
+                "WalkSPS": 0.185,
+                "ZombieSort": "Normal",
+                "StartingArmors": [
+                    "fossil"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "fossil"
+            ],
+            "objclass": "ArmorType",
+            "objdata": {
+                "Properties": "RTID(tier4_fossil@CurrentLevel)",
+                "ArmorBasedOn": "dino_armor3"
+            }
+        },
+        {
+            "aliases": [
+                "tier4_fossil"
+            ],
+            "objclass": "ArmorProperties",
+            "objdata": {
+                "Toughness": 8100,
+                "isMetal": false,
+                "BowlingLevel": 3
+            }
+        },
+        {
+            "aliases": [
+                "tutorial_armor4"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(tutorial_armor4@CurrentLevel)",
+                "ZombieBasedOn": "tutorial_armor4"
+            }
+        },
+        {
+            "aliases": [
+                "tutorial_armor4"
+            ],
+            "objclass": "ZombieProperties",
+            "objdata": {
+                "Toughness": 855,
+                "EatDPS": 450,
+                "WalkSPS": 0.185,
+                "ZombieSort": "Normal",
+                "StartingArmors": [
+                    "brick"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "tutorial_flag_veteran"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(tutorial_flag_veteran@CurrentLevel)",
+                "ZombieBasedOn": "tutorial_flag_veteran"
+            }
+        },
+        {
+            "aliases": [
+                "tutorial_flag_veteran"
+            ],
+            "objclass": "ZombieProperties",
+            "objdata": {
+                "Toughness": 1575,
+                "EatDPS": 1350,
+                "WalkSPS": 0.185,
+                "ZombieSort": "Normal"
+            }
+        },
+        {
+            "aliases": [
+                "brick"
+            ],
+            "objclass": "ArmorType",
+            "objdata": {
+                "Properties": "RTID(tier4_brick@CurrentLevel)",
+                "ArmorBasedOn": "modern_armor4"
+            }
+        },
+        {
+            "aliases": [
+                "tier4_brick"
+            ],
+            "objclass": "ArmorProperties",
+            "objdata": {
+                "Toughness": 9900,
+                "isMetal": false,
+                "BowlingLevel": 3
+            }
+        },
+        {
+            "aliases": [
+                "modern_balloon"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(modern_balloon@CurrentLevel)",
+                "ZombieBasedOn": "modern_balloon"
+            }
+        },
+        {
+            "aliases": [
+                "modern_balloon"
+            ],
+            "objclass": "ZombieProperties",
+            "objdata": {
+                "Toughness": 1125,
+                "BalloonToughness": 2925,
+                "EatDPS": 450,
+                "WalkSPS": 0.185,
+                "ZombieSort": "Normal"
+            }
+        },
+        {
+            "aliases": [
+                "modern_superfanimp"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(modern_superfanimp@CurrentLevel)",
+                "ZombieBasedOn": "modern_superfanimp"
+            }
+        },
+        {
+            "aliases": [
+                "modern_superfanimp"
+            ],
+            "objclass": "ZombieProperties",
+            "objdata": {
+                "Toughness": 1215,
+                "EatDPS": 450,
+                "WalkSPS": 0.185,
+                "ZombieSort": "Normal"
+            }
+        },
+        {
+            "aliases": [
+                "modern_allstar"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(modern_allstar@CurrentLevel)",
+                "ZombieBasedOn": "modern_allstar"
+            }
+        },
+        {
+            "aliases": [
+                "modern_allstar"
+            ],
+            "objclass": "ZombieProperties",
+            "objdata": {
+                "Toughness": 4950,
+                "EatDPS": 450,
+                "WalkSPS": 0.185,
+                "ZombieSort": "Normal"
+            }
+        },
+        {
+            "aliases": [
+                "SeedBank"
+            ],
+            "objclass": "SeedBankProperties",
+            "objdata": {
+                "PresetPlantList": [
+                    {
+                        "Level": -1,
+                        "PlantType": "mangosteen_normal"
+                    }
+                ],
+                "CardDecks": {
+                    "Recommended": [
+                        {
+                            "Name": {
+                                "en": "Stay away!",
+                                "zh": "离我远点！"
+                            },
+                            "Leader": 5,
+                            "Plants": [
+                                "mangosteen_normal",
+                                "primalsunflower",
+                                "goldbloom",
+                                "primalpeashooter",
+                                "wintermelon",
+                                "umbrellaleaf"
+                            ]
+                        },
+                        {
+                            "Name": {
+                                "en": "Jobs assigned",
+                                "zh": "各司其职"
+                            },
+                            "Leader": 3,
+                            "Plants": [
+                                "mangosteen_normal",
+                                "primalsunflower",
+                                "solarsage",
+                                "chardguard",
+                                "primalpeashooter",
+                                "primalpotatomine"
+                            ]
+                        }
+                    ],
+                    "Challenging": [
+                        {
+                            "Name": {
+                                "en": "Lawn Trader by FrAt",
+                                "zh": "操盘手 by 砹化钫"
+                            },
+                            "Leader": 1,
+                            "HugeWaveGem": 1,
+                            "Plants": [
+                                "mangosteen_normal",
+                                "sunflower",
+                                "garlic",
+                                "chardguard"
+                            ]
+                        }
+                    ]
+                },
+                "PlantExcludeList": [
+                    "imitater",
+                    "blover",
+                    "guacodile",
+                    "electriccurrant",
+                    "peach"
+                ],
+                "SelectionMethod": "chooser"
+            }
+        },
+        {
+            "aliases": [
+                "ChallengeModule"
+            ],
+            "objclass": "StarChallengeModuleProperties",
+            "objdata": {
+                "Challenges": [
+                    [
+                        "RTID(LevelWarning@CurrentLevel)",
+                        "RTID(ZombieDistance@CurrentLevel)"
+                    ]
+                ],
+                "ChallengesAlwaysAvailable": true
+            }
+        },
+        {
+            "aliases": [
+                "LevelWarning"
+            ],
+            "objclass": "StarChallengeBeatTheLevelProps",
+            "objdata": {
+                "DescriptionsMultilanguage": [
+                    {
+                        "en": "All zombies are buffed to level 4! (pvz2c, hp and atk *= 4.5)",
+                        "zh": "所有僵尸均为中文版主线4阶！（4.5倍攻防，包括气球）"
+                    },
+                    {
+                        "en": "Beat the level without Blovers",
+                        "zh": "在不使用三叶草的情况下通关"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "ZombieDistance"
+            ],
+            "objclass": "StarChallengeZombieDistanceProps",
+            "objdata": {
+                "TargetDistance": 1
+            }
+        },
+        {
+            "aliases": [
+                "NewWaves"
+            ],
+            "objclass": "WaveManagerModuleProperties",
+            "objdata": {
+                "DynamicZombies": [
+                    {
+                        "PointIncrementPerWave": -40,
+                        "StartingPoints": -100,
+                        "StartingWave": 3,
+                        "ZombiePool": [
+                            "RTID(dino@CurrentLevel)",
+                            "RTID(dino_armor1@CurrentLevel)",
+                            "RTID(dino_armor2@CurrentLevel)",
+                            "RTID(dino_armor3@CurrentLevel)",
+                            "RTID(modern_balloon@CurrentLevel)",
+                            "RTID(modern_superfanimp@CurrentLevel)",
+                            "RTID(prospector@CurrentLevel)",
+                            "RTID(tutorial_armor4@CurrentLevel)"
+                        ]
+                    },
+                    {
+                        "PointIncrementPerWave": -25,
+                        "StartingPoints": -100,
+                        "StartingWave": 4,
+                        "ZombiePool": [
+                            "RTID(dino@CurrentLevel)",
+                            "RTID(dino_armor1@CurrentLevel)",
+                            "RTID(dino_armor2@CurrentLevel)",
+                            "RTID(dino_armor3@CurrentLevel)",
+                            "RTID(modern_balloon@CurrentLevel)",
+                            "RTID(modern_superfanimp@CurrentLevel)",
+                            "RTID(prospector@CurrentLevel)",
+                            "RTID(tutorial_armor4@CurrentLevel)"
+                        ]
+                    },
+                    {
+                        "PointIncrementPerWave": -10,
+                        "StartingPoints": -100,
+                        "StartingWave": 5,
+                        "ZombiePool": [
+                            "RTID(dino@CurrentLevel)",
+                            "RTID(dino_armor1@CurrentLevel)",
+                            "RTID(dino_armor2@CurrentLevel)",
+                            "RTID(dino_armor3@CurrentLevel)",
+                            "RTID(modern_balloon@CurrentLevel)",
+                            "RTID(modern_superfanimp@CurrentLevel)",
+                            "RTID(prospector@CurrentLevel)",
+                            "RTID(tutorial_armor4@CurrentLevel)"
+                        ]
+                    },
+                    {},
+                    {
+                        "PointIncrementPerWave": 20,
+                        "StartingPoints": 100,
+                        "StartingWave": 5,
+                        "ZombiePool": [
+                            "RTID(dino@CurrentLevel)",
+                            "RTID(dino_armor1@CurrentLevel)",
+                            "RTID(dino_armor2@CurrentLevel)",
+                            "RTID(dino_armor3@CurrentLevel)",
+                            "RTID(modern_balloon@CurrentLevel)",
+                            "RTID(modern_superfanimp@CurrentLevel)",
+                            "RTID(prospector@CurrentLevel)",
+                            "RTID(tutorial_armor4@CurrentLevel)"
+                        ]
+                    },
+                    {
+                        "PointIncrementPerWave": 40,
+                        "StartingPoints": 200,
+                        "StartingWave": 4,
+                        "ZombiePool": [
+                            "RTID(dino@CurrentLevel)",
+                            "RTID(dino_armor1@CurrentLevel)",
+                            "RTID(dino_armor2@CurrentLevel)",
+                            "RTID(dino_armor3@CurrentLevel)",
+                            "RTID(modern_balloon@CurrentLevel)",
+                            "RTID(modern_superfanimp@CurrentLevel)",
+                            "RTID(prospector@CurrentLevel)",
+                            "RTID(tutorial_armor4@CurrentLevel)"
+                        ]
+                    },
+                    {
+                        "PointIncrementPerWave": 60,
+                        "StartingPoints": 400,
+                        "StartingWave": 3,
+                        "ZombiePool": [
+                            "RTID(dino@CurrentLevel)",
+                            "RTID(dino_armor2@CurrentLevel)",
+                            "RTID(dino_armor3@CurrentLevel)",
+                            "RTID(modern_balloon@CurrentLevel)",
+                            "RTID(modern_superfanimp@CurrentLevel)",
+                            "RTID(prospector@CurrentLevel)",
+                            "RTID(tutorial_armor4@CurrentLevel)"
+                        ]
+                    }
+                ],
+                "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+            }
+        },
+        {
+            "aliases": [
+                "WaveManagerProps"
+            ],
+            "objclass": "WaveManagerProperties",
+            "objdata": {
+                "FlagWaveInterval": 3,
+                "SuppressFlagZombie": true,
+                "WaveCount": 12,
+                "WaveSpendingPointIncrement": 100,
+                "WaveSpendingPoints": 300,
+                "Waves": [
+                    [
+                        "RTID(Wave1@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave2@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave3@CurrentLevel)",
+                        "RTID(Wave3DinoTimeEvent0@CurrentLevel)",
+                        "RTID(Wave3DinoTimeEvent1@CurrentLevel)",
+                        "RTID(Wave3DinoTimeEvent2@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave4@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave5@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave6@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave7@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave8@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave9@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave10@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave11@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave12@CurrentLevel)"
+                    ]
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave1"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "AdditionalPlantfood": 0,
+                "Zombies": [
+                    {
+                        "Row": "2",
+                        "Type": "RTID(dino_armor1@CurrentLevel)"
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(dino@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave2"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(dino_armor2@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave3"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "AdditionalPlantfood": 0,
+                "Zombies": [
+                    {
+                        "Type": "RTID(tutorial_flag_veteran@CurrentLevel)"
+                    },
+                    {
+                        "Type": "RTID(dino_armor1@CurrentLevel)"
+                    },
+                    {
+                        "Type": "RTID(dino_armor1@CurrentLevel)"
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(prospector@CurrentLevel)"
+                    },
+                    {
+                        "Row": "4",
+                        "Type": "RTID(prospector@CurrentLevel)"
+                    },
+                    {
+                        "Row": "3",
+                        "Type": "RTID(prospector@CurrentLevel)"
+                    },
+                    {
+                        "Row": "2",
+                        "Type": "RTID(prospector@CurrentLevel)"
+                    },
+                    {
+                        "Row": "1",
+                        "Type": "RTID(prospector@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave4"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(dino_armor2@CurrentLevel)"
+                    },
+                    {
+                        "Type": "RTID(dino_armor1@CurrentLevel)"
+                    },
+                    {
+                        "Type": "RTID(modern_balloon@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave5"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "AdditionalPlantfood": 0,
+                "Zombies": [
+                    {
+                        "Type": "RTID(dino_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Type": "RTID(dino_armor1@CurrentLevel)"
+                    },
+                    {
+                        "Type": "RTID(modern_balloon@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave6"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(tutorial_flag_veteran@CurrentLevel)"
+                    },
+                    {
+                        "Type": "RTID(modern_balloon@CurrentLevel)"
+                    },
+                    {
+                        "Type": "RTID(modern_balloon@CurrentLevel)"
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(prospector@CurrentLevel)"
+                    },
+                    {
+                        "Row": "4",
+                        "Type": "RTID(prospector@CurrentLevel)"
+                    },
+                    {
+                        "Row": "3",
+                        "Type": "RTID(prospector@CurrentLevel)"
+                    },
+                    {
+                        "Row": "2",
+                        "Type": "RTID(prospector@CurrentLevel)"
+                    },
+                    {
+                        "Row": "1",
+                        "Type": "RTID(prospector@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave7"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(dino_armor1@CurrentLevel)"
+                    },
+                    {
+                        "Type": "RTID(tutorial_armor4@CurrentLevel)"
+                    },
+                    {
+                        "Type": "RTID(modern_balloon@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave8"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "AdditionalPlantfood": 0,
+                "Zombies": [
+                    {
+                        "Type": "RTID(dino@CurrentLevel)"
+                    },
+                    {
+                        "Type": "RTID(dino@CurrentLevel)"
+                    },
+                    {
+                        "Type": "RTID(tutorial_armor4@CurrentLevel)"
+                    },
+                    {
+                        "Type": "RTID(modern_balloon@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave9"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "AdditionalPlantfood": 0,
+                "Zombies": [
+                    {
+                        "Type": "RTID(tutorial_flag_veteran@CurrentLevel)"
+                    },
+                    {
+                        "Type": "RTID(modern_balloon@CurrentLevel)"
+                    },
+                    {
+                        "Type": "RTID(modern_balloon@CurrentLevel)"
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(prospector@CurrentLevel)"
+                    },
+                    {
+                        "Row": "4",
+                        "Type": "RTID(prospector@CurrentLevel)"
+                    },
+                    {
+                        "Row": "3",
+                        "Type": "RTID(prospector@CurrentLevel)"
+                    },
+                    {
+                        "Row": "2",
+                        "Type": "RTID(prospector@CurrentLevel)"
+                    },
+                    {
+                        "Row": "1",
+                        "Type": "RTID(prospector@CurrentLevel)"
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(modern_superfanimp@CurrentLevel)"
+                    },
+                    {
+                        "Row": "4",
+                        "Type": "RTID(modern_superfanimp@CurrentLevel)"
+                    },
+                    {
+                        "Row": "3",
+                        "Type": "RTID(modern_superfanimp@CurrentLevel)"
+                    },
+                    {
+                        "Row": "2",
+                        "Type": "RTID(modern_superfanimp@CurrentLevel)"
+                    },
+                    {
+                        "Row": "1",
+                        "Type": "RTID(modern_superfanimp@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave10"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "3",
+                        "Type": "RTID(modern_superfanimp@CurrentLevel)"
+                    },
+                    {
+                        "Row": "3",
+                        "Type": "RTID(modern_allstar@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave11"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "5",
+                        "Type": "RTID(modern_superfanimp@CurrentLevel)"
+                    },
+                    {
+                        "Row": "4",
+                        "Type": "RTID(modern_superfanimp@CurrentLevel)"
+                    },
+                    {
+                        "Row": "3",
+                        "Type": "RTID(modern_superfanimp@CurrentLevel)"
+                    },
+                    {
+                        "Row": "2",
+                        "Type": "RTID(modern_superfanimp@CurrentLevel)"
+                    },
+                    {
+                        "Row": "1",
+                        "Type": "RTID(modern_superfanimp@CurrentLevel)"
+                    },
+                    {
+                        "Type": "RTID(modern_allstar@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave12"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "AdditionalPlantfood": 0,
+                "Zombies": [
+                    {
+                        "Type": "RTID(tutorial_flag_veteran@CurrentLevel)"
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(prospector@CurrentLevel)"
+                    },
+                    {
+                        "Row": "4",
+                        "Type": "RTID(prospector@CurrentLevel)"
+                    },
+                    {
+                        "Row": "3",
+                        "Type": "RTID(prospector@CurrentLevel)"
+                    },
+                    {
+                        "Row": "2",
+                        "Type": "RTID(prospector@CurrentLevel)"
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(prospector@CurrentLevel)"
+                    },
+                    {
+                        "Row": "3",
+                        "Type": "RTID(prospector@CurrentLevel)"
+                    },
+                    {
+                        "Row": "1",
+                        "Type": "RTID(prospector@CurrentLevel)"
+                    },
+                    {
+                        "Row": "4",
+                        "Type": "RTID(modern_superfanimp@CurrentLevel)"
+                    },
+                    {
+                        "Row": "2",
+                        "Type": "RTID(modern_superfanimp@CurrentLevel)"
+                    },
+                    {
+                        "Row": "4",
+                        "Type": "RTID(modern_allstar@CurrentLevel)"
+                    },
+                    {
+                        "Row": "2",
+                        "Type": "RTID(modern_allstar@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave3DinoTimeEvent0"
+            ],
+            "objclass": "DinoWaveActionProps",
+            "objdata": {
+                "DinoRow": 0,
+                "DinoType": "ptero",
+                "DinoWaveDuration": 6
+            }
+        },
+        {
+            "aliases": [
+                "Wave3DinoTimeEvent1"
+            ],
+            "objclass": "DinoWaveActionProps",
+            "objdata": {
+                "DinoRow": "2",
+                "DinoType": "ptero",
+                "DinoWaveDuration": 6
+            }
+        },
+        {
+            "aliases": [
+                "Wave3DinoTimeEvent2"
+            ],
+            "objclass": "DinoWaveActionProps",
+            "objdata": {
+                "DinoRow": 4,
+                "DinoType": "ptero",
+                "DinoWaveDuration": 6
+            }
+        }
+    ],
+    "version": 1
+}

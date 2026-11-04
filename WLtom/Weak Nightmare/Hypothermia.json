@@ -1,0 +1,977 @@
+{
+  "#comment": "Hypothermia",
+  "version": 1,
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "LevelNumber": 12,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "MusicType": "MiniGame_A",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "NameMultiLanguage": {
+          "en": "Hypothermia",
+          "zh": "失温"
+        },
+        "Description": "[PLAYERS_TRIP_TO_ICEAGE]",
+        "StartingSun": 250,
+        "StageModule": "RTID(IceageVeteranStage@LevelModules)",
+        "Modules": [
+          "RTID(StandardIntro@LevelModules)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(IceageMowers@LevelModules)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(ModPlants@CurrentLevel)",
+          "RTID(BeatTheLevel@CurrentLevel)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(InitialGridItems@CurrentLevel)",
+          "RTID(FrozenZombiePlacement@CurrentLevel)"
+        ],
+        "WrittenBy": "岸波白野＆失重汤姆"
+      }
+    },
+    {
+      "aliases": [
+        "BeatTheLevel"
+      ],
+      "objclass": "StarChallengeBeatTheLevelProps",
+      "objdata": {
+        "DescriptionsMultilanguage": [
+          {
+            "en": "Your Plants look a bit different...",
+            "zh": "你的植物看起来有些变化..."
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "ChallengeModule"
+      ],
+      "objclass": "StarChallengeModuleProperties",
+      "objdata": {
+        "ChallengesAlwaysAvailable": true,
+        "Challenges": [
+          [
+            "RTID(SimultaneousPlants@CurrentLevel)",
+            "RTID(DoNotPlantBeforeLine@CurrentLevel)",
+            "RTID(SunProduced@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "ModPlants"
+      ],
+      "objclass": "PlantModifierProperties",
+      "objdata": {
+        "List": [
+          {
+            "Type": "sunflower",
+            "NewObjdata": {
+              "ProduceInterval": 32,
+              "ProduceIntervalAdditional": 4
+            }
+          },
+          {
+            "Type": "stunion",
+            "NewObjdata": {
+              "StunDuration": 15
+            }
+          },
+          {
+            "Type": "chomper",
+            "NewObjdata": {
+              "ChompFailDamage": 200,
+              "ChewTimePerZombie": 15
+            }
+          },
+          {
+            "Type": "solarsage",
+            "NewObjdata": {
+              "SunCost": 125
+            }
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "SimultaneousPlants"
+      ],
+      "objclass": "StarChallengeSimultaneousPlantsProps",
+      "objdata": {
+        "MaximumPlants": 8
+      }
+    },
+    {
+      "aliases": [
+        "FrozenZombiePlacement"
+      ],
+      "objclass": "InitialZombieProperties",
+      "objdata": {
+        "InitialZombiePlacements": [
+          {
+            "Condition": "icecubed",
+            "GridX": 2,
+            "GridY": 2,
+            "TypeName": "iceage_armor2"
+          },
+          {
+            "Condition": "icecubed",
+            "GridX": 3,
+            "GridY": 1,
+            "TypeName": "iceage_armor3"
+          },
+          {
+            "Condition": "icecubed",
+            "GridX": 4,
+            "GridY": 0,
+            "TypeName": "iceage_armor4"
+          },
+          {
+            "Condition": "icecubed",
+            "GridX": 8,
+            "GridY": 0,
+            "TypeName": "iceage_hunter"
+          },
+          {
+            "Condition": "icecubed",
+            "GridX": 7,
+            "GridY": 1,
+            "TypeName": "iceage_hunter_veteran"
+          },
+          {
+            "Condition": "icecubed",
+            "GridX": 6,
+            "GridY": 2,
+            "TypeName": "iceage_troglobite"
+          },
+          {
+            "Condition": "icecubed",
+            "GridX": 5,
+            "GridY": 3,
+            "TypeName": "iceage_troglobite_veteran"
+          },
+          {
+            "Condition": "icecubed",
+            "GridX": 4,
+            "GridY": 4,
+            "TypeName": "iceage_weaselhoarder"
+          },
+          {
+            "Condition": "icecubed",
+            "GridX": 0,
+            "GridY": 4,
+            "TypeName": "iceage"
+          },
+          {
+            "Condition": "icecubed",
+            "GridX": 1,
+            "GridY": 3,
+            "TypeName": "iceage_armor1"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "SelectionMethod": "preset",
+        "PresetPlantList": [
+          {
+            "PlantType": "hotpotato"
+          },
+          {
+            "PlantType": "stunion"
+          },
+          {
+            "PlantType": "chomper"
+          },
+          {
+            "PlantType": "solarsage"
+          },
+          {
+            "PlantType": "gumnut",
+            "Level": -1
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {},
+          {},
+          {},
+          {
+            "PointIncrementPerWave": 50,
+            "StartingPoints": 400,
+            "StartingWave": 5,
+            "ZombiePool": [
+              "RTID(iceage_armor2@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 60,
+            "StartingPoints": 400,
+            "StartingWave": 4,
+            "ZombiePool": [
+              "RTID(iceage_armor2@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 70,
+            "StartingPoints": 400,
+            "StartingWave": 3,
+            "ZombiePool": [
+              "RTID(iceage_armor2@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 80,
+            "StartingPoints": 450,
+            "StartingWave": 3,
+            "ZombiePool": [
+              "RTID(iceage_armor2@ZombieTypes)"
+            ]
+          }
+        ],
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "MinNextWaveHealthPercentage": 0.75,
+        "MaxNextWaveHealthPercentage": 0.8,
+        "FlagWaveInterval": 3,
+        "WaveCount": 12,
+        "WaveSpendingPointIncrement": 200,
+        "WaveSpendingPoints": 200,
+        "Waves": [
+          [
+            "RTID(Wave1@CurrentLevel)",
+            "RTID(Wave1FrostWindEvent0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)",
+            "RTID(Wave3StormEvent0@CurrentLevel)",
+            "RTID(Wave3FrostWindEvent0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)",
+            "RTID(Wave5FrostWindEvent0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)",
+            "RTID(Wave7FrostWindEvent0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)",
+            "RTID(Wave9FrostWindEvent0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave11@CurrentLevel)",
+            "RTID(Wave11FrostWindEvent0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave12@CurrentLevel)",
+            "RTID(Wave12StormEvent0@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(iceage_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage@ZombieTypes)",
+            "Row": "5"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 1,
+        "Zombies": [
+          {
+            "Type": "RTID(iceage_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor1@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 1,
+        "Zombies": [
+          {
+            "Row": "5",
+            "Type": "RTID(iceage@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(iceage@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(iceage_armor1@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(iceage_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor2@ZombieTypes)",
+            "Row": "3"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Row": "4",
+            "Type": "RTID(iceage_armor1@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(iceage@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(iceage_dodo@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(iceage_dodo@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_hunter@ZombieTypes)",
+            "Row": "5"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Row": "5",
+            "Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(iceage_armor1@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(iceage@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(iceage_armor1@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(iceage_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_gargantuar@ZombieTypes)",
+            "Row": "3"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave7"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 1,
+        "Zombies": [
+          {
+            "Type": "RTID(iceage_dodo@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(iceage@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(iceage_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor1@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(iceage_armor2@ZombieTypes)",
+            "Row": "4"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave8"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(iceage_dodo@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(iceage_dodo@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(iceage_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor3@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(iceage_hunter@ZombieTypes)",
+            "Row": "3"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave9"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_dodo@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_imp@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave10"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(iceage_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_hunter_veteran@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(iceage_armor2@ZombieTypes)",
+            "Row": "3"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave11"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 1,
+        "Zombies": [
+          {
+            "Row": "2",
+            "Type": "RTID(iceage_armor1@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(iceage_dodo@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(iceage_armor1@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(iceage@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_hunter_veteran@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(iceage_gargantuar@ZombieTypes)",
+            "Row": "4"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave11FrostWindEvent0"
+      ],
+      "objclass": "FrostWindWaveActionProps",
+      "objdata": {
+        "Winds": [
+          {
+            "Direction": "right",
+            "Row": "0"
+          },
+          {
+            "Direction": "right",
+            "Row": 1
+          },
+          {
+            "Direction": "right",
+            "Row": 3
+          },
+          {
+            "Direction": "right",
+            "Row": 4
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave12"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_dodo@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor1@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave7FrostWindEvent0"
+      ],
+      "objclass": "FrostWindWaveActionProps",
+      "objdata": {
+        "Winds": [
+          {
+            "Direction": "right",
+            "Row": 0
+          },
+          {
+            "Direction": "right",
+            "Row": 1
+          },
+          {
+            "Direction": "right",
+            "Row": 2
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave1FrostWindEvent0"
+      ],
+      "objclass": "FrostWindWaveActionProps",
+      "objdata": {
+        "Winds": [
+          {
+            "Direction": "right",
+            "Row": 0
+          },
+          {
+            "Direction": "right",
+            "Row": 1
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave9FrostWindEvent0"
+      ],
+      "objclass": "FrostWindWaveActionProps",
+      "objdata": {
+        "Winds": [
+          {
+            "Direction": "right",
+            "Row": "0"
+          },
+          {
+            "Direction": "right",
+            "Row": 1
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave12StormEvent0"
+      ],
+      "objclass": "StormZombieSpawnerProps",
+      "objdata": {
+        "ColumnEnd": 7,
+        "ColumnStart": 5,
+        "GroupSize": 3,
+        "TimeBetweenGroups": "3",
+        "Type": "snowstorm",
+        "Zombies": [
+          {
+            "Type": "RTID(iceage_armor3@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor3@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_armor3@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave3FrostWindEvent0"
+      ],
+      "objclass": "FrostWindWaveActionProps",
+      "objdata": {
+        "Winds": [
+          {
+            "Direction": "right",
+            "Row": "0"
+          },
+          {
+            "Direction": "right",
+            "Row": 1
+          },
+          {
+            "Direction": "right",
+            "Row": 2
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave5FrostWindEvent0"
+      ],
+      "objclass": "FrostWindWaveActionProps",
+      "objdata": {
+        "Winds": [
+          {
+            "Direction": "right",
+            "Row": "0"
+          },
+          {
+            "Direction": "right",
+            "Row": 1
+          },
+          {
+            "Direction": "right",
+            "Row": 3
+          },
+          {
+            "Direction": "right",
+            "Row": 4
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave3StormEvent0"
+      ],
+      "objclass": "StormZombieSpawnerProps",
+      "objdata": {
+        "ColumnEnd": 6,
+        "ColumnStart": 5,
+        "GroupSize": 3,
+        "TimeBetweenGroups": "3",
+        "Type": "snowstorm",
+        "Zombies": [
+          {
+            "Type": "RTID(iceage@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "DoNotPlantBeforeLine"
+      ],
+      "objclass": "MoldColonyChallengeProps",
+      "objdata": {
+        "MoldedSquares": [
+          {
+            "GridX": 0,
+            "GridY": 0
+          },
+          {
+            "GridX": 1,
+            "GridY": 0
+          },
+          {
+            "GridX": 2,
+            "GridY": 0
+          },
+          {
+            "GridX": 5,
+            "GridY": 0
+          },
+          {
+            "GridX": 6,
+            "GridY": 0
+          },
+          {
+            "GridX": 7,
+            "GridY": 0
+          },
+          {
+            "GridX": 0,
+            "GridY": 1
+          },
+          {
+            "GridX": 1,
+            "GridY": 1
+          },
+          {
+            "GridX": 5,
+            "GridY": 1
+          },
+          {
+            "GridX": 6,
+            "GridY": 1
+          },
+          {
+            "GridX": 0,
+            "GridY": 2
+          },
+          {
+            "GridX": 5,
+            "GridY": 2
+          },
+          {
+            "GridX": 8,
+            "GridY": 2
+          },
+          {
+            "GridX": 7,
+            "GridY": 3
+          },
+          {
+            "GridX": 8,
+            "GridY": 3
+          },
+          {
+            "GridX": 6,
+            "GridY": 4
+          },
+          {
+            "GridX": 7,
+            "GridY": 4
+          },
+          {
+            "GridX": 8,
+            "GridY": 4
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "InitialGridItems"
+      ],
+      "objclass": "InitialGridItemProperties",
+      "objdata": {
+        "InitialGridItemPlacements": [
+          {
+            "GridX": 8,
+            "GridY": 1,
+            "TypeName": "slider_up"
+          },
+          {
+            "GridX": 7,
+            "GridY": 2,
+            "TypeName": "slider_up"
+          },
+          {
+            "GridX": 6,
+            "GridY": 3,
+            "TypeName": "slider_up"
+          },
+          {
+            "GridX": 5,
+            "GridY": 4,
+            "TypeName": "slider_up"
+          },
+          {
+            "GridX": 3,
+            "GridY": 0,
+            "TypeName": "slider_down"
+          },
+          {
+            "GridX": 2,
+            "GridY": 1,
+            "TypeName": "slider_down"
+          },
+          {
+            "GridX": 1,
+            "GridY": 2,
+            "TypeName": "slider_down"
+          },
+          {
+            "GridX": 0,
+            "GridY": 3,
+            "TypeName": "slider_down"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "SunProduced"
+      ],
+      "objclass": "StarChallengeSunProducedProps",
+      "objdata": {
+        "TargetSun": 8000
+      }
+    }
+  ]
+}
