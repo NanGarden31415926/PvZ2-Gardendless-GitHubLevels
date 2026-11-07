@@ -1,0 +1,316 @@
+{
+  "#comment": "splitpea3",
+  "version": 1,
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "LevelNumber": 1,
+        "Loot": "RTID(NoLoot@LevelModules)",
+        "NameMultiLanguage": {
+          "zh": "裂荚射手‑第3关 easy",
+          "en": "Split Pea - Level 3 Easy"
+        },
+        "Description": "",
+        "StartingSun": 50,
+        "StageModule": "RTID(ModernStage@LevelModules)",
+        "Modules": [
+          "RTID(StandardIntro@LevelModules)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(ModernMowers@LevelModules)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(ConveyorBelt@CurrentLevel)",
+          "RTID(ProtectThePlant@CurrentLevel)",
+          "RTID(Rails@CurrentLevel)"
+        ],
+        "WrittenBy": "Loser"
+      }
+    },
+    {
+      "aliases": [
+        "ProtectThePlant"
+      ],
+      "objclass": "ProtectThePlantChallengeProperties",
+      "objdata": {
+        "MustProtectCount": 6,
+        "Plants": [
+          {
+            "GridX": 8,
+            "GridY": 2,
+            "PlantType": "splitpea"
+          },
+          {
+            "GridX": 0,
+            "GridY": 0,
+            "PlantType": "bonkchoy"
+          },
+          {
+            "GridX": 0,
+            "GridY": 1,
+            "PlantType": "bonkchoy"
+          },
+          {
+            "GridX": 0,
+            "GridY": 2,
+            "PlantType": "bonkchoy"
+          },
+          {
+            "GridX": 0,
+            "GridY": 3,
+            "PlantType": "bonkchoy"
+          },
+          {
+            "GridX": 0,
+            "GridY": 4,
+            "PlantType": "bonkchoy"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Rails"
+      ],
+      "objclass": "RailcartProperties",
+      "objdata": {
+        "RailcartType": "railcart_beach",
+        "Railcarts": [
+          {
+            "Column": 8,
+            "Row": 2
+          }
+        ],
+        "Rails": [
+          {
+            "Column": 8,
+            "RowStart": 0,
+            "RowEnd": 4
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "ConveyorBelt"
+      ],
+      "objclass": "ConveyorSeedBankProperties",
+      "objdata": {
+        "DropDelayConditions": [
+          {
+            "MaxPackets": 0,
+            "Delay": 5
+          }
+        ],
+        "InitialPlantList": [],
+        "SpeedConditions": [
+          {
+            "MaxPackets": 0,
+            "Speed": 100
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "MinNextWaveHealthPercentage": 0.55,
+        "MaxNextWaveHealthPercentage": 0.7,
+        "FlagWaveInterval": 5,
+        "WaveCount": 5,
+        "WaveSpendingPointIncrement": 30,
+        "WaveSpendingPoints": 100,
+        "Waves": [
+          [
+            "RTID(Wave1StormEvent0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2StormEvent0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3StormEvent0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4StormEvent0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5StormEvent0@CurrentLevel)"
+          ]
+        ],
+        "SuppressFlagZombie": true
+      }
+    },
+    {
+      "aliases": [
+        "Wave1StormEvent0"
+      ],
+      "objclass": "StormZombieSpawnerProps",
+      "objdata": {
+        "ColumnStart": 4,
+        "ColumnEnd": 3,
+        "GroupSize": 1,
+        "TimeBetweenGroups": 1,
+        "Type": "sandstorm",
+        "Zombies": [
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave2StormEvent0"
+      ],
+      "objclass": "StormZombieSpawnerProps",
+      "objdata": {
+        "ColumnStart": 4,
+        "ColumnEnd": 4,
+        "GroupSize": 1,
+        "TimeBetweenGroups": 1,
+        "Type": "sandstorm",
+        "Zombies": [
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave3StormEvent0"
+      ],
+      "objclass": "StormZombieSpawnerProps",
+      "objdata": {
+        "ColumnStart": 4,
+        "ColumnEnd": 3,
+        "GroupSize": 1,
+        "TimeBetweenGroups": 1,
+        "Type": "sandstorm",
+        "Zombies": [
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave4StormEvent0"
+      ],
+      "objclass": "StormZombieSpawnerProps",
+      "objdata": {
+        "ColumnStart": 4,
+        "ColumnEnd": 3,
+        "GroupSize": 1,
+        "TimeBetweenGroups": 1,
+        "Type": "sandstorm",
+        "Zombies": [
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave5StormEvent0"
+      ],
+      "objclass": "StormZombieSpawnerProps",
+      "objdata": {
+        "ColumnStart": 4,
+        "ColumnEnd": 3,
+        "GroupSize": 1,
+        "TimeBetweenGroups": 1,
+        "Type": "sandstorm",
+        "Zombies": [
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "FrozenPlantPlacement"
+      ],
+      "objclass": "InitialPlantProperties",
+      "objdata": {
+        "InitialPlantPlacements": [
+          {
+            "GridX": 0,
+            "GridY": 1,
+            "TypeName": "bonkchoy"
+          },
+          {
+            "GridX": 0,
+            "GridY": 2,
+            "TypeName": "bonkchoy"
+          },
+          {
+            "GridX": 0,
+            "GridY": 3,
+            "TypeName": "bonkchoy"
+          },
+          {
+            "GridX": 0,
+            "GridY": 4,
+            "TypeName": "bonkchoy"
+          },
+          {
+            "GridX": 8,
+            "GridY": 2,
+            "TypeName": "splitpea"
+          },
+          {
+            "GridX": 0,
+            "GridY": 0,
+            "TypeName": "bonkchoy"
+          }
+        ]
+      }
+    }
+  ]
+}
