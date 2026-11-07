@@ -1,0 +1,3859 @@
+{
+  "#comment": "Egypt 1",
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "[PLAYERS_TRIP_TO_EGYPT]",
+        "LevelNumber": 1,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(StandardIntro@LevelModules)",
+          "RTID(DefaultSunDropper@LevelModules)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(EgyptMowers@LevelModules)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(ModPlants@CurrentLevel)"
+        ],
+        "NameMultiLanguage": {
+          "en": "More Armored Zombies",
+          "zh": "更多防具僵尸"
+        },
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "StageModule": "RTID(EgyptStage@LevelModules)"
+      }
+    },
+    {
+      "aliases": [
+        "ModPlants"
+      ],
+      "objclass": "PlantModifierProperties",
+      "objdata": {
+        "SuppressParticle": true,
+        "List": [
+          {
+            "Type": "sunflower",
+            "NewObjdata": {
+              "SunCost": 30
+            }
+          },
+          {
+            "Type": "peashooter",
+            "NewObjdata": {
+              "SunCost": 60
+            }
+          },
+          {
+            "Type": "wallnut",
+            "NewObjdata": {
+              "SunCost": 30
+            }
+          },
+          {
+            "Type": "potatomine",
+            "NewObjdata": {
+              "SunCost": 15
+            }
+          },
+          {
+            "Type": "cabbagepult",
+            "NewObjdata": {
+              "SunCost": 60
+            }
+          },
+          {
+            "Type": "bloomerang",
+            "NewObjdata": {
+              "SunCost": 105
+            }
+          },
+          {
+            "Type": "iceburg",
+            "NewObjdata": {
+              "SunCost": -5
+            }
+          },
+          {
+            "Type": "gravebuster",
+            "NewObjdata": {
+              "SunCost": -5
+            }
+          },
+          {
+            "Type": "twinsunflower",
+            "NewObjdata": {
+              "SunCost": 75
+            }
+          },
+          {
+            "Type": "bonkchoy",
+            "NewObjdata": {
+              "SunCost": 90
+            }
+          },
+          {
+            "Type": "repeater",
+            "NewObjdata": {
+              "SunCost": 120
+            }
+          },
+          {
+            "Type": "iceweed",
+            "NewObjdata": {
+              "SunCost": 90
+            }
+          },
+          {
+            "Type": "snowdrop",
+            "NewObjdata": {
+              "SunCost": 120
+            }
+          },
+          {
+            "Type": "squash",
+            "NewObjdata": {
+              "SunCost": 30
+            }
+          },
+          {
+            "Type": "dandelion",
+            "NewObjdata": {
+              "SunCost": 165
+            }
+          },
+          {
+            "Type": "pvine",
+            "NewObjdata": {
+              "SunCost": 75
+            }
+          },
+          {
+            "Type": "zoybeanpod",
+            "NewObjdata": {
+              "SummonType": [
+                {
+                  "Weight": 800,
+                  "Type": "mummy"
+                },
+                {
+                  "Weight": 500,
+                  "Type": "mummy_armor1"
+                },
+                {
+                  "Weight": 300,
+                  "Type": "mummy_armor2"
+                },
+                {
+                  "Weight": 200,
+                  "Type": "mummy_armor4"
+                },
+                {
+                  "Weight": 80,
+                  "Type": "egypt_gargantuar"
+                },
+                {
+                  "Weight": 50,
+                  "Type": "egypt_gargantuar_armor1"
+                },
+                {
+                  "Weight": 30,
+                  "Type": "egypt_gargantuar_armor2"
+                },
+                {
+                  "Weight": 20,
+                  "Type": "egypt_gargantuar_armor4"
+                },
+                {
+                  "Weight": 1,
+                  "Type": "zombossmech_egypt"
+                }
+              ],
+              "SummonTypePlantfood": [
+                {
+                  "Weight": 80,
+                  "Type": "egypt_gargantuar"
+                },
+                {
+                  "Weight": 50,
+                  "Type": "egypt_gargantuar_armor1"
+                },
+                {
+                  "Weight": 30,
+                  "Type": "egypt_gargantuar_armor2"
+                },
+                {
+                  "Weight": 20,
+                  "Type": "egypt_gargantuar_armor4"
+                },
+                {
+                  "Weight": 1,
+                  "Type": "zombossmech_egypt"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "SelectionMethod": "chooser"
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {},
+          {},
+          {},
+          {
+            "PointIncrementPerWave": 100,
+            "StartingPoints": 100,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(camel_onehump@ZombieTypes)",
+              "RTID(egypt_gargantuar@ZombieTypes)",
+              "RTID(explorer@ZombieTypes)",
+              "RTID(explorer_veteran@ZombieTypes)",
+              "RTID(mummy@ZombieTypes)",
+              "RTID(mummy_armor1@ZombieTypes)",
+              "RTID(mummy_armor2@ZombieTypes)",
+              "RTID(mummy_armor4@ZombieTypes)",
+              "RTID(pharaoh@ZombieTypes)",
+              "RTID(ra@ZombieTypes)",
+              "RTID(tomb_raiser@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 115,
+            "StartingPoints": 100,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(camel_onehump@ZombieTypes)",
+              "RTID(egypt_gargantuar@ZombieTypes)",
+              "RTID(explorer@ZombieTypes)",
+              "RTID(explorer_veteran@ZombieTypes)",
+              "RTID(mummy@ZombieTypes)",
+              "RTID(mummy_armor1@ZombieTypes)",
+              "RTID(mummy_armor2@ZombieTypes)",
+              "RTID(mummy_armor4@ZombieTypes)",
+              "RTID(pharaoh@ZombieTypes)",
+              "RTID(ra@ZombieTypes)",
+              "RTID(tomb_raiser@ZombieTypes)",
+              "RTID(camel_onehump_armor1@CurrentLevel)",
+              "RTID(egypt_gargantuar_armor1@CurrentLevel)",
+              "RTID(explorer_armor1@CurrentLevel)",
+              "RTID(explorer_veteran_armor1@CurrentLevel)",
+              "RTID(pharaoh_armor1@CurrentLevel)",
+              "RTID(ra_armor1@CurrentLevel)",
+              "RTID(tomb_raiser_armor1@CurrentLevel)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 140,
+            "StartingPoints": 100,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(camel_onehump@ZombieTypes)",
+              "RTID(egypt_gargantuar@ZombieTypes)",
+              "RTID(explorer@ZombieTypes)",
+              "RTID(explorer_veteran@ZombieTypes)",
+              "RTID(mummy@ZombieTypes)",
+              "RTID(mummy_armor1@ZombieTypes)",
+              "RTID(mummy_armor2@ZombieTypes)",
+              "RTID(mummy_armor4@ZombieTypes)",
+              "RTID(pharaoh@ZombieTypes)",
+              "RTID(ra@ZombieTypes)",
+              "RTID(tomb_raiser@ZombieTypes)",
+              "RTID(camel_onehump_armor1@CurrentLevel)",
+              "RTID(egypt_gargantuar_armor1@CurrentLevel)",
+              "RTID(explorer_armor1@CurrentLevel)",
+              "RTID(explorer_veteran_armor1@CurrentLevel)",
+              "RTID(pharaoh_armor1@CurrentLevel)",
+              "RTID(ra_armor1@CurrentLevel)",
+              "RTID(tomb_raiser_armor1@CurrentLevel)",
+              "RTID(camel_onehump_armor2@CurrentLevel)",
+              "RTID(egypt_gargantuar_armor2@CurrentLevel)",
+              "RTID(explorer_armor2@CurrentLevel)",
+              "RTID(explorer_veteran_armor2@CurrentLevel)",
+              "RTID(pharaoh_armor2@CurrentLevel)",
+              "RTID(ra_armor2@CurrentLevel)",
+              "RTID(tomb_raiser_armor2@CurrentLevel)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 190,
+            "StartingPoints": 100,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(camel_onehump@ZombieTypes)",
+              "RTID(egypt_gargantuar@ZombieTypes)",
+              "RTID(explorer@ZombieTypes)",
+              "RTID(explorer_veteran@ZombieTypes)",
+              "RTID(mummy@ZombieTypes)",
+              "RTID(mummy_armor1@ZombieTypes)",
+              "RTID(mummy_armor2@ZombieTypes)",
+              "RTID(mummy_armor4@ZombieTypes)",
+              "RTID(pharaoh@ZombieTypes)",
+              "RTID(ra@ZombieTypes)",
+              "RTID(tomb_raiser@ZombieTypes)",
+              "RTID(camel_onehump_armor1@CurrentLevel)",
+              "RTID(egypt_gargantuar_armor1@CurrentLevel)",
+              "RTID(explorer_armor1@CurrentLevel)",
+              "RTID(explorer_veteran_armor1@CurrentLevel)",
+              "RTID(pharaoh_armor1@CurrentLevel)",
+              "RTID(ra_armor1@CurrentLevel)",
+              "RTID(tomb_raiser_armor1@CurrentLevel)",
+              "RTID(camel_onehump_armor2@CurrentLevel)",
+              "RTID(egypt_gargantuar_armor2@CurrentLevel)",
+              "RTID(explorer_armor2@CurrentLevel)",
+              "RTID(explorer_veteran_armor2@CurrentLevel)",
+              "RTID(pharaoh_armor2@CurrentLevel)",
+              "RTID(ra_armor2@CurrentLevel)",
+              "RTID(tomb_raiser_armor2@CurrentLevel)",
+              "RTID(camel_onehump_armor4@CurrentLevel)",
+              "RTID(egypt_gargantuar_armor4@CurrentLevel)",
+              "RTID(explorer_armor4@CurrentLevel)",
+              "RTID(explorer_veteran_armor4@CurrentLevel)",
+              "RTID(pharaoh_armor4@CurrentLevel)",
+              "RTID(ra_armor4@CurrentLevel)",
+              "RTID(tomb_raiser_armor4@CurrentLevel)"
+            ]
+          }
+        ],
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 10,
+        "WaveCount": 40,
+        "Waves": [
+          [
+            "RTID(Wave1Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave11Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave12Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave13Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave14Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave15Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave16Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave17Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave18Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave19Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave20Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave21Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave22Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave23Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave24Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave25Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave26Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave27Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave28Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave29Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave30Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave31Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave32Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave33Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave34Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave35Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave36Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave37Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave38Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave39Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave40Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave41Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave42Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave43Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave44Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave45Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave46Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave47Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave48Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave49Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave50Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave51Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave52Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave53Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave54Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave55Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave56Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave57Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave58Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave59Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave60Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave61Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave62Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave63Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave64Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave65Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave66Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave67Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave68Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave69Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave70Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave71Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave72Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave73Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave74Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave75Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave76Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave77Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave78Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave79Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave80Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave81Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave82Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave83Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave84Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave85Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave86Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave87Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave88Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave89Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave90Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave91Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave92Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave93Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave94Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave95Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave96Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave97Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave98Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave99Jittered0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave100Jittered0@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave1Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave2Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave3Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave4Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave5Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave6Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave7Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave8Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave9Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave10Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave11Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave12Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave13Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave14Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave15Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave16Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave17Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave18Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave19Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave20Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave21Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave22Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave23Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave24Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave25Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave26Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave27Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave28Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave29Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave30Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave31Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave32Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave33Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave34Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave35Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave36Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave37Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave38Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave39Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave40Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave41Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave42Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave43Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave44Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave45Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave46Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave47Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave48Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave49Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave50Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave51Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave52Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave53Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave54Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave55Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave56Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave57Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave58Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave59Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave60Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave61Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave62Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave63Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave64Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave65Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave66Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave67Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave68Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave69Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave70Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave71Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave72Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave73Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave74Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave75Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave76Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave77Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave78Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave79Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave80Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave81Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave82Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave83Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave84Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave85Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave86Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave87Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave88Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave89Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave90Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave91Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave92Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave93Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave94Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave95Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave96Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave97Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave98Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave99Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave100Jittered0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": []
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "ra_armor1"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_ra_armor1@CurrentLevel)",
+        "ZombieBasedOn": "ra"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "ra_armor2"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_ra_armor2@CurrentLevel)",
+        "ZombieBasedOn": "ra"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "ra_armor4"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_ra_armor4@CurrentLevel)",
+        "ZombieBasedOn": "ra"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "camel_segment_armor1"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_camel_segment_armor1@CurrentLevel)",
+        "ZombieBasedOn": "camel_segment"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "camel_segment_armor2"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_camel_segment_armor2@CurrentLevel)",
+        "ZombieBasedOn": "camel_segment"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "camel_segment_armor4"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_camel_segment_armor4@CurrentLevel)",
+        "ZombieBasedOn": "camel_segment"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "camel_onehump_armor1"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_camel_onehump_armor1@CurrentLevel)",
+        "ZombieBasedOn": "camel_onehump"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "camel_onehump_armor2"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_camel_onehump_armor2@CurrentLevel)",
+        "ZombieBasedOn": "camel_onehump"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "camel_onehump_armor4"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_camel_onehump_armor4@CurrentLevel)",
+        "ZombieBasedOn": "camel_onehump"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "camel_twohump_armor1"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_camel_twohump_armor1@CurrentLevel)",
+        "ZombieBasedOn": "camel_onehump"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "camel_twohump_armor2"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_camel_twohump_armor2@CurrentLevel)",
+        "ZombieBasedOn": "camel_onehump"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "camel_twohump_armor4"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_camel_twohump_armor4@CurrentLevel)",
+        "ZombieBasedOn": "camel_onehump"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "camel_threehump_armor1"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_camel_threehump_armor1@CurrentLevel)",
+        "ZombieBasedOn": "camel_onehump"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "camel_threehump_armor2"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_camel_threehump_armor2@CurrentLevel)",
+        "ZombieBasedOn": "camel_onehump"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "camel_threehump_armor4"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_camel_threehump_armor4@CurrentLevel)",
+        "ZombieBasedOn": "camel_onehump"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "camel_manyhump_armor1"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_camel_manyhump_armor1@CurrentLevel)",
+        "ZombieBasedOn": "camel_onehump"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "camel_manyhump_armor2"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_camel_manyhump_armor2@CurrentLevel)",
+        "ZombieBasedOn": "camel_onehump"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "camel_manyhump_armor4"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_camel_manyhump_armor4@CurrentLevel)",
+        "ZombieBasedOn": "camel_onehump"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "camel_segment_touch_armor1"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_camel_segment_touch_armor1@CurrentLevel)",
+        "ZombieBasedOn": "camel_segment_touch"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "camel_segment_touch_armor2"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_camel_segment_touch_armor2@CurrentLevel)",
+        "ZombieBasedOn": "camel_segment_touch"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "camel_segment_touch_armor4"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_camel_segment_touch_armor4@CurrentLevel)",
+        "ZombieBasedOn": "camel_segment_touch"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "camel_onehump_touch_armor1"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_camel_onehump_touch_armor1@CurrentLevel)",
+        "ZombieBasedOn": "camel_onehump_touch"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "camel_onehump_touch_armor2"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_camel_onehump_touch_armor2@CurrentLevel)",
+        "ZombieBasedOn": "camel_onehump_touch"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "camel_onehump_touch_armor4"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_camel_onehump_touch_armor4@CurrentLevel)",
+        "ZombieBasedOn": "camel_onehump_touch"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "camel_twohump_touch_armor1"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_camel_twohump_touch_armor1@CurrentLevel)",
+        "ZombieBasedOn": "camel_onehump_touch"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "camel_twohump_touch_armor2"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_camel_twohump_touch_armor2@CurrentLevel)",
+        "ZombieBasedOn": "camel_onehump_touch"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "camel_twohump_touch_armor4"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_camel_twohump_touch_armor4@CurrentLevel)",
+        "ZombieBasedOn": "camel_onehump_touch"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "camel_threehump_touch_armor1"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_camel_threehump_touch_armor1@CurrentLevel)",
+        "ZombieBasedOn": "camel_onehump_touch"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "camel_threehump_touch_armor2"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_camel_threehump_touch_armor2@CurrentLevel)",
+        "ZombieBasedOn": "camel_onehump_touch"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "camel_threehump_touch_armor4"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_camel_threehump_touch_armor4@CurrentLevel)",
+        "ZombieBasedOn": "camel_onehump_touch"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "camel_manyhump_touch_armor1"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_camel_manyhump_touch_armor1@CurrentLevel)",
+        "ZombieBasedOn": "camel_onehump_touch"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "camel_manyhump_touch_armor2"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_camel_manyhump_touch_armor2@CurrentLevel)",
+        "ZombieBasedOn": "camel_onehump_touch"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "camel_manyhump_touch_armor4"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_camel_manyhump_touch_armor4@CurrentLevel)",
+        "ZombieBasedOn": "camel_onehump_touch"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "explorer_armor1"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_explorer_armor1@CurrentLevel)",
+        "ZombieBasedOn": "explorer"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "explorer_armor2"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_explorer_armor2@CurrentLevel)",
+        "ZombieBasedOn": "explorer"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "explorer_armor4"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_explorer_armor4@CurrentLevel)",
+        "ZombieBasedOn": "explorer"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "explorer_veteran_armor1"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_explorer_veteran_armor1@CurrentLevel)",
+        "ZombieBasedOn": "explorer_veteran"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "explorer_veteran_armor2"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_explorer_veteran_armor2@CurrentLevel)",
+        "ZombieBasedOn": "explorer_veteran"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "explorer_veteran_armor4"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_explorer_veteran_armor4@CurrentLevel)",
+        "ZombieBasedOn": "explorer_veteran"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "tomb_raiser_armor1"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_tomb_raiser_armor1@CurrentLevel)",
+        "ZombieBasedOn": "tomb_raiser"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "tomb_raiser_armor2"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_tomb_raiser_armor2@CurrentLevel)",
+        "ZombieBasedOn": "tomb_raiser"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "tomb_raiser_armor4"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_tomb_raiser_armor4@CurrentLevel)",
+        "ZombieBasedOn": "tomb_raiser"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "pharaoh_inner_armor1"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_pharaoh_inner_armor1@CurrentLevel)",
+        "ZombieBasedOn": "pharaoh_inner"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "pharaoh_inner_armor2"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_pharaoh_inner_armor2@CurrentLevel)",
+        "ZombieBasedOn": "pharaoh_inner"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "pharaoh_inner_armor4"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_pharaoh_inner_armor4@CurrentLevel)",
+        "ZombieBasedOn": "pharaoh_inner"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "pharaoh_weak_armor1"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_pharaoh_weak_armor1@CurrentLevel)",
+        "ZombieBasedOn": "pharaoh_weak"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "pharaoh_weak_armor2"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_pharaoh_weak_armor2@CurrentLevel)",
+        "ZombieBasedOn": "pharaoh_weak"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "pharaoh_weak_armor4"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_pharaoh_weak_armor4@CurrentLevel)",
+        "ZombieBasedOn": "pharaoh_weak"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "pharaoh_armor1"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_pharaoh_armor1@CurrentLevel)",
+        "ZombieBasedOn": "pharaoh"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "pharaoh_armor2"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_pharaoh_armor2@CurrentLevel)",
+        "ZombieBasedOn": "pharaoh"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "pharaoh_armor4"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_pharaoh_armor4@CurrentLevel)",
+        "ZombieBasedOn": "pharaoh"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "egypt_imp_armor1"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_egypt_imp_armor1@CurrentLevel)",
+        "ZombieBasedOn": "egypt_imp"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "egypt_imp_armor2"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_egypt_imp_armor2@CurrentLevel)",
+        "ZombieBasedOn": "egypt_imp"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "egypt_imp_armor4"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_egypt_imp_armor4@CurrentLevel)",
+        "ZombieBasedOn": "egypt_imp"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "egypt_gargantuar_armor1"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_egypt_gargantuar_armor1@CurrentLevel)",
+        "ZombieBasedOn": "egypt_gargantuar"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "egypt_gargantuar_armor2"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_egypt_gargantuar_armor2@CurrentLevel)",
+        "ZombieBasedOn": "egypt_gargantuar"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "egypt_gargantuar_armor4"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombie_egypt_gargantuar_armor4@CurrentLevel)",
+        "ZombieBasedOn": "egypt_gargantuar"
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_ra_armor1"
+      ],
+      "objdata": {
+        "ZombieSort": "Normal",
+        "MaxAbsorbValue": 250,
+        "WalkSPS": 0.2,
+        "EatDPS": 100,
+        "Toughness": 190,
+        "WavePointCost": 200,
+        "Weight": 2100,
+        "HitRect": "RTID(CommonHitRect@RectangleProps)",
+        "AttackRect": "RTID(CommonAttackRect@RectangleProps)",
+        "StartingArmors": [
+          "egypt_armor1"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_ra_armor2"
+      ],
+      "objdata": {
+        "ZombieSort": "Normal",
+        "MaxAbsorbValue": 250,
+        "WalkSPS": 0.2,
+        "EatDPS": 100,
+        "Toughness": 190,
+        "WavePointCost": 400,
+        "Weight": 2800,
+        "HitRect": "RTID(CommonHitRect@RectangleProps)",
+        "AttackRect": "RTID(CommonAttackRect@RectangleProps)",
+        "StartingArmors": [
+          "egypt_armor2"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_ra_armor4"
+      ],
+      "objdata": {
+        "ZombieSort": "Normal",
+        "MaxAbsorbValue": 250,
+        "WalkSPS": 0.2,
+        "EatDPS": 100,
+        "Toughness": 190,
+        "WavePointCost": 700,
+        "Weight": 2800,
+        "HitRect": "RTID(CommonHitRect@RectangleProps)",
+        "AttackRect": "RTID(CommonAttackRect@RectangleProps)",
+        "StartingArmors": [
+          "egypt_armor4"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_camel_segment_armor1"
+      ],
+      "objdata": {
+        "TeammateType": "camel_segment_armor1",
+        "WalkSPS": 0.12,
+        "EatDPS": 100,
+        "Toughness": 250,
+        "ZombieInside": "mummy_armor1",
+        "NormalDeathWhenMowed": true,
+        "WavePointCost": 400,
+        "Weight": 9000,
+        "HitRect": "RTID(CamelSegmentHitRect@RectangleProps)",
+        "AttackRect": "RTID(CamelSegmentAttackRect@RectangleProps)",
+        "TeamMemberCount": [
+          0
+        ],
+        "StartingArmors": [
+          "egypt_250_armor1"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_camel_segment_armor2"
+      ],
+      "objdata": {
+        "TeammateType": "camel_segment_armor2",
+        "WalkSPS": 0.12,
+        "EatDPS": 100,
+        "Toughness": 250,
+        "ZombieInside": "mummy_armor2",
+        "NormalDeathWhenMowed": true,
+        "WavePointCost": 800,
+        "Weight": 12000,
+        "HitRect": "RTID(CamelSegmentHitRect@RectangleProps)",
+        "AttackRect": "RTID(CamelSegmentAttackRect@RectangleProps)",
+        "TeamMemberCount": [
+          0
+        ],
+        "StartingArmors": [
+          "egypt_250_armor2"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_camel_segment_armor4"
+      ],
+      "objdata": {
+        "TeammateType": "camel_segment_armor4",
+        "WalkSPS": 0.12,
+        "EatDPS": 100,
+        "Toughness": 250,
+        "ZombieInside": "mummy_armor4",
+        "NormalDeathWhenMowed": true,
+        "WavePointCost": 1400,
+        "Weight": 12000,
+        "HitRect": "RTID(CamelSegmentHitRect@RectangleProps)",
+        "AttackRect": "RTID(CamelSegmentAttackRect@RectangleProps)",
+        "TeamMemberCount": [
+          0
+        ],
+        "StartingArmors": [
+          "egypt_250_armor4"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_camel_onehump_armor1"
+      ],
+      "objdata": {
+        "TeammateType": "camel_segment_armor1",
+        "WalkSPS": 0.12,
+        "EatDPS": 100,
+        "Toughness": 250,
+        "ZombieInside": "mummy_armor1",
+        "NormalDeathWhenMowed": true,
+        "WavePointCost": 1200,
+        "Weight": 9000,
+        "HitRect": "RTID(CamelSegmentHitRect@RectangleProps)",
+        "AttackRect": "RTID(CamelSegmentAttackRect@RectangleProps)",
+        "TeamMemberCount": [
+          3
+        ],
+        "StartingArmors": [
+          "egypt_250_armor1"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_camel_onehump_armor2"
+      ],
+      "objdata": {
+        "TeammateType": "camel_segment_armor2",
+        "WalkSPS": 0.12,
+        "EatDPS": 100,
+        "Toughness": 250,
+        "ZombieInside": "mummy_armor2",
+        "NormalDeathWhenMowed": true,
+        "WavePointCost": 2400,
+        "Weight": 12000,
+        "HitRect": "RTID(CamelSegmentHitRect@RectangleProps)",
+        "AttackRect": "RTID(CamelSegmentAttackRect@RectangleProps)",
+        "TeamMemberCount": [
+          3
+        ],
+        "StartingArmors": [
+          "egypt_250_armor2"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_camel_onehump_armor4"
+      ],
+      "objdata": {
+        "TeammateType": "camel_segment_armor4",
+        "WalkSPS": 0.12,
+        "EatDPS": 100,
+        "Toughness": 250,
+        "ZombieInside": "mummy_armor4",
+        "NormalDeathWhenMowed": true,
+        "WavePointCost": 4200,
+        "Weight": 12000,
+        "HitRect": "RTID(CamelSegmentHitRect@RectangleProps)",
+        "AttackRect": "RTID(CamelSegmentAttackRect@RectangleProps)",
+        "TeamMemberCount": [
+          3
+        ],
+        "StartingArmors": [
+          "egypt_250_armor4"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_camel_twohump_armor1"
+      ],
+      "objdata": {
+        "TeammateType": "camel_segment_armor1",
+        "WalkSPS": 0.12,
+        "EatDPS": 100,
+        "Toughness": 250,
+        "ZombieInside": "mummy_armor1",
+        "NormalDeathWhenMowed": true,
+        "WavePointCost": 1600,
+        "Weight": 9000,
+        "HitRect": "RTID(CamelSegmentHitRect@RectangleProps)",
+        "AttackRect": "RTID(CamelSegmentAttackRect@RectangleProps)",
+        "TeamMemberCount": [
+          4
+        ],
+        "StartingArmors": [
+          "egypt_250_armor1"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_camel_twohump_armor2"
+      ],
+      "objdata": {
+        "TeammateType": "camel_segment_armor2",
+        "WalkSPS": 0.12,
+        "EatDPS": 100,
+        "Toughness": 250,
+        "ZombieInside": "mummy_armor2",
+        "NormalDeathWhenMowed": true,
+        "WavePointCost": 3200,
+        "Weight": 12000,
+        "HitRect": "RTID(CamelSegmentHitRect@RectangleProps)",
+        "AttackRect": "RTID(CamelSegmentAttackRect@RectangleProps)",
+        "TeamMemberCount": [
+          4
+        ],
+        "StartingArmors": [
+          "egypt_250_armor2"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_camel_twohump_armor4"
+      ],
+      "objdata": {
+        "TeammateType": "camel_segment_armor4",
+        "WalkSPS": 0.12,
+        "EatDPS": 100,
+        "Toughness": 250,
+        "ZombieInside": "mummy_armor4",
+        "NormalDeathWhenMowed": true,
+        "WavePointCost": 5600,
+        "Weight": 12000,
+        "HitRect": "RTID(CamelSegmentHitRect@RectangleProps)",
+        "AttackRect": "RTID(CamelSegmentAttackRect@RectangleProps)",
+        "TeamMemberCount": [
+          4
+        ],
+        "StartingArmors": [
+          "egypt_250_armor4"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_camel_threehump_armor1"
+      ],
+      "objdata": {
+        "TeammateType": "camel_segment_armor1",
+        "WalkSPS": 0.12,
+        "EatDPS": 100,
+        "Toughness": 250,
+        "ZombieInside": "mummy_armor1",
+        "NormalDeathWhenMowed": true,
+        "WavePointCost": 2000,
+        "Weight": 9000,
+        "HitRect": "RTID(CamelSegmentHitRect@RectangleProps)",
+        "AttackRect": "RTID(CamelSegmentAttackRect@RectangleProps)",
+        "TeamMemberCount": [
+          5
+        ],
+        "StartingArmors": [
+          "egypt_250_armor1"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_camel_threehump_armor2"
+      ],
+      "objdata": {
+        "TeammateType": "camel_segment_armor2",
+        "WalkSPS": 0.12,
+        "EatDPS": 100,
+        "Toughness": 250,
+        "ZombieInside": "mummy_armor2",
+        "NormalDeathWhenMowed": true,
+        "WavePointCost": 4000,
+        "Weight": 12000,
+        "HitRect": "RTID(CamelSegmentHitRect@RectangleProps)",
+        "AttackRect": "RTID(CamelSegmentAttackRect@RectangleProps)",
+        "TeamMemberCount": [
+          5
+        ],
+        "StartingArmors": [
+          "egypt_250_armor2"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_camel_threehump_armor4"
+      ],
+      "objdata": {
+        "TeammateType": "camel_segment_armor4",
+        "WalkSPS": 0.12,
+        "EatDPS": 100,
+        "Toughness": 250,
+        "ZombieInside": "mummy_armor4",
+        "NormalDeathWhenMowed": true,
+        "WavePointCost": 7000,
+        "Weight": 12000,
+        "HitRect": "RTID(CamelSegmentHitRect@RectangleProps)",
+        "AttackRect": "RTID(CamelSegmentAttackRect@RectangleProps)",
+        "TeamMemberCount": [
+          5
+        ],
+        "StartingArmors": [
+          "egypt_250_armor4"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_camel_manyhump_armor1"
+      ],
+      "objdata": {
+        "TeammateType": "camel_segment_armor1",
+        "WalkSPS": 0.12,
+        "EatDPS": 100,
+        "Toughness": 250,
+        "ZombieInside": "mummy_armor1",
+        "NormalDeathWhenMowed": true,
+        "WavePointCost": 2400,
+        "Weight": 9000,
+        "HitRect": "RTID(CamelSegmentHitRect@RectangleProps)",
+        "AttackRect": "RTID(CamelSegmentAttackRect@RectangleProps)",
+        "TeamMemberCount": [
+          5,
+          6,
+          7
+        ],
+        "StartingArmors": [
+          "egypt_250_armor1"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_camel_manyhump_armor2"
+      ],
+      "objdata": {
+        "TeammateType": "camel_segment_armor2",
+        "WalkSPS": 0.12,
+        "EatDPS": 100,
+        "Toughness": 250,
+        "ZombieInside": "mummy_armor2",
+        "NormalDeathWhenMowed": true,
+        "WavePointCost": 4800,
+        "Weight": 12000,
+        "HitRect": "RTID(CamelSegmentHitRect@RectangleProps)",
+        "AttackRect": "RTID(CamelSegmentAttackRect@RectangleProps)",
+        "TeamMemberCount": [
+          5,
+          6,
+          7
+        ],
+        "StartingArmors": [
+          "egypt_250_armor2"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_camel_manyhump_armor4"
+      ],
+      "objdata": {
+        "TeammateType": "camel_segment_armor4",
+        "WalkSPS": 0.12,
+        "EatDPS": 100,
+        "Toughness": 250,
+        "ZombieInside": "mummy_armor4",
+        "NormalDeathWhenMowed": true,
+        "WavePointCost": 8400,
+        "Weight": 12000,
+        "HitRect": "RTID(CamelSegmentHitRect@RectangleProps)",
+        "AttackRect": "RTID(CamelSegmentAttackRect@RectangleProps)",
+        "TeamMemberCount": [
+          5,
+          6,
+          7
+        ],
+        "StartingArmors": [
+          "egypt_250_armor4"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_camel_segment_touch_armor1"
+      ],
+      "objdata": {
+        "TeammateType": "camel_segment_touch_armor1",
+        "WalkSPS": 0.12,
+        "EatDPS": 100,
+        "Toughness": 250,
+        "ZombieInside": "mummy_armor1",
+        "NormalDeathWhenMowed": true,
+        "WavePointCost": 400,
+        "Weight": 9000,
+        "HitRect": "RTID(CamelSegmentHitRect@RectangleProps)",
+        "AttackRect": "RTID(CamelSegmentAttackRect@RectangleProps)",
+        "TeamMemberCount": [
+          0
+        ],
+        "StartingArmors": [
+          "egypt_250_armor1"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_camel_segment_touch_armor2"
+      ],
+      "objdata": {
+        "TeammateType": "camel_segment_touch_armor2",
+        "WalkSPS": 0.12,
+        "EatDPS": 100,
+        "Toughness": 250,
+        "ZombieInside": "mummy_armor2",
+        "NormalDeathWhenMowed": true,
+        "WavePointCost": 800,
+        "Weight": 12000,
+        "HitRect": "RTID(CamelSegmentHitRect@RectangleProps)",
+        "AttackRect": "RTID(CamelSegmentAttackRect@RectangleProps)",
+        "TeamMemberCount": [
+          0
+        ],
+        "StartingArmors": [
+          "egypt_250_armor2"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_camel_segment_touch_armor4"
+      ],
+      "objdata": {
+        "TeammateType": "camel_segment_touch_armor4",
+        "WalkSPS": 0.12,
+        "EatDPS": 100,
+        "Toughness": 250,
+        "ZombieInside": "mummy_armor4",
+        "NormalDeathWhenMowed": true,
+        "WavePointCost": 1400,
+        "Weight": 12000,
+        "HitRect": "RTID(CamelSegmentHitRect@RectangleProps)",
+        "AttackRect": "RTID(CamelSegmentAttackRect@RectangleProps)",
+        "TeamMemberCount": [
+          0
+        ],
+        "StartingArmors": [
+          "egypt_250_armor4"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_camel_onehump_touch_armor1"
+      ],
+      "objdata": {
+        "TeammateType": "camel_segment_touch_armor1",
+        "WalkSPS": 0.12,
+        "EatDPS": 100,
+        "Toughness": 250,
+        "ZombieInside": "mummy_armor1",
+        "NormalDeathWhenMowed": true,
+        "WavePointCost": 1200,
+        "Weight": 9000,
+        "HitRect": "RTID(CamelSegmentHitRect@RectangleProps)",
+        "AttackRect": "RTID(CamelSegmentAttackRect@RectangleProps)",
+        "TeamMemberCount": [
+          3
+        ],
+        "StartingArmors": [
+          "egypt_250_armor1"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_camel_onehump_touch_armor2"
+      ],
+      "objdata": {
+        "TeammateType": "camel_segment_touch_armor2",
+        "WalkSPS": 0.12,
+        "EatDPS": 100,
+        "Toughness": 250,
+        "ZombieInside": "mummy_armor2",
+        "NormalDeathWhenMowed": true,
+        "WavePointCost": 2400,
+        "Weight": 12000,
+        "HitRect": "RTID(CamelSegmentHitRect@RectangleProps)",
+        "AttackRect": "RTID(CamelSegmentAttackRect@RectangleProps)",
+        "TeamMemberCount": [
+          3
+        ],
+        "StartingArmors": [
+          "egypt_250_armor2"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_camel_onehump_touch_armor4"
+      ],
+      "objdata": {
+        "TeammateType": "camel_segment_touch_armor4",
+        "WalkSPS": 0.12,
+        "EatDPS": 100,
+        "Toughness": 250,
+        "ZombieInside": "mummy_armor4",
+        "NormalDeathWhenMowed": true,
+        "WavePointCost": 4200,
+        "Weight": 12000,
+        "HitRect": "RTID(CamelSegmentHitRect@RectangleProps)",
+        "AttackRect": "RTID(CamelSegmentAttackRect@RectangleProps)",
+        "TeamMemberCount": [
+          3
+        ],
+        "StartingArmors": [
+          "egypt_250_armor4"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_camel_twohump_touch_armor1"
+      ],
+      "objdata": {
+        "TeammateType": "camel_segment_touch_armor1",
+        "WalkSPS": 0.12,
+        "EatDPS": 100,
+        "Toughness": 250,
+        "ZombieInside": "mummy_armor1",
+        "NormalDeathWhenMowed": true,
+        "WavePointCost": 1600,
+        "Weight": 9000,
+        "HitRect": "RTID(CamelSegmentHitRect@RectangleProps)",
+        "AttackRect": "RTID(CamelSegmentAttackRect@RectangleProps)",
+        "TeamMemberCount": [
+          4
+        ],
+        "StartingArmors": [
+          "egypt_250_armor1"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_camel_twohump_touch_armor2"
+      ],
+      "objdata": {
+        "TeammateType": "camel_segment_touch_armor2",
+        "WalkSPS": 0.12,
+        "EatDPS": 100,
+        "Toughness": 250,
+        "ZombieInside": "mummy_armor2",
+        "NormalDeathWhenMowed": true,
+        "WavePointCost": 3200,
+        "Weight": 12000,
+        "HitRect": "RTID(CamelSegmentHitRect@RectangleProps)",
+        "AttackRect": "RTID(CamelSegmentAttackRect@RectangleProps)",
+        "TeamMemberCount": [
+          4
+        ],
+        "StartingArmors": [
+          "egypt_250_armor2"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_camel_twohump_touch_armor4"
+      ],
+      "objdata": {
+        "TeammateType": "camel_segment_touch_armor4",
+        "WalkSPS": 0.12,
+        "EatDPS": 100,
+        "Toughness": 250,
+        "ZombieInside": "mummy_armor4",
+        "NormalDeathWhenMowed": true,
+        "WavePointCost": 5600,
+        "Weight": 12000,
+        "HitRect": "RTID(CamelSegmentHitRect@RectangleProps)",
+        "AttackRect": "RTID(CamelSegmentAttackRect@RectangleProps)",
+        "TeamMemberCount": [
+          4
+        ],
+        "StartingArmors": [
+          "egypt_250_armor4"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_camel_threehump_touch_armor1"
+      ],
+      "objdata": {
+        "TeammateType": "camel_segment_touch_armor1",
+        "WalkSPS": 0.12,
+        "EatDPS": 100,
+        "Toughness": 250,
+        "ZombieInside": "mummy_armor1",
+        "NormalDeathWhenMowed": true,
+        "WavePointCost": 2000,
+        "Weight": 9000,
+        "HitRect": "RTID(CamelSegmentHitRect@RectangleProps)",
+        "AttackRect": "RTID(CamelSegmentAttackRect@RectangleProps)",
+        "TeamMemberCount": [
+          5
+        ],
+        "StartingArmors": [
+          "egypt_250_armor1"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_camel_threehump_touch_armor2"
+      ],
+      "objdata": {
+        "TeammateType": "camel_segment_touch_armor2",
+        "WalkSPS": 0.12,
+        "EatDPS": 100,
+        "Toughness": 250,
+        "ZombieInside": "mummy_armor2",
+        "NormalDeathWhenMowed": true,
+        "WavePointCost": 4000,
+        "Weight": 12000,
+        "HitRect": "RTID(CamelSegmentHitRect@RectangleProps)",
+        "AttackRect": "RTID(CamelSegmentAttackRect@RectangleProps)",
+        "TeamMemberCount": [
+          5
+        ],
+        "StartingArmors": [
+          "egypt_250_armor2"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_camel_threehump_touch_armor4"
+      ],
+      "objdata": {
+        "TeammateType": "camel_segment_touch_armor4",
+        "WalkSPS": 0.12,
+        "EatDPS": 100,
+        "Toughness": 250,
+        "ZombieInside": "mummy_armor4",
+        "NormalDeathWhenMowed": true,
+        "WavePointCost": 7000,
+        "Weight": 12000,
+        "HitRect": "RTID(CamelSegmentHitRect@RectangleProps)",
+        "AttackRect": "RTID(CamelSegmentAttackRect@RectangleProps)",
+        "TeamMemberCount": [
+          5
+        ],
+        "StartingArmors": [
+          "egypt_250_armor4"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_camel_manyhump_touch_armor1"
+      ],
+      "objdata": {
+        "TeammateType": "camel_segment_touch_armor1",
+        "WalkSPS": 0.12,
+        "EatDPS": 100,
+        "Toughness": 250,
+        "ZombieInside": "mummy_armor1",
+        "NormalDeathWhenMowed": true,
+        "WavePointCost": 2400,
+        "Weight": 9000,
+        "HitRect": "RTID(CamelSegmentHitRect@RectangleProps)",
+        "AttackRect": "RTID(CamelSegmentAttackRect@RectangleProps)",
+        "TeamMemberCount": [
+          5,
+          6,
+          7
+        ],
+        "StartingArmors": [
+          "egypt_250_armor1"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_camel_manyhump_touch_armor2"
+      ],
+      "objdata": {
+        "TeammateType": "camel_segment_touch_armor2",
+        "WalkSPS": 0.12,
+        "EatDPS": 100,
+        "Toughness": 250,
+        "ZombieInside": "mummy_armor2",
+        "NormalDeathWhenMowed": true,
+        "WavePointCost": 4800,
+        "Weight": 12000,
+        "HitRect": "RTID(CamelSegmentHitRect@RectangleProps)",
+        "AttackRect": "RTID(CamelSegmentAttackRect@RectangleProps)",
+        "TeamMemberCount": [
+          5,
+          6,
+          7
+        ],
+        "StartingArmors": [
+          "egypt_250_armor2"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_camel_manyhump_touch_armor4"
+      ],
+      "objdata": {
+        "TeammateType": "camel_segment_touch_armor4",
+        "WalkSPS": 0.12,
+        "EatDPS": 100,
+        "Toughness": 250,
+        "ZombieInside": "mummy_armor4",
+        "NormalDeathWhenMowed": true,
+        "WavePointCost": 8400,
+        "Weight": 12000,
+        "HitRect": "RTID(CamelSegmentHitRect@RectangleProps)",
+        "AttackRect": "RTID(CamelSegmentAttackRect@RectangleProps)",
+        "TeamMemberCount": [
+          5,
+          6,
+          7
+        ],
+        "StartingArmors": [
+          "egypt_250_armor4"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_explorer_armor1"
+      ],
+      "objdata": {
+        "CannotBeCarriedByFanStorm": true,
+        "WalkSPS": 0.25,
+        "EatDPS": 100,
+        "FireDPS": 1000,
+        "Toughness": 250,
+        "WavePointCost": 500,
+        "Weight": 9000,
+        "HitRect": "RTID(CommonHitRect@RectangleProps)",
+        "AttackRect": "RTID(CommonAttackRect@RectangleProps)",
+        "HitRectWithFire": "RTID(ExplorerWithFireHitRect@RectangleProps)",
+        "AttackRectWithFire": "RTID(ExplorerWithFireAttackRect@RectangleProps)",
+        "StartingArmors": [
+          "egypt_250_armor1"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_explorer_armor2"
+      ],
+      "objdata": {
+        "CannotBeCarriedByFanStorm": true,
+        "WalkSPS": 0.25,
+        "EatDPS": 100,
+        "FireDPS": 1000,
+        "Toughness": 250,
+        "WavePointCost": 1000,
+        "Weight": 12000,
+        "HitRect": "RTID(CommonHitRect@RectangleProps)",
+        "AttackRect": "RTID(CommonAttackRect@RectangleProps)",
+        "HitRectWithFire": "RTID(ExplorerWithFireHitRect@RectangleProps)",
+        "AttackRectWithFire": "RTID(ExplorerWithFireAttackRect@RectangleProps)",
+        "StartingArmors": [
+          "egypt_250_armor2"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_explorer_armor4"
+      ],
+      "objdata": {
+        "CannotBeCarriedByFanStorm": true,
+        "WalkSPS": 0.25,
+        "EatDPS": 100,
+        "FireDPS": 1000,
+        "Toughness": 250,
+        "WavePointCost": 1750,
+        "Weight": 12000,
+        "HitRect": "RTID(CommonHitRect@RectangleProps)",
+        "AttackRect": "RTID(CommonAttackRect@RectangleProps)",
+        "HitRectWithFire": "RTID(ExplorerWithFireHitRect@RectangleProps)",
+        "AttackRectWithFire": "RTID(ExplorerWithFireAttackRect@RectangleProps)",
+        "StartingArmors": [
+          "egypt_250_armor4"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_explorer_veteran_armor1"
+      ],
+      "objdata": {
+        "CannotBeCarriedByFanStorm": true,
+        "WalkSPS": 0.5,
+        "EatDPS": 150,
+        "FireDPS": 1000,
+        "Toughness": 650,
+        "WavePointCost": 1400,
+        "Weight": 9000,
+        "HitRect": "RTID(CommonHitRect@RectangleProps)",
+        "AttackRect": "RTID(CommonAttackRect@RectangleProps)",
+        "HitRectWithFire": "RTID(ExplorerWithFireHitRect@RectangleProps)",
+        "AttackRectWithFire": "RTID(ExplorerWithFireAttackRect@RectangleProps)",
+        "StartingArmors": [
+          "egypt_650_armor1"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_explorer_veteran_armor2"
+      ],
+      "objdata": {
+        "CannotBeCarriedByFanStorm": true,
+        "WalkSPS": 0.5,
+        "EatDPS": 150,
+        "FireDPS": 1000,
+        "Toughness": 650,
+        "WavePointCost": 2800,
+        "Weight": 12000,
+        "HitRect": "RTID(CommonHitRect@RectangleProps)",
+        "AttackRect": "RTID(CommonAttackRect@RectangleProps)",
+        "HitRectWithFire": "RTID(ExplorerWithFireHitRect@RectangleProps)",
+        "AttackRectWithFire": "RTID(ExplorerWithFireAttackRect@RectangleProps)",
+        "StartingArmors": [
+          "egypt_650_armor2"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_explorer_veteran_armor4"
+      ],
+      "objdata": {
+        "CannotBeCarriedByFanStorm": true,
+        "WalkSPS": 0.5,
+        "EatDPS": 150,
+        "FireDPS": 1000,
+        "Toughness": 650,
+        "WavePointCost": 4900,
+        "Weight": 12000,
+        "HitRect": "RTID(CommonHitRect@RectangleProps)",
+        "AttackRect": "RTID(CommonAttackRect@RectangleProps)",
+        "HitRectWithFire": "RTID(ExplorerWithFireHitRect@RectangleProps)",
+        "AttackRectWithFire": "RTID(ExplorerWithFireAttackRect@RectangleProps)",
+        "StartingArmors": [
+          "egypt_650_armor4"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_tomb_raiser_armor1"
+      ],
+      "objdata": {
+        "BoneType": "tombraiser_bone",
+        "ThrowTimePerGroup": 2,
+        "TimeBetweenGroups": 6,
+        "TimeBetweenGroupsAdditional": 1,
+        "WalkSPS": 0.185,
+        "EatDPS": 100,
+        "Toughness": 380,
+        "WavePointCost": 600,
+        "Weight": 6000,
+        "HitRect": "RTID(CommonHitRect@RectangleProps)",
+        "AttackRect": "RTID(CommonAttackRect@RectangleProps)",
+        "StartingArmors": [
+          "egypt_380_armor1"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_tomb_raiser_armor2"
+      ],
+      "objdata": {
+        "BoneType": "tombraiser_bone",
+        "ThrowTimePerGroup": 2,
+        "TimeBetweenGroups": 6,
+        "TimeBetweenGroupsAdditional": 1,
+        "WalkSPS": 0.185,
+        "EatDPS": 100,
+        "Toughness": 380,
+        "WavePointCost": 1200,
+        "Weight": 8000,
+        "HitRect": "RTID(CommonHitRect@RectangleProps)",
+        "AttackRect": "RTID(CommonAttackRect@RectangleProps)",
+        "StartingArmors": [
+          "egypt_380_armor2"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_tomb_raiser_armor4"
+      ],
+      "objdata": {
+        "BoneType": "tombraiser_bone",
+        "ThrowTimePerGroup": 2,
+        "TimeBetweenGroups": 6,
+        "TimeBetweenGroupsAdditional": 1,
+        "WalkSPS": 0.185,
+        "EatDPS": 100,
+        "Toughness": 380,
+        "WavePointCost": 2100,
+        "Weight": 8000,
+        "HitRect": "RTID(CommonHitRect@RectangleProps)",
+        "AttackRect": "RTID(CommonAttackRect@RectangleProps)",
+        "StartingArmors": [
+          "egypt_380_armor4"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_pharaoh_inner_armor1"
+      ],
+      "objdata": {
+        "WalkSPS": 0.5,
+        "EatDPS": 100,
+        "Toughness": 290,
+        "WavePointCost": 300,
+        "Weight": 9000,
+        "HitRect": "RTID(CommonHitRect@RectangleProps)",
+        "AttackRect": "RTID(CommonAttackRect@RectangleProps)",
+        "StartingArmors": [
+          "egypt_290_armor1"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_pharaoh_inner_armor2"
+      ],
+      "objdata": {
+        "WalkSPS": 0.5,
+        "EatDPS": 100,
+        "Toughness": 290,
+        "WavePointCost": 600,
+        "Weight": 12000,
+        "HitRect": "RTID(CommonHitRect@RectangleProps)",
+        "AttackRect": "RTID(CommonAttackRect@RectangleProps)",
+        "StartingArmors": [
+          "egypt_290_armor2"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_pharaoh_inner_armor4"
+      ],
+      "objdata": {
+        "WalkSPS": 0.5,
+        "EatDPS": 100,
+        "Toughness": 290,
+        "WavePointCost": 1050,
+        "Weight": 12000,
+        "HitRect": "RTID(CommonHitRect@RectangleProps)",
+        "AttackRect": "RTID(CommonAttackRect@RectangleProps)",
+        "StartingArmors": [
+          "egypt_290_armor4"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_pharaoh_weak_armor1"
+      ],
+      "objdata": {
+        "ZombieInside": "pharaoh_inner_armor1",
+        "WalkSPS": 0.185,
+        "EatDPS": 100,
+        "Toughness": 1200,
+        "NormalDeathWhenMowed": true,
+        "WavePointCost": 900,
+        "Weight": 300,
+        "HitRect": "RTID(PharoahHitRect@RectangleProps)",
+        "AttackRect": "RTID(PharoahAttackRect@RectangleProps)",
+        "StartingArmors": [
+          "egypt_1200_armor1"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_pharaoh_weak_armor2"
+      ],
+      "objdata": {
+        "ZombieInside": "pharaoh_inner_armor2",
+        "WalkSPS": 0.185,
+        "EatDPS": 100,
+        "Toughness": 1200,
+        "NormalDeathWhenMowed": true,
+        "WavePointCost": 1800,
+        "Weight": 400,
+        "HitRect": "RTID(PharoahHitRect@RectangleProps)",
+        "AttackRect": "RTID(PharoahAttackRect@RectangleProps)",
+        "StartingArmors": [
+          "egypt_1200_armor2"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_pharaoh_weak_armor4"
+      ],
+      "objdata": {
+        "ZombieInside": "pharaoh_inner_armor4",
+        "WalkSPS": 0.185,
+        "EatDPS": 100,
+        "Toughness": 1200,
+        "NormalDeathWhenMowed": true,
+        "WavePointCost": 3150,
+        "Weight": 400,
+        "HitRect": "RTID(PharoahHitRect@RectangleProps)",
+        "AttackRect": "RTID(PharoahAttackRect@RectangleProps)",
+        "StartingArmors": [
+          "egypt_1200_armor4"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_pharaoh_armor1"
+      ],
+      "objdata": {
+        "ProtectsInside": true,
+        "ZombieInside": "pharaoh_inner_armor1",
+        "WalkSPS": 0.185,
+        "EatDPS": 100,
+        "Toughness": 1200,
+        "DamageExtends": false,
+        "NormalDeathWhenMowed": true,
+        "WavePointCost": 900,
+        "Weight": 300,
+        "HitRect": "RTID(PharoahHitRect@RectangleProps)",
+        "AttackRect": "RTID(PharoahAttackRect@RectangleProps)",
+        "StartingArmors": [
+          "egypt_1200_armor1"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_pharaoh_armor2"
+      ],
+      "objdata": {
+        "ProtectsInside": true,
+        "ZombieInside": "pharaoh_inner_armor2",
+        "WalkSPS": 0.185,
+        "EatDPS": 100,
+        "Toughness": 1200,
+        "DamageExtends": false,
+        "NormalDeathWhenMowed": true,
+        "WavePointCost": 1800,
+        "Weight": 400,
+        "HitRect": "RTID(PharoahHitRect@RectangleProps)",
+        "AttackRect": "RTID(PharoahAttackRect@RectangleProps)",
+        "StartingArmors": [
+          "egypt_1200_armor2"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_pharaoh_armor4"
+      ],
+      "objdata": {
+        "ProtectsInside": true,
+        "ZombieInside": "pharaoh_inner_armor4",
+        "WalkSPS": 0.185,
+        "EatDPS": 100,
+        "Toughness": 1200,
+        "DamageExtends": false,
+        "NormalDeathWhenMowed": true,
+        "WavePointCost": 3150,
+        "Weight": 400,
+        "HitRect": "RTID(PharoahHitRect@RectangleProps)",
+        "AttackRect": "RTID(PharoahAttackRect@RectangleProps)",
+        "StartingArmors": [
+          "egypt_1200_armor4"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_egypt_imp_armor1"
+      ],
+      "objdata": {
+        "KilledByShrinkingViolet": true,
+        "CannotBeGrabbedByPtero": true,
+        "ZombieSort": "Normal",
+        "IgnoredInWaves": true,
+        "WalkSPS": 0.22,
+        "Toughness": 190,
+        "WavePointCost": 200,
+        "Weight": 3000,
+        "HitRect": "RTID(ImpHitRect@RectangleProps)",
+        "AttackRect": "RTID(ImpAttackRect@RectangleProps)",
+        "StartingArmors": [
+          "egypt_armor1"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_egypt_imp_armor2"
+      ],
+      "objdata": {
+        "KilledByShrinkingViolet": true,
+        "CannotBeGrabbedByPtero": true,
+        "ZombieSort": "Normal",
+        "IgnoredInWaves": true,
+        "WalkSPS": 0.22,
+        "Toughness": 190,
+        "WavePointCost": 400,
+        "Weight": 4000,
+        "HitRect": "RTID(ImpHitRect@RectangleProps)",
+        "AttackRect": "RTID(ImpAttackRect@RectangleProps)",
+        "StartingArmors": [
+          "egypt_armor2"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_egypt_imp_armor4"
+      ],
+      "objdata": {
+        "KilledByShrinkingViolet": true,
+        "CannotBeGrabbedByPtero": true,
+        "ZombieSort": "Normal",
+        "IgnoredInWaves": true,
+        "WalkSPS": 0.22,
+        "Toughness": 190,
+        "WavePointCost": 700,
+        "Weight": 4000,
+        "HitRect": "RTID(ImpHitRect@RectangleProps)",
+        "AttackRect": "RTID(ImpAttackRect@RectangleProps)",
+        "StartingArmors": [
+          "egypt_armor4"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_egypt_gargantuar_armor1"
+      ],
+      "objdata": {
+        "ZombieSort": "Gargantuar",
+        "CannotBeTransformedByWitchHazel": true,
+        "CannotBeEnlightenedBySolarSage": true,
+        "CannotBeGrabbedByPtero": true,
+        "CannotChangeLaneByPowerToss": true,
+        "CannotBeFlickedByPowerToss": true,
+        "CannotBeDraggedByTangleKelp": true,
+        "CannotBeTossedByCitron": true,
+        "CannotBeSwallowedByChomper": true,
+        "LivesInDeepWater": true,
+        "SmashDamage": 1500,
+        "CannotCarryPlantfoodsInWaves": true,
+        "EatDPS": 100,
+        "Toughness": 3600,
+        "WalkSPS": 0.24,
+        "NormalDeathWhenMowed": true,
+        "ChanceToPharaoh": 0.75,
+        "ImpType": "egypt_imp_armor1",
+        "WavePointCost": 3000,
+        "Weight": 9000,
+        "HitRect": "RTID(GargantuarHitRect@RectangleProps)",
+        "AttackRect": "RTID(GargantuarAttackRect@RectangleProps)",
+        "PharaohTypes": [
+          "mummy_armor1"
+        ],
+        "StartingArmors": [
+          "egypt_3600_armor1"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_egypt_gargantuar_armor2"
+      ],
+      "objdata": {
+        "ZombieSort": "Gargantuar",
+        "CannotBeTransformedByWitchHazel": true,
+        "CannotBeEnlightenedBySolarSage": true,
+        "CannotBeGrabbedByPtero": true,
+        "CannotChangeLaneByPowerToss": true,
+        "CannotBeFlickedByPowerToss": true,
+        "CannotBeDraggedByTangleKelp": true,
+        "CannotBeTossedByCitron": true,
+        "CannotBeSwallowedByChomper": true,
+        "LivesInDeepWater": true,
+        "SmashDamage": 1500,
+        "CannotCarryPlantfoodsInWaves": true,
+        "EatDPS": 100,
+        "Toughness": 3600,
+        "WalkSPS": 0.24,
+        "NormalDeathWhenMowed": true,
+        "ChanceToPharaoh": 0.75,
+        "ImpType": "egypt_imp_armor2",
+        "WavePointCost": 6000,
+        "Weight": 12000,
+        "HitRect": "RTID(GargantuarHitRect@RectangleProps)",
+        "AttackRect": "RTID(GargantuarAttackRect@RectangleProps)",
+        "PharaohTypes": [
+          "mummy_armor2"
+        ],
+        "StartingArmors": [
+          "egypt_3600_armor2"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombie_egypt_gargantuar_armor4"
+      ],
+      "objdata": {
+        "ZombieSort": "Gargantuar",
+        "CannotBeTransformedByWitchHazel": true,
+        "CannotBeEnlightenedBySolarSage": true,
+        "CannotBeGrabbedByPtero": true,
+        "CannotChangeLaneByPowerToss": true,
+        "CannotBeFlickedByPowerToss": true,
+        "CannotBeDraggedByTangleKelp": true,
+        "CannotBeTossedByCitron": true,
+        "CannotBeSwallowedByChomper": true,
+        "LivesInDeepWater": true,
+        "SmashDamage": 1500,
+        "CannotCarryPlantfoodsInWaves": true,
+        "EatDPS": 100,
+        "Toughness": 3600,
+        "WalkSPS": 0.24,
+        "NormalDeathWhenMowed": true,
+        "ChanceToPharaoh": 0.75,
+        "ImpType": "egypt_imp_armor4",
+        "WavePointCost": 10500,
+        "Weight": 12000,
+        "HitRect": "RTID(GargantuarHitRect@RectangleProps)",
+        "AttackRect": "RTID(GargantuarAttackRect@RectangleProps)",
+        "PharaohTypes": [
+          "mummy_armor4"
+        ],
+        "StartingArmors": [
+          "egypt_3600_armor4"
+        ]
+      }
+    },
+    {
+      "objclass": "ArmorType",
+      "aliases": [
+        "egypt_250_armor1"
+      ],
+      "objdata": {
+        "Properties": "RTID(armor_egypt_250_armor1@ArmorProps)",
+        "ArmorBasedOn": "egypt_armor1"
+      }
+    },
+    {
+      "objclass": "ArmorType",
+      "aliases": [
+        "egypt_250_armor2"
+      ],
+      "objdata": {
+        "Properties": "RTID(armor_egypt_250_armor2@ArmorProps)",
+        "ArmorBasedOn": "egypt_armor2"
+      }
+    },
+    {
+      "objclass": "ArmorType",
+      "aliases": [
+        "egypt_250_armor4"
+      ],
+      "objdata": {
+        "Properties": "RTID(armor_egypt_250_armor4@ArmorProps)",
+        "ArmorBasedOn": "egypt_armor4"
+      }
+    },
+    {
+      "objclass": "ArmorType",
+      "aliases": [
+        "egypt_290_armor1"
+      ],
+      "objdata": {
+        "Properties": "RTID(armor_egypt_290_armor1@ArmorProps)",
+        "ArmorBasedOn": "egypt_armor1"
+      }
+    },
+    {
+      "objclass": "ArmorType",
+      "aliases": [
+        "egypt_290_armor2"
+      ],
+      "objdata": {
+        "Properties": "RTID(armor_egypt_290_armor2@ArmorProps)",
+        "ArmorBasedOn": "egypt_armor2"
+      }
+    },
+    {
+      "objclass": "ArmorType",
+      "aliases": [
+        "egypt_290_armor4"
+      ],
+      "objdata": {
+        "Properties": "RTID(armor_egypt_290_armor4@ArmorProps)",
+        "ArmorBasedOn": "egypt_armor4"
+      }
+    },
+    {
+      "objclass": "ArmorType",
+      "aliases": [
+        "egypt_380_armor1"
+      ],
+      "objdata": {
+        "Properties": "RTID(armor_egypt_380_armor1@ArmorProps)",
+        "ArmorBasedOn": "egypt_armor1"
+      }
+    },
+    {
+      "objclass": "ArmorType",
+      "aliases": [
+        "egypt_380_armor2"
+      ],
+      "objdata": {
+        "Properties": "RTID(armor_egypt_380_armor2@ArmorProps)",
+        "ArmorBasedOn": "egypt_armor2"
+      }
+    },
+    {
+      "objclass": "ArmorType",
+      "aliases": [
+        "egypt_380_armor4"
+      ],
+      "objdata": {
+        "Properties": "RTID(armor_egypt_380_armor4@ArmorProps)",
+        "ArmorBasedOn": "egypt_armor4"
+      }
+    },
+    {
+      "objclass": "ArmorType",
+      "aliases": [
+        "egypt_650_armor1"
+      ],
+      "objdata": {
+        "Properties": "RTID(armor_egypt_650_armor1@ArmorProps)",
+        "ArmorBasedOn": "egypt_armor1"
+      }
+    },
+    {
+      "objclass": "ArmorType",
+      "aliases": [
+        "egypt_650_armor2"
+      ],
+      "objdata": {
+        "Properties": "RTID(armor_egypt_650_armor2@ArmorProps)",
+        "ArmorBasedOn": "egypt_armor2"
+      }
+    },
+    {
+      "objclass": "ArmorType",
+      "aliases": [
+        "egypt_650_armor4"
+      ],
+      "objdata": {
+        "Properties": "RTID(armor_egypt_650_armor4@ArmorProps)",
+        "ArmorBasedOn": "egypt_armor4"
+      }
+    },
+    {
+      "objclass": "ArmorType",
+      "aliases": [
+        "egypt_1200_armor1"
+      ],
+      "objdata": {
+        "Properties": "RTID(armor_egypt_1200_armor1@ArmorProps)",
+        "ArmorBasedOn": "egypt_armor1"
+      }
+    },
+    {
+      "objclass": "ArmorType",
+      "aliases": [
+        "egypt_1200_armor2"
+      ],
+      "objdata": {
+        "Properties": "RTID(armor_egypt_1200_armor2@ArmorProps)",
+        "ArmorBasedOn": "egypt_armor2"
+      }
+    },
+    {
+      "objclass": "ArmorType",
+      "aliases": [
+        "egypt_1200_armor4"
+      ],
+      "objdata": {
+        "Properties": "RTID(armor_egypt_1200_armor4@ArmorProps)",
+        "ArmorBasedOn": "egypt_armor4"
+      }
+    },
+    {
+      "objclass": "ArmorType",
+      "aliases": [
+        "egypt_3600_armor1"
+      ],
+      "objdata": {
+        "Properties": "RTID(armor_egypt_3600_armor1@ArmorProps)",
+        "ArmorBasedOn": "egypt_armor1"
+      }
+    },
+    {
+      "objclass": "ArmorType",
+      "aliases": [
+        "egypt_3600_armor2"
+      ],
+      "objdata": {
+        "Properties": "RTID(armor_egypt_3600_armor2@ArmorProps)",
+        "ArmorBasedOn": "egypt_armor2"
+      }
+    },
+    {
+      "objclass": "ArmorType",
+      "aliases": [
+        "egypt_3600_armor4"
+      ],
+      "objdata": {
+        "Properties": "RTID(armor_egypt_3600_armor4@ArmorProps)",
+        "ArmorBasedOn": "egypt_armor4"
+      }
+    },
+    {
+      "objclass": "ArmorProperties",
+      "aliases": [
+        "armor_egypt_250_armor1"
+      ],
+      "objdata": {
+        "isMetal": false,
+        "isIce": false,
+        "Toughness": 487,
+        "BowlingLevel": 1
+      }
+    },
+    {
+      "objclass": "ArmorProperties",
+      "aliases": [
+        "armor_egypt_250_armor2"
+      ],
+      "objdata": {
+        "isMetal": true,
+        "isIce": false,
+        "Toughness": 1447,
+        "BowlingLevel": 3
+      }
+    },
+    {
+      "objclass": "ArmorProperties",
+      "aliases": [
+        "armor_egypt_250_armor4"
+      ],
+      "objdata": {
+        "isMetal": false,
+        "isIce": false,
+        "Toughness": 2895,
+        "BowlingLevel": 5
+      }
+    },
+    {
+      "objclass": "ArmorProperties",
+      "aliases": [
+        "armor_egypt_290_armor1"
+      ],
+      "objdata": {
+        "isMetal": false,
+        "isIce": false,
+        "Toughness": 565,
+        "BowlingLevel": 1
+      }
+    },
+    {
+      "objclass": "ArmorProperties",
+      "aliases": [
+        "armor_egypt_290_armor2"
+      ],
+      "objdata": {
+        "isMetal": true,
+        "isIce": false,
+        "Toughness": 1679,
+        "BowlingLevel": 3
+      }
+    },
+    {
+      "objclass": "ArmorProperties",
+      "aliases": [
+        "armor_egypt_290_armor4"
+      ],
+      "objdata": {
+        "isMetal": false,
+        "isIce": false,
+        "Toughness": 3358,
+        "BowlingLevel": 6
+      }
+    },
+    {
+      "objclass": "ArmorProperties",
+      "aliases": [
+        "armor_egypt_380_armor1"
+      ],
+      "objdata": {
+        "isMetal": false,
+        "isIce": false,
+        "Toughness": 740,
+        "BowlingLevel": 2
+      }
+    },
+    {
+      "objclass": "ArmorProperties",
+      "aliases": [
+        "armor_egypt_380_armor2"
+      ],
+      "objdata": {
+        "isMetal": true,
+        "isIce": false,
+        "Toughness": 2200,
+        "BowlingLevel": 4
+      }
+    },
+    {
+      "objclass": "ArmorProperties",
+      "aliases": [
+        "armor_egypt_380_armor4"
+      ],
+      "objdata": {
+        "isMetal": false,
+        "isIce": false,
+        "Toughness": 4400,
+        "BowlingLevel": 8
+      }
+    },
+    {
+      "objclass": "ArmorProperties",
+      "aliases": [
+        "armor_egypt_650_armor1"
+      ],
+      "objdata": {
+        "isMetal": false,
+        "isIce": false,
+        "Toughness": 1266,
+        "BowlingLevel": 3
+      }
+    },
+    {
+      "objclass": "ArmorProperties",
+      "aliases": [
+        "armor_egypt_650_armor2"
+      ],
+      "objdata": {
+        "isMetal": true,
+        "isIce": false,
+        "Toughness": 3763,
+        "BowlingLevel": 7
+      }
+    },
+    {
+      "objclass": "ArmorProperties",
+      "aliases": [
+        "armor_egypt_650_armor4"
+      ],
+      "objdata": {
+        "isMetal": false,
+        "isIce": false,
+        "Toughness": 7526,
+        "BowlingLevel": 13
+      }
+    },
+    {
+      "objclass": "ArmorProperties",
+      "aliases": [
+        "armor_egypt_1200_armor1"
+      ],
+      "objdata": {
+        "isMetal": false,
+        "isIce": false,
+        "Toughness": 2337,
+        "BowlingLevel": 4
+      }
+    },
+    {
+      "objclass": "ArmorProperties",
+      "aliases": [
+        "armor_egypt_1200_armor2"
+      ],
+      "objdata": {
+        "isMetal": true,
+        "isIce": false,
+        "Toughness": 6947,
+        "BowlingLevel": 12
+      }
+    },
+    {
+      "objclass": "ArmorProperties",
+      "aliases": [
+        "armor_egypt_1200_armor4"
+      ],
+      "objdata": {
+        "isMetal": false,
+        "isIce": false,
+        "Toughness": 13895,
+        "BowlingLevel": 23
+      }
+    },
+    {
+      "objclass": "ArmorProperties",
+      "aliases": [
+        "armor_egypt_3600_armor1"
+      ],
+      "objdata": {
+        "isMetal": false,
+        "isIce": false,
+        "Toughness": 7011,
+        "BowlingLevel": 12
+      }
+    },
+    {
+      "objclass": "ArmorProperties",
+      "aliases": [
+        "armor_egypt_3600_armor2"
+      ],
+      "objdata": {
+        "isMetal": true,
+        "isIce": false,
+        "Toughness": 20842,
+        "BowlingLevel": 34
+      }
+    },
+    {
+      "objclass": "ArmorProperties",
+      "aliases": [
+        "armor_egypt_3600_armor4"
+      ],
+      "objdata": {
+        "isMetal": false,
+        "isIce": false,
+        "Toughness": 41684,
+        "BowlingLevel": 68
+      }
+    }
+  ],
+  "version": 1
+}
