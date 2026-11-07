@@ -1,0 +1,637 @@
+{
+	"Information": {
+		"Author": "Sandy",
+		"Introduction": "",
+		"Version": "1.0"
+  	},
+	"#comment": "Level Of The Day Test 1",
+	"objects": [
+		{
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "[PLAYERS_TRIP_TO_LOD]",
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"DraperPromo": "primalpeashooter",
+				"Modules": [
+					"RTID(LevelOfTheDayIntro@LevelModules)",
+					"RTID(LevelOfTheDayModule@CurrentLevel)",
+					"RTID(NewWaves@CurrentLevel)",
+					"RTID(DefaultZombieWinCondition@LevelModules)",
+					"RTID(ChallengeModule@CurrentLevel)",
+					"RTID(ZombiesDeadWinCon@LevelModules)",
+					"RTID(FrontLawnMowers@LevelModules)",
+					"RTID(SeedBank@CurrentLevel)",
+					"RTID(SunDropper@CurrentLevel)",
+					"RTID(PlantMods@CurrentLevel)"
+				],
+				"Name": "[LOD_LEVEL_NAME]",
+				"NormalPresentTable": "egypt_normal_01",
+				"Writtenby": "Sandy",
+				"#Comment": "Parellel Universe?",
+				"ShinyPresentTable": "egypt_shiny_01",
+				"StageModule": "RTID(LunarStage@LevelModules)",
+				"VictoryModule": "RTID(LevelOfTheDayOutro@LevelModules)",
+				"IsLevelOfTheDay": true,
+				"StartingSun": 150
+			}
+		},
+		{
+			"aliases": [
+				"SunDropper"
+			],
+			"objclass": "SunDropperProperties",
+			"objdata": {
+				"InitialSunDropDelay": 1,
+				"SunCountdownBase": 10,
+				"SunCountdownIncreasePerSun": 0,
+				"SunCountdownMax": 10.5,
+				"SunCountdownRange": 0.5,
+				"Value": 50
+			}
+		},
+		{
+			"aliases": [
+				"ChallengeModule"
+			],
+			"objclass": "StarChallengeModuleProperties",
+			"objdata": {
+				"Challenges": [
+					[
+						"RTID(Challenge1@CurrentLevel)"
+					]
+				],
+				"ChallengesAlwaysAvailable": true
+			}
+		},
+		{
+			"aliases": [
+				"Challenge1"
+			],
+			"objclass": "StarChallengeBeatTheLevelProps",
+			"objdata": {
+				"Descriptions": [
+					"Survive odd Zombies in Parellel Universe No. 42!"
+				],
+				"DescriptionsMultiLanguage": []
+			}
+		},
+		{
+			"aliases": [
+				"WaveManagerProps"
+			],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"Waves": [ 
+					["RTID(Wave1@CurrentLevel)"],
+					["RTID(Wave2@CurrentLevel)"],
+					["RTID(Wave3@CurrentLevel)"],
+					["RTID(Wave4@CurrentLevel)"],
+					["RTID(Wave5@CurrentLevel)"],
+					["RTID(Wave6@CurrentLevel)"],
+					["RTID(Wave7@CurrentLevel)"],
+					["RTID(Wave8@CurrentLevel)"],
+					["RTID(Wave9@CurrentLevel)"],
+					["RTID(Wave10@CurrentLevel)"],
+					["RTID(Wave11@CurrentLevel)"],
+					["RTID(Wave12@CurrentLevel)"],
+					["RTID(Wave13@CurrentLevel)"],
+					["RTID(Wave14@CurrentLevel)"],
+					["RTID(Wave15@CurrentLevel)"],
+					["RTID(Wave16@CurrentLevel)"],
+					["RTID(Wave17@CurrentLevel)"],
+					["RTID(Wave18@CurrentLevel)"],
+					["RTID(Wave19@CurrentLevel)"],
+					["RTID(Wave20@CurrentLevel)"]
+				]
+			}
+		},
+		{
+			"aliases": [
+				"LevelOfTheDayModule"
+			],
+			"objclass": "LevelOfTheDayModuleProperties",
+			"objdata": {
+				"FlagCount": 4,
+				"PlantfoodToSpawnCount": 3,
+				"PointIncrementPerWave": 110,
+				"StartingPoints": 100,
+				"WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)",
+				"WavesPerFlag": 5,
+				"ZombiePool": [
+					"RTID(tutorial_gargantuar_t@CurrentLevel)",
+					"RTID(sky_electric_t@CurrentLevel)",
+					"RTID(chicken_t@CurrentLevel)",
+					"RTID(tutorial_armor1_t@CurrentLevel)",
+					"RTID(beach_fem_t@CurrentLevel)",
+					"RTID(modern_allstar_t@CurrentLevel)",
+					"RTID(feastivus_swashbuckler_t@CurrentLevel)",
+					"RTID(eighties_glitter_t@CurrentLevel)"
+				]
+			}
+		},
+		{
+			"aliases": [
+				"Wave20"
+			],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [
+				{"Type": "RTID(weasel_t@CurrentLevel)"}
+			]
+			}
+		},
+		{
+			"aliases": [
+				"NewWaves"
+			],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {}
+		},
+		{
+			"objclass": "SeedBankProperties",
+			"objdata": {
+				"SelectionMethod": "preset",
+				"UnlockAll": true,
+				"OverrideSeedSlotsCount": 8,
+				"PresetPlantList": [
+					{
+						"Level": -1,
+						"PlantType": "sunflower"
+					},
+					{
+						"Level": -1,
+						"PlantType": "peashooter"
+					},
+					{
+						"Level": -1,
+						"PlantType": "wallnut"
+					},
+					{
+						"Level": -1,
+						"PlantType": "chomper"
+					},
+					{
+						"Level": -1,
+						"PlantType": "glaciershroom"
+					},
+					{
+						"Level": -1,
+						"PlantType": "moonflower"
+					},
+					{
+						"Level": -1,
+						"PlantType": "dusklobber"
+					},
+					{
+						"Level": -1,
+						"PlantType": "primalpeashooter"
+					}
+				]
+			},
+			"aliases": [
+				"SeedBank"
+			]
+    	},
+		{
+			"aliases": [
+				"PlantMods"
+			],
+			"objclass": "PlantModifierProperties",
+			"objdata": {
+				"SuppressParticle": true,
+				"List": [
+				{
+					"Type": "sunflower",
+					"NewObjdata": {
+						"SunValue": 25,
+						"ProduceInterval": 13.5,
+						"ProduceIntervalAdditional": 1.5,
+						"ProduceCountdownStart": 3,
+						"ProduceCountdownStartAdditional": 4,
+						"Cooldown": 7.5,
+						"CooldownFrom": 0
+					}
+				},
+				{
+					"Type": "peashooter",
+					"NewObjdata": {
+						"ShootInterval": 1.25,
+						"Cooldown": 7.5,
+						"CooldownFrom": 0
+					}
+				},
+				{
+					"Type": "wallnut",
+					"NewObjdata": {
+						"Cooldown": 30,
+        				"CooldownFrom": 0.65,
+        				"Toughness": 6000
+					}
+				},
+				{
+					"Type": "dusklobber",
+					"NewObjdata": {
+						"CabbageType": "dusklobber2",
+						"CabbageTypePlantfood": "dusklobber2",
+						"ThrowInterval": 1.35,
+						"ThrowIntervalAdditional": 0.15,
+						"PlantfoodProjectilesToFire": 6,
+						"Cooldown": 10,
+						"CooldownFrom": 0.5,
+						"SunCost": 1350
+					}
+				},
+				{
+					"Type": "primalpeashooter",
+					"NewObjdata": {
+						"ShootInterval": 2.45,
+						"ShootIntervalAdditional": 0.15,
+						"PeaType": "RTID(pea_primal_fire@CurrentLevel)",
+						"PeaTypePlantfood": "RTID(pea_primal_fire@CurrentLevel)",
+						"PlantfoodPeaCount": 5,
+						"KnockbackDistance": 1.5,
+						"KnockbackChance": 0.75,
+						"Cooldown": 10,
+						"CooldownFrom": 1,
+						"SunCost": 1000
+					}
+				},
+				{
+					"Type": "chomper",
+					"NewObjdata": {
+						"MaxContainZombieCount": 1,
+						"ChewTimePerZombie": 20,
+						"Cooldown": 10,
+						"CooldownFrom": 0.5,
+						"Toughness": 500
+					}
+				},
+				{
+					"Type": "glaciershroom",
+					"NewObjdata": {
+						"FreezeDuration": 10,
+						"ChillDuration": 2.5,
+						"ChillDurationAmbience": 0,
+						"FreezeDamage": 60,
+						"EatFreezeDuration": 0,
+						"EatChillDuration": 0,
+						"EatFreezeInterval": 0,
+						"WakeTime": 999999,
+						"Cooldown": 60,
+						"CooldownFrom": 0.65,
+						"SunCost": 125,
+						"Toughness": 300
+					}
+				},
+				{
+					"Type": "moonflower",
+					"NewObjdata": {
+						"PlantfoodTime": 1,
+						"SunValue": 75,
+						"ProduceInterval": 14.5,
+						"ProduceIntervalAdditional": 1.5,
+						"ProduceCountdownStart": 3,
+						"ProduceCountdownStartAdditional": 4,
+						"Cooldown": 25,
+						"CooldownFrom": 0,
+						"SunCost": 200,
+						"SunValueList": [
+						75,
+						100,
+						125,
+						150
+						]
+					}
+				}
+				]
+			}
+		},
+		{
+		"objclass": "ProjectileType",
+		"aliases": [
+			"pea_primal_fire"
+		],
+		"objdata": {
+			"MintBoostedType": "pea_primal2_flame_blue",
+			"ProjectileBasedOn": "pea_primal1_flame_blue",
+			"Props": "RTID(pea_primal_fire_p@CurrentLevel)"
+		}
+		},
+		{
+		"objclass": "ProjectileProperties",
+		"aliases": [
+			"pea_primal_fire_p"
+		],
+		"objdata": {
+			"Damage": 40,
+			"MeltsIceTile": true,
+			"DamageScale": 3,
+			"DamageType": "fire",
+			"StunDuration": 1,
+			"Size": {
+			"w": 16,
+			"h": 16
+			},
+			"SplashDamage": [
+			{
+				"Damage": 40,
+				"Range": {
+				"w": 3,
+				"h": 3
+				}
+			}
+			]
+		}
+		},
+		{
+		"objclass": "ZombieType",
+		"aliases": [
+			"tutorial_armor1_t"
+		],
+		"objdata": {
+			"Properties": "RTID(tutorial_armor1_p@CurrentLevel)",
+			"ZombieBasedOn": "tutorial_armor1"
+		}
+		},
+		{
+		"objclass": "ZombieProperties",
+		"aliases": [
+			"tutorial_armor1_p"
+		],
+		"objdata": {
+			"ZombieSort": "Normal",
+			"WalkSPS": 0.185,
+			"Toughness": 190,
+			"EatDPS": 100,
+			"WavePointCost": 500,
+			"Weight": 3000,
+			"HitRect": "RTID(CommonHitRect@RectangleProps)",
+			"AttackRect": "RTID(CommonAttackRect@RectangleProps)",
+			"StartingArmors": [
+			"modern_armor1",
+			"modern_armor1",
+			"modern_armor1"
+			]
+		}
+		},
+		{
+		"objclass": "ZombieType",
+		"aliases": [
+			"beach_fem_t"
+		],
+		"objdata": {
+			"Properties": "RTID(beach_fem_p@CurrentLevel)",
+			"ZombieBasedOn": "beach_fem"
+		}
+		},
+		{
+		"objclass": "ZombieProperties",
+		"aliases": [
+			"beach_fem_p"
+		],
+		"objdata": {
+			"ZombieSort": "Normal",
+			"WalkSPS": 0.22,
+			"EatDPS": 100,
+			"Toughness": 1370,
+			"WavePointCost": 400,
+			"Weight": 1500,
+			"HitRect": "RTID(CommonHitRect@RectangleProps)",
+			"AttackRect": "RTID(CommonAttackRect@RectangleProps)"
+		}
+		},
+		{
+		"objclass": "ZombieType",
+		"aliases": [
+			"modern_allstar_t"
+		],
+		"objdata": {
+			"Properties": "RTID(modern_allstar_p@CurrentLevel)",
+			"ZombieBasedOn": "modern_allstar"
+		}
+		},
+		{
+		"objclass": "ZombieProperties",
+		"aliases": [
+			"modern_allstar_p"
+		],
+		"objdata": {
+			"SmashDamage": 1500,
+			"WalkSPS": 1.16,
+			"EatDPS": 900,
+			"Toughness": 1100,
+			"RunningSpeedScale": 0.2,
+			"WavePointCost": 1000,
+			"Weight": 3500,
+			"HitRect": "RTID(BullyHitRect@RectangleProps)",
+			"AttackRect": "RTID(BullyAttackRect@RectangleProps)"
+		}
+		},
+		{
+		"objclass": "ZombieType",
+		"aliases": [
+			"tutorial_gargantuar_t"
+		],
+		"objdata": {
+			"Properties": "RTID(tutorial_gargantuar_p@CurrentLevel)",
+			"ZombieBasedOn": "kongfu_bronze_strong"
+		}
+		},
+		{
+		"objclass": "ZombieProperties",
+		"aliases": [
+			"tutorial_gargantuar_p"
+		],
+		"objdata": {
+			"ZombieSort": "Gargantuar",
+			"EnrageHealthPct": 0.0,
+			"SmashDamage": 1500,
+			"WalkSPS": 0.165,
+			"EatDPS": 100,
+			"Toughness": 190,
+			"SpawnedScale": 0.45,
+			"LivesInDeepWater": true,
+			"NormalDeathWhenMowed": true,
+			"WavePointCost": 100,
+			"Weight": 3000,
+			"HitRect": "RTID(GargantuarHitRect@RectangleProps)",
+			"AttackRect": "RTID(GargantuarAttackRect@RectangleProps)"
+		}
+		},
+		{
+		"objclass": "ZombieType",
+		"aliases": [
+			"chicken_t"
+		],
+		"objdata": {
+			"Properties": "RTID(chicken_p@CurrentLevel)",
+			"ZombieBasedOn": "chicken"
+		}
+		},
+		{
+		"objclass": "ZombieProperties",
+		"aliases": [
+			"chicken_p"
+		],
+		"objdata": {
+			"CannotBeEnlightenedBySolarSage": true,
+			"CannotBeGrabbedByPtero": true,
+			"CannotChangeLaneByPowerToss": true,
+			"CannotBeFlickedByPowerToss": true,
+			"CannotBeDraggedByTangleKelp": true,
+			"CannotBeTossedByCitron": true,
+			"CannotBeSwallowedByChomper": true,
+			"CannotCarryPlantfoodsInWaves": true,
+			"WalkSPS": 0.25,
+			"WalkSPSVarience": 0,
+			"EatDPS": 300,
+			"Toughness": 700,
+			"SpawnedScale": 3.0,
+			"NormalDeathWhenMowed": true,
+			"WavePointCost": 350,
+			"Weight": 2000,
+			"HitRect": "RTID(CowboyChickenHitRect@RectangleProps)",
+        	"AttackRect": "RTID(CowboyChickenAttackRect@RectangleProps)"
+		}
+		},
+		{
+		"objclass": "ZombieType",
+		"aliases": [
+			"weasel_t"
+		],
+		"objdata": {
+			"Properties": "RTID(weasel_p@CurrentLevel)",
+			"ZombieBasedOn": "iceage_weasel"
+		}
+		},
+		{
+		"objclass": "ZombieProperties",
+		"aliases": [
+			"weasel_p"
+		],
+		"objdata": {
+			"CannotBeEnlightenedBySolarSage": true,
+			"CannotBeGrabbedByPtero": true,
+			"CannotChangeLaneByPowerToss": true,
+			"CannotBeFlickedByPowerToss": true,
+			"CannotBeDraggedByTangleKelp": true,
+			"CannotBeTossedByCitron": true,
+			"ChillInsteadOfFreeze": true,
+			"CannotBeSwallowedByChomper": true,
+			"CannotCarryPlantfoodsInWaves": true,
+			"WalkSPS": 0.25,
+			"WalkSPSVarience": 0,
+			"EatDPS": 30000,
+			"Toughness": 12000,
+			"SpawnedScale": 4.0,
+			"NormalDeathWhenMowed": true,
+			"KnockBackDistanceScale": 0.1,
+			"WavePointCost": 2500,
+			"Weight": 0,
+			"HitRect": "RTID(CowboyChickenHitRect@RectangleProps)",
+        	"AttackRect": "RTID(CowboyChickenAttackRect@RectangleProps)"
+		}
+		},
+		{
+		"objclass": "ZombieType",
+		"aliases": [
+			"sky_electric_t"
+		],
+		"objdata": {
+			"Properties": "RTID(sky_electric_p@CurrentLevel)",
+			"ZombieBasedOn": "sky_electric"
+		}
+		},
+		{
+		"objclass": "ZombieProperties",
+		"aliases": [
+			"sky_electric_p"
+		],
+		"objdata": {
+			"ZombieSort": "Normal",
+			"ChooseToSpawnOnNonDeckRows": true,
+			"WalkSPS": 0.185,
+			"EatDPS": 100,
+			"Toughness": 700,
+			"WavePointCost": 300,
+			"Weight": 1000,
+			"SkyCityShipDetectXOffsetFiring": -60,
+			"SkyCityShipDetectXOffset": -40,
+			"ShipDPS": 100,
+			"PositiveBoltType": "electricpea_pf",
+			"NegativeBoltType": "anthurium_bolt1",
+			"ProjectileCountPerShot": 1,
+			"ProjectileAngle": 0,
+			"ShootsTowardsAirRaidPlant": false,
+			"HitRect": "RTID(CommonHitRect@RectangleProps)",
+			"AttackRect": "RTID(CommonAttackRect@RectangleProps)",
+			"TimeBeforeFirst": {
+			"Min": 1,
+			"Max": 2
+			},
+			"TimeBetween": {
+			"Min": 4,
+			"Max": 5
+			}
+		}
+		},
+		{
+		"objclass": "ZombieType",
+		"aliases": [
+			"feastivus_swashbuckler_t"
+		],
+		"objdata": {
+			"Properties": "RTID(feastivus_swashbuckler_p@CurrentLevel)",
+			"ZombieBasedOn": "feastivus_swashbuckler"
+		}
+		},
+		{
+		"objclass": "ZombieProperties",
+		"aliases": [
+			"feastivus_swashbuckler_p"
+		],
+		"objdata": {
+			"WalkSPS": -0.135,
+			"EatDPS": 50,
+			"Toughness": 250,
+			"ChanceToFallIntoSea": 0.01,
+			"WavePointCost": 350,
+			"Weight": 1000,
+			"HitRect": "RTID(CommonHitRect@RectangleProps)",
+			"AttackRect": "RTID(CommonAttackRect@RectangleProps)",
+			"LandingColumns": [
+			0
+			]
+		}
+		},
+		{
+		"objclass": "ZombieType",
+		"aliases": [
+			"eighties_glitter_t"
+		],
+		"objdata": {
+			"Properties": "RTID(eighties_glitter_p@CurrentLevel)",
+			"ZombieBasedOn": "eighties_glitter"
+		}
+		},
+		{
+		"objclass": "ZombieProperties",
+		"aliases": [
+			"eighties_glitter_p"
+		],
+		"objdata": {
+			"WalkSPS": 0.19,
+			"EatDPS": 100,
+			"Toughness": 490,
+			"RainbowTrailLength": 3.125,
+			"JamStyle": "jam_empty",
+			"WavePointCost": 350,
+			"Weight": 1000,
+			"HitRect": "RTID(CommonHitRect@RectangleProps)",
+			"AttackRect": "RTID(CommonAttackRect@RectangleProps)",
+			"SpawnedScale": -1
+		}
+		}
+	],
+	"version": 1
+}
