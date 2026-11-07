@@ -12,6 +12,7 @@
                     "RTID(StandardIntro@LevelModules)",
                     "RTID(DefaultSunDropper@LevelModules)",
                     "RTID(ZombiesDeadWinCon@LevelModules)",
+                    "RTID(GoldTiles@CurrentLevel)",
                     "RTID(FrozenZombiePlacement@CurrentLevel)",
                     "RTID(FrozenPlantPlacement@CurrentLevel)",
                     "RTID(KongfuRack@CurrentLevel)",
@@ -206,7 +207,7 @@
             "objdata": {
                 "InitialZombiePlacements": [
                     {
-                        "GridX": 7,
+                        "GridX": 8,
                         "GridY": 2,
                         "TypeName": "monk_torch"
                     }
@@ -221,7 +222,7 @@
             "objdata": {
                 "InitialPlantPlacements": [
                     {
-                        "GridX": 4,
+                        "GridX": 5,
                         "GridY": 2,
                         "TypeName": "aquavine"
                     }
@@ -236,7 +237,7 @@
             "objdata": {
                 "InitialPlantPlacements": [
                     {
-                        "GridX": 4,
+                        "GridX": 5,
                         "GridY": 2,
                         "TypeName": "tanglekelp"
                     }
@@ -310,7 +311,7 @@
                     },
                     {
                         "Speed": 0.5,
-                        "WireLength": 4,
+                        "WireLength": 5,
                         "GridX": -1,
                         "GridY": 2
                     },
@@ -375,6 +376,21 @@
             }
         },
         {
+      "aliases": [
+        "GoldTiles"
+      ],
+      "objclass": "InitialGridItemProperties",
+      "objdata": {
+        "InitialGridItemPlacements": [
+          {
+            "GridX": 5,
+            "GridY": 2,
+            "TypeName": "goldtile"
+          }
+        ]
+      }
+    },
+        {
             "aliases": [
                 "SeedBank"
             ],
@@ -383,7 +399,11 @@
                 "PresetPlantList": [
                     {
                         "Level": -1,
-                        "PlantType": "sunflower"
+                        "PlantType": "primalsunflower"
+                    },
+                    {
+                        "Level": -1,
+                        "PlantType": "stunion"
                     },
                     {
                         "Level": -1,
@@ -392,10 +412,6 @@
                     {
                         "Level": -1,
                         "PlantType": "imitater"
-                    },
-                    {
-                        "Level": -1,
-                        "PlantType": "goldleaf"
                     },
                     {
                         "Level": -1,
@@ -530,7 +546,7 @@
             "objdata": {
                 "FlagWaveInterval": 5,
                 "WaveCount": 20,
-                "WaveSpendingPointIncrement": 200,
+                "WaveSpendingPointIncrement": 100,
                 "WaveSpendingPoints": 100,
                 "Waves": [
                     [
@@ -809,10 +825,6 @@
                     {
                         "Row": "2",
                         "Type": "RTID(monk_armor1@ZombieTypes)"
-                    },
-                    {
-                        "Row": "4",
-                        "Type": "RTID(monk_armor1@ZombieTypes)"
                     }
                 ]
             }
@@ -831,10 +843,6 @@
                     {
                         "Row": "3",
                         "Type": "RTID(monk_armor1@ZombieTypes)"
-                    },
-                    {
-                        "Row": "4",
-                        "Type": "RTID(monk_blade@ZombieTypes)"
                     }
                 ]
             }
@@ -849,10 +857,6 @@
                     {
                         "Row": "5",
                         "Type": "RTID(monk_armor1@ZombieTypes)"
-                    },
-                    {
-                        "Row": "5",
-                        "Type": "RTID(abbot_fan@ZombieTypes)"
                     },
                     {
                         "Row": "2",
@@ -871,10 +875,6 @@
                     {
                         "Row": "2",
                         "Type": "RTID(monk_armor1@ZombieTypes)"
-                    },
-                    {
-                        "Row": "2",
-                        "Type": "RTID(abbot_fan@ZombieTypes)"
                     },
                     {
                         "Row": "4",
@@ -902,10 +902,7 @@
             "objclass": "SpawnZombiesJitteredWaveActionProps",
             "objdata": {
                 "Zombies": [
-                    {
-                        "Row": "1",
-                        "Type": "RTID(monk_nunchaku@ZombieTypes)"
-                    },
+                   
                     {
                         "Row": "3",
                         "Type": "RTID(kongfu_chi@ZombieTypes)"
@@ -966,10 +963,6 @@
                     {
                         "Row": "3",
                         "Type": "RTID(monk_blade@ZombieTypes)"
-                    },
-                    {
-                        "Row": "1",
-                        "Type": "RTID(monk_nunchaku@ZombieTypes)"
                     },
                     {
                         "Row": "5",
@@ -1037,11 +1030,6 @@
                         "Type": "RTID(kongfu_chi@ZombieTypes)"
                     },
                     {
-                        "Row": "3",
-                        "Type": "RTID(monk_nunchaku@ZombieTypes)"
-                    },
-                    
-                    {
                         "Row": "5",
                         "Type": "RTID(kongfu_chi@ZombieTypes)"
                     },
@@ -1050,16 +1038,8 @@
                         "Type": "RTID(monk_armor1@ZombieTypes)"
                     },
                     {
-                        "Row": "1",
-                        "Type": "RTID(abbot_fan@ZombieTypes)"
-                    },
-                    {
                         "Row": "2",
                         "Type": "RTID(monk_armor1@ZombieTypes)"
-                    },
-                    {
-                        "Row": "2",
-                        "Type": "RTID(abbot_fan@ZombieTypes)"
                     },
                     {
                         "Row": "4",
@@ -1126,20 +1106,8 @@
                         "Type": "RTID(monk_armor1@ZombieTypes)"
                     },
                     {
-                        "Row": "4",
-                        "Type": "RTID(monk_nunchaku@ZombieTypes)"
-                    },
-                    {
                         "Row": "5",
                         "Type": "RTID(monk_armor1@ZombieTypes)"
-                    },
-                    {
-                        "Row": "1",
-                        "Type": "RTID(abbot_fan@ZombieTypes)"
-                    },
-                    {
-                        "Row": "3",
-                        "Type": "RTID(abbot_fan@ZombieTypes)"
                     },
                     {
                         "Row": "5",
@@ -1171,10 +1139,6 @@
                     {
                         "Row": "5",
                         "Type": "RTID(monk_nunchaku@ZombieTypes)"
-                    },
-                    {
-                        "Row": "2",
-                        "Type": "RTID(abbot_fan@ZombieTypes)"
                     },
                     {
                         "Row": "4",
@@ -1239,6 +1203,10 @@
                     {
                         "Row": "2",
                         "Type": "RTID(monk@ZombieTypes)"
+                    },  
+                    {
+                        "Row": "3",
+                        "Type": "RTID(monk_nunchaku@ZombieTypes)"
                     },
                     {
                         "Row": "3",
@@ -1290,10 +1258,11 @@
                         "Row": "4",
                         "Type": "RTID(kongfu_bronze_chi_without_torch@ZombieTypes)"
                     },
-                      {
-                        "Row": "3",
+                     {
+                        "Row": "5",
                         "Type": "RTID(monk_nunchaku@ZombieTypes)"
                     },
+                    
                     {
                         "Row": "4",
                         "Type": "RTID(abbot_fan@ZombieTypes)"
@@ -1330,10 +1299,6 @@
                     },
                     {
                         "Row": "1",
-                        "Type": "RTID(monk_nunchaku@ZombieTypes)"
-                    },
-                    {
-                        "Row": "1",
                         "Type": "RTID(monk_armor1@ZombieTypes)"
                     },
                     {
@@ -1353,14 +1318,7 @@
                         "Type": "RTID(monk_armor1@ZombieTypes)"
                     },
                   
-                    {
-                        "Row": "5",
-                        "Type": "RTID(monk_nunchaku@ZombieTypes)"
-                    },
-                    {
-                        "Row": "1",
-                        "Type": "RTID(abbot_fan@ZombieTypes)"
-                    },
+                   
                     {
                         "Row": "3",
                         "Type": "RTID(abbot_fan@ZombieTypes)"
@@ -1402,6 +1360,10 @@
                     {
                         "Row": "3",
                         "Type": "RTID(monk_armor1@ZombieTypes)"
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(monk_nunchaku@ZombieTypes)"
                     },
                     {
                         "Row": "4",
@@ -1449,6 +1411,7 @@
                         "Row": "2",
                         "Type": "RTID(monk_armor2@ZombieTypes)"
                     },
+                
                     {
                         "Row": "3",
                         "Type": "RTID(monk_armor2@ZombieTypes)"
@@ -1456,14 +1419,6 @@
                     {
                         "Row": "4",
                         "Type": "RTID(monk_armor2@ZombieTypes)"
-                    },
-                    {
-                        "Row": "2",
-                        "Type": "RTID(monk_nunchaku@ZombieTypes)"
-                    },
-                    {
-                        "Row": "4",
-                        "Type": "RTID(monk_nunchaku@ZombieTypes)"
                     },
                     {
                         "Row": "5",
@@ -1474,15 +1429,7 @@
                         "Type": "RTID(abbot_fan@ZombieTypes)"
                     },
                     {
-                        "Row": "3",
-                        "Type": "RTID(abbot_fan@ZombieTypes)"
-                    },
-                    {
                         "Row": "4",
-                        "Type": "RTID(abbot_fan@ZombieTypes)"
-                    },
-                    {
-                        "Row": "5",
                         "Type": "RTID(abbot_fan@ZombieTypes)"
                     },
                     {
@@ -1519,14 +1466,7 @@
                         "Row": "2",
                         "Type": "RTID(kongfu_bronze_strong@ZombieTypes)"
                     },
-                    {
-                        "Row": "1",
-                        "Type": "RTID(monk_nunchaku@ZombieTypes)"
-                    },
-                    {
-                        "Row": "5",
-                        "Type": "RTID(monk_nunchaku@ZombieTypes)"
-                    },
+                    
                     {
                         "Row": "2",
                         "Type": "RTID(abbot_fan@ZombieTypes)"
@@ -1550,14 +1490,6 @@
                     {
                         "Row": "5",
                         "Type": "RTID(monk_armor2@ZombieTypes)"
-                    },
-                    {
-                        "Row": "3",
-                        "Type": "RTID(abbot_fan@ZombieTypes)"
-                    },
-                    {
-                        "Row": "4",
-                        "Type": "RTID(abbot_fan@ZombieTypes)"
                     },
                     {
                         "Row": "5",
@@ -1584,14 +1516,6 @@
                     {
                         "Row": "2",
                         "Type": "RTID(kongfu_bronze_chi_without_torch@ZombieTypes)"
-                    },
-                    {
-                        "Row": "1",
-                        "Type": "RTID(monk_nunchaku@ZombieTypes)"
-                    },
-                    {
-                        "Row": "3",
-                        "Type": "RTID(monk_nunchaku@ZombieTypes)"
                     },
                     {
                         "Row": "5",
