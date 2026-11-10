@@ -1,0 +1,1340 @@
+{
+  "#comment": "AQUAVINE",
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "FirstIntroNarrative": "AQUAVINE_4",
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(LevelScheduler@CurrentLevel)",
+          "RTID(Plants@CurrentLevel)",
+          "RTID(StandardIntro@LevelModules)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(DinoMowers@LevelModules)",
+          "RTID(ConveyorBelt@CurrentLevel)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(Tide@CurrentLevel)"
+        ],
+        "PlantToIntroduce": "aquavine",
+        "MusicType": "MiniGame_A",
+        "Name": "[EPIC_PLANT_LEVEL_NAME]",
+        "Description": "[PLAYERS_ATTEMPT_TO_GET_PLANT]",
+        "LevelNumber": 4,
+        "WrittenBy": "蔓逐I蝶舞",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "StageModule": "RTID(DinoStage@LevelModules)"
+      }
+        },
+        {
+            "objclass": "NarrativeProperties",
+            "aliases": [
+                "AQUAVINE_4"
+            ],
+            "objdata": {
+                "Flow": [
+                    {
+                        "Character": "winnie",
+                        "Action": "NPC_ENTER"
+                    },
+                    {
+                        "Character": "winnie",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "Well,a Watery Grave of sorts.",
+                            "zh": "好吧，看来是某种意义上的水上坟墓。"
+                        }
+                    },
+                    {
+                        "Character": "crazydave",
+                        "Action": "NPC_ENTER"
+                    },
+                    {
+                        "Character": "crazydave",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "Penny.Some of my old pals want to assist in this battle,but several cannot be planted on Lily Pads due to their deep roots.",
+                            "zh": "潘妮，我的一些老伙计想协助这场战斗，但他们中的一些深根扎入地底不能被种植在莲叶上。"
+                        }
+                    },
+                    {
+                        "Character": "winnie",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "Don't worry.This is no longer a problem,User Dave.",
+                            "zh": "别为此担心，用户戴夫。"
+                        }
+                    },
+                    {
+                        "Character": "winnie",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "We know that plants with deep roots like Resistant Radishes cannot be planted on Lily Pads.",
+                            "zh": "我们知道，像白萝卜这样的深根植物不能被种植在莲叶上。"
+                        }
+                    },
+                    {
+                        "Character": "winnie",
+                        "Action": "SAY",
+                        "Lines": {
+                            "en": "But Aqua Vines enable them join in aquatic battle.",
+                            "zh": "但水生藤蔓可以使他们也能参与水上作战。"
+                        }
+                    },
+                    {
+                        "Character": "crazydave",
+                        "Action": "EXCITED",
+                        "Lines": {
+                            "en": "The same rule applies to our comrade!",
+                            "zh": "对我们的老战友同样适用的规则！"
+                        }
+                    }
+                ]
+      }
+    },
+    {
+      "aliases": [
+        "LevelScheduler"
+      ],
+      "objclass": "LevelSchedulerProps",
+      "objdata": {
+        "TimeBeforeFirst": {
+          "Max": 110,
+          "Min": 90
+        },
+        "TimeBetween": {
+          "Max": 70,
+          "Min": 50
+        },
+        "Repeat": {
+          "Max": 2,
+          "Min": 2
+        },
+        "RewardWhenEnded": false,
+        "SuppressRewardState": false,
+        "Events": [
+          "RTID(navalmine@CurrentLevel)"
+        ]
+      }
+        },
+        {
+            "aliases": [
+                "navalmine"
+            ],
+            "objclass": "ModifyConveyorWaveActionProps",
+            "objdata": {
+                "Add": [
+                    {
+                        "MaxDelivered": 1,
+                        "Type": "RTID(aquavine@PlantTypes)",
+                        "Weight": 200
+                    },
+                    {
+                        "MaxDelivered": 1,
+                        "Type": "RTID(potatomine@PlantTypes)",
+                        "Weight": 200
+                    }
+                ],
+                "Remove": []
+            }
+    },
+{
+      "aliases": [
+        "Plants"
+      ],
+      "objclass": "InitialPlantProperties",
+      "objdata": {
+        "InitialPlantPlacements": [
+          {
+            "GridX": 4,
+            "GridY": 2,
+            "TypeName": "cactus"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Tide"
+      ],
+      "objclass": "TideProperties",
+      "objdata": {
+        "StartingWaveLocation": 0
+      }
+    },
+    {
+      "aliases": [
+        "Wave1TidalChangeEvent0"
+      ],
+      "objclass": "TidalChangeWaveActionProps",
+      "objdata": {
+        "TidalChange": {
+          "ChangeAmount": 9,
+          "ChangeType": "absolute"
+        }
+      }
+    },
+    {
+      "aliases": [
+        "ConveyorBelt"
+      ],
+      "objclass": "ConveyorSeedBankProperties",
+      "objdata": {
+        "DropDelayConditions": [
+          {
+            "Delay": 4.55,
+            "MaxPackets": 0
+          },
+          {
+            "Delay": 5.55,
+            "MaxPackets": 5
+          },
+          {
+            "Delay": 7.55,
+            "MaxPackets": 7
+          },
+          {
+            "Delay": 9.55,
+            "MaxPackets": 9
+          }
+        ],
+        "InitialPlantList": [
+          {
+            "PlantType": "lilypad",
+            "Weight": 100
+          }
+        ],
+        "SpeedConditions": [
+          {
+            "MaxPackets": 0,
+            "Speed": 100
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {
+            "PointIncrementPerWave": -40,
+            "StartingPoints": -100,
+            "StartingWave": 3,
+            "ZombiePool": [
+              "RTID(kongfu_drink@ZombieTypes)",
+              "RTID(dino_armor1@ZombieTypes)",
+              "RTID(dino_armor2@ZombieTypes)",
+              "RTID(dino_armor3@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": -25,
+            "StartingPoints": -100,
+            "StartingWave": 4,
+            "ZombiePool": [
+              "RTID(kongfu_drink@ZombieTypes)",
+              "RTID(dino_armor1@ZombieTypes)",
+              "RTID(dino_armor2@ZombieTypes)",
+              "RTID(dino_armor3@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": -10,
+            "StartingPoints": -100,
+            "StartingWave": 5,
+            "ZombiePool": [
+              "RTID(kongfu_drink@ZombieTypes)",
+              "RTID(dino_armor1@ZombieTypes)",
+              "RTID(dino_armor2@ZombieTypes)",
+              "RTID(dino_armor3@ZombieTypes)"
+            ]
+          },
+          {},
+          {
+            "PointIncrementPerWave": 50,
+            "StartingPoints": 100,
+            "StartingWave": 7,
+            "ZombiePool": [
+              "RTID(kongfu_drink@ZombieTypes)",
+              "RTID(dino_armor1@ZombieTypes)",
+              "RTID(dino_armor2@ZombieTypes)",
+              "RTID(dino_armor3@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 100,
+            "StartingPoints": 200,
+            "StartingWave": 6,
+            "ZombiePool": [
+              "RTID(kongfu_drink@ZombieTypes)",
+              "RTID(dino_armor1@ZombieTypes)",
+              "RTID(dino_armor2@ZombieTypes)",
+              "RTID(dino_armor3@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 150,
+            "StartingPoints": 400,
+            "StartingWave": 5,
+            "ZombiePool": [
+              "RTID(kongfu_drink@ZombieTypes)",
+              "RTID(dino_armor2@ZombieTypes)",
+              "RTID(dino_armor3@ZombieTypes)"
+            ]
+          }
+        ],
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 5,
+                "SuppressedDynamicZombieWaves": [
+                    10
+                ],
+        "WaveCount": 10,
+        "WaveSpendingPointIncrement": 100,
+        "WaveSpendingPoints": 500,
+        "Waves": [
+          [
+            "RTID(Wave1@CurrentLevel)",
+            "RTID(Wave1ModConveyor0@CurrentLevel)",
+            "RTID(Wave1TidalChangeEvent0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)",
+            "RTID(Wave2ModConveyor0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)",
+            "RTID(Wave3ModConveyor0@CurrentLevel)",
+            "RTID(Wave3DinoTimeEvent0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)",
+            "RTID(Wave4ModConveyor0@CurrentLevel)",
+            "RTID(Wave4DinoTimeEvent0@CurrentLevel)",
+            "RTID(Wave4DinoTimeEvent1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)",
+            "RTID(Wave5DinoTimeEvent0@CurrentLevel)",
+            "RTID(Wave5ModConveyor0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)",
+            "RTID(Wave6DinoTimeEvent0@CurrentLevel)",
+            "RTID(Wave6DinoTimeEvent1@CurrentLevel)",
+            "RTID(Wave6ModConveyor0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)",
+            "RTID(Wave7DinoTimeEvent0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)",
+            "RTID(Wave8DinoTimeEvent0@CurrentLevel)",
+            "RTID(Wave8DinoTimeEvent1@CurrentLevel)",
+            "RTID(Wave8ModConveyor0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)",
+            "RTID(Wave10DinoTimeEvent0@CurrentLevel)",
+            "RTID(Wave10DinoTimeEvent1@CurrentLevel)",
+            "RTID(Wave10DinoTimeEvent2@CurrentLevel)",
+            "RTID(Wave10ModConveyor0@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave1ModConveyor0"
+      ],
+      "objclass": "ModifyConveyorWaveActionProps",
+      "objdata": {
+        "Add": [
+          {
+            "MaxDelivered": 2,
+            "Type": "RTID(aquavine@PlantTypes)",
+            "Weight": 55
+          },
+          {
+            "MaxDelivered": 2,
+            "Type": "RTID(cactus@PlantTypes)",
+            "Weight": 40
+          }
+        ],
+        "Remove": [
+          {
+            "Type": "RTID(lilypad@PlantTypes)",
+            "Weight": 100
+          }
+]
+      }
+    },
+    {
+      "aliases": [
+        "Wave2ModConveyor0"
+      ],
+      "objclass": "ModifyConveyorWaveActionProps",
+      "objdata": {
+        "Add": [
+          {
+            "MaxDelivered": 3,
+            "Type": "RTID(aquavine@PlantTypes)",
+            "Weight": 55
+          },
+          {
+            "MaxDelivered": 3,
+            "Type": "RTID(cactus@PlantTypes)",
+            "Weight": 40
+          }
+        ],
+        "Remove": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave3ModConveyor0"
+      ],
+      "objclass": "ModifyConveyorWaveActionProps",
+      "objdata": {
+        "Add": [
+          {
+            "MaxDelivered": 5,
+            "Type": "RTID(tallnut@PlantTypes)",
+            "Weight": 500
+          }
+        ],
+        "Remove": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave4ModConveyor0"
+      ],
+      "objclass": "ModifyConveyorWaveActionProps",
+      "objdata": {
+        "Add": [
+          {
+            "Type": "RTID(tanglekelp@PlantTypes)",
+            "Weight": 15
+          },
+          {
+            "MaxDelivered": 3,
+            "Type": "RTID(aquavine@PlantTypes)",
+            "Weight": 55
+          },
+          {
+            "MaxDelivered": 3,
+            "Type": "RTID(cactus@PlantTypes)",
+            "Weight": 40
+          }
+        ],
+        "Remove": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave5ModConveyor0"
+      ],
+      "objclass": "ModifyConveyorWaveActionProps",
+      "objdata": {
+        "Add": [
+          {
+            "MaxDelivered": 2,
+            "Type": "RTID(aquavine@PlantTypes)",
+            "Weight": 55
+          },
+          {
+            "MaxDelivered": 2,
+            "Type": "RTID(cactus@PlantTypes)",
+            "Weight": 40
+          }
+        ],
+        "Remove": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave6ModConveyor0"
+      ],
+      "objclass": "ModifyConveyorWaveActionProps",
+      "objdata": {
+        "Add": [
+          {
+            "MaxDelivered": 3,
+            "Type": "RTID(aquavine@PlantTypes)",
+            "Weight": 55
+          },
+          {
+            "MaxDelivered": 3,
+            "Type": "RTID(cactus@PlantTypes)",
+            "Weight": 40
+          }
+        ],
+        "Remove": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave8ModConveyor0"
+      ],
+      "objclass": "ModifyConveyorWaveActionProps",
+      "objdata": {
+        "Add": [
+          {
+            "MaxDelivered": 2,
+            "Type": "RTID(aquavine@PlantTypes)",
+            "Weight": 55
+          },
+          {
+            "MaxDelivered": 2,
+            "Type": "RTID(cactus@PlantTypes)",
+            "Weight": 40
+          }
+        ],
+        "Remove": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave10ModConveyor0"
+      ],
+      "objclass": "ModifyConveyorWaveActionProps",
+      "objdata": {
+        "Add": [
+          {
+            "MaxDelivered": 2,
+            "Type": "RTID(aquavine@PlantTypes)",
+            "Weight": 200
+          },
+          {
+            "MaxDelivered": 2,
+            "Type": "RTID(potatomine@PlantTypes)",
+            "Weight": 200
+          }
+        ],
+        "Remove": []
+      }
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Row": "1",
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Row": "5",
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Row": "1",
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(camel_onehump@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Row": "5",
+            "Type": "RTID(dino_armor3@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(camel_onehump@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(camel_onehump@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Row": "2",
+            "Type": "RTID(iceage_troglobite@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(dino_armor3@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(dino_armor3@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(camel_onehump@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(camel_onehump@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(camel_onehump@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Row": "2",
+            "Type": "RTID(camel_onehump@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(camel_onehump@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(kongfu_drink@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(kongfu_drink@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(iceage_troglobite@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(iceage_troglobite@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(kongfu_drink@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(kongfu_drink@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(iceage_troglobite@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave7"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Row": "5",
+            "Type": "RTID(camel_onehump@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(camel_onehump@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(dino_armor3@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(dino_armor3@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(dino_armor3@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(kongfu_drink@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(iceage_troglobite@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(kongfu_drink@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(iceage_troglobite@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(kongfu_drink@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(dino_armor3@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave8"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Row": "1",
+            "Type": "RTID(kongfu_drink@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(kongfu_drink@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(kongfu_drink@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(kongfu_drink@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(kongfu_drink@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(iceage_troglobite@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(iceage_troglobite@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(iceage_troglobite@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(kongfu_drink@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(kongfu_drink@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(camel_onehump@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(camel_onehump@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(camel_onehump@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(camel_onehump@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(dino_armor3@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(dino_armor3@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(dino_armor3@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave9"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 1,
+        "Zombies": [
+          {
+            "Row": "1",
+            "Type": "RTID(kongfu_drink@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(kongfu_drink@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(kongfu_drink@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(kongfu_drink@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(kongfu_drink@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(camel_onehump@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(camel_onehump@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(camel_onehump@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(camel_onehump@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(camel_onehump@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(dino_armor3@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(kongfu_drink@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(kongfu_drink@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(kongfu_drink@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(dino_armor3@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(dino_armor3@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(dino_armor3@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(kongfu_drink@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(kongfu_drink@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(kongfu_drink@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave10"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(dino_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_gargantuar@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(kongfu_drink@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(kongfu_drink@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(kongfu_drink@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(iceage_troglobite@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(iceage_troglobite@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(iceage_troglobite@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(kongfu_drink@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(kongfu_drink@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(kongfu_drink@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(kongfu_drink@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(kongfu_drink@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(dino_armor3@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(dino_armor3@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(dino_armor3@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(dino_armor3@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(dino_armor3@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(kongfu_drink@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(kongfu_drink@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(kongfu_drink@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave3DinoTimeEvent0"
+      ],
+      "objclass": "DinoWaveActionProps",
+      "objdata": {
+        "DinoRow": "2",
+        "DinoType": "tyranno",
+        "DinoWaveDuration": "1"
+      }
+    },
+    {
+      "aliases": [
+        "Wave4DinoTimeEvent0"
+      ],
+      "objclass": "DinoWaveActionProps",
+      "objdata": {
+        "DinoRow": "0",
+        "DinoType": "tyranno",
+        "DinoWaveDuration": "1"
+      }
+    },
+    {
+      "aliases": [
+        "Wave4DinoTimeEvent1"
+      ],
+      "objclass": "DinoWaveActionProps",
+      "objdata": {
+        "DinoRow": "4",
+        "DinoType": "tyranno",
+        "DinoWaveDuration": "1"
+      }
+    },
+    {
+      "aliases": [
+        "Wave5DinoTimeEvent0"
+      ],
+      "objclass": "DinoWaveActionProps",
+      "objdata": {
+        "DinoRow": 0,
+        "DinoType": "tyranno",
+        "DinoWaveDuration": "1"
+      }
+    },
+    {
+      "aliases": [
+        "Wave6DinoTimeEvent0"
+      ],
+      "objclass": "DinoWaveActionProps",
+      "objdata": {
+        "DinoRow": "3",
+        "DinoType": "tyranno",
+        "DinoWaveDuration": "1"
+      }
+    },
+    {
+      "aliases": [
+        "Wave6DinoTimeEvent1"
+      ],
+      "objclass": "DinoWaveActionProps",
+      "objdata": {
+        "DinoRow": "4",
+        "DinoType": "tyranno",
+        "DinoWaveDuration": "1"
+      }
+    },
+    {
+      "aliases": [
+        "Wave7DinoTimeEvent0"
+      ],
+      "objclass": "DinoWaveActionProps",
+      "objdata": {
+        "DinoRow": "3",
+        "DinoType": "tyranno",
+        "DinoWaveDuration": "1"
+      }
+    },
+    {
+      "aliases": [
+        "Wave8DinoTimeEvent0"
+      ],
+      "objclass": "DinoWaveActionProps",
+      "objdata": {
+        "DinoRow": "2",
+        "DinoType": "tyranno",
+        "DinoWaveDuration": "2"
+      }
+    },
+    {
+      "aliases": [
+        "Wave8DinoTimeEvent1"
+      ],
+      "objclass": "DinoWaveActionProps",
+      "objdata": {
+        "DinoRow": "1",
+        "DinoType": "tyranno",
+        "DinoWaveDuration": "2"
+      }
+    },
+    {
+      "aliases": [
+        "Wave10DinoTimeEvent0"
+      ],
+      "objclass": "DinoWaveActionProps",
+      "objdata": {
+        "DinoRow": 0,
+        "DinoType": "tyranno",
+        "DinoWaveDuration": "1"
+      }
+    },
+    {
+      "aliases": [
+        "Wave10DinoTimeEvent1"
+      ],
+      "objclass": "DinoWaveActionProps",
+      "objdata": {
+        "DinoRow": 4,
+        "DinoType": "tyranno",
+        "DinoWaveDuration": "1"
+      }
+    },
+    {
+      "aliases": [
+        "Wave10DinoTimeEvent2"
+      ],
+      "objclass": "DinoWaveActionProps",
+      "objdata": {
+        "DinoRow": "3",
+        "DinoType": "tyranno",
+        "DinoWaveDuration": "1"
+      }
+    }
+  ],
+  "version": 1
+}
