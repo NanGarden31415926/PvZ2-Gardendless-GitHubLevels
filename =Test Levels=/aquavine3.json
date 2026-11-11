@@ -1,94 +1,70 @@
 {
-  "#comment": "aquavine233",
-  "version": 1,
   "objects": [
     {
       "objclass": "LevelDefinition",
       "objdata": {
-        "LevelNumber": 3,
-        "Loot": "RTID(NoLoot@LevelModules)",
-        "PlantToIntroduce": "aquavine",
-        "MusicType": "MiniGame_A",
-        "FirstIntroNarrative": "AQUAVINE_INTRO",
-        "Description": "[PLAYERS_ATTEMPT_TO_GET_PLANT]",
-        "Name": "[EPIC_PLANT_LEVEL_NAME]",
-        "WrittenBy": "清欢",
-        "StartingSun": 50,
-        "StageModule": "RTID(TheStage@CurrentLevel)",
+        "Loot": "RTID(DefaultLoot@LevelModules)",
         "Modules": [
           "RTID(StandardIntro@LevelModules)",
-          "RTID(DefaultSunDropper@LevelModules)",
           "RTID(ZombiesDeadWinCon@LevelModules)",
-          "RTID(DinoMowers@LevelModules)",
+          "RTID(ModernMowers@LevelModules)",
           "RTID(SeedBank@CurrentLevel)",
-          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(Rails@CurrentLevel)",
+          "RTID(GridItemPlacement@CurrentLevel)",
+          "RTID(FrozenPlantPlacement@CurrentLevel)",
           "RTID(DefaultZombieWinCondition@LevelModules)",
-          "RTID(InitialGridItems@CurrentLevel)",
-          "RTID(BeatTheLevel@CurrentLevel)",
+          "RTID(LevelScheduler@CurrentLevel)",
           "RTID(NewWaves@CurrentLevel)"
+        ],
+        "PlantToIntroduce": "aquavine",
+        "Name": "[EPIC_PLANT_LEVEL_NAME]",
+        "Description": "[PLAYERS_ATTEMPT_TO_GET_PLANT]",
+        "LevelNumber": 3,
+        "WrittenBy": "星痕_Hoshiato",
+        "MusicType": "MiniGame_B",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "StageModule": "RTID(TheStage@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "LevelScheduler"
+      ],
+      "objclass": "LevelSchedulerProps",
+      "objdata": {
+        "TimeBeforeFirst": {
+          "Max": 0,
+          "Min": 0
+        },
+        "TimeBetween": {
+          "Max": 1,
+          "Min": 1
+        },
+        "Repeat": {
+          "Max": 1,
+          "Min": 1
+        },
+        "RewardWhenEnded": false,
+        "SuppressRewardState": false,
+        "Events": [
+          "RTID(SpawnPlantsEvent@CurrentLevel)"
         ]
       }
     },
     {
       "aliases": [
-        "BeatTheLevel"
+        "SpawnPlantsEvent"
       ],
-      "objclass": "StarChallengeBeatTheLevelProps",
+      "objclass": "SpawnPlantsWaveActionProps",
       "objdata": {
-        "DescriptionsMultilanguage": [
+        "Plants": [
           {
-            "en": "Cannot plant plants on moltenpool",
-            "zh": "无法在 熔岩池 上种植植物"
-          }
-        ]
-      }
-    },
-    {
-      "aliases": [
-        "AQUAVINE_INTRO"
-      ],
-      "objclass": "NarrativeProperties",
-      "objdata": {
-        "Flow": [
-          {
-            "Character": "crazydave",
-            "Action": "NPC_ENTER"
-          },
-          {
-            "Character": "winnie",
-            "Action": "NPC_ENTER"
-          },
-          {
-            "Character": "winnie",
-            "Action": "TIRED",
-            "Lines": {
-              "en": "The information shows that there is an extreme lack of water resources here.",
-              "zh": "信息显示这里极度缺乏水资源。"
-            }
-          },
-          {
-            "Character": "crazydave",
-            "Action": "EXCITED",
-            "Lines": {
-              "en": "Without water, our plants can't reach their full potential!",
-              "zh": "没有水，我们的植物无法发挥全部的实力了！"
-            }
-          },
-          {
-            "Character": "winnie",
-            "Action": "SAY",
-            "Lines": {
-              "en": "Don't worry.",
-              "zh": "不用担心。"
-            }
-          },
-          {
-            "Character": "winnie",
-            "Action": "SAY",
-            "Lines": {
-              "en": "If there's no water, we'll create water!",
-              "zh": "没有水，我们就创造水！"
-            }
+            "GridX": 4,
+            "GridY": 2,
+            "TypeName": "turnip",
+            "SpawnAnim": "grow",
+            "AllowSpawnOnOtherPlants": false
           }
         ]
       }
@@ -99,7 +75,7 @@
       ],
       "objclass": "LawnType",
       "objdata": {
-        "LawnBaseOn": "LostCityVolcanoStage",
+        "LawnBaseOn": "SummerNightsStage",
         "Properties": "RTID(TheStageProp@CurrentLevel)"
       }
     },
@@ -109,31 +85,53 @@
       ],
       "objclass": "LawnProperties",
       "objdata": {
-        "Music": "Dino",
-        "IsAtNight": false
+        "Flag_Zombie": [
+          "duckytube_flag"
+        ]
       }
     },
     {
       "aliases": [
-        "ChallengeModule"
+        "Rails"
       ],
-      "objclass": "StarChallengeModuleProperties",
+      "objclass": "RailcartProperties",
       "objdata": {
-        "Challenges": [
-          [
-            "RTID(ZombieDistance@CurrentLevel)"
-          ]
-        ],
-        "ChallengesAlwaysAvailable": true
+        "RailcartType": "railcart_dark",
+        "Railcarts": [],
+        "Rails": [
+          {
+            "Column": 6,
+            "RowEnd": 4,
+            "RowStart": 3
+          },
+          {
+            "Column": 7,
+            "RowEnd": 1,
+            "RowStart": 0
+          }
+        ]
       }
     },
     {
       "aliases": [
-        "ZombieDistance"
+        "Rails"
       ],
-      "objclass": "StarChallengeZombieDistanceProps",
+      "objclass": "RailcartProperties",
       "objdata": {
-        "TargetDistance": 3.5
+        "RailcartType": "railcart_cowboy",
+        "Railcarts": [],
+        "Rails": [
+          {
+            "Column": 6,
+            "RowEnd": 2,
+            "RowStart": 0
+          },
+          {
+            "Column": 7,
+            "RowEnd": 4,
+            "RowStart": 2
+          }
+        ]
       }
     },
     {
@@ -142,23 +140,60 @@
       ],
       "objclass": "SeedBankProperties",
       "objdata": {
-        "SelectionMethod": "preset",
         "PresetPlantList": [
           {
-            "PlantType": "aquavine",
-            "Level": -1
+            "Level": -1,
+            "PlantType": "aquavine"
           },
           {
-            "PlantType": "seashooter",
-            "Level": -1
+            "Level": -1,
+            "PlantType": "turnip"
+          }
+        ],
+        "SelectionMethod": "chooser"
+      }
+    },
+    {
+      "aliases": [
+        "GridItemPlacement"
+      ],
+      "objclass": "InitialGridItemProperties",
+      "objdata": {
+        "InitialGridItemMatrixes": [
+          {
+            "GridMatrix": [
+              "000111000",
+              "000111000",
+              "000111000",
+              "000111000",
+              "000111000"
+            ],
+            "TypeName": "potholepool"
           },
           {
-            "PlantType": "sunshroom",
-            "Level": -1
-          },
+            "GridMatrix": [
+              "000000001",
+              "000000001",
+              "000000001",
+              "000000001",
+              "000000001"
+            ],
+            "TypeName": "shallowpuddle"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "FrozenPlantPlacement"
+      ],
+      "objclass": "InitialPlantProperties",
+      "objdata": {
+        "InitialPlantPlacements": [
           {
-            "PlantType": "tanglekelp",
-            "Level": -1
+            "GridX": 4,
+            "GridY": 2,
+            "TypeName": "aquavine"
           }
         ]
       }
@@ -169,6 +204,71 @@
       ],
       "objclass": "WaveManagerModuleProperties",
       "objdata": {
+        "DynamicZombies": [
+          {},
+          {},
+          {},
+          {
+            "PointIncrementPerWave": 90,
+            "StartingPoints": 100,
+            "StartingWave": 3,
+            "ZombiePool": [
+              "RTID(duckytube@ZombieTypes)",
+              "RTID(duckytube_armor1@ZombieTypes)",
+              "RTID(duckytube_armor2@ZombieTypes)",
+              "RTID(duckytube_armor4@ZombieTypes)",
+              "RTID(summer_bug_armor1@ZombieTypes)",
+              "RTID(mech_cone@ZombieTypes)",
+              "RTID(football_mech@ZombieTypes)",
+              "RTID(seagull@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 130,
+            "StartingPoints": 100,
+            "StartingWave": 3,
+            "ZombiePool": [
+              "RTID(duckytube@ZombieTypes)",
+              "RTID(duckytube_armor1@ZombieTypes)",
+              "RTID(duckytube_armor2@ZombieTypes)",
+              "RTID(duckytube_armor4@ZombieTypes)",
+              "RTID(summer_bug_armor1@ZombieTypes)",
+              "RTID(mech_cone@ZombieTypes)",
+              "RTID(football_mech@ZombieTypes)",
+              "RTID(seagull@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 160,
+            "StartingPoints": 200,
+            "StartingWave": 3,
+            "ZombiePool": [
+              "RTID(duckytube@ZombieTypes)",
+              "RTID(duckytube_armor1@ZombieTypes)",
+              "RTID(duckytube_armor2@ZombieTypes)",
+              "RTID(duckytube_armor4@ZombieTypes)",
+              "RTID(summer_bug_armor1@ZombieTypes)",
+              "RTID(mech_cone@ZombieTypes)",
+              "RTID(football_mech@ZombieTypes)",
+              "RTID(seagull@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 200,
+            "StartingPoints": 200,
+            "StartingWave": 3,
+            "ZombiePool": [
+              "RTID(duckytube@ZombieTypes)",
+              "RTID(duckytube_armor1@ZombieTypes)",
+              "RTID(duckytube_armor2@ZombieTypes)",
+              "RTID(duckytube_armor4@ZombieTypes)",
+              "RTID(summer_bug_armor1@ZombieTypes)",
+              "RTID(mech_cone@ZombieTypes)",
+              "RTID(football_mech@ZombieTypes)",
+              "RTID(seagull@ZombieTypes)"
+            ]
+          }
+        ],
         "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
       }
     },
@@ -178,12 +278,12 @@
       ],
       "objclass": "WaveManagerProperties",
       "objdata": {
-        "MinNextWaveHealthPercentage": 0.5,
-        "MaxNextWaveHealthPercentage": 0.65,
-        "FlagWaveInterval": 6,
-        "WaveCount": 12,
-        "WaveSpendingPointIncrement": 10,
-        "WaveSpendingPoints": 100,
+        "FlagWaveInterval": 7,
+        "SpawnColEnd": 1,
+        "SpawnColStart": 1,
+        "WaveCount": 14,
+        "WaveSpendingPointIncrement": 0,
+        "WaveSpendingPoints": 0,
         "Waves": [
           [
             "RTID(Wave1@CurrentLevel)"
@@ -195,7 +295,8 @@
             "RTID(Wave3@CurrentLevel)"
           ],
           [
-            "RTID(Wave4@CurrentLevel)"
+            "RTID(Wave4@CurrentLevel)",
+            "RTID(ParachuteRainEvent0@CurrentLevel)"
           ],
           [
             "RTID(Wave5@CurrentLevel)"
@@ -204,7 +305,8 @@
             "RTID(Wave6@CurrentLevel)"
           ],
           [
-            "RTID(Wave7@CurrentLevel)"
+            "RTID(Wave7@CurrentLevel)",
+            "RTID(ParachuteRainEvent1@CurrentLevel)"
           ],
           [
             "RTID(Wave8@CurrentLevel)"
@@ -213,22 +315,22 @@
             "RTID(Wave9@CurrentLevel)"
           ],
           [
-            "RTID(Wave10@CurrentLevel)"
+            "RTID(Wave10@CurrentLevel)",
+            "RTID(ParachuteRainEvent0@CurrentLevel)"
           ],
           [
             "RTID(Wave11@CurrentLevel)"
           ],
           [
-            "RTID(Wave12@CurrentLevel)"
+            "RTID(Wave12@CurrentLevel)",
+            "RTID(ParachuteRainEvent1@CurrentLevel)"
           ],
           [
             "RTID(Wave13@CurrentLevel)"
           ],
           [
-            "RTID(Wave14@CurrentLevel)"
-          ],
-          [
-            "RTID(Wave15@CurrentLevel)"
+            "RTID(Wave14@CurrentLevel)",
+            "RTID(ParachuteRainEvent1@CurrentLevel)"
           ]
         ]
       }
@@ -241,8 +343,8 @@
       "objdata": {
         "Zombies": [
           {
-            "Type": "RTID(newspaper_veteran@ZombieTypes)",
-            "Row": "1"
+            "Type": "RTID(beach_fisherman@ZombieTypes)",
+            "Row": 3
           }
         ]
       }
@@ -255,13 +357,7 @@
       "objdata": {
         "Zombies": [
           {
-            "Type": "RTID(dark_imp_dragon@ZombieTypes)"
-          },
-          {
-            "Type": "RTID(dark_imp_dragon@ZombieTypes)"
-          },
-          {
-            "Type": "RTID(dark_imp_dragon@ZombieTypes)"
+            "Type": "RTID(duckytube_armor2@ZombieTypes)"
           }
         ]
       }
@@ -274,12 +370,11 @@
       "objdata": {
         "Zombies": [
           {
-            "Type": "RTID(dino_armor1@ZombieTypes)",
-            "Row": "2"
+            "Type": "RTID(beach_fisherman@ZombieTypes)",
+            "Row": 1
           },
           {
-            "Type": "RTID(newspaper_veteran@ZombieTypes)",
-            "Row": "5"
+            "Type": "RTID(duckytube_armor1@ZombieTypes)"
           }
         ]
       }
@@ -290,22 +385,18 @@
       ],
       "objclass": "SpawnZombiesJitteredWaveActionProps",
       "objdata": {
+        "DynamicPlantfood": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
         "Zombies": [
           {
-            "Type": "RTID(dark_imp_dragon@ZombieTypes)",
-            "Row": "2"
-          },
-          {
-            "Type": "RTID(dark_imp_dragon@ZombieTypes)",
-            "Row": "3"
-          },
-          {
-            "Type": "RTID(dark_imp_dragon@ZombieTypes)",
-            "Row": "4"
-          },
-          {
-            "Type": "RTID(future_protector@ZombieTypes)",
-            "Row": "3"
+            "Type": "RTID(kongfu_chi@ZombieTypes)"
           }
         ]
       }
@@ -318,28 +409,11 @@
       "objdata": {
         "Zombies": [
           {
-            "Type": "RTID(dino_armor1@ZombieTypes)",
-            "Row": "2"
+            "Type": "RTID(beach_fisherman@ZombieTypes)",
+            "Row": 4
           },
           {
-            "Type": "RTID(dino_armor1@ZombieTypes)",
-            "Row": "3"
-          },
-          {
-            "Type": "RTID(dino_armor1@ZombieTypes)",
-            "Row": "4"
-          },
-          {
-            "Type": "RTID(dino_armor3@ZombieTypes)",
-            "Row": "1"
-          },
-          {
-            "Type": "RTID(dino_armor3@ZombieTypes)",
-            "Row": "5"
-          },
-          {
-            "Type": "RTID(future_protector@ZombieTypes)",
-            "Row": "4"
+            "Type": "RTID(duckytube_armor2@ZombieTypes)"
           }
         ]
       }
@@ -350,32 +424,21 @@
       ],
       "objclass": "SpawnZombiesJitteredWaveActionProps",
       "objdata": {
-        "AdditionalPlantfood": 1,
         "DynamicPlantfood": [
           1,
           1,
           1,
           1,
-          1,
+          0,
           0,
           0
         ],
         "Zombies": [
           {
-            "Type": "RTID(dino_bully_veteran@ZombieTypes)",
-            "Row": "2"
+            "Type": "RTID(kongfu_chi@ZombieTypes)"
           },
           {
-            "Type": "RTID(dino_bully_veteran@ZombieTypes)",
-            "Row": "4"
-          },
-          {
-            "Type": "RTID(beach_gargantuar@ZombieTypes)",
-            "Row": "3"
-          },
-          {
-            "Type": "RTID(future_protector@ZombieTypes)",
-            "Row": "2"
+            "Type": "RTID(sky_armor2@ZombieTypes)"
           }
         ]
       }
@@ -388,52 +451,15 @@
       "objdata": {
         "Zombies": [
           {
-            "Type": "RTID(dino_armor1@ZombieTypes)",
-            "Row": "1"
+            "Type": "RTID(beach_fisherman@ZombieTypes)",
+            "Row": 2
           },
           {
-            "Type": "RTID(dino_armor3@ZombieTypes)",
-            "Row": "1"
+            "Type": "RTID(beach_fisherman@ZombieTypes)",
+            "Row": 5
           },
           {
-            "Type": "RTID(dino_armor1@ZombieTypes)",
-            "Row": "5"
-          },
-          {
-            "Type": "RTID(dino_armor3@ZombieTypes)",
-            "Row": "5"
-          },
-          {
-            "Type": "RTID(dark_imp_dragon@ZombieTypes)",
-            "Row": "2"
-          },
-          {
-            "Type": "RTID(dark_imp_dragon@ZombieTypes)",
-            "Row": "2"
-          },
-          {
-            "Type": "RTID(dark_imp_dragon@ZombieTypes)",
-            "Row": "3"
-          },
-          {
-            "Type": "RTID(dark_imp_dragon@ZombieTypes)",
-            "Row": "3"
-          },
-          {
-            "Type": "RTID(dark_imp_dragon@ZombieTypes)",
-            "Row": "4"
-          },
-          {
-            "Type": "RTID(dark_imp_dragon@ZombieTypes)",
-            "Row": "4"
-          },
-          {
-            "Type": "RTID(future_protector@ZombieTypes)",
-            "Row": "2"
-          },
-          {
-            "Type": "RTID(future_protector@ZombieTypes)",
-            "Row": "4"
+            "Type": "RTID(duckytube_armor4@ZombieTypes)"
           }
         ]
       }
@@ -444,27 +470,18 @@
       ],
       "objclass": "SpawnZombiesJitteredWaveActionProps",
       "objdata": {
-        "AdditionalPlantfood": 1,
         "Zombies": [
           {
-            "Type": "RTID(dino_bully_veteran@ZombieTypes)",
-            "Row": "2"
+            "Type": "RTID(beach_fisherman@ZombieTypes)"
           },
           {
-            "Type": "RTID(dino_bully_veteran@ZombieTypes)",
-            "Row": "3"
+            "Type": "RTID(kongfu_chi@ZombieTypes)"
           },
           {
-            "Type": "RTID(dino_bully_veteran@ZombieTypes)",
-            "Row": "4"
+            "Type": "RTID(kongfu_chi@ZombieTypes)"
           },
           {
-            "Type": "RTID(dino_armor4@ZombieTypes)",
-            "Row": "1"
-          },
-          {
-            "Type": "RTID(dino_armor4@ZombieTypes)",
-            "Row": "5"
+            "Type": "RTID(duckytube_armor2@ZombieTypes)"
           }
         ]
       }
@@ -475,62 +492,24 @@
       ],
       "objclass": "SpawnZombiesJitteredWaveActionProps",
       "objdata": {
+        "DynamicPlantfood": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
         "Zombies": [
           {
-            "Type": "RTID(future_protector@ZombieTypes)",
-            "Row": "1"
+            "Type": "RTID(beach_fisherman@ZombieTypes)"
           },
           {
-            "Type": "RTID(future_protector@ZombieTypes)",
-            "Row": "1"
+            "Type": "RTID(duckytube_armor2@ZombieTypes)"
           },
           {
-            "Type": "RTID(future_protector@ZombieTypes)",
-            "Row": "3"
-          },
-          {
-            "Type": "RTID(future_protector@ZombieTypes)",
-            "Row": "3"
-          },
-          {
-            "Type": "RTID(future_protector@ZombieTypes)",
-            "Row": "5"
-          },
-          {
-            "Type": "RTID(future_protector@ZombieTypes)",
-            "Row": "5"
-          },
-          {
-            "Type": "RTID(dark_imp_dragon@ZombieTypes)",
-            "Row": "2"
-          },
-          {
-            "Type": "RTID(dark_imp_dragon@ZombieTypes)",
-            "Row": "2"
-          },
-          {
-            "Type": "RTID(dark_imp_dragon@ZombieTypes)",
-            "Row": "3"
-          },
-          {
-            "Type": "RTID(dark_imp_dragon@ZombieTypes)",
-            "Row": "3"
-          },
-          {
-            "Type": "RTID(dark_imp_dragon@ZombieTypes)",
-            "Row": "4"
-          },
-          {
-            "Type": "RTID(dark_imp_dragon@ZombieTypes)",
-            "Row": "4"
-          },
-          {
-            "Type": "RTID(dino_armor1@ZombieTypes)",
-            "Row": "1"
-          },
-          {
-            "Type": "RTID(dino_armor1@ZombieTypes)",
-            "Row": "5"
+            "Type": "RTID(sky_armor2@ZombieTypes)"
           }
         ]
       }
@@ -543,12 +522,13 @@
       "objdata": {
         "Zombies": [
           {
-            "Type": "RTID(beach_gargantuar@ZombieTypes)",
-            "Row": "2"
+            "Type": "RTID(kongfu_chi@ZombieTypes)"
           },
           {
-            "Type": "RTID(beach_gargantuar@ZombieTypes)",
-            "Row": "4"
+            "Type": "RTID(summer_bug_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mech_cone@ZombieTypes)"
           }
         ]
       }
@@ -561,56 +541,13 @@
       "objdata": {
         "Zombies": [
           {
-            "Type": "RTID(future_protector@ZombieTypes)",
-            "Row": "1"
+            "Type": "RTID(beach_fisherman@ZombieTypes)"
           },
           {
-            "Type": "RTID(future_protector@ZombieTypes)",
-            "Row": "3"
+            "Type": "RTID(mech_cone@ZombieTypes)"
           },
           {
-            "Type": "RTID(future_protector@ZombieTypes)",
-            "Row": "5"
-          },
-          {
-            "Type": "RTID(dino_armor4@ZombieTypes)",
-            "Row": "1"
-          },
-          {
-            "Type": "RTID(dino_armor4@ZombieTypes)",
-            "Row": "5"
-          },
-          {
-            "Type": "RTID(dino_armor3@ZombieTypes)",
-            "Row": "1"
-          },
-          {
-            "Type": "RTID(dino_armor3@ZombieTypes)",
-            "Row": "5"
-          },
-          {
-            "Type": "RTID(dino_armor1@ZombieTypes)",
-            "Row": "2"
-          },
-          {
-            "Type": "RTID(dino_armor1@ZombieTypes)",
-            "Row": "2"
-          },
-          {
-            "Type": "RTID(dino_armor1@ZombieTypes)",
-            "Row": "3"
-          },
-          {
-            "Type": "RTID(dino_armor1@ZombieTypes)",
-            "Row": "3"
-          },
-          {
-            "Type": "RTID(dino_armor1@ZombieTypes)",
-            "Row": "4"
-          },
-          {
-            "Type": "RTID(dino_armor1@ZombieTypes)",
-            "Row": "4"
+            "Type": "RTID(beach_gargantuar@ZombieTypes)"
           }
         ]
       }
@@ -621,152 +558,106 @@
       ],
       "objclass": "SpawnZombiesJitteredWaveActionProps",
       "objdata": {
+        "DynamicPlantfood": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
         "Zombies": [
           {
-            "Type": "RTID(beach_gargantuar@ZombieTypes)",
-            "Row": "1"
+            "Type": "RTID(beach_fisherman@ZombieTypes)"
           },
           {
-            "Type": "RTID(beach_gargantuar@ZombieTypes)",
-            "Row": "5"
+            "Type": "RTID(kongfu_chi@ZombieTypes)"
           },
           {
-            "Type": "RTID(dino_bully_veteran@ZombieTypes)",
-            "Row": "2"
-          },
-          {
-            "Type": "RTID(dino_bully_veteran@ZombieTypes)",
-            "Row": "3"
-          },
-          {
-            "Type": "RTID(dino_bully_veteran@ZombieTypes)",
-            "Row": "4"
-          },
-          {
-            "Type": "RTID(dark_imp_dragon@ZombieTypes)",
-            "Row": "2"
-          },
-          {
-            "Type": "RTID(dark_imp_dragon@ZombieTypes)",
-            "Row": "2"
-          },
-          {
-            "Type": "RTID(dark_imp_dragon@ZombieTypes)",
-            "Row": "3"
-          },
-          {
-            "Type": "RTID(dark_imp_dragon@ZombieTypes)",
-            "Row": "3"
-          },
-          {
-            "Type": "RTID(dark_imp_dragon@ZombieTypes)",
-            "Row": "4"
-          },
-          {
-            "Type": "RTID(dark_imp_dragon@ZombieTypes)",
-            "Row": "4"
+            "Type": "RTID(sky_armor2@ZombieTypes)"
           }
         ]
       }
     },
     {
       "aliases": [
-        "InitialGridItems"
+        "Wave13"
       ],
-      "objclass": "InitialGridItemProperties",
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
       "objdata": {
-        "InitialGridItemPlacements": [
+        "Zombies": [
           {
-            "GridX": 1,
-            "GridY": 0,
-            "TypeName": "moltenpool_0"
+            "Type": "RTID(duckytube_armor4@ZombieTypes)"
           },
           {
-            "GridX": 2,
-            "GridY": 0,
-            "TypeName": "moltenpool_0"
+            "Type": "RTID(duckytube_armor2@ZombieTypes)"
           },
           {
-            "GridX": 3,
-            "GridY": 0,
-            "TypeName": "moltenpool_0"
-          },
-          {
-            "GridX": 1,
-            "GridY": 4,
-            "TypeName": "moltenpool_0"
-          },
-          {
-            "GridX": 2,
-            "GridY": 4,
-            "TypeName": "moltenpool_0"
-          },
-          {
-            "GridX": 7,
-            "GridY": 1,
-            "TypeName": "moltenpool_0"
-          },
-          {
-            "GridX": 8,
-            "GridY": 1,
-            "TypeName": "moltenpool_0"
-          },
-          {
-            "GridX": 7,
-            "GridY": 2,
-            "TypeName": "moltenpool_0"
-          },
-          {
-            "GridX": 8,
-            "GridY": 2,
-            "TypeName": "moltenpool_0"
-          },
-          {
-            "GridX": 7,
-            "GridY": 4,
-            "TypeName": "moltenpool_0"
-          },
-          {
-            "GridX": 8,
-            "GridY": 4,
-            "TypeName": "moltenpool_0"
-          },
-          {
-            "GridX": 5,
-            "GridY": 2,
-            "TypeName": "moltenpool_0"
-          },
-          {
-            "GridX": 5,
-            "GridY": 3,
-            "TypeName": "moltenpool_0"
+            "Type": "RTID(kongfu_chi@ZombieTypes)"
           }
         ]
       }
     },
     {
       "aliases": [
-        "moltenpool_0"
+        "Wave14"
       ],
-      "objclass": "TileLiquidType",
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
       "objdata": {
-        "Properties": "RTID(moltenpool_0@CurrentLevel)",
-        "TileLiquidBasedOn": "moltenpool"
+        "Zombies": [
+          {
+            "Type": "RTID(beach_fisherman@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(sky_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(sky_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(kongfu_chi@ZombieTypes)"
+          }
+        ]
       }
     },
     {
       "aliases": [
-        "moltenpool_0"
+        "ParachuteRainEvent0"
       ],
-      "objclass": "TileLiquidProperties",
+      "objclass": "ParachuteRainZombieSpawnerProps",
       "objdata": {
-        "DPS": 20,
-        "SapflingDuration": 0,
-        "LifeSpan": 10000000,
-        "Priority": 1,
-        "Rect": "RTID(TileDefaultRect@RectangleProps)",
-        "BurnsPlants": "true"
+        "ColumnEnd": 6,
+        "ColumnStart": 5,
+        "GroupSize": 1,
+        "SpiderCount": 3,
+        "SpiderZombieName": "lostcity_lostpilot",
+        "TimeBeforeFullSpawn": "2",
+        "TimeBetweenGroups": "0.5",
+        "WaveStartMessage": "[WARNING_PARACHUTERAIN]",
+        "ZombieFallTime": "1.5"
+      }
+    },
+    {
+      "aliases": [
+        "ParachuteRainEvent1"
+      ],
+      "objclass": "ParachuteRainZombieSpawnerProps",
+      "objdata": {
+        "ColumnEnd": 6,
+        "ColumnStart": 5,
+        "GroupSize": 2,
+        "SpiderCount": 6,
+        "SpiderZombieName": "lostcity_lostpilot",
+        "TimeBeforeFullSpawn": "2",
+        "TimeBetweenGroups": "0.5",
+        "WaveStartMessage": "[WARNING_PARACHUTERAIN]",
+        "ZombieFallTime": "1.5"
       }
     }
-  ]
+  ],
+  "version": 1
 }
