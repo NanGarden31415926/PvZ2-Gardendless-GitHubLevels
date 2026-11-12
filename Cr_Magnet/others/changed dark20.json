@@ -1,0 +1,483 @@
+{
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "[PLAYERS_TRIP_TO_DARKAGES]",
+        "ForceToWorldMap": true,
+        "LevelNumber": 20,
+        "LoadDefaultMusic": false,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Name": "[DARKAGES_LEVEL_NAME]",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "StageModule": "RTID(DarkStage@LevelModules)",
+        "VictoryModule": "RTID(ZombossVictoryOutro@LevelModules)",
+        "Modules": [
+          "RTID(ZombossIntro@LevelModules)",
+          "RTID(DarkMowers@LevelModules)",
+          "RTID(Gravestones@CurrentLevel)",
+          "RTID(ConveyorBelt@CurrentLevel)",
+          "RTID(ZombossBattle@CurrentLevel)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)"
+        ],
+        "Writtenby": "Cr_Magnet"
+      }
+    },
+    {
+      "objclass": "ZombossBattleModuleProperties",
+      "aliases": [
+        "ZombossBattle"
+      ],
+      "objdata": {
+        "ReservedColumnCount": 3,
+        "ZombossDeathColumn": 5,
+        "ZombossDeathRow": 3,
+        "ZombossMechType": "zombossmech_dark",
+        "ZombossSpawnGridPosition": {
+          "mX": 6,
+          "mY": 3
+        }
+      }
+    },
+    {
+      "objclass": "ConveyorSeedBankProperties",
+      "aliases": [
+        "ConveyorBelt"
+      ],
+      "objdata": {
+        "DropDelayConditions": [
+          {
+            "Delay": 2,
+            "MaxPackets": 0
+          },
+          {
+            "Delay": 3,
+            "MaxPackets": 2
+          },
+          {
+            "Delay": 5,
+            "MaxPackets": 4
+          },
+          {
+            "Delay": 8,
+            "MaxPackets": 8
+          }
+        ],
+        "InitialPlantList": [
+          {
+            "MaxCount": 20,
+            "MaxWeightFactor": 0,
+            "MinCount": 10,
+            "MinWeightFactor": 2,
+            "PlantType": "spikeweed",
+            "Weight": 30
+          },
+          {
+            "MaxCountCooldownSeconds": 10,
+            "ForceBoosted": true,
+            "MaxCount": 1,
+            "MaxWeightFactor": 0,
+            "PlantType": "magnetshroom",
+            "Weight": 50
+          },
+          {
+            "MaxCount": 10,
+            "MaxWeightFactor": 0,
+            "MinCount": 4,
+            "MinWeightFactor": 1.5,
+            "PlantType": "endurian",
+            "Weight": 20
+          }
+        ],
+        "SpeedConditions": [
+          {
+            "MaxPackets": 0,
+            "Speed": 100
+          }
+        ]
+      }
+    },
+    {
+      "objclass": "WaveManagerModuleProperties",
+      "aliases": [
+        "NewWaves"
+      ],
+      "objdata": {
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "objclass": "WaveManagerProperties",
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objdata": {
+        "Waves": []
+      }
+    },
+    {
+      "objclass": "GravestoneProperties",
+      "aliases": [
+        "Gravestones"
+      ],
+      "objdata": {
+        "GravestoneCount": 10,
+        "SpawnColumnEnd": 7,
+        "SpawnColumnStart": 6
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "zombossmech_dark"
+      ],
+      "objdata": {
+        "MissileType": "zomboss_missile_dark",
+        "CannotBeEnlightenedBySolarSage": true,
+        "ImmuneToSweetPotato": true,
+        "ImmuneToShrinkingViolet": true,
+        "ZombieSort": "Zomboss",
+        "IgnoredBySnapPea": true,
+        "CannotBeGrabbedByPtero": true,
+        "CannotBeDetectedByPowerToss": true,
+        "CannotBeDraggedByTangleKelp": true,
+        "CannotBeTossedByCitron": true,
+        "CannotBeDetectedBySapfling": true,
+        "CannotBeSwallowedByChomper": true,
+        "ChiliStunDurationMult": 0,
+        "CannotCarryPlantfoodsInWaves": true,
+        "FoeEatDamageReflectPct": 0.5,
+        "LivesInDeepWater": true,
+        "EatDPS": 100,
+        "Toughness": 190,
+        "ImmuneToGarlic": true,
+        "WavePointCost": 100,
+        "Weight": 0,
+        "HitRect": "RTID(ZombossMechHitRect@RectangleProps)",
+        "AttackRect": "RTID(ZombossMechAttackRect@RectangleProps)",
+        "ZombossMechLevel": 0,
+        "IdleColumn": 6,
+        "ZombossStages": [
+          {
+            "AnimRateModifier": 1,
+            "ChilledDurationFromFrozen": 10,
+            "DamageIndexFull": 0,
+            "DamageIndexHalf": 0,
+            "HitPoints": 7000,
+            "MaxIdleTime": 2.5,
+            "MinIdleTime": 1.5,
+            "StunDamageScale": 1.25,
+            "StunStaggerBackMovement": 1,
+            "StunStaggerBackTime": 0.4,
+            "StunTime": 3,
+            "FireballCount": 2,
+            "FireballCountAdditional": 1,
+            "DragonImpCount": 1,
+            "DragonImpCountAdditional": 1,
+            "Actions": [
+              {
+                "actionName": "walk",
+                "weight": 5,
+                "repeatMax": 1,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              },
+              {
+                "actionName": "summon",
+                "weight": 40,
+                "repeatMax": 2,
+                "repeatMin": 2,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2800,
+                  "zombieList": [
+                    "dark_armor3",
+                    "dark_armor2",
+                    "dark_king",
+                    "dark_wizard"
+                  ]
+                }
+              },
+              {
+                "actionName": "shoot",
+                "weight": 10,
+                "repeatMax": 2,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              },
+              {
+                "actionName": "rush",
+                "weight": 8,
+                "repeatMax": 1,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              }
+            ]
+          },
+          {
+            "AnimRateModifier": 1.1,
+            "ChilledDurationFromFrozen": 10,
+            "DamageIndexFull": 3,
+            "DamageIndexHalf": 3,
+            "HitPoints": 9000,
+            "MaxIdleTime": 2,
+            "MinIdleTime": 1,
+            "StunDamageScale": 1.25,
+            "StunStaggerBackMovement": 1,
+            "StunStaggerBackTime": 0.4,
+            "StunTime": 2.5,
+            "FireballCount": 2,
+            "FireballCountAdditional": 3,
+            "DragonImpCount": 1,
+            "DragonImpCountAdditional": 2,
+            "Actions": [
+              {
+                "actionName": "walk",
+                "weight": 5,
+                "repeatMax": 1,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              },
+              {
+                "actionName": "summon",
+                "weight": 40,
+                "repeatMax": 2,
+                "repeatMin": 2,
+                "summonProps": {
+                  "pointMin": 3000,
+                  "pointMax": 3900,
+                  "plantfoodchance": 0.7,
+                  "zombieList": [
+                    "dark_king",
+                    "dark_armor3",
+                    "dark_armor2",
+                    "dark_imp",
+                    "dark_king_veteran"
+                  ]
+                }
+              },
+              {
+                "actionName": "shoot",
+                "weight": 6,
+                "repeatMax": 2,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              },
+              {
+                "actionName": "rush",
+                "weight": 7,
+                "repeatMax": 1,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              }
+            ]
+          },
+          {
+            "AnimRateModifier": 1.25,
+            "ChilledDurationFromFrozen": 10,
+            "DamageIndexFull": 6,
+            "DamageIndexHalf": 6,
+            "HitPoints": 11000,
+            "MaxIdleTime": 1.5,
+            "MinIdleTime": 0.75,
+            "StunDamageScale": 1.25,
+            "StunStaggerBackMovement": 1,
+            "StunStaggerBackTime": 0.4,
+            "StunTime": 2,
+            "FireballCount": 6,
+            "FireballCountAdditional": 6,
+            "DragonImpCount": 3,
+            "DragonImpCountAdditional": 3,
+            "Actions": [
+              {
+                "actionName": "walk",
+                "weight": 5,
+                "repeatMax": 1,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              },
+              {
+                "actionName": "summon",
+                "weight": 50,
+                "repeatMax": 2,
+                "repeatMin": 2,
+                "summonProps": {
+                  "pointMin": 4000,
+                  "pointMax": 5200,
+                  "zombieList": [
+                    "dark_wizard",
+                    "dark_armor2",
+                    "dark_king",
+                    "dark_armor3",
+                    "dark_armor3",
+                    "dark_armor3",
+                    "dark_king_veteran",
+                    "dark_juggler"
+                  ]
+                }
+              },
+              {
+                "actionName": "rush",
+                "weight": 8,
+                "repeatMax": 1,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              },
+              {
+                "actionName": "shoot",
+                "weight": 20,
+                "repeatMax": 2,
+                "repeatMin": 2,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "zombossmech_dark"
+      ],
+      "objdata": {
+        "Properties": "RTID(zombossmech_dark@CurrentLevel)",
+        "ZombieBasedOn": "zombossmech_dark"
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "dark_wizard"
+      ],
+      "objdata": {
+        "WitchHazelPriority": 1,
+        "TimeBeforeFirst": 7,
+        "TimeBeforeFirstAdditional": 2,
+        "TimeBetween": 11,
+        "TimeBetweenAdditional": 3,
+        "WalkSPS": 0.12,
+        "EatDPS": 100,
+        "Toughness": 490,
+        "WavePointCost": 800,
+        "Weight": 3500,
+        "HitRect": "RTID(CommonHitRect@RectangleProps)",
+        "AttackRect": "RTID(CommonAttackRect@RectangleProps)",
+        "StartingArmors": [
+          "dark_armor3"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "dark_wizard"
+      ],
+      "objdata": {
+        "Properties": "RTID(dark_wizard@CurrentLevel)",
+        "ZombieBasedOn": "dark_wizard"
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "dark_imp"
+      ],
+      "objdata": {
+        "KilledByShrinkingViolet": true,
+        "CannotBeGrabbedByPtero": true,
+        "ZombieSort": "Normal",
+        "IgnoredInWaves": true,
+        "WalkSPS": 0.22,
+        "EatDPS": 100,
+        "Toughness": 190,
+        "WavePointCost": 100,
+        "Weight": 1000,
+        "HitRect": "RTID(ImpHitRect@RectangleProps)",
+        "AttackRect": "RTID(ImpAttackRect@RectangleProps)",
+        "StartingArmors": [
+          "dark_armor3"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "dark_imp"
+      ],
+      "objdata": {
+        "Properties": "RTID(dark_imp@CurrentLevel)",
+        "ZombieBasedOn": "dark_imp"
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "dark_imp_dragon"
+      ],
+      "objdata": {
+        "KilledByShrinkingViolet": true,
+        "CannotBeGrabbedByPtero": true,
+        "ZombieSort": "Normal",
+        "WalkSPS": 0.22,
+        "EatDPS": 100,
+        "Toughness": 190,
+        "WavePointCost": 150,
+        "Weight": 2000,
+        "HitRect": "RTID(ImpHitRect@RectangleProps)",
+        "AttackRect": "RTID(ImpAttackRect@RectangleProps)",
+        "StartingArmors": [
+          "dark_armor3"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "dark_imp_dragon"
+      ],
+      "objdata": {
+        "Properties": "RTID(dark_imp_dragon@CurrentLevel)",
+        "ZombieBasedOn": "dark_imp_dragon"
+      }
+    }
+  ]
+}
