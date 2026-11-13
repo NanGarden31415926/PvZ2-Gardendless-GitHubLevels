@@ -1,0 +1,778 @@
+{
+  "#comment": "天使星星果",
+  "version": 1,
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "LevelNumber": 1,
+        "Loot": "RTID(NoLoot@LevelModules)",
+        "Name": "ice and fire",
+        "Description": "fatal weakness",
+        "StartingSun": 100,
+        "StageModule": "RTID(SummerNightsStage@LevelModules)",
+        "Modules": [
+          "RTID(StandardIntro@LevelModules)",
+          "RTID(DefaultSunDropper@LevelModules)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(FutureLinkedTileGroups@CurrentLevel)",
+          "RTID(Rails@CurrentLevel)",
+          "RTID(InitialGridItems@CurrentLevel)",
+          "RTID(FrozenPlantPlacement@CurrentLevel)"
+        ],
+        "WrittenBy": "Sp"
+      }
+    },
+    {
+      "aliases": [
+        "ChallengeModule"
+      ],
+      "objclass": "StarChallengeModuleProperties",
+      "objdata": {
+        "ChallengesAlwaysAvailable": true,
+        "Challenges": [
+          [
+            "RTID(BeatTheLevel@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "BeatTheLevel"
+      ],
+      "objclass": "StarChallengeBeatTheLevelProps",
+      "objdata": {}
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "SelectionMethod": "preset",
+        "PresetPlantList": [
+          {
+            "PlantType": "pyrevine",
+            "Level": -1
+          },
+          {
+            "PlantType": "imitater",
+            "Level": -1
+          },
+          {
+            "PlantType": "primalwallnut",
+            "Level": -1
+          },
+          {
+            "PlantType": "intensivecarrot",
+            "Level": -1
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {}
+        ],
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "MinNextWaveHealthPercentage": 0.5,
+        "MaxNextWaveHealthPercentage": 0.65,
+        "FlagWaveInterval": 3,
+        "WaveCount": 6,
+        "WaveSpendingPointIncrement": 10,
+        "WaveSpendingPoints": 100,
+        "Waves": [
+          [
+            "RTID(Wave6@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6_1@CurrentLevel)",
+            "RTID(Wave6StormEvent0@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 1,
+        "Style": "appear",
+        "Zombies": [
+          {
+            "Type": "RTID(explorer@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(explorer@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(explorer@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(explorer_veteran@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(summer_armor1@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(summer_armor1@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(summer_armor2@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(summer_armor2@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(summer_bug@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(summer_flag@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(summer_flag@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(summer_armor2@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(summer_armor2@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(summer_armor2@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(summer_armor1@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(summer_armor1@ZombieTypes)",
+            "Row": "5"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Style": "appear",
+        "MustKillAllToNextWave": true,
+        "Zombies": [
+          {
+            "Type": "RTID(iceage_hunter@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(iceage_hunter@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(iceage_hunter@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(iceage_hunter@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(iceage_hunter@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(iceage_armor3@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(iceage_armor3@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(iceage_armor3@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(modern_allstar@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(modern_allstar@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(modern_balloon@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(modern_balloon@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(iceage_armor3@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(iceage_armor3@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(iceage_armor3@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(summer_armor2@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(summer_basic@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(summer_basic@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(summer_basic@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(summer_armor2@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(summer_basic@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(summer_bug_armor1@ZombieTypes)",
+            "Row": "5"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 1,
+        "Style": "appear",
+        "Zombies": [
+          {
+            "Type": "RTID(iceage_armor2@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(iceage_armor2@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(iceage_armor3@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(iceage_armor3@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(iceage_armor3@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(iceage_armor4@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(iceage_armor4@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(summer_armor1@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(summer_armor1@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(summer_armor1@ZombieTypes)",
+            "Row": "5"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Style": "appear",
+        "MustKillAllToNextWave": true,
+        "Zombies": [
+          {
+            "Type": "RTID(modern_allstar@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(modern_allstar@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(catapult@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(catapult@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(catapult@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(summer_armor1@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(summer_armor1@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(summer_armor1@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(kongfu_torch@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(kongfu_bomb@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(kongfu_bomb@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(monk_torch@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(monk_torch@ZombieTypes)",
+            "Row": "5"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Style": "appear",
+        "MustKillAllToNextWave": true,
+        "Zombies": [
+          {
+            "Type": "RTID(dark_imp_dragon@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(dark_imp_dragon@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(dark_imp_dragon@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(dark_imp_dragon@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(dark_imp_dragon@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(summer_armor1@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(summer_armor2@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(summer_armor2@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(summer_armor1@ZombieTypes)",
+            "Row": "5"
+          }
+        ]
+      }
+    },
+    {
+      "objclass": "NarrativeProperties",
+      "objdata": {
+        "Flow": [
+          {
+            "Character": "crazydave",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "crazydave",
+            "Action": "SAY",
+            "Lines": {
+              "zh": ""
+            }
+          }
+        ]
+      },
+      "aliases": [
+        "EditorFirstIntroNarrative"
+      ]
+    },
+    {
+      "objclass": "NarrativeProperties",
+      "aliases": [
+        "EditorFirstIntroNarrative1"
+      ],
+      "objdata": {
+        "Flow": [
+          {
+            "Character": "crazydave",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "crazydave",
+            "Action": "SAY",
+            "Lines": {
+              "en": "I've deployed a powerful troop on your lawn.",
+              "zh": ""
+            }
+          },
+          {
+            "Character": "crazydave",
+            "Action": "SAY",
+            "Lines": {
+              "en": "Command them with Escape Root.",
+              "zh": "你需要"
+            }
+          },
+          {
+            "Character": "crazydave",
+            "Action": "SAY",
+            "Lines": {
+              "en": "By the way, this root is an employee at the logistics station in town.",
+              "zh": "顺带一提，这个树根是镇子上那家物流站的员工。"
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "winnie",
+            "Action": "SAY",
+            "Lines": {
+              "en": "I've also prepared a few extra troops for you.",
+              "zh": "我准备了几支额外的队伍。"
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "PLAYFUL",
+            "Lines": {
+              "en": "Choose one of them to support.",
+              "zh": "你可以选择其中一支来支援草坪。"
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "SAY",
+            "Lines": {
+              "en": "Always make sure not to lose your commander.",
+              "zh": "切记不要丢失指挥权。"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "objclass": "NarrativeProperties",
+      "aliases": [
+        "EditorFirstIntroNarrative2"
+      ],
+      "objdata": {
+        "Flow": [
+          {
+            "Character": "crazydave",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "crazydave",
+            "Action": "TIRED",
+            "Lines": {
+              "en": "A catastrophe is about to befall us.",
+              "zh": "一场浩劫即将来临。"
+            }
+          },
+          {
+            "Character": "crazydave",
+            "Action": "TIRED",
+            "Lines": {
+              "en": "Electric Mega Gatling Pea is our last hope.",
+              "zh": "这些植物是我们最后的希望。"
+            }
+          },
+          {
+            "Character": "crazydave",
+            "Action": "TIRED",
+            "Lines": {
+              "en": "Survive!",
+              "zh": "生存并保护植物。"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "FutureLinkedTileGroups"
+      ],
+      "objclass": "PowerTileProperties",
+      "objdata": {
+        "LinkedTiles": []
+      }
+    },
+    {
+      "aliases": [
+        "Rails"
+      ],
+      "objclass": "RailcartProperties",
+      "objdata": {
+        "RailcartType": "railcart_cowboy",
+        "Railcarts": [],
+        "Rails": [
+          {
+            "Column": 3,
+            "RowStart": 0,
+            "RowEnd": 4
+          },
+          {
+            "Column": 2,
+            "RowStart": 0,
+            "RowEnd": 4
+          },
+          {
+            "Column": 1,
+            "RowStart": 0,
+            "RowEnd": 4
+          },
+          {
+            "Column": 0,
+            "RowStart": 0,
+            "RowEnd": 4
+          },
+          {
+            "Column": 8,
+            "RowStart": 0,
+            "RowEnd": 4
+          },
+          {
+            "Column": 7,
+            "RowStart": 0,
+            "RowEnd": 4
+          },
+          {
+            "Column": 6,
+            "RowStart": 0,
+            "RowEnd": 4
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6_1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Style": "appear",
+        "Zombies": [
+          {
+            "Type": "RTID(abbot_armor3@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(abbot_armor3@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(monk_drink_veteran@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(monk_drink_veteran@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(abbot_torch@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(abbot_torch@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(abbot_torch@ZombieTypes)",
+            "Row": "5"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6StormEvent0"
+      ],
+      "objclass": "StormZombieSpawnerProps",
+      "objdata": {
+        "ColumnStart": 4,
+        "ColumnEnd": 8,
+        "GroupSize": 2,
+        "TimeBetweenGroups": 2,
+        "Type": "snowstorm",
+        "Zombies": []
+      }
+    },
+    {
+      "aliases": [
+        "InitialGridItems"
+      ],
+      "objclass": "InitialGridItemProperties",
+      "objdata": {
+        "InitialGridItemPlacements": [
+          {
+            "GridX": 4,
+            "GridY": 0,
+            "TypeName": "goldtile"
+          },
+          {
+            "GridX": 4,
+            "GridY": 2,
+            "TypeName": "goldtile"
+          },
+          {
+            "GridX": 4,
+            "GridY": 4,
+            "TypeName": "goldtile"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "FrozenPlantPlacement"
+      ],
+      "objclass": "InitialPlantProperties",
+      "objdata": {
+        "InitialPlantPlacements": [
+          {
+            "GridX": 4,
+            "GridY": 0,
+            "TypeName": "coldsnapdragon"
+          },
+          {
+            "GridX": 4,
+            "GridY": 2,
+            "TypeName": "coldsnapdragon"
+          },
+          {
+            "GridX": 4,
+            "GridY": 4,
+            "TypeName": "coldsnapdragon"
+          },
+          {
+            "GridX": 4,
+            "GridY": 1,
+            "TypeName": "primalwallnut"
+          },
+          {
+            "GridX": 4,
+            "GridY": 3,
+            "TypeName": "primalwallnut"
+          }
+        ]
+      }
+    }
+  ]
+}

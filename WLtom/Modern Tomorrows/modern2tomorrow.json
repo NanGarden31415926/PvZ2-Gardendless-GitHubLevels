@@ -1,0 +1,794 @@
+{
+  "#comment": "Modern 2T",
+  "version": 1,
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "LevelNumber": 2,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "FirstIntroNarrative": "EditorFirstIntroNarrative",
+        "NameMultiLanguage": {
+          "en": "Modern Day - Tomorrow 2",
+          "zh": "现代时光 - 第 2 明日"
+        },
+        "Description": "[PLAYERS_TRIP_TO_MODERN]",
+        "StageModule": "RTID(ModernStage@LevelModules)",
+        "Modules": [
+          "RTID(StandardIntro@LevelModules)",
+          "RTID(DefaultSunDropper@LevelModules)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(ModernMowers@LevelModules)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(FrozenPlantPlacement@CurrentLevel)",
+          "RTID(Rails3@CurrentLevel)",
+          "RTID(Rails2@CurrentLevel)",
+          "RTID(Rails4@CurrentLevel)"
+        ],
+        "WrittenBy": "失重汤姆"
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "CardDecks": {
+          "Recommended": [],
+          "Challenging": []
+        },
+        "SelectionMethod": "chooser",
+        "PresetPlantList": [
+          {
+            "PlantType": "moonflower",
+            "Level": -1
+          }
+        ],
+        "PlantExcludeList": [
+          "sunflower",
+          "twinsunflower",
+          "sunshroom",
+          "solartomato",
+          "sunbean",
+          "goldleaf",
+          "primalsunflower",
+          "moonbean",
+          "goldbloom",
+          "solarsage",
+          "shinevine",
+          "enlightenmint",
+          "plantern"
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {
+            "PointIncrementPerWave": -40,
+            "StartingPoints": -100,
+            "StartingWave": 3,
+            "ZombiePool": [
+              "RTID(tutorial@ZombieTypes)",
+              "RTID(tutorial_armor1@ZombieTypes)",
+              "RTID(tutorial_armor2@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": -25,
+            "StartingPoints": -100,
+            "StartingWave": 4,
+            "ZombiePool": [
+              "RTID(tutorial@ZombieTypes)",
+              "RTID(tutorial_armor1@ZombieTypes)",
+              "RTID(tutorial_armor2@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": -10,
+            "StartingPoints": -100,
+            "StartingWave": 5,
+            "ZombiePool": [
+              "RTID(tutorial@ZombieTypes)",
+              "RTID(tutorial_armor1@ZombieTypes)",
+              "RTID(tutorial_armor2@ZombieTypes)"
+            ]
+          },
+          {},
+          {
+            "PointIncrementPerWave": 20,
+            "StartingPoints": 100,
+            "StartingWave": 5,
+            "ZombiePool": [
+              "RTID(tutorial@ZombieTypes)",
+              "RTID(tutorial_armor1@ZombieTypes)",
+              "RTID(tutorial_armor2@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 40,
+            "StartingPoints": 200,
+            "StartingWave": 4,
+            "ZombiePool": [
+              "RTID(tutorial_armor1@ZombieTypes)",
+              "RTID(tutorial_armor2@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 60,
+            "StartingPoints": 400,
+            "StartingWave": 3,
+            "ZombiePool": [
+              "RTID(tutorial_armor2@ZombieTypes)"
+            ]
+          }
+        ],
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "MinNextWaveHealthPercentage": 0.5,
+        "MaxNextWaveHealthPercentage": 0.65,
+        "FlagWaveInterval": 5,
+        "WaveCount": 10,
+        "WaveSpendingPointIncrement": 150,
+        "WaveSpendingPoints": 100,
+        "Waves": [
+          [
+            "RTID(Wave1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)",
+            "RTID(Wave3PortalsEvent0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)",
+            "RTID(Wave5PortalsEvent0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)",
+            "RTID(Wave7PortalsEvent0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)",
+            "RTID(Wave9PortalsEvent0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)",
+            "RTID(Wave10PortalsEvent0@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(swashbuckler@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)",
+            "Row": "3"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(camel_onehump@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(swashbuckler@ZombieTypes)",
+            "Row": "2"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 1,
+        "Zombies": [
+          {
+            "Row": "3",
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(camel_twohump@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(cannon@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(tutorial_armor1@ZombieTypes)",
+            "Row": "2"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Row": "5",
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(explorer@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)",
+            "Row": "1"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Row": "1",
+            "Type": "RTID(tutorial_armor2@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(explorer@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(tutorial_armor2@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(explorer@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 1,
+        "Zombies": [
+          {
+            "Row": "5",
+            "Type": "RTID(camel_onehump@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(camel_onehump@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pirate_captain@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(pirate_captain@ZombieTypes)",
+            "Row": "4"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave7"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Row": "1",
+            "Type": "RTID(explorer@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(tutorial_armor2@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(explorer@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(cannon@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_armor2@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(tutorial_armor1@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave8"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Row": "2",
+            "Type": "RTID(tutorial_armor2@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(tutorial_armor2@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(camel_twohump@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(seagull@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(seagull@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(seagull@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_armor1@ZombieTypes)",
+            "Row": "3"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave9"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 1,
+        "Zombies": [
+          {
+            "Row": "5",
+            "Type": "RTID(tutorial_armor2@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(swashbuckler@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(swashbuckler@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(swashbuckler@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(cannon@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(cannon@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(tutorial_armor2@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)",
+            "Row": "5"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave10"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Row": "3",
+            "Type": "RTID(egypt_gargantuar@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(explorer@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(tutorial_armor2@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(explorer@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pirate_gargantuar@ZombieTypes)",
+            "Row": "4"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave3PortalsEvent0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 1,
+        "PortalType": "dark",
+        "SpawnEffectAnimID": "",
+        "SpawnSoundID": ""
+      }
+    },
+    {
+      "aliases": [
+        "Wave5PortalsEvent0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 5,
+        "PortalRow": 0,
+        "PortalType": "beach",
+        "SpawnEffectAnimID": "",
+        "SpawnSoundID": ""
+      }
+    },
+    {
+      "aliases": [
+        "Wave7PortalsEvent0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 4,
+        "PortalRow": 3,
+        "PortalType": "iceage",
+        "SpawnEffectAnimID": "",
+        "SpawnSoundID": ""
+      }
+    },
+    {
+      "aliases": [
+        "Wave9PortalsEvent0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 5,
+        "PortalRow": 2,
+        "PortalType": "lostcity",
+        "SpawnEffectAnimID": "",
+        "SpawnSoundID": ""
+      }
+    },
+    {
+      "aliases": [
+        "Wave10PortalsEvent0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 5,
+        "PortalRow": 4,
+        "PortalType": "beach",
+        "SpawnEffectAnimID": "",
+        "SpawnSoundID": ""
+      }
+    },
+    {
+      "aliases": [
+        "ChallengeModule"
+      ],
+      "objclass": "StarChallengeModuleProperties",
+      "objdata": {
+        "ChallengesAlwaysAvailable": true,
+        "Challenges": [
+          [
+            "RTID(SimultaneousPlants@CurrentLevel)",
+            "RTID(SunProduced@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "SimultaneousPlants"
+      ],
+      "objclass": "StarChallengeSimultaneousPlantsProps",
+      "objdata": {
+        "MaximumPlants": 14
+      }
+    },
+    {
+      "aliases": [
+        "SunProduced"
+      ],
+      "objclass": "StarChallengeSunProducedProps",
+      "objdata": {
+        "TargetSun": 4500
+      }
+    },
+    {
+      "aliases": [
+        "FrozenPlantPlacement"
+      ],
+      "objclass": "InitialPlantProperties",
+      "objdata": {
+        "InitialPlantPlacements": [
+          {
+            "GridX": 1,
+            "GridY": 2,
+            "TypeName": "moonflower"
+          },
+          {
+            "GridX": 3,
+            "GridY": 2,
+            "TypeName": "moonflower"
+          }
+        ]
+      }
+    },
+    {
+      "objclass": "NarrativeProperties",
+      "objdata": {
+        "Flow": [
+          {
+            "Character": "winnie",
+            "Action": "NPC_ENTER",
+            "Lines": {
+              "zh": ""
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "SAY",
+            "Lines": {
+              "zh": "我们已经知道了月光花身边有暗影植物时会提高阳光产量。",
+              "en": "We have already know that the shadow plants near moonflower will increase her sun production."
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "SAY",
+            "Lines": {
+              "zh": "当身边有三株时，产量会达到最高。",
+              "en": "When there has 3 plants nearby,the production will come to the max."
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "EXCITED",
+            "Lines": {
+              "zh": "试试让这些月光花贴在一起吧！",
+              "en": "Try to make these moonflowers stick together!"
+            }
+          }
+        ]
+      },
+      "aliases": [
+        "EditorFirstIntroNarrative"
+      ]
+    },
+    {
+      "aliases": [
+        "Rails3"
+      ],
+      "objclass": "RailcartProperties",
+      "objdata": {
+        "RailcartType": "railcart_egypt",
+        "Railcarts": [
+          {
+            "Column": 5,
+            "Row": 2
+          }
+        ],
+        "Rails": [
+          {
+            "Column": 5,
+            "RowStart": 0,
+            "RowEnd": 4
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Rails2"
+      ],
+      "objclass": "RailcartProperties",
+      "objdata": {
+        "RailcartType": "railcart_pirate",
+        "Railcarts": [
+          {
+            "Column": 3,
+            "Row": 2
+          }
+        ],
+        "Rails": [
+          {
+            "Column": 3,
+            "RowStart": 0,
+            "RowEnd": 4
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Rails4"
+      ],
+      "objclass": "RailcartProperties",
+      "objdata": {
+        "RailcartType": "railcart_cowboy",
+        "Railcarts": [
+          {
+            "Column": 1,
+            "Row": 2
+          }
+        ],
+        "Rails": [
+          {
+            "Column": 1,
+            "RowStart": 0,
+            "RowEnd": 4
+          }
+        ]
+      }
+    }
+  ]
+}
