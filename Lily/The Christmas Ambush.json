@@ -1,0 +1,1091 @@
+{
+  "#comment": "圣诞节的袭击",
+  "version": 1,
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "LevelNumber": 1,
+        "Loot": "RTID(NoLoot@LevelModules)",
+        "Name": "圣诞节的袭击",
+        "NameMultiLanguage": {
+          "en": "The Christmas Ambush",
+          "zh": "圣诞节的袭击"
+        },
+        "Description": "昼夜变化",
+        "DescriptionMultiLanguage": {
+          "en": "Day and night transition",
+          "zh": "昼夜变化"
+        },
+        "StartingSun": 50,
+        "MusicType": "MiniGame_A",
+        "StageModule": "RTID(FeastivusStage@LevelModules)",
+        "Modules": [
+          "RTID(StandardIntro@LevelModules)",
+          "RTID(DefaultSunDropperListenToLawn@CurrentLevel)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(IceageMowers@LevelModules)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(EditorPointWaveGenerator@CurrentLevel)",
+          "RTID(ChallengeModule@CurrentLevel)"
+        ],
+        "WrittenBy": "丽丽喵~"
+      }
+    },
+    {
+      "aliases": [
+        "ChallengeModule"
+      ],
+      "objclass": "StarChallengeModuleProperties",
+      "objdata": {
+        "ChallengesAlwaysAvailable": true,
+        "Challenges": [
+          [
+            "RTID(SimultaneousPlants@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "SimultaneousPlants"
+      ],
+      "objclass": "StarChallengeSimultaneousPlantsProps",
+      "objdata": {
+        "MaximumPlants": 13
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "PresetPlantList": [
+          {
+            "PlantType": "buduhboom",
+            "Level": -1
+          }
+        ],
+        "SelectionMethod": "chooser"
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "WaveLawnFeastivusNight"
+      ],
+      "objclass": "LawnRiftProps",
+      "objdata": {
+        "LifeSpan": 8,
+        "TargetStage": "RTID(FeastivusNightStage@LevelModules)",
+        "RemoveTide": false,
+        "ActivateTide": false
+      }
+    },
+    {
+      "aliases": [
+        "WaveLawnFeastivus"
+      ],
+      "objclass": "LawnRiftProps",
+      "objdata": {
+        "LifeSpan": 8,
+        "TargetStage": "RTID(FeastivusStage@LevelModules)",
+        "RemoveTide": false,
+        "ActivateTide": false
+      }
+    },
+    {
+      "objclass": "SunDropperProperties",
+      "aliases": [
+        "NoSunDropperListenToLawn"
+      ],
+      "objdata": {
+        "InitialSunDropDelay": 2,
+        "SunCountdownBase": 6,
+        "SunCountdownRange": 3,
+        "SunCountdownIncreasePerSun": 0.1,
+        "SunCountdownMax": 12,
+        "ListenToLawn": false
+      }
+    },
+    {
+      "objclass": "SunDropperProperties",
+      "aliases": [
+        "DefaultSunDropperListenToLawn"
+      ],
+      "objdata": {
+        "InitialSunDropDelay": 2,
+        "SunCountdownBase": 6,
+        "SunCountdownRange": 3,
+        "SunCountdownIncreasePerSun": 0.1,
+        "SunCountdownMax": 12,
+        "ListenToLawn": true
+      }
+    },
+    {
+      "aliases": [
+        "DayWarning"
+      ],
+      "objclass": "WaveWarningProps",
+      "objdata": {
+        "LabelR": 255,
+        "LabelG": 255,
+        "LabelB": 255,
+        "LabelAInit": 4,
+        "OutLineR": 0,
+        "OutLineG": 0,
+        "OutLineB": 0,
+        "String": "Day Rise!",
+        "StringMultiLanguage": {
+          "en": "Day Rise!",
+          "zh": "白昼升起!"
+        },
+        "Sound": "HugeWave",
+        "LabelTargetScale": 0.5,
+        "LabelInitScale": 4,
+        "Duration": 3,
+        "InitTime": 0.33
+      }
+    },
+    {
+      "aliases": [
+        "NightWarning"
+      ],
+      "objclass": "WaveWarningProps",
+      "objdata": {
+        "LabelR": 0,
+        "LabelG": 0,
+        "LabelB": 255,
+        "LabelAInit": 4,
+        "OutLineR": 0,
+        "OutLineG": 0,
+        "OutLineB": 0,
+        "String": "Night Fall!",
+        "StringMultiLanguage": {
+          "en": "Night Fall!",
+          "zh": "夜幕降临!"
+        },
+        "Sound": "HugeWave",
+        "LabelTargetScale": 0.5,
+        "LabelInitScale": 4,
+        "Duration": 3,
+        "InitTime": 0.33
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 4,
+        "WaveCount": 12,
+        "WaveSpendingPointIncrement": 10,
+        "WaveSpendingPoints": 100,
+        "Waves": [
+          [
+            "RTID(Wave1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)",
+            "RTID(NightWarning@CurrentLevel)",
+            "RTID(WaveLawnFeastivusNight@CurrentLevel)",
+            "RTID(NoSunDropperListenToLawn@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)",
+            "RTID(DayWarning@CurrentLevel)",
+            "RTID(WaveLawnFeastivus@CurrentLevel)",
+            "RTID(DefaultSunDropperListenToLawn@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)",
+            "RTID(NightWarning@CurrentLevel)",
+            "RTID(WaveLawnFeastivusNight@CurrentLevel)",
+            "RTID(NoSunDropperListenToLawn@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave11@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave12@CurrentLevel)",
+            "RTID(DayWarning@CurrentLevel)",
+            "RTID(WaveLawnFeastivus@CurrentLevel)",
+            "RTID(DefaultSunDropperListenToLawn@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(lawn@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lawn_armor1@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(feastivus_swashbuckler@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(feastivus_swashbuckler@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(feastivus_swashbuckler@ZombieTypes)",
+            "Row": "3"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(lawn_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lawn_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lawn_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lawn_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lawn_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lawn_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lawn@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lawn@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lawn@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lawn@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_camel_segment@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(feastivus_camel_segment@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(feastivus_camel_onehump@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(feastivus_camel_onehump@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(feastivus_camel_onehump@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(feastivus_piano@ZombieTypes)",
+            "Row": "5"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(lawn_gargantuar@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(lawn_gargantuar@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(feastivus_camel_onehump@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(feastivus_camel_onehump@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(feastivus_camel_onehump@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(feastivus_camel_onehump@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(feastivus_camel_onehump@ZombieTypes)",
+            "Row": "1"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(feastivus_piano@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(feastivus_piano@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(feastivus_piano@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(feastivus_piano@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(feastivus_piano@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(zomboni@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(zomboni@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(zomboni@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(zomboni@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(zomboni@ZombieTypes)",
+            "Row": "5"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(lawn@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lawn@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lawn@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lawn@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lawn@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lawn_gargantuar@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(lawn_gargantuar@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(lawn_gargantuar@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(feastivus_piano@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(feastivus_piano@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(feastivus_piano@ZombieTypes)",
+            "Row": "2"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave7"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(feastivus_piano@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(zomboni@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(zomboni@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(zomboni@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(zomboni@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(zomboni@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_swashbuckler@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_swashbuckler@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_swashbuckler@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_swashbuckler@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_swashbuckler@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_swashbuckler@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_swashbuckler@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_swashbuckler@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_swashbuckler@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_swashbuckler@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_swashbuckler@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_swashbuckler@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_swashbuckler@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_swashbuckler@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_swashbuckler@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave8"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(feastivus_camel_segment@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(feastivus_camel_segment@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(feastivus_camel_segment@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(feastivus_camel_segment@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(feastivus_camel_segment@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(feastivus_camel_onehump@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(feastivus_camel_onehump@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(feastivus_camel_onehump@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(feastivus_camel_onehump@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(feastivus_camel_onehump@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(lawn_gargantuar@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(lawn_gargantuar@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(lawn_gargantuar@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(lawn_gargantuar@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(lawn_gargantuar@ZombieTypes)",
+            "Row": "1"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave9"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(lawn_armor3@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(lawn_armor3@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(lawn_armor3@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(lawn_armor3@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(lawn_armor3@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(feastivus_camel_segment@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_camel_segment@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_camel_segment@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_camel_segment@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_camel_segment@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_camel_segment@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_camel_segment@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_camel_segment@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_camel_segment@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_camel_segment@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_camel_segment@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_camel_onehump@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_camel_onehump@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_camel_onehump@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_camel_onehump@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_camel_onehump@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_camel_onehump@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_camel_onehump@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_camel_onehump@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_camel_onehump@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_camel_onehump@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_camel_onehump@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave10"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(lawn_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lawn_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lawn_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lawn_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lawn_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lawn_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lawn_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lawn_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lawn_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lawn_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_piano@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_piano@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_piano@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_piano@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_piano@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_piano@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_piano@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_piano@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_piano@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_piano@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave11"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(zomboni@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(zomboni@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(zomboni@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(zomboni@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(zomboni@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_swashbuckler@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_swashbuckler@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_swashbuckler@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_swashbuckler@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_swashbuckler@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_swashbuckler@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_swashbuckler@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_swashbuckler@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_swashbuckler@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_swashbuckler@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave12"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(feastivus_camel_segment@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_camel_segment@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_camel_segment@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_camel_segment@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_camel_segment@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_camel_segment@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_camel_segment@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_camel_segment@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_camel_segment@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_camel_segment@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_camel_onehump@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_camel_onehump@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_camel_onehump@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_camel_onehump@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_camel_onehump@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_camel_onehump@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_camel_onehump@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_camel_onehump@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_camel_onehump@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_camel_onehump@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_swashbuckler@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_swashbuckler@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_swashbuckler@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_swashbuckler@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_swashbuckler@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_swashbuckler@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_swashbuckler@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_swashbuckler@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_swashbuckler@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_swashbuckler@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_piano@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_piano@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_piano@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_piano@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_piano@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_piano@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_piano@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_piano@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_piano@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_piano@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(zomboni@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(zomboni@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(zomboni@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(zomboni@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(zomboni@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(zomboni@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(zomboni@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(zomboni@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(zomboni@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(zomboni@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(zomboni@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(zomboni@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(zomboni@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(zomboni@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(zomboni@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(zomboni@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(zomboni@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(zomboni@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(zomboni@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(zomboni@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lawn_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lawn_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lawn_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lawn_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lawn_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lawn_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lawn_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lawn_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lawn_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lawn_gargantuar@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "EditorPointWaveGenerator"
+      ],
+      "objclass": "LevelOfTheDayModuleProperties",
+      "objdata": {
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)",
+        "PointIncrementPerWave": 300,
+        "WavesPerFlag": 4,
+        "ZombiePool": [
+          "RTID(lawn_armor2@ZombieTypes)",
+          "RTID(feastivus_camel_onehump@ZombieTypes)",
+          "RTID(feastivus_piano@ZombieTypes)",
+          "RTID(lawn_armor4@ZombieTypes)",
+          "RTID(lawn_armor3@ZombieTypes)"
+        ],
+        "StartingPoints": 200,
+        "PlantfoodToSpawnCount": 3
+      }
+    }
+  ]
+}

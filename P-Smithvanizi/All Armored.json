@@ -1,0 +1,1097 @@
+{
+    "#comment": "All Armored",
+    "objects": [
+        {
+            "objclass": "LevelDefinition",
+            "objdata": {
+                "Loot": "RTID(DefaultLoot@LevelModules)",
+                "Modules": [
+                    "RTID(StandardIntro@LevelModules)",
+                    "RTID(DefaultSunDropper@LevelModules)",
+                    "RTID(FrozenPlantPlacement@CurrentLevel)",
+                    "RTID(CowboyRails@CurrentLevel)",
+                    "RTID(ChallengeModule@CurrentLevel)",
+                    "RTID(KongfuMowers@LevelModules)",
+                    "RTID(NewWaves@CurrentLevel)",
+                    "RTID(SeedBank@CurrentLevel)",
+                    "RTID(DefaultZombieWinCondition@LevelModules)",
+                    "RTID(ZombiesDeadWinCon@LevelModules)"
+                ],
+                "Description": "[PLAYERS_TRIP_TO_KONGFU]",
+                "Name": "All Armored",
+                "NameMultiLanguage": {
+                    "en": "All Armored",
+                    "zh": "全副武装"
+                },
+                "WrittenBy": "P_smithvanizi",
+                "StageModule": "RTID(TheStage@CurrentLevel)"
+            }
+        },
+        {
+            "aliases": [
+                "TheStage"
+            ],
+            "objclass": "LawnType",
+            "objdata": {
+                "LawnBaseOn": "MonkStage",
+                "Properties": "RTID(TheStageProp@CurrentLevel)"
+            }
+        },
+        {
+            "aliases": [
+                "TheStageProp"
+            ],
+            "objclass": "LawnProperties",
+            "objdata": {
+                "Basic_Zombie": [
+                    "monk_armor3"
+                ],
+                "Flag_Zombie": [
+                    "monk_flag_armor3"
+                ],
+                "Rally_Zombie": [
+                    "monk_flag_armor3"
+                ],
+                "Armor1_Zombie": [
+                    "monk_armor3"
+                ],
+                "Armor2_Zombie": [
+                    "monk_armor3"
+                ],
+                "Armor3_Zombie": [
+                    "monk_armor3"
+                ],
+                "Armor4_Zombie": [
+                    "monk_armor4"
+                ],
+                "Imp_Zombie": [
+                    "monk_imp"
+                ],
+                "Gargantuar_Zombie": [
+                    "kongfu_bronze_strong_armor3"
+                ],
+                "Gravestone": [
+                ],
+                "RailCart": "railcart_kongfu",
+                "Music": "Kongfu",
+                "IsAtNight": false
+            }
+        },
+        {
+            "aliases": [
+                "FrozenPlantPlacement"
+            ],
+            "objclass": "InitialPlantProperties",
+            "objdata": {
+                "InitialPlantPlacements": [
+                    {
+                        "GridX": 0,
+                        "GridY": 1,
+                        "TypeName": "bloominghearts"
+                    },
+                    {
+                        "GridX": 0,
+                        "GridY": 3,
+                        "TypeName": "bloominghearts"
+                    },
+                    {
+                        "GridX": 1,
+                        "GridY": 1,
+                        "TypeName": "umbrellaleaf"
+                    },
+                    {
+                        "GridX": 1,
+                        "GridY": 3,
+                        "TypeName": "escaperoot"
+                    },
+                    {
+                        "GridX": 2,
+                        "GridY": 2,
+                        "TypeName": "applemortar"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "CowboyRails"
+            ],
+            "objclass": "RailcartProperties",
+            "objdata": {
+                "Railcarts": [
+                    {
+                        "Column": 0,
+                        "Row": "1"
+                    },
+                    {
+                        "Column": 0,
+                        "Row": "3"
+                    },
+                    {
+                        "Column": 2,
+                        "Row": "2"
+                    }
+                ],
+                "Rails": [
+                    {
+                        "Column": 0,
+                        "RowEnd": 4,
+                        "RowStart": 0
+                    },
+                    {
+                        "Column": 2,
+                        "RowEnd": 3,
+                        "RowStart": 1
+                    }
+                ]
+            }
+        },
+		{
+			"aliases": [
+				"monk_flag_armor3"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"Properties": "RTID(monk_flag_armor3_g@CurrentLevel)",
+				"ZombieBasedOn": "monk_flag"
+			}
+		},
+		{
+			"aliases": [
+				"monk_flag_armor3_g"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"ZombieSort": "Normal",
+				"WalkSPS": 0.26,
+				"EatDPS": 100,
+				"Toughness": 190,
+				"StartingArmors": [
+					"kongfu_armor3"
+				],
+				"WavePointCost": 550,
+				"Weight": 100,
+				"HitRect": "RTID(CommonHitRect@RectangleProps)",
+				"AttackRect": "RTID(CommonAttackRect@RectangleProps)"
+			}
+		},
+		{
+			"aliases": [
+				"monk_blade_armor3"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"Properties": "RTID(monk_blade_armor3_g@CurrentLevel)",
+				"ZombieBasedOn": "monk_blade"
+			}
+		},
+		{
+			"aliases": [
+				"monk_blade_armor3_g"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"BladeDamage": 250,
+				"WalkSPS": 0.24,
+				"EatDPS": 100,
+				"Toughness": 600,
+				"StartingArmors": [
+					"kongfu_armor3"
+				],
+				"WavePointCost": 800,
+				"Weight": 1500,
+				"HitRect": "RTID(CommonHitRect@RectangleProps)",
+				"AttackRect": "RTID(CommonAttackRect@RectangleProps)",
+				"AttackRectWithBlade": "RTID(BladeAttackRect@RectangleProps)"
+			}
+		},
+		{
+			"aliases": [
+				"monk_nunchaku_armor3"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"Properties": "RTID(monk_nunchaku_armor3_g@CurrentLevel)",
+				"ZombieBasedOn": "monk_nunchaku"
+			}
+		},
+		{
+			"aliases": [
+				"monk_nunchaku_armor3_g"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"HammerDuration": 4,
+				"RestDuration": 0.1,
+				"ProjectileDamageMult": 1,
+				"WalkSPS": 0.2,
+				"EatDPS": 100,
+				"Toughness": 600,
+				"StartingArmors": [
+					"kongfu_armor3"
+				],
+				"WavePointCost": 1000,
+				"Weight": 2000,
+				"HitRect": "RTID(CommonHitRect@RectangleProps)",
+				"AttackRect": "RTID(CommonAttackRect@RectangleProps)"
+			}
+		},
+		{
+			"aliases": [
+				"abbot_torch_armor3"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"Properties": "RTID(abbot_torch_armor3_g@CurrentLevel)",
+				"ZombieBasedOn": "abbot_torch"
+			}
+		},
+		{
+			"aliases": [
+				"abbot_torch_armor3_g"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"WalkSPS": 0.25,
+				"EatDPS": 100,
+				"FireDPS": 1000,
+				"Toughness": 500,
+				"StartingArmors": [
+					"kongfu_armor3"
+				],
+				"WavePointCost": 1100,
+				"Weight": 3000,
+				"HitRect": "RTID(CommonHitRect@RectangleProps)",
+				"AttackRect": "RTID(CommonAttackRect@RectangleProps)",
+				"HitRectWithFire": "RTID(ExplorerWithFireHitRect@RectangleProps)",
+				"AttackRectWithFire": "RTID(ExplorerWithFireAttackRect@RectangleProps)",
+				"FlameDetectDistance": 2.5,
+				"FlameAttackDistance": 3,
+				"FireDuration": 3
+			}
+		},
+		{
+			"aliases": [
+				"abbot_fan_armor3"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"Properties": "RTID(abbot_fan_armor3_g@CurrentLevel)",
+				"ZombieBasedOn": "abbot_fan"
+			}
+		},
+		{
+			"aliases": [
+				"abbot_fan_armor3_g"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"WalkSPS": 0.135,
+				"EatDPS": 100,
+				"Toughness": 550,
+				"StartingArmors": [
+					"kongfu_armor3"
+				],
+				"WavePointCost": 1300,
+				"Weight": 2000,
+				"HitRect": "RTID(CommonHitRect@RectangleProps)",
+				"AttackRect": "RTID(CommonAttackRect@RectangleProps)",
+				"TimeBeforeFirst": {
+					"Min": 3,
+					"Max": 4
+				},
+				"TimeBetween": {
+					"Min": 5,
+					"Max": 6
+				},
+				"StormType": "abbot_fan_storm",
+				"StormMaxDistance": 5,
+				"StormMinColumn": 2,
+				"StormMovingTime": 2
+			}
+		},
+		{
+			"aliases": [
+				"abbot_3section_staff_armor3"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"Properties": "RTID(abbot_3section_staff_armor3_g@CurrentLevel)",
+				"ZombieBasedOn": "abbot_3section_staff"
+			}
+		},
+		{
+			"aliases": [
+				"abbot_3section_staff_armor3_g"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"HammerDuration": 4,
+				"RestDuration": 0,
+				"ProjectileDamageMult": 1,
+				"WalkSPS": 0.22,
+				"EatDPS": 100,
+				"Toughness": 900,
+				"StartingArmors": [
+					"kongfu_armor3"
+				],
+				"WavePointCost": 1500,
+				"Weight": 2000,
+				"ProjectileDetectRadius": 160,
+				"Hit1Damage": 200,
+				"Hit2Damage": 400,
+				"LeapForwardDistance": 1.45,
+				"BlockBackwardDistance": 1,
+				"PlantBlockers": [
+					"tallnut"
+				],
+				"ZombieBlockers": [
+					"future_protector_shield",
+					"modern_moonflower_shield",
+					"future_infinut_shield"
+				],
+				"HitRect": "RTID(CommonHitRect@RectangleProps)",
+				"AttackRect": "RTID(Abbot3SectionStaffAttackRect@RectangleProps)"
+			}
+		},
+		{
+			"aliases": [
+				"kongfu_bronze_strong_armor3"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"Properties": "RTID(kongfu_bronze_strong_armor3_g@CurrentLevel)",
+				"ZombieBasedOn": "kongfu_bronze_strong"
+			}
+		},
+		{
+			"aliases": [
+				"kongfu_bronze_strong_armor3_g"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": {
+				"ZombieSort": "Gargantuar",
+				"CannotBeTransformedByWitchHazel": true,
+				"CannotBeEnlightenedBySolarSage": true,
+				"CannotBeGrabbedByPtero": true,
+				"CannotChangeLaneByPowerToss": true,
+				"CannotBeFlickedByPowerToss": true,
+				"CannotBeDraggedByTangleKelp": true,
+				"CannotBeTossedByCitron": true,
+				"CannotBeSwallowedByChomper": true,
+				"CannotCarryPlantfoodsInWaves": true,
+				"SmashDamage": 1500,
+				"LivesInDeepWater": true,
+				"WalkSPS": 0.16,
+				"EatDPS": 100,
+				"Toughness": 6000,
+				"StartingArmors": [
+					"kongfu_armor3"
+				],
+				"NormalDeathWhenMowed": true,
+				"WavePointCost": 2000,
+				"Weight": 3000,
+				"HitRect": "RTID(GargantuarHitRect@RectangleProps)",
+				"AttackRect": "RTID(GargantuarAttackRect@RectangleProps)",
+				"EnragedWalkingSpeedScale": 2.5,
+				"EnragedSmashingSpeedScale": 1.5,
+				"EnrageHealthPct": 0.3
+			}
+		},
+        {
+            "aliases": [
+                "SeedBank"
+            ],
+            "objclass": "SeedBankProperties",
+            "objdata": {
+                "PresetPlantList": [
+                    {
+                        "Level": -1,
+                        "PlantType": "goldleaf"
+                    },
+                    {
+                        "Level": -1,
+                        "PlantType": "peapod"
+                    },
+                    {
+                        "Level": -1,
+                        "PlantType": "loquat"
+                    },
+                    {
+                        "Level": -1,
+                        "PlantType": "grapeshot"
+                    },
+                    {
+                        "Level": -1,
+                        "PlantType": "tallnut"
+                    }
+                ],
+                "SelectionMethod": "preset"
+            }
+        },
+        {
+            "aliases": [
+                "NewWaves"
+            ],
+            "objclass": "WaveManagerModuleProperties",
+            "objdata": {
+                "DynamicZombies": [
+                    {},
+                    {},
+                    {},
+                    {
+                        "PointIncrementPerWave": 100,
+                        "StartingPoints": 600,
+                        "StartingWave": 5,
+                        "ZombiePool": [
+                            "RTID(monk_armor3@ZombieTypes)",
+                            "RTID(monk_blade_armor3@CurrentLevel)"
+                        ]
+                    },
+                    {
+                        "PointIncrementPerWave": 100,
+                        "StartingPoints": 600,
+                        "StartingWave": 4,
+                        "ZombiePool": [
+                            "RTID(monk_armor3@ZombieTypes)",
+                            "RTID(monk_blade_armor3@CurrentLevel)"
+                        ]
+                    },
+                    {
+                        "PointIncrementPerWave": 100,
+                        "StartingPoints": 600,
+                        "StartingWave": 4,
+                        "ZombiePool": [
+                            "RTID(monk_armor3@ZombieTypes)",
+                            "RTID(monk_blade_armor3@CurrentLevel)",
+                            "RTID(kongfu_bronze_strong_armor3@CurrentLevel)"
+                        ]
+                    },
+                    {
+                        "PointIncrementPerWave": 100,
+                        "StartingPoints": 600,
+                        "StartingWave": 3,
+                        "ZombiePool": [
+                            "RTID(monk_armor3@ZombieTypes)",
+                            "RTID(monk_blade_armor3@CurrentLevel)",
+                            "RTID(kongfu_bronze_strong_armor3@CurrentLevel)"
+                        ]
+                    }
+                ],
+                "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+            }
+        },
+        {
+            "aliases": [
+                "WaveManagerProps"
+            ],
+            "objclass": "WaveManagerProperties",
+            "objdata": {
+                "FlagWaveInterval": 6,
+                "MaxNextWaveHealthPercentage": 0.55,
+                "MinNextWaveHealthPercentage": 0.5,
+                "WaveCount": 18,
+                "WaveSpendingPointIncrement": 100,
+                "WaveSpendingPoints": 200,
+                "Waves": [
+                    [
+                        "RTID(Wave1@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave2@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave3@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave4@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave5@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave6@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave7@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave8@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave9@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave10@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave11@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave12@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave13@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave14@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave15@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave16@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave17@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave18@CurrentLevel)"
+                    ]
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave1"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(monk_armor3@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave2"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "2",
+                        "Type": "RTID(monk_armor3@ZombieTypes)"
+                    },
+                    {
+                        "Row": "3",
+                        "Type": "RTID(monk_armor3@ZombieTypes)"
+                    },
+                    {
+                        "Row": "4",
+                        "Type": "RTID(monk_armor3@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave3"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(monk_blade_armor3@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave4"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(monk_blade_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Type": "RTID(monk_armor3@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave5"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(monk_nunchaku_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Type": "RTID(monk_armor3@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave6"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "DynamicPlantfood": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1
+                ],
+                "Zombies": [
+                    {
+                        "Row": "2",
+                        "Type": "RTID(monk_nunchaku_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Row": "4",
+                        "Type": "RTID(monk_nunchaku_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Row": "1",
+                        "Type": "RTID(monk_armor3@ZombieTypes)"
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(monk_armor3@ZombieTypes)"
+                    },
+                    {
+                        "Row": "3",
+                        "Type": "RTID(monk_blade_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Row": "3",
+                        "Type": "RTID(abbot_fan_armor3@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave7"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(monk_armor3@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(monk_blade_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Type": "RTID(monk_blade_armor3@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave8"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "DynamicPlantfood": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "Zombies": [
+                    {
+                        "Type": "RTID(monk_armor3@ZombieTypes)"
+                    },
+                    {
+                        "Row": "3",
+                        "Type": "RTID(abbot_torch_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Row": "1",
+                        "Type": "RTID(monk_blade_armor3@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave9"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "2",
+                        "Type": "RTID(monk_nunchaku_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Row": "4",
+                        "Type": "RTID(monk_nunchaku_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Row": "3",
+                        "Type": "RTID(monk_armor3@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave10"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "DynamicPlantfood": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0
+                ],
+                "Zombies": [
+                    {
+                        "Row": "1",
+                        "Type": "RTID(monk_blade_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(monk_blade_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Row": "1",
+                        "Type": "RTID(abbot_fan_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(abbot_fan_armor3@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave11"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "1",
+                        "Type": "RTID(monk_blade_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Row": "3",
+                        "Type": "RTID(abbot_3section_staff_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(monk_blade_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Row": "2",
+                        "Type": "RTID(abbot_torch_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Row": "4",
+                        "Type": "RTID(abbot_torch_armor3@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave12"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "DynamicPlantfood": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1
+                ],
+                "Zombies": [
+                    {
+                        "Row": "2",
+                        "Type": "RTID(abbot_3section_staff_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Row": "4",
+                        "Type": "RTID(abbot_3section_staff_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Row": "1",
+                        "Type": "RTID(monk_armor3@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(monk_armor3@ZombieTypes)"
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(monk_blade_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Type": "RTID(monk_blade_armor3@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave13"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(monk_armor3@ZombieTypes)"
+                    },
+                    {
+                        "Row": "1",
+                        "Type": "RTID(monk_nunchaku_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(monk_nunchaku_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Row": "2",
+                        "Type": "RTID(monk_blade_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Row": "4",
+                        "Type": "RTID(monk_blade_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Row": "2",
+                        "Type": "RTID(abbot_fan_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Row": "4",
+                        "Type": "RTID(abbot_fan_armor3@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave14"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "DynamicPlantfood": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    0,
+                    0,
+                    0
+                ],
+                "Zombies": [
+                    {
+                        "Type": "RTID(kongfu_bronze_strong_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Row": "1",
+                        "Type": "RTID(monk_blade_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Row": "3",
+                        "Type": "RTID(monk_blade_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(monk_blade_armor3@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave15"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "1",
+                        "Type": "RTID(abbot_torch_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Row": "2",
+                        "Type": "RTID(abbot_torch_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Row": "3",
+                        "Type": "RTID(abbot_torch_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Row": "4",
+                        "Type": "RTID(abbot_torch_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(abbot_torch_armor3@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave16"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "DynamicPlantfood": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0
+                ],
+                "Zombies": [
+                    {
+                        "Type": "RTID(kongfu_bronze_strong_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Row": "2",
+                        "Type": "RTID(monk_nunchaku_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Row": "4",
+                        "Type": "RTID(monk_nunchaku_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Row": "1",
+                        "Type": "RTID(abbot_3section_staff_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(abbot_3section_staff_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Type": "RTID(monk_armor3@ZombieTypes)"
+                    },
+                    {
+                        "Type": "RTID(monk_armor3@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave17"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "1",
+                        "Type": "RTID(monk_nunchaku_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Row": "2",
+                        "Type": "RTID(monk_nunchaku_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Row": "3",
+                        "Type": "RTID(monk_nunchaku_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Row": "4",
+                        "Type": "RTID(monk_nunchaku_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(monk_nunchaku_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Row": "2",
+                        "Type": "RTID(abbot_fan_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Row": "4",
+                        "Type": "RTID(abbot_fan_armor3@CurrentLevel)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave18"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "DynamicPlantfood": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1
+                ],
+                "Zombies": [
+                    {
+                        "Type": "RTID(kongfu_bronze_strong_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Row": "2",
+                        "Type": "RTID(abbot_torch_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Row": "4",
+                        "Type": "RTID(abbot_torch_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Row": "1",
+                        "Type": "RTID(monk_blade_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Row": "3",
+                        "Type": "RTID(monk_blade_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(monk_blade_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Row": "3",
+                        "Type": "RTID(abbot_3section_staff_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Row": "1",
+                        "Type": "RTID(abbot_fan_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Row": "3",
+                        "Type": "RTID(abbot_fan_armor3@CurrentLevel)"
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(abbot_fan_armor3@CurrentLevel)"
+                    }
+                ]
+            }
+        }
+    ],
+    "version": 1
+}

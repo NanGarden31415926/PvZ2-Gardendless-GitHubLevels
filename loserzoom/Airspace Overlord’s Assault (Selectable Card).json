@@ -1,0 +1,785 @@
+{
+  "#comment": "Sky City Hard Zomboss",
+  "version": 1,
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "LevelNumber": 40,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "NameMultiLanguage": {
+          "en": "Airspace Overlord’s Assault(Selectable Card)",
+          "zh": "领空霸主的审判（自选卡）"
+        },
+        "NormalPresentTable": "future_normal_01",
+        "ShinyPresentTable": "future_shiny_01",
+        "FirstIntroNarrative": "SKY_HARD_INTRO",
+        "FirstOutroNarrative": "SKY_HARD_OUTRO",
+        "Name": "Sky City Hard Zomboss",
+        "Description": "[PLAYERS_TRIP_TO_SKYCITY]",
+        "StartingSun": 50,
+        "StageModule": "RTID(SkyStage@LevelModules)",
+        "Modules": [
+          "RTID(ZombossIntro@LevelModules)",
+          "RTID(ZombossBattle@CurrentLevel)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(SeedBank@CurrentLevel)"
+        ],
+        "WrittenBy": "loserzoom"
+      }
+    },
+    {
+      "objclass": "ProjectileProperties",
+      "aliases": [
+        "airraid_1_arbiter"
+      ],
+      "objdata": {
+        "Damage": 60,
+        "DamageToShip": 60,
+        "Size": {
+          "w": 6,
+          "h": 6
+        }
+      }
+    },
+    {
+      "objclass": "ProjectileType",
+      "aliases": [
+        "airraid_1_arbiter"
+      ],
+      "objdata": {
+        "ProjectileBasedOn": "airraid_1",
+        "Props": "RTID(airraid_1_arbiter@ProjectileProps)"
+      }
+    },
+    {
+      "aliases": [
+        "sky_airraid_arbiterx_shooter"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(sky_airraid_arbiterx_shooter@CurrentLevel)",
+        "ZombieBasedOn": "sky_airraid_arbiterx"
+      }
+    },
+    {
+      "aliases": [
+        "sky_airraid_arbiterx_shooter"
+      ],
+      "objclass": "ZombieProperties",
+      "objdata": {
+        "CannotBeTransformedByWitchHazel": true,
+        "CannotBeTossedByCitron": true,
+        "CannotBeEnlightenedBySolarSage": true,
+        "ChooseToSpawnOnDeepWaterRows": true,
+        "ImmuneToSweetPotato": true,
+        "CannotBeSwallowedByChomper": true,
+        "CannotBeDraggedByTangleKelp": true,
+        "ChooseToSpawnOnNonDeckRows": true,
+        "WalkSPS": 0.4,
+        "KnockBackDistanceScale": 0.1,
+        "WalkSPSParalyzed": 0.67,
+        "EatDPS": 100,
+        "Toughness": 8000,
+        "CrashDamageToShip": 2000,
+        "CrashDamage": 2000,
+        "WavePointCost": 2400,
+        "Weight": 3000,
+        "CrashBackwardTime": 0.4,
+        "CrashForwardTime": 0.2,
+        "SkyCityShipDetectXOffset": -120,
+        "SkyCityShipDetectXOffsetFiring": -120,
+        "ShipDPS": 100,
+        "FogLifeSpanMiddle": 11,
+        "FogLifeSpanSide1": 8,
+        "FogLifeSpanSide2": 5,
+        "HitRect": "RTID(SkyArbiterXHitRect@RectangleProps)",
+        "AttackRect": "RTID(SkyArbiterXAttackRect@RectangleProps)",
+        "BulletType": "airraid_1_arbiter",
+        "BulletSpeed": 13,
+        "TimeBeforeFirst": {
+          "Min": 1,
+          "Max": 2
+        },
+        "TimeBetween": {
+          "Min": 1,
+          "Max": 2
+        },
+        "ProjectileCountPerShot": 1,
+        "ProjectileAngle": 0,
+        "ShootsTowardsAirAidPlant": false
+      }
+    },
+    {
+      "aliases": [
+        "sky_airraid_arbiterx_shooter"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(sky_airraid_arbiterx_shooter@CurrentLevel)",
+        "ZombieBasedOn": "sky_airraid_arbiterx"
+      }
+    },
+    {
+      "aliases": [
+        "sky_armor1_shooter"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(sky_armor1_shooter@CurrentLevel)",
+        "ZombieBasedOn": "sky_armor1"
+      }
+    },
+    {
+      "aliases": [
+        "sky_armor1_shooter"
+      ],
+      "objclass": "ZombieProperties",
+      "objdata": {
+        "ZombieSort": "Normal",
+        "ChooseToSpawnOnNonDeckRows": true,
+        "WalkSPS": 0.27,
+        "EatDPS": 100,
+        "Toughness": 190,
+        "WavePointCost": 200,
+        "Weight": 3000,
+        "SkyCityShipDetectXOffsetFiring": -60,
+        "SkyCityShipDetectXOffset": -40,
+        "ShipDPS": 100,
+        "HitRect": "RTID(CommonHitRect@RectangleProps)",
+        "AttackRect": "RTID(CommonAttackRect@RectangleProps)",
+        "StartingArmors": [
+          "sky_armor1"
+        ],
+        "ProjectileType": "airraid_1_arbiter",
+        "BulletSpeed": 13,
+        "TimeBeforeFirst": {
+          "Min": 1,
+          "Max": 2
+        },
+        "TimeBetween": {
+          "Min": 1,
+          "Max": 2
+        },
+        "ProjectileCountPerShot": 5,
+        "ProjectileAngle": 0,
+        "ShootsTowardsAirAidPlant": false
+      }
+    },
+    {
+      "aliases": [
+        "sky_armor1_shooter"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(sky_armor1_shooter@CurrentLevel)",
+        "ZombieBasedOn": "sky_armor1"
+      }
+    },
+    {
+      "aliases": [
+        "sky_armor2_shooter"
+      ],
+      "objclass": "ZombieProperties",
+      "objdata": {
+        "ZombieSort": "Normal",
+        "ChooseToSpawnOnNonDeckRows": true,
+        "WalkSPS": 0.27,
+        "EatDPS": 100,
+        "Toughness": 190,
+        "WavePointCost": 200,
+        "Weight": 3000,
+        "SkyCityShipDetectXOffsetFiring": -60,
+        "SkyCityShipDetectXOffset": -40,
+        "ShipDPS": 100,
+        "HitRect": "RTID(CommonHitRect@RectangleProps)",
+        "AttackRect": "RTID(CommonAttackRect@RectangleProps)",
+        "StartingArmors": [
+          "sky_armor2"
+        ],
+        "ProjectileType": "airraid_1_arbiter",
+        "BulletSpeed": 13,
+        "TimeBeforeFirst": {
+          "Min": 1,
+          "Max": 2
+        },
+        "TimeBetween": {
+          "Min": 4,
+          "Max": 5
+        },
+        "ProjectileCountPerShot": 5,
+        "ProjectileAngle": 0,
+        "ShootsTowardsAirAidPlant": false
+      }
+    },
+    {
+      "aliases": [
+        "sky_armor2_shooter"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(sky_armor2_shooter@CurrentLevel)",
+        "ZombieBasedOn": "sky_armor2"
+      }
+    },
+    {
+      "aliases": [
+        "zombossmech_sky_hard"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(zombossmech_sky_hard@CurrentLevel)",
+        "ZombieBasedOn": "zombossmech_sky"
+      }
+    },
+    {
+      "aliases": [
+        "zombossmech_sky_hard"
+      ],
+      "objclass": "ZombieProperties",
+      "objdata": {
+        "BatteryType": "sky_battery",
+        "BatteryLowerType": "sky_battery_lower",
+        "ThunderStormType": "sky_zomboss_storm",
+        "BulletType": "airraid_1_arbiter",
+        "StompDamageToZombies": 1500,
+        "SmashDistance": 1,
+        "CannotBeEnlightenedBySolarSage": true,
+        "ImmuneToSweetPotato": true,
+        "ImmuneToShrinkingViolet": true,
+        "IgnoredBySnapPea": true,
+        "ZombieSort": "Zomboss",
+        "CannotBeGrabbedByPtero": true,
+        "CannotBeDetectedByPowerToss": true,
+        "CannotBeDraggedByTangleKelp": true,
+        "CannotBeTossedByCitron": true,
+        "CannotBeDetectedBySapfling": true,
+        "CannotBeSwallowedByChomper": true,
+        "ChiliStunDurationMult": 0,
+        "CannotCarryPlantfoodsInWaves": true,
+        "FoeEatDamageReflectPct": 0.5,
+        "LivesInDeepWater": true,
+        "WalkSPS": 0.185,
+        "EatDPS": 100,
+        "Toughness": 190,
+        "ImmuneToGarlic": true,
+        "WavePointCost": 100,
+        "Weight": 0,
+        "IdleColumn": 6,
+        "HitRect": "RTID(ZombossMechHitRect@RectangleProps)",
+        "AttackRect": "RTID(ZombossMechAttackRect@RectangleProps)",
+        "ZombossMechLevel": 1,
+        "ZombossStages": [
+          {
+            "AnimRateModifier": 1,
+            "ChilledDurationFromFrozen": 10,
+            "DamageIndexFull": 0,
+            "DamageIndexHalf": 0,
+            "HitPoints": 48600,
+            "MaxIdleTime": 2.5,
+            "MinIdleTime": 1.5,
+            "StunDamageScale": 1.25,
+            "StunStaggerBackMovement": 1,
+            "StunStaggerBackTime": 0.4,
+            "StunTime": 3,
+            "Actions": [
+              {
+                "actionName": "walk",
+                "weight": 5,
+                "repeatMax": 1,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              },
+              {
+                "actionName": "summon",
+                "weight": 30,
+                "repeatMax": 2,
+                "repeatMin": 2,
+                "summonProps": {
+                  "pointMin": 3000,
+                  "pointMax": 5500,
+                  "plantfoodchance": 0.1,
+                  "zombieList": [
+                    "sky_twin_upper",
+                    "sky_armor1_shooter",
+                    "sky_armor2_shooter",
+                    "sky_electric",
+                    "sky_dronemaker_alt"
+                  ]
+                }
+              },
+              {
+                "actionName": "shoot",
+                "weight": 14,
+                "repeatMax": 2,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              },
+              {
+                "actionName": "rush",
+                "weight": 3,
+                "repeatMax": 1,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              },
+              {
+                "actionName": "rush2",
+                "weight": 2,
+                "repeatMax": 1,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              }
+            ],
+            "ThunderCount": {
+              "Min": 3,
+              "Max": 5
+            },
+            "ThunderLinkedPlantCount": {
+              "Min": 2,
+              "Max": 3
+            }
+          },
+          {
+            "AnimRateModifier": 1.1,
+            "ChilledDurationFromFrozen": 10,
+            "DamageIndexFull": 3,
+            "DamageIndexHalf": 3,
+            "HitPoints": 95400,
+            "MaxIdleTime": 2,
+            "MinIdleTime": 1,
+            "StunDamageScale": 1.25,
+            "StunStaggerBackMovement": 1,
+            "StunStaggerBackTime": 0.4,
+            "StunTime": 2.5,
+            "Actions": [
+              {
+                "actionName": "walk",
+                "weight": 5,
+                "repeatMax": 1,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              },
+              {
+                "actionName": "summon",
+                "weight": 30,
+                "repeatMax": 2,
+                "repeatMin": 2,
+                "summonProps": {
+                  "pointMin": 4500,
+                  "pointMax": 7000,
+                  "plantfoodchance": 0.2,
+                  "zombieList": [
+                    "sky_gargantuar",
+                    "sky_armor1_shooter",
+                    "sky_armor2_shooter",
+                    "sky_battleplane",
+                    "sky_twin",
+                    "sky_electric",
+                    "sky_dronemaker_alt"
+                  ]
+                }
+              },
+              {
+                "actionName": "shoot",
+                "weight": 12,
+                "repeatMax": 2,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              },
+              {
+                "actionName": "rush",
+                "weight": 3,
+                "repeatMax": 1,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              },
+              {
+                "actionName": "rush2",
+                "weight": 2,
+                "repeatMax": 1,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              }
+            ],
+            "ThunderCount": {
+              "Min": 5,
+              "Max": 7
+            },
+            "ThunderLinkedPlantCount": {
+              "Min": 2,
+              "Max": 4
+            }
+          },
+          {
+            "TurnsIntoShipInThisStage": true,
+            "AnimRateModifier": 1.25,
+            "ChilledDurationFromFrozen": 10,
+            "DamageIndexFull": 6,
+            "DamageIndexHalf": 6,
+            "HitPoints": 126000,
+            "MaxIdleTime": 1.5,
+            "MinIdleTime": 0.75,
+            "StunDamageScale": 1.25,
+            "StunStaggerBackMovement": 0,
+            "StunStaggerBackTime": 0,
+            "StunTime": 0,
+            "ShipRushProjectileCount": 600,
+            "Actions": [
+              {
+                "actionName": "walk",
+                "weight": 5,
+                "repeatMax": 1,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              },
+              {
+                "actionName": "summon",
+                "weight": 40,
+                "repeatMax": 3,
+                "repeatMin": 2,
+                "summonProps": {
+                  "pointMin": 6000,
+                  "pointMax": 8600,
+                  "plantfoodchance": 0.3,
+                  "zombieList": [
+                    "sky_gargantuar_armor2_thrower",
+                    "sky_battleplane",
+                    "sky_airraid_arbiterx",
+                    "sky_armor2_shooter",
+                    "sky_gargantuar",
+                    "sky_arbiterx",
+                    "sky_dronemaker_alt"
+                  ]
+                }
+              },
+              {
+                "actionName": "summon",
+                "weight": 5,
+                "repeatMax": 1,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 100,
+                  "pointMax": 100,
+                  "columnOffset": -2,
+                  "plantfoodchance": 0,
+                  "zombieList": [
+                    "sky_dropship"
+                  ]
+                }
+              },
+              {
+                "actionName": "shoot",
+                "weight": 30,
+                "repeatMax": 2,
+                "repeatMin": 2,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              },
+              {
+                "actionName": "rush",
+                "weight": 15,
+                "repeatMax": 1,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              },
+              {
+                "actionName": "rush2",
+                "weight": 10,
+                "repeatMax": 1,
+                "repeatMin": 1,
+                "summonProps": {
+                  "pointMin": 1000,
+                  "pointMax": 2000,
+                  "zombieList": []
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "ZombossBattle"
+      ],
+      "objclass": "ZombossBattleModuleProperties",
+      "objdata": {
+        "ReservedColumnCount": 2,
+        "ZombossMechType": "zombossmech_sky_hard",
+        "ZombossDeathRow": 3,
+        "ZombossDeathColumn": 5,
+        "ZombossSpawnGridPosition": {
+          "mX": 6,
+          "mY": 3
+        }
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "SelectionMethod": "chooser",
+        "UnlockAll": true,
+        "OverrideSeedSlotsCount": 8,
+        "PlantExcludeList": [
+          "blover",
+          "hurrikale"
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "SKY_HARD_INTRO"
+      ],
+      "objclass": "NarrativeProperties",
+      "objdata": {
+        "Flow": [
+          {
+            "Character": "zombossicon",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "zombossicon",
+            "Action": "SAY",
+            "Lines": {
+              "en": "Haha, respected fools, I noticed your airship has changed.",
+              "zh": "哈哈，尊敬的蠢货们，我注意到你们的飞船有了变化"
+            }
+          },
+          {
+            "Character": "zombossicon",
+            "Action": "SAY",
+            "Lines": {
+              "en": "My new great fighter planes will take advantage of this opportunity.",
+              "zh": "我的新的伟大的战机会利用好这机会的"
+            }
+          },
+          {
+            "Character": "zombossicon",
+            "Action": "SAY",
+            "Lines": {
+              "en": "It took me three whole days. Enjoy it!",
+              "zh": "这可花了我整整3天时间，尽情享受吧"
+            }
+          },
+          {
+            "Character": "zombossicon",
+            "Action": "NPC_EXIT"
+          },
+          {
+            "Character": "winnie",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "crazydave",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "winnie",
+            "Action": "TIRED",
+            "Lines": {
+              "en": "Dave, what did you just do?",
+              "zh": "戴夫，你刚刚干了什么？"
+            }
+          },
+          {
+            "Character": "crazydave",
+            "Action": "PLAYFUL",
+            "Lines": {
+              "en": "I reinforced our airship! It will never crash again!!!",
+              "zh": "我加固了我们的飞船，它再也不会坠落了！！！"
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "SAY"
+          },
+          {
+            "Character": "winnie",
+            "Action": "TIRED",
+            "Lines": {
+              "en": "I think that means Edgar's fighter planes will fly straight into our ship.",
+              "zh": "我想这样的话，埃德加的那些战机就会直接进入飞船了"
+            }
+          },
+          {
+            "Character": "crazydave",
+            "Action": "SHOUT",
+            "Lines": {
+              "en": "NO!!!!! I wanted to sleep a little longer!",
+              "zh": "不！！！！！我还想再多睡会呢！"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "objclass": "NarrativeProperties",
+      "aliases": [
+        "SKY_HARD_OUTRO"
+      ],
+      "objdata": {
+        "Flow": [
+          {
+            "Character": "crazydave",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "winnie",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "crazydave",
+            "Action": "TIRED",
+            "Lines": {
+              "en": "Did you see those huge things that flew onto our airship? Terrifying!",
+              "zh": "你看到那些飞到飞船上的大家伙了吗？太恐怖了"
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "SAY",
+            "Lines": {
+              "en": "The gold-card plants grown in the Zen Garden were a huge help.",
+              "zh": "花园中种出的金卡植物帮了大忙"
+            }
+          },
+          {
+            "Character": "crazydave",
+            "Action": "EXCITED",
+            "Lines": {
+              "en": "What?! Tacos??? Where?!",
+              "zh": "什么？！玉米卷？？？哪里有"
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "TIRED",
+            "Lines": {
+              "en": "...",
+              "zh": "…………"
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "SAY",
+            "Lines": {
+              "en": "There's no need to stay here any longer. We must leave immediately.",
+              "zh": "已经没有在这儿的必要了，必须马上离开"
+            }
+          },
+          {
+            "Character": "crazydave",
+            "Action": "PLAYFUL",
+            "Lines": {
+              "en": "After all, high altitude and tacos just don't mix.",
+              "zh": "毕竟高空和玉米卷不搭"
+            }
+          },
+          {
+            "Character": "crazydave",
+            "Action": "NPC_EXIT"
+          },
+          {
+            "Character": "winnie",
+            "Action": "NPC_EXIT"
+          },
+          {
+            "Character": "zombossicon",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "zombossicon",
+            "Action": "TIRED",
+            "Lines": {
+              "en": "The fighter planes... actually... failed.",
+              "zh": "战机……竟然……失败了"
+            }
+          },
+          {
+            "Character": "zombossicon",
+            "Action": "SAY",
+            "Lines": {
+              "en": "It seems I need to initiate a new plan.",
+              "zh": "看来要启动新的计划了"
+            }
+          },
+          {
+            "Character": "zombossicon",
+            "Action": "SAY",
+            "Lines": {
+              "en": "I'll let you experience just how formidable my company's employees are.",
+              "zh": "我会让你们体会到我的公司职员的厉害的"
+            }
+          },
+          {
+            "Character": "zombossicon",
+            "Action": "SAY",
+            "Lines": {
+              "en": "If they can build this fighter plane, they can definitely eat your brains!",
+              "zh": "他们可以造出这个战机，就一定可以吃到你们的脑子！"
+            }
+          },
+          {
+            "Character": "zombossicon",
+            "Action": "SHOUT",
+            "Lines": {
+              "en": "See you at Z Corp, fools!",
+              "zh": "Z公司见，蠢货们"
+            }
+          },
+          {
+            "Character": "zombossicon",
+            "Action": "NPC_EXIT"
+          }
+        ]
+      }
+    }
+  ]
+}
