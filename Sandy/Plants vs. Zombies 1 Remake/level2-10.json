@@ -1,0 +1,624 @@
+{
+  "Information": {
+    "Author": "Sandy",
+    "Introduction": "",
+    "Version": "1.0",
+    "CreatedAt": "2026-1-21",
+    "UpdatedAt": "2025-1-21",
+    "Difficulty": "Easy",
+    "Category": "Adventure"
+  },
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "<PLAYERNAME>'s House",
+        "LevelNumber": 20,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(StandardIntro@LevelModules)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(ModernMowers@LevelModules)",
+          "RTID(WaveManagerModule@CurrentLevel)",
+          "RTID(PlantMods@CurrentLevel)",
+          "RTID(Gravestones@CurrentLevel)",
+          "RTID(Conveyor@CurrentLevel)"
+        ],
+        "Name": "Level 2-10",
+        "WritenBy": "Sandy",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "MusicType": "MiniGame_A",
+        "FirstRewardParam": "lilypad",
+        "FirstRewardType": "unlock_plant",
+        "StageModule": "RTID(ModernNightStage@LevelModules)",
+        "StartingSun": 50
+      }
+    },
+    {
+      "aliases": [
+          "Conveyor"
+      ],
+      "objclass": "ConveyorSeedBankProperties",
+      "objdata": {
+          "DropDelayConditions": [
+              {
+                  "Delay": 4,
+                  "MaxPackets": 4
+              },
+              {
+                  "Delay": 4.25,
+                  "MaxPackets": 6
+              },
+              {
+                  "Delay": 5,
+                  "MaxPackets": 8
+              }
+          ],
+          "InitialPlantList": [
+              {
+                  "MaxWeightFactor": 0,
+                  "MaxCount": 1,
+                  "PlantType": "gravebuster",
+                  "Weight": 20
+              },
+              {
+                  "MaxWeightFactor": 0,
+                  "MaxCount": 1,
+                  "PlantType": "glaciershroom",
+                  "Weight": 15
+              },
+              {
+                  "MaxWeightFactor": 0,
+                  "MaxCount": 1,
+                  "PlantType": "doomshroom",
+                  "Weight": 15
+              },
+              {
+                  "MaxWeightFactor": 0,
+                  "MaxCount": 2,
+                  "PlantType": "hypnoshroom",
+                  "Weight": 10
+              },
+              {
+                  "MaxWeightFactor": 0,
+                  "MaxCount": 10,
+                  "PlantType": "scaredyshroom",
+                  "Weight": 15
+              },
+              {
+                  "MaxWeightFactor": 0,
+                  "MaxCount": 10,
+                  "PlantType": "fumeshroom",
+                  "Weight": 15
+              },
+              {
+                  "MaxWeightFactor": 0,
+                  "MaxCount": 5,
+                  "PlantType": "puffshroom",
+                  "Weight": 10
+              }
+          ],
+          "SpeedConditions": [
+              {
+                  "MaxPackets": 0,
+                  "Speed": 120
+              }
+          ]
+        }
+    },
+    {
+        "aliases": [
+            "Gravestones"
+        ],
+        "objclass": "GravestoneProperties",
+        "objdata": {
+            "GravestoneCount": 13,
+            "SpawnColumnEnd": 9,
+            "SpawnColumnStart": 4,
+            "TypeName": "gravestone_tutorial"
+        }
+    },
+    {
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {
+            "PointIncrementPerWave": 0,
+            "StartingPoints": 0,
+            "StartingWave": 0,
+            "ZombiePool": []
+          },
+          {
+            "PointIncrementPerWave": 0,
+            "StartingPoints": 0,
+            "StartingWave": 0,
+            "ZombiePool": []
+          },
+          {
+            "PointIncrementPerWave": 0,
+            "StartingPoints": 0,
+            "StartingWave": 0,
+            "ZombiePool": []
+          },
+          {
+            "PointIncrementPerWave": 75,
+            "StartingPoints": 300,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(tutorial@ZombieTypes)",
+              "RTID(Screendoor@CurrentLevel)",
+              "RTID(Dancer@CurrentLevel)",
+              "RTID(Football@CurrentLevel)",
+              "RTID(tutorial_armor1@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 100,
+            "StartingPoints": 300,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(tutorial@ZombieTypes)",
+              "RTID(Dancer@CurrentLevel)",
+              "RTID(Screendoor@CurrentLevel)",
+              "RTID(Football@CurrentLevel)",
+              "RTID(tutorial_armor1@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 150,
+            "StartingPoints": 300,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(tutorial@ZombieTypes)",
+              "RTID(Dancer@CurrentLevel)",
+              "RTID(Screendoor@CurrentLevel)",
+              "RTID(Football@CurrentLevel)",
+              "RTID(tutorial_armor1@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 175,
+            "StartingPoints": 360,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(tutorial@ZombieTypes)",
+              "RTID(Dancer@CurrentLevel)",
+              "RTID(Screendoor@CurrentLevel)",
+              "RTID(Football@CurrentLevel)",
+              "RTID(tutorial_armor1@ZombieTypes)"
+            ]
+          }
+        ],
+        "WaveManagerProps": "RTID(WaveManager@CurrentLevel)"
+      },
+      "aliases": [
+        "WaveManagerModule"
+      ]
+    },
+    {
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 10,
+        "WaveCount": 20,
+        "ZombieCountdownFirstWaveSecs": 18,
+        "Waves": [
+          ["RTID(Wave1@CurrentLevel)"],
+          ["RTID(Wave2@CurrentLevel)"],
+          ["RTID(Wave3@CurrentLevel)"],
+          ["RTID(Wave4@CurrentLevel)"],
+          ["RTID(Wave5@CurrentLevel)"],
+          ["RTID(Wave6@CurrentLevel)"],
+          ["RTID(Wave7@CurrentLevel)"],
+          ["RTID(Wave8@CurrentLevel)"],
+          ["RTID(Wave9@CurrentLevel)"],
+          ["RTID(Wave10@CurrentLevel)"],
+          ["RTID(Wave11@CurrentLevel)"],
+          ["RTID(Wave12@CurrentLevel)"],
+          ["RTID(Wave13@CurrentLevel)"],
+          ["RTID(Wave14@CurrentLevel)"],
+          ["RTID(Wave15@CurrentLevel)"],
+          ["RTID(Wave16@CurrentLevel)"],
+          ["RTID(Wave17@CurrentLevel)"],
+          ["RTID(Wave18@CurrentLevel)"],
+          ["RTID(Wave19@CurrentLevel)"],
+          ["RTID(Wave20@CurrentLevel)"]
+        ]
+      },
+      "aliases": [
+        "WaveManager"
+      ]
+    },
+    {
+      "aliases": [
+          "Wave20"
+      ],
+      "objclass": "SpawnZombiesFromGridItemSpawnerProps",
+      "objdata": {
+          "GridTypes": [
+              "RTID(gravestone_tutorial@GridItemTypes)"
+          ],
+          "ZombieSpawnWaitTime": 1,
+          "Zombies": [
+              {"Type": "RTID(tutorial_armor1@ZombieTypes)"},
+              {"Type": "RTID(tutorial_armor1@ZombieTypes)"},
+              {"Type": "RTID(tutorial_armor1@ZombieTypes)"},
+              {"Type": "RTID(tutorial_armor1@ZombieTypes)"},
+              {"Type": "RTID(tutorial@ZombieTypes)"},
+              {"Type": "RTID(tutorial@ZombieTypes)"}
+          ]
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "Dancer"
+      ],
+      "objdata": {
+        "Properties": "RTID(DancerProperties@CurrentLevel)",
+        "ZombieBasedOn": "disco_mech"
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "DancerProperties"
+      ],
+      "objdata": {
+        "CannotBeGrabbedByPtero": true,
+        "CannotBeEnlightenedBySolarSage": true,
+        "CannotBeDraggedByTangleKelp": true,
+        "CannotBeTossedByCitron": true,
+        "CannotBeSwallowedByChomper": true,
+        "ChiliStunDurationMult": 0,
+        "EMPStunTimeScale": 0,
+        "SummonDuration": 2,
+        "DanceCountdown": 5,
+        "DanceDuration": 10,
+        "WalkSPS": 0.37,
+        "EatDPS": 100,
+        "Toughness": 500,
+        "LivesInDeepWater": true,
+        "NormalDeathWhenMowed": true,
+        "ImmuneToGarlic": true,
+        "WavePointCost": 500,
+        "Weight": 3000,
+        "HitRect": "RTID(FutureDiscoMechHitRect@RectangleProps)",
+        "AttackRect": "RTID(FutureDiscoMechAttackRect@RectangleProps)"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "Football"
+      ],
+      "objdata": {
+        "Properties": "RTID(FootballProperties@CurrentLevel)",
+        "ZombieBasedOn": "modern_allstar"
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "FootballProperties"
+      ],
+      "objdata": {
+        "SmashDamage": 1500,
+        "WalkSPS": 0.64,
+        "EatDPS": 100,
+        "Toughness": 1590,
+        "RunningSpeedScale": 0.8,
+        "WavePointCost": 700,
+        "Weight": 3500,
+        "HitRect": "RTID(BullyHitRect@RectangleProps)",
+        "AttackRect": "RTID(BullyAttackRect@RectangleProps)"
+      }
+    },
+    {
+    "aliases": [
+            "PoleVaulter"
+        ],
+        "objclass": "ZombieType",
+        "objdata": {
+            "Properties": "RTID(PoleVaulterProperties@CurrentLevel)",
+            "ZombieBasedOn": "abbot_3section_staff"
+        }
+    },
+    {
+        "aliases": [
+            "PoleVaulterProperties"
+        ],
+        "objclass": "ZombieProperties",
+        "objdata": { 
+        "HammerDuration": 0.01,
+        "RestDuration": 0,
+        "ProjectileDamageMult": 1,
+        "WalkSPS": 0.64,
+        "EatDPS": 100,
+        "Toughness": 450,
+        "WavePointCost": 200,
+        "Weight": 2000,
+        "ProjectileDetectRadius": -3,
+        "Hit1Damage": 50,
+        "Hit2Damage": 50,
+        "LeapForwardDistance": 1.45,
+        "BlockBackwardDistance": 1,
+        "HitRect": "RTID(CommonHitRect@RectangleProps)", 
+        "AttackRect": "RTID(CommonAttackRect@RectangleProps)" }
+    },
+    {
+      "aliases": [
+              "Newerpaper"
+          ],
+      "objclass": "ZombieType",
+      "objdata": {
+          "Properties": "RTID(NewerpaperProperties@CurrentLevel)",
+          "ZombieBasedOn": "modern_newspaper"
+      }
+    },
+    {
+      "aliases": [
+          "NewerpaperProperties"
+      ],
+      "objclass": "ZombieProperties",
+      "objdata": { 
+      "WalkSPS": 0.185, 
+      "EatDPS": 100, 
+      "Toughness": 190,
+      "EnragedDamageScale": 1,
+      "EnragedSpeedScale": 3,
+      "NewspaperHealth": 150, 
+      "WavePointCost": 200, 
+      "NewspaperBowlingLevel": 1, 
+      "Weight": 4000,
+      "HitRect": "RTID(CommonHitRect@RectangleProps)", 
+      "AttackRect": "RTID(CommonAttackRect@RectangleProps)" }
+    },
+    {
+      "aliases": [
+          "Screendoor"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+          "Properties": "RTID(ScreendoorProperties@CurrentLevel)",
+          "ZombieBasedOn": "newspaper_veteran"
+      }
+    },
+    {
+      "aliases": [
+          "ScreendoorProperties"
+      ],
+      "objclass": "ZombieProperties",
+      "objdata": { 
+      "WalkSPS": 0.185, 
+      "EatDPS": 100, 
+      "Toughness": 190,
+      "EnragedDamageScale": 1,
+      "EnragedSpeedScale": 1,
+      "NewspaperHealth": 1100, 
+      "WavePointCost": 400, 
+      "NewspaperBowlingLevel": 3, 
+      "Weight": 1250,
+      "HitRect": "RTID(CommonHitRect@RectangleProps)", 
+      "AttackRect": "RTID(CommonAttackRect@RectangleProps)" }
+    },
+    {
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "SelectionMethod": "chooser",
+        "UnlockAll": true,
+        "SuppressObjectiveTip": true,
+        "OverrideSeedSlotsCount": 7,
+        "PlantIncludeList": [
+            "peashooter",
+            "sunflower",
+            "cherry_bomb",
+            "wallnut",
+            "potatomine",
+            "snowpea",
+            "chomper",
+            "repeater",
+            "puffshroom",
+            "sunshroom",
+            "fumeshroom",
+            "gravebuster",
+            "hypnoshroom",
+            "scaredyshroom",
+            "glaciershroom",
+            "doomshroom"
+        ]
+      },
+      "aliases": [
+        "SeedBank"
+      ]
+    },
+    {
+      "aliases": [
+        "SunDropper"
+      ],
+      "objclass": "SunDropperProperties",
+      "objdata": {
+        "InitialSunDropDelay": 5,
+        "SunCountdownBase": 10,
+        "SunCountdownIncreasePerSun": 0,
+        "SunCountdownMax": 10.5,
+        "SunCountdownRange": 0.5,
+        "Value": 25
+      }
+    },
+    {
+      "aliases": [
+        "PlantMods"
+      ],
+      "objclass": "PlantModifierProperties",
+      "objdata": {
+        "SuppressParticle": true,
+        "List": [
+          {
+            "Type": "sunflower",
+            "NewObjdata": {
+              "SunValue": 25,
+              "Cooldown": 7.5
+            }
+          },
+          {
+            "Type": "peashooter",
+            "NewObjdata": {
+              "Cooldown": 7.5,
+              "CooldownFrom": 0
+            }
+          },
+          {
+            "Type": "cherry_bomb",
+            "NewObjdata": {
+              "Cooldown": 50,
+              "CooldownFrom": 0.7
+            }
+          },
+          {
+            "Type": "wallnut",
+            "NewObjdata": {
+              "Cooldown": 30,
+              "CooldownFrom": 0.65
+            }
+          },
+          {
+            "Type": "potatomine",
+            "NewObjdata": {
+              "Cooldown": 30,
+              "ChargeTime": 15,
+              "CooldownFrom": 0.65
+            }
+          },
+          {
+            "Type": "snowpea",
+            "NewObjdata": {
+              "Cooldown": 7.5,
+              "CooldownFrom": 0,
+              "SunCost": 175,
+              "Family": ""
+            }
+          },
+          {
+            "Type": "chomper",
+            "NewObjdata": {
+              "MaxContainZombieCount": 1,
+              "ChewTimePerZombie": 40,
+              "ChompFailDamage": 40,
+              "Cooldown": 7.5,
+              "CooldownFrom": 0,
+              "SunCost": 150
+            }
+          },
+          {
+            "Type": "repeater",
+            "NewObjdata": {
+              "Cooldown": 7.5,
+              "CooldownFrom": 0
+            }
+          },
+          {
+            "Type": "puffshroom",
+            "NewObjdata": {
+              "Cooldown": 7.5,
+              "CooldownFrom": 0,
+              "LifeSpan": 9999,
+              "Toughness": 300
+            }
+          },
+          {
+            "Type": "sunshroom",
+            "NewObjdata": {
+              "Cooldown": 7.5,
+              "CooldownFrom": 0,
+              "SunValue": 15,
+              "PlantfoodTime": 3,
+              "ProduceInterval": 23.5,
+              "ProduceIntervalAdditional": 1.5,
+              "ProduceCountdownStart": 10,
+              "ProduceCountdownStartAdditional": 2,
+              "ProduceInterval_AtNight": 23.5,
+              "ProduceIntervalAdditional_AtNight": 1.5,
+              "ProduceCountdownStart_AtNight": 5,
+              "ProduceCountdownStartAdditional_AtNight": 5,
+              "GrowTime0_1": 120,
+              "GrowTime1_2": 99999,
+              "SunValueList": [
+                15,
+                25,
+                75
+              ]
+            }
+          },
+          {
+            "Type": "fumeshroom",
+            "NewObjdata": {
+              "Cooldown": 7.5,
+              "CooldownFrom": 0,
+              "ShootDistance": 4.5,
+              "ShootInterval": 1.35,
+              "ShootIntervalAdditional": 0.15,
+              "Damage": 20,
+              "SunCost": 75
+            }
+          },
+          {
+            "Type": "gravebuster",
+            "NewObjdata": {
+              "Cooldown": 7.5,
+              "CooldownFrom": 0,
+              "SunCost": 75
+            }
+          },
+          {
+            "Type": "hypnoshroom",
+            "NewObjdata": {
+              "Cooldown": 30,
+              "CooldownFrom": 0.65,
+              "SunCost": 75,
+              "Toughness": 50,
+              "HypnoedZombieDamageScale": 1
+            }
+          },
+          {
+            "Type": "scaredyshroom",
+            "NewObjdata": {
+              "KnockbackChance": 0.0,
+              "KnockbackDistance": 0.0,
+              "Cooldown": 7.5,
+              "CooldownFrom": 0
+            }
+          },
+          {
+            "Type": "glaciershroom",
+            "NewObjdata": {
+              "FreezeDuration": 5,
+              "ChillDuration": 20,
+              "ChillDurationAmbience": 0,
+              "EatFreezeDuration": 0,
+              "EatChillDuration": 0,
+              "EatFreezeInterval": 0,
+              "WakeTime": 999999,
+              "Cooldown": 50,
+              "CooldownFrom": 0.7,
+              "SunCost": 75,
+              "Toughness": 300
+            }
+          },
+          {
+            "Type": "doomshroom",
+            "NewObjdata": {
+              "Damage": 1800,
+              "TileCrackleDuration": 180,
+              "Cooldown": 50,
+              "CooldownFrom": 0.7,
+              "SunCost": 125
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "version": 1
+}

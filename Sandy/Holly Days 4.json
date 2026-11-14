@@ -1,0 +1,613 @@
+{
+	"Information": {
+		"Author": "Sandy",
+		"Introduction": "",
+		"Version": "1.0"
+  	},
+	"#comment": "Level Of The Day Test 1",
+	"objects": [
+		{
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "<PLAYERNAME>'s Holiday Vacation",
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"DraperPromo": "primalpeashooter",
+				"Modules": [
+					"RTID(StandardIntro@LevelModules)",
+					"RTID(LevelOfTheDayModule@CurrentLevel)",
+					"RTID(NewWaves@CurrentLevel)",
+					"RTID(DefaultZombieWinCondition@LevelModules)",
+					"RTID(ChallengeModule@CurrentLevel)",
+					"RTID(ZombiesDeadWinCon@LevelModules)",
+					"RTID(ZombieDistance@CurrentLevel)",
+					"RTID(PlantMods@CurrentLevel)",
+					"RTID(LevelSchedueler@CurrentLevel)",
+					"RTID(LevelDeadLine@CurrentLevel)",
+					"RTID(ShovelBlock@CurrentLevel)",
+					"RTID(Rails@CurrentLevel)",
+					"RTID(InitialPlant@CurrentLevel)",
+					"RTID(InitialZombie@CurrentLevel)"
+				],
+				"Name": "Holly Days - Day 4\nBeginner's Luck",
+				"MusicType": "MiniGame_B",
+				"NormalPresentTable": "egypt_normal_01",
+				"WrittenBy": "Sandy",
+				"#Comment": "Stage",
+				"ShinyPresentTable": "egypt_shiny_01",
+				"StageModule": "RTID(PaddysStage@LevelModules)"
+			}
+		},
+		{
+            "aliases": [
+                "ShovelBlock"
+            ],
+            "objclass": "BowlingMinigameProperties",
+            "objdata": {
+                "BowlingFoulLine": 20,
+                "SuppressObjectiveTip": true
+            }
+        },
+		{
+        "aliases": [
+                "LevelSchedueler"
+            ],
+            "objclass": "LevelSchedulerProps",
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Max": 0.1,
+                    "Min": 0.1
+                },
+                "TimeBetween": {
+                    "Max": 0,
+                    "Min": 0
+                },
+                "Repeat": {
+                    "Max": 1,
+                    "Min": 1
+                },
+                "RewardWhenEnded": false,
+                "SuppressRewardState": false,
+                "Events": ["RTID(iceburgspawn@CurrentLevel)"]
+            }
+        },
+		{
+		"objclass": "LevelDeadLineProps",
+		"aliases": [
+			"LevelDeadLine"
+		],
+		"objdata": {
+			"SuppressObjectiveTip": false,
+			"Countdown": 60,
+			"Events": [
+			"RTID(Deadline@CurrentLevel)",
+			"RTID(enforce@CurrentLevel)"
+			]
+		}
+		},
+		{
+            "aliases": [
+                "Deadline"
+            ],
+            "objclass": "MissileLocateWaveActionProps",
+            "objdata": {
+                "MissileCount": 0,
+                "MissileFallCountdown": 0,
+                "WaveStartMessage": "Game's Over!",
+                "ProjectileType": "zomboss_missile_dark",
+                "Locations": [
+                    {
+                        "mX": 6,
+                        "mY": 2
+                    },
+                    {
+                        "mX": 6,
+                        "mY": 3
+                    },
+                    {
+                        "mX": 6,
+                        "mY": 1
+                    },
+                    {
+                        "mX": 6,
+                        "mY": 0
+                    },
+                    {
+                        "mX": 6,
+                        "mY": 4
+                    }
+                ]
+            }
+        },
+		{
+			"aliases": [
+				"iceburgspawn"
+			],
+			"objclass": "SpawnPlantsWaveActionProps",
+			"objdata": {
+				"Plants": [
+					{
+						"TypeName": "tool_projectile_bowlingbulb_iceburg",
+						"SpawnAnim": "grow",
+						"AllowSpawnOnOtherPlants": false,
+						"GridX": 0,
+						"GridY": 2
+					}
+				]
+			}
+		},
+		{
+			"aliases": [
+				"enforce"
+			],
+			"objclass": "SpawnPlantsWaveActionProps",
+			"objdata": {
+				"Plants": [
+					{
+						"TypeName": "shrinkingviolet",
+						"SpawnAnim": "grow",
+						"AllowSpawnOnOtherPlants": false,
+						"GridX": 5,
+						"GridY": 2
+					},
+					{
+						"TypeName": "shrinkingviolet",
+						"SpawnAnim": "grow",
+						"AllowSpawnOnOtherPlants": false,
+						"GridX": 5,
+						"GridY": 3
+					},
+					{
+						"TypeName": "shrinkingviolet",
+						"SpawnAnim": "grow",
+						"AllowSpawnOnOtherPlants": false,
+						"GridX": 5,
+						"GridY": 4
+					},
+					{
+						"TypeName": "shrinkingviolet",
+						"SpawnAnim": "grow",
+						"AllowSpawnOnOtherPlants": false,
+						"GridX": 5,
+						"GridY": 0
+					},
+					{
+						"TypeName": "shrinkingviolet",
+						"SpawnAnim": "grow",
+						"AllowSpawnOnOtherPlants": false,
+						"GridX": 5,
+						"GridY": 1
+					}
+				]
+			}
+		},
+		{
+			"aliases": [
+				"InitialZombie"
+			],
+			"objclass": "InitialZombieProperties",
+			"objdata": {
+				"InitialZombiePlacements": [
+					{
+						"GridX": 6,
+						"GridY": 2,
+						"TypeName": "abbot_new"
+					}
+				]
+			}
+		},
+		{ 
+			"objclass": "InitialPlantProperties",
+			"objdata": {
+				"InitialPlantPlacements": [
+				{"TypeName": "RTID(sweetpotato@PlantTypes)","GridX": 6,"GridY": 2}
+				]
+			},
+			"aliases": [
+				"InitialPlant"
+			]
+    	},
+		{
+			"aliases": [
+				"Rails"
+			],
+			"objclass": "RailcartProperties",
+			"objdata": {
+				"RailcartType": "railcart_future",
+				"Rails": [
+					{
+						"Column": 6,
+						"RowStart": 0,
+						"RowEnd": 4
+					}
+				],
+				"Railcarts": [
+					{
+						"Column": 6,
+						"Row": 2
+					}
+				]
+			}
+		},
+		{
+		"objclass": "LevelIntroProperties",
+		"aliases": [
+			"Intro"
+		],
+		"objdata": {
+			"PanStartOffset": 0,
+			"PanStreetOffset": 0,
+			"PanEndOffset": 0,
+			"PanRightDuration": 0.1,
+			"PanLeftDuration": 0.1,
+			"PanMoveRightTime": 0.1,
+			"PanMoveLeftTime": 0.1,
+			"AdditionalStartingSun": 0,
+			"ZombiePreviewOff": false
+		}
+		},
+		{
+		"objclass": "ZombieType",
+		"aliases": [
+			"abbot_new"
+		],
+		"objdata": {
+			"Properties": "RTID(zombieprop@CurrentLevel)",
+			"ZombieBasedOn": "abbot_imp"
+		}
+		},
+		{
+		"objclass": "ZombieProperties",
+		"aliases": [
+			"zombieprop"
+		],
+		"objdata": {
+			"KilledByShrinkingViolet": true,
+			"CannotBeGrabbedByPtero": true,
+			"WalkSPS": 0.22,
+			"EatDPS": 100,
+			"Toughness": 1000,
+			"WavePointCost": 400,
+			"Weight": 500,
+			"HitRect": "RTID(ImpHitRect@RectangleProps)",
+			"AttackRect": "RTID(ImpAttackRect@RectangleProps)",
+			"ShieldingDamageScale": 1,
+			"ProjectileAbsorbingFactor": -50,
+			"IntroSpeedScale": 4,
+			"ShieldColumn": {
+			"Min": 8,
+			"Max": 8
+			},
+			"ShieldDuration": {
+			"Min": 1000002,
+			"Max": 1000000
+			}
+		}
+		},
+		{
+		"objclass": "ZombieType",
+		"aliases": [
+			"backwards_imp"
+		],
+		"objdata": {
+			"Properties": "RTID(zombieprop2@CurrentLevel)",
+			"ZombieBasedOn": "stpatrick_imp"
+		}
+		},
+		{
+		"objclass": "ZombieProperties",
+		"aliases": [
+			"zombieprop2"
+		],
+		"objdata": {
+			"KilledByShrinkingViolet": true,
+			"CannotBeGrabbedByPtero": true,
+			"ZombieSort": "Normal",
+			"IgnoredInWaves": true,
+			"WalkSPS": 0.22,
+			"ChanceToReverse": 1,
+			"EatDPS": 100,
+			"Toughness": 190,
+			"WavePointCost": 100,
+			"Weight": 1000,
+			"HitRect": "RTID(ImpHitRect@RectangleProps)",
+			"AttackRect": "RTID(ImpAttackRect@RectangleProps)"
+		}
+		},
+		{
+		"objclass": "ZombieType",
+		"aliases": [
+			"backwards_imp2"
+		],
+		"objdata": {
+			"Properties": "RTID(zombieprop3@CurrentLevel)",
+			"ZombieBasedOn": "stpatrick_imp"
+		}
+		},
+		{
+		"objclass": "ZombieProperties",
+		"aliases": [
+			"zombieprop3"
+		],
+		"objdata": {
+			"KilledByShrinkingViolet": true,
+			"CannotBeGrabbedByPtero": true,
+			"ZombieSort": "Normal",
+			"IgnoredInWaves": true,
+			"WalkSPS": 0.22,
+			"ChanceToReverse": 1,
+			"EatDPS": 100,
+			"Toughness": 190,
+			"WavePointCost": 100,
+			"Weight": 1000,
+			"HitRect": "RTID(ImpHitRect@RectangleProps)",
+			"AttackRect": "RTID(ImpAttackRect@RectangleProps)",
+			"StartingArmors": [
+			"stpatrick_armor1"
+			]
+		}
+		},
+		{
+			"aliases": [
+				"ChallengeModule"
+			],
+			"objclass": "StarChallengeModuleProperties",
+			"objdata": {
+				"Challenges": [
+					[
+						"RTID(Challenge1@CurrentLevel)"
+					]
+				],
+				"ChallengesAlwaysAvailable": true
+			}
+		},
+		{
+			"aliases": [
+				"Challenge1"
+			],
+			"objclass": "StarChallengeBeatTheLevelProps",
+			"objdata": {
+				"Descriptions": [
+					"Use the Iceberg Lettuce to defeat all the imps!"
+				],
+				"DescriptionsMultiLanguage": []
+			}
+		},
+		{
+			"aliases": [
+				"WaveManagerProps"
+			],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"SuppressFlagZombie": true,
+				"ZombieCountdownFirstWaveSecs": 3,
+				"Waves": [ 
+					["RTID(Wave1@CurrentLevel)"],
+					["RTID(Wave2@CurrentLevel)"],
+					["RTID(Wave3@CurrentLevel)"],
+					["RTID(Wave4@CurrentLevel)"],
+					["RTID(Wave5@CurrentLevel)"],
+					["RTID(Wave6@CurrentLevel)"],
+					["RTID(Wave7@CurrentLevel)"],
+					["RTID(Wave8@CurrentLevel)"]
+				]
+			}
+		}, 
+		{
+			"aliases": [
+				"Wave1"
+			],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [
+				{"Type": "RTID(backwards_imp@CurrentLevel)", "Row": 2, "Column": 2},
+				{"Type": "RTID(backwards_imp@CurrentLevel)", "Row": 4, "Column": 2}
+			]
+		}
+		},
+		{
+			"aliases": [
+				"Wave2"
+			],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [
+				{"Type": "RTID(backwards_imp@CurrentLevel)", "Row": 1, "Column": 2},
+				{"Type": "RTID(backwards_imp@CurrentLevel)", "Row": 3, "Column": 2},
+				{"Type": "RTID(backwards_imp@CurrentLevel)", "Row": 5, "Column": 2}
+			]
+		}
+		},
+		{
+			"aliases": [
+				"Wave3"
+			],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [
+				{"Type": "RTID(backwards_imp@CurrentLevel)", "Row": 1, "Column": 1},
+				{"Type": "RTID(backwards_imp@CurrentLevel)", "Row": 2, "Column": 3},
+				{"Type": "RTID(backwards_imp@CurrentLevel)", "Row": 4, "Column": 3},
+				{"Type": "RTID(backwards_imp@CurrentLevel)", "Row": 5, "Column": 1}
+			]
+		}
+		},
+		{
+			"aliases": [
+				"Wave4"
+			],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [
+				{"Type": "RTID(backwards_imp2@CurrentLevel)", "Row": 1, "Column": 0},
+				{"Type": "RTID(backwards_imp@CurrentLevel)", "Row": 2, "Column": 2},
+				{"Type": "RTID(backwards_imp@CurrentLevel)", "Row": 3, "Column": 3},
+				{"Type": "RTID(backwards_imp@CurrentLevel)", "Row": 4, "Column": 2},
+				{"Type": "RTID(backwards_imp2@CurrentLevel)", "Row": 5, "Column": 0}
+			]
+		}
+		},
+		{
+			"aliases": [
+				"Wave5"
+			],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [
+				{"Type": "RTID(backwards_imp@CurrentLevel)", "Row": 1, "Column": 0},
+				{"Type": "RTID(backwards_imp2@CurrentLevel)", "Row": 2, "Column": 0},
+				{"Type": "RTID(backwards_imp@CurrentLevel)", "Row": 3, "Column": 0},
+				{"Type": "RTID(backwards_imp2@CurrentLevel)", "Row": 4, "Column": 0},
+				{"Type": "RTID(backwards_imp@CurrentLevel)", "Row": 5, "Column": 0},
+				{"Type": "RTID(backwards_imp@CurrentLevel)", "Row": 2, "Column": 1},
+				{"Type": "RTID(backwards_imp@CurrentLevel)", "Row": 4, "Column": 1}
+			]
+		}
+		},
+		{
+			"aliases": [
+				"Wave6"
+			],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [
+				{"Type": "RTID(backwards_imp@CurrentLevel)", "Row": 1, "Column": 0},
+				{"Type": "RTID(backwards_imp2@CurrentLevel)", "Row": 2, "Column": 0},
+				{"Type": "RTID(backwards_imp@CurrentLevel)", "Row": 3, "Column": 0},
+				{"Type": "RTID(backwards_imp2@CurrentLevel)", "Row": 4, "Column": 0},
+				{"Type": "RTID(backwards_imp@CurrentLevel)", "Row": 5, "Column": 0},
+				{"Type": "RTID(backwards_imp@CurrentLevel)", "Row": 2, "Column": 1},
+				{"Type": "RTID(backwards_imp@CurrentLevel)", "Row": 4, "Column": 1}
+			]
+		}
+		},
+		{
+			"aliases": [
+				"Wave7"
+			],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [
+				{"Type": "RTID(backwards_imp@CurrentLevel)", "Row": 1, "Column": 2},
+				{"Type": "RTID(backwards_imp@CurrentLevel)", "Row": 2, "Column": 3},
+				{"Type": "RTID(backwards_imp@CurrentLevel)", "Row": 3, "Column": 2},
+				{"Type": "RTID(backwards_imp@CurrentLevel)", "Row": 4, "Column": 3},
+				{"Type": "RTID(backwards_imp@CurrentLevel)", "Row": 5, "Column": 2}
+			]
+		}
+		},
+		{
+			"aliases": [
+				"Wave8"
+			],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [
+				{"Type": "RTID(backwards_imp@CurrentLevel)", "Row": 1, "Column": 1},
+				{"Type": "RTID(backwards_imp2@CurrentLevel)", "Row": 2, "Column": 1},
+				{"Type": "RTID(backwards_imp@CurrentLevel)", "Row": 3, "Column": 2},
+				{"Type": "RTID(backwards_imp2@CurrentLevel)", "Row": 4, "Column": 1},
+				{"Type": "RTID(backwards_imp@CurrentLevel)", "Row": 5, "Column": 1}
+			]
+		}
+		},
+		{
+			"aliases": [
+				"LevelOfTheDayModule"
+			],
+			"objclass": "LevelOfTheDayModuleProperties",
+			"objdata": {
+				"FlagCount": 2,
+				"PlantfoodToSpawnCount": 0,
+				"PointIncrementPerWave": 140,
+				"StartingPoints": 100,
+				"WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)",
+				"WavesPerFlag": 4,
+				"ZombiePool": [
+					
+				]
+			}
+		},
+		{
+			"aliases": [
+				"ZombieDistance"
+			],
+			"objclass": "StarChallengeZombieDistanceProps",
+			"objdata": {
+				"TargetDistance": 4.5,
+				"SuppressObjectiveTip": true
+			}
+		},
+		{
+			"aliases": [
+				"NewWaves"
+			],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {}
+		},
+		{
+			"aliases": [
+				"PlantMods"
+			],
+			"objclass": "PlantModifierProperties",
+			"objdata": {
+				"SuppressParticle": true,
+				"List": [
+					{
+						"Type": "sweetpotato",
+						"NewObjdata": {
+							"SpawnedScale": 0.0000000001,
+							"Toughness": 40000000,
+							"NormalAttractWidth": 2,
+							"LaneChangeTime": 0,
+							"TimeBetweenLaneChanges": 0,
+							"AttractsEveryFrame": true
+						}
+					},
+					{
+						"Type": "tool_projectile_bowlingbulb_iceburg",
+						"NewObjdata": {
+							"ProjectileType": "RTID(newbowling@CurrentLevel)"
+						}
+					}
+				]
+			}
+	},
+	{
+      "objclass": "ProjectileType",
+      "aliases": [
+        "newbowling"
+      ],
+      "objdata": {
+        "ProjectileBasedOn": "bowling_iceberg",
+        "Props": "RTID(bowlprops@CurrentLevel)"
+      }
+	},
+	{
+      "objclass": "ProjectileProperties",
+      "aliases": [
+        "bowlprops"
+      ],
+      "objdata": {
+        "ChillDuration": 3,
+        "FreezeDuration": 7.5,
+		"Damage": 200,
+        "IceBlockLevel": 1,
+        "SplashDamage": [
+          {
+            "ChillDuration": 3,
+            "FreezeDuration": 0.75,
+            "Range": {
+              "w": 3,
+              "h": 3
+            }
+          }
+        ],
+        "Size": {
+          "w": 30,
+          "h": 30
+        }
+      }
+    }
+	],
+	"version": 1
+}
