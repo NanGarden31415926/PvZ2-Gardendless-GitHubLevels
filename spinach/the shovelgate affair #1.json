@@ -1,0 +1,581 @@
+{
+  "#comment": "the shovelgate affair",
+  "version": 1,
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "LevelNumber": 1,
+        "Loot": "RTID(NoLoot@LevelModules)",
+        "Name": "the shovelgate affair",
+        "Description": "in a rush",
+        "StartingSun": 100,
+        "StageModule": "RTID(KongfuVeteranStage@LevelModules)",
+        "Modules": [
+          "RTID(StandardIntro@LevelModules)",
+          "RTID(FastSunDropper@LevelModules)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(KongfuMowers@LevelModules)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(ProtectThePlant@CurrentLevel)",
+          "RTID(InitialGridItems@CurrentLevel)",
+          "RTID(Gravestones@CurrentLevel)"
+        ],
+        "WrittenBy": "sp"
+      }
+    },
+    {
+      "aliases": [
+        "ProtectThePlant"
+      ],
+      "objclass": "ProtectThePlantChallengeProperties",
+      "objdata": {
+        "MustProtectCount": 5,
+        "Plants": [
+          {
+            "GridX": 0,
+            "GridY": 0,
+            "PlantType": "iceburg"
+          },
+          {
+            "GridX": 0,
+            "GridY": 1,
+            "PlantType": "iceburg"
+          },
+          {
+            "GridX": 0,
+            "GridY": 2,
+            "PlantType": "iceburg"
+          },
+          {
+            "GridX": 0,
+            "GridY": 3,
+            "PlantType": "iceburg"
+          },
+          {
+            "GridX": 0,
+            "GridY": 4,
+            "PlantType": "iceburg"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "SelectionMethod": "preset",
+        "PresetPlantList": [
+          {
+            "PlantType": "sunshroom",
+            "Level": -1
+          },
+          {
+            "PlantType": "firegourd",
+            "Level": -1
+          },
+          {
+            "PlantType": "iceweed",
+            "Level": -1
+          },
+          {
+            "PlantType": "chardguard",
+            "Level": -1
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "MinNextWaveHealthPercentage": 0.5,
+        "MaxNextWaveHealthPercentage": 0.65,
+        "FlagWaveInterval": 5,
+        "WaveCount": 10,
+        "WaveSpendingPointIncrement": 10,
+        "WaveSpendingPoints": 100,
+        "Waves": [
+          [
+            "RTID(Wave1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(abbot_armor1@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(abbot_armor1@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(abbot_armor1@ZombieTypes)",
+            "Row": "3"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 1,
+        "Zombies": [
+          {
+            "Type": "RTID(abbot@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(abbot_armor1@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(abbot_armor1@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(abbot_armor2@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(abbot_armor2@ZombieTypes)",
+            "Row": "5"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(abbot_chi@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(abbot_chi@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(abbot_torch@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(abbot_torch@ZombieTypes)",
+            "Row": "2"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(abbot_fan@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(abbot_fan@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(abbot_armor3@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(abbot_armor3@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(abbot_armor1@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(abbot_armor1@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(abbot_armor1@ZombieTypes)",
+            "Row": "4"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(abbot_flag@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(abbot_chi@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(abbot_chi@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(abbot_armor3@ZombieTypes)",
+            "Row": "5"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(abbot_armor3@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(abbot_armor1@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(abbot_armor2@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(abbot@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(abbot_armor2@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(abbot_armor1@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(abbot_armor3@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(abbot_armor1@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(abbot_armor3@ZombieTypes)",
+            "Row": "5"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave7"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(abbot_armor2@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(abbot_armor1@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(abbot_armor3@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(abbot_armor2@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(abbot_armor1@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(abbot_armor2@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(abbot@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(abbot_armor3@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(abbot_torch@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(abbot_torch@ZombieTypes)",
+            "Row": "3"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave8"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 1,
+        "MustKillAllToNextWave": true,
+        "Zombies": [
+          {
+            "Type": "RTID(abbot_fan@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(abbot_fan@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(abbot_fan@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(abbot_chi@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(abbot_chi@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(abbot_chi@ZombieTypes)",
+            "Row": "5"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave9"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(abbot_chi@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(abbot_chi@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(abbot_chi@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(abbot_imp@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(abbot_torch@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(abbot_torch@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(abbot_imp@ZombieTypes)",
+            "Row": "5"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave10"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(abbot_flag_veteran@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(abbot_chi@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(abbot_chi@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(abbot_chi@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(abbot_torch@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(abbot_armor4@ZombieTypes)",
+            "Row": "2"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "InitialGridItems"
+      ],
+      "objclass": "InitialGridItemProperties",
+      "objdata": {
+        "InitialGridItemPlacements": [
+          {
+            "GridX": 6,
+            "GridY": 0,
+            "TypeName": "taichitile"
+          },
+          {
+            "GridX": 6,
+            "GridY": 4,
+            "TypeName": "taichitile"
+          },
+          {
+            "GridX": 2,
+            "GridY": 1,
+            "TypeName": "taichitile"
+          },
+          {
+            "GridX": 2,
+            "GridY": 3,
+            "TypeName": "taichitile"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Gravestones"
+      ],
+      "objclass": "GravestoneProperties",
+      "objdata": {
+        "ForceSpawnData": [
+          {
+            "GridX": 3,
+            "GridY": 0,
+            "TypeName": "kongfu_rack_torch"
+          },
+          {
+            "GridX": 5,
+            "GridY": 1,
+            "TypeName": "kongfu_rack_torch"
+          },
+          {
+            "GridX": 4,
+            "GridY": 3,
+            "TypeName": "kongfu_rack_torch"
+          },
+          {
+            "GridX": 4,
+            "GridY": 1,
+            "TypeName": "kongfu_rack_helmet"
+          },
+          {
+            "GridX": 5,
+            "GridY": 2,
+            "TypeName": "kongfu_rack_helmet"
+          },
+          {
+            "GridX": 4,
+            "GridY": 2,
+            "TypeName": "kongfu_rack_flag"
+          }
+        ]
+      }
+    }
+  ]
+}
