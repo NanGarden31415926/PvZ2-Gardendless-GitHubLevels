@@ -1,0 +1,2073 @@
+{
+  "#comment": "火星01",
+  "version": 1,
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "LevelNumber": 1,
+        "Loot": "RTID(NoLoot@LevelModules)",
+        "Name": "Mars01",
+        "Description": "Mars01",
+        "StartingSun": 50,
+        "StageModule": "RTID(BeachTutorialStage@LevelModules)",
+        "Modules": [
+          "RTID(StandardIntro@LevelModules)",
+          "RTID(DefaultSunDropper@LevelModules)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(BeachMowers@LevelModules)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(Tide@CurrentLevel)",
+          "RTID(Gravestones@CurrentLevel)"
+        ],
+        "WrittenBy": "柔柔吃饭团"
+      }
+    },
+    {
+      "aliases": [
+        "Tide"
+      ],
+      "objclass": "TideProperties",
+      "objdata": {
+        "StartingWaveLocation": 6
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "SelectionMethod": "chooser",
+        "UnlockAll": true,
+        "OverrideSeedSlotsCount": 8
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "MinNextWaveHealthPercentage": 0.55,
+        "MaxNextWaveHealthPercentage": 0.7,
+        "FlagWaveInterval": 6,
+        "WaveCount": 24,
+        "WaveSpendingPointIncrement": 30,
+        "WaveSpendingPoints": 100,
+        "Waves": [
+          [
+            "RTID(Wave1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2TidalChangeEvent0@CurrentLevel)",
+            "RTID(Wave2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3TidalChangeEvent0_1@CurrentLevel)",
+            "RTID(Wave3GroundSpawnEvent0@CurrentLevel)",
+            "RTID(Wave3@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4RaidingPartyEvent0@CurrentLevel)",
+            "RTID(Wave4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6GravestoneEvent0@CurrentLevel)",
+            "RTID(Wave6@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7TidalChangeEvent0@CurrentLevel)",
+            "RTID(Wave7@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8TidalChangeEvent0@CurrentLevel)",
+            "RTID(Wave8@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9TidalChangeEvent0@CurrentLevel)",
+            "RTID(Wave9@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave11TidalChangeEvent0@CurrentLevel)",
+            "RTID(Wave11GroundSpawnEvent0@CurrentLevel)",
+            "RTID(Wave11@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave12@CurrentLevel)",
+            "RTID(Wave12GravestoneEvent0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave13@CurrentLevel)",
+            "RTID(Wave13DinoTimeEvent0@CurrentLevel)",
+            "RTID(Wave13DinoTimeEvent0_1@CurrentLevel)",
+            "RTID(Wave13DinoTimeEvent0_2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave14RaidingPartyEvent0@CurrentLevel)",
+            "RTID(Wave14TidalChangeEvent0@CurrentLevel)",
+            "RTID(Wave14@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave15@CurrentLevel)",
+            "RTID(Wave15TidalChangeEvent0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave16TidalChangeEvent0@CurrentLevel)",
+            "RTID(Wave16@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave17DinoTimeEvent0@CurrentLevel)",
+            "RTID(Wave17DinoTimeEvent0_1@CurrentLevel)",
+            "RTID(Wave17DinoTimeEvent0_2@CurrentLevel)",
+            "RTID(Wave17@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave18GravestoneEvent0@CurrentLevel)",
+            "RTID(Wave18@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave19@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave20TidalChangeEvent0@CurrentLevel)",
+            "RTID(Wave20GroundSpawnEvent0@CurrentLevel)",
+            "RTID(Wave20@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave21DinoTimeEvent0@CurrentLevel)",
+            "RTID(Wave21DinoTimeEvent0_1@CurrentLevel)",
+            "RTID(Wave21DinoTimeEvent0_2@CurrentLevel)",
+            "RTID(Wave21@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave22DinoTimeEvent0@CurrentLevel)",
+            "RTID(Wave22DinoTimeEvent0_1@CurrentLevel)",
+            "RTID(Wave22@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave23TidalChangeEvent0@CurrentLevel)",
+            "RTID(Wave23@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave24TidalChangeEvent0@CurrentLevel)",
+            "RTID(Wave24@CurrentLevel)",
+            "RTID(Wave24GravestoneEvent0@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(mummy_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mummy_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mummy_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pelican@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pelican@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave2TidalChangeEvent0"
+      ],
+      "objclass": "TidalChangeWaveActionProps",
+      "objdata": {
+        "TidalChange": {
+          "ChangeAmount": 0,
+          "ChangeType": "absolute"
+        }
+      }
+    },
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(future_jetpack_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(future_jetpack_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(future_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_armor1@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave3TidalChangeEvent0_1"
+      ],
+      "objclass": "TidalChangeWaveActionProps",
+      "objdata": {
+        "TidalChange": {
+          "ChangeAmount": 5,
+          "ChangeType": "absolute"
+        }
+      }
+    },
+    {
+      "aliases": [
+        "Wave3GroundSpawnEvent0"
+      ],
+      "objclass": "SpawnZombiesFromGroundSpawnerProps",
+      "objdata": {
+        "ColumnStart": 3,
+        "ColumnEnd": 5,
+        "RowStart": 0,
+        "RowEnd": 4,
+        "Zombies": [
+          {
+            "Type": "RTID(explorer_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(cannon@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(cannon@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(cannon@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(duckytube_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mummy_armor4@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave4RaidingPartyEvent0"
+      ],
+      "objclass": "RaidingPartyZombieSpawnerProps",
+      "objdata": {
+        "ZombieType": "RTID(swashbuckler@ZombieTypes)",
+        "SwashbucklerCount": 6,
+        "GroupSize": 2,
+        "TimeBetweenGroups": 1
+      }
+    },
+    {
+      "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 1,
+        "Zombies": [
+          {
+            "Type": "RTID(mummy_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_imp@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(modern_newspaper@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(modern_newspaper@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(west_bull@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(future_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(future_jetpack_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(future_jetpack_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(future_jetpack_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(future_jetpack_veteran@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6GravestoneEvent0"
+      ],
+      "objclass": "SpawnGravestonesWaveActionProps",
+      "objdata": {
+        "GravestonePool": [
+          {
+            "Count": 5,
+            "Type": "RTID(gravestone_egypt@GridItemTypes)"
+          }
+        ],
+        "SpawnEffectAnimID": "POPANIM_EFFECTS_TOMBSTONE_DARK_SPAWN_EFFECT",
+        "SpawnPositionsPool": [
+          {
+            "mX": 0,
+            "mY": 0
+          },
+          {
+            "mX": 0,
+            "mY": 1
+          },
+          {
+            "mX": 0,
+            "mY": 2
+          },
+          {
+            "mX": 0,
+            "mY": 3
+          },
+          {
+            "mX": 0,
+            "mY": 4
+          }
+        ],
+        "SpawnSoundID": "Play_Zomb_Egypt_TombRaiser_Grave_Rise",
+        "maxX": 8,
+        "minX": 3,
+        "DisplacePlants": true
+      }
+    },
+    {
+      "aliases": [
+        "Wave6"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(future_jetpack_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(chicken_farmer@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(chicken_farmer@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(chicken_farmer@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_octopus@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_octopus@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_octopus@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mummy_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mummy_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mummy_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(explorer@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(explorer@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(explorer@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(explorer@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(explorer@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(cowboy_gargantuar@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave7TidalChangeEvent0"
+      ],
+      "objclass": "TidalChangeWaveActionProps",
+      "objdata": {
+        "TidalChange": {
+          "ChangeAmount": 2,
+          "ChangeType": "absolute"
+        }
+      }
+    },
+    {
+      "aliases": [
+        "Wave7"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(cowboy_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(ra@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(ra@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(ra@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pirate_captain@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave8TidalChangeEvent0"
+      ],
+      "objclass": "TidalChangeWaveActionProps",
+      "objdata": {
+        "TidalChange": {
+          "ChangeAmount": 1,
+          "ChangeType": "absolute"
+        }
+      }
+    },
+    {
+      "aliases": [
+        "Wave8"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(pirate_captain@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pelican@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pelican@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(future_protector@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(future_protector@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(future_protector@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(future_jetpack_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(duckytube_armor4@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave9TidalChangeEvent0"
+      ],
+      "objclass": "TidalChangeWaveActionProps",
+      "objdata": {
+        "TidalChange": {
+          "ChangeAmount": 0,
+          "ChangeType": "absolute"
+        }
+      }
+    },
+    {
+      "aliases": [
+        "Wave9"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(future_jetpack_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(future_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(cannon@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(cannon@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(cannon@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(mummy_armor4@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave10"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(cannon@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(cowboy_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(cowboy_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(duckytube_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mummy_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(ra@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(ra@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(ra@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(explorer@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(explorer@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave11TidalChangeEvent0"
+      ],
+      "objclass": "TidalChangeWaveActionProps",
+      "objdata": {
+        "TidalChange": {
+          "ChangeAmount": 8,
+          "ChangeType": "absolute"
+        }
+      }
+    },
+    {
+      "aliases": [
+        "Wave11GroundSpawnEvent0"
+      ],
+      "objclass": "SpawnZombiesFromGroundSpawnerProps",
+      "objdata": {
+        "ColumnStart": 4,
+        "ColumnEnd": 8,
+        "RowStart": 0,
+        "RowEnd": 4,
+        "Zombies": [
+          {
+            "Type": "RTID(west_bull@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(west_bull@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(chicken_farmer@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(chicken_farmer@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(chicken_farmer@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave11"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(eighties_gargantuar@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave12"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(eighties_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(eighties_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(eighties_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_octopus@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_octopus@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_octopus@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_octopus@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(future_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(future_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(future_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(future_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pirate_captain@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pirate_captain@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mummy_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mummy_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(ra@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(explorer_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(explorer_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(explorer_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pelican@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pelican@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pelican@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pelican@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(cannon@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave12GravestoneEvent0"
+      ],
+      "objclass": "SpawnGravestonesWaveActionProps",
+      "objdata": {
+        "GravestonePool": [
+          {
+            "Count": 5,
+            "Type": "RTID(gravestone_egypt@GridItemTypes)"
+          }
+        ],
+        "SpawnEffectAnimID": "POPANIM_EFFECTS_TOMBSTONE_DARK_SPAWN_EFFECT",
+        "SpawnPositionsPool": [
+          {
+            "mX": 1,
+            "mY": 0
+          },
+          {
+            "mX": 1,
+            "mY": 1
+          },
+          {
+            "mX": 1,
+            "mY": 2
+          },
+          {
+            "mX": 1,
+            "mY": 3
+          },
+          {
+            "mX": 1,
+            "mY": 4
+          }
+        ],
+        "SpawnSoundID": "Play_Zomb_Egypt_TombRaiser_Grave_Rise",
+        "maxX": 8,
+        "minX": 3,
+        "DisplacePlants": true
+      }
+    },
+    {
+      "aliases": [
+        "Wave13"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(cannon@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(cannon@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(cannon@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(chicken_farmer@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(chicken_farmer@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(chicken_farmer@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(chicken_farmer@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(chicken_farmer@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(west_bull@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(west_bull@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(west_bull@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(duckytube_armor4@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave13DinoTimeEvent0"
+      ],
+      "objclass": "DinoWaveActionProps",
+      "objdata": {
+        "DinoRow": 2,
+        "DinoType": "raptor",
+        "DinoWaveDuration": 3
+      }
+    },
+    {
+      "aliases": [
+        "Wave13DinoTimeEvent0_1"
+      ],
+      "objclass": "DinoWaveActionProps",
+      "objdata": {
+        "DinoRow": 3,
+        "DinoType": "raptor",
+        "DinoWaveDuration": 4
+      }
+    },
+    {
+      "aliases": [
+        "Wave13DinoTimeEvent0_2"
+      ],
+      "objclass": "DinoWaveActionProps",
+      "objdata": {
+        "DinoRow": 0,
+        "DinoType": "raptor",
+        "DinoWaveDuration": 4
+      }
+    },
+    {
+      "aliases": [
+        "Wave14RaidingPartyEvent0"
+      ],
+      "objclass": "RaidingPartyZombieSpawnerProps",
+      "objdata": {
+        "ZombieType": "RTID(swashbuckler@ZombieTypes)",
+        "SwashbucklerCount": 8,
+        "GroupSize": 2,
+        "TimeBetweenGroups": 1
+      }
+    },
+    {
+      "aliases": [
+        "Wave14TidalChangeEvent0"
+      ],
+      "objclass": "TidalChangeWaveActionProps",
+      "objdata": {
+        "TidalChange": {
+          "ChangeAmount": 5,
+          "ChangeType": "absolute"
+        }
+      }
+    },
+    {
+      "aliases": [
+        "Wave14"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 1,
+        "Zombies": [
+          {
+            "Type": "RTID(west_bull@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(future_jetpack_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(future_jetpack_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(future_jetpack_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(future_jetpack_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(future_jetpack_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(future_jetpack_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(future_protector@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(future_protector@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dark_wizard@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dark_wizard@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dark_wizard@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave15"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dark_wizard@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dark_wizard@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_octopus@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_octopus@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(cowboy_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(cowboy_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mummy_armor4@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave15TidalChangeEvent0"
+      ],
+      "objclass": "TidalChangeWaveActionProps",
+      "objdata": {
+        "TidalChange": {
+          "ChangeAmount": 2,
+          "ChangeType": "absolute"
+        }
+      }
+    },
+    {
+      "aliases": [
+        "Wave16TidalChangeEvent0"
+      ],
+      "objclass": "TidalChangeWaveActionProps",
+      "objdata": {
+        "TidalChange": {
+          "ChangeAmount": 0,
+          "ChangeType": "absolute"
+        }
+      }
+    },
+    {
+      "aliases": [
+        "Wave16"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(iceage_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(eighties_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mummy_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mummy_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mummy_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mummy_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(explorer_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(explorer_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(explorer_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(explorer_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(duckytube_armor4@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave17DinoTimeEvent0"
+      ],
+      "objclass": "DinoWaveActionProps",
+      "objdata": {
+        "DinoRow": 2,
+        "DinoType": "tyranno",
+        "DinoWaveDuration": 4
+      }
+    },
+    {
+      "aliases": [
+        "Wave17DinoTimeEvent0_1"
+      ],
+      "objclass": "DinoWaveActionProps",
+      "objdata": {
+        "DinoRow": 1,
+        "DinoType": "raptor",
+        "DinoWaveDuration": 3
+      }
+    },
+    {
+      "aliases": [
+        "Wave17DinoTimeEvent0_2"
+      ],
+      "objclass": "DinoWaveActionProps",
+      "objdata": {
+        "DinoRow": 3,
+        "DinoType": "raptor",
+        "DinoWaveDuration": 4
+      }
+    },
+    {
+      "aliases": [
+        "Wave17"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(explorer_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mummy_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mummy_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mummy_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(cannon@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(cannon@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(cannon@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dark_wizard@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dark_wizard@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dark_wizard@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dark_wizard@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave18GravestoneEvent0"
+      ],
+      "objclass": "SpawnGravestonesWaveActionProps",
+      "objdata": {
+        "GravestonePool": [
+          {
+            "Count": 7,
+            "Type": "RTID(gravestone_egypt@GridItemTypes)"
+          }
+        ],
+        "SpawnEffectAnimID": "POPANIM_EFFECTS_TOMBSTONE_DARK_SPAWN_EFFECT",
+        "SpawnPositionsPool": [
+          {
+            "mX": 0,
+            "mY": 0
+          },
+          {
+            "mX": 0,
+            "mY": 1
+          },
+          {
+            "mX": 0,
+            "mY": 2
+          },
+          {
+            "mX": 0,
+            "mY": 3
+          },
+          {
+            "mX": 0,
+            "mY": 4
+          },
+          {
+            "mX": 1,
+            "mY": 0
+          },
+          {
+            "mX": 1,
+            "mY": 1
+          },
+          {
+            "mX": 1,
+            "mY": 2
+          },
+          {
+            "mX": 1,
+            "mY": 3
+          },
+          {
+            "mX": 1,
+            "mY": 4
+          }
+        ],
+        "SpawnSoundID": "Play_Zomb_Egypt_TombRaiser_Grave_Rise",
+        "maxX": 8,
+        "minX": 3,
+        "DisplacePlants": true
+      }
+    },
+    {
+      "aliases": [
+        "Wave18"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dark_wizard@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(explorer_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(explorer_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(explorer_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(explorer_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(explorer_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(explorer_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(explorer_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(eighties_gargantuar@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(eighties_gargantuar@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(eighties_gargantuar@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(eighties_gargantuar@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(eighties_gargantuar@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(modern_newspaper@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(modern_newspaper@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(modern_newspaper@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_octopus@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(beach_octopus@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(beach_octopus@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(beach_octopus@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(duckytube_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(duckytube_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(duckytube_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(explorer@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(explorer@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pirate_captain@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pirate_captain@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pirate_captain@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave19"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(pirate_captain@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pelican@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pelican@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pelican@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(west_bull@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(west_bull@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(west_bull@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(west_bull@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(chicken_farmer@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(chicken_farmer@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(chicken_farmer@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave20TidalChangeEvent0"
+      ],
+      "objclass": "TidalChangeWaveActionProps",
+      "objdata": {
+        "TidalChange": {
+          "ChangeAmount": 7,
+          "ChangeType": "absolute"
+        }
+      }
+    },
+    {
+      "aliases": [
+        "Wave20GroundSpawnEvent0"
+      ],
+      "objclass": "SpawnZombiesFromGroundSpawnerProps",
+      "objdata": {
+        "ColumnStart": 4,
+        "ColumnEnd": 6,
+        "RowStart": 0,
+        "RowEnd": 4,
+        "Zombies": [
+          {
+            "Type": "RTID(beach_fem_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_fem_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_fem_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_fem_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_fem_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_fem_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_fem_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_fem_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_fem_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_armor1@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave20"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 1,
+        "Zombies": [
+          {
+            "Type": "RTID(beach_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_octopus@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_octopus@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dark_wizard@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dark_wizard@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave21DinoTimeEvent0"
+      ],
+      "objclass": "DinoWaveActionProps",
+      "objdata": {
+        "DinoRow": 2,
+        "DinoType": "ptero",
+        "DinoWaveDuration": 4
+      }
+    },
+    {
+      "aliases": [
+        "Wave21DinoTimeEvent0_1"
+      ],
+      "objclass": "DinoWaveActionProps",
+      "objdata": {
+        "DinoRow": 1,
+        "DinoType": "ankylo",
+        "DinoWaveDuration": 4
+      }
+    },
+    {
+      "aliases": [
+        "Wave21DinoTimeEvent0_2"
+      ],
+      "objclass": "DinoWaveActionProps",
+      "objdata": {
+        "DinoRow": 4,
+        "DinoType": "stego",
+        "DinoWaveDuration": 4
+      }
+    },
+    {
+      "aliases": [
+        "Wave21"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dark_wizard@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(future_protector@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(future_protector@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(future_protector@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(future_protector@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(future_protector@ZombieTypes)",
+            "Row": "5"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave22DinoTimeEvent0"
+      ],
+      "objclass": "DinoWaveActionProps",
+      "objdata": {
+        "DinoRow": 0,
+        "DinoType": "ptero",
+        "DinoWaveDuration": 3
+      }
+    },
+    {
+      "aliases": [
+        "Wave22DinoTimeEvent0_1"
+      ],
+      "objclass": "DinoWaveActionProps",
+      "objdata": {
+        "DinoRow": 3,
+        "DinoType": "ankylo",
+        "DinoWaveDuration": 3
+      }
+    },
+    {
+      "aliases": [
+        "Wave22"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(future_protector@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(future_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(future_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(future_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(future_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(future_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(cowboy_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(cowboy_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(cowboy_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(chicken_farmer@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(chicken_farmer@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(chicken_farmer@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(chicken_farmer@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(chicken_farmer@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave23TidalChangeEvent0"
+      ],
+      "objclass": "TidalChangeWaveActionProps",
+      "objdata": {
+        "TidalChange": {
+          "ChangeAmount": 1,
+          "ChangeType": "absolute"
+        }
+      }
+    },
+    {
+      "aliases": [
+        "Wave23"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(chicken_farmer@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pirate_captain@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pirate_captain@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pirate_captain@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pirate_captain@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pirate_captain@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(cannon@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(cannon@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(cannon@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(cannon@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(cannon@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(future_jetpack_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(future_jetpack_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(future_jetpack_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(future_jetpack_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(future_jetpack_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(future_jetpack_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(future_jetpack_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(future_jetpack_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave24TidalChangeEvent0"
+      ],
+      "objclass": "TidalChangeWaveActionProps",
+      "objdata": {
+        "TidalChange": {
+          "ChangeAmount": 0,
+          "ChangeType": "absolute"
+        }
+      }
+    },
+    {
+      "aliases": [
+        "Wave24"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pirate_captain@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pirate_captain@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pirate_captain@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pelican@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pelican@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pelican@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pelican@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pelican@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(explorer_veteran@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(explorer_veteran@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(explorer_veteran@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(explorer_veteran@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(explorer_veteran@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(explorer_veteran@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(explorer_veteran@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(explorer_veteran@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(explorer_veteran@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(eighties_gargantuar@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(eighties_gargantuar@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(eighties_gargantuar@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(eighties_gargantuar@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(eighties_gargantuar@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(eighties_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dark_wizard@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dark_wizard@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dark_wizard@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave24GravestoneEvent0"
+      ],
+      "objclass": "SpawnGravestonesWaveActionProps",
+      "objdata": {
+        "GravestonePool": [
+          {
+            "Count": 10,
+            "Type": "RTID(gravestone_egypt@GridItemTypes)"
+          }
+        ],
+        "SpawnEffectAnimID": "POPANIM_EFFECTS_TOMBSTONE_DARK_SPAWN_EFFECT",
+        "SpawnPositionsPool": [
+          {
+            "mX": 0,
+            "mY": 0
+          },
+          {
+            "mX": 0,
+            "mY": 1
+          },
+          {
+            "mX": 0,
+            "mY": 2
+          },
+          {
+            "mX": 0,
+            "mY": 3
+          },
+          {
+            "mX": 0,
+            "mY": 4
+          },
+          {
+            "mX": 1,
+            "mY": 4
+          },
+          {
+            "mX": 1,
+            "mY": 3
+          },
+          {
+            "mX": 1,
+            "mY": 2
+          },
+          {
+            "mX": 1,
+            "mY": 1
+          },
+          {
+            "mX": 1,
+            "mY": 0
+          }
+        ],
+        "SpawnSoundID": "Play_Zomb_Egypt_TombRaiser_Grave_Rise",
+        "maxX": 8,
+        "minX": 3
+      }
+    },
+    {
+      "aliases": [
+        "Gravestones"
+      ],
+      "objclass": "GravestoneProperties",
+      "objdata": {
+        "ForceSpawnData": [
+          {
+            "GridX": 0,
+            "GridY": 0,
+            "TypeName": "gravestone_egypt"
+          },
+          {
+            "GridX": 1,
+            "GridY": 0,
+            "TypeName": "gravestone_egypt"
+          },
+          {
+            "GridX": 1,
+            "GridY": 1,
+            "TypeName": "gravestone_egypt"
+          },
+          {
+            "GridX": 0,
+            "GridY": 1,
+            "TypeName": "gravestone_egypt"
+          },
+          {
+            "GridX": 0,
+            "GridY": 2,
+            "TypeName": "gravestone_egypt"
+          },
+          {
+            "GridX": 1,
+            "GridY": 2,
+            "TypeName": "gravestone_egypt"
+          },
+          {
+            "GridX": 1,
+            "GridY": 3,
+            "TypeName": "gravestone_egypt"
+          },
+          {
+            "GridX": 0,
+            "GridY": 3,
+            "TypeName": "gravestone_egypt"
+          },
+          {
+            "GridX": 0,
+            "GridY": 4,
+            "TypeName": "gravestone_egypt"
+          },
+          {
+            "GridX": 1,
+            "GridY": 4,
+            "TypeName": "gravestone_egypt"
+          }
+        ]
+      }
+    }
+  ]
+}

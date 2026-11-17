@@ -1,0 +1,306 @@
+{
+  "#comment": "Egypt Zomboss",
+  "version": 1,
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "FirstOutroNarrative": "EditorFirstOutroNarrative",
+        "ForceToWorldMap": true,
+        "LevelNumber": 48,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "MusicType": "MiniGame_A",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "LoadDefaultMusic": false,
+        "FirstIntroNarrative": "EditorFirstIntroNarrative",
+        "Name": "Mars38",
+        "Description": "Mars38",
+        "StageModule": "RTID(KongfuBossStage@LevelModules)",
+        "Modules": [
+          "RTID(ZombossIntro@LevelModules)",
+          "RTID(Rails@CurrentLevel)",
+          "RTID(ZombossBattle@CurrentLevel)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(DefaultSunDropper@LevelModules)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(Gravestones@CurrentLevel)",
+          "RTID(FrozenZombiePlacement@CurrentLevel)"
+        ],
+        "WrittenBy": "柔柔吃饭团"
+      }
+    },
+    {
+      "aliases": [
+        "Rails"
+      ],
+      "objclass": "RailcartProperties",
+      "objdata": {
+        "RailcartType": "railcart_kongfu",
+        "Railcarts": [
+          {
+            "Column": 1,
+            "Row": 2
+          }
+        ],
+        "Rails": [
+          {
+            "Column": 1,
+            "RowEnd": 4,
+            "RowStart": 0
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "ZombossBattle"
+      ],
+      "objclass": "ZombossBattleModuleProperties",
+      "objdata": {
+        "UseKongfuBossMusic": true,
+        "ReservedColumnCount": 3,
+        "ZombossMechType": "kongfu_boss_chi",
+        "ZombossDeathRow": 3,
+        "ZombossDeathColumn": 5,
+        "ZombossSpawnGridPosition": {
+          "mX": 6,
+          "mY": 3
+        }
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "MinNextWaveHealthPercentage": 0.5,
+        "MaxNextWaveHealthPercentage": 0.65,
+        "FlagWaveInterval": 5,
+        "WaveCount": 0,
+        "WaveSpendingPointIncrement": 10,
+        "WaveSpendingPoints": 100,
+        "Waves": []
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "SelectionMethod": "chooser"
+      }
+    },
+    {
+      "aliases": [
+        "Gravestones"
+      ],
+      "objclass": "GravestoneProperties",
+      "objdata": {
+        "ForceSpawnData": [
+          {
+            "GridX": 3,
+            "GridY": 0,
+            "TypeName": "kongfu_rack_helmet"
+          },
+          {
+            "GridX": 3,
+            "GridY": 1,
+            "TypeName": "kongfu_rack_torch"
+          },
+          {
+            "GridX": 3,
+            "GridY": 2,
+            "TypeName": "kongfu_rack_flag"
+          },
+          {
+            "GridX": 3,
+            "GridY": 3,
+            "TypeName": "kongfu_rack_torch"
+          },
+          {
+            "GridX": 3,
+            "GridY": 4,
+            "TypeName": "kongfu_rack_helmet"
+          },
+          {
+            "GridX": 4,
+            "GridY": 0,
+            "TypeName": "kongfu_rack_nunchaku"
+          },
+          {
+            "GridX": 4,
+            "GridY": 1,
+            "TypeName": "kongfu_rack_3section_staff"
+          },
+          {
+            "GridX": 4,
+            "GridY": 2,
+            "TypeName": "kongfu_rack_helmet"
+          },
+          {
+            "GridX": 4,
+            "GridY": 3,
+            "TypeName": "kongfu_rack_fan"
+          },
+          {
+            "GridX": 4,
+            "GridY": 4,
+            "TypeName": "kongfu_rack_flag"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "FrozenZombiePlacement"
+      ],
+      "objclass": "InitialZombieProperties",
+      "objdata": {
+        "InitialZombiePlacements": [
+          {
+            "GridX": 6,
+            "GridY": 2,
+            "TypeName": "kongfu_boss_blade"
+          },
+          {
+            "GridX": 6,
+            "GridY": 1,
+            "TypeName": "kongfu_boss_explode"
+          }
+        ]
+      }
+    },
+    {
+      "objclass": "NarrativeProperties",
+      "objdata": {
+        "Flow": [
+          {
+            "Character": "zombossicon",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "zombossicon",
+            "Action": "SAY",
+            "Lines": {
+              "zh": "你们上次是真把我激怒了，我把这件事告诉了气功教主，你猜他怎么说？",
+              "en": "You really got my goat last time.I told the Qigong master about it.Guess what he said?"
+            }
+          },
+          {
+            "Character": "crazydave",
+            "Action": "NPC_ENTER",
+            "Lines": {
+              "zh": ""
+            }
+          },
+          {
+            "Character": "crazydave",
+            "Action": "SAY",
+            "Lines": {
+              "zh": "我并不知道气功教主说了什么。",
+              "en": "I had no idae what the Qigong master was saying."
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "NPC_ENTER",
+            "Lines": {
+              "zh": ""
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "SAY",
+            "Lines": {
+              "zh": "警告！警告！数据显示有三股强大的能量向这里逼近！",
+              "en": "Warning!Warning!Data shows that three powerful energy streams are approaching here!"
+            }
+          },
+          {
+            "Character": "zombossicon",
+            "Action": "SAY",
+            "Lines": {
+              "zh": "说的没错，气功教主表示自己要带领两个弟弟联合讨伐你们！",
+              "en": "That's right,the Qigong master said he will lead his two younger brothers to jointly attack you! "
+            }
+          },
+          {
+            "Character": "crazydave",
+            "Action": "SAY",
+            "Lines": {
+              "zh": "这可不是什么好兆头。",
+              "en": "That's not a good sign."
+            }
+          }
+        ]
+      },
+      "aliases": [
+        "EditorFirstIntroNarrative"
+      ]
+    },
+    {
+      "objclass": "NarrativeProperties",
+      "objdata": {
+        "Flow": [
+          {
+            "Character": "zombossicon",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "zombossicon",
+            "Action": "SAY",
+            "Lines": {
+              "zh": "什么？！他们连手都没都没能将你打败？这不可能！",
+              "en": "What?They couldn't beat you even working together?That's impossible!"
+            }
+          },
+          {
+            "Character": "crazydave",
+            "Action": "NPC_ENTER",
+            "Lines": {
+              "zh": ""
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "NPC_ENTER",
+            "Lines": {
+              "zh": ""
+            }
+          },
+          {
+            "Character": "crazydave",
+            "Action": "EXCITED",
+            "Lines": {
+              "zh": "这就是劫后余生的感觉吗？太惊险了！",
+              "en": "So this is what it feels like to survive a near-death experience?It's a rush!"
+            }
+          },
+          {
+            "Character": "zombossicon",
+            "Action": "SAY",
+            "Lines": {
+              "zh": "看来我必须亲手打败你们了，等着瞧吧。",
+              "en": "Looks like I'll have to take you on myself."
+            }
+          }
+        ]
+      },
+      "aliases": [
+        "EditorFirstOutroNarrative"
+      ]
+    }
+  ]
+}

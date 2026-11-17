@@ -1,0 +1,632 @@
+{
+  "#comment": "Modern 5T",
+  "version": 1,
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "LevelNumber": 5,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "FirstIntroNarrative": "EditorFirstIntroNarrative",
+         "NameMultiLanguage": {
+          "en": "Modern Day - Tomorrow 5",
+          "zh": "现代时光 - 第 5 明日"
+        },
+        "Description": "[PLAYERS_TRIP_TO_MODERN]",
+        "StageModule": "RTID(ModernStage@LevelModules)",
+        "Modules": [
+          "RTID(StandardIntro@LevelModules)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(DefaultSunDropper@LevelModules)",
+          "RTID(ModernMowers@LevelModules)",
+          "RTID(BeatTheLevel@CurrentLevel)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)"
+        ],
+        "WrittenBy": "失重汤姆"
+      }
+    },
+    {
+      "aliases": [
+        "BeatTheLevel"
+      ],
+      "objclass": "StarChallengeBeatTheLevelProps",
+      "objdata": {
+        "DescriptionsMultilanguage": [
+          {
+            "en": "Survive the zombie attack with only 5 seed slots",
+            "zh": "在只有5个种子槽的情况下存活"
+          },
+          {
+            "en": "Survive the zombie attack with most plants picked for you",
+            "zh": "在替你选好大多数植物的情况下存活"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "CardDecks": {
+          "Recommended": [],
+          "Challenging": []
+        },
+        "SelectionMethod": "chooser",
+        "OverrideSeedSlotsCount": 5,
+        "PresetPlantList": [
+          {
+            "PlantType": "nightshade",
+            "Level": -1
+          },
+          {
+            "PlantType": "bloomerang",
+            "Level": -1
+          }
+        ],
+        "PlantExcludeList": [
+          "potatomine",
+          "cherry_bomb",
+          "coconutcannon",
+          "melonpult",
+          "wintermelon",
+          "primalpotatomine",
+          "guacodile",
+          "goldleaf",
+          "moonbean",
+          "solarsage",
+          "cantaloupe",
+          "peacommando"
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {
+            "PointIncrementPerWave": -40,
+            "StartingPoints": -100,
+            "StartingWave": 3,
+            "ZombiePool": [
+              "RTID(tutorial@ZombieTypes)",
+              "RTID(tutorial_armor1@ZombieTypes)",
+              "RTID(tutorial_armor2@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": -25,
+            "StartingPoints": -100,
+            "StartingWave": 4,
+            "ZombiePool": [
+              "RTID(tutorial@ZombieTypes)",
+              "RTID(tutorial_armor1@ZombieTypes)",
+              "RTID(tutorial_armor2@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": -10,
+            "StartingPoints": -100,
+            "StartingWave": 5,
+            "ZombiePool": [
+              "RTID(tutorial@ZombieTypes)",
+              "RTID(tutorial_armor1@ZombieTypes)",
+              "RTID(tutorial_armor2@ZombieTypes)"
+            ]
+          },
+          {},
+          {
+            "PointIncrementPerWave": 20,
+            "StartingPoints": 100,
+            "StartingWave": 5,
+            "ZombiePool": [
+              "RTID(tutorial@ZombieTypes)",
+              "RTID(tutorial_armor1@ZombieTypes)",
+              "RTID(tutorial_armor2@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 40,
+            "StartingPoints": 200,
+            "StartingWave": 4,
+            "ZombiePool": [
+              "RTID(tutorial_armor1@ZombieTypes)",
+              "RTID(tutorial_armor2@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 60,
+            "StartingPoints": 400,
+            "StartingWave": 3,
+            "ZombiePool": [
+              "RTID(tutorial_armor2@ZombieTypes)"
+            ]
+          }
+        ],
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "LevelJam": "jam_rap",
+        "MinNextWaveHealthPercentage": 0.5,
+        "MaxNextWaveHealthPercentage": 0.65,
+        "FlagWaveInterval": 5,
+        "WaveCount": 10,
+        "WaveSpendingPointIncrement": 150,
+        "WaveSpendingPoints": 200,
+        "Waves": [
+          [
+            "RTID(Wave1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)",
+            "RTID(Wave4PortalsEvent0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)",
+            "RTID(Wave7PortalsEvent0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)",
+            "RTID(Wave8PortalsEvent0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)",
+            "RTID(Wave10PortalsEvent0@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dino_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)",
+            "Row": "3"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 1,
+        "Zombies": [
+          {
+            "Row": "4",
+            "Type": "RTID(lostcity_imp@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(lostcity_imp@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(eighties_breakdancer@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(eighties_breakdancer@ZombieTypes)",
+            "Row": "2"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Row": "3",
+            "Type": "RTID(lostcity_jane@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(lostcity_jane@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(dino_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(catapult@ZombieTypes)",
+            "Row": "4"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Row": "5",
+            "Type": "RTID(modern_newspaper@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(eighties_breakdancer@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(modern_newspaper@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(eighties_breakdancer@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(catapult@ZombieTypes)",
+            "Row": "1"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Row": "1",
+            "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(eighties_breakdancer@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(dino_imp@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(lostcity_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(catapult@ZombieTypes)",
+            "Row": "3"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave7"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 1,
+        "Zombies": [
+          {
+            "Row": "3",
+            "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(lostcity_jane@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(lostcity_jane@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(lostcity_jane@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave8"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Row": "1",
+            "Type": "RTID(dino_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(modern_newspaper@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(catapult@ZombieTypes)",
+            "Row": "4"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave9"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 1,
+        "Zombies": [
+          {
+            "Row": "4",
+            "Type": "RTID(lostcity_jane@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(eighties_breakdancer@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(lostcity_jane@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(eighties_breakdancer@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(lostcity_imp@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(lostcity_imp@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave10"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Row": "5",
+            "Type": "RTID(modern_newspaper@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(eighties_breakdancer@ZombieTypes)"
+          },
+          {
+            "Row": "5",
+            "Type": "RTID(lostcity_imp@ZombieTypes)"
+          },
+          {
+            "Row": "4",
+            "Type": "RTID(lostcity_imp@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(lostcity_imp@ZombieTypes)"
+          },
+          {
+            "Row": "2",
+            "Type": "RTID(lostcity_imp@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(lostcity_imp@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(modern_newspaper@ZombieTypes)"
+          },
+          {
+            "Row": "1",
+            "Type": "RTID(eighties_breakdancer@ZombieTypes)"
+          },
+          {
+            "Row": "3",
+            "Type": "RTID(lostcity_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(catapult@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(catapult@ZombieTypes)",
+            "Row": "4"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave4PortalsEvent0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": "4",
+        "PortalType": "lostcity",
+        "SpawnEffectAnimID": "",
+        "SpawnSoundID": ""
+      }
+    },
+    {
+      "aliases": [
+        "Wave7PortalsEvent0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 5,
+        "PortalRow": "2",
+        "PortalType": "eighties",
+        "SpawnEffectAnimID": "",
+        "SpawnSoundID": ""
+      }
+    },
+    {
+      "aliases": [
+        "Wave8PortalsEvent0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 3,
+        "PortalRow": "1",
+        "PortalType": "lostcity",
+        "SpawnEffectAnimID": "",
+        "SpawnSoundID": ""
+      }
+    },
+    {
+      "aliases": [
+        "Wave10PortalsEvent0"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 4,
+        "PortalRow": "0",
+        "PortalType": "eighties",
+        "SpawnEffectAnimID": "",
+        "SpawnSoundID": ""
+      }
+    },
+    {
+      "objclass": "NarrativeProperties",
+      "objdata": {
+        "Flow": [
+          {
+            "Character": "crazydave",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "winnie",
+            "Action": "NPC_ENTER",
+            "Lines": {
+              "zh": ""
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "SAY",
+            "Lines": {
+              "zh": "我们的种子库存系统正在受到攻击。",
+              "en": "Our seedbank system is under attack."
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "SAY",
+            "Lines": {
+              "zh": "今天我们只能派遣五株植物上场。",
+              "en": "We can only send 5 plants to the frontlawn today."
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "SAY",
+            "Lines": {
+              "zh": "另外，僵尸们偷走了一部分植物种子，这导致我们以后每一天都有一些植物不能使用。",
+              "en": "In additonal,zombies have stolen some of the seeds,which means that we won't be able to use some plants every day from now on."
+            }
+          },
+          {
+            "Character": "crazydave",
+            "Action": "SAY",
+            "Lines": {
+              "zh": "看起来我该升级花园防火墙了。",
+              "en": "It seems that I should upgrade the garden firewall."
+            }
+          },
+          {
+            "Character": "crazydave",
+            "Action": "PLAYFUL",
+            "Lines": {
+              "zh": "邻居！现在先用这些便宜的暗影龙葵撑场面吧！记得妥善利用他们！",
+              "en": "Hey neighbor!Use these inexpensive nightshades to create a occasion!Remember to make good use to them!"
+            }
+          }
+        ]
+      },
+      "aliases": [
+        "EditorFirstIntroNarrative"
+      ]
+    }
+  ]
+}

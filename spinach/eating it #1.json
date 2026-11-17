@@ -1,0 +1,783 @@
+{
+  "#comment": "eating it",
+  "version": 1,
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "LevelNumber": 1,
+        "Loot": "RTID(NoLoot@LevelModules)",
+        "Name": "eating it",
+        "Description": "lychee",
+        "StartingSun": 200,
+        "StageModule": "RTID(EgyptStage@LevelModules)",
+        "Modules": [
+          "RTID(StandardIntro@LevelModules)",
+          "RTID(VeryFastSunDropper@LevelModules)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(EgyptMowers@LevelModules)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(InitialGridItems@CurrentLevel)",
+          "RTID(Gravestones@CurrentLevel)",
+          "RTID(FrozenPlantPlacement@CurrentLevel)"
+        ],
+        "WrittenBy": "sp"
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "SelectionMethod": "preset",
+        "PresetPlantList": [
+          {
+            "PlantType": "lychee",
+            "Level": -1
+          },
+          {
+            "PlantType": "tanglekelp",
+            "Level": -1
+          },
+          {
+            "PlantType": "glaciershroom",
+            "Level": -1
+          },
+          {
+            "PlantType": "hurrikale",
+            "Level": -1
+          },
+          {
+            "PlantType": "sapfling",
+            "Level": -1
+          },
+          {
+            "PlantType": "thymewarp",
+            "Level": -1
+          },
+          {
+            "PlantType": "ghostpepper",
+            "Level": -1
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "MinNextWaveHealthPercentage": 0.5,
+        "MaxNextWaveHealthPercentage": 0.65,
+        "FlagWaveInterval": 5,
+        "WaveCount": 10,
+        "WaveSpendingPointIncrement": 10,
+        "WaveSpendingPoints": 100,
+        "Waves": [
+          [
+            "RTID(Wave1@CurrentLevel)",
+            "RTID(Wave1GridItemSpawnEvent0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)",
+            "RTID(Wave2GridItemSpawnEvent0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dino_armor1@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(dino_armor1@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(dino_armor1@ZombieTypes)",
+            "Row": "5"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave1GridItemSpawnEvent0"
+      ],
+      "objclass": "SpawnZombiesFromGridItemSpawnerProps",
+      "objdata": {
+        "AdditionalPlantfood": 1,
+        "GridTypes": [
+          "RTID(thunder_trap@GridItemTypes)"
+        ],
+        "WaveStartMessage": "",
+        "ZombieSpawnWaitTime": 5,
+        "Zombies": [
+          {
+            "Type": "RTID(dino_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          }
+        ],
+        "SuppressActionIfNoGridItemsFound": true
+      }
+    },
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 1,
+        "MustKillAllToNextWave": true,
+        "Zombies": [
+          {
+            "Type": "RTID(dino_armor3@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(dino_armor3@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(dino_armor3@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(dino_bully_veteran@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(dino_bully_veteran@ZombieTypes)",
+            "Row": "4"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave2GridItemSpawnEvent0"
+      ],
+      "objclass": "SpawnZombiesFromGridItemSpawnerProps",
+      "objdata": {
+        "AdditionalPlantfood": 1,
+        "GridTypes": [
+          "RTID(thunder_trap@GridItemTypes)"
+        ],
+        "WaveStartMessage": "",
+        "ZombieSpawnWaitTime": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_armor4@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dino_bully@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(dino_bully@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(dino_armor1@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(dino_armor1@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(dino_armor1@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(dino@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(dino@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(dino@ZombieTypes)",
+            "Row": "5"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial_gargantuar@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(modern_allstar@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(modern_allstar@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(birthday_barrelroller@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(birthday_barrelroller@ZombieTypes)",
+            "Row": "4"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(zomboni@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(zomboni@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(duckytube_armor2@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(duckytube_armor2@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(duckytube_armor2@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(duckytube@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(duckytube@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(tutorial_flag@ZombieTypes)",
+            "Row": "5"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dino_armor3@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(dino_armor3@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(dino_armor4@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(disco_mech@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(sportzball_wizard@ZombieTypes)",
+            "Row": "3"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave7"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dino_armor4@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(dino_armor4@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(dino_armor3@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(disco_mech@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(duckytube_armor2@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(duckytube_armor2@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(duckytube_armor1@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(duckytube_armor2@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)",
+            "Row": "5"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave8"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(pharaoh_weak@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(pharaoh_weak@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(pharaoh_weak@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(dino_armor3@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(dino_armor3@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(dino_armor4@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(disco_mech@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(modern_allstar@ZombieTypes)",
+            "Row": "1"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave9"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 1,
+        "Zombies": [
+          {
+            "Type": "RTID(pharaoh_weak@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(dino_armor3@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(dino_armor3@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(dino_armor4@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(bobsled_team@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(dino_armor4@ZombieTypes)",
+            "Row": "3"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave10"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial_flag_veteran@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(duckytube_armor2@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(duckytube_armor2@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(duckytube_armor4@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(modern_allstar@ZombieTypes)",
+            "Row": "4"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "InitialGridItems"
+      ],
+      "objclass": "InitialGridItemProperties",
+      "objdata": {
+        "InitialGridItemPlacements": [
+          {
+            "GridX": 0,
+            "GridY": 0,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 1,
+            "GridY": 0,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 2,
+            "GridY": 0,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 3,
+            "GridY": 0,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 4,
+            "GridY": 0,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 5,
+            "GridY": 0,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 6,
+            "GridY": 0,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 7,
+            "GridY": 0,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 8,
+            "GridY": 0,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 0,
+            "GridY": 2,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 1,
+            "GridY": 2,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 2,
+            "GridY": 2,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 4,
+            "GridY": 2,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 3,
+            "GridY": 2,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 5,
+            "GridY": 2,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 6,
+            "GridY": 2,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 7,
+            "GridY": 2,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 8,
+            "GridY": 2,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 0,
+            "GridY": 4,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 1,
+            "GridY": 4,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 2,
+            "GridY": 4,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 3,
+            "GridY": 4,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 4,
+            "GridY": 4,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 5,
+            "GridY": 4,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 6,
+            "GridY": 4,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 7,
+            "GridY": 4,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 8,
+            "GridY": 4,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 4,
+            "GridY": 1,
+            "TypeName": "taichitile"
+          },
+          {
+            "GridX": 4,
+            "GridY": 3,
+            "TypeName": "taichitile"
+          },
+          {
+            "GridX": 2,
+            "GridY": 1,
+            "TypeName": "taichitile"
+          },
+          {
+            "GridX": 2,
+            "GridY": 3,
+            "TypeName": "taichitile"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Gravestones"
+      ],
+      "objclass": "GravestoneProperties",
+      "objdata": {
+        "ForceSpawnData": [
+          {
+            "GridX": 7,
+            "GridY": 1,
+            "TypeName": "tent"
+          },
+          {
+            "GridX": 7,
+            "GridY": 3,
+            "TypeName": "tent"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "FrozenPlantPlacement"
+      ],
+      "objclass": "InitialPlantProperties",
+      "objdata": {
+        "InitialPlantPlacements": [
+          {
+            "GridX": 3,
+            "GridY": 0,
+            "TypeName": "tanglekelp"
+          },
+          {
+            "GridX": 3,
+            "GridY": 4,
+            "TypeName": "tanglekelp"
+          },
+          {
+            "GridX": 3,
+            "GridY": 2,
+            "TypeName": "tanglekelp"
+          },
+          {
+            "GridX": 4,
+            "GridY": 1,
+            "TypeName": "lychee"
+          },
+          {
+            "GridX": 4,
+            "GridY": 3,
+            "TypeName": "lychee"
+          }
+        ]
+      }
+    }
+  ]
+}

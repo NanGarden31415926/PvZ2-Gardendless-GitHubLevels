@@ -1,0 +1,246 @@
+{
+  "#comment": "火星07",
+  "version": 1,
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "LevelNumber": 1,
+        "Loot": "RTID(NoLoot@LevelModules)",
+        "Name": "Mars07",
+        "Description": "Mars07",
+        "StartingSun": 1375,
+        "StageModule": "RTID(ModernNightStage@LevelModules)",
+        "Modules": [
+          "RTID(StandardIntro@LevelModules)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(Rails@CurrentLevel)"
+        ],
+        "WrittenBy": "柔柔吃饭团"
+      }
+    },
+    {
+      "aliases": [
+        "Rails"
+      ],
+      "objclass": "RailcartProperties",
+      "objdata": {
+        "RailcartType": "railcart_cowboy",
+        "Railcarts": [
+          {
+            "Column": 0,
+            "Row": 0
+          },
+          {
+            "Column": 2,
+            "Row": 0
+          },
+          {
+            "Column": 4,
+            "Row": 0
+          },
+          {
+            "Column": 6,
+            "Row": 0
+          }
+        ],
+        "Rails": [
+          {
+            "Column": 0,
+            "RowStart": 0,
+            "RowEnd": 4
+          },
+          {
+            "Column": 2,
+            "RowStart": 0,
+            "RowEnd": 4
+          },
+          {
+            "Column": 4,
+            "RowStart": 0,
+            "RowEnd": 4
+          },
+          {
+            "Column": 6,
+            "RowStart": 0,
+            "RowEnd": 4
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "SelectionMethod": "preset",
+        "OverrideSeedSlotsCount": 4,
+        "PresetPlantList": [
+          {
+            "PlantType": "wintermelon",
+            "Level": -1
+          },
+          {
+            "PlantType": "primalpeashooter",
+            "Level": -1
+          },
+          {
+            "PlantType": "coconutcannon",
+            "Level": -1
+          },
+          {
+            "PlantType": "citron",
+            "Level": -1
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {}
+        ],
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "MinNextWaveHealthPercentage": 0.55,
+        "MaxNextWaveHealthPercentage": 0.7,
+        "FlagWaveInterval": 5,
+        "WaveCount": 5,
+        "WaveSpendingPointIncrement": 30,
+        "WaveSpendingPoints": 100,
+        "Waves": [
+          [
+            "RTID(Wave1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)"
+          ]
+        ],
+        "SuppressFlagZombie": true
+      }
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "MustKillAllToNextWave": true,
+        "Zombies": [
+          {
+            "Type": "RTID(egypt_gargantuar@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "MustKillAllToNextWave": true,
+        "Zombies": [
+          {
+            "Type": "RTID(pirate_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(cowboy_gargantuar@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "MustKillAllToNextWave": true,
+        "Zombies": [
+          {
+            "Type": "RTID(dark_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_gargantuar@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "MustKillAllToNextWave": true,
+        "Zombies": [
+          {
+            "Type": "RTID(dino_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(eighties_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(future_gargantuar@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(kongfu_bronze_strong@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(kongfu_bronze_hook@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(kongfu_bronze_chi@ZombieTypes)"
+          }
+        ]
+      }
+    }
+  ]
+}

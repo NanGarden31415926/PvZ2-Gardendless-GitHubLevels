@@ -1,0 +1,192 @@
+{
+  "#comment": "火星10",
+  "version": 1,
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "LevelNumber": 1,
+        "Loot": "RTID(NoLoot@LevelModules)",
+        "Name": "Mars10",
+        "Description": "Mars10",
+        "StartingSun": 50,
+        "StageModule": "RTID(BeachStage@LevelModules)",
+        "Modules": [
+          "RTID(StandardIntro@LevelModules)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(ConveyorBelt@CurrentLevel)",
+          "RTID(Tide@CurrentLevel)",
+          "RTID(FrozenZombiePlacement@CurrentLevel)"
+        ],
+        "WrittenBy": "柔柔吃饭团"
+      }
+    },
+    {
+      "aliases": [
+        "Tide"
+      ],
+      "objclass": "TideProperties",
+      "objdata": {
+        "StartingWaveLocation": 8
+      }
+    },
+    {
+      "aliases": [
+        "ConveyorBelt"
+      ],
+      "objclass": "ConveyorSeedBankProperties",
+      "objdata": {
+        "DropDelayConditions": [
+          {
+            "MaxPackets": 0,
+            "Delay": 5
+          }
+        ],
+        "InitialPlantList": [
+          {
+            "Weight": 15,
+            "PlantType": "missiletoe"
+          },
+          {
+            "Weight": 15,
+            "PlantType": "powerlily"
+          },
+          {
+            "Weight": 15,
+            "PlantType": "hurrikale"
+          },
+          {
+            "Weight": 15,
+            "PlantType": "grapeshot"
+          },
+          {
+            "Weight": 15,
+            "PlantType": "explodeonut"
+          },
+          {
+            "Weight": 15,
+            "PlantType": "chardguard"
+          },
+          {
+            "Weight": 15,
+            "PlantType": "intensivecarrot"
+          },
+          {
+            "Weight": 15,
+            "PlantType": "coldsnapdragon"
+          },
+          {
+            "Weight": 15,
+            "PlantType": "poisonpeashooter"
+          },
+          {
+            "Weight": 15,
+            "PlantType": "jalapeno"
+          },
+          {
+            "MaxCount": 3,
+            "Weight": 45,
+            "ForceBoosted": true,
+            "PlantType": "lilypad"
+          },
+          {
+            "Weight": 30,
+            "PlantType": "pinkstarfruit"
+          },
+          {
+            "Weight": 15,
+            "PlantType": "parsnip"
+          },
+          {
+            "Weight": 15,
+            "PlantType": "applemortar"
+          },
+          {
+            "Weight": 15,
+            "PlantType": "dandelion"
+          },
+          {
+            "Weight": 15,
+            "PlantType": "strawburst"
+          },
+          {
+            "Weight": 30,
+            "PlantType": "thymewarp"
+          },
+          {
+            "Weight": 15,
+            "PlantType": "chomper"
+          },
+          {
+            "Weight": 15,
+            "PlantType": "electricpeashooter"
+          },
+          {
+            "Weight": 15,
+            "PlantType": "gatling"
+          }
+        ],
+        "SpeedConditions": [
+          {
+            "MaxPackets": 0,
+            "Speed": 100
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "MinNextWaveHealthPercentage": 0.55,
+        "MaxNextWaveHealthPercentage": 0.7,
+        "FlagWaveInterval": 4,
+        "WaveCount": 1,
+        "WaveSpendingPointIncrement": 30,
+        "WaveSpendingPoints": 100,
+        "Waves": [
+          []
+        ],
+        "SuppressFlagZombie": true
+      }
+    },
+    {
+      "aliases": [
+        "FrozenZombiePlacement"
+      ],
+      "objclass": "InitialZombieProperties",
+      "objdata": {
+        "InitialZombiePlacements": [
+          {
+            "GridX": 7,
+            "GridY": 1,
+            "TypeName": "zombossmech_dark2"
+          },
+          {
+            "GridX": 7,
+            "GridY": 2,
+            "TypeName": "zombossmech_beach2"
+          },
+          {
+            "GridX": 7,
+            "GridY": 3,
+            "TypeName": "zombossmech_dino2"
+          }
+        ]
+      }
+    }
+  ]
+}
