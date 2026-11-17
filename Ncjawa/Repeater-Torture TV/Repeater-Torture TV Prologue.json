@@ -1,0 +1,554 @@
+{
+  "#comment": "Egypt Zomboss",
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "NameMultiLanguage": {
+          "en": "Epic Quest : Repeater - torture TV ! - Prologue",
+          "zh": "史诗任务 : I双TV ! - 序章"
+        },
+        "DescriptionMultiLanguage": {
+          "en": "Hello, I'm Repeater, I'm a veteran of PvZ",
+          "zh": "你好，我是双重射手，我是植物大战僵尸行业的老兵"
+        },
+        "Name": "Epic Quest : Repeater - torture TV ! - Step 1",
+        "Description": "Hello, I'm Repeater, I'm a veteran of PvZ",
+        "FirstRewardParam": "sauce",
+        "FirstRewardType": "worldtrophy",
+        "FirstIntroNarrative": "R0_INTRO",
+        "FirstOutroNarrative": "R0_OUTRO",
+        "LevelNumber": 0,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(ZombossIntro@LevelModules)",
+          "RTID(EgyptMowers@LevelModules)",
+          "RTID(Gravestones@CurrentLevel)",
+          "RTID(ConveyorBelt@CurrentLevel)",
+          "RTID(ZombossBattle@CurrentLevel)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)"
+        ],
+        "MusicType": "MiniGame_A",
+        "RepeatPlayForceToWorldMap": true,
+        "StageModule": "RTID(EgyptNightStage@LevelModules)",
+        "VictoryModule": "RTID(ZombossVictoryOutro@LevelModules)",
+        "GameFeaturesToUnlock": [
+          "world_trophy_egypt"
+        ],
+        "LoadDefaultMusic": false
+      }
+    },
+    {
+      "objclass": "NarrativeProperties",
+      "aliases": [
+        "R0_INTRO"
+      ],
+      "objdata": {
+        "Flow": [
+          {
+            "Character": "crazydave",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "crazydave",
+            "Action": "TIRED",
+            "Lines": {
+              "en": "Oh,man.....",
+              "zh": "（男人叹气声）"
+            }
+          },
+          {
+            "Character": "crazydave",
+            "Action": "TIRED",
+            "Lines": {
+              "en": "The Repeater is too weak.....",
+              "zh": "这个牢双怎么这么菜啊......"
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "winnie",
+            "Action": "SAY",
+            "Lines": {
+              "en": "I can't agree more,Uesr Dave.",
+              "zh": "兑。，英改师。"
+            }
+          },
+          {
+            "Character": "crazydave",
+            "Action": "SAY",
+            "Lines": {
+              "en": "Then just buff the Repeater already!!",
+              "zh": "那就快点加强牢双啊（怒"
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "SAY",
+            "Lines": {
+              "en": "One more question and it's getting deleted.",
+              "zh": "再问删了。"
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "NPC_EXIT"
+          },
+          {
+            "Character": "crazydave",
+            "Action": "SAY",
+            "Lines": {
+              "en": "......",
+              "zh": "......"
+            }
+          },
+          {
+            "Character": "crazydave",
+            "Action": "NPC_EXIT"
+          }
+        ]
+      }
+    },
+    {
+      "objclass": "NarrativeProperties",
+      "aliases": [
+        "R0_OUTRO"
+      ],
+      "objdata": {
+        "Flow": [
+          {
+            "Character": "crazydave",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "crazydave",
+            "Action": "SHOUT",
+            "Lines": {
+              "en": "Wow,a bottle of sauce!",
+              "zh": "哇哦，一瓶酱！"
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "winnie",
+            "Action": "SAY",
+            "Lines": {
+              "en": "Don't touch that sauce!",
+              "zh": "别动那瓶酱！"
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "SAY",
+            "Lines": {
+              "en": "It's for the Repeater!",
+              "zh": "那是给牢双的！"
+            }
+          },
+          {
+            "Character": "crazydave",
+            "Action": "SAY",
+            "Lines": {
+              "en": "But where's the Repeater?",
+              "zh": "但是牢双去哪了？"
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "SAY",
+            "Lines": {
+              "en": ".......I don't know.",
+              "zh": "我不知道。"
+            }
+          },
+          {
+            "Character": "crazydave",
+            "Action": "SAY",
+            "Lines": {
+              "en": "Then I'm claiming this sauce for myself!",
+              "zh": "既然牢双不在，那这瓶酱就归我了！"
+            }
+          },
+          {
+            "Character": "crazydave",
+            "Action": "BRINGOUT_TACO"
+          },
+          {
+            "Character": "crazydave",
+            "Action": "EAT_TACO"
+          },
+          {
+            "Character": "crazydave",
+            "Action": "SAY",
+            "Lines": {
+              "en": "*Burps.",
+              "zh": "吃饱了。"
+            }
+          },
+          {
+            "Character": "crazydave",
+            "Action": "NPC_EXIT"
+          },
+          {
+            "Character": "winnie",
+            "Action": "SAY",
+            "Lines": {
+              "en": ".......",
+              "zh": "........"
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "NPC_EXIT"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "ZombossBattle"
+      ],
+      "objclass": "ZombossBattleModuleProperties",
+      "objdata": {
+        "ReservedColumnCount": 2,
+        "ZombossMechType": "RTID(zombossmech_egypt_r0@CurrentLevel)",
+        "ZombossDeathRow": 3,
+        "ZombossDeathColumn": 5,
+        "ZombossSpawnGridPosition": {
+          "mX": 6,
+          "mY": 3
+        }
+      }
+    },
+    {
+      "aliases": [
+        "ConveyorBelt"
+      ],
+      "objclass": "ConveyorSeedBankProperties",
+      "objdata": {
+        "DropDelayConditions": [
+          {
+            "Delay": 2,
+            "MaxPackets": 0
+          },
+          {
+            "Delay": 3,
+            "MaxPackets": 2
+          },
+          {
+            "Delay": 5,
+            "MaxPackets": 4
+          },
+          {
+            "Delay": 8,
+            "MaxPackets": 8
+          }
+        ],
+        "InitialPlantList": [
+          {
+            "MaxCount": 10,
+            "MaxWeightFactor": 0.1,
+            "MinCount": 5,
+            "MinWeightFactor": 2,
+            "PlantType": "torchwood",
+            "Weight": 10
+          },
+          {
+            "MaxCount": 5,
+            "MaxWeightFactor": 0,
+            "PlantType": "cherry_bomb",
+            "Weight": 10
+          },
+          {
+            "MaxCount": 2,
+            "MaxWeightFactor": 0,
+            "MinCount": 1,
+            "MinWeightFactor": 3,
+            "PlantType": "gravebuster",
+            "Weight": 7
+          },
+          {
+            "MaxCount": 2,
+            "MaxWeightFactor": 0.1,
+            "MinCount": 1,
+            "MinWeightFactor": 2,
+            "PlantType": "iceburg",
+            "Weight": 10
+          },
+          {
+            "MaxCount": 10,
+            "MaxWeightFactor": 0.1,
+            "MinCount": 5,
+            "MinWeightFactor": 2,
+            "PlantType": "repeater",
+            "Weight": 25
+          },
+          {
+            "MaxCount": 10,
+            "MaxWeightFactor": 0.1,
+            "PlantType": "icebloom",
+            "Weight": 10
+          },
+          {
+            "MaxCount": 5,
+            "MaxWeightFactor": 0.1,
+            "PlantType": "wallnut",
+            "Weight": 10
+          }
+        ],
+        "SpeedConditions": [
+          {
+            "MaxPackets": 0,
+            "Speed": 100
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "zombossmech_egypt_r0"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(zombossmech_egypt_r0@CurrentLevel)",
+        "ZombieBasedOn": "zombossmech_egypt"
+      }
+    },
+    {
+      "aliases": [
+        "zombossmech_egypt_r0"
+      ],
+      "objclass": "ZombieProperties",
+      "objdata": {
+        "MissileType": "zomboss_missile_egypt",
+        "CannotBeEnlightenedBySolarSage": true,
+        "ImmuneToSweetPotato": true,
+        "ImmuneToShrinkingViolet": true,
+        "ZombieSort": "Zomboss",
+        "IgnoredBySnapPea": true,
+        "CannotBeGrabbedByPtero": true,
+        "CannotBeDetectedByPowerToss": true,
+        "CannotBeDraggedByTangleKelp": true,
+        "CannotBeTossedByCitron": true,
+        "CannotBeDetectedBySapfling": true,
+        "CannotBeSwallowedByChomper": true,
+        "ChiliStunDurationMult": 0,
+        "CannotCarryPlantfoodsInWaves": true,
+        "FoeEatDamageReflectPct": 0.5,
+        "LivesInDeepWater": true,
+        "WalkSPS": 0.185,
+        "EatDPS": 100,
+        "Toughness": 190,
+        "ImmuneToGarlic": true,
+        "WavePointCost": 100,
+        "Weight": 0,
+        "HitRect": "RTID(ZombossMechHitRect@RectangleProps)",
+        "AttackRect": "RTID(ZombossMechAttackRect@RectangleProps)",
+        "ZombossMechLevel": 1,
+        "ZombossStages": [
+          {
+            "Actions": [
+              {
+                "actionName": "rush",
+                "summonProps": {
+                  "zombieList": [],
+                  "pointMin": 1000,
+                  "pointMax": 2000
+                },
+                "weight": 5,
+                "repeatMax": 3,
+                "repeatMin": 1
+              },
+              {
+                "actionName": "summon",
+                "summonProps": {
+                  "zombieList": [
+                    "mummy_armor4",
+                    "mummy_armor2",
+                    "pharaoh",
+                    "camel_onehump",
+                    "tomb_raiser"
+                  ],
+              "pointMin": 2000,
+              "pointMax": 2500
+                },
+                "weight": 18,
+                "repeatMax": 3,
+                "repeatMin": 2
+              },
+              {
+                "actionName": "shoot",
+                "summonProps": {
+                  "zombieList": [],
+                  "pointMin": 1000,
+                  "pointMax": 2000
+                },
+                "weight": 12,
+                "repeatMax": 3,
+                "repeatMin": 1
+              }
+            ],
+            "AnimRateModifier": 1,
+            "ChilledDurationFromFrozen": 7,
+            "DamageIndexFull": 0,
+            "DamageIndexHalf": 2,
+            "HitPoints": 10000,
+            "MaxIdleTime": 0.5,
+            "MinIdleTime": 0.3,
+            "StunDamageScale": 2,
+            "StunStaggerBackMovement": 1,
+            "StunStaggerBackTime": 0.4,
+            "StunTime": 3
+          },
+          {
+            "Actions": [
+              {
+                "actionName": "summon",
+                "summonProps": {
+                  "zombieList": [
+                    "mummy_armor4",
+                    "dark_juggler",
+                    "pharaoh",
+                    "camel_twohump",
+                    "explorer"
+                  ],
+                  "pointMin": 3000,
+                  "pointMax": 3500
+                },
+                "weight": 18,
+                "repeatMax": 5,
+                "repeatMin": 2
+              },
+              {
+                "actionName": "rush",
+                "summonProps": {
+                  "zombieList": [],
+                  "pointMin": 1000,
+                  "pointMax": 2000
+                },
+                "weight": 5,
+                "repeatMax": 3,
+                "repeatMin": 1
+              },
+              {
+                "actionName": "shoot",
+                "summonProps": {
+                  "zombieList": [],
+                  "pointMin": 1000,
+                  "pointMax": 2000
+                },
+                "weight": 10,
+                "repeatMax": 3,
+                "repeatMin": 1
+              }
+            ],
+            "AnimRateModifier": 1.25,
+            "ChilledDurationFromFrozen": 7,
+            "DamageIndexFull": 3,
+            "DamageIndexHalf": 4,
+            "HitPoints": 10000,
+            "MaxIdleTime": 1,
+            "MinIdleTime": 0.5,
+            "StunDamageScale": 1.5,
+            "StunStaggerBackMovement": 1,
+            "StunStaggerBackTime": 0.4,
+            "StunTime": 2
+          },
+          {
+            "Actions": [
+              {
+                "actionName": "shoot",
+                "summonProps": {
+                  "zombieList": [],
+                  "pointMin": 1000,
+                  "pointMax": 2000
+                },
+                "weight": 5,
+                "repeatMax": 5,
+                "repeatMin": 3
+              },
+              {
+                "actionName": "summon",
+                "summonProps": {
+                  "zombieList": [
+                    "egypt_gargantuar",
+                    "pharaoh",
+                    "explorer_veteran",
+                    "abbot_3section_staff",
+                    "kongfu_bomb",
+                    "mummy_armor4",
+                    "tomb_raiser"
+                  ],
+                  "pointMin": 3500,
+                  "pointMax": 4500
+                },
+                "weight": 18,
+                "repeatMax": 2,
+                "repeatMin": 1
+              },
+              {
+                "actionName": "rush",
+                "summonProps": {
+                  "zombieList": [],
+                  "pointMin": 1000,
+                  "pointMax": 2000
+                },
+                "weight": 10,
+                "repeatMax": 3,
+                "repeatMin": 2
+              }
+            ],
+            "AnimRateModifier": 1.5,
+            "ChilledDurationFromFrozen": 7,
+            "DamageIndexFull": 5,
+            "DamageIndexHalf": 6,
+            "HitPoints": 12000,
+            "MaxIdleTime": 0.5,
+            "MinIdleTime": 0.2,
+            "StunDamageScale": 1.25,
+            "StunStaggerBackMovement": 1,
+            "StunStaggerBackTime": 0.4,
+            "StunTime": 1
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "Waves": []
+      }
+    },
+    {
+      "aliases": [
+        "Gravestones"
+      ],
+      "objclass": "GravestoneProperties",
+      "objdata": {
+        "GravestoneCount": 3,
+        "SpawnColumnEnd": 6,
+        "SpawnColumnStart": 4
+      }
+    }
+  ],
+  "version": 1
+}
