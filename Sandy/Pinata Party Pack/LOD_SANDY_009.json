@@ -1,0 +1,364 @@
+{
+	"Information": {
+		"Author": "Sandy",
+		"Introduction": "",
+		"Version": "1.0"
+  	},
+	"#comment": "Level Of The Day Test 1",
+	"objects": [
+		{
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "[PLAYERS_TRIP_TO_LOD]",
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"DraperPromo": "primalpeashooter",
+				"Modules": [
+					"RTID(LevelOfTheDayIntro@LevelModules)",
+					"RTID(LevelOfTheDayModule@CurrentLevel)",
+					"RTID(NewWaves@CurrentLevel)",
+					"RTID(DefaultZombieWinCondition@LevelModules)",
+					"RTID(ChallengeModule@CurrentLevel)",
+					"RTID(ZombiesDeadWinCon@LevelModules)",
+					"RTID(FrontLawnMowers@LevelModules)",
+					"RTID(SeedBank@CurrentLevel)",
+					"RTID(SunDropper@CurrentLevel)",
+					"RTID(PlantMods@CurrentLevel)"
+				],
+				"Name": "[LOD_LEVEL_NAME]",
+				"NormalPresentTable": "egypt_normal_01",
+				"Writtenby": "Sandy",
+				"#Comment": "Mechanic Demonstration - Knockback",
+				"ShinyPresentTable": "egypt_shiny_01",
+				"StageModule": "RTID(IceageTutorialStage@LevelModules)",
+				"VictoryModule": "RTID(LevelOfTheDayOutro@LevelModules)",
+				"IsLevelOfTheDay": true
+			}
+		},
+		{
+			"aliases": [
+				"SunDropper"
+			],
+			"objclass": "SunDropperProperties",
+			"objdata": {
+				"InitialSunDropDelay": 1,
+				"SunCountdownBase": 10,
+				"SunCountdownIncreasePerSun": 0,
+				"SunCountdownMax": 10.5,
+				"SunCountdownRange": 0.5,
+				"Value": 50
+			}
+		},
+		{
+			"aliases": [
+				"ChallengeModule"
+			],
+			"objclass": "StarChallengeModuleProperties",
+			"objdata": {
+				"Challenges": [
+					[
+						"RTID(Challenge1@CurrentLevel)"
+					]
+				],
+				"ChallengesAlwaysAvailable": true
+			}
+		},
+		{
+			"aliases": [
+				"Challenge1"
+			],
+			"objclass": "StarChallengeBeatTheLevelProps",
+			"objdata": {
+				"Descriptions": [
+					"Plants deal no damage and take longer to recharge but always knock back",
+					"Use Blover to defeat Zombies"
+				],
+				"DescriptionsMultiLanguage": []
+			}
+		},
+		{
+			"aliases": [
+				"WaveManagerProps"
+			],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"Waves": [ 
+					["RTID(Wave1@CurrentLevel)"],
+					["RTID(Wave2@CurrentLevel)"],
+					["RTID(Wave3@CurrentLevel)"],
+					["RTID(Wave4@CurrentLevel)"],
+					["RTID(Wave5@CurrentLevel)"],
+					["RTID(Wave6@CurrentLevel)"],
+					["RTID(Wave7@CurrentLevel)"],
+					["RTID(Wave8@CurrentLevel)"],
+					["RTID(Wave9@CurrentLevel)"],
+					["RTID(Wave10@CurrentLevel)"],
+					["RTID(Wave11@CurrentLevel)"],
+					["RTID(Wave12@CurrentLevel)"],
+					["RTID(Wave13@CurrentLevel)"],
+					["RTID(Wave14@CurrentLevel)"],
+					["RTID(Wave15@CurrentLevel)"]
+				]
+			}
+		},
+		{
+			"aliases": [
+				"LevelOfTheDayModule"
+			],
+			"objclass": "LevelOfTheDayModuleProperties",
+			"objdata": {
+				"FlagCount": 5,
+				"PlantfoodToSpawnCount": 0,
+				"PointIncrementPerWave": 90,
+				"StartingPoints": 100,
+				"WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)",
+				"WavesPerFlag": 3,
+				"ZombiePool": [
+					"RTID(iceage@ZombieTypes)",
+					"RTID(iceage_armor1@ZombieTypes)",
+					"RTID(iceage_imp@ZombieTypes)",
+					"RTID(iceage_hunter@ZombieTypes)",
+					"RTID(iceage_hunter_veteran@ZombieTypes)",
+					"RTID(iceage_troglobite@ZombieTypes)"
+				]
+			}
+		},
+		{
+			"aliases": [
+				"NewWaves"
+			],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {}
+		},
+		{
+			"objclass": "SeedBankProperties",
+			"objdata": {
+				"SelectionMethod": "preset",
+				"UnlockAll": true,
+				"OverrideSeedSlotsCount": 7,
+				"PresetPlantList": [
+					{
+						"Level": -1,
+						"PlantType": "primalsunflower"
+					},
+					{
+						"Level": -1,
+						"PlantType": "blover"
+					},
+					{
+						"Level": -1,
+						"PlantType": "hollyknight"
+					},
+					{
+						"Level": -1,
+						"PlantType": "guacodile"
+					},
+					{
+						"Level": -1,
+						"PlantType": "chardguard"
+					},
+					{
+						"Level": -1,
+						"PlantType": "primalpeashooter"
+					},
+					{
+						"Level": -1,
+						"PlantType": "springbean"
+					}
+				]
+			},
+			"aliases": [
+				"SeedBank"
+			]
+    	},
+		{
+			"aliases": [
+				"PlantMods"
+			],
+			"objclass": "PlantModifierProperties",
+			"objdata": {
+				"SuppressParticle": true,
+				"List": [
+				{
+					"Type": "hollybarrierleaf",
+					"NewObjdata": {
+					"StabDamage": 0,
+					"StabInterval": 999,
+					"Toughness": 500
+					}
+				},
+				{
+					"Type": "hollyknight",
+					"NewObjdata": {
+					"HollyProjectileType": "RTID(hollyleaf2@CurrentLevel)",
+					"Cooldown": 25,
+					"CooldownFrom": 0.5
+					}
+				},
+				{
+					"Type": "guacodile",
+					"NewObjdata": {
+					"PeaType": "RTID(guacodile2@CurrentLevel)",
+					"PeaTypeChild": "RTID(guacodile_child2@CurrentLevel)",
+					"Cooldown": 10,
+					"CooldownFrom": 0.5,
+					"ChildrenBiteDamage": 0
+					}
+				},
+				{
+					"Type": "primalpeashooter",
+					"NewObjdata": {
+					"PeaType": "RTID(pea_primal2@CurrentLevel)",
+					"Cooldown": 10,
+					"CooldownFrom": 0.5,
+					"KnockbackDistance": 0.3,
+					"KnockbackChance": 1
+					}
+				},
+				{
+					"Type": "blover",
+					"NewObjdata": {
+					"Cooldown": 10,
+					"CooldownFrom": 0
+					}
+				},
+				{
+					"Type": "primalsunflower",
+					"NewObjdata": {
+					"Cooldown": 10,
+					"CooldownFrom": 0
+					}
+				},
+				{
+					"Type": "chardguard",
+					"NewObjdata": {
+					"Cooldown": 25,
+					"CooldownFrom": 0.5
+					}
+				},
+				{
+					"Type": "springbean",
+					"NewObjdata": {
+					"Cooldown": 25,
+					"CooldownFrom": 0.25
+					}
+				}
+				]
+			}
+		},
+		{
+		"objclass": "ProjectileType",
+		"aliases": [
+			"hollyleaf2"
+		],
+		"objdata": {
+			"ProjectileBasedOn": "hollyleaf",
+			"Props": "RTID(hollyleaf2@CurrentLevel)"
+		}
+		},
+		{
+		"objclass": "ProjectileProperties",
+		"aliases": [
+			"hollyleaf2"
+		],
+		"objdata": {
+			"PlantTypeToSpawn": "hollybarrierleaf",
+			"Damage": 0,
+			"KnockbackDistance": 1,
+			"CannotBeReversedByJester": true,
+			"PlantTypesToReplace": [
+			"hollybarrierleaf"
+			],
+			"SplashDamage": [
+			{
+				"Damage": 0,
+				"KnockbackDistance": 1,
+				"Range": {
+				"w": 3,
+				"h": 3
+				}
+			}
+			],
+			"Size": {
+			"w": 50,
+			"h": 50
+			}
+		}
+		},
+		{
+		"objclass": "ProjectileType",
+		"aliases": [
+			"guacodile2"
+		],
+		"objdata": {
+			"MintBoostedType": "guacodile2",
+			"ProjectileBasedOn": "guacodile",
+			"Props": "RTID(guacodile2@CurrentLevel)"
+		}
+		},
+		{
+		"objclass": "ProjectileProperties",
+		"aliases": [
+			"guacodile2"
+		],
+		"objdata": {
+			"Damage": 0,
+			"Size": {
+			"w": 16,
+			"h": 16
+			}
+		}
+		},
+		{
+		"objclass": "ProjectileType",
+		"aliases": [
+			"guacodile_child2"
+		],
+		"objdata": {
+			"MintBoostedType": "guacodile2",
+			"ProjectileBasedOn": "guacodile_child",
+			"Props": "RTID(guacodile_child2@CurrentLevel)"
+		}
+		},
+		{
+		"objclass": "ProjectileProperties",
+		"aliases": [
+			"guacodile_child2"
+		],
+		"objdata": {
+			"Damage": 0,
+			"Size": {
+			"w": 100,
+			"h": 48
+			}
+		}
+		},
+		{
+		"objclass": "ProjectileType",
+		"aliases": [
+			"pea_primal2"
+		],
+		"objdata": {
+			"MintBoostedType": "pea_primal2",
+			"ProjectileBasedOn": "pea_primal",
+			"Props": "RTID(pea_primal2@CurrentLevel)"
+		}
+		},
+		{
+		"objclass": "ProjectileProperties",
+		"aliases": [
+			"pea_primal2"
+		],
+		"objdata": {
+			"Damage": 0,
+			"YellowIgnitedType": "pea_primal_flame_yellow",
+			"BlueIgnitedType": "pea_primal_flame_blue",
+			"StunDuration": 1,
+			"Size": {
+			"w": 16,
+			"h": 16
+			}
+		}
+		}
+	],
+	"version": 1
+}

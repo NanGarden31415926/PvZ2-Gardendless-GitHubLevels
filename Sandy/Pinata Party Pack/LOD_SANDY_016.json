@@ -1,0 +1,353 @@
+{
+	"Information": {
+		"Author": "Sandy",
+		"Introduction": "",
+		"Version": "1.0"
+  	},
+	"#comment": "Level Of The Day Test 1",
+	"objects": [
+		{
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "[PLAYERS_TRIP_TO_LOD]",
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"DraperPromo": "primalpeashooter",
+				"Modules": [
+					"RTID(LevelOfTheDayIntro@LevelModules)",
+					"RTID(LevelOfTheDayModule@CurrentLevel)",
+					"RTID(NewWaves@CurrentLevel)",
+					"RTID(DefaultZombieWinCondition@LevelModules)",
+					"RTID(ChallengeModule@CurrentLevel)",
+					"RTID(ZombiesDeadWinCon@LevelModules)",
+					"RTID(InitialPlant@CurrentLevel)",
+					"RTID(Rails@CurrentLevel)",
+					"RTID(LevelDeadLine@CurrentLevel)",
+					"RTID(PlantMods@CurrentLevel)"
+				],
+				"Name": "[LOD_LEVEL_NAME]",
+				"NormalPresentTable": "egypt_normal_01",
+				"Writtenby": "Sandy",
+				"#Comment": "Bowling",
+				"ShinyPresentTable": "egypt_shiny_01",
+				"StageModule": "RTID(SportzballStage@LevelModules)",
+				"VictoryModule": "RTID(LevelOfTheDayOutro@LevelModules)",
+				"IsLevelOfTheDay": true
+			}
+		},
+		{
+		"objclass": "PlantType",
+		"aliases": [
+			"coconutcannon_t"
+		],
+		"objdata": {
+			"PlantBasedOn": "coconutcannon",
+			"Properties": "RTID(coconutcannon_p@CurrentLevel)"
+		}
+		},
+		{
+		"objclass": "PlantProperties",
+		"aliases": [
+			"coconutcannon_p"
+		],
+		"objdata": {
+			"PeaType": "bowling1",
+			"RestTime": 5
+		}
+		},
+		{
+			"aliases": [
+				"Rails"
+			],
+			"objclass": "RailcartProperties",
+			"objdata": {
+				"RailcartType": "railcart_tutorial",
+				"Rails": [
+					{
+						"Column": 1,
+						"RowStart": 0,
+						"RowEnd": 4
+					}
+				],
+				"Railcarts": [
+					{
+						"Column": 1,
+						"Row": 2
+					}
+				]
+			}
+		},
+		{
+			"objclass": "InitialPlantProperties",
+			"objdata": {
+				"InitialPlantPlacements": [
+				{"TypeName": "RTID(coconutcannon_t@CurrentLevel)","GridX": 1,"GridY": 2}
+				]
+			},
+			"aliases": [
+				"InitialPlant"
+			]
+    	},
+		{
+			"aliases": [
+				"SunDropper"
+			],
+			"objclass": "SunDropperProperties",
+			"objdata": {
+				"InitialSunDropDelay": 1,
+				"SunCountdownBase": 10,
+				"SunCountdownIncreasePerSun": 0,
+				"SunCountdownMax": 10.5,
+				"SunCountdownRange": 0.5,
+				"Value": 50
+			}
+		},
+		{
+			"aliases": [
+				"ChallengeModule"
+			],
+			"objclass": "StarChallengeModuleProperties",
+			"objdata": {
+				"Challenges": [
+					[
+						"RTID(Challenge1@CurrentLevel)"
+					]
+				],
+				"ChallengesAlwaysAvailable": true
+			}
+		},
+		{
+			"aliases": [
+				"Challenge1"
+			],
+			"objclass": "StarChallengeBeatTheLevelProps",
+			"objdata": {
+				"Descriptions": [
+					"Bowl away in under 110 seconds!",
+					"Note: Coconut cannon shoots bowling bulbs"
+				],
+				"DescriptionsMultiLanguage": []
+			}
+		},
+		{
+		"objclass": "LevelDeadLineProps",
+		"aliases": [
+			"LevelDeadLine"
+		],
+		"objdata": {
+			"SuppressObjectiveTip": true,
+			"Countdown": 110,
+			"Events": [
+			"RTID(Deadline@CurrentLevel)"
+			]
+		}
+		},
+		{
+		"aliases": [
+			"Wave1"
+		],
+		"objclass": "SpawnZombiesJitteredWaveActionProps",
+		"objdata": {
+			"MustKillAllToNextWave": true,
+			"Zombies": [
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 3, "Column": 6},
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 4, "Column": 7},
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 2, "Column": 7},
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 3, "Column": 8}
+		]
+		}
+		},
+		{
+		"aliases": [
+			"Wave2"
+		],
+		"objclass": "SpawnZombiesJitteredWaveActionProps",
+		"objdata": {
+			"MustKillAllToNextWave": true,
+			"Zombies": [
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 3, "Column": 6},
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 4, "Column": 7},
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 2, "Column": 7},
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 3, "Column": 9},
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 1, "Column": 8},
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 5, "Column": 8}
+		]
+		}
+		},
+		{
+		"aliases": [
+			"Wave3"
+		],
+		"objclass": "SpawnZombiesJitteredWaveActionProps",
+		"objdata": {
+			"MustKillAllToNextWave": true,
+			"Zombies": [
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 3, "Column": 6},
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 4, "Column": 7},
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 3, "Column": 7},
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 2, "Column": 7},
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 3, "Column": 9},
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 4, "Column": 9},
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 2, "Column": 9},
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 1, "Column": 8},
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 5, "Column": 8},
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 3, "Column": 8}
+		]
+		}
+		},
+		{
+		"aliases": [
+			"Wave4"
+		],
+		"objclass": "SpawnZombiesJitteredWaveActionProps",
+		"objdata": {
+			"MustKillAllToNextWave": true,
+			"Zombies": [
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 3, "Column": 6},
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 4, "Column": 7},
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 3, "Column": 7},
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 2, "Column": 7},
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 3, "Column": 9},
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 1, "Column": 9},
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 5, "Column": 9},
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 4, "Column": 9},
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 2, "Column": 9},
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 1, "Column": 8},
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 5, "Column": 8},
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 3, "Column": 8},
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 2, "Column": 8},
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 4, "Column": 8}
+		]
+		}
+		},
+		{
+		"aliases": [
+			"Wave5"
+		],
+		"objclass": "SpawnZombiesJitteredWaveActionProps",
+		"objdata": {
+			"MustKillAllToNextWave": true,
+			"Zombies": [
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 1, "Column": 4},
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 3, "Column": 6},
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 2, "Column": 7},
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 4, "Column": 9}
+		]
+		}
+		},
+		{
+		"objclass": "ZombieType",
+		"aliases": [
+			"egg"
+		],
+		"objdata": {
+			"Properties": "RTID(egg_p@CurrentLevel)",
+			"ZombieBasedOn": "easter_egg"
+		}
+		},
+		{
+		"objclass": "ZombieProperties",
+		"aliases": [
+			"egg_p"
+		],
+		"objdata": {
+			"ImmuneToSporeShroom": true,
+			"ZombieSort": "Normal",
+			"WalkSPS": 0.185,
+			"Toughness": 1,
+			"EatDPS": 100,
+			"WavePointCost": 100,
+			"Weight": 1000,
+			"HitRect": "RTID(CommonHitRect@RectangleProps)",
+			"AttackRect": "RTID(CommonAttackRect@RectangleProps)",
+			"Lifespan": {
+			"Min": 9999,
+			"Max": 9999
+			},
+			"ZombiesToSpawn": [
+				
+			]
+		}
+		},
+		{
+		"aliases": [
+			"Deadline"
+		],
+		"objclass": "LoseGameWaveActionProps",
+		"objdata": {
+			"Tip": {
+			"en": "YOU LOST!",
+			"zh": "你输了"
+			},
+			"SmallTip": {
+			"en": "",
+			"zh": ""
+			}
+		}
+		},
+		{
+			"aliases": [
+				"WaveManagerProps"
+			],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"SuppressFlagZombie": true,
+				"ZombieCountdownFirstWaveSecs": 1,
+				"Waves": [ 
+					["RTID(Wave1@CurrentLevel)"],
+					["RTID(Wave2@CurrentLevel)"],
+					["RTID(Wave3@CurrentLevel)"],
+					["RTID(Wave4@CurrentLevel)"],
+					["RTID(Wave5@CurrentLevel)"]
+				]
+			}
+		},
+		{
+			"aliases": [
+				"LevelOfTheDayModule"
+			],
+			"objclass": "LevelOfTheDayModuleProperties",
+			"objdata": {
+				"FlagCount": 1,
+				"PlantfoodToSpawnCount": 0,
+				"PointIncrementPerWave": 140,
+				"StartingPoints": 100,
+				"WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)",
+				"WavesPerFlag": 5,
+				"ZombiePool": [
+					
+				]
+			}
+		},
+		{
+			"aliases": [
+				"NewWaves"
+			],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {}
+		},
+		{
+			"objclass": "SeedBankProperties",
+			"objdata": {
+				"SelectionMethod": "preset",
+				"UnlockAll": true,
+				"OverrideSeedSlotsCount": 8
+			},
+			"aliases": [
+				"SeedBank"
+			]
+    	},
+		{
+			"aliases": [
+				"PlantMods"
+			],
+			"objclass": "PlantModifierProperties",
+			"objdata": {
+				"SuppressParticle": false,
+				"List": [
+					
+				]
+			}
+		}
+	],
+	"version": 1
+}

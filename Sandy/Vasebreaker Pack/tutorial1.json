@@ -1,0 +1,86 @@
+{
+  "Information": {
+    "Author": "Sandy",
+    "Introduction": "",
+    "Version": "1.0",
+    "CreatedAt": "2026-1-21",
+    "UpdatedAt": "2025-1-21",
+    "Difficulty": "Easy",
+    "Category": "Adventure"
+  },
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "<PLAYERNAME>'s House",
+        "IsVasebreaker": true,
+        "LevelNumber": 1,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(VaseBreakerArcade@LevelModules)",
+          "RTID(VaseBreakerProps@CurrentLevel)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(Intro@CurrentLevel)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(DefaultZombieWinCondition@LevelModules)"
+        ],
+        "Name": "Vasebreaker - <PLAYERNAME>'s House\nClassics",
+        "WritenBy": "Sandy",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "StageModule": "RTID(FrontLawnStage@LevelModules)"
+      }
+    },
+    {
+      "objclass": "LevelIntroProperties",
+      "aliases": [
+        "Intro"
+      ],
+      "objdata": {
+        "PanStartOffset": 0,
+        "PanStreetOffset": 0,
+        "PanEndOffset": 0,
+        "PanRightDuration": 0.1,
+        "PanLeftDuration": 0.1,
+        "PanMoveRightTime": 0.1,
+        "PanMoveLeftTime": 0.1,
+        "AdditionalStartingSun": 0,
+        "ZombiePreviewOff": false
+      }
+  },
+  {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "UnlockAll": false,
+        "SelectionMethod": "preset",
+        "SuppressObjectiveTip": true
+      }
+    },
+    {
+      "aliases": [
+        "VaseBreakerProps"
+      ],
+      "objclass": "VaseBreakerPresetProperties",
+      "objdata": {
+        "VaseGridItemType": "vase",
+        "MinColumnIndex": 4,
+        "MaxColumnIndex": 8,
+        "Vases": [
+            {"ZombieTypeName": "tutorial", "Count": 3},
+            {"ZombieTypeName": "tutorial_armor2", "Count": 3},
+            {"ZombieTypeName": "tutorial_armor1", "Count": 2},
+            {"ZombieTypeName": "modern_newspaper", "Count": 2},
+            {"PlantTypeName": "peashooter", "Count": 5},
+            {"PlantTypeName": "snowpea", "Count": 5},
+            {"PlantTypeName": "squash", "Count": 5}
+        ],
+        "NumColoredPlantVases": 1,
+        "NumColoredZombieVases": 0  
+      }
+    }
+  ],
+  "version": 1
+}

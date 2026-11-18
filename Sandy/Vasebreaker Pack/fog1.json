@@ -1,0 +1,150 @@
+{
+  "Information": {
+    "Author": "Sandy",
+    "Introduction": "",
+    "Version": "1.0",
+    "CreatedAt": "2026-1-21",
+    "UpdatedAt": "2025-1-21",
+    "Difficulty": "Easy",
+    "Category": "Adventure"
+  },
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "<PLAYERNAME>'s House",
+        "IsVasebreaker": true,
+        "LevelNumber": 1,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(VaseBreakerArcade@LevelModules)",
+          "RTID(VaseBreakerProps@CurrentLevel)",
+          "RTID(Puddles@CurrentLevel)",
+          "RTID(LevelScheduler@CurrentLevel)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(DefaultZombieWinCondition@LevelModules)"
+        ],
+        "Name": "Vasebreaker - <PLAYERNAME>'s House\nHidden Away",
+        "WritenBy": "Sandy",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "StageModule": "RTID(ModernNightStage@LevelModules)"
+      }
+    },
+    {
+      "aliases": [
+          "LevelScheduler"
+      ],
+      "objclass": "LevelSchedulerProps",
+      "objdata": {
+          "TimeBeforeFirst": {
+              "Max": 0.1,
+              "Min": 0.1
+          },
+          "TimeBetween": {
+              "Max": 9999,
+              "Min": 9999
+          },
+          "Repeat": {
+              "Max": 1,
+              "Min": 1
+          },
+          "RewardWhenEnded": false,
+          "SuppressRewardState": false,
+          "Events": [
+              "RTID(Fog@CurrentLevel)"
+          ]
+      }
+    },
+    {
+      "aliases": [
+          "Fog"
+      ],
+      "objclass": "WaveFogEventProperties",
+        "objdata": {
+          "Fogs": [
+            {
+              "ModifyingType": "replace",
+              "BasePosition": {
+                "x": 2,
+                "y": -2
+              },
+              "FogMatrix": [
+                  "000001111",
+                  "000001111",
+                  "000001111",
+                  "000001111",
+                  "000001111"
+              ],
+              "Color": {
+                "r": 163,
+                "g": 161, "b": 173
+              }
+            },
+            {
+              "ModifyingType": "replace",
+              "BasePosition": {
+                "x": 2,
+                "y": 2
+              },
+              "FogMatrix": [
+                  "000001111",
+                  "000001111",
+                  "000001111",
+                  "000001111",
+                  "000001111"
+              ],
+              "Color": {
+                "r": 163,
+                "g": 161, "b": 173
+              }
+            }
+          ]
+        }
+    },
+    {
+      "aliases": [
+          "Puddles"
+      ],
+      "objclass": "InitialGridItemProperties",
+        "objdata": {
+          "InitialGridItemMatrixes": [
+            {
+              "GridMatrix": [
+                  "000000000",
+                  "000000000",
+                  "111111111",
+                  "111111111",
+                  "000000000"
+              ],
+              "TypeName": "potholepuddle"
+            }
+          ]
+        }
+    },
+    {
+      "aliases": [
+        "VaseBreakerProps"
+      ],
+      "objclass": "VaseBreakerPresetProperties",
+      "objdata": {
+        "VaseGridItemType": "vase",
+        "MinColumnIndex": 3,
+        "MaxColumnIndex": 8,
+        "Vases": [
+            {"ZombieTypeName": "duckytube", "Count": 3},
+            {"ZombieTypeName": "duckytube_armor2", "Count": 3},
+            {"ZombieTypeName": "duckytube_armor1", "Count": 3},
+            {"PlantTypeName": "seashroom", "Count": 8},
+            {"PlantTypeName": "doomshroom", "Count": 2},
+            {"PlantTypeName": "lilypad", "Count": 1},
+            {"PlantTypeName": "fumeshroom", "Count": 6},
+            {"PlantTypeName": "hypnoshroom", "Count": 3}
+        ],
+        "NumColoredPlantVases": 2,
+        "NumColoredZombieVases": 1
+      }
+    }
+  ],
+  "version": 1
+}

@@ -1,0 +1,633 @@
+{
+  "version": 1,
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "LevelNumber": 4,
+        "Description": "[PLAYERS_TRIP_TO_LOD]",
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"DraperPromo": "banana",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "StageModule": "RTID(AirRaidStage_T@CurrentLevel)",
+        "MusicType": "MiniGame_B",
+				"VictoryModule": "RTID(LevelOfTheDayOutro@LevelModules)",
+				"IsLevelOfTheDay": true,
+        "Name": "[LOD_LEVEL_NAME]",
+        "Writtenby": "Sandy",
+        "FirstIntroNarrative": "INTRO",
+        "ReplayIntroNarrative": "INTRO",
+        "Modules": [
+          "RTID(LevelOfTheDayIntro@LevelModules)",
+					"RTID(LevelOfTheDayModule@CurrentLevel)",
+          "RTID(AutoCollect@LevelModules)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(AirRaidZombieWinCondition@LevelModules)",
+          "RTID(SkyMiniGame@CurrentLevel)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(PlantMods@CurrentLevel)"
+        ]
+      }
+    },
+    {
+    "aliases": [
+        "INTRO"
+    ],
+    "objclass": "NarrativeProperties",
+    "objdata": {
+        "Flow": [
+        {
+            "Character": "winnieicon",
+            "Action": "NPC_ENTER"
+        },
+        {
+            "Character": "winnieicon",
+            "Action": "SAY",
+            "Lines": {
+                "en": "We're back in the sky, and we only have manual plants! ",
+                "zh": "We're back in the sky, and we only have manual plants! "
+            }
+        },
+        {
+            "Character": "winnieicon",
+            "Action": "SAY",
+            "Lines": {
+                "en": "The zombies got new weapons too! ",
+                "zh": "The zombies got new weapons too! "
+            }
+        },
+        {
+            "Character": "winnieicon",
+            "Action": "SAY",
+            "Lines": {
+                "en": "Lightning gun zombies now shoot electric orbs instead of positive / negative bolts! ",
+                "zh": "Lightning gun zombies now shoot electric orbs instead of positive / negative bolts! "
+            }
+        },
+        {
+            "Character": "winnieicon",
+            "Action": "SAY",
+            "Lines": {
+                "en": "Theres a boss fight at the last wave too! ",
+                "zh": "Theres a boss fight at the last wave too! "
+            }
+        }
+        ]
+    }
+    },
+    {
+      "objclass": "LawnType",
+      "aliases": [
+        "AirRaidStage_T"
+      ],
+      "objdata": {
+        "LawnBaseOn": "SkyShiplessNightStage",
+        "Properties": "RTID(AirRaidStage_P@CurrentLevel)"
+      }
+    },
+    {
+			"objclass": "ZombieType",
+			"aliases": [
+				"sky_electric_t"
+			],
+			"objdata": {
+				"Properties": "RTID(sky_electric_p@CurrentLevel)",
+				"ZombieBasedOn": "sky_electric"
+			}
+		},
+		{
+			"objclass": "ZombieProperties",
+			"aliases": [
+				"sky_electric_p"
+			],
+			"objdata": {
+				"ZombieSort": "Normal",
+				"ChooseToSpawnOnNonDeckRows": true,
+				"WalkSPS": 0.185,
+				"EatDPS": 100,
+				"Toughness": 700,
+				"WavePointCost": 450,
+				"Weight": 1000,
+				"SkyCityShipDetectXOffsetFiring": -60,
+				"SkyCityShipDetectXOffset": -40,
+				"ShipDPS": 100,
+				"PositiveBoltType": "electricpea_small",
+				"NegativeBoltType": "airraid_0",
+				"ProjectileCountPerShot": 18,
+				"ProjectileAngle": 360,
+        "AlwaysShoots" : true,
+				"ShootsTowardsAirRaidPlant": true,
+				"HitRect": "RTID(CommonHitRect@RectangleProps)",
+				"AttackRect": "RTID(CommonAttackRect@RectangleProps)",
+				"TimeBeforeFirst": {
+				"Min": 1,
+				"Max": 2
+				},
+				"TimeBetween": {
+				"Min": 4,
+				"Max": 5
+				},
+				"StartingArmors": [
+					"sky_armor1"
+				]
+			}
+		},
+    {
+      "objclass": "LawnProperties",
+      "aliases": [
+        "AirRaidStage_P"
+      ],
+      "objdata": {
+        "RailCart": "railcart_sky",
+        "Music": "Sky",
+        "IsAtNight": false,
+        "Basic_Zombie": [
+          "sky_t"
+        ],
+        "Flag_Zombie": [
+          "sky_flag_t"
+        ],
+        "Rally_Zombie": [
+          "sky_flag_t"
+        ],
+        "Armor1_Zombie": [
+          "sky_armor1_t"
+        ],
+        "Armor2_Zombie": [
+          "sky_armor2_t"
+        ],
+        "Armor3_Zombie": [
+          "sky_armor2_t"
+        ],
+        "Armor4_Zombie": [
+          "sky_armor2_t"
+        ],
+        "Gravestone": [
+          "gravestone_tutorial"
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "PlantMods"
+      ],
+      "objclass": "PlantModifierProperties",
+      "objdata": {
+        "SuppressParticle": true,
+        "List": [
+          {
+            "Type": "banana",
+            "NewObjdata": {
+              "RestTime": 3.5,
+              "SpawnedScale": 0.8,
+              "Toughness": 500
+            }
+          },
+          {
+            "Type": "missiletoe",
+            "NewObjdata": {
+              "RestTime": 3,
+              "SpawnedScale": 0.8,
+              "Toughness": 1000
+            }
+          }
+        ]
+      }
+    },
+    {
+      "objclass": "SkyMiniGameProperties",
+      "aliases": [
+        "SkyMiniGame"
+      ],
+      "objdata": {
+        "TargetPoint": 30000,
+        "Teams": [
+          {
+            "Difficulty": 3,
+            "Name": {
+              "en": "Manual Team",
+              "zh": "Manual Team"
+            },
+            "Members": [
+              {
+                "Type": "banana",
+                "FullPoint": 15000
+              },
+              {
+                "Type": "missiletoe"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "objclass": "WaveManagerModuleProperties",
+      "aliases": [
+        "NewWaves"
+      ],
+      "objdata": {
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "objclass": "WaveManagerProperties",
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objdata": {
+        "ZombieCountdownFirstWaveSecs": 4,
+        "Waves": [
+          ["RTID(Wave1@CurrentLevel)"],
+          ["RTID(Wave2@CurrentLevel)"],
+          ["RTID(Wave3@CurrentLevel)"],
+					["RTID(Wave4@CurrentLevel)"],
+					["RTID(Wave5@CurrentLevel)"],
+					["RTID(Wave6@CurrentLevel)"],
+					["RTID(Wave7@CurrentLevel)"],
+					["RTID(Wave8@CurrentLevel)"],
+					["RTID(Wave9@CurrentLevel)"]
+        ]
+      }
+    },
+    {
+			"aliases": [
+				"LevelOfTheDayModule"
+			],
+			"objclass": "LevelOfTheDayModuleProperties",
+			"objdata": {
+				"FlagCount": 3,
+				"PlantfoodToSpawnCount": 0,
+				"PointIncrementPerWave": 230,
+				"StartingPoints": 300,
+				"WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)",
+				"WavesPerFlag": 3,
+				"ZombiePool": [
+					"RTID(sky_t@CurrentLevel)",
+          "RTID(sky_armor1_t@CurrentLevel)",
+          "RTID(sky_armor2_t@CurrentLevel)",
+          "RTID(sky_twin_t@CurrentLevel)",
+          "RTID(sky_battleplane_t@CurrentLevel)",
+          "RTID(sky_electric_t@CurrentLevel)"
+				]
+			}
+		},
+    {
+			"aliases": [
+				"Wave9"
+			],
+			"objclass": "SpawnZombiesJitteredWaveActionProps",
+			"objdata": {
+				"Zombies": [
+				{"Type": "RTID(sky_boss_t@CurrentLevel)"}
+			]
+			}
+		},
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "sky_t"
+      ],
+      "objdata": {
+        "Properties": "RTID(sky_p@CurrentLevel)",
+        "ZombieBasedOn": "sky"
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "sky_p"
+      ],
+      "objdata": {
+        "WalkSPS": 0.27,
+        "EatDPS": 100,
+        "WavePointCost": 100,
+        "Weight": 1000,
+        "SpawnedScale": 0.8,
+        "AlwaysShoots": true,
+        "ProjectileType": "airraid_0",
+        "ProjectileCountPerShot": 1,
+        "ProjectileAngle": 0,
+        "ShootsTowardsAirRaidPlant": false,
+        "ProjectileSpeed": {
+          "Min": 6,
+          "Max": 6
+        },
+        "TimeBeforeFirst": {
+          "Min": 2,
+          "Max": 3
+        },
+        "TimeBetween": {
+          "Min": 1.5,
+          "Max": 2.5
+        }
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "sky_armor1_t"
+      ],
+      "objdata": {
+        "Properties": "RTID(sky_armor1_p@CurrentLevel)",
+        "ZombieBasedOn": "sky_armor1"
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "sky_armor1_p"
+      ],
+      "objdata": {
+        "WalkSPS": 0.27,
+        "EatDPS": 100,
+        "WavePointCost": 200,
+        "Weight": 3000,
+        "SpawnedScale": 0.8,
+        "AlwaysShoots": true,
+        "ProjectileType": "airraid_0",
+        "ProjectileCountPerShot": 3,
+        "ProjectileAngle": 15,
+        "ShootsTowardsAirRaidPlant": true,
+        "StartingArmors": [
+          "sky_armor1"
+        ],
+        "ProjectileSpeed": {
+          "Min": 7,
+          "Max": 7
+        },
+        "TimeBeforeFirst": {
+          "Min": 2,
+          "Max": 3
+        },
+        "TimeBetween": {
+          "Min": 2,
+          "Max": 3
+        }
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "sky_armor2_t"
+      ],
+      "objdata": {
+        "Properties": "RTID(sky_armor2_p@CurrentLevel)",
+        "ZombieBasedOn": "sky_armor2"
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "sky_armor2_p"
+      ],
+      "objdata": {
+        "WalkSPS": 0.27,
+        "EatDPS": 100,
+        "WavePointCost": 500,
+        "Weight": 4000,
+        "SpawnedScale": 0.8,
+        "AlwaysShoots": true,
+        "ProjectileType": "airraid_0",
+        "ProjectileCountPerShot": 9,
+        "ProjectileAngle": 60,
+        "ShootsTowardsAirRaidPlant": true,
+        "StartingArmors": [
+          "sky_armor2"
+        ],
+        "ProjectileSpeed": {
+          "Min": 8,
+          "Max": 8
+        },
+        "TimeBeforeFirst": {
+          "Min": 4,
+          "Max": 6
+        },
+        "TimeBetween": {
+          "Min": 4,
+          "Max": 7
+        }
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "sky_twin_t"
+      ],
+      "objdata": {
+        "Properties": "RTID(sky_twin_p@CurrentLevel)",
+        "ZombieBasedOn": "sky_twin"
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "sky_twin_p"
+      ],
+      "objdata": {
+        "CannotBeTossedByCitron": true,
+        "CannotBeEnlightenedBySolarSage": true,
+        "ChooseToSpawnOnDeepWaterRows": true,
+        "ImmuneToSweetPotato": true,
+        "KnockBackDistanceScale": 0.5,
+        "PartnerType": "sky_twin_upper",
+        "CannotBeSwallowedByChomper": true,
+        "CannotBeDraggedByTangleKelp": true,
+        "ChooseToSpawnOnNonDeckRows": true,
+        "WalkSPS": 0.2,
+        "WalkSPSParalyzed": 0.30,
+        "EatDPS": 1000,
+        "Toughness": 1500,
+        "CrashDamageToShip": 2000,
+        "WavePointCost": 1200,
+        "Weight": 3000,
+        "CrashBackwardTime": 0.4,
+        "CrashForwardTime": 0.2,
+        "ParalyzedDamageToPartnerScale": 0.5,
+        "SkyCityShipDetectXOffset": -80,
+        "HitRect": "RTID(SkyTwinHitRect@RectangleProps)",
+        "AttackRect": "RTID(SkyTwinAttackRect@RectangleProps)",
+        "SuppressedSpawningLanes": [
+        0
+        ],
+        "SpawnedScale": 0.8,
+        "AlwaysShoots": true,
+        "ProjectileType": "airraid_0",
+        "ProjectileCountPerShot": 9,
+        "ProjectileAngle": 360,
+        "ShootsTowardsAirRaidPlant": true,
+        "ProjectileSpeed": {
+          "Min": 6,
+          "Max": 6
+        },
+        "TimeBeforeFirst": {
+          "Min": 2,
+          "Max": 3
+        },
+        "TimeBetween": {
+          "Min": 6,
+          "Max": 8
+        }
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "sky_battleplane_t"
+      ],
+      "objdata": {
+        "Properties": "RTID(sky_battleplane_p@CurrentLevel)",
+        "ZombieBasedOn": "sky_battleplane"
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "sky_battleplane_p"
+      ],
+      "objdata": {
+        "WalkSPS": 0.5,
+        "SpawnedScale": 0.8,
+        "Toughness": 2000,
+        "IgnoreImpActions": true,
+        "AlwaysShoots": true,
+        "ShootingStyle": 1,
+        "BulletCountPerShot": 5,
+        "ShootingDeltaAngle": 10,
+        "BulletType": "airraid_1",
+        "BulletSpeed": 8,
+        "WavePointCost": 1000,
+        "WalkingRoute": {
+          "LoopTime": 20,
+          "BufferDistance": 50,
+          "Speed": {
+            "Min": 1.1,
+            "Max": 1.2
+          },
+          "SplinePoints": [
+            {
+              "x": 792,
+              "y": 228
+            },
+            {
+              "x": 514,
+              "y": 314
+            },
+            {
+              "x": 517,
+              "y": 539
+            },
+            {
+              "x": 695,
+              "y": 545
+            },
+            {
+              "x": 742,
+              "y": 309
+            },
+            {
+              "x": 625,
+              "y": 209
+            },
+            {
+              "x": 453,
+              "y": 239
+            },
+            {
+              "x": 389,
+              "y": 532
+            },
+            {
+              "x": 553,
+              "y": 540
+            },
+            {
+              "x": 810,
+              "y": 478
+            }
+          ]
+        }
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "sky_boss_t"
+      ],
+      "objdata": {
+        "Properties": "RTID(sky_boss_p@CurrentLevel)",
+        "ZombieBasedOn": "sky_battleplane"
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "sky_boss_p"
+      ],
+      "objdata": {
+        "WalkSPS": 0.3,
+        "SpawnedScale": 1.6,
+        "Toughness": 9000,
+        "IgnoreImpActions": true,
+        "AlwaysShoots": true,
+        "ShootingStyle": 1,
+        "BulletCountPerShot": 20,
+        "ShootingDeltaAngle": 20,
+        "BulletType": "airraid_1",
+        "BulletSpeed": 8,
+        "WavePointCost": 10000,
+        "WalkingRoute": {
+          "LoopTime": 20,
+          "BufferDistance": 50,
+          "Speed": {
+            "Min": 1.1,
+            "Max": 1.2
+          },
+          "SplinePoints": [
+            {
+              "x": 792,
+              "y": 228
+            },
+            {
+              "x": 514,
+              "y": 314
+            },
+            {
+              "x": 517,
+              "y": 539
+            },
+            {
+              "x": 695,
+              "y": 545
+            },
+            {
+              "x": 742,
+              "y": 309
+            },
+            {
+              "x": 625,
+              "y": 209
+            },
+            {
+              "x": 453,
+              "y": 239
+            },
+            {
+              "x": 389,
+              "y": 532
+            },
+            {
+              "x": 553,
+              "y": 540
+            },
+            {
+              "x": 810,
+              "y": 478
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,257 @@
+{
+	"Information": {
+		"Author": "Sandy",
+		"Introduction": "",
+		"Version": "1.0"
+  	},
+	"#comment": "Level Of The Day Test 1",
+	"objects": [
+		{
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "[PLAYERS_TRIP_TO_LOD]",
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"DraperPromo": "cherry_bomb",
+				"Modules": [
+					"RTID(LevelOfTheDayIntro@LevelModules)",
+					"RTID(LevelOfTheDayModule@CurrentLevel)",
+					"RTID(NewWaves@CurrentLevel)",
+					"RTID(DefaultZombieWinCondition@LevelModules)",
+					"RTID(ChallengeModule@CurrentLevel)",
+					"RTID(ZombiesDeadWinCon@LevelModules)",
+					"RTID(KongfuMowers@LevelModules)",
+					"RTID(ConveyorBelt@CurrentLevel)",
+					"RTID(LevelDeadLine@CurrentLevel)"
+				],
+				"Name": "[LOD_LEVEL_NAME]",
+				"NormalPresentTable": "egypt_normal_01",
+				"Writtenby": "Sandy",
+				"#Comment": "BOMB All Together!",
+				"MusicType": "MiniGame_B",
+				"ShinyPresentTable": "egypt_shiny_01",
+				"StageModule": "RTID(MonkStage@LevelModules)",
+				"VictoryModule": "RTID(LevelOfTheDayOutro@LevelModules)",
+				"IsLevelOfTheDay": true
+			}
+		},
+		{
+			"aliases": [
+				"ChallengeModule"
+			],
+			"objclass": "StarChallengeModuleProperties",
+			"objdata": {
+				"Challenges": [
+					[
+						"RTID(Challenge1@CurrentLevel)"
+					]
+				],
+				"ChallengesAlwaysAvailable": true
+			}
+		},
+		{
+			"aliases": [
+				"Challenge1"
+			],
+			"objclass": "StarChallengeBeatTheLevelProps",
+			"objdata": {
+				"Descriptions": [
+					"BOMB All Together!: You stop getting explosives after 150 seconds!"
+				],
+				"DescriptionsMultiLanguage": []
+			}
+		},
+		{
+			"aliases": [
+				"WaveManagerProps"
+			],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"ZombieCountdownFirstWaveSecs": 7,
+				"Waves": [ 
+					["RTID(Wave1@CurrentLevel)"],
+					["RTID(Wave2@CurrentLevel)"],
+					["RTID(Wave3@CurrentLevel)"],
+					["RTID(Wave4@CurrentLevel)"],
+					["RTID(Wave5@CurrentLevel)"],
+					["RTID(Wave6@CurrentLevel)"],
+					["RTID(Wave7@CurrentLevel)"],
+					["RTID(Wave8@CurrentLevel)"],
+					["RTID(Wave9@CurrentLevel)"],
+					["RTID(Wave10@CurrentLevel)"],
+					["RTID(Wave11@CurrentLevel)"],
+					["RTID(Wave12@CurrentLevel)"],
+					["RTID(Wave13@CurrentLevel)"],
+					["RTID(Wave14@CurrentLevel)"],
+					["RTID(Wave15@CurrentLevel)"],
+					["RTID(Wave16@CurrentLevel)"]
+				]
+			}
+		},
+		{
+			"aliases": [
+				"LevelOfTheDayModule"
+			],
+			"objclass": "LevelOfTheDayModuleProperties",
+			"objdata": {
+				"FlagCount": 4,
+				"PlantfoodToSpawnCount": 0,
+				"PointIncrementPerWave": 140,
+				"StartingPoints": 150,
+				"WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)",
+				"WavesPerFlag": 4,
+				"ZombiePool": [
+					"RTID(monk@ZombieTypes)",
+					"RTID(monk_armor1@ZombieTypes)",
+					"RTID(monk_drink_veteran@ZombieTypes)",
+					"RTID(monk_imp@ZombieTypes)",
+					"RTID(monk_nunchaku@ZombieTypes)",
+					"RTID(kongfu_torch@ZombieTypes)",
+					"RTID(kongfu_rocket_imp@ZombieTypes)",
+					"RTID(kongfu_bronze_strong@ZombieTypes)",
+					"RTID(kongfu_bronze_hook@ZombieTypes)",
+					"RTID(kongfu_bronze_chi@ZombieTypes)"
+				]
+			}
+		},
+		{
+			"aliases": [
+				"NewWaves"
+			],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {}
+		},
+		 {
+            "aliases": [
+                "ConveyorBelt"
+            ],
+            "objclass": "ConveyorSeedBankProperties",
+            "objdata": {
+                "DropDelayConditions": [
+                    {
+                        "Delay": 3,
+                        "MaxPackets": 2
+                    },
+                    {
+                        "Delay": 3,
+                        "MaxPackets": 4
+                    },
+                    {
+                        "Delay": 3,
+                        "MaxPackets": 6
+                    },
+                    {
+                        "Delay": 3,
+                        "MaxPackets": 8
+                    }
+                ],
+                "InitialPlantList": [
+                    {
+                        "MaxWeightFactor": 0,
+                        "MaxCount": 3,
+                        "PlantType": "potatomine",
+                        "Weight": 25
+                    },
+                    {
+                        "MaxWeightFactor": 0,
+                        "MaxCount": 2,
+                        "PlantType": "cherry_bomb",
+                        "Weight": 15
+                    },
+                    {
+                        "MaxWeightFactor": 0,
+                        "MaxCount": 3,
+                        "PlantType": "jalapeno",
+                        "Weight": 17
+                    },
+                    {
+                        "MaxWeightFactor": 0,
+                        "MaxCount": 1,
+                        "PlantType": "doomshroom",
+                        "Weight": 10
+                    },
+                    {
+                        "MaxWeightFactor": 0,
+                        "MaxCount": 4,
+                        "PlantType": "lavaguava",
+                        "Weight": 25
+                    },
+                    {
+                        "MaxWeightFactor": 0,
+                        "MaxCount": 5,
+                        "PlantType": "atombomb_seedling",
+                        "Weight": 15
+                    },
+                    {
+                        "MaxWeightFactor": 0,
+                        "MaxCount": 3,
+                        "PlantType": "primalpotatomine",
+                        "Weight": 17
+                    },
+                    {
+                        "MaxWeightFactor": 0,
+                        "MaxCount": 5,
+                        "PlantType": "wallnut",
+                        "Weight": 25
+                    },
+                    {
+                        "MaxWeightFactor": 0,
+                        "MaxCount": 5,
+                        "PlantType": "turnip",
+                        "Weight": 25
+                    }
+                ],
+                "SpeedConditions": [
+                    {
+                        "MaxPackets": 0,
+                        "Speed": 200
+                    }
+                ]
+            }
+        },
+		{
+		"objclass": "LevelDeadLineProps",
+		"aliases": [
+			"LevelDeadLine"
+		],
+		"objdata": {
+			"SuppressObjectiveTip": true,
+			"Countdown": 150,
+			"Events": [
+			"RTID(ModConveyor@CurrentLevel)"
+			]
+		}
+		},
+		{
+		"aliases": [
+			"ModConveyor"
+		],
+		"objclass": "ModifyConveyorWaveActionProps",
+		"objdata": {
+			"Remove": [
+			{
+				"Type": "RTID(potatomine@PlantTypes)"
+			},
+			{
+				"Type": "RTID(cherry_bomb@PlantTypes)"
+			},
+			{
+				"Type": "RTID(jalapeno@PlantTypes)"
+			},
+			{
+				"Type": "RTID(doomshroom@PlantTypes)"
+			},
+			{
+				"Type": "RTID(lavaguava@PlantTypes)"
+			},
+			{
+				"Type": "RTID(atombomb_seedling@PlantTypes)"
+			},
+			{
+				"Type": "RTID(primalpotatomine@PlantTypes)"
+			}
+			]
+		}
+		}
+	],
+	"version": 1
+}

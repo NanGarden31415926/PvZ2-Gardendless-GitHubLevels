@@ -1,0 +1,615 @@
+{
+  "#Underwater World by ScatterPattern and Sandy": "NLM v 0.4",
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Name": "<WORLD_UNDERWATER> - World -5",
+        "Description": "<PLAYERNAME>'s Trip To <WORLD_UNDERWATER>",
+        "StageModule": "RTID(WaterStage@CurrentLevel)",
+        "LevelNumber": 5,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(Tide@CurrentLevel)",
+          "RTID(StandardIntro@LevelModules)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(WaveManagerModule@CurrentLevel)",
+          "RTID(Underwater@CurrentLevel)",
+          "RTID(Camera@CurrentLevel)",
+          "RTID(LevelScheduler@CurrentLevel)",
+          "RTID(PlantMods@CurrentLevel)"
+        ],
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01"
+      }
+    },
+    {
+        "aliases": [
+            "customProjectile"
+        ],
+        "objclass": "ProjectileType",
+        "objdata": {
+            "ProjectileBasedOn": "seashroom_spore",
+            "Props": "RTID(customProjectileProperties@CurrentLevel)"
+        }
+    },
+    {
+        "aliases": [
+            "customProjectileProperties"
+        ],
+        "objclass": "ProjectileProperties",
+        "objdata": {
+            "Damage": 100,
+            "Size": {
+                "w": 16,
+                "h": 16
+            }
+        }
+    },
+    {
+      "aliases": [
+          "LevelScheduler"
+      ],
+      "objclass": "LevelSchedulerProps",
+      "objdata": {
+          "TimeBeforeFirst": {
+              "Max": 10,
+              "Min": 10
+          },
+          "TimeBetween": {
+              "Max": 10,
+              "Min": 10
+          },
+          "Repeat": {
+              "Max": 1000,
+              "Min": 1000
+          },
+          "RewardWhenEnded": false,
+          "SuppressRewardState": false,
+          "Events": [
+              "RTID(WaveMissileEvent@CurrentLevel)"
+          ]
+      }
+    },
+    {
+      "aliases": [
+          "WaveMissileEvent"
+      ],
+      "objclass": "MissileLocateWaveActionProps",
+      "objdata": {
+          "MissileCount": 45,
+          "MissileFallCountdown": 0,
+          "WaveStartMessage": "",
+          "ProjectileType": "customProjectile",
+          "Locations": [
+              [
+                {"mX": 0, "mY": 0}, {"mX": 1, "mY": 0}, {"mX": 2, "mY": 0}, {"mX": 3, "mY": 0}, {"mX": 4, "mY": 0}, {"mX": 5, "mY": 0}, {"mX": 6, "mY": 0}, {"mX": 7, "mY": 0}, {"mX": 8, "mY": 0}, 
+                {"mX": 0, "mY": 1}, {"mX": 1, "mY": 1}, {"mX": 2, "mY": 1}, {"mX": 3, "mY": 1}, {"mX": 4, "mY": 1}, {"mX": 5, "mY": 1}, {"mX": 6, "mY": 1}, {"mX": 7, "mY": 1}, {"mX": 8, "mY": 1}, 
+                {"mX": 0, "mY": 2}, {"mX": 1, "mY": 2}, {"mX": 2, "mY": 2}, {"mX": 3, "mY": 2}, {"mX": 4, "mY": 2}, {"mX": 5, "mY": 2}, {"mX": 6, "mY": 2}, {"mX": 7, "mY": 2}, {"mX": 8, "mY": 2}, 
+                {"mX": 0, "mY": 3}, {"mX": 1, "mY": 3}, {"mX": 2, "mY": 3}, {"mX": 3, "mY": 3}, {"mX": 4, "mY": 3}, {"mX": 5, "mY": 3}, {"mX": 6, "mY": 3}, {"mX": 7, "mY": 3}, {"mX": 8, "mY": 3}, 
+                {"mX": 0, "mY": 4}, {"mX": 1, "mY": 4}, {"mX": 2, "mY": 4}, {"mX": 3, "mY": 4}, {"mX": 4, "mY": 4}, {"mX": 5, "mY": 4}, {"mX": 6, "mY": 4}, {"mX": 7, "mY": 4}, {"mX": 8, "mY": 4}
+              ]
+          ]
+      }
+    },
+    {
+        "objclass": "LawnType",
+        "aliases": [
+            "WaterStage"
+        ],
+        "objdata": {
+            "LawnBaseOn": "LostCityNightStage",
+            "Properties": "RTID(WaterStage@CurrentLevel)"
+        }
+        },
+        {
+        "objclass": "LawnProperties",
+        "aliases": [
+            "WaterStage"
+        ],
+        "objdata": {
+            "RailCart": "railcart_beach",
+            "Music": "Iceage",
+            "IsAtNight": true,
+            "Basic_Zombie": [
+            "beach",
+            "beach_fem"
+            ],
+            "Flag_Zombie": [
+            "beach_flag"
+            ],
+            "Rally_Zombie": [
+            "beach_flag_veteran"
+            ],
+            "Armor1_Zombie": [
+            "beach_armor1",
+            "beach_fem_armor1"
+            ],
+            "Armor2_Zombie": [
+            "beach_armor2",
+            "beach_fem_armor2"
+            ],
+            "Armor3_Zombie": [
+            "beach_armor2",
+            "beach_fem_armor2"
+            ],
+            "Armor4_Zombie": [
+            "beach_armor4",
+            "beach_fem_armor4"
+            ],
+            "Gravestone": [
+            "gravestone_tutorial"
+            ]
+        }
+        },
+
+            {
+            "aliases": [
+                    "Tide"
+            ],
+            "objclass": "TideProperties",
+            "objdata": {
+                    "StartingWaveLocation": 9
+            }
+        },
+
+        {
+        "objclass": "FluidDragProperties",
+        "aliases": [
+            "Underwater"
+        ],
+        "objdata": {
+            "DragCoefficient": 0,
+            "ExtraGravity": 0.18
+        }
+        },
+        {
+        "objclass": "LawnCameraProps",
+        "aliases": [
+            "Camera"
+        ],
+        "objdata": {
+            "DontClear": false,
+            "//": "Dont change it yet.",
+            "MaterialProps": {
+            "Chill": 0.2,
+            "Gold": 0,
+            "Saturation": 0.15,
+            "MultColor": {
+                "//": "Better delete this property if not used",
+                "r": 80,
+                "g": 160,
+                "b": 220,
+                "a": 255
+            },
+            "AddColor": {
+                "r": 0,
+                "g": 5,
+                "b": 15
+            },
+            "WaveProps": {
+                "Strength": 0.015,
+                "Speed": 0.06,
+                "Direction": {
+                "x": 0.2,
+                "y": 0.4
+                }
+            },
+            "CausticProps": {
+                "Scale": 1.5,
+                "RGBSplit": 0.001,
+                "Depth": 2.0,
+                "Strength": 0.1,
+                "Speed": 0.05,
+                "Direction": {
+                "x": 0.1,
+                "y": 0.2
+                },
+                "Color": {
+                "r": 100,
+                "g": 140,
+                "b": 180
+                }
+            }
+            },
+            "Offset": {
+            "x": 0,
+            "y": 0
+            }
+        }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "SelectionMethod": "chooser",
+        "PresetPlantList":
+        [
+            {
+                "Level": -1,
+                "PlantType": "RTID(oxygen@CurrentLevel)"
+            }
+        ],
+        "PlantIncludeList": [
+            "sunflower",
+            "peashooter",
+            "wallnut",
+            "potatomine",
+            "cabbagepult",
+            "bloomerang",
+            "iceburg",
+            "gravebuster",
+            "twinsunflower",
+            "bonkchoy",
+            "repeater",
+            "kernelpult",
+            "snapdragon",
+            "spikeweed",
+            "coconutcannon",
+            "cherry_bomb",
+            "springbean",
+            "spikerock",
+            "threepeater",
+            "splitpea",
+            "chilibean",
+            "lightningreed",
+            "tallnut",
+            "peapod",
+            "melonpult",
+            "wintermelon",
+            "imitater",
+            "marigold",
+            "laser_bean",
+            "blover",
+            "citron",
+            "empea",
+            "holonut",
+            "magnifyinggrass",
+            "powerplant",
+            "sunshroom",
+            "puffshroom",
+            "fumeshroom",
+            "sunbean",
+            "magnetshroom",
+            "scaredyshroom",
+            "lilypad",
+            "tanglekelp",
+            "bowlingbulb",
+            "guacodile",
+            "banana",
+            "seashroom",
+            "hotpotato",
+            "pepperpult",
+            "chardguard",
+            "stunion",
+            "xshot",
+            "redstinger",
+            "akee",
+            "endurian",
+            "stallia",
+            "goldleaf",
+            "firegourd",
+            "snowpea",
+            "bambooshoot",
+            "turnip",
+            "peach",
+            "lychee",
+            "solarsage",
+            "cantaloupe",
+            "phatbeet",
+            "celerystalker",
+            "thymewarp",
+            "garlic",
+            "sporeshroom",
+            "intensivecarrot",
+            "primalpeashooter",
+            "primalwallnut",
+            "perfumeshroom",
+            "primalsunflower",
+            "primalpotatomine",
+            "skyshooter",
+            "moonbean",
+            "RTID(oxygen@CurrentLevel)"
+        ]
+        }
+    },
+    {
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {
+            "PointIncrementPerWave": 0,
+            "StartingPoints": 0,
+            "StartingWave": 0,
+            "ZombiePool": []
+          },
+          {
+            "PointIncrementPerWave": 0,
+            "StartingPoints": 0,
+            "StartingWave": 0,
+            "ZombiePool": []
+          },
+          {
+            "PointIncrementPerWave": 0,
+            "StartingPoints": 0,
+            "StartingWave": 0,
+            "ZombiePool": []
+          },
+          {
+            "PointIncrementPerWave": 30,
+            "StartingPoints": 115,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(beach@ZombieTypes)",
+              "RTID(beach_fem@ZombieTypes)",
+              "RTID(beach_armor1@ZombieTypes)",
+              "RTID(beach_fem_armor1@ZombieTypes)",
+              "RTID(future_jetpack_veteran@ZombieTypes)",
+              "RTID(beach_armor2@ZombieTypes)",
+              "RTID(beach_fem_armor2@ZombieTypes)",
+              "RTID(beach_surfer_veteran@ZombieTypes)",
+              "RTID(beach_octopus@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 45,
+            "StartingPoints": 115,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(beach@ZombieTypes)",
+              "RTID(beach_fem@ZombieTypes)",
+              "RTID(beach_armor1@ZombieTypes)",
+              "RTID(beach_fem_armor1@ZombieTypes)",
+              "RTID(future_jetpack_veteran@ZombieTypes)",
+              "RTID(beach_armor2@ZombieTypes)",
+              "RTID(beach_fem_armor2@ZombieTypes)",
+              "RTID(beach_surfer_veteran@ZombieTypes)",
+              "RTID(beach_octopus@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 55,
+            "StartingPoints": 115,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(beach@ZombieTypes)",
+              "RTID(beach_fem@ZombieTypes)",
+              "RTID(beach_armor1@ZombieTypes)",
+              "RTID(beach_fem_armor1@ZombieTypes)",
+              "RTID(future_jetpack_veteran@ZombieTypes)",
+              "RTID(beach_armor2@ZombieTypes)",
+              "RTID(beach_fem_armor2@ZombieTypes)",
+              "RTID(beach_surfer_veteran@ZombieTypes)",
+              "RTID(beach_octopus@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 65,
+            "StartingPoints": 140,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(beach@ZombieTypes)",
+              "RTID(beach_fem@ZombieTypes)",
+              "RTID(beach_armor1@ZombieTypes)",
+              "RTID(beach_fem_armor1@ZombieTypes)",
+              "RTID(future_jetpack_veteran@ZombieTypes)",
+              "RTID(beach_armor2@ZombieTypes)",
+              "RTID(beach_fem_armor2@ZombieTypes)",
+              "RTID(beach_surfer_veteran@ZombieTypes)",
+              "RTID(beach_octopus@ZombieTypes)"
+            ]
+          }
+        ],
+        "WaveManagerProps": "RTID(WaveManager@CurrentLevel)"
+      },
+      "aliases": [
+        "WaveManagerModule"
+      ]
+    },
+    {
+      "aliases": [
+        "WaveManager"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 10,
+        "WaveCount": 30,
+        "ZombieCountdownFirstWaveSecs": 18,
+        "Waves": [
+          ["RTID(Wave1@CurrentLevel)"],
+          ["RTID(Wave2@CurrentLevel)"],
+          ["RTID(Wave3@CurrentLevel)"],
+          ["RTID(Wave4@CurrentLevel)"],
+          ["RTID(Wave5@CurrentLevel)"],
+          ["RTID(Wave6@CurrentLevel)"],
+          ["RTID(Wave7@CurrentLevel)"],
+          ["RTID(Wave8@CurrentLevel)"],
+          ["RTID(Wave9@CurrentLevel)"],
+          ["RTID(Wave10@CurrentLevel)"],
+          ["RTID(Wave11@CurrentLevel)"],
+          ["RTID(Wave12@CurrentLevel)"],
+          ["RTID(Wave13@CurrentLevel)"],
+          ["RTID(Wave14@CurrentLevel)"],
+          ["RTID(Wave15@CurrentLevel)"],
+          ["RTID(Wave16@CurrentLevel)"],
+          ["RTID(Wave17@CurrentLevel)"],
+          ["RTID(Wave18@CurrentLevel)"],
+          ["RTID(Wave19@CurrentLevel)"],
+          ["RTID(Wave20@CurrentLevel)"],
+          ["RTID(Wave21@CurrentLevel)"],
+          ["RTID(Wave22@CurrentLevel)"],
+          ["RTID(Wave23@CurrentLevel)"],
+          ["RTID(Wave24@CurrentLevel)"],
+          ["RTID(Wave25@CurrentLevel)"],
+          ["RTID(Wave26@CurrentLevel)"],
+          ["RTID(Wave27@CurrentLevel)"],
+          ["RTID(Wave28@CurrentLevel)"],
+          ["RTID(Wave29@CurrentLevel)"],
+          ["RTID(Wave30@CurrentLevel)"]
+        ]
+      }
+    },
+    {
+      "aliases": [
+          "Wave10",
+          "Wave20",
+          "Wave30"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+        {
+          "Type": "RTID(kongfu_rocket_imp@ZombieTypes)",
+          "Row": 1
+        },
+        {
+          "Type": "RTID(kongfu_rocket_imp@ZombieTypes)",
+          "Row": 2
+        },
+        {
+          "Type": "RTID(kongfu_rocket_imp@ZombieTypes)",
+          "Row": 3
+        },
+        {
+          "Type": "RTID(kongfu_rocket_imp@ZombieTypes)",
+          "Row": 4
+        },
+        {
+          "Type": "RTID(kongfu_rocket_imp@ZombieTypes)",
+          "Row": 5
+        }
+      ]
+      }
+    },
+    {
+      "aliases": [
+        "PlantMods"
+      ],
+      "objclass": "PlantModifierProperties",
+      "objdata": {
+        "SuppressParticle": true,
+        "List": [
+          {
+            "Type": "peach",
+            "NewObjdata": {
+              "HealthPerHeal": 20
+            }
+          },
+          {
+            "Type": "aloe",
+            "NewObjdata": {
+              "HealingInterval": 2
+            }
+          },
+          {"Type": "cabbagepult", "NewObjdata": {"ThrowInterval": 6}},
+          {"Type": "kernelpult", "NewObjdata": {"ThrowInterval": 6}},
+          {"Type": "melonpult", "NewObjdata": {"ThrowInterval": 6}},
+          {"Type": "wintermelon", "NewObjdata": {"ThrowInterval": 6}},
+          {"Type": "applemortar", "NewObjdata": {"ThrowInterval": 6}},
+          {"Type": "akee", "NewObjdata": {"ThrowInterval": 6}},
+          {"Type": "sporeshroom", "NewObjdata": {"ThrowInterval": 6}},
+          {"Type": "bloomingheart", "NewObjdata": {"ThrowInterval": 6}},
+          {"Type": "cantaloupe", "NewObjdata": {"ThrowInterval": 6}},
+          {"Type": "dusklobber", "NewObjdata": {"ThrowInterval": 6}},
+          {"Type": "pepperpult", "NewObjdata": {
+            "ThrowInterval": 6,
+            "CabbageType": "cabbage"
+          }},
+          {"Type": "firepeashooter", "NewObjdata": {
+            "PeaType": "pea"
+          }},
+          {"Type": "pyrevine", "NewObjdata": {
+            "DPS": 10,
+            "FireExtraDuration": 0.5,
+            "FireDistance": 1
+          }},
+          {"Type": "firegourd", "NewObjdata": {
+            "AttackDPS": 50,
+            "AttackDuration": 3,
+            "AttackDistanceMin": 1,
+            "AttackDistanceMax": 3,
+            "ReloadingTime": 8,
+            "ChargingTime": 16
+          }},
+          {"Type": "hotdate", "NewObjdata": {
+            "FlameDamage": 100,
+            "FlameDuration": 2
+          }},
+          {"Type": "jackolantern", "NewObjdata": {
+            "DPS": 100,
+            "ShootDuration": 3.3,
+            "RechargeTime": 9,
+            "Distance": 2
+          }}
+        ]
+      }
+    },
+    {
+      "objclass": "PlantType",
+      "aliases": [
+        "oxygen"
+      ],
+      "objdata": {
+        "PlantBasedOn": "tanglekelp",
+        "Properties": "RTID(oxygen_props@CurrentLevel)",
+        "ShiftedPlantFeatures": {
+          "OBTAINWORLD": "water",
+          "NAME": {
+            "en": "Oxygen Algae",
+            "zh": "Oxygen Algae"
+          },
+          "_CARDSPRITENAME": "heavenlypeach",
+          "TYPE": [
+            "amphibious"
+          ],
+          "RES": {
+            "Disabled": "HeavenlyPeach",
+            "Plant": "HeavenlyPeach"
+          },
+          "ALMANAC": "RTID(oxygen_almanac@CurrentLevel)",
+          "PROPS": "RTID(oxygen_props@CurrentLevel)"
+         },
+          "ALMANAC": "RTID(oxygen_almanac@CurrentLevel)"
+        }
+    },
+    {
+      "objclass": "PlantAlmanacProperties",
+      "aliases": [
+        "oxygen_almanac"
+      ],
+      "objdata": {
+        "BriefIntroduction": {
+          "en": "Grants oxygen to nearby plants.",
+          "zh": "Grants oxygen to nearby plants."
+        }
+      }
+    },
+    {
+      "objclass": "PlantProperties",
+      "aliases": [
+        "oxygen_props"
+      ],
+      "objdata": {
+        "PlantfoodDuration": 10,
+        "HealthPerHeal": 100,
+        "HealthPlantfoodHeal": 450,
+        "HealInterval": 10,
+        "Cooldown": 10,
+        "CooldownFrom": 1,
+        "SunCost": 50,
+        "BeghouledCost": 1000,
+        "Toughness": 300,
+        "Family": "Defence",
+        "MintBoostedProps": {
+          "ResistanceMult": 3,
+          "SpeedMult": 3,
+          "Plantfood": true
+        }
+      }
+    }
+  ]
+}

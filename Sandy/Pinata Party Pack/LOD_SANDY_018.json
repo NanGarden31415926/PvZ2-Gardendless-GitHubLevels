@@ -1,0 +1,257 @@
+{
+	"Information": {
+		"Author": "Sandy",
+		"Introduction": "",
+		"Version": "1.0"
+  	},
+	"#comment": "Level Of The Day Test 1",
+	"objects": [
+		{
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "[PLAYERS_TRIP_TO_LOD]",
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"DraperPromo": "primalpeashooter",
+				"Modules": [
+					"RTID(LevelOfTheDayIntro@LevelModules)",
+					"RTID(LevelOfTheDayModule@CurrentLevel)",
+					"RTID(NewWaves@CurrentLevel)",
+					"RTID(DefaultZombieWinCondition@LevelModules)",
+					"RTID(ChallengeModule@CurrentLevel)",
+					"RTID(ZombiesDeadWinCon@LevelModules)",
+					"RTID(SeedBank@CurrentLevel)",
+					"RTID(SunDropper@CurrentLevel)",
+					"RTID(PlantMods@CurrentLevel)"
+				],
+				"Name": "[LOD_LEVEL_NAME]",
+				"NormalPresentTable": "egypt_normal_01",
+				"Writtenby": "Sandy",
+				"#Comment": "Fairytale Forest",
+				"ShinyPresentTable": "egypt_shiny_01",
+				"StageModule": "RTID(FallsStage@LevelModules)",
+				"VictoryModule": "RTID(LevelOfTheDayOutro@LevelModules)",
+				"IsLevelOfTheDay": true
+			}
+		},
+		{
+			"aliases": [
+				"SunDropper"
+			],
+			"objclass": "SunDropperProperties",
+			"objdata": {
+				"InitialSunDropDelay": 1,
+				"SunCountdownBase": 10,
+				"SunCountdownIncreasePerSun": 0,
+				"SunCountdownMax": 10.5,
+				"SunCountdownRange": 0.5,
+				"Value": 50
+			}
+		},
+		{
+			"aliases": [
+				"ChallengeModule"
+			],
+			"objclass": "StarChallengeModuleProperties",
+			"objdata": {
+				"Challenges": [
+					[
+						"RTID(Challenge1@CurrentLevel)"
+					]
+				],
+				"ChallengesAlwaysAvailable": true
+			}
+		},
+		{
+			"aliases": [
+				"Challenge1"
+			],
+			"objclass": "StarChallengeBeatTheLevelProps",
+			"objdata": {
+				"Descriptions": [
+					"Survive against fairytale forest zombies!"
+				],
+				"DescriptionsMultiLanguage": []
+			}
+		},
+		{
+			"aliases": [
+				"WaveManagerProps"
+			],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"Waves": [ 
+					["RTID(Wave1@CurrentLevel)"],
+					["RTID(Wave2@CurrentLevel)"],
+					["RTID(Wave3@CurrentLevel)"],
+					["RTID(Wave4@CurrentLevel)"],
+					["RTID(Wave5@CurrentLevel)"],
+					["RTID(Wave6@CurrentLevel)"],
+					["RTID(Wave7@CurrentLevel)"],
+					["RTID(Wave8@CurrentLevel)"],
+					["RTID(Wave9@CurrentLevel)"],
+					["RTID(Wave10@CurrentLevel)"],
+					["RTID(Wave11@CurrentLevel)"],
+					["RTID(Wave12@CurrentLevel)"],
+					["RTID(Wave13@CurrentLevel)"],
+					["RTID(Wave14@CurrentLevel)"],
+					["RTID(Wave15@CurrentLevel)"]
+				]
+			}
+		},
+		{
+			"aliases": [
+				"LevelOfTheDayModule"
+			],
+			"objclass": "LevelOfTheDayModuleProperties",
+			"objdata": {
+				"FlagCount": 3,
+				"PlantfoodToSpawnCount": 0,
+				"PointIncrementPerWave": 180,
+				"StartingPoints": 100,
+				"WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)",
+				"WavesPerFlag": 5,
+				"ZombiePool": [
+					"RTID(dark@ZombieTypes)",
+					"RTID(dark_armor1@ZombieTypes)",
+					"RTID(dark_armor2@ZombieTypes)",
+					"RTID(dark_armor3@ZombieTypes)",
+					"RTID(dark_wizard_veteran@ZombieTypes)",
+					"RTID(modern_allstar@ZombieTypes)",
+					"RTID(guard_gargantuar@CurrentLevel)",
+					"RTID(guard_gargantuar@CurrentLevel)"
+				]
+			}
+		},
+		{
+		"objclass": "ZombieType",
+		"aliases": [
+			"guard_gargantuar"
+		],
+		"objdata": {
+			"Properties": "RTID(guard_gargantuar_p@CurrentLevel)",
+			"ZombieBasedOn": "dark_gargantuar"
+		}
+		},
+		{
+		"objclass": "ZombieProperties",
+		"aliases": [
+			"guard_gargantuar_p"
+		],
+		"objdata": {
+			"CannotBeEnlightenedBySolarSage": true,
+			"ZombieSort": "Gargantuar",
+			"CannotBeGrabbedByPtero": true,
+			"CannotChangeLaneByPowerToss": true,
+			"CannotBeFlickedByPowerToss": true,
+			"CannotBeDraggedByTangleKelp": true,
+			"CannotBeTossedByCitron": true,
+			"CannotBeSwallowedByChomper": true,
+			"CannotCarryPlantfoodsInWaves": true,
+			"SmashDamage": 1500,
+			"WalkSPS": 0.22,
+			"EatDPS": 100,
+			"Toughness": 7200,
+			"StartingArmors": [
+			"dark_armor3"
+			],
+			"LivesInDeepWater": true,
+			"NormalDeathWhenMowed": true,
+			"WavePointCost": 2250,
+			"Weight": 3000,
+			"ImpType": "RTID(queen_imp@CurrentLevel)",
+			"HitRect": "RTID(GargantuarHitRect@RectangleProps)",
+			"AttackRect": "RTID(GargantuarAttackRect@RectangleProps)"
+		}
+		},
+		{
+		"objclass": "ZombieType",
+		"aliases": [
+			"queen_imp"
+		],
+		"objdata": {
+			"Properties": "RTID(queen_imp_p@CurrentLevel)",
+			"ZombieBasedOn": "dark_imp_dragon"
+		}
+		},
+		{
+		"objclass": "ZombieProperties",
+		"aliases": [
+			"queen_imp_p"
+		],
+		"objdata": {
+			"KilledByShrinkingViolet": true,
+			"CannotBeGrabbedByPtero": true,
+			"ZombieSort": "Normal",
+			"WalkSPS": 0.22,
+			"EatDPS": 200,
+			"Toughness": 290,
+			"WavePointCost": 150,
+			"ChanceToReverse": 1,
+			"Weight": 2000,
+			"HitRect": "RTID(ImpHitRect@RectangleProps)",
+			"AttackRect": "RTID(ImpAttackRect@RectangleProps)"
+		}
+		},
+		{
+			"aliases": [
+				"NewWaves"
+			],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {}
+		},
+		{
+			"objclass": "SeedBankProperties",
+			"objdata": {
+				"SelectionMethod": "preset",
+				"UnlockAll": true,
+				"OverrideSeedSlotsCount": 8,
+				"PresetPlantList": [
+					{
+						"Level": -1,
+						"PlantType": "primalsunflower"
+					},
+					{
+						"Level": -1,
+						"PlantType": "skyshooter"
+					},
+					{
+						"Level": -1,
+						"PlantType": "loquat"
+					},
+					{
+						"Level": -1,
+						"PlantType": "peacommando"
+					},
+					{
+						"Level": -1,
+						"PlantType": "asparagus"
+					},
+					{
+						"Level": -1,
+						"PlantType": "moonbean"
+					},
+					{
+						"Level": -1,
+						"PlantType": "tallnut"
+					}
+				]
+			},
+			"aliases": [
+				"SeedBank"
+			]
+    	},
+		{
+			"aliases": [
+				"PlantMods"
+			],
+			"objclass": "PlantModifierProperties",
+			"objdata": {
+				"SuppressParticle": true,
+				"List": [
+					
+				]
+			}
+		}
+	],
+	"version": 1
+}

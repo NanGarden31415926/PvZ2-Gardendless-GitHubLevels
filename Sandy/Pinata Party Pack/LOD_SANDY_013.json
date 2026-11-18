@@ -1,0 +1,466 @@
+{
+	"Information": {
+		"Author": "Sandy",
+		"Introduction": "",
+		"Version": "1.0"
+  	},
+	"#comment": "Level Of The Day Test 1",
+	"objects": [
+		{
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "[PLAYERS_TRIP_TO_LOD]",
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"DraperPromo": "poisonpeashooter",
+				"Modules": [
+					"RTID(LevelOfTheDayIntro@LevelModules)",
+					"RTID(LevelOfTheDayModule@CurrentLevel)",
+					"RTID(NewWaves@CurrentLevel)",
+					"RTID(DefaultZombieWinCondition@LevelModules)",
+					"RTID(ChallengeModule@CurrentLevel)",
+					"RTID(ZombiesDeadWinCon@LevelModules)",
+					"RTID(FrontLawnMowers@LevelModules)",
+					"RTID(SeedBank@CurrentLevel)",
+					"RTID(InitialPlant@CurrentLevel)",
+					"RTID(InitialZombie@CurrentLevel)",
+					"RTID(Presents@CurrentLevel)",
+					"RTID(SunDropper@CurrentLevel)"
+				],
+				"Name": "[LOD_LEVEL_NAME]",
+				"NormalPresentTable": "egypt_normal_01",
+				"Writtenby": "Sandy",
+				"#Comment": "rfl ref",
+				"ShinyPresentTable": "egypt_shiny_01",
+				"StageModule": "RTID(BirthdayStage@LevelModules)",
+				"VictoryModule": "RTID(LevelOfTheDayOutro@LevelModules)",
+				"IsLevelOfTheDay": true
+			}
+		},
+		{
+			"aliases": [
+				"SunDropper"
+			],
+			"objclass": "SunDropperProperties",
+			"objdata": {
+				"InitialSunDropDelay": 5,
+				"SunCountdownBase": 10,
+				"SunCountdownIncreasePerSun": 0,
+				"SunCountdownMax": 10.5,
+				"SunCountdownRange": 0.5,
+				"Value": 50
+			}
+		},
+		{
+			"aliases": [
+				"ChallengeModule"
+			],
+			"objclass": "StarChallengeModuleProperties",
+			"objdata": {
+				"Challenges": [
+					[
+						"RTID(Challenge1@CurrentLevel)"
+					]
+				],
+				"ChallengesAlwaysAvailable": true
+			}
+		},
+		{
+			"aliases": [
+				"Challenge1"
+			],
+			"objclass": "StarChallengeBeatTheLevelProps",
+			"objdata": {
+				"Descriptions": [
+					"Survive Holiday Zombies With Debuffing Plants!"
+				],
+				"DescriptionsMultiLanguage": []
+			}
+		},
+		{
+			"objclass": "InitialPlantProperties",
+			"objdata": {
+				"InitialPlantPlacements": [
+				{"TypeName": "potatomine","GridX": 7,"GridY": 0},
+				{"TypeName": "hypnoshroom","GridX": 8,"GridY": 1},
+				{"TypeName": "hypnoshroom","GridX": 7,"GridY": 2},
+				{"TypeName": "hypnoshroom","GridX": 8,"GridY": 3},
+				{"TypeName": "potatomine","GridX": 7,"GridY": 4},
+				{"TypeName": "sunbean","GridX": 6,"GridY": 1},
+				{"TypeName": "sunbean","GridX": 6,"GridY": 3}
+				]
+			},
+			"aliases": [
+				"InitialPlant"
+			]
+    	},
+		{
+			"aliases": [
+				"WaveManagerProps"
+			],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"ZombieCountdownFirstWaveSecs": 7,
+				"Waves": [ 
+					["RTID(Wave1@CurrentLevel)"],
+					["RTID(Wave2@CurrentLevel)"],
+					["RTID(Wave3@CurrentLevel)"],
+					["RTID(Wave4@CurrentLevel)"],
+					["RTID(Wave5@CurrentLevel)"],
+					["RTID(Wave6@CurrentLevel)"],
+					["RTID(Wave7@CurrentLevel)"],
+					["RTID(Wave8@CurrentLevel)"],
+					["RTID(Wave9@CurrentLevel)"],
+					["RTID(Wave10@CurrentLevel)"],
+					["RTID(Wave11@CurrentLevel)"],
+					["RTID(Wave12@CurrentLevel)"],
+					["RTID(Wave13@CurrentLevel)"],
+					["RTID(Wave14@CurrentLevel)"],
+					["RTID(Wave15@CurrentLevel)"],
+					["RTID(Wave16@CurrentLevel)"],
+					["RTID(Wave17@CurrentLevel)"],
+					["RTID(Wave18@CurrentLevel)"],
+					["RTID(Wave19@CurrentLevel)"],
+					["RTID(Wave20@CurrentLevel)"],
+					["RTID(Wave21@CurrentLevel)"]
+				]
+			}
+		},
+		{
+			"aliases": [
+				"LevelOfTheDayModule"
+			],
+			"objclass": "LevelOfTheDayModuleProperties",
+			"objdata": {
+				"FlagCount": 3,
+				"PlantfoodToSpawnCount": 2,
+				"PointIncrementPerWave": 110,
+				"StartingPoints": 150,
+				"WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)",
+				"WavesPerFlag": 7,
+				"ZombiePool": [
+					"RTID(holiday@CurrentLevel)",
+					"RTID(holiday_armor1@CurrentLevel)",
+					"RTID(holiday_gargantuar@CurrentLevel)",
+					"RTID(holiday_gargantuar@CurrentLevel)",
+					"RTID(holiday_armor2@CurrentLevel)",
+					"RTID(birthday_juggler@ZombieTypes)",
+					"RTID(birthday_pharaoh_inner@ZombieTypes)",
+					"RTID(birthday_jetpack@ZombieTypes)",
+					"RTID(sportzball_balloon@ZombieTypes)",
+					"RTID(sportzball_wizard@ZombieTypes)",
+					"RTID(stpatrick_dodo@ZombieTypes)",
+					"RTID(feastivus_swashbuckler@ZombieTypes)",
+					"RTID(feastivus_piano@ZombieTypes)",
+					"RTID(lunar_camel_onehump@ZombieTypes)",
+					"RTID(foodfight_gobbler_king@ZombieTypes)",
+					"RTID(birthday_troglobite_random@CurrentLevel)"
+				]
+			}
+		},
+		{
+		"aliases": [
+			"Wave7"
+		],
+		"objclass": "SpawnZombiesJitteredWaveActionProps",
+		"objdata": {
+			"Zombies": [
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 1, "Column": 6},
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 3, "Column": 6},
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 5, "Column": 6}
+		]
+		}
+		},
+		{
+		"aliases": [
+			"Wave5"
+		],
+		"objclass": "SpawnZombiesJitteredWaveActionProps",
+		"objdata": {
+			"Zombies": [
+			{"Type": "RTID(stpatrick_imp@ZombieTypes)", "Row": 3, "Column": 7}
+		]
+		}
+		},
+		{
+		"aliases": [
+			"Wave14"
+		],
+		"objclass": "SpawnZombiesJitteredWaveActionProps",
+		"objdata": {
+			"Zombies": [
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 1, "Column": 6},
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 3, "Column": 6},
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 5, "Column": 6},
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 2, "Column": 6},
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 4, "Column": 6}
+		]
+		}
+		},
+		{
+		"aliases": [
+			"Wave15"
+		],
+		"objclass": "SpawnZombiesJitteredWaveActionProps",
+		"objdata": {
+			"Zombies": [
+			{"Type": "RTID(stpatrick_imp@ZombieTypes)", "Row": 2, "Column": 7},
+			{"Type": "RTID(stpatrick_imp@ZombieTypes)", "Row": 4, "Column": 7},
+			{"Type": "RTID(stpatrick_imp@ZombieTypes)", "Row": 3, "Column": 7}
+		]
+		}
+		},
+		{
+		"aliases": [
+			"Wave12"
+		],
+		"objclass": "SpawnZombiesJitteredWaveActionProps",
+		"objdata": {
+			"Zombies": [
+			{"Type": "RTID(stpatrick_imp@ZombieTypes)", "Row": 2, "Column": 5},
+			{"Type": "RTID(stpatrick_imp@ZombieTypes)", "Row": 4, "Column": 5},
+			{"Type": "RTID(stpatrick_imp@ZombieTypes)", "Row": 3, "Column": 5}
+		]
+		}
+		},
+		{
+		"aliases": [
+			"Wave21"
+		],
+		"objclass": "SpawnZombiesJitteredWaveActionProps",
+		"objdata": {
+			"Zombies": [
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 1, "Column": 6},
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 3, "Column": 6},
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 5, "Column": 6},
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 2, "Column": 6},
+			{"Type": "RTID(egg@CurrentLevel)", "Row": 4, "Column": 6}
+		]
+		}
+		},
+		{
+		"objclass": "ZombieType",
+		"aliases": [
+			"egg"
+		],
+		"objdata": {
+			"Properties": "RTID(egg_p@CurrentLevel)",
+			"ZombieBasedOn": "easter_egg"
+		}
+		},
+		{
+		"objclass": "ZombieProperties",
+		"aliases": [
+			"egg_p"
+		],
+		"objdata": {
+			"ImmuneToSporeShroom": true,
+			"ZombieSort": "Normal",
+			"WalkSPS": 0.185,
+			"Toughness": 1,
+			"EatDPS": 100,
+			"WavePointCost": 100,
+			"Weight": 1000,
+			"HitRect": "RTID(CommonHitRect@RectangleProps)",
+			"AttackRect": "RTID(CommonAttackRect@RectangleProps)",
+			"Lifespan": {
+			"Min": 3,
+			"Max": 3
+			},
+			"ZombiesToSpawn": [
+				{ "Type": "easter", "Weight": 1 },
+				{ "Type": "valentines_imp", "Weight": 1 },
+				{ "Type": "feastivus_imp", "Weight": 1 },
+				{ "Type": "stpatrick_imp", "Weight": 1 },
+				{ "Type": "sportzball_imp", "Weight": 1 },
+				{ "Type": "halloween_imp", "Weight": 1 },
+				{ "Type": "summer_imp", "Weight": 1 }
+			]
+		}
+		},
+		{
+		"objclass": "ZombieType",
+		"aliases": [
+			"birthday_troglobite_random"
+		],
+		"objdata": {
+			"Properties": "RTID(birthday_troglobite_random_p@CurrentLevel)",
+			"ZombieBasedOn": "birthday_troglobite"
+		}
+		},
+		{
+		"objclass": "ZombieProperties",
+		"aliases": [
+			"birthday_troglobite_random_p"
+		],
+		"objdata": {
+			"ChillInsteadOfFreeze": true,
+			"NumberOfIceblocksToSpawnWith": 3,
+			"WalkSPS": 0.185,
+			"EatDPS": 100,
+			"Toughness": 470,
+			"WavePointCost": 600,
+			"Weight": 3500,
+			"HitRect": "RTID(BullyHitRect@RectangleProps)",
+			"AttackRect": "RTID(BullyAttackRect@RectangleProps)",
+			"ImpTypes": [
+			"RTID(holiday@CurrentLevel)",
+			"RTID(holiday_armor1@CurrentLevel)"
+			]
+		}
+		},
+		{
+			"aliases": [
+				"holiday_gargantuar"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"Properties": "RTID(tutorial@ZombieProps)",
+				"ZombieBasedOn": "tutorial",
+				"ZombieRedirection": [
+					{ "Type": "easter_gargantuar", "Weight": 1 },
+					{ "Type": "valentines_gargantuar", "Weight": 1 },
+					{ "Type": "feastivus_gargantuar", "Weight": 1 },
+					{ "Type": "sportzball_gargantuar", "Weight": 1 },
+					{ "Type": "birthday_gargantuar", "Weight": 1 },
+					{ "Type": "halloween_gargantuar", "Weight": 1 },
+					{ "Type": "summer_gargantuar", "Weight": 1 }
+				]
+			}
+		},
+		{
+			"aliases": [
+				"holiday"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"Properties": "RTID(tutorial@ZombieProps)",
+				"ZombieBasedOn": "tutorial",
+				"ZombieRedirection": [
+					{ "Type": "easter", "Weight": 1 },
+					{ "Type": "valentines", "Weight": 1 },
+					{ "Type": "lunar", "Weight": 1 },
+					{ "Type": "feastivus", "Weight": 1 },
+					{ "Type": "foodfight", "Weight": 1 },
+					{ "Type": "stpatrick", "Weight": 1 },
+					{ "Type": "sportzball", "Weight": 1 },
+					{ "Type": "birthday", "Weight": 1 },
+					{ "Type": "halloween", "Weight": 1 },
+					{ "Type": "birthday_flag", "Weight": 1 },
+					{ "Type": "valentines_flag", "Weight": 1 },
+					{ "Type": "summer_basic", "Weight": 1 }
+				]
+			}
+		},
+		{
+			"aliases": [
+				"holiday_armor1"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"Properties": "RTID(tutorial_armor1@ZombieProps)",
+				"ZombieBasedOn": "tutorial_armor1",
+				"ZombieRedirection": [
+					{ "Type": "easter_armor1", "Weight": 1 },
+					{ "Type": "valentines_armor1", "Weight": 1 },
+					{ "Type": "lunar_armor1", "Weight": 1 },
+					{ "Type": "feastivus_armor1", "Weight": 1 },
+					{ "Type": "foodfight_armor1", "Weight": 1 },
+					{ "Type": "stpatrick_armor1", "Weight": 1 },
+					{ "Type": "sportzball_armor1", "Weight": 1 },
+					{ "Type": "halloween_armor1", "Weight": 1 },
+					{ "Type": "summer_armor1", "Weight": 1 }
+				]
+			}
+		},
+		{
+			"aliases": [
+				"holiday_armor2"
+			],
+			"objclass": "ZombieType",
+			"objdata": {
+				"Properties": "RTID(tutorial_armor2@ZombieProps)",
+				"ZombieBasedOn": "tutorial_armor2",
+				"ZombieRedirection": [
+					{ "Type": "easter_armor2", "Weight": 1 },
+					{ "Type": "valentines_armor2", "Weight": 1 },
+					{ "Type": "lunar_armor2", "Weight": 1 },
+					{ "Type": "feastivus_armor2", "Weight": 1 },
+					{ "Type": "foodfight_armor2", "Weight": 1 },
+					{ "Type": "stpatrick_armor2", "Weight": 1 },
+					{ "Type": "sportzball_armor2", "Weight": 1 },
+					{ "Type": "halloween_armor2", "Weight": 1 },
+					{ "Type": "summer_armor2", "Weight": 1 }
+				]
+			}
+		},
+		{
+		"aliases": [
+			"Presents"
+		],
+		"objclass": "GravestoneProperties",
+		"objdata": {
+			"ForceSpawnData": [
+			{"GridX": 7, "GridY": 0, "TypeName": "zombietarget_birthday_present"},
+			{"GridX": 8, "GridY": 1, "TypeName": "zombietarget_birthday_present"},
+			{"GridX": 7, "GridY": 2, "TypeName": "zombietarget_birthday_present"},
+			{"GridX": 8, "GridY": 3, "TypeName": "zombietarget_birthday_present"},
+			{"GridX": 7, "GridY": 4, "TypeName": "zombietarget_birthday_present"},
+			{"GridX": 6, "GridY": 1, "TypeName": "zombietarget_birthday_present"},
+			{"GridX": 6, "GridY": 3, "TypeName": "zombietarget_birthday_present"}
+			]
+		}
+		},
+		{
+			"aliases": [
+				"NewWaves"
+			],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {}
+		},
+		{
+			"objclass": "SeedBankProperties",
+			"objdata": {
+				"SelectionMethod": "preset",
+				"OverrideSeedSlotsCount": 8,
+				"PresetPlantList": [
+					{
+						"Level": -1,
+						"PlantType": "primalsunflower"
+					},
+					{
+						"Level": -1,
+						"PlantType": "shinevine"
+					},
+					{
+						"Level": -1,
+						"PlantType": "poisonpeashooter"
+					},
+					{
+						"Level": -1,
+						"PlantType": "goldbloom"
+					},
+					{
+						"Level": -1,
+						"PlantType": "bloominghearts"
+					},
+					{
+						"Level": -1,
+						"PlantType": "primalwallnut"
+					},
+					{
+						"Level": -1,
+						"PlantType": "wasabiwhip"
+					},
+					{
+						"Level": -1,
+						"PlantType": "moonbean"
+					}
+				]
+			},
+			"aliases": [
+				"SeedBank"
+			]
+    	}
+	],
+	"version": 1
+}

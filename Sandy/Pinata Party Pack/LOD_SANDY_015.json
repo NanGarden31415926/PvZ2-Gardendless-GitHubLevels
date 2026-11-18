@@ -1,0 +1,235 @@
+{
+	"Information": {
+		"Author": "Sandy",
+		"Introduction": "",
+		"Version": "1.0"
+  	},
+	"#comment": "Level Of The Day Test 1",
+	"objects": [
+		{
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "[PLAYERS_TRIP_TO_LOD]",
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"DraperPromo": "primalpeashooter",
+				"Modules": [
+					"RTID(LevelOfTheDayIntro@LevelModules)",
+					"RTID(LevelOfTheDayModule@CurrentLevel)",
+					"RTID(NewWaves@CurrentLevel)",
+					"RTID(DefaultZombieWinCondition@LevelModules)",
+					"RTID(ChallengeModule@CurrentLevel)",
+					"RTID(ZombiesDeadWinCon@LevelModules)",
+					"RTID(SeedBank@CurrentLevel)",
+					"RTID(SunDropper@CurrentLevel)",
+					"RTID(PlantMods@CurrentLevel)",
+					"RTID(ZombieDistance1@CurrentLevel)",
+					"RTID(ZombieDistance2@CurrentLevel)",
+					"RTID(ZombieDistance3@CurrentLevel)",
+					"RTID(ZombieDistance4@CurrentLevel)"
+				],
+				"Name": "[LOD_LEVEL_NAME]",
+				"NormalPresentTable": "egypt_normal_01",
+				"Writtenby": "Sandy",
+				"#Comment": "Sportzball",
+				"ShinyPresentTable": "egypt_shiny_01",
+				"StageModule": "RTID(SportzballStage@LevelModules)",
+				"VictoryModule": "RTID(LevelOfTheDayOutro@LevelModules)",
+				"IsLevelOfTheDay": true
+			}
+		},
+		{
+			"aliases": [
+				"ZombieDistance1"
+			],
+			"objclass": "StarChallengeZombieDistanceProps",
+			"objdata": {
+				"SuppressObjectiveTip": true,
+				"TargetDistance": 2.0
+			}
+		},
+		{
+			"aliases": [
+				"ZombieDistance2"
+			],
+			"objclass": "StarChallengeZombieDistanceProps",
+			"objdata": {
+				"SuppressObjectiveTip": true,
+				"TargetDistance": 1.5
+			}
+		},
+		{
+			"aliases": [
+				"ZombieDistance3"
+			],
+			"objclass": "StarChallengeZombieDistanceProps",
+			"objdata": {
+				"SuppressObjectiveTip": true,
+				"TargetDistance": 1.0
+			}
+		},
+		{
+			"aliases": [
+				"ZombieDistance4"
+			],
+			"objclass": "StarChallengeZombieDistanceProps",
+			"objdata": {
+				"SuppressObjectiveTip": true,
+				"TargetDistance": 0.5
+			}
+		},
+		{
+			"aliases": [
+				"SunDropper"
+			],
+			"objclass": "SunDropperProperties",
+			"objdata": {
+				"InitialSunDropDelay": 1,
+				"SunCountdownBase": 10,
+				"SunCountdownIncreasePerSun": 0,
+				"SunCountdownMax": 10.5,
+				"SunCountdownRange": 0.5,
+				"Value": 50
+			}
+		},
+		{
+			"aliases": [
+				"ChallengeModule"
+			],
+			"objclass": "StarChallengeModuleProperties",
+			"objdata": {
+				"Challenges": [
+					[
+						"RTID(Challenge1@CurrentLevel)"
+					]
+				],
+				"ChallengesAlwaysAvailable": true
+			}
+		},
+		{
+			"aliases": [
+				"Challenge1"
+			],
+			"objclass": "StarChallengeBeatTheLevelProps",
+			"objdata": {
+				"Descriptions": [
+					"Don't let the zombies score a touchdown!"
+				],
+				"DescriptionsMultiLanguage": []
+			}
+		},
+		{
+			"aliases": [
+				"WaveManagerProps"
+			],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"Waves": [ 
+					["RTID(Wave1@CurrentLevel)"],
+					["RTID(Wave2@CurrentLevel)"],
+					["RTID(Wave3@CurrentLevel)"],
+					["RTID(Wave4@CurrentLevel)"],
+					["RTID(Wave5@CurrentLevel)"],
+					["RTID(Wave6@CurrentLevel)"],
+					["RTID(Wave7@CurrentLevel)"],
+					["RTID(Wave8@CurrentLevel)"],
+					["RTID(Wave9@CurrentLevel)"],
+					["RTID(Wave10@CurrentLevel)"],
+					["RTID(Wave11@CurrentLevel)"],
+					["RTID(Wave12@CurrentLevel)"],
+					["RTID(Wave13@CurrentLevel)"],
+					["RTID(Wave14@CurrentLevel)"],
+					["RTID(Wave15@CurrentLevel)"]
+				]
+			}
+		},
+		{
+			"aliases": [
+				"LevelOfTheDayModule"
+			],
+			"objclass": "LevelOfTheDayModuleProperties",
+			"objdata": {
+				"FlagCount": 3,
+				"PlantfoodToSpawnCount": 0,
+				"PointIncrementPerWave": 140,
+				"StartingPoints": 100,
+				"WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)",
+				"WavesPerFlag": 5,
+				"ZombiePool": [
+					"RTID(sportzball@ZombieTypes)",
+					"RTID(sportzball_armor1@ZombieTypes)",
+					"RTID(sportzball_armor2@ZombieTypes)",
+					"RTID(sportzball_balloon@ZombieTypes)",
+					"RTID(sportzball_gargantuar@ZombieTypes)",
+					"RTID(sportzball_gargantuar@ZombieTypes)",
+					"RTID(sportzball_imp@ZombieTypes)",
+					"RTID(sportzball_imp@ZombieTypes)",
+					"RTID(sportzball_wizard@ZombieTypes)",
+					"RTID(modern_superfanimp@ZombieTypes)",
+					"RTID(modern_allstar@ZombieTypes)",
+					"RTID(modern_allstar@ZombieTypes)"
+				]
+			}
+		},
+		{
+			"aliases": [
+				"NewWaves"
+			],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {}
+		},
+		{
+			"objclass": "SeedBankProperties",
+			"objdata": {
+				"SelectionMethod": "preset",
+				"UnlockAll": true,
+				"OverrideSeedSlotsCount": 8,
+				"PresetPlantList": [
+					{
+						"Level": -1,
+						"PlantType": "moonflower"
+					},
+					{
+						"Level": -1,
+						"PlantType": "dusklobber"
+					},
+					{
+						"Level": -1,
+						"PlantType": "wallnut"
+					},
+					{
+						"Level": -1,
+						"PlantType": "shadowshroom"
+					},
+					{
+						"Level": -1,
+						"PlantType": "nightshade"
+					},
+					{
+						"Level": -1,
+						"PlantType": "wasabiwhip"
+					},
+					{
+						"Level": -1,
+						"PlantType": "gloomvine"
+					}
+				]
+			},
+			"aliases": [
+				"SeedBank"
+			]
+    	},
+		{
+			"aliases": [
+				"PlantMods"
+			],
+			"objclass": "PlantModifierProperties",
+			"objdata": {
+				"SuppressParticle": true,
+				"List": [
+					
+				]
+			}
+		}
+	],
+	"version": 1
+}

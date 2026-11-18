@@ -1,0 +1,265 @@
+{
+  "Information": {
+    "Author": "Sandy",
+    "Introduction": "",
+    "Version": "1.0",
+    "CreatedAt": "2026-1-21",
+    "UpdatedAt": "2025-1-21",
+    "Difficulty": "Easy",
+    "Category": "Adventure"
+  },
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "<PLAYERNAME>'s House",
+        "LevelNumber": 8,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(SunDropper@CurrentLevel)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(StandardIntro@LevelModules)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(ModernMowers@LevelModules)",
+          "RTID(WaveManagerModule@CurrentLevel)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(PlantMods@CurrentLevel)"
+        ],
+        "Name": "Level 1-8",
+        "WritenBy": "Sandy",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "FirstRewardParam": "repeater",
+        "FirstRewardType": "unlock_plant",
+        "StageModule": "RTID(TutorialStage@LevelModules)",
+        "StartingSun": 50
+      }
+    },
+    {
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {
+            "PointIncrementPerWave": 0,
+            "StartingPoints": 0,
+            "StartingWave": 0,
+            "ZombiePool": []
+          },
+          {
+            "PointIncrementPerWave": 0,
+            "StartingPoints": 0,
+            "StartingWave": 0,
+            "ZombiePool": []
+          },
+          {
+            "PointIncrementPerWave": 0,
+            "StartingPoints": 0,
+            "StartingWave": 0,
+            "ZombiePool": []
+          },
+          {
+            "PointIncrementPerWave": 25,
+            "StartingPoints": 100,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(tutorial@ZombieTypes)",
+              "RTID(tutorial_armor1@ZombieTypes)",
+              "RTID(tutorial_armor2@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 34,
+            "StartingPoints": 100,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(tutorial@ZombieTypes)",
+              "RTID(tutorial_armor1@ZombieTypes)",
+              "RTID(tutorial_armor2@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 50,
+            "StartingPoints": 100,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(tutorial@ZombieTypes)",
+              "RTID(tutorial_armor1@ZombieTypes)",
+              "RTID(tutorial_armor2@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 55,
+            "StartingPoints": 120,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(tutorial@ZombieTypes)",
+              "RTID(tutorial_armor1@ZombieTypes)",
+              "RTID(tutorial_armor2@ZombieTypes)"
+            ]
+          }
+        ],
+        "WaveManagerProps": "RTID(WaveManager@CurrentLevel)"
+      },
+      "aliases": [
+        "WaveManagerModule"
+      ]
+    },
+    {
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 10,
+        "WaveCount": 10,
+        "ZombieCountdownFirstWaveSecs": 18,
+        "Waves": [
+          ["RTID(Wave1@CurrentLevel)"],
+          ["RTID(Wave2@CurrentLevel)"],
+          ["RTID(Wave3@CurrentLevel)"],
+          ["RTID(Wave4@CurrentLevel)"],
+          ["RTID(Wave5@CurrentLevel)"],
+          ["RTID(Wave6@CurrentLevel)"],
+          ["RTID(Wave7@CurrentLevel)"],
+          ["RTID(Wave8@CurrentLevel)"],
+          ["RTID(Wave9@CurrentLevel)"],
+          ["RTID(Wave10@CurrentLevel)"]
+        ]
+      },
+      "aliases": [
+        "WaveManager"
+      ]
+    },
+    {
+    "aliases": [
+            "PoleVaulter"
+        ],
+        "objclass": "ZombieType",
+        "objdata": {
+            "Properties": "RTID(PoleVaulterProperties@CurrentLevel)",
+            "ZombieBasedOn": "abbot_3section_staff"
+        }
+    },
+    {
+        "aliases": [
+            "PoleVaulterProperties"
+        ],
+        "objclass": "ZombieProperties",
+        "objdata": { 
+        "HammerDuration": 0.01,
+        "RestDuration": 0,
+        "ProjectileDamageMult": 1,
+        "WalkSPS": 0.64,
+        "EatDPS": 100,
+        "Toughness": 450,
+        "WavePointCost": 200,
+        "Weight": 2000,
+        "ProjectileDetectRadius": -3,
+        "Hit1Damage": 50,
+        "Hit2Damage": 50,
+        "LeapForwardDistance": 1.45,
+        "BlockBackwardDistance": 1,
+        "HitRect": "RTID(CommonHitRect@RectangleProps)", 
+        "AttackRect": "RTID(CommonAttackRect@RectangleProps)" }
+    },
+    {
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "SelectionMethod": "chooser",
+        "UnlockAll": true,
+        "SuppressObjectiveTip": true,
+        "OverrideSeedSlotsCount": 6,
+        "PlantIncludeList": [
+            "peashooter",
+            "sunflower",
+            "cherry_bomb",
+            "wallnut",
+            "potatomine",
+            "snowpea",
+            "chomper"
+        ]
+      },
+      "aliases": [
+        "SeedBank"
+      ]
+    },
+    {
+      "aliases": [
+        "SunDropper"
+      ],
+      "objclass": "SunDropperProperties",
+      "objdata": {
+        "InitialSunDropDelay": 5,
+        "SunCountdownBase": 10,
+        "SunCountdownIncreasePerSun": 0,
+        "SunCountdownMax": 10.5,
+        "SunCountdownRange": 0.5,
+        "Value": 25
+      }
+    },
+    {
+      "aliases": [
+        "PlantMods"
+      ],
+      "objclass": "PlantModifierProperties",
+      "objdata": {
+        "SuppressParticle": true,
+        "List": [
+          {
+            "Type": "sunflower",
+            "NewObjdata": {
+              "SunValue": 25,
+              "Cooldown": 7.5
+            }
+          },
+          {
+            "Type": "peashooter",
+            "NewObjdata": {
+              "Cooldown": 7.5,
+              "CooldownFrom": 0
+            }
+          },
+          {
+            "Type": "cherry_bomb",
+            "NewObjdata": {
+              "Cooldown": 50,
+              "CooldownFrom": 0.7
+            }
+          },
+          {
+            "Type": "wallnut",
+            "NewObjdata": {
+              "Cooldown": 30,
+              "CooldownFrom": 0.65
+            }
+          },
+          {
+            "Type": "potatomine",
+            "NewObjdata": {
+              "Cooldown": 30,
+              "ChargeTime": 15,
+              "CooldownFrom": 0.65
+            }
+          },
+          {
+            "Type": "snowpea",
+            "NewObjdata": {
+              "Cooldown": 7.5,
+              "CooldownFrom": 0,
+              "SunCost": 175
+            }
+          },
+          {
+            "Type": "chomper",
+            "NewObjdata": {
+              "MaxContainZombieCount": 1,
+              "ChewTimePerZombie": 40,
+              "ChompFailDamage": 40,
+              "Cooldown": 7.5,
+              "CooldownFrom": 0,
+              "SunCost": 150
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "version": 1
+}

@@ -1,0 +1,324 @@
+{
+	"Information": {
+		"Author": "Sandy",
+		"Introduction": "",
+		"Version": "1.0"
+  	},
+	"#comment": "Level Of The Day Test 1",
+	"objects": [
+		{
+			"objclass": "LevelDefinition",
+			"objdata": {
+				"Description": "[PLAYERS_TRIP_TO_LOD]",
+				"Loot": "RTID(DefaultLoot@LevelModules)",
+				"DraperPromo": "cherry_bomb",
+				"Modules": [
+					"RTID(LevelOfTheDayIntro@LevelModules)",
+					"RTID(LevelOfTheDayModule@CurrentLevel)",
+					"RTID(NewWaves@CurrentLevel)",
+					"RTID(DefaultZombieWinCondition@LevelModules)",
+					"RTID(ChallengeModule@CurrentLevel)",
+					"RTID(PlantMods@CurrentLevel)",
+					"RTID(SeedBank@CurrentLevel)",
+					"RTID(ZombiesDeadWinCon@LevelModules)",
+					"RTID(LostCityMowers@LevelModules)",
+					"RTID(InitialPlant@CurrentLevel)"
+				],
+				"Name": "[LOD_LEVEL_NAME]",
+				"NormalPresentTable": "egypt_normal_01",
+				"Writtenby": "Sandy",
+				"#Comment": "Flipped!",
+				"MusicType": "MiniGame_B",
+				"ShinyPresentTable": "egypt_shiny_01",
+				"StageModule": "RTID(LostCityStage@LevelModules)",
+				"VictoryModule": "RTID(LevelOfTheDayOutro@LevelModules)",
+				"IsLevelOfTheDay": true,
+				"StartingSun": 150
+			}
+		},
+		{
+		"objclass": "ProtectThePlantChallengeProperties",
+		"aliases": [
+			"InitialPlant"
+		],
+		"objdata": {
+			"MustProtectCount": 5,
+			"SuppressObjectiveTip": true,
+			"Plants": [
+				{"GridX": 0,"GridY": 0,"PlantType": "torchwood"},
+				{"GridX": 0,"GridY": 1,"PlantType": "torchwood"},
+				{"GridX": 0,"GridY": 2,"PlantType": "torchwood"},
+				{"GridX": 0,"GridY": 3,"PlantType": "torchwood"},
+				{"GridX": 0,"GridY": 4,"PlantType": "torchwood"}
+			]
+		}
+		},
+		{
+			"aliases": [
+				"ChallengeModule"
+			],
+			"objclass": "StarChallengeModuleProperties",
+			"objdata": {
+				"Challenges": [
+					[
+						"RTID(Challenge1@CurrentLevel)"
+					]
+				],
+				"ChallengesAlwaysAvailable": true
+			}
+		},
+		{
+			"aliases": [
+				"Challenge1"
+			],
+			"objclass": "StarChallengeBeatTheLevelProps",
+			"objdata": {
+				"Descriptions": [
+					"Plants are flipped!",
+					"Torchwood reflects peas."
+				],
+				"DescriptionsMultiLanguage": []
+			}
+		},
+		{
+			"aliases": [
+				"WaveManagerProps"
+			],
+			"objclass": "WaveManagerProperties",
+			"objdata": {
+				"ZombieCountdownFirstWaveSecs": 7,
+				"Waves": [ 
+					["RTID(Wave1@CurrentLevel)"],
+					["RTID(Wave2@CurrentLevel)"],
+					["RTID(Wave3@CurrentLevel)"],
+					["RTID(Wave4@CurrentLevel)"],
+					["RTID(Wave5@CurrentLevel)"],
+					["RTID(Wave6@CurrentLevel)"],
+					["RTID(Wave7@CurrentLevel)"],
+					["RTID(Wave8@CurrentLevel)"],
+					["RTID(Wave9@CurrentLevel)"],
+					["RTID(Wave10@CurrentLevel)"],
+					["RTID(Wave11@CurrentLevel)"],
+					["RTID(Wave12@CurrentLevel)"],
+					["RTID(Wave13@CurrentLevel)"],
+					["RTID(Wave14@CurrentLevel)"],
+					["RTID(Wave15@CurrentLevel)"]
+				]
+			}
+		},
+		{
+			"aliases": [
+				"LevelOfTheDayModule"
+			],
+			"objclass": "LevelOfTheDayModuleProperties",
+			"objdata": {
+				"FlagCount": 3,
+				"PlantfoodToSpawnCount": 0,
+				"PointIncrementPerWave": 180,
+				"StartingPoints": 100,
+				"WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)",
+				"WavesPerFlag": 5,
+				"ZombiePool": [
+					"RTID(lostcity@ZombieTypes)",
+					"RTID(lostcity_armor1@ZombieTypes)",
+					"RTID(lostcity_armor2@ZombieTypes)",
+					"RTID(lostcity_imp@ZombieTypes)",
+					"RTID(lostcity_bug_armor1@ZombieTypes)",
+					"RTID(lostcity_gargantuar@ZombieTypes)",
+					"RTID(lostcity_relichunter@ZombieTypes)",
+					"RTID(lostcity_crystalskull@ZombieTypes)",
+					"RTID(modern_newspaper@ZombieTypes)",
+					"RTID(iceage_hunter_veteran@ZombieTypes)",
+					"RTID(prospector@ZombieTypes)"
+				]
+			}
+		},
+		{
+			"objclass": "SeedBankProperties",
+			"objdata": {
+				"SelectionMethod": "preset",
+				"UnlockAll": true,
+				"SuppressObjectiveTip": true,
+				"OverrideSeedSlotsCount": 8,
+				"PresetPlantList": [
+					{
+						"Level": -1,
+						"PlantType": "primalsunflower"
+					},
+					{
+						"Level": -1,
+						"PlantType": "peashooter"
+					},
+					{
+						"Level": -1,
+						"PlantType": "repeater"
+					},
+					{
+						"Level": -1,
+						"PlantType": "sweetpotato"
+					},
+					{
+						"Level": -1,
+						"PlantType": "gatling"
+					},
+					{
+						"Level": -1,
+						"PlantType": "electricpeashooter"
+					},
+					{
+						"Level": -1,
+						"PlantType": "shinevine"
+					},
+					{
+						"Level": -1,
+						"PlantType": "pvine"
+					}
+				]
+			},
+			"aliases": [
+				"SeedBank"
+			]
+    	},
+		{
+			"aliases": [
+				"PlantMods"
+			],
+			"objclass": "PlantModifierProperties",
+			"objdata": {
+				"SuppressParticle": true,
+				"List": [
+				{
+					"Type": "primalsunflower",
+					"NewObjdata": {
+						"SpawnedScale": -1
+					}
+				},
+				{
+					"Type": "garlic",
+					"NewObjdata": {
+						"SpawnedScale": -1
+					}
+				},
+				{
+					"Type": "shinevine",
+					"NewObjdata": {
+						"SpawnedScale": -1
+					}
+				},
+				{
+					"Type": "pvine",
+					"NewObjdata": {
+						"SpawnedScale": -1,
+						"PeaType": "pea"
+					}
+				},
+				{
+					"Type": "sweetpotato",
+					"NewObjdata": {
+						"SpawnedScale": -1
+					}
+				},
+				{
+					"Type": "peashooter",
+					"NewObjdata": {
+						"SpawnedScale": -1,
+						"PeaType": "RTID(pea_t@CurrentLevel)",
+						"AlwaysShoots": true
+					}
+				},
+				{
+					"Type": "repeater",
+					"NewObjdata": {
+						"SpawnedScale": -1,
+						"PeaType": "RTID(pea_t@CurrentLevel)",
+						"AlwaysShoots": true
+					}
+				},
+				{
+					"Type": "gatling",
+					"NewObjdata": {
+						"SpawnedScale": -1,
+						"PeaType": "RTID(pea_t@CurrentLevel)",
+						"AlwaysShoots": true
+					}
+				},
+				{
+					"Type": "electricpeashooter",
+					"NewObjdata": {
+						"SpawnedScale": -1,
+						"PeaType": "RTID(electricpea_t@CurrentLevel)",
+						"AlwaysShoots": true
+					}
+				}
+				]
+			}
+		},
+		{
+		"objclass": "ProjectileType",
+		"aliases": [
+			"pea_t"
+		],
+		"objdata": {
+			"MintBoostedType": "pea2",
+			"ProjectileBasedOn": "pea",
+			"Props": "RTID(pea_p@CurrentLevel)"
+		}
+		},
+		{
+		"objclass": "ProjectileProperties",
+		"aliases": [
+			"pea_p"
+		],
+		"objdata": {
+			"Damage": 20,
+			"SpeedMult": -1,
+			"YellowIgnitedType": "pea",
+			"BlueIgnitedType": "pea",
+			"Size": {
+			"w": 16,
+			"h": 16
+			}
+		}
+		},
+		{
+		"objclass": "ProjectileType",
+		"aliases": [
+			"electricpea_t"
+		],
+		"objdata": {
+			"MintBoostedType": "electricpea_mint",
+			"ProjectileBasedOn": "electricpea",
+			"Props": "RTID(electricpea_p@CurrentLevel)"
+		}
+		},
+		{
+		"objclass": "ProjectileProperties",
+		"aliases": [
+			"electricpea_p"
+		],
+		"objdata": {
+			"ElectricInterval": 0.5,
+			"SpeedMult": -1,
+			"ElectricDamage": 20,
+			"ElectricTargetCount": 2,
+			"YellowIgnitedType": "electricpea",
+        	"BlueIgnitedType": "electricpea",
+			"Damage": 20,
+			"DamageType": "electricity",
+			"CannotBeReversedByJester": true,
+			"Size": {
+			"w": 12,
+			"h": 12
+			}
+		}
+		},
+		{
+			"aliases": [
+				"NewWaves"
+			],
+			"objclass": "WaveManagerModuleProperties",
+			"objdata": {}
+		}
+	],
+	"version": 1
+}

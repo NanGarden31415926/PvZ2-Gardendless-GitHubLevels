@@ -1,0 +1,387 @@
+{
+  "Information": {
+    "Author": "Sandy",
+    "Introduction": "",
+    "Version": "1.0",
+    "CreatedAt": "2026-1-21",
+    "UpdatedAt": "2025-1-21",
+    "Difficulty": "Easy",
+    "Category": "Adventure"
+  },
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "Player's Front Yard",
+        "LevelNumber": 4,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(StandardIntro@LevelModules)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(ModernMowers@LevelModules)",
+          "RTID(WaveManagerModule@CurrentLevel)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(PlantMods@CurrentLevel)",
+          "RTID(ConveyorBelt@CurrentLevel)",
+          "RTID(Bowling@CurrentLevel)"
+        ],
+        "Name": "Blast From The Past - Day 4",
+        "WritenBy": "Sandy",
+        "MusicType": "MiniGame_B",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "StageModule": "RTID(TutorialStage@LevelModules)",
+        "FirstRewardParam": "chomper",
+        "FirstRewardType": "unlock_plant",
+        "StartingSun": 50,
+        "FirstIntroNarrative": "INTRO",
+        "ReplayIntroNarrative": "INTRO"
+      }
+    },
+    {
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {
+            "PointIncrementPerWave": 0,
+            "StartingPoints": 0,
+            "StartingWave": 0,
+            "ZombiePool": []
+          },
+          {
+            "PointIncrementPerWave": 0,
+            "StartingPoints": 0,
+            "StartingWave": 0,
+            "ZombiePool": []
+          },
+          {
+            "PointIncrementPerWave": 0,
+            "StartingPoints": 0,
+            "StartingWave": 0,
+            "ZombiePool": []
+          },
+          {
+            "PointIncrementPerWave": 50,
+            "StartingPoints": 300,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(tutorial@ZombieTypes)",
+              "RTID(tutorial_armor1@ZombieTypes)",
+              "RTID(tutorial_armor2@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 80,
+            "StartingPoints": 400,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(tutorial@ZombieTypes)",
+              "RTID(tutorial_armor1@ZombieTypes)",
+              "RTID(tutorial_armor2@ZombieTypes)",
+              "RTID(Newerpaper@CurrentLevel)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 100,
+            "StartingPoints": 420,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(tutorial@ZombieTypes)",
+              "RTID(tutorial_armor1@ZombieTypes)",
+              "RTID(tutorial_armor2@ZombieTypes)",
+              "RTID(Newerpaper@CurrentLevel)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 115,
+            "StartingPoints": 450,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(tutorial@ZombieTypes)",
+              "RTID(tutorial_armor1@ZombieTypes)",
+              "RTID(tutorial_armor2@ZombieTypes)",
+              "RTID(Newerpaper@CurrentLevel)"
+            ]
+          }
+        ],
+        "WaveManagerProps": "RTID(WaveManager@CurrentLevel)"
+      },
+      "aliases": [
+        "WaveManagerModule"
+      ]
+    },
+    {
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 10,
+        "WaveCount": 20,
+        "ZombieCountdownFirstWaveSecs": 5,
+        "Waves": [
+          ["RTID(Wave1@CurrentLevel)"],
+          ["RTID(Wave2@CurrentLevel)"],
+          ["RTID(Wave3@CurrentLevel)"],
+          ["RTID(Wave4@CurrentLevel)"],
+          ["RTID(Wave5@CurrentLevel)"],
+          ["RTID(Wave6@CurrentLevel)"],
+          ["RTID(Wave7@CurrentLevel)"],
+          ["RTID(Wave8@CurrentLevel)"],
+          ["RTID(Wave9@CurrentLevel)"],
+          ["RTID(Wave10@CurrentLevel)"],
+          ["RTID(Wave11@CurrentLevel)"],
+          ["RTID(Wave12@CurrentLevel)"],
+          ["RTID(Wave13@CurrentLevel)"],
+          ["RTID(Wave14@CurrentLevel)"],
+          ["RTID(Wave15@CurrentLevel)"],
+          ["RTID(Wave16@CurrentLevel)"],
+          ["RTID(Wave17@CurrentLevel)"],
+          ["RTID(Wave18@CurrentLevel)"],
+          ["RTID(Wave19@CurrentLevel)"],
+          ["RTID(Wave20@CurrentLevel)"]
+        ]
+      },
+      "aliases": [
+        "WaveManager"
+      ]
+    },
+    {
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "SelectionMethod": "conveyor"
+      },
+      "aliases": [
+        "SeedBank"
+      ]
+    },
+    {
+      "aliases": [
+        "SunDropper"
+      ],
+      "objclass": "SunDropperProperties",
+      "objdata": {
+        "InitialSunDropDelay": 5,
+        "SunCountdownBase": 10,
+        "SunCountdownIncreasePerSun": 0,
+        "SunCountdownMax": 10.5,
+        "SunCountdownRange": 0.5,
+        "Value": 25
+      }
+    },
+    {
+      "aliases": [
+        "PlantMods"
+      ],
+      "objclass": "PlantModifierProperties",
+      "objdata": {
+        "SuppressParticle": true,
+        "List": [
+          {
+            "Type": "sunflower",
+            "NewObjdata": {
+              "SunValue": 25,
+              "Cooldown": 7.5
+            }
+          },
+          {
+            "Type": "peashooter",
+            "NewObjdata": {
+              "Cooldown": 7.5
+            }
+          },
+          {
+            "Type": "cherry_bomb",
+            "NewObjdata": {
+              "Cooldown": 50
+            }
+          },
+          {
+            "Type": "wallnut",
+            "NewObjdata": {
+              "Cooldown": 30
+            }
+          },
+          {
+            "Type": "potatomine",
+            "NewObjdata": {
+              "Cooldown": 45,
+              "ChargeTime": 15,
+              "CooldownFrom": 1
+            }
+          },
+          {
+            "Type": "tool_projectile_bowling_wallnut",
+            "NewObjdata": {
+              "SpeedX": 6,
+              "ProjectileType": "bowling_nut"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+              "Newerpaper"
+          ],
+          "objclass": "ZombieType",
+          "objdata": {
+              "Properties": "RTID(NewerpaperProperties@CurrentLevel)",
+              "ZombieBasedOn": "modern_newspaper"
+          }
+      },
+      {
+          "aliases": [
+              "NewerpaperProperties"
+          ],
+          "objclass": "ZombieProperties",
+          "objdata": { "WalkSPS": 0.185, 
+          "EatDPS": 100, 
+          "Toughness": 190,
+          "EnragedDamageScale": 2,
+          "EnragedSpeedScale": 3,
+          "NewspaperHealth": 150, 
+          "WavePointCost": 250, 
+          "NewspaperBowlingLevel": 1, 
+          "Weight": 4000,
+          "HitRect": "RTID(CommonHitRect@RectangleProps)", 
+          "AttackRect": "RTID(CommonAttackRect@RectangleProps)" }
+      },
+    {
+			"aliases": [
+				"bowling_nut"
+			],
+			"objclass": "ProjectileType",
+			"objdata": {
+				"ProjectileBasedOn": "bowling_wallnut",
+				"Props": "RTID(bowling_nut@CurrentLevel)"
+			}    
+    },
+    {
+			"aliases": [
+				"bowling_nut"
+			],
+			"objclass": "ProjectileProperties",
+			"objdata": {
+				"Damage": 1000,
+				"DamageBowlingLevel": 1,
+				"Size": {
+					"w": 15,
+					"h": 15
+				},
+				"ShakesScreenOnImpact": true,
+				"IgnoredBy3SectionStaff": true,
+				"CannotBeReversedByJester": true
+			}
+    },
+      {
+            "aliases": [
+                "ConveyorBelt"
+            ],
+            "objclass": "ConveyorSeedBankProperties",
+            "objdata": {
+                "DropDelayConditions": [
+                    {
+                        "Delay": 5,
+                        "MaxPackets": 2
+                    },
+                    {
+                        "Delay": 5,
+                        "MaxPackets": 4
+                    },
+                    {
+                        "Delay": 5,
+                        "MaxPackets": 6
+                    },
+                    {
+                        "Delay": 5,
+                        "MaxPackets": 8
+                    }
+                ],
+                "InitialPlantList": [
+                    {
+                        "MaxWeightFactor": 0,
+                        "MaxCount": 8,
+                        "PlantType": "tool_projectile_bowling_wallnut",
+                        "Weight": 75
+                    },
+                    {
+                        "MaxWeightFactor": 0,
+                        "MaxCount": 2,
+                        "PlantType": "tool_projectile_bowling_explodeonut",
+                        "Weight": 25
+                    }
+                ],
+                "SpeedConditions": [
+                    {
+                        "MaxPackets": 0,
+                        "Speed": 100
+                    }
+                ]
+            }
+      },
+      {
+            "aliases": [
+                "Bowling"
+            ],
+            "objclass": "BowlingMinigameProperties",
+            "objdata": {
+                "BowlingFoulLine": 2,
+                "SuppressObjectiveTip": false
+            }
+      },
+      {
+    "aliases": [
+        "INTRO"
+    ],
+    "objclass": "NarrativeProperties",
+    "objdata": {
+        "Flow": [
+        {
+            "Character": "crazydave",
+            "Action": "NPC_ENTER"
+        },
+        {
+            "Character": "crazydave",
+            "Action": "SPECIAL1",
+            "Lines": {
+                "en": "Hey neighbour! ",
+                "zh": "Hey neighbour! "
+            }
+        },
+        {
+            "Character": "crazydave",
+            "Action": "EXCITED",
+            "Lines": {
+                "en": "You know what time it is! ",
+                "zh": "You know what time it is! "
+            }
+        },
+        {
+            "Character": "crazydave",
+            "Action": "SPECIAL2",
+            "Lines": {
+                "en": "BOWLING TIIIIIME! ",
+                "zh": "BOWLING TIIIIIME! "
+            }
+        },
+        {
+            "Character": "crazydave",
+            "Action": "PLAYFUL",
+            "Lines": {
+                "en": "Why are we going bowling? ",
+                "zh": "Why are we going bowling? "
+            }
+        },
+        {
+            "Character": "crazydave",
+            "Action": "SHOUT",
+            "Lines": {
+                "en": "Because im CRAAZYY! ",
+                "zh": "Because im CRAAZYY! "
+            }
+        }
+        ]
+    }
+    }
+  ],
+  "version": 1
+}
