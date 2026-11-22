@@ -1,0 +1,871 @@
+{
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "FirstIntroNarrative": "NEW_EGYPT15_INTRO",
+        "ReplayIntroNarrative": "NEW_EGYPT15_INTRO2",
+        "FirstOutroNarrative": "NEW_EGYPT15_OUTRO",
+        "FirstRewardParam": "note_egypt",
+        "FirstRewardType": "note",
+        "Modules": [
+          "RTID(StandardIntro@LevelModules)",
+          "RTID(DefaultSunDropper@LevelModules)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(EgyptMowers@LevelModules)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(Gravestones@CurrentLevel)",
+          "RTID(FrozenPlantPlacement@CurrentLevel)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)"
+        ],
+        "Name": "[EGYPT_LEVEL_NAME]",
+        "Description": "[PLAYERS_TRIP_TO_EGYPT]",
+        "LevelNumber": 15,
+        "WrittenBy": "星痕_Hoshiato",
+        "StageModule": "RTID(EgyptStage@LevelModules)"
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "SelectionMethod": "chooser"
+      }
+    },
+    {
+      "aliases": [
+        "NEW_EGYPT15_INTRO"
+      ],
+      "objclass": "NarrativeProperties",
+      "objdata": {
+        "Flow": [
+          {
+            "Character": "crazydave",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "crazydave",
+            "Action": "TIRED",
+            "Lines": {
+              "en": "Penny! You remember \"Wave Stalling\"?",
+              "zh": "潘妮！你还记得“拖过波”吗？"
+            }
+          },
+          {
+            "Character": "crazydave",
+            "Action": "TIRED",
+            "Lines": {
+              "en": "I was wonderin' — to pull off Wave Stalling, do we gotta completely avoid attackin' the current wave of zombies?",
+              "zh": "我在想，如果要完成“拖过波”，一定完全不能攻击当前波次的僵尸，是这样吗？"
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "winnie",
+            "Action": "TIRED",
+            "Lines": {
+              "en": "Not exactly. In reality, the next wave is only drawn in once the previous wave zombies are damaged to an extent",
+              "zh": "并非如此。实际上只有僵尸们的血量下降到一定程度时，才会引来下一波僵尸。"
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "TIRED",
+            "Lines": {
+              "en": "In other words, you just need to keep the damage dealt to the zombies within a certain range — you don't have to avoid attacking them entirely.",
+              "zh": "也就是说，把对僵尸造成的伤害控制在一定范围内即可，并不需要完全不攻击僵尸。"
+            }
+          },
+          {
+            "Character": "crazydave",
+            "Action": "TIRED",
+            "Lines": {
+              "en": "So what's that range?",
+              "zh": "那么这个范围是多少呢？"
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "TIRED",
+            "Lines": {
+              "en": "My calculations show that to keep the next wave from coming early, the current wave's total health needs to stay above a certain threshold. That threshold shifts between 50% and 65%.",
+              "zh": "根据我的计算，想要不提前引来下一波僵尸，需要使本波次僵尸血量保持不低于某个比例，这个比例在50%至65%间浮动。"
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "TIRED",
+            "Lines": {
+              "en": "In other words: \"you can knock off about one-third of each wave safely without triggering the next wave.\"",
+              "zh": "也许这听起来很难懂，换个简单的说法就是“每波可以打掉三分之一的血量不会过波”。"
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "TIRED",
+            "Lines": {
+              "en": "For example, if a wave has three zombies with equal health points, you can kill one of them with no risks of triggering the next wave early.",
+              "zh": "比如某一波来了三个血量相同的僵尸，可以击杀其中一个，这不会使下一波僵尸提前进攻。"
+            }
+          },
+          {
+            "Character": "crazydave",
+            "Action": "TIRED",
+            "Lines": {
+              "en": "That's mighty useful know-how!",
+              "zh": "很有用的知识！"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "NEW_EGYPT15_INTRO2"
+      ],
+      "objclass": "NarrativeProperties",
+      "objdata": {
+        "Flow": [
+          {
+            "Character": "winnie",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "winnie",
+            "Action": "TIRED",
+            "Lines": {
+              "en": "To avoid triggering the next wave early, you need to keep the current wave's toughness above a certain percentage. That percentage fluctuates between 55% and 65%.",
+              "zh": "想要不提前引来下一波僵尸，需要使本波次僵尸血量保持不低于某个比例，这个比例在55%至65%间浮动。"
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "TIRED",
+            "Lines": {
+              "en": "That might sound confusing, so put simply: \"you can knock off about one-third of each wave's toughness without triggering the next wave.\"",
+              "zh": "也许这听起来很难懂，换个简单的说法就是“每波可以打掉三分之一的血量不会过波”。"
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "TIRED",
+            "Lines": {
+              "en": "For example, if a wave has three zombies with equal toughness, you can kill one of them without causing the next wave to attack early.",
+              "zh": "比如某一波来了三个血量相同的僵尸，可以击杀其中一个，这不会使下一波僵尸提前进攻。"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "NEW_EGYPT15_OUTRO"
+      ],
+      "objclass": "NarrativeProperties",
+      "objdata": {
+        "Flow": [
+          {
+            "Character": "winnie",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "winnie",
+            "Action": "TIRED",
+            "Lines": {
+              "en": "I've come up with a name for \"the percentage of the current wave's health points that must be kept from dropping below to prevent the next wave from attacking early.\"",
+              "zh": "我给“不使下一波僵尸提前进攻所需的本波次僵尸血量保持不低于的比例”起了个名字。"
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "TIRED",
+            "Lines": {
+              "en": "......",
+              "zh": "……"
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "TIRED",
+            "Lines": {
+              "en": "I've decided to call it the \"Wave Trigger Health Percentage.\"",
+              "zh": "我决定叫它“过波血线”。"
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "TIRED",
+            "Lines": {
+              "en": "As a reminder, the Wave Trigger Health Percentage usually fluctuates between 50% and 65%.",
+              "zh": "再次提醒：在一般情况下，“过波血线”是50%至65%间的浮动值。"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Gravestones"
+      ],
+      "objclass": "GravestoneProperties",
+      "objdata": {
+        "GravestoneCount": 10,
+        "SpawnColumnEnd": 9,
+        "SpawnColumnStart": 8
+      }
+    },
+    {
+      "aliases": [
+        "ChallengeModule"
+      ],
+      "objclass": "StarChallengeModuleProperties",
+      "objdata": {
+        "Challenges": [
+          [
+            "RTID(DoNotPlantBeforeLine@CurrentLevel)"
+          ]
+        ],
+        "ChallengesAlwaysAvailable": true
+      }
+    },
+    {
+      "aliases": [
+        "DoNotPlantBeforeLine"
+      ],
+      "objclass": "MoldColonyChallengeProps",
+      "objdata": {
+        "MoldMatrix": [
+          "100010000",
+          "010010000",
+          "100010000",
+          "010010000",
+          "100010000"
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "FrozenPlantPlacement"
+      ],
+      "objclass": "InitialPlantProperties",
+      "objdata": {
+        "InitialPlantPlacements": [
+          {
+            "GridX": 3,
+            "GridY": 0,
+            "TypeName": "potatomine"
+          },
+          {
+            "GridX": 3,
+            "GridY": 1,
+            "TypeName": "potatomine"
+          },
+          {
+            "GridX": 3,
+            "GridY": 3,
+            "TypeName": "potatomine"
+          },
+          {
+            "GridX": 3,
+            "GridY": 4,
+            "TypeName": "potatomine"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {},
+          {},
+          {},
+          {
+            "PointIncrementPerWave": 20,
+            "StartingPoints": 120,
+            "StartingWave": 4,
+            "ZombiePool": [
+              "RTID(mummy@ZombieTypes)",
+              "RTID(mummy_armor1@ZombieTypes)",
+              "RTID(ra@ZombieTypes)",
+              "RTID(camel_onehump@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 40,
+            "StartingPoints": 120,
+            "StartingWave": 4,
+            "ZombiePool": [
+              "RTID(mummy@ZombieTypes)",
+              "RTID(mummy_armor1@ZombieTypes)",
+              "RTID(ra@ZombieTypes)",
+              "RTID(camel_onehump@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 40,
+            "StartingPoints": 200,
+            "StartingWave": 4,
+            "ZombiePool": [
+              "RTID(mummy@ZombieTypes)",
+              "RTID(mummy_armor1@ZombieTypes)",
+              "RTID(ra@ZombieTypes)",
+              "RTID(camel_onehump@ZombieTypes)",
+              "RTID(camel_twohump@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 60,
+            "StartingPoints": 300,
+            "StartingWave": 4,
+            "ZombiePool": [
+              "RTID(mummy@ZombieTypes)",
+              "RTID(mummy_armor1@ZombieTypes)",
+              "RTID(ra@ZombieTypes)",
+              "RTID(camel_onehump@ZombieTypes)",
+              "RTID(camel_twohump@ZombieTypes)"
+            ]
+          }
+        ],
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 5,
+        "SpawnColEnd": 1,
+        "SpawnColStart": 1,
+        "WaveCount": 10,
+        "WaveSpendingPointIncrement": 0,
+        "WaveSpendingPoints": 0,
+        "Waves": [
+          [
+            "RTID(Wave1StormEvent0@CurrentLevel)",
+            "RTID(Wave1Scheduler0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave1StormEvent0@CurrentLevel)",
+            "RTID(Wave2Scheduler0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave1StormEvent0@CurrentLevel)",
+            "RTID(Wave3Scheduler0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)",
+            "RTID(Wave6StormEvent0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)",
+            "RTID(Wave6StormEvent0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)",
+            "RTID(Wave10StormEvent0@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6StormEvent0"
+      ],
+      "objclass": "StormZombieSpawnerProps",
+      "objdata": {
+        "ColumnEnd": 8,
+        "ColumnStart": 5,
+        "GroupSize": 2,
+        "TimeBetweenGroups": 3,
+        "Type": "sandstorm",
+        "Zombies": [
+          {
+            "Type": "RTID(mummy_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mummy_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mummy@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mummy@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mummy@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mummy@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mummy@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mummy@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave10StormEvent0"
+      ],
+      "objclass": "StormZombieSpawnerProps",
+      "objdata": {
+        "ColumnEnd": 8,
+        "ColumnStart": 7,
+        "GroupSize": 1,
+        "TimeBetweenGroups": 2,
+        "Type": "sandstorm",
+        "Zombies": [
+          {
+            "Type": "RTID(explorer@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(explorer@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(explorer@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(explorer@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "DynamicPlantfood": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "Zombies": [
+          {
+            "Type": "RTID(camel_onehump@ZombieTypes)",
+            "Row": 2
+          },
+          {
+            "Type": "RTID(camel_onehump@ZombieTypes)",
+            "Row": 3
+          },
+          {
+            "Type": "RTID(camel_onehump@ZombieTypes)",
+            "Row": 4
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "DynamicPlantfood": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "Zombies": [
+          {
+            "Type": "RTID(mummy_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mummy_armor2@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "DynamicPlantfood": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        "Zombies": [
+          {
+            "Type": "RTID(camel_twohump@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(camel_twohump@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(camel_twohump@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave7"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(camel_onehump@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(camel_onehump@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(explorer@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mummy_armor1@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave8"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "DynamicPlantfood": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "Zombies": [
+          {
+            "Type": "RTID(mummy_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mummy_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mummy_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(explorer@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(ra@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(ra@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave9"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "DynamicPlantfood": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "Zombies": [
+          {
+            "Type": "RTID(explorer@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(explorer@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mummy_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mummy_armor2@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave10"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "DynamicPlantfood": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        "Zombies": [
+          {
+            "Type": "RTID(camel_twohump@ZombieTypes)",
+            "Row": 1
+          },
+          {
+            "Type": "RTID(camel_twohump@ZombieTypes)",
+            "Row": 2
+          },
+          {
+            "Type": "RTID(camel_twohump@ZombieTypes)",
+            "Row": 3
+          },
+          {
+            "Type": "RTID(camel_twohump@ZombieTypes)",
+            "Row": 4
+          },
+          {
+            "Type": "RTID(camel_twohump@ZombieTypes)",
+            "Row": 5
+          },
+          {
+            "Type": "RTID(explorer@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave1StormEvent0"
+      ],
+      "objclass": "StormZombieSpawnerProps",
+      "objdata": {
+        "ColumnEnd": 9,
+        "ColumnStart": 9,
+        "GroupSize": 1,
+        "TimeBetweenGroups": 1,
+        "Type": "sandstorm",
+        "Zombies": []
+      }
+    },
+    {
+			"aliases":[
+				"Wave1Scheduler0"
+			],
+			"objclass":"WaveSchedulerProps",
+			"objdata":{
+				"TimeBeforeFirst":{
+					"Max":1.5,
+					"Min":1.5
+				},
+				"TimeBetween":{
+					"Max":1,
+					"Min":1
+				},
+				"Repeat":{
+					"Max":1,
+					"Min":1
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+					"RTID(Wave1StormJitter@CurrentLevel)"
+				]
+			}
+		},
+    {
+      "aliases": [
+        "Wave1StormJitter"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(mummy@ZombieTypes)",
+            "Row": 4,
+            "Column": 4,
+            "Style": "sandstorm"
+          },
+          {
+            "Type": "RTID(mummy@ZombieTypes)",
+            "Row": 1,
+            "Column": 9,
+            "Style": "sandstorm"
+          },
+          {
+            "Type": "RTID(mummy@ZombieTypes)",
+            "Row": 1,
+            "Column": 9,
+            "Style": "sandstorm"
+          }
+        ]
+      }
+    },
+    {
+			"aliases":[
+				"Wave2Scheduler0"
+			],
+			"objclass":"WaveSchedulerProps",
+			"objdata":{
+				"TimeBeforeFirst":{
+					"Max":1.5,
+					"Min":1.5
+				},
+				"TimeBetween":{
+					"Max":1,
+					"Min":1
+				},
+				"Repeat":{
+					"Max":1,
+					"Min":1
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+					"RTID(Wave2StormJitter@CurrentLevel)"
+				]
+			}
+		},
+    {
+      "aliases": [
+        "Wave2StormJitter"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(mummy@ZombieTypes)",
+            "Row": 2,
+            "Column": 4,
+            "Style": "sandstorm"
+          },
+          {
+            "Type": "RTID(mummy@ZombieTypes)",
+            "Row": 3,
+            "Column": 9,
+            "Style": "sandstorm"
+          },
+          {
+            "Type": "RTID(mummy@ZombieTypes)",
+            "Row": 3,
+            "Column": 9,
+            "Style": "sandstorm"
+          }
+        ]
+      }
+    },
+    {
+			"aliases":[
+				"Wave3Scheduler0"
+			],
+			"objclass":"WaveSchedulerProps",
+			"objdata":{
+				"TimeBeforeFirst":{
+					"Max":1.5,
+					"Min":1.5
+				},
+				"TimeBetween":{
+					"Max":1,
+					"Min":1
+				},
+				"Repeat":{
+					"Max":1,
+					"Min":1
+				},
+				"RewardWhenEnded":false,
+				"SuppressRewardState":false,
+				"Events":[
+					"RTID(Wave3StormJitter@CurrentLevel)"
+				]
+			}
+		},
+    {
+      "aliases": [
+        "Wave3StormJitter"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(mummy@ZombieTypes)",
+            "Row": 1,
+            "Column": 4,
+            "Style": "sandstorm"
+          },
+          {
+            "Type": "RTID(ra@ZombieTypes)",
+            "Row": 5,
+            "Column": 4,
+            "Style": "sandstorm"
+          },
+          {
+            "Type": "RTID(mummy@ZombieTypes)",
+            "Row": 5,
+            "Column": 9,
+            "Style": "sandstorm"
+          },
+          {
+            "Type": "RTID(ra@ZombieTypes)",
+            "Row": 5,
+            "Column": 9,
+            "Style": "sandstorm"
+          },
+          {
+            "Type": "RTID(ra@ZombieTypes)",
+            "Row": 5,
+            "Column": 9,
+            "Style": "sandstorm"
+          },
+          {
+            "Type": "RTID(mummy@ZombieTypes)",
+            "Row": 5,
+            "Column": 9,
+            "Style": "sandstorm"
+          }
+        ]
+      }
+    }
+  ],
+  "version": 1
+}
