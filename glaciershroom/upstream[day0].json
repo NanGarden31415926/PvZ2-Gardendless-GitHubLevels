@@ -1,0 +1,567 @@
+{
+  "#comment": "逆流Counter-current【第0天】",
+  "version": 1,
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "LevelNumber": 1,
+        "Loot": "RTID(NoLoot@LevelModules)",
+        "FirstIntroNarrative": "EditorFirstIntroNarrative",
+        "ReplayIntroNarrative": "EditorFirstIntroNarrative",
+        "NameMultiLanguage": {
+          "en": "upstream【day0】",
+          "zh": "逆流【第0天】"
+        },
+        "DescriptionMultiLanguage": {
+          "en":"<PLAYERNAME>'s upstreaming time travel!",
+          "zh":"<PLAYERNAME>的时空逆流之旅！"
+        },
+        "StartingSun": 50,
+        "StageModule": "RTID(DinoStage@LevelModules)",
+        "Modules": [
+          "RTID(StandardIntro@LevelModules)",
+          "RTID(DefaultSunDropper@LevelModules)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(DinoMowers@LevelModules)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(InitialGridItems@CurrentLevel)",
+          "RTID(Tide@CurrentLevel)"
+        ],
+        "WrittenBy": "寒冰菇"
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "SelectionMethod": "chooser",
+        "UnlockAll": true,
+        "PlantIncludeList": [
+          "peashooter",
+          "sunflower",
+          "wallnut",
+          "potatomine",
+          "primalpeashooter",
+          "lilypad",
+          "lavaguava"
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "MinNextWaveHealthPercentage": 0.5,
+        "MaxNextWaveHealthPercentage": 0.65,
+        "FlagWaveInterval": 7,
+        "WaveCount": 7,
+        "WaveSpendingPointIncrement": 10,
+        "WaveSpendingPoints": 100,
+        "Waves": [
+          [
+            "RTID(Wave1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7GroundSpawnEvent0@CurrentLevel)",
+            "RTID(Wave7@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(lostcity@ZombieTypes)",
+            "Row": "3"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 1,
+        "Zombies": [
+          {
+            "Type": "RTID(dino@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(lostcity@ZombieTypes)",
+            "Row": "3"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(lostcity_armor1@CurrentLevel)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(dino@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(dino@ZombieTypes)",
+            "Row": "1"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dino@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(dino@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(lostcity_bug@ZombieTypes)",
+            "Row": "3"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(lostcity_bug@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(lostcity_armor1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(dino@ZombieTypes)",
+            "Row": "1"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 1,
+        "Zombies": [
+          {
+            "Type": "RTID(dino@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(dino@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(dino@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(dino@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(lostcity_armor1@CurrentLevel)",
+            "Row": "3"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave7GroundSpawnEvent0"
+      ],
+      "objclass": "SpawnZombiesFromGroundSpawnerProps",
+      "objdata": {
+        "ColumnStart": 7,
+        "ColumnEnd": 9,
+        "RowStart": 0,
+        "RowEnd": 4,
+        "Zombies": [
+          {
+            "Type": "RTID(lostcity_bug@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_bug@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave7"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(lostcity_armor1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(lostcity_armor1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(dino@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_excavator@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "InitialGridItems"
+      ],
+      "objclass": "InitialGridItemProperties",
+      "objdata": {
+        "InitialGridItemPlacements": [
+          {
+            "GridX": 0,
+            "GridY": 0,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 1,
+            "GridY": 0,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 2,
+            "GridY": 0,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 3,
+            "GridY": 0,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 0,
+            "GridY": 1,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 3,
+            "GridY": 1,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 1,
+            "GridY": 1,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 2,
+            "GridY": 1,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 4,
+            "GridY": 0,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 4,
+            "GridY": 1,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 5,
+            "GridY": 0,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 5,
+            "GridY": 1,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 0,
+            "GridY": 3,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 0,
+            "GridY": 4,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 1,
+            "GridY": 3,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 1,
+            "GridY": 4,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 2,
+            "GridY": 3,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 2,
+            "GridY": 4,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 3,
+            "GridY": 4,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 4,
+            "GridY": 3,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 4,
+            "GridY": 4,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 3,
+            "GridY": 3,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 5,
+            "GridY": 3,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 5,
+            "GridY": 4,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 6,
+            "GridY": 3,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 7,
+            "GridY": 3,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 8,
+            "GridY": 3,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 6,
+            "GridY": 4,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 7,
+            "GridY": 4,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 8,
+            "GridY": 4,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 8,
+            "GridY": 1,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 7,
+            "GridY": 1,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 6,
+            "GridY": 1,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 6,
+            "GridY": 0,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 7,
+            "GridY": 0,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 8,
+            "GridY": 0,
+            "TypeName": "shallowpuddle"
+          }
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "lostcity_armor1"
+      ],
+      "objdata": {
+        "Properties": "RTID(lostcity_armor1@CurrentLevel)",
+        "ZombieBasedOn": "lostcity_armor1"
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "lostcity_armor1"
+      ],
+      "objdata": {
+        "StartingArmors": [
+          "dino_armor1"
+        ]
+      }
+    },
+    {
+      "objclass": "NarrativeProperties",
+      "objdata": {
+        "Flow": [
+          {
+            "Character": "crazydave",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "crazydave",
+            "Action": "SAY",
+            "Lines": {
+              "en":"Hey, I remember I was drinking lemonade in the backyard...",
+              "zh": "嘿，我记得我还在后院喝柠檬水来着……"
+            }
+          },
+          {
+            "Character": "crazydave",
+            "Action": "EXCITED",
+            "Lines": {
+              "en":"What is this place? And... where has Penny gone?",
+              "zh": "这又是什么地方？还有......潘妮去哪里了？"
+            }
+          },
+          {
+            "Character": "zombossicon",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "zombossicon",
+            "Action": "SAY",
+            "Lines": {
+              "en":"Dave, how do you like the exile place I chose for you?",
+              "zh": "戴夫，我为你挑选的流放之地怎么样啊？"
+            }
+          },
+          {
+            "Character": "zombossicon",
+            "Action": "SAY",
+            "Lines": {
+              "en":"Without your old car, you're nothing now. You'll spend the rest of your life here!",
+              "zh": "没了你的那辆破车，你现在什么都不是。你就在这里度过你的余生吧！"
+            }
+          },
+          {
+            "Character": "zombossicon",
+            "Action": "NPC_EXIT"
+          },
+          {
+            "Character": "crazydave",
+            "Action": "TIRED",
+            "Lines": {
+              "en":"Oh... I don't want to spend the rest of my life with dinosaurs and primitive humans...",
+              "zh": "噢......我可不想与恐龙和原始人一起度过我的后半生......"
+            }
+          },
+          {
+            "Character": "crazydave",
+            "Action": "SAY",
+            "Lines": {
+              "en":"No, no... I should say primitive zombies ...",
+              "zh": "不不......应该说是原始僵尸......"
+            }
+          }
+        ]
+      },
+      "aliases": [
+        "EditorFirstIntroNarrative"
+      ]
+    },
+    {
+      "aliases": [
+        "Tide"
+      ],
+      "objclass": "TideProperties",
+      "objdata": {
+        "StartingWaveLocation": 0
+      }
+    }
+  ]
+}

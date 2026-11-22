@@ -1,0 +1,551 @@
+{
+    "#comment": "Reinforce 1",
+    "objects": [
+        {
+            "objclass": "LevelDefinition",
+            "objdata": {
+                "Description": "[MEET_REINFORCE_FAMILY]",
+                "LevelNumber": 1,
+                "FirstIntroNarrative": "REINFORCE_A_INTRO",
+                "Loot": "RTID(DefaultLoot@LevelModules)",
+                "Modules": [
+                    "RTID(StandardIntro@LevelModules)",
+                    "RTID(ZombiesDeadWinCon@LevelModules)",
+                    "RTID(SeedBank@CurrentLevel)",
+                    "RTID(FrozenZombiePlacement@CurrentLevel)",
+                    "RTID(ChallengeModule@CurrentLevel)",
+                    "RTID(DefaultZombieWinCondition@LevelModules)",
+                    "RTID(NewWaves@CurrentLevel)"
+                ],
+                "Name": "[EPIC_PLANT_REINFORCE_LEVEL_NAME]",
+                "WrittenBy": "CharaPad猹派",
+                "MusicType": "MiniGame_A",
+                "NormalPresentTable": "cowboy_normal_01",
+                "ShinyPresentTable": "cowboy_shiny_01",
+                "StageModule": "RTID(SummerNightsStage@LevelModules)"
+            }
+        },
+        {
+            "aliases": [
+                "abbot_chi"
+            ],
+            "objclass": "ZombieProperties",
+            "objdata": {
+                "CannotBeGrabbedByPtero": true,
+                "PlantablePlants": [
+                    "solarsage",
+                    "cherry_bomb"
+                ],
+                "CannotCarryPlantfoodsInWaves": true,
+                "WalkSPS": 0.185,
+                "EatDPS": 50,
+                "TimeBeforeFirst": 48,
+                "TimeBetween": 48,
+                "Toughness": 1100,
+                "ImmuneToGarlic": true,
+                "WavePointCost": 700,
+                "Weight": 2500,
+                "ChiType": "abbot_chi",
+                "HitRect": "RTID(CommonHitRect@RectangleProps)",
+                "AttackRect": "RTID(CommonAttackRect@RectangleProps)"
+            }
+        },
+        {
+            "aliases": [
+                "abbot_chi"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(abbot_chi@CurrentLevel)",
+                "ZombieBasedOn": "abbot_chi"
+            }
+        },
+        {
+            "aliases": [
+                "abbot_chi_reverse"
+            ],
+            "objclass": "ZombieProperties",
+            "objdata": {
+                "ChanceToReverse": 1,
+                "TimeBeforeFirst": 48,
+                "TimeBetween": 48
+            }
+        },
+        {
+            "aliases": [
+                "abbot_chi_reverse"
+            ],
+            "objclass": "ZombieType",
+            "objdata": {
+                "Properties": "RTID(abbot_chi_reverse@CurrentLevel)",
+                "ZombieBasedOn": "abbot_chi"
+            }
+        },
+        {
+            "aliases": [
+                "FrozenZombiePlacement"
+            ],
+            "objclass": "InitialZombieProperties",
+            "objdata": {
+                "InitialZombiePlacements": [
+                    {
+                        "GridX": 0,
+                        "GridY": 3,
+                        "TypeName": "abbot_chi_reverse"
+                    },
+                    {
+                        "GridX": 0,
+                        "GridY": 1,
+                        "TypeName": "abbot_chi_reverse"
+                    },
+                    {
+                        "GridX": 1,
+                        "GridY": 0,
+                        "TypeName": "abbot_chi_reverse"
+                    },
+                    {
+                        "GridX": 1,
+                        "GridY": 4,
+                        "TypeName": "abbot_chi_reverse"
+                    },
+                    {
+                        "GridX": 1,
+                        "GridY": 2,
+                        "TypeName": "abbot_chi_reverse"
+                    },
+                    {
+                        "GridX": 7,
+                        "GridY": 4,
+                        "TypeName": "abbot_chi"
+                    },
+                    {
+                        "GridX": 7,
+                        "GridY": 2,
+                        "TypeName": "abbot_chi"
+                    },
+                    {
+                        "GridX": 7,
+                        "GridY": 0,
+                        "TypeName": "abbot_chi"
+                    },
+                    {
+                        "GridX": 8,
+                        "GridY": 3,
+                        "TypeName": "abbot_chi"
+                    },
+                    {
+                        "GridX": 8,
+                        "GridY": 1,
+                        "TypeName": "abbot_chi"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "SeedBank"
+            ],
+            "objclass": "SeedBankProperties",
+            "objdata": {
+                "PresetPlantList": [
+                    {
+                        "Level": -1,
+                        "PlantType": "sunshroom"
+                    },
+                    {
+                        "Level": -1,
+                        "PlantType": "goldleaf"
+                    },
+                    {
+                        "Level": -1,
+                        "PlantType": "pumpkin"
+                    },
+                    {
+                        "Level": -1,
+                        "PlantType": "primalwallnut"
+                    },
+                    {
+                        "Level": -1,
+                        "PlantType": "spikerock"
+                    }
+                ],
+                "SelectionMethod": "preset"
+            }
+        },
+        {
+            "aliases": [
+                "DoNotPlantBeforeLine"
+            ],
+            "objclass": "MoldColonyChallengeProps",
+            "objdata": {
+                "MoldedSquares": [
+                    {
+                        "GridX": 1,
+                        "GridY": 0
+                    },
+                    {
+                        "GridX": 1,
+                        "GridY": 2
+                    },
+                    {
+                        "GridX": 1,
+                        "GridY": 4
+                    },
+                    {
+                        "GridX": 0,
+                        "GridY": 1
+                    },
+                    {
+                        "GridX": 0,
+                        "GridY": 3
+                    },
+                    {
+                        "GridX": 2,
+                        "GridY": 1
+                    },
+                    {
+                        "GridX": 2,
+                        "GridY": 3
+                    },
+                    {
+                        "GridX": 3,
+                        "GridY": 0
+                    },
+                    {
+                        "GridX": 3,
+                        "GridY": 2
+                    },
+                    {
+                        "GridX": 3,
+                        "GridY": 4
+                    },
+                    {
+                        "GridX": 4,
+                        "GridY": 1
+                    },
+                    {
+                        "GridX": 4,
+                        "GridY": 3
+                    },
+                    {
+                        "GridX": 5,
+                        "GridY": 0
+                    },
+                    {
+                        "GridX": 5,
+                        "GridY": 2
+                    },
+                    {
+                        "GridX": 5,
+                        "GridY": 4
+                    },
+                    {
+                        "GridX": 6,
+                        "GridY": 1
+                    },
+                    {
+                        "GridX": 6,
+                        "GridY": 3
+                    },
+                    {
+                        "GridX": 7,
+                        "GridY": 0
+                    },
+                    {
+                        "GridX": 7,
+                        "GridY": 2
+                    },
+                    {
+                        "GridX": 7,
+                        "GridY": 4
+                    },
+                    {
+                        "GridX": 8,
+                        "GridY": 1
+                    },
+                    {
+                        "GridX": 8,
+                        "GridY": 3
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "ChallengeModule"
+            ],
+            "objclass": "StarChallengeModuleProperties",
+            "objdata": {
+                "Challenges": [
+                    [
+                        "RTID(BeatTheLevel@CurrentLevel)",
+                        "RTID(DoNotPlantBeforeLine@CurrentLevel)"
+                    ]
+                ],
+                "ChallengesAlwaysAvailable": true
+            }
+        },
+        {
+            "aliases": [
+                "NewWaves"
+            ],
+            "objclass": "WaveManagerModuleProperties",
+            "objdata": {
+                "DynamicZombies": [],
+                "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+            }
+        },
+        {
+            "aliases": [
+                "WaveManagerProps"
+            ],
+            "objclass": "WaveManagerProperties",
+            "objdata": {
+                "FlagWaveInterval": 4,
+                "WaveCount": 12,
+                "WaveSpendingPointIncrement": 0,
+                "WaveSpendingPoints": 100,
+                "Waves": [
+                    [
+                        "RTID(Wave1@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave2@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave3@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave4@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave5@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave6@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave7@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave8@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave9@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave10@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave11@CurrentLevel)"
+                    ],
+                    [
+                        "RTID(Wave12@CurrentLevel)"
+                    ]
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave1"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "2",
+                        "Type": "RTID(tutorial_armor1@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave2"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "4",
+                        "Type": "RTID(tutorial_armor1@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave3"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "5",
+                        "Type": "RTID(tutorial_armor1@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave4"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "1",
+                        "Type": "RTID(lostcity_armor2@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave5"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "3",
+                        "Type": "RTID(lostcity_armor2@ZombieTypes)"
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(lostcity_armor2@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave6"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "1",
+                        "Type": "RTID(tutorial_armor2@ZombieTypes)"
+                    },
+                    {
+                        "Row": "3",
+                        "Type": "RTID(tutorial_armor2@ZombieTypes)"
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(tutorial_armor2@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave7"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "4",
+                        "Type": "RTID(tutorial_gargantuar@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave8"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "2",
+                        "Type": "RTID(tutorial_gargantuar@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave9"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "3",
+                        "Type": "RTID(tutorial_gargantuar@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave10"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "1",
+                        "Type": "RTID(tutorial_gargantuar@ZombieTypes)"
+                    }
+                    
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave11"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "1",
+                        "Type": "RTID(lostcity_armor1@ZombieTypes)"
+                    },
+                    
+                    {
+                        "Row": "5",
+                        "Type": "RTID(lostcity_armor1@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "Wave12"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Row": "1",
+                        "Type": "RTID(lostcity_armor2@ZombieTypes)"
+                    },
+                    {
+                        "Row": "5",
+                        "Type": "RTID(tutorial_gargantuar@ZombieTypes)"
+                    },
+                    {
+                        "Row": "2",
+                        "Type": "RTID(lostcity_armor2@ZombieTypes)"
+                    },
+                    {
+                        "Row": "3",
+                        "Type": "RTID(lostcity_armor2@ZombieTypes)"
+                    },
+                    {
+                        "Row": "4",
+                        "Type": "RTID(lostcity_armor2@ZombieTypes)"
+                    }
+                ]
+            }
+        }
+    ]
+}

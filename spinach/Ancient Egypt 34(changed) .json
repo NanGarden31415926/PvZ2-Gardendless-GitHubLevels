@@ -1,0 +1,955 @@
+{
+  "#comment": "Ancient Egypt 34",
+  "version": 1,
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "LevelNumber": 1,
+        "Loot": "RTID(NoLoot@LevelModules)",
+        "FirstIntroNarrative": "EditorFirstIntroNarrative",
+        "Name": "Ancient Egypt 34(changed)",
+        "Description": "a easier trying",
+        "StartingSun": 50,
+        "StageModule": "RTID(EgyptStage@LevelModules)",
+        "Modules": [
+          "RTID(StandardIntro@LevelModules)",
+          "RTID(DefaultSunDropper@LevelModules)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(Gravestones@CurrentLevel)"
+        ],
+        "WrittenBy": "sp"
+      }
+    },
+    {
+      "aliases": [
+        "ChallengeModule"
+      ],
+      "objclass": "StarChallengeModuleProperties",
+      "objdata": {
+        "ChallengesAlwaysAvailable": true,
+        "Challenges": [
+          [
+            "RTID(BeatTheLevel@CurrentLevel)",
+            "RTID(SunUsed@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "BeatTheLevel"
+      ],
+      "objclass": "StarChallengeBeatTheLevelProps",
+      "objdata": {}
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "SelectionMethod": "preset",
+        "PresetPlantList": [
+          {
+            "PlantType": "wallnut",
+            "Level": -1
+          },
+          {
+            "PlantType": "iceburg",
+            "Level": -1
+          },
+          {
+            "PlantType": "cherry_bomb_local_1",
+            "Level": -1
+          },
+          {
+            "PlantType": "gravebuster_local_1",
+            "Level": -1
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {},
+          {},
+          {
+            "ZombiePool": [
+              "RTID(camel_onehump@ZombieTypes)",
+              "RTID(camel_onehump@ZombieTypes)",
+              "RTID(pharaoh_weak@ZombieTypes)"
+            ],
+            "StartingWave": 4,
+            "StartingPoints": 3,
+            "PointIncrementPerWave": 1
+          },
+          {},
+          {},
+          {},
+          {}
+        ],
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "MinNextWaveHealthPercentage": 0.5,
+        "MaxNextWaveHealthPercentage": 0.65,
+        "FlagWaveInterval": 5,
+        "WaveCount": 10,
+        "WaveSpendingPointIncrement": 10,
+        "WaveSpendingPoints": 100,
+        "Waves": [
+          [
+            "RTID(Wave1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)",
+            "RTID(Wave4GravestoneEvent0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5GroundSpawnEvent0@CurrentLevel)",
+            "RTID(Wave5@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7GroundSpawnEvent0@CurrentLevel)",
+            "RTID(Wave7@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(camel_onehump@ZombieTypes)",
+            "Row": "3"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(camel_onehump@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(camel_onehump@ZombieTypes)",
+            "Row": "4"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(camel_onehump@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(camel_onehump@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(camel_onehump@ZombieTypes)",
+            "Row": "5"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(camel_onehump@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(camel_onehump@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(camel_onehump@ZombieTypes)",
+            "Row": "4"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave4GravestoneEvent0"
+      ],
+      "objclass": "SpawnGravestonesWaveActionProps",
+      "objdata": {
+        "GravestonePool": [
+          {
+            "Count": 3,
+            "Type": "RTID(gravestone_egypt@GridItemTypes)"
+          }
+        ],
+        "SpawnEffectAnimID": "POPANIM_EFFECTS_TOMBSTONE_DARK_SPAWN_EFFECT",
+        "SpawnPositionsPool": [
+          {
+            "mX": 6,
+            "mY": 0
+          },
+          {
+            "mX": 6,
+            "mY": 1
+          },
+          {
+            "mX": 6,
+            "mY": 2
+          },
+          {
+            "mX": 6,
+            "mY": 3
+          },
+          {
+            "mX": 6,
+            "mY": 4
+          },
+          {
+            "mX": 5,
+            "mY": 2
+          },
+          {
+            "mX": 7,
+            "mY": 2
+          },
+          {
+            "mX": 8,
+            "mY": 2
+          }
+        ],
+        "SpawnSoundID": "Play_Zomb_Egypt_TombRaiser_Grave_Rise",
+        "maxX": 8,
+        "minX": 3,
+        "DisplacePlants": true
+      }
+    },
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 1,
+        "Zombies": [
+          {
+            "Type": "RTID(camel_onehump@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(camel_onehump@ZombieTypes)",
+            "Row": "1"
+          },
+          {
+            "Type": "RTID(mummy_flag@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(camel_onehump@ZombieTypes)",
+            "Row": "5"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(pharaoh_weak@ZombieTypes)",
+            "Row": "5"
+          },
+          {
+            "Type": "RTID(pharaoh_weak@ZombieTypes)",
+            "Row": "2"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave7"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(pharaoh_weak@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(pharaoh_weak@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(pharaoh_weak@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(camel_onehump@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(camel_onehump@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(camel_onehump@ZombieTypes)",
+            "Row": "4"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave8"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 1,
+        "Zombies": [
+          {
+            "Type": "RTID(camel_onehump@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(camel_onehump@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(camel_onehump@ZombieTypes)",
+            "Row": "3"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave9"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(pharaoh_weak@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(pharaoh_weak@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(pharaoh_weak@ZombieTypes)",
+            "Row": "4"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave10"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(pharaoh_weak@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(pharaoh_weak@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(pharaoh_weak@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(camel_onehump@ZombieTypes)",
+            "Row": "4"
+          },
+          {
+            "Type": "RTID(camel_onehump@ZombieTypes)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(camel_onehump@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(camel_onehump@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(mummy_flag_veteran@ZombieTypes)",
+            "Row": "2"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Gravestones"
+      ],
+      "objclass": "GravestoneProperties",
+      "objdata": {
+        "ForceSpawnData": [
+          {
+            "GridX": 2,
+            "GridY": 0,
+            "TypeName": "gravestone_egypt"
+          },
+          {
+            "GridX": 1,
+            "GridY": 1,
+            "TypeName": "gravestone_egypt"
+          },
+          {
+            "GridX": 1,
+            "GridY": 0,
+            "TypeName": "gravestone_egypt"
+          },
+          {
+            "GridX": 1,
+            "GridY": 2,
+            "TypeName": "gravestone_egypt"
+          },
+          {
+            "GridX": 2,
+            "GridY": 2,
+            "TypeName": "gravestone_egypt"
+          },
+          {
+            "GridX": 3,
+            "GridY": 2,
+            "TypeName": "gravestone_egypt"
+          },
+          {
+            "GridX": 3,
+            "GridY": 1,
+            "TypeName": "gravestone_egypt"
+          },
+          {
+            "GridX": 3,
+            "GridY": 0,
+            "TypeName": "gravestone_egypt"
+          },
+          {
+            "GridX": 1,
+            "GridY": 3,
+            "TypeName": "gravestone_egypt"
+          },
+          {
+            "GridX": 1,
+            "GridY": 4,
+            "TypeName": "gravestone_egypt"
+          },
+          {
+            "GridX": 2,
+            "GridY": 4,
+            "TypeName": "gravestone_egypt"
+          },
+          {
+            "GridX": 3,
+            "GridY": 4,
+            "TypeName": "gravestone_egypt"
+          },
+          {
+            "GridX": 3,
+            "GridY": 3,
+            "TypeName": "gravestone_egypt"
+          },
+          {
+            "GridX": 4,
+            "GridY": 1,
+            "TypeName": "gravestone_egypt"
+          },
+          {
+            "GridX": 4,
+            "GridY": 0,
+            "TypeName": "gravestone_egypt"
+          },
+          {
+            "GridX": 5,
+            "GridY": 0,
+            "TypeName": "gravestone_egypt"
+          },
+          {
+            "GridX": 6,
+            "GridY": 0,
+            "TypeName": "gravestone_egypt"
+          },
+          {
+            "GridX": 6,
+            "GridY": 1,
+            "TypeName": "gravestone_egypt"
+          },
+          {
+            "GridX": 6,
+            "GridY": 2,
+            "TypeName": "gravestone_egypt"
+          },
+          {
+            "GridX": 5,
+            "GridY": 2,
+            "TypeName": "gravestone_egypt"
+          },
+          {
+            "GridX": 4,
+            "GridY": 2,
+            "TypeName": "gravestone_egypt"
+          },
+          {
+            "GridX": 4,
+            "GridY": 3,
+            "TypeName": "gravestone_egypt"
+          },
+          {
+            "GridX": 4,
+            "GridY": 4,
+            "TypeName": "gravestone_egypt"
+          },
+          {
+            "GridX": 5,
+            "GridY": 4,
+            "TypeName": "gravestone_egypt"
+          },
+          {
+            "GridX": 6,
+            "GridY": 4,
+            "TypeName": "gravestone_egypt"
+          },
+          {
+            "GridX": 6,
+            "GridY": 3,
+            "TypeName": "gravestone_egypt"
+          },
+          {
+            "GridX": 7,
+            "GridY": 0,
+            "TypeName": "gravestone_egypt"
+          },
+          {
+            "GridX": 8,
+            "GridY": 0,
+            "TypeName": "gravestone_egypt"
+          },
+          {
+            "GridX": 8,
+            "GridY": 1,
+            "TypeName": "gravestone_egypt"
+          },
+          {
+            "GridX": 8,
+            "GridY": 2,
+            "TypeName": "gravestone_egypt"
+          },
+          {
+            "GridX": 7,
+            "GridY": 2,
+            "TypeName": "gravestone_egypt"
+          },
+          {
+            "GridX": 8,
+            "GridY": 3,
+            "TypeName": "gravestone_egypt"
+          },
+          {
+            "GridX": 8,
+            "GridY": 4,
+            "TypeName": "gravestone_egypt"
+          },
+          {
+            "GridX": 7,
+            "GridY": 4,
+            "TypeName": "gravestone_egypt"
+          }
+        ]
+      }
+    },
+    {
+      "objclass": "PlantType",
+      "aliases": [
+        "gravebuster_local_1"
+      ],
+      "objdata": {
+        "PlantBasedOn": "gravebuster",
+        "Properties": "RTID(gravebuster_local_1_props@CurrentLevel)"
+      }
+    },
+    {
+      "objclass": "PlantProperties",
+      "aliases": [
+        "gravebuster_local_1_props"
+      ],
+      "objdata": {
+        "CannotBeSheepenedByWizard": true,
+        "CannotBePushedByFootballMech": true,
+        "BustTime": 4,
+        "Cooldown": 5,
+        "CooldownFrom": 1,
+        "SunCost": 25,
+        "BeghouledCost": 1000,
+        "Toughness": 500,
+        "Family": "Slow",
+        "ImmuneToIceblock": true,
+        "MintBoostedProps": {
+          "ResistanceMult": 1,
+          "SpeedMult": 3,
+          "Plantfood": false
+        }
+      }
+    },
+    {
+      "objclass": "NarrativeProperties",
+      "objdata": {
+        "Flow": [
+          {
+            "Character": "crazydave",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "crazydave",
+            "Action": "EXCITED",
+            "Lines": {
+              "zh": "",
+              "en": "This is my latest plant variety."
+            }
+          },
+          {
+            "Character": "crazydave",
+            "Action": "SAY",
+            "Lines": {
+              "zh": "",
+              "en": "A lower-cost Cherry_Bomb and a tougher Gravebuster."
+            }
+          }
+        ]
+      },
+      "aliases": [
+        "EditorFirstIntroNarrative"
+      ]
+    },
+    {
+      "objclass": "NarrativeProperties",
+      "objdata": {
+        "Flow": [
+          {
+            "Character": "crazydave",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "crazydave",
+            "Action": "SAY",
+            "Lines": {
+              "zh": ""
+            }
+          }
+        ]
+      },
+      "aliases": [
+        "EditorFirstIntroNarrative1"
+      ]
+    },
+    {
+      "objclass": "NarrativeProperties",
+      "objdata": {
+        "Flow": [
+          {
+            "Character": "crazydave",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "crazydave",
+            "Action": "SAY",
+            "Lines": {
+              "zh": ""
+            }
+          }
+        ]
+      },
+      "aliases": [
+        "EditorFirstIntroNarrative2"
+      ]
+    },
+    {
+      "objclass": "NarrativeProperties",
+      "objdata": {
+        "Flow": [
+          {
+            "Character": "crazydave",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "crazydave",
+            "Action": "SAY",
+            "Lines": {
+              "zh": ""
+            }
+          }
+        ]
+      },
+      "aliases": [
+        "EditorFirstIntroNarrative3"
+      ]
+    },
+    {
+      "objclass": "NarrativeProperties",
+      "objdata": {
+        "Flow": [
+          {
+            "Character": "zombossicon",
+            "Action": "NPC_ENTER",
+            "Lines": {
+              "zh": "you would be destr"
+            }
+          },
+          {
+            "Character": "zombossicon",
+            "Action": "SAY",
+            "Lines": {
+              "zh": "You shall pay dearly for your blind arrogance."
+            }
+          },
+          {
+            "Character": "crazydave",
+            "Action": "NPC_ENTER",
+            "Lines": {
+              "zh": "This is my latest plant variety."
+            }
+          },
+          {
+            "Character": "crazydave",
+            "Action": "EXCITED",
+            "Lines": {
+              "zh": "These is my latest plant variety."
+            }
+          },
+          {
+            "Character": "crazydave",
+            "Action": "PLAYFUL",
+            "Lines": {
+              "zh": "A lower-cost cherry_bomb and a more  tougher gravebuster."
+            }
+          },
+          {
+            "Character": "crazydave",
+            "Action": "SAY",
+            "Lines": {
+              "zh": "It would work."
+            }
+          },
+          {
+            "Character": "crazydave",
+            "Action": "SAY",
+            "Lines": {
+              "zh": "Good luck."
+            }
+          },
+          {
+            "Character": "crazydave",
+            "Action": "NPC_EXIT",
+            "Lines": {
+              "zh": ""
+            }
+          }
+        ]
+      },
+      "aliases": [
+        "EditorFirstIntroNarrative4"
+      ]
+    },
+    {
+      "objclass": "PlantType",
+      "aliases": [
+        "cherry_bomb_local_1"
+      ],
+      "objdata": {
+        "PlantBasedOn": "cherry_bomb",
+        "Properties": "RTID(cherry_bomb_local_1_props@CurrentLevel)"
+      }
+    },
+    {
+      "objclass": "PlantProperties",
+      "aliases": [
+        "cherry_bomb_local_1_props"
+      ],
+      "objdata": {
+        "CannotBeSheepenedByWizard": true,
+        "Damage": 1800,
+        "Cooldown": 10,
+        "CooldownFrom": 1,
+        "SunCost": 75,
+        "BeghouledCost": 1000,
+        "Toughness": 300,
+        "Family": "Explosive",
+        "ImmuneToBoomBox": true,
+        "ImmuneToIceblock": true,
+        "MintDamageFactor": 3,
+        "MintBoostedProps": {
+          "ResistanceMult": 1,
+          "SpeedMult": 1,
+          "Plantfood": false
+        }
+      }
+    },
+    {
+      "aliases": [
+        "SunUsed"
+      ],
+      "objclass": "StarChallengeSunUsedProps",
+      "objdata": {
+        "MaximumSun": 1800
+      }
+    },
+    {
+      "aliases": [
+        "Wave5GroundSpawnEvent0"
+      ],
+      "objclass": "SpawnZombiesFromGroundSpawnerProps",
+      "objdata": {
+        "ColumnStart": 5,
+        "ColumnEnd": 7,
+        "RowStart": 0,
+        "RowEnd": 4,
+        "Zombies": [
+          {
+            "Type": "RTID(camel_onehump@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(camel_onehump@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(camel_onehump@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(camel_onehump@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(camel_onehump@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(camel_onehump@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(camel_onehump@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave7GroundSpawnEvent0"
+      ],
+      "objclass": "SpawnZombiesFromGroundSpawnerProps",
+      "objdata": {
+        "ColumnStart": 6,
+        "ColumnEnd": 8,
+        "RowStart": 0,
+        "RowEnd": 4,
+        "Zombies": [
+          {
+            "Type": "RTID(pharaoh_weak@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pharaoh_weak@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pharaoh_weak@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pharaoh_weak@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pharaoh_weak@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pharaoh_weak@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(camel_onehump@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(camel_onehump@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(camel_onehump@ZombieTypes)"
+          }
+        ]
+      }
+    }
+  ]
+}

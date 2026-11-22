@@ -1,0 +1,983 @@
+{
+  "#comment": "逆流upstream【第1天】",
+  "version": 1,
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "LevelNumber": 1,
+        "Loot": "RTID(NoLoot@LevelModules)",
+        "FirstIntroNarrative": "EditorFirstIntroNarrative",
+        "NameMultiLanguage": {
+          "en": "upstream【day1】",
+          "zh": "逆流【第1天】"
+        },
+        "DescriptionMultiLanguage": {
+          "en": "<PLAYERNAME>'s upstreaming time travel!",
+          "zh": "<PLAYERNAME>的时空逆流之旅！"
+        },
+        "StartingSun": 50,
+        "StageModule": "RTID(DinoStage@LevelModules)",
+        "Modules": [
+          "RTID(StandardIntro@LevelModules)",
+          "RTID(DefaultSunDropper@LevelModules)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(DinoMowers@LevelModules)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(Rails@CurrentLevel)",
+          "RTID(Tide@CurrentLevel)",
+          "RTID(InitialGridItems@CurrentLevel)"
+        ],
+        "WrittenBy": "寒冰菇"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "iceage_weaselhoarder"
+      ],
+      "objdata": {
+        "Properties": "RTID(iceage_weaselhoarder@CurrentLevel)",
+        "ZombieBasedOn": "iceage_weaselhoarder"
+      }
+    },
+    {
+      "aliases": [
+        "iceage_weaselhoarder"
+      ],
+      "objclass": "ZombieProperties",
+      "objdata": {
+        "WeaselTypeName": "lostcity_bug_weak"
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "lostcity_bug_weak"
+      ],
+      "objdata": {
+        "Properties": "RTID(lostcity_bug_weak@CurrentLevel)",
+        "ZombieBasedOn": "lostcity_bug"
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "lostcity_bug_weak"
+      ],
+      "objdata": {
+        "Toughness": 40,
+        "BugToughness": 60,
+        "SpawnedScale": 0.6
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "lostcity_armor1"
+      ],
+      "objdata": {
+        "Properties": "RTID(lostcity_armor1@CurrentLevel)",
+        "ZombieBasedOn": "lostcity_armor1"
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "lostcity_armor1"
+      ],
+      "objdata": {
+        "StartingArmors": [
+          "dino_armor1"
+        ]
+      }
+    },
+    {
+      "objclass": "ZombieType",
+      "aliases": [
+        "lostcity_armor2"
+      ],
+      "objdata": {
+        "Properties": "RTID(lostcity_armor2@CurrentLevel)",
+        "ZombieBasedOn": "lostcity_armor2"
+      }
+    },
+    {
+      "objclass": "ZombieProperties",
+      "aliases": [
+        "lostcity_armor2"
+      ],
+      "objdata": {
+        "StartingArmors": [
+          "dino_armor2"
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Rails"
+      ],
+      "objclass": "RailcartProperties",
+      "objdata": {
+        "RailcartType": "railcart",
+        "Railcarts": [
+          {
+            "Column": 1,
+            "Row": 1
+          },
+          {
+            "Column": 4,
+            "Row": 3
+          },
+          {
+            "Column": 7,
+            "Row": 1
+          }
+        ],
+        "Rails": [
+          {
+            "Column": 1,
+            "RowStart": 0,
+            "RowEnd": 4
+          },
+          {
+            "Column": 4,
+            "RowStart": 0,
+            "RowEnd": 4
+          },
+          {
+            "Column": 7,
+            "RowStart": 0,
+            "RowEnd": 4
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Tide"
+      ],
+      "objclass": "TideProperties",
+      "objdata": {
+        "StartingWaveLocation": 0
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "SelectionMethod": "chooser",
+        "UnlockAll": true,
+        "PlantIncludeList": [
+          "peashooter",
+          "sunflower",
+          "wallnut",
+          "potatomine",
+          "primalpeashooter",
+          "primalwallnut",
+          "lilypad",
+          "lavaguava"
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "MinNextWaveHealthPercentage": 0.5,
+        "MaxNextWaveHealthPercentage": 0.65,
+        "FlagWaveInterval": 7,
+        "WaveCount": 14,
+        "WaveSpendingPointIncrement": 10,
+        "WaveSpendingPoints": 100,
+        "Waves": [
+          [
+            "RTID(Wave1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5DinoTimeEvent0@CurrentLevel)",
+            "RTID(Wave5@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)",
+            "RTID(Wave8GravestoneEvent0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9Scheduler0@CurrentLevel)",
+            "RTID(Wave9@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)",
+            "RTID(Wave10DinoTimeEvent0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave11@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave12@CurrentLevel)",
+            "RTID(Wave12DinoTimeEvent0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave13@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave14@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(lostcity@ZombieTypes)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(lostcity@ZombieTypes)",
+            "Row": "2"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(lostcity@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 1,
+        "Zombies": [
+          {
+            "Type": "RTID(iceage_weaselhoarder@CurrentLevel)",
+            "Row": "3"
+          },
+          {
+            "Type": "RTID(lostcity@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(lostcity_armor1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(lostcity@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave5DinoTimeEvent0"
+      ],
+      "objclass": "DinoWaveActionProps",
+      "objdata": {
+        "DinoRow": 2,
+        "DinoType": "stego",
+        "DinoWaveDuration": 2
+      }
+    },
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 1,
+        "Zombies": [
+          {
+            "Type": "RTID(iceage_weaselhoarder@CurrentLevel)",
+            "Row": "2"
+          },
+          {
+            "Type": "RTID(dino@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_armor1@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "MustKillAllToNextWave": true,
+        "Zombies": [
+          {
+            "Type": "RTID(lostcity_armor1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(lostcity_armor1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(lostcity@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave7"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dino@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_weaselhoarder@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(lostcity_armor1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(lostcity_armor2@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(lostcity@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_excavator@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "InitialGridItems"
+      ],
+      "objclass": "InitialGridItemProperties",
+      "objdata": {
+        "InitialGridItemPlacements": [
+          {
+            "GridX": 0,
+            "GridY": 0,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 2,
+            "GridY": 0,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 1,
+            "GridY": 0,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 3,
+            "GridY": 0,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 4,
+            "GridY": 0,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 5,
+            "GridY": 0,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 6,
+            "GridY": 0,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 7,
+            "GridY": 0,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 8,
+            "GridY": 0,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 8,
+            "GridY": 4,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 7,
+            "GridY": 4,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 6,
+            "GridY": 4,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 5,
+            "GridY": 4,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 4,
+            "GridY": 4,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 3,
+            "GridY": 4,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 2,
+            "GridY": 4,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 0,
+            "GridY": 4,
+            "TypeName": "shallowpuddle"
+          },
+          {
+            "GridX": 1,
+            "GridY": 4,
+            "TypeName": "shallowpuddle"
+          }
+        ]
+      }
+    },
+    {
+      "objclass": "NarrativeProperties",
+      "objdata": {
+        "Flow": [
+          {
+            "Character": "crazydave",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "crazydave",
+            "Action": "SAY",
+            "Lines": {
+              "zh": "你好，我的伙计",
+              "en": "Hello, my buddy"
+            }
+          },
+          {
+            "Character": "crazydave",
+            "Action": "SAY",
+            "Lines": {
+              "zh": "我想你肯定也对这里的空气感到厌烦了......到处都是烂泥的味道",
+              "en": "I'm sure you must be getting tired of the air here too... It smells like mud everywhere"
+            }
+          },
+          {
+            "Character": "crazydave",
+            "Action": "SAY",
+            "Lines": {
+              "zh": "我在想，如果我们击败了僵尸博士，应该就能利用他的机器离开这个充满沼泽时代",
+              "en": "I'm thinking, if we defeat Dr. Zomboss, we should be able to use his machine to leave this swamp-filled era"
+            }
+          },
+          {
+            "Character": "zombossicon",
+            "Action": "NPC_ENTER",
+            "Lines": {
+              "zh": ""
+            }
+          },
+          {
+            "Character": "zombossicon",
+            "Action": "SAY",
+            "Lines": {
+              "zh": "如果你想要，那就得自己来拿。这道理你是清楚的",
+              "en": "If you want it, then you'll have to take it.you already knew that."
+            }
+          },
+          {
+            "Character": "zombossicon",
+            "Action": "SAY",
+            "Lines": {
+              "zh": "呵呵呵呵哈哈......",
+              "en": "Hehehehehaha ....."
+            }
+          }
+        ]
+      },
+      "aliases": [
+        "EditorFirstIntroNarrative"
+      ]
+    },
+    {
+      "aliases": [
+        "Wave8"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(lostcity_bug_weak@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(lostcity_bug_weak@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(lostcity_bug_weak@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(lostcity_bug_weak@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(lostcity_bug_weak@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(lostcity_bug_weak@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(lostcity_bug_weak@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(lostcity_bug_weak@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(lostcity_bug_weak@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(lostcity_bug_weak@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(lostcity_bug_weak@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(lostcity_bug_weak@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(lostcity_bug_weak@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(lostcity_bug_weak@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(lostcity_bug_weak@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(lostcity_armor1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(lostcity@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave8GravestoneEvent0"
+      ],
+      "objclass": "SpawnGravestonesWaveActionProps",
+      "objdata": {
+        "GravestonePool": [
+          {
+            "Count": 5,
+            "Type": "RTID(gravestone_lostcity@GridItemTypes)"
+          }
+        ],
+        "SpawnEffectAnimID": "POPANIM_EFFECTS_TOMBSTONE_DARK_SPAWN_EFFECT",
+        "SpawnPositionsPool": [
+          {
+            "mX": 8,
+            "mY": 0
+          },
+          {
+            "mX": 8,
+            "mY": 1
+          },
+          {
+            "mX": 8,
+            "mY": 2
+          },
+          {
+            "mX": 8,
+            "mY": 3
+          },
+          {
+            "mX": 8,
+            "mY": 4
+          }
+        ],
+        "SpawnSoundID": "Play_Zomb_Egypt_TombRaiser_Grave_Rise",
+        "DisplacePlants": true
+      }
+    },
+    {
+      "aliases": [
+        "Wave9Scheduler0"
+      ],
+      "objclass": "WaveSchedulerProps",
+      "objdata": {
+        "RewardWhenEnded": false,
+        "SuppressRewardState": false,
+        "TimeBeforeFirst": {
+          "Min": 4,
+          "Max": 2
+        },
+        "TimeBetween": {
+          "Min": 8,
+          "Max": 9
+        },
+        "Repeat": {
+          "Min": 50,
+          "Max": 50
+        },
+        "Events": [
+          "RTID(Wave9GridItemSpawnEvent0@CurrentLevel)"
+        ],
+        "EndingWave": 13
+      }
+    },
+    {
+      "aliases": [
+        "Wave9"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 1,
+        "Zombies": [
+          {
+            "Type": "RTID(dino@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_weaselhoarder@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(lostcity_excavator@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave10"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(lostcity@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_armor1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(lostcity_armor2@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(iceage_weaselhoarder@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave11"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(lostcity@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_armor1@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave12"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 1,
+        "Zombies": [
+          {
+            "Type": "RTID(lostcity@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_armor1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(lostcity_armor2@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave13"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "MustKillAllToNextWave": true,
+        "Zombies": [
+          {
+            "Type": "RTID(lostcity@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_weaselhoarder@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(lostcity_excavator@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave14"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(lostcity@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_excavator@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_weaselhoarder@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(iceage_weaselhoarder@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(lostcity_armor1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(lostcity_armor1@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(lostcity_armor2@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(lostcity_armor2@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(dino@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_gargantuar@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave9GridItemSpawnEvent0"
+      ],
+      "objclass": "SpawnZombiesFromGridItemSpawnerProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "GridTypes": [
+          "RTID(gravestone_lostcity@GridItemTypes)"
+        ],
+        "WaveStartMessage": "",
+        "ZombieSpawnWaitTime": 2,
+        "Zombies": [
+          {
+            "Type": "RTID(lostcity_bug_weak@CurrentLevel)"
+          }
+        ],
+        "SuppressActionIfNoGridItemsFound": true
+      }
+    },
+    {
+      "aliases": [
+        "Wave10DinoTimeEvent0"
+      ],
+      "objclass": "DinoWaveActionProps",
+      "objdata": {
+        "DinoRow": 1,
+        "DinoType": "stego",
+        "DinoWaveDuration": 2
+      }
+    },
+    {
+      "aliases": [
+        "Wave12DinoTimeEvent0"
+      ],
+      "objclass": "DinoWaveActionProps",
+      "objdata": {
+        "DinoRow": 3,
+        "DinoType": "stego",
+        "DinoWaveDuration": 2
+      }
+    }
+  ]
+}

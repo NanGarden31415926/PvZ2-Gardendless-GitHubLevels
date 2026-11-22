@@ -1,0 +1,152 @@
+{
+  "#comment": "火龙果之战",
+  "version": 1,
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "LevelNumber": 1,
+        "Loot": "RTID(NoLoot@LevelModules)",
+        "FirstIntroNarrative": "EditorFirstIntroNarrative",
+        "Name": "Battle of dragonfruits",
+        "NameMultiLanguage":{
+					"en":"Battle of dragonfruits",
+					"zh":"火龙果之战"
+				},
+        "Description": "Battle of dragonfruits !",
+        "StageModule": "RTID(ModernNightStage@LevelModules)",
+        "Modules": [
+          "RTID(StandardIntro@LevelModules)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(ModernMowers@LevelModules)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(EditorPointWaveGenerator@CurrentLevel)",
+          "RTID(ConveyorBelt@CurrentLevel)"
+        ],
+        "WrittenBy": "SunFlowey"
+      }
+    },
+    {
+      "aliases": [
+        "ConveyorBelt"
+      ],
+      "objclass": "ConveyorSeedBankProperties",
+      "objdata": {
+        "DropDelayConditions": [
+          {
+            "MaxPackets": 4,
+            "Delay": 3
+          }
+        ],
+        "InitialPlantList": [
+          {
+            "Weight": 10,
+            "PlantType": "moonflower"
+          },
+          {
+            "Weight": 20,
+            "PlantType": "darkmatterdragonfruit"
+          },
+          {
+            "Weight": 1,
+            "PlantType": "dragonbabybruit"
+          },
+          {
+            "Weight": 15,
+            "PlantType": "dragonbruit"
+          }
+        ],
+        "SpeedConditions": [
+          {
+            "MaxPackets": 4,
+            "Speed": 35
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "MinNextWaveHealthPercentage": 0.75,
+        "MaxNextWaveHealthPercentage": 0.85,
+        "FlagWaveInterval": 5,
+        "WaveCount": 22,
+        "WaveSpendingPointIncrement": 10,
+        "WaveSpendingPoints": 100,
+        "Waves": [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          [
+            "RTID(Wave22@CurrentLevel)"
+          ]
+        ],
+        "SuppressFlagZombie": true
+      }
+    },
+    {
+      "aliases": [
+        "Wave22"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(modern_allstar@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "EditorPointWaveGenerator"
+      ],
+      "objclass": "LevelOfTheDayModuleProperties",
+      "objdata": {
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)",
+        "WavesPerFlag": 5,
+        "ZombiePool": [
+          "RTID(tutorial_armor1@ZombieTypes)",
+          "RTID(tutorial_imp@ZombieTypes)",
+          "RTID(birthday_pharaoh_inner@ZombieTypes)",
+          "RTID(valentines_gargantuar@ZombieTypes)",
+          "RTID(sportzball_balloon@ZombieTypes)",
+          "RTID(modern_allstar@ZombieTypes)"
+        ],
+        "PointIncrementPerWave": 125,
+        "PlantfoodToSpawnCount": 5,
+        "StartingPoints": 125
+      }
+    }
+  ]
+}
