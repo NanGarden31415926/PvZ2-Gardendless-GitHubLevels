@@ -1,0 +1,863 @@
+{
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "FirstRewardParam": "repeater",
+        "FirstRewardType": "unlock_plant",
+        "FirstIntroNarrative": "NEW_EGYPT23_INTRO",
+        "ReplayIntroNarrative": "NEW_EGYPT23_INTRO2",
+        "FirstOutroNarrative": "NEW_EGYPT23_OUTRO",
+        "Modules": [
+          "RTID(StandardIntro@LevelModules)",
+          "RTID(DefaultSunDropper@LevelModules)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(EgyptMowers@LevelModules)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(FrozenPlantPlacement@CurrentLevel)",
+          "RTID(FrozenZombiePlacement@CurrentLevel)",
+          "RTID(Gravestones@CurrentLevel)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)"
+        ],
+        "Name": "[EGYPT_LEVEL_NAME]",
+        "Description": "[PLAYERS_TRIP_TO_EGYPT]",
+        "LevelNumber": 23,
+        "WrittenBy": "星痕_Hoshiato",
+        "MusicType": "MiniGame_A",
+        "StageModule": "RTID(EgyptStage@LevelModules)"
+      }
+    },
+    {
+      "aliases": [
+        "NEW_EGYPT23_INTRO"
+      ],
+      "objclass": "NarrativeProperties",
+      "objdata": {
+        "#": "由 翼德大大 编写",
+        "Flow": [
+          {
+            "Character": "crazydave",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "crazydave",
+            "Action": "TIRED",
+            "Lines": {
+              "en": "I love those cute sunflowers!",
+              "zh": "我喜欢那些可爱的向日葵！"
+            }
+          },
+          {
+            "Character": "crazydave",
+            "Action": "SHOUT",
+            "Lines": {
+              "en": "I want to plant them to the left!",
+              "zh": "我要把它们种在后排！"
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "winnie",
+            "Action": "TIRED",
+            "Lines": {
+              "en": "Chill down, User Dave. It is often not beneficial doing this.",
+              "zh": "冷静，用户戴夫。这样做通常不是一个好的选择。"
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "TIRED",
+            "Lines": {
+              "en": "The simulation shows that planting them to the right will make your defense more stable.",
+              "zh": "模拟结果显示将向日葵种在前方可以更好地稳住阵脚。"
+            }
+          },
+          {
+            "Character": "crazydave",
+            "Action": "TIRED",
+            "Lines": {
+              "en": "But I don't want them to be hurt...",
+              "zh": "可我不想看到它们受伤……"
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "TIRED",
+            "Lines": {
+              "en": "This is necessary sacrifice, User Dave.",
+              "zh": "这是必要的牺牲，用户戴夫。"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "NEW_EGYPT23_INTRO2"
+      ],
+      "objclass": "NarrativeProperties",
+      "objdata": {
+        "Flow": [
+          {
+            "Character": "winnie",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "winnie",
+            "Action": "TIRED",
+            "Lines": {
+              "en": "The simulation shows that planting them to the right will make your defense more stable.",
+              "zh": "模拟结果显示将向日葵种在前方可以更好地稳住阵脚。"
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "TIRED",
+            "Lines": {
+              "en": "This is necessary sacrifice.",
+              "zh": "这是必要的牺牲。"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "NEW_EGYPT23_OUTRO"
+      ],
+      "objclass": "NarrativeProperties",
+      "objdata": {
+        "#": "由 SansGrinder 编写",
+        "Flow": [
+          {
+            "Character": "winnie",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "crazydave",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "winnie",
+            "Action": "SAY",
+            "Lines": {
+              "en": "According to statistics, our sunflowers produces their first sun after 5-10s when planted",
+              "zh": "根据我的统计信息，我们的向日葵会在种下5-10秒内产出第一颗阳光"
+            }
+          },
+          {
+            "Character": "crazydave",
+            "Action": "PLAYFUL",
+            "Lines": {
+              "en": "WHOA! I can't even finish 5 tacos in 10 seconds!",
+              "zh": "哇偶！10秒都不够我吃5个玉米卷的！"
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "TIRED",
+            "Lines": {
+              "en": "......",
+              "zh": "......"
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "SAY",
+            "Lines": {
+              "en": "Anyways, that means you should almost always plant a sunflower as soon as it is off cooldown! ",
+              "zh": "言归正传，这意味着大多数情况下，你应该在向日葵冷却结束后尽快种植新的向日葵！"
+            }
+          },
+          {
+            "Character": "crazydave",
+            "Action": "SAY",
+            "Lines": {
+              "en": "And as long as the sunflower survives around 10 seconds, we practically got a sunflower for free, right?",
+              "zh": "那只要向日葵能活10秒左右，我们是不是相当于获得了一颗免费的向日葵？"
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "EXCITED",
+            "Lines": {
+              "en": "Precisely! Not to mention, most of the time the sunflower could survive until another sun production, earning us extra sun along with the flower",
+              "zh": "的确！何况多数时候向日葵能生产不止一次，这样我们既获得了额外阳光，也获得了额外向日葵"
+            }
+          },
+          {
+            "Character": "crazydave",
+            "Action": "PLAYFUL",
+            "Lines": {
+              "en": "Wahaha, let's send all our sunproducers in the frontline, and obtain free solar power!",
+              "zh": "哇哈哈，我们把所有向日葵都送上前线吧！免费光能我来啦！"
+            }
+          },
+          {
+            "Character": "crazydave",
+            "Action": "NPC_EXIT"
+          },
+          {
+            "Character": "winnie",
+            "Action": "SAY",
+            "Lines": {
+              "en": "......",
+              "zh": "……"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "PresetPlantList": [
+          {
+            "Level": -1,
+            "PlantType": "sunflower"
+          },
+          {
+            "Level": -1,
+            "PlantType": "imitater"
+          },
+          {
+            "Level": -1,
+            "PlantType": "repeater"
+          },
+          {
+            "Level": -1,
+            "PlantType": "iceburg"
+          }
+        ],
+        "SelectionMethod": "preset"
+      }
+    },
+    {
+      "aliases": [
+        "Gravestones"
+      ],
+      "objclass": "GravestoneProperties",
+      "objdata": {
+        "GravestoneCount": 13,
+        "SpawnColumnEnd": 9,
+        "SpawnColumnStart": 6
+      }
+    },
+    {
+      "aliases": [
+        "FrozenPlantPlacement"
+      ],
+      "objclass": "InitialPlantProperties",
+      "objdata": {
+        "InitialPlantPlacements": [
+          {
+            "GridX": 1,
+            "GridY": 1,
+            "TypeName": "sunflower"
+          },
+          {
+            "GridX": 1,
+            "GridY": 3,
+            "TypeName": "peashooter"
+          },
+          {
+            "GridX": 2,
+            "GridY": 1,
+            "TypeName": "peashooter"
+          },
+          {
+            "GridX": 2,
+            "GridY": 3,
+            "TypeName": "sunflower"
+          },
+          {
+            "GridX": 0,
+            "GridY": 1,
+            "TypeName": "potatomine"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "FrozenZombiePlacement"
+      ],
+      "objclass": "InitialZombieProperties",
+      "objdata": {
+        "InitialZombiePlacements": [
+          {
+            "GridX": 4,
+            "GridY": 1,
+            "TypeName": "mummy"
+          },
+          {
+            "GridX": 4,
+            "GridY": 3,
+            "TypeName": "mummy"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {},
+          {},
+          {},
+          {
+            "PointIncrementPerWave": 20,
+            "StartingPoints": 300,
+            "StartingWave": 4,
+            "ZombiePool": [
+              "RTID(mummy@ZombieTypes)",
+              "RTID(mummy_armor1@ZombieTypes)",
+              "RTID(mummy_armor2@ZombieTypes)",
+              "RTID(ra@ZombieTypes)",
+              "RTID(pharaoh@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 50,
+            "StartingPoints": 300,
+            "StartingWave": 4,
+            "ZombiePool": [
+              "RTID(mummy@ZombieTypes)",
+              "RTID(mummy_armor1@ZombieTypes)",
+              "RTID(mummy_armor2@ZombieTypes)",
+              "RTID(ra@ZombieTypes)",
+              "RTID(pharaoh@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 60,
+            "StartingPoints": 300,
+            "StartingWave": 3,
+            "ZombiePool": [
+              "RTID(mummy@ZombieTypes)",
+              "RTID(mummy_armor1@ZombieTypes)",
+              "RTID(mummy_armor2@ZombieTypes)",
+              "RTID(ra@ZombieTypes)",
+              "RTID(pharaoh@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 80,
+            "StartingPoints": 300,
+            "StartingWave": 3,
+            "ZombiePool": [
+              "RTID(mummy@ZombieTypes)",
+              "RTID(mummy_armor1@ZombieTypes)",
+              "RTID(mummy_armor2@ZombieTypes)",
+              "RTID(ra@ZombieTypes)",
+              "RTID(pharaoh@ZombieTypes)"
+            ]
+          }
+        ],
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 6,
+        "SpawnColEnd": 1,
+        "SpawnColStart": 1,
+        "WaveCount": 12,
+        "WaveSpendingPointIncrement": 0,
+        "WaveSpendingPoints": 0,
+        "Waves": [
+          [
+            "RTID(Wave1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)",
+            "RTID(Wave3StormEvent0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)",
+            "RTID(Wave5StormEvent0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)",
+            "RTID(Wave5StormEvent0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)",
+            "RTID(Wave9StormEvent0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)",
+            "RTID(Wave5StormEvent0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave11@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave12@CurrentLevel)",
+            "RTID(Wave9StormEvent0@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave3StormEvent0"
+      ],
+      "objclass": "StormZombieSpawnerProps",
+      "objdata": {
+        "ColumnEnd": 4,
+        "ColumnStart": 3,
+        "GroupSize": 1,
+        "TimeBetweenGroups": 2,
+        "Type": "sandstorm",
+        "Zombies": [
+          {
+            "Type": "RTID(egypt_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(egypt_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(egypt_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(egypt_imp@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave5StormEvent0"
+      ],
+      "objclass": "StormZombieSpawnerProps",
+      "objdata": {
+        "ColumnEnd": 5,
+        "ColumnStart": 3,
+        "GroupSize": 2,
+        "TimeBetweenGroups": 1,
+        "Type": "sandstorm",
+        "Zombies": [
+          {
+            "Type": "RTID(ra@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(ra@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(ra@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mummy@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mummy@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mummy@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mummy@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(ra@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(egypt_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(egypt_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(egypt_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(egypt_imp@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave9StormEvent0"
+      ],
+      "objclass": "StormZombieSpawnerProps",
+      "objdata": {
+        "ColumnEnd": 5,
+        "ColumnStart": 3,
+        "GroupSize": 1,
+        "TimeBetweenGroups": 0.5,
+        "Type": "sandstorm",
+        "Zombies": [
+          {
+            "Type": "RTID(ra@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(ra@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(ra@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mummy@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mummy@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mummy@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mummy@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(ra@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(egypt_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(egypt_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(egypt_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(egypt_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mummy@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(ra@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(egypt_imp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(egypt_imp@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(mummy_armor1@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(mummy_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(ra@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "DynamicPlantfood": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "Zombies": [
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(mummy_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(ra@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "DynamicPlantfood": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        "Zombies": [
+          {
+            "Type": "RTID(ra@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(ra@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(ra@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "DynamicPlantfood": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "Zombies": [
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave7"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "DynamicPlantfood": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "Zombies": [
+          {
+            "Type": "RTID(mummy_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave8"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "DynamicPlantfood": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "Zombies": [
+          {
+            "Type": "RTID(egypt_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mummy_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave9"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "DynamicPlantfood": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        "Zombies": [
+          {
+            "Type": "RTID(mummy_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave10"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "DynamicPlantfood": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "Zombies": [
+          {
+            "Type": "RTID(mummy_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mummy_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave11"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "DynamicPlantfood": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1
+        ],
+        "Zombies": [
+          {
+            "Type": "RTID(egypt_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mummy_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mummy_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave12"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "DynamicPlantfood": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "Zombies": [
+          {
+            "Type": "RTID(egypt_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          }
+        ]
+      }
+    }
+  ],
+  "version": 1
+}
