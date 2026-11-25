@@ -1,0 +1,493 @@
+{
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(StandardIntro@LevelModules)",
+          "RTID(DefaultSunDropper@LevelModules)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(EgyptMowers@LevelModules)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(Gravestones@CurrentLevel)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)"
+        ],
+        "Name": "[EGYPT_LEVEL_NAME]",
+        "Description": "[PLAYERS_TRIP_TO_EGYPT]",
+        "LevelNumber": 30,
+        "WrittenBy": "星痕_Hoshiato",
+        "StageModule": "RTID(EgyptStage@LevelModules)"
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "SelectionMethod": "chooser",
+        "UnlockAll": true,
+        "OverrideSeedSlotsCount": 3,
+        "PlantIncludeList": [
+          "peashooter",
+          "sunflower",
+          "iceburg",
+          "gravebuster",
+          "repeater",
+          "sunbean",
+          "phatbeet"
+        ],
+        "CardDecks": {
+          "ChallengingLocked": true,
+          "Challenging": [
+            {
+              "Name": {
+                "en": "Standard Answer",
+                "zh": "标准答案"
+              },
+              "Leader": 1,
+              "HugeWaveGem": 0,
+              "Plants": [
+                "sunflower",
+                "peashooter",
+                "gravebuster"
+              ]
+            },
+            {
+              "Name": {
+                "en": "Break It!",
+                "zh": "破击"
+              },
+              "Leader": 1,
+              "HugeWaveGem": 0,
+              "Plants": [
+                "sunflower",
+                "repeater",
+                "iceburg"
+              ]
+            },
+            {
+              "Name": {
+                "en": "Support Each Other",
+                "zh": "抱团"
+              },
+              "Leader": 0,
+              "HugeWaveGem": 0,
+              "Plants": [
+                "phatbeet",
+                "sunbean"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "aliases": [
+        "Gravestones"
+      ],
+      "objclass": "GravestoneProperties",
+      "objdata": {
+        "ForceSpawnData": [
+          {
+            "GridX": 0,
+            "GridY": 0
+          },
+          {
+            "GridX": 1,
+            "GridY": 0
+          },
+          {
+            "GridX": 7,
+            "GridY": 0
+          },
+          {
+            "GridX": 8,
+            "GridY": 0
+          },
+          {
+            "GridX": 0,
+            "GridY": 4
+          },
+          {
+            "GridX": 1,
+            "GridY": 4
+          },
+          {
+            "GridX": 7,
+            "GridY": 4
+          },
+          {
+            "GridX": 8,
+            "GridY": 4
+          },
+          {
+            "GridX": 2,
+            "GridY": 1
+          },
+          {
+            "GridX": 3,
+            "GridY": 1
+          },
+          {
+            "GridX": 5,
+            "GridY": 1
+          },
+          {
+            "GridX": 6,
+            "GridY": 1
+          },
+          {
+            "GridX": 2,
+            "GridY": 3
+          },
+          {
+            "GridX": 3,
+            "GridY": 3
+          },
+          {
+            "GridX": 5,
+            "GridY": 3
+          },
+          {
+            "GridX": 6,
+            "GridY": 3
+          },
+          {
+            "GridX": 4,
+            "GridY": 2
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {
+            "PointIncrementPerWave": 100,
+            "StartingPoints": 300,
+            "StartingWave": 2,
+            "ZombiePool": [
+              "RTID(tomb_raiser@ZombieTypes)"
+            ]
+          }
+        ],
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 3,
+        "SpawnColEnd": 1,
+        "SpawnColStart": 1,
+        "WaveCount": 9,
+        "WaveSpendingPointIncrement": 0,
+        "WaveSpendingPoints": 0,
+        "Waves": [
+          [
+            "RTID(Wave1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)",
+            "RTID(Wave4StormEvent0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)",
+            "RTID(Wave4StormEvent0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)",
+            "RTID(Wave8StormEvent0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave4StormEvent0"
+      ],
+      "objclass": "StormZombieSpawnerProps",
+      "objdata": {
+        "ColumnEnd": 6,
+        "ColumnStart": 5,
+        "GroupSize": 1,
+        "TimeBetweenGroups": 2,
+        "Type": "sandstorm",
+        "Zombies": [
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave8StormEvent0"
+      ],
+      "objclass": "StormZombieSpawnerProps",
+      "objdata": {
+        "ColumnEnd": 7,
+        "ColumnStart": 5,
+        "GroupSize": 1,
+        "TimeBetweenGroups": 1,
+        "Type": "sandstorm",
+        "Zombies": [
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "DynamicPlantfood": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "Zombies": [
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "DynamicPlantfood": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "Zombies": [
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "DynamicPlantfood": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "Zombies": [
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "DynamicPlantfood": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        "Zombies": [
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave7"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "DynamicPlantfood": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "Zombies": [
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave8"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "DynamicPlantfood": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "Zombies": [
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave9"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          }
+        ]
+      }
+    }
+  ],
+  "version": 1
+}
